@@ -1,0 +1,2353 @@
+
+\chapter{Applications of Linear Second Order Equations}
+
+\noindent
+IN THIS CHAPTER
+ we study applications of linear second order
+equations.
+
+\medskip\noindent
+SECTIONS~6.1 AND 6.2 is about  spring--mass
+systems.
+
+
+
+\medskip\noindent
+SECTION~6.2 is about $RLC$ circuits, the electrical
+analogs of spring--mass systems.
+
+
+\medskip\noindent
+SECTION~6.3 is  about
+motion of an object under a central force, which is
+particularly relevant in the space age, since, for example, a
+satellite moving in orbit subject only to Earth's gravity is
+experiencing motion under a central force.
+
+\vspace*{4in}
+\centerline{267}
+
+\newpage
+
+\section{Spring Problems I}
+
+We consider the motion of an object of mass $m$, suspended from a
+spring of negligible mass. We say that the spring--mass system is
+in \emph{\color{blue}equilibrium} when the object is at rest and the forces
+acting on it sum to zero. The position of the object in this case is
+the \emph{\color{blue}equilibrium position}. We define $y$ to be the displacement
+of the object from its equilibrium position (Figure~\ref{figure:6.1.1}),
+measured positive upward.
+
+
+\begin{figure}[htbp]
+\color{blue}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+   \scalebox{.6}{
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060101}}
+\caption{ { \bf (a)}  $y>0$ \,  {\bf (b)} $y=0$,  \,    {\bf (c)}  $y<0$}
+  \label{figure:6.1.1}
+\end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \centering
+   \scalebox{.7}{
+  \includegraphics[bb=-78 135 689 656,width=5.67in,height=3.85in,keepaspectratio]{fig060102} }
+\caption{ A spring -- mass system with damping}
+  \label{figure:6.1.2}
+\end{minipage}
+\end{figure}
+
+
+Our model accounts for the following kinds of forces acting on the
+object:
+
+\begin{itemize}
+\item The force $-mg$, due to gravity.
+
+\item A force $F_s$ exerted by the spring resisting change in its
+length. The \emph{\color{blue}natural length} of the spring is its length with
+no mass attached. We assume that the spring obeys
+\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Hooke.html}
+{\color{blue}\itshape Hooke's law}:
+If the length of the spring is changed by an amount $\Delta L$
+from its natural length,  then the spring exerts a force $F_s=k\Delta
+L$, where $k$ is a positive number called the \emph{\color{blue}spring constant}.
+If the spring is stretched then  $\Delta L>0$ and $F_s>0$, so the
+spring force is upward, while if the spring is compressed then $\Delta
+L<0$ and $F_s<0$, so the spring force is downward.
+
+\item A \emph{\color{blue}damping force} $F_d=-cy'$ that resists the motion with
+a force proportional to the velocity of the object. It may be due to
+air resistance or friction in the spring. However, a convenient way to
+visualize a damping force is to assume that the object is rigidly
+attached to a piston with negligible mass immersed in a cylinder
+(called a \emph{\color{blue}dashpot}) filled with a viscous liquid
+(Figure~\ref{figure:6.1.2}). As the piston moves, the liquid exerts a
+damping force. We say that the motion is \emph{\color{blue}undamped} if $c=0$, or
+\emph{\color{blue}damped} if $c>0$.
+
+
+\item An external force $F$, other than the force due to gravity, that
+may vary with $t$, but is independent of displacement and velocity. We
+say that the motion is \emph{\color{blue}free} if $F\equiv0$, or \emph{\color{blue}forced}
+if $F\not\equiv0$.
+
+\end{itemize}
+
+
+
+From Newton's second law of motion,
+\begin{equation}\label{eq:6.1.1}
+my''=-mg+F_d+F_s+F=-mg-cy'+F_s+F.
+\end{equation}
+We must now relate $F_s$ to $y$. In the absence of external forces the
+object stretches the spring by an amount $\Delta l$ to assume its
+equilibrium position (Figure~\ref{figure:6.1.3}). Since the sum of the forces acting on the object
+is then zero, Hooke's Law implies that $mg=k\Delta l$. If the object
+is displaced $y$ units from its equilibrium position, the total
+change in the length of the spring is $\Delta L=\Delta l-y$,
+ so Hooke's law implies that
+ \[
+F_s=k\Delta L=k\Delta l-ky.
+\]
+Substituting this into \eqref{eq:6.1.1} yields
+\[
+my''=-mg-cy'+k\Delta L-ky+F.
+\]
+Since $mg=k\Delta l$ this can be written as
+\begin{equation}\label{eq:6.1.2}
+my''+cy'+ky=F.
+\end{equation}
+We call this \emph{\color{blue}the equation of motion}.
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060103}
+\color{blue}
+\caption{ {\bf(a)} Natural length of spring  \,
+{\bf (b)} Spring stretched by mass}
+  \label{figure:6.1.3}
+\end{figure}
+
+
+\boxit{Simple Harmonic Motion}
+
+
+\noindent
+Throughout the rest of this section we'll consider spring--mass
+systems without damping; that is, $c=0$. We'll consider systems with
+damping in the next section.
+
+We first consider the case where the motion is also free; that is,
+$F$=0. We begin with an example.
+
+\begin{example}\label{example:6.1.1}\rm
+An object stretches a spring 6 inches in equilibrium.
+\begin{alist}
+\item % (a)
+Set up the equation of motion and find its general solution.
+
+\item % (b)
+Find the displacement of the object for $t>0$ if it's initially
+displaced 18 inches above equilibrium and given a downward velocity of
+3 ft/s.
+\end{alist}
+\end{example}
+
+\solutionpart{a}
+Setting $c=0$ and $F=0$ in \eqref{eq:6.1.2} yields the equation of motion
+\[
+my''+ky=0,
+\]
+which we rewrite as
+\begin{equation}\label{eq:6.1.3}
+y''+{k\over m}y=0.
+\end{equation}
+Although we would need the weight of the object to obtain $k$ from the
+equation $mg=k\Delta l$ we can obtain $k/m$ from $\Delta l$ alone;
+thus, $k/m=g/\Delta l$. Consistent with the units used in the problem
+statement, we take $g=32$ ft/s$^2$. Although $\Delta l$ is stated in
+inches, we must convert it to feet to be consistent with this choice
+of $g$; that is, $\Delta l =1/2$ ft. Therefore
+\[
+{k\over m}={32\over1/2}=64
+\]
+and \eqref{eq:6.1.3} becomes
+\begin{equation}\label{eq:6.1.4}
+y''+64y=0.
+\end{equation}
+ The characteristic equation of \eqref{eq:6.1.4} is
+\[
+r^2+64=0,
+\]
+which has the zeros $r=\pm 8i$. Therefore the general solution of
+\eqref{eq:6.1.4} is
+\begin{equation}\label{eq:6.1.5}
+y=c_1\cos8t+c_2\sin8t.
+\end{equation}
+
+\solutionpart{b}
+The initial upward displacement of 18 inches is positive and must be
+expressed in feet. The initial downward velocity is negative;   thus,
+\[
+y(0)={3\over2}\mbox{\quad and \quad} y'(0)=-3.
+\]
+ Differentiating \eqref{eq:6.1.5} yields
+\begin{equation}\label{eq:6.1.6}
+y'=-8c_1\sin8t+8c_2\cos8t.
+\end{equation}
+Setting $t=0$ in \eqref{eq:6.1.5} and \eqref{eq:6.1.6} and imposing the
+initial conditions shows that $c_1=3/2$ and $c_2=-3/8$. Therefore
+\[
+y={3\over2}\cos8t-{3\over8}\sin8t,
+\]
+where $y$ is in feet (Figure~\ref{figure:6.1.4}).
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060104}
+\color{blue}
+\caption{$y=\dst{}{3\over2}\cos8t-{3\over8}\sin 8t$}
+  \label{figure:6.1.4}
+\end{figure}
+
+
+We'll now consider the equation
+\[
+my''+ky=0
+\]
+where $m$ and $k$ are arbitrary positive numbers. Dividing through by
+$m$ and defining $\omega_0=\sqrt{k/m}$ yields
+\[
+y''+\omega_0^2y=0.
+\]
+The general solution of this equation is
+\begin{equation}\label{eq:6.1.7}
+y=c_1\cos\omega_0t+c_2\sin\omega_0t.
+\end{equation}
+We can rewrite this in a more useful form by defining
+\begin{equation}\label{eq:6.1.8}
+R=\sqrt{c_1^2+c_2^2},
+\end{equation}
+and
+\begin{equation}\label{eq:6.1.9}
+c_1=R\cos\phi\mbox{\quad and \quad}c_2=R\sin\phi.
+\end{equation}
+Substituting from \eqref{eq:6.1.9} into \eqref{eq:6.1.7} and applying the
+identity
+\[
+\cos\omega_0t\cos\phi+\sin\omega_0t\sin\phi=\cos(\omega_0t-\phi)
+\]
+yields
+\begin{equation}\label{eq:6.1.10}
+y=R\cos(\omega_0t-\phi).
+\end{equation}
+
+From \eqref{eq:6.1.8} and \eqref{eq:6.1.9} we see that the $R$ and $\phi$
+can be interpreted as polar coordinates of the point with rectangular
+coordinates $(c_1,c_2)$ (Figure~\ref{figure:6.1.5}). Given $c_1$ and
+$c_2$, we can compute $R$ from \eqref{eq:6.1.8}. From \eqref{eq:6.1.8} and
+\eqref{eq:6.1.9}, we see that $\phi$ is related to $c_1$ and $c_2$ by
+\[
+\cos\phi={c_1\over\sqrt{c_1^2+c_2^2}}\mbox{\quad and \quad}\sin\phi=
+{c_2\over\sqrt{c_1^2+c_2^2}}.
+\]
+There are infinitely many angles $\phi$, differing
+ by integer multiples of $2\pi$, that satisfy these equations. We
+will always choose $\phi$ so that $-\pi\le\phi<\pi$.
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060105}
+\color{blue}
+\caption{$R=\protect\sqrt{c_1^2+c_2^2}$;  \quad
+$c_1=R\cos\phi$;  \quad $c_2=R\sin\phi$}
+  \label{figure:6.1.5}
+\end{figure}
+
+
+
+
+The motion described by \eqref{eq:6.1.7} or \eqref{eq:6.1.10}
+is  \emph{\color{blue}simple harmonic motion}. We see from either of these
+equations that the motion is periodic, with period
+\[
+T=2\pi/\omega_0.
+\]
+This is the time required for the object to complete one full cycle of
+oscillation (for example, to move from its highest position to its
+lowest position and back to its highest position). Since the highest
+and lowest positions of the object are $y=R$ and $y=-R$, we say that
+$R$ is the \emph{\color{blue}amplitude} of the oscillation. The angle $\phi$ in
+\eqref{eq:6.1.10} is the \emph{\color{blue}phase angle}. It's measured
+in
+radians. Equation~\eqref{eq:6.1.10} is the \emph{\color{blue}amplitude-phase
+form} of the displacement. If $t$ is in seconds then $\omega_0$ is
+in radians per second (rad/s);   it's  the {\color{blue}\it
+frequency\/} of
+the motion. It is also called the \emph{\color{blue}natural frequency} of
+the spring--mass system without damping.
+
+\begin{example}\label{example:6.1.2}\rm
+We found the displacement of the object
+ in Example~\ref{example:6.1.1} to be
+\[
+y={3\over2}\cos8t-{3\over8}\sin8t.
+\]
+Find the frequency, period, amplitude, and phase angle of the motion.
+\end{example}
+
+\solution
+The frequency is $\omega_0=8$ rad/s, and the period is
+$T=2\pi/\omega_0=\pi/4$ s. Since $c_1=3/2$ and $c_2=-3/8$,
+the amplitude is
+\[
+R=\sqrt{c^2_1+c^2_2}=\sqrt{\left({3\over2}\right)^2+\left({3\over8}\right)^2}
+={3\over8}\sqrt{17}.
+\]
+The phase angle is determined by
+\begin{equation}\label{eq:6.1.11}
+\cos\phi={{3\over2}\over{3\over8}\sqrt{17}}={4\over\sqrt{17}}
+\end{equation}
+and
+\begin{equation}\label{eq:6.1.12}
+\sin\phi={-{3\over8}\over{3\over8}\sqrt{17}}=-{1\over\sqrt{17}}.
+\end{equation}
+ Using a calculator, we see from \eqref{eq:6.1.11} that
+\[
+\phi\approx\pm.245\mbox{ rad}.
+\]
+Since $\sin\phi<0$ (see \eqref{eq:6.1.12}), the minus sign applies here;
+that is,
+\[
+\phi\approx-.245\mbox{ rad}.
+\]
+
+
+
+\begin{example}\label{example:6.1.3}\rm
+The natural length of a spring is 1 m. An object is attached to it and
+the length of the spring increases to 102 cm when the object is in
+equilibrium. Then the object is initially displaced downward 1 cm and
+given an upward velocity of 14 cm/s. Find the displacement for
+$t>0$. Also, find the natural frequency, period, amplitude, and phase
+angle of the resulting motion. Express the answers in cgs units.
+\end{example}
+
+\solution
+In cgs units $g=980$ cm/s$^2$. Since $\Delta l=2$ cm,
+$\omega_0^2=g/\Delta l=490$.
+Therefore
+\[
+y''+490y=0, \quad  y(0)=-1,\quad y'(0)=14.
+\]
+ The general solution of the differential equation is
+\[
+y=c_1\cos7\sqrt{10}t+c_2\sin7\sqrt{10}t,
+\]
+so
+\[
+y'=7\sqrt{10}\left(-c_1\sin7\sqrt{10}t+c_2\cos7\sqrt{10}t\right).
+\]
+Substituting the initial conditions into the last two equations yields
+$c_1=-1$ and $c_2=2/\sqrt{10}$. Hence,
+\[
+y=-\cos7\sqrt{10}t+{2\over\sqrt{10}}\sin7\sqrt{10}t.
+\]
+The frequency is $7\sqrt{10}$ rad/s, and  the period
+is $T=2\pi/(7\sqrt{10})$  s.
+The amplitude  is
+\[
+R=\sqrt{c_1^2+c_2^2}=\sqrt{(-1)^2+\left({2\over\sqrt{10}}\right)^2}=
+\sqrt{{7\over5}}\mbox{ cm}.
+\]
+The  phase angle  is determined by
+\[
+\cos\phi={c_1\over R}=-\sqrt{{5\over7}}\mbox{\quad and \quad}\sin\phi=
+{c_2\over R}=\sqrt{{2\over7}}.
+\]
+Therefore $\phi$ is in the second quadrant and
+\[
+\phi=\cos^{-1}\left(-\sqrt{{5\over7}}\right)\approx2.58\mbox{ rad}.
+\]
+
+
+
+\boxit{Undamped Forced Oscillation}
+
+
+\noindent
+In many mechanical problems a device is subjected to periodic external
+forces. For example, soldiers marching in cadence on a bridge cause
+periodic disturbances in the bridge, and the engines of a propeller
+driven aircraft cause periodic disturbances in its wings. In the
+absence of sufficient damping forces, such disturbances -- even if
+small in magnitude -- can cause structural breakdown if they are at
+certain critical frequencies. To illustrate, this we'll consider the
+motion of an object in a spring--mass system without damping, subject
+to an external force
+\[
+F(t)=F_0\cos\omega t
+\]
+where $F_0$ is a constant. In this case the equation of motion
+\eqref{eq:6.1.2} is
+\[
+my''+ky=F_0\cos\omega t,
+\]
+which we rewrite  as
+\begin{equation}\label{eq:6.1.13}
+y''+\omega_0^2y={F_0\over m}\cos\omega t
+\end{equation}
+with $\omega_0=\sqrt{k/m}$.
+We'll see from the next two examples that the solutions of
+\eqref{eq:6.1.13}
+with $\omega\ne\omega_0$ behave very differently from the solutions with
+$\omega=\omega_0$.
+
+
+
+
+\begin{example}\label{example:6.1.4}\rm
+ Solve the initial value problem
+\begin{equation}\label{eq:6.1.14}
+y''+\omega_0^2y={F_0\over m}\cos\omega t, \quad  y(0)=0,\quad y'(0)=0,
+\end{equation}
+ given that $\omega\ne\omega_0$.
+\end{example}
+
+
+\solution
+We first obtain a particular solution of \eqref{eq:6.1.13} by the method
+of undetermined coefficients. Since $\omega\ne\omega _0$,
+ $\cos\omega t$ isn't  a solution of the complementary equation
+\[
+y''+\omega_0^2y=0.
+\]
+Therefore \eqref{eq:6.1.13} has a particular solution of the form
+\[
+y_p=A\cos\omega t+B\sin\omega t.
+\]
+Since
+\[
+y''_p=-\omega^2(A\cos\omega t+B\sin\omega t),
+\]
+\[
+y_p''+\omega_0^2y_p={F_0\over m}\cos\omega t
+\]
+if and only if
+\[
+(\omega_0^2-\omega^2)\left(A\cos\omega t+
+B\sin\omega t\right)={F_0\over m}\cos\omega t.
+\]
+ This holds if and only if
+\[
+A={F_0\over m(\omega_0^2-\omega^2)}\mbox{\quad and \quad} B=0,
+\]
+so
+\[
+y_p={F_0\over m(\omega_0^2-\omega^2)}\cos\omega t.
+\]
+The general solution of \eqref{eq:6.1.13}  is
+\begin{equation}\label{eq:6.1.15}
+y={F_0\over m(\omega_0^2-\omega^2)}\cos\omega t
++c_1\cos\omega_0 t+c_2\sin\omega_0t,
+\end{equation}
+so
+\[
+y'={-\omega F_0\over m(\omega_0^2-\omega^2)}\sin\omega t
++\omega_0(-c_1\sin\omega_0 t+c_2\cos\omega_0t).
+\]
+The initial conditions $y(0)=0$ and $y'(0)=0$ in \eqref{eq:6.1.14} imply
+that
+\[
+c_1=-{F_0\over m(\omega_0^2-\omega^2)}\mbox{\quad and \quad}
+c_2=0.
+\]
+Substituting these into \eqref{eq:6.1.15} yields
+\begin{equation}\label{eq:6.1.16}
+y={F_0\over m(\omega_0^2-\omega^2)}(\cos\omega t-\cos\omega
+_0t).
+\end{equation}
+
+It is revealing to write this in a different form.  We start with the
+trigonometric identities
+\begin{eqnarray*}
+\cos(\alpha-\beta)&=&\cos\alpha\cos\beta+\sin\alpha\sin\beta\\
+\cos(\alpha+\beta)&=&\cos\alpha\cos\beta-\sin\alpha\sin\beta.
+\end{eqnarray*}
+Subtracting the second identity from the first yields
+\begin{equation}\label{eq:6.1.17}
+\cos(\alpha-\beta)-\cos(\alpha+\beta)=2\sin\alpha\sin\beta
+\end{equation}
+ Now let
+\begin{equation}\label{eq:6.1.18}
+\alpha-\beta=\omega t\mbox{\quad and \quad}\alpha+\beta=\omega_0t,
+\end{equation}
+ so that
+\begin{equation}\label{eq:6.1.19}
+\alpha={(\omega_0+\omega)t\over2}\mbox{\quad and \quad
+}\beta={(\omega_0-\omega
+)t\over2}.
+\end{equation}
+ Substituting \eqref{eq:6.1.18} and \eqref{eq:6.1.19} into \eqref{eq:6.1.17}
+yields
+ \[
+\cos\omega t-\cos\omega_0t=
+2\sin{(\omega_0-\omega)t\over2}\sin{(\omega_0+\omega)t\over2},
+\]
+and substituting this into \eqref{eq:6.1.16} yields
+\begin{equation}\label{eq:6.1.20}
+y=R(t)\sin{(\omega_0+\omega)t\over2},
+\end{equation}
+ where
+\begin{equation}\label{eq:6.1.21}
+R(t)={2F_0\over m(\omega_0^2-\omega^2)}
+\sin{(\omega_0-\omega)t\over2}.
+\end{equation}
+
+From \eqref{eq:6.1.20} we can regard $y$ as a sinusoidal variation with
+frequency $(\omega_0+\omega)/2$ and variable amplitude
+$|R(t)|$. In Figure~\ref{figure:6.1.6} the dashed curve above the $t$ axis
+is $y=|R(t)|$, the dashed curve below the $t$ axis is $y=-|R(t)|$, and
+the displacement $y$ appears as an oscillation bounded by them. The
+oscillation of $y$ for $t$ on an interval between successive zeros of
+$R(t)$ is called a \emph{\color{blue}beat}.
+
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060106}
+\color{blue}
+\caption{ Undamped oscillation with beats}
+  \label{figure:6.1.6}
+\end{figure}
+
+
+
+
+You can see from
+\eqref{eq:6.1.20} and \eqref{eq:6.1.21} that
+\[
+|y(t)|\le{2|F_0|\over m|\omega_0^2-\omega^2|};
+\]
+moreover, if $\omega+\omega_0$ is sufficiently large compared with $\omega
+-\omega_0$, then $|y|$ assumes values close to (perhaps equal to) this
+upper bound during each beat. However, the oscillation remains bounded for
+all $t$. (This assumes that the spring can withstand
+deflections of this size and continue to obey Hooke's law.)  The next
+example shows that this isn't  so if $\omega=\omega_0$.
+
+\begin{example}\label{example:6.1.5}\rm
+Find the general solution of
+\begin{equation}\label{eq:6.1.22}
+y''+\omega_0^2y={F_0\over m}\cos\omega_0t.
+\end{equation}
+\end{example}
+
+
+\solution
+We first obtain a particular solution $y_p$ of \eqref{eq:6.1.22}. Since
+$\cos\omega_0t$ is a solution of the complementary equation, the form
+for $y_p$ is
+\begin{equation}\label{eq:6.1.23}
+y_p=t(A\cos\omega_0t+B\sin\omega_0t).
+\end{equation}
+ Then
+\[
+y_p'=A\cos\omega_0t+B\sin\omega_0t
++\omega_0t(-A\sin\omega_0t+B\cos\omega_0t)
+\]
+and
+\begin{equation}\label{eq:6.1.24}
+y''_p=2\omega_0(-A\sin\omega_0t
++B\cos\omega_0t)-\omega_0^2t(A\cos\omega_0t+B\sin\omega_0t).
+\end{equation}
+From \eqref{eq:6.1.23} and \eqref{eq:6.1.24}, we see that $y_p$ satisfies
+\eqref{eq:6.1.22} if
+\[
+-2A\omega_0\sin\omega_0t+2B\omega_0\cos\omega_0t={F_0\over m}
+\cos\omega_0t;
+\]
+that is, if
+\[
+A=0\mbox{\quad and \quad} B={F_0\over2m\omega_0}.
+\]
+Therefore
+\[
+y_p={F_0t\over2m\omega_0}\sin\omega_0t
+\]
+is a particular solution of \eqref{eq:6.1.22}. The general solution of
+ \eqref{eq:6.1.22} is
+\[
+y={F_0t\over2m\omega_0}\sin\omega_0t+c_1\cos\omega_0t+c_2\sin\omega_0t.
+\]
+The graph of $y_p$ is shown in Figure~\ref{figure:6.1.7},  where it can be
+seen that $y_p$ oscillates between the dashed lines
+\[
+y={F_0t\over2m\omega_0}\mbox{\quad and \quad} y=-{F_0t\over2m\omega_0}
+\]
+with increasing amplitude that approaches $\infty$ as $t\to\infty$. Of
+course, this means that the spring must eventually fail to obey Hooke's law
+or break.\bbox
+
+
+
+This phenomenon of unbounded displacements of a spring--mass system in
+response to a periodic forcing function at its natural
+frequency is called \emph{\color{blue}resonance}. More complicated mechanical
+structures can also exhibit resonance--like phenomena. For example,
+rhythmic oscillations of a suspension bridge by wind forces or of an
+airplane wing by periodic vibrations of reciprocating engines can
+cause damage or even failure if the frequencies of the disturbances
+are close to critical frequencies determined by the parameters of the
+mechanical system in question.
+
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060107}
+\color{blue}
+\caption{ Unbounded displacement due to resonance}
+  \label{figure:6.1.7}
+\end{figure}
+
+
+
+\exercises
+ In the following exercises assume that there's no damping.
+
+\begin{exerciselist}
+
+\item\label{exer:6.1.1}   \CGex
+An object stretches a spring 4 inches in equilibrium.
+Find and graph its displacement for $t>0$ if it's initially displaced
+36 inches above equilibrium and given a downward velocity of 2 ft/s.
+
+\item\label{exer:6.1.2}
+An object  stretches a string 1.2 inches in equilibrium.
+Find its displacement for $t>0$ if it's initially displaced 3 inches
+below equilibrium and given a downward velocity of 2 ft/s.
+
+\item\label{exer:6.1.3}
+A spring with natural length .5 m has length 50.5 cm with a mass of 2
+gm suspended from it. The mass is initially displaced 1.5 cm below
+equilibrium and released with zero velocity. Find its displacement for
+$t>0$.
+
+\item\label{exer:6.1.4}
+An object stretches a spring 6 inches in equilibrium. Find its
+displacement for $t>0$ if it's initially displaced 3 inches above
+equilibrium and given a downward velocity of 6 inches/s. Find the
+frequency, period, amplitude and phase angle of the motion.
+
+\item\label{exer:6.1.5} \CGex
+An object stretches a spring 5 cm in equilibrium. It is initially
+displaced 10 cm above equilibrium and given an upward velocity of .25
+m/s. Find and graph its displacement for $t>0$. Find the frequency,
+period, amplitude, and phase angle of the motion.
+
+\item\label{exer:6.1.6}
+A 10 kg mass stretches a spring 70 cm in equilibrium. Suppose a 2
+kg mass is
+attached to the spring, initially displaced 25 cm below equilibrium,
+and given an upward velocity of 2 m/s. Find its displacement for
+$t>0$. Find the frequency, period, amplitude, and phase angle of the
+motion.
+
+\item\label{exer:6.1.7}
+A  weight stretches a spring 1.5 inches in equilibrium. The weight
+is initially displaced 8 inches above equilibrium and given a downward
+velocity of 4 ft/s. Find its displacement for $t > 0$.
+
+\item\label{exer:6.1.8}
+A weight stretches a spring 6 inches in equilibrium. The weight is
+initially displaced 6 inches above equilibrium and given a downward
+velocity of 3 ft/s. Find its displacement for $t>0$.
+
+\item\label{exer:6.1.9}
+A spring--mass system has natural frequency $7\sqrt{10}$ rad/s. The
+natural length of the spring is .7 m. What is the length of the spring
+when the mass is in equilibrium?
+
+\item\label{exer:6.1.10}
+A 64 lb weight is attached to a spring with constant $k=8$ lb/ft and
+subjected to an external force $F(t)=2\sin t$. The weight is initially
+displaced 6 inches above equilibrium and given an upward velocity of 2
+ft/s. Find its displacement for $t>0$.
+
+\item\label{exer:6.1.11}
+A unit mass hangs in equilibrium from a spring with constant $k=1/16$.
+Starting at $t=0$, a force $F(t)=3\sin t$ is applied to the mass. Find
+its displacement for $t>0$.
+
+\item\label{exer:6.1.12} \CGex
+A 4 lb weight stretches a spring 1 ft in equilibrium. An external
+force $F(t)=.25\sin8 t$ lb is applied to the weight, which is
+initially displaced 4 inches above equilibrium and given a downward
+velocity of 1 ft/s. Find and graph its displacement for $t>0$.
+
+\item\label{exer:6.1.13}
+A 2 lb weight stretches a spring 6 inches in equilibrium.  An external
+force $F(t)=\sin8t$ lb is applied to the weight, which is released
+from rest 2 inches below equilibrium. Find its displacement
+for $t>0$.
+
+\item\label{exer:6.1.14}
+A 10 gm mass suspended on a spring moves in simple harmonic
+motion with period 4 s.  Find the period of the simple
+harmonic motion of a 20 gm mass suspended from the same spring.
+
+
+\item\label{exer:6.1.15}
+A 6 lb weight stretches a spring 6 inches in equilibrium. Suppose
+an external force $F(t)=\dst{3\over16}\sin\omega
+t+\dst{3\over8}\cos\omega t $ lb is applied to the weight. For what
+value
+of $\omega$ will the displacement be unbounded? Find the displacement
+if $\omega$ has this value. Assume that the motion starts from
+equilibrium with zero initial velocity.
+
+\item\label{exer:6.1.16} \CGex
+A 6 lb weight stretches a spring 4 inches in equilibrium. Suppose
+an external force $ F(t)=4\sin\omega t-6\cos\omega t $ lb is applied
+to the weight. For what value of $\omega$ will the displacement be
+unbounded? Find and graph the displacement if $\omega$ has this value.
+Assume that the motion starts from equilibrium with zero initial
+velocity.
+
+\item\label{exer:6.1.17}
+A mass of one kg is attached to a spring with constant $k=4$ N/m. An
+external force $F(t)=-\cos\omega t-2\sin\omega t$ n is applied to the
+mass. Find the displacement $y$ for $t>0$ if $\omega$ equals the
+natural frequency of the spring--mass system. Assume that the
+mass is initially displaced 3 m above equilibrium and given an upward
+velocity of 450 cm/s.
+
+\item\label{exer:6.1.18}
+An object is in simple harmonic motion
+with frequency $\omega_0$, with $y(0)=y_0$ and $y'(0)=v_0$. Find
+its displacement for $t>0$. Also, find the amplitude of the
+oscillation and give formulas for the sine and cosine of the initial
+phase angle.
+
+\item\label{exer:6.1.19}
+Two objects suspended from identical springs are set into
+motion.  The period of one object is twice the period of the other.
+How are the weights of the two objects related?
+
+\item\label{exer:6.1.20}
+Two objects suspended from identical springs are set into motion. The
+weight of one object is twice the weight of the other. How are the
+periods of the resulting motions related?
+
+\item\label{exer:6.1.21}
+Two identical objects suspended from different springs are set into
+motion. The period of one motion is 3 times the period of the
+other. How are the two spring constants related?
+\end{exerciselist}
+
+
+
+\section{Spring Problems II}
+
+\boxit{Free Vibrations With Damping}
+
+
+\noindent
+In this section we consider the motion of an object in a spring--mass
+system with damping. We start with unforced motion, so the equation of
+motion is
+\begin{equation}\label{eq:6.2.1}
+my''+cy'+ky=0.
+\end{equation}
+Now suppose   the object is displaced from equilibrium and given an
+initial velocity. Intuition suggests that if the damping force is
+sufficiently weak the resulting motion will be oscillatory, as in the
+undamped case considered in the previous section, while if it's
+sufficiently strong the object may just move slowly toward the
+equilibrium
+position without ever reaching it. We'll now confirm these intuitive
+ideas mathematically. The characteristic equation of \eqref{eq:6.2.1} is
+\[
+mr^2+cr+k=0.
+\]
+The roots of this equation are
+\begin{equation}\label{eq:6.2.2}
+r_1={-c-\sqrt{c^2-4mk}\over2m}\mbox{\quad and \quad} r_2=
+{-c+\sqrt{c^2-4mk}\over2m}.
+\end{equation}
+In Section~5.2 we saw that the form of the
+solution of  \eqref{eq:6.2.1} depends upon whether $c^2-4mk$ is positive,
+negative, or zero. We'll now consider these three cases.
+
+\boxit{Underdamped Motion}
+
+
+\noindent
+We say the motion is \emph{\color{blue}underdamped} if $c<\sqrt{4mk}$. In this
+case $r_1$ and $r_2$ in \eqref{eq:6.2.2} are complex conjugates, which we
+write as
+\[
+r_1=-{c\over2m}-i\omega_1\mbox{\quad and \quad}
+r_2=-{c\over2m}+i\omega_1,
+\]
+where
+\[
+\omega_1={\sqrt{4mk-c^2}\over2m}.
+\]
+The general solution of  \eqref{eq:6.2.1} in this case is
+\[
+y=e^{-ct/2m}(c_1\cos\omega_1 t+c_2\sin\omega_1 t).
+\]
+By the method used in Section~6.1 to derive the
+amplitude--phase form of the displacement of an object in simple
+harmonic motion, we can rewrite this equation as
+\begin{equation}\label{eq:6.2.3}
+y=Re^{-ct/2m}\cos(\omega_1 t-\phi),
+\end{equation}
+ where
+\[
+R=\sqrt{c_1^2+c_2^2},\quad R\cos\phi=c_1,\mbox{\quad and \quad} R\sin\phi=c_2.
+\]
+The factor $Re^{-ct/2m}$ in \eqref{eq:6.2.3} is called the {\color{blue}\it
+time--varying amplitude\/} of the motion, the quantity $\omega_1$ is
+called the \emph{\color{blue}frequency}, and $T=2\pi/\omega_1$ (which is the
+period of the cosine function in \eqref{eq:6.2.3} is called the {\color{blue}\it
+quasi--period\/}. A typical graph of \eqref{eq:6.2.3} is shown in
+Figure~\ref{figure:6.2.1}. As illustrated in that figure, the graph of $y$
+oscillates between the dashed exponential curves $y=\pm Re^{-ct/2m}$.
+
+
+  \begin{figure}[tbp]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060201}
+\color{blue}
+\caption{ Underdamped motion}
+  \label{figure:6.2.1}
+\end{figure}
+
+\newpage
+\boxit{Overdamped Motion}
+
+
+\noindent
+We say the motion is \emph{\color{blue}overdamped} if $c>\sqrt{4mk}$. In this
+case the zeros $r_1$ and $r_2$ of the characteristic polynomial are
+real, with $r_1<r_2<0$ (see \eqref{eq:6.2.2}), and the general solution of
+\eqref{eq:6.2.1} is
+\[
+y=c_1e^{r_1t}+c_2e^{r_2t}.
+\]
+Again $\lim_{t\to\infty}y(t)=0$ as in the
+underdamped case, but the motion isn't  oscillatory, since $y$ can't
+equal zero for more than one value of $t$ unless $c_1=c_2=0$.
+(Exercise~\ref{exer:6.2.23}.)
+
+\boxit{Critically Damped Motion}
+
+
+\noindent
+We say the motion is \emph{\color{blue}critically damped} if $c=\sqrt{4mk}$. In
+this case $r_1=r_2=-c/2m$ and the general solution of \eqref{eq:6.2.1} is
+\[
+y=e^{-ct/2m}(c_1+c_2t).
+\]
+
+Again $\lim_{t\to\infty}y(t)=0$ and the motion is nonoscillatory,
+since $y$ can't equal zero for more than one value of $t$ unless
+$c_1=c_2=0$. (Exercise~\ref{exer:6.2.22}).
+
+\begin{example}\label{example:6.2.1}\rm
+Suppose a 64 lb weight stretches a spring 6 inches in equilibrium
+and a dashpot provides a damping force of $c$ lb for each ft/sec of
+velocity.
+\begin{alist}
+\item % (a)
+ Write the equation of motion of the object and determine the value of
+$c$ for which the motion is critically damped.
+\item % (b)
+ Find the displacement $y$ for $t>0$ if the motion is critically damped
+and the initial conditions are $y(0)=1$ and $y'(0)=20$.
+\item % (c)
+ Find the displacement $y$ for $t>0$ if the motion is critically damped
+and the initial conditions are $y(0)=1$ and $y'(0)=-20$.
+\end{alist}
+\end{example}
+
+\solutionpart{a}  Here $m=2$ slugs and $k=64/.5=128$
+lb/ft. Therefore the equation of motion  \eqref{eq:6.2.1} is
+\begin{equation}\label{eq:6.2.4}
+2y''+cy'+128y=0.
+\end{equation}
+The characteristic equation  is
+\[
+2r^2+cr+128=0,
+\]
+which has  roots
+\[
+r={-c\pm\sqrt{c^2-8\cdot128}\over4}.
+\]
+Therefore the damping is critical if
+\[
+c=\sqrt{8\cdot128}=32\mbox{ lb--sec/ft}.
+\]
+
+\solutionpart{b}
+ Setting $c=32$ in  \eqref{eq:6.2.4} and cancelling the common factor $2$
+yields
+\[
+y''+16y+64y=0.
+\]
+The characteristic equation  is
+\[
+r^2+16r+64y=(r+8)^2=0.
+\]
+Hence, the general solution is
+\begin{equation}\label{eq:6.2.5}
+y=e^{-8t}(c_1+c_2t).
+\end{equation}
+ Differentiating this yields
+\begin{equation}\label{eq:6.2.6}
+y'=-8y+c_2e^{-8t}.
+\end{equation}
+Imposing the initial conditions $y(0)=1$ and $y'(0)=20$ in the last
+two equations shows that $1=c_1$ and $20=-8+c_2$. Hence, the solution
+of the initial value problem is
+\[
+y=e^{-8t}(1+28t).
+\]
+Therefore the object approaches equilibrium from above as
+$t\to\infty$. There's no oscillation.
+\solutionpart{c}
+Imposing the initial conditions $y(0)=1$ and $y'(0)=-20$ in
+\eqref{eq:6.2.5} and \eqref{eq:6.2.6} yields $1=c_1$ and $-20=-8+c_2$. Hence,
+the solution of this initial value problem is
+\[
+y=e^{-8t}(1-12t).
+\]
+Therefore the object moves downward through equilibrium just once,
+and then approaches equilibrium from below as $t\to\infty$. Again,
+there's no oscillation. The solutions of these two initial value
+problems are graphed in Figure~\ref{figure:6.2.2}.
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060202}
+\color{blue}
+\caption{ {\bf(a)}\, $y=e^{-8t}(1+28t)$\quad
+{\bf (b)}\, $y=e^{-8t}(1-12t)$}
+  \label{figure:6.2.2}
+\end{figure}
+
+
+
+
+
+
+\begin{example}
+\label{example:6.2.2}\rm
+Find the displacement of the object in Example~\ref{example:6.2.1} if the
+damping constant is $c=4$ lb--sec/ft and the initial conditions are
+$y(0)=1.5$ ft and $y'(0)=-3$ ft/sec.
+\end{example}
+
+
+\solution
+With $c=4$, the equation of motion \eqref{eq:6.2.4} becomes
+\begin{equation}\label{eq:6.2.7}
+y''+2y'+64y=0
+\end{equation}
+after cancelling the common factor 2. The characteristic equation
+\[
+r^2+2r+64=0
+\]
+has complex conjugate roots
+\[
+r={-2\pm\sqrt{4-4\cdot64}\over2}=-1\pm3\sqrt7i.
+\]
+Therefore the motion is underdamped and the
+general solution of  \eqref{eq:6.2.7} is
+\[
+y=e^{-t}(c_1\cos3\sqrt7t+c_2\sin3\sqrt7t).
+\]
+Differentiating this yields
+\[
+y'=-y+3\sqrt7e^{-t}(-c_1\sin3\sqrt7t+c_2\cos3\sqrt7t).
+\]
+Imposing the initial conditions $y(0)=1.5$ and $y'(0)=-3$ in the last
+two equations yields $1.5=c_1$ and $-3=-1.5+3\sqrt7c_2$. Hence, the
+solution of the initial value problem is
+\begin{equation}\label{eq:6.2.8}
+y=e^{-t}\bigg({3\over2}\cos3\sqrt7t-{1\over2\sqrt7}
+\sin3\sqrt7t\bigg).
+\end{equation}
+ The amplitude of the function in parentheses is
+\[
+ R=\sqrt{\bigg({3\over2}\bigg)^2+\bigg({1\over2\sqrt7}\bigg)^2}
+=\sqrt{{9\over4}+{1\over4\cdot7}}
+=\sqrt{64\over4\cdot7}={4\over\sqrt7}.
+\]
+Therefore we can rewrite  \eqref{eq:6.2.8} as
+\[
+y={4\over\sqrt7}e^{-t}\cos(3\sqrt7t-\phi),
+\]
+ where
+\[
+\cos\phi={3\over2R}={3\sqrt7\over8}\mbox{\quad and \quad}\sin\phi=-{1\over2\sqrt7R}=
+-{1\over8}.
+\]
+Therefore $\phi\cong-.125$  radians.
+
+\begin{example}\label{example:6.2.3}\rm
+Let the damping constant in Example 1 be $c=40$ lb--sec/ft. Find the
+displacement $y$ for $t>0$ if $y(0)=1$ and $y'(0)=1$.
+\end{example}
+
+\solution
+With $c=40$, the equation of motion \eqref{eq:6.2.4} reduces to
+\begin{equation}\label{eq:6.2.9}
+y''+20y'+64y=0
+\end{equation}
+ after cancelling the  common factor 2.
+The characteristic equation
+\[
+r^2+20r+64=(r+16)(r+4)=0
+\]
+ has the roots $r_1=-4$ and $r_2=-16$.  Therefore the general
+solution of  \eqref{eq:6.2.9} is
+\begin{equation}\label{eq:6.2.10}
+y=c_1e^{-4t}+c_2e^{-16t}.
+\end{equation}
+ Differentiating this yields
+\[
+y'=-4e^{-4t}-16c_2e^{-16t}.
+\]
+The last two equations and the initial conditions $y(0)=1$ and $y'(0)=1$
+imply that
+\[
+\begin{array}{rlrl}
+c_1&+&c_2&=1\\
+-4c_1&-&16c_2&=1.
+\end{array}
+\]
+ The solution of this system is $c_1=17/12$, $c_2=-5/12$.
+Substituting these into  \eqref{eq:6.2.10} yields
+\[
+y={17\over12}e^{-4t}-{5\over12}e^{-16t}
+\]
+as the solution of the given initial value problem
+(Figure~\ref{figure:6.2.3}).
+
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060203}
+\color{blue}
+\caption{$y=\dst{{17\over12}e^{-4t}-{5\over12}e^{-16t}}$}
+  \label{figure:6.2.3}
+\end{figure}
+
+
+\boxit{Forced Vibrations With Damping}
+
+
+\noindent
+Now we consider the motion of an object in a spring-mass system with
+damping, under the influence of a periodic forcing function
+$F(t)=F_0\cos\omega t$, so that the equation of motion is
+\begin{equation}\label{eq:6.2.11}
+my''+cy'+ky=F_0\cos\omega t.
+\end{equation}
+In Section~6.1 we considered this equation with $c=0$ and
+found that the resulting displacement $y$ assumed arbitrarily large
+values in the case of resonance   (that is, when
+$\omega=\omega_0=\sqrt{k/m}$). Here we'll see that in the presence
+of damping the displacement remains bounded for all $t$, and the
+initial conditions have little effect on the motion as $t\to\infty$.
+In fact, we'll see that for large $t$ the displacement is closely
+approximated by a function of the form
+\begin{equation}\label{eq:6.2.12}
+y=R\cos(\omega t-\phi),
+\end{equation}
+where the amplitude $R$ depends upon $m$, $c$, $k$, $F_0$, and
+$\omega$. We're interested in the following question:
+
+\bigbox{{\sc Question:}\itshape Assuming that $m$, $c$, $k$, and $F_0$ are
+held constant, what value of $\omega$ produces the largest amplitude
+$R$ in {\rm\eqref{eq:6.2.12}}, and what is this largest amplitude?} To
+answer this question, we must solve \eqref{eq:6.2.11} and determine $R$ in
+terms of $F_0,\omega_0,\omega$, and $c$. We can obtain a particular
+solution of \eqref{eq:6.2.11} by the method of undetermined coefficients.
+Since $\cos\omega t$ does not satisfy the complementary equation
+\[
+my''+cy'+ky=0,
+\]
+we can obtain a particular solution of \eqref{eq:6.2.11} in the form
+\begin{equation}\label{eq:6.2.13}
+y_p=A\cos\omega t+B\sin\omega t.
+\end{equation}
+Differentiating this yields
+\[
+y_p'=\quad\omega (-A\sin\omega t+B\cos\omega t)
+\]
+and
+\[
+y_p''=-\omega^2(A\cos\omega t+B\sin\omega t).
+\]
+ From the last three equations,
+\[
+my''_p+cy'_p+ky_p=(-m\omega^2A+c\omega B+kA)\cos\omega t+
+(-m\omega^2 B-c\omega A+kB)\sin\omega t,
+\]
+so $y_p$ satisfies  \eqref{eq:6.2.11}  if
+\[
+\begin{array}{lll}
+(k-m\omega^2) A+\quad c\omega B &=&F_0\\
+-c\omega A\quad+(k-m\omega^2)B&=&0.
+\end{array}
+\]
+
+
+ Solving  for $A$ and $B$
+and substituting the results into  \eqref{eq:6.2.13} yields
+\[
+y_p={F_0\over(k-m\omega^2)^2+c^2\omega^2}
+\left[(k-m\omega^2)\cos\omega t+c\omega\sin\omega t\right],
+\]
+which can be written in amplitude--phase form  as
+\begin{equation}\label{eq:6.2.14} %\springsteady
+y_p={F_0\over\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
+\cos(\omega t-\phi),
+\end{equation}
+where
+\begin{equation}\label{eq:6.2.15}
+\cos\phi={k-m\omega^2\over\sqrt
+{(k-m\omega^2)^2+c^2\omega^2}}\mbox{\quad and \quad}
+\sin\phi={c\omega\over\sqrt{(k-m\omega^2)^2+c^2\omega^2}}.
+\end{equation}
+
+  To compare this with the undamped forced vibration
+that we considered in Section~6.1 it's useful to write
+\begin{equation}\label{eq:6.2.16}
+k-m\omega^2=m\bigg({k\over m}-\omega^2\bigg)=
+m(\omega_0^2-\omega^2),
+\end{equation}
+ where $\omega_0=\sqrt{k/m}$ is the natural
+angular frequency of the undamped simple harmonic motion of an
+object with mass $m$ on a spring with constant $k$.
+Substituting  \eqref{eq:6.2.16} into  \eqref{eq:6.2.14} yields
+\begin{equation}\label{eq:6.2.17}
+y_p={F_0\over\sqrt{m^2(\omega^2_0-\omega^2)^2+
+c^2\omega^2}}\cos(\omega t-\phi).
+\end{equation}
+
+The solution of an initial value problem
+\[
+my''+cy'+ky=F_0\cos\omega t, \quad  y(0)=y_0,\quad y'(0)=v_0,
+\]
+is of the form $y=y_c+y_p$,
+where  $y_c$ has one of the three forms
+\begin{eqnarray*}
+y_c&=&e^{-ct/2m}(c_1\cos\omega_1t+c_2\sin\omega_1t),\\
+ y_c&=&e^{-ct/2m}(c_1+c_2t),\\
+y_c&=&c_1e^{r_1t}+c_2e^{r_2t}\,(r_1,r_2<0).
+\end{eqnarray*}
+In all three cases $\lim_{t\to\infty} y_c(t)=0$ for any choice of
+$c_1$ and $c_2$. For this reason we say that $y_c$ is the {\color{blue}\it
+transient component} of the solution $y$. The behavior of $y$ for
+large $t$ is determined by $y_p$, which we call the \emph{\color{blue}steady state
+component} of $y$. Thus, for large $t$ the motion is like simple
+harmonic motion at the frequency of the external force.
+
+The amplitude of $y_p$ in \eqref{eq:6.2.17} is
+\begin{equation}\label{eq:6.2.18}
+R={F_0\over\sqrt{m^2(\omega^2_0-\omega^2)^2+c^2\omega^2}},
+\end{equation}
+which is finite for all $\omega$; that is, the presence of damping
+precludes the phenomenon of resonance that we encountered in studying
+undamped vibrations under a periodic forcing function. We'll now
+find the value $\omega_{\max}$ of $\omega$ for which $R$ is maximized.
+This is the value of $\omega$ for which the function
+\[
+\rho (\omega)=m^2(\omega^2_0-\omega^2)^2+c^2\omega^2
+\]
+in the denominator of  \eqref{eq:6.2.18} attains its minimum value.  By
+rewriting this as
+\begin{equation}\label{eq:6.2.19}
+\rho (\omega)=m^2(\omega^4_0+\omega^4)+
+ (c^2-2m^2\omega^2_0)\omega^2,
+\end{equation}
+ you can see that $\rho$ is a strictly
+increasing function of $\omega^2$ if
+\[
+c\ge\sqrt{2m^2\omega^2_0}=\sqrt{2mk}.
+\]
+(Recall that $\omega^2_0=k/m$). Therefore $\omega_{\max}=0$ if this
+inequality holds. From \eqref{eq:6.2.15}, you can see that $\phi=0$ if
+$\omega=0$. In this case, \eqref{eq:6.2.14} reduces to
+\[
+y_p={F_0\over\sqrt{m^2\omega^4_0}}={F_0\over k},
+\]
+which is consistent with Hooke's law: if the mass is subjected to a
+constant force $F_0$,  its displacement should approach a constant
+$y_p$ such that $ky_p=F_0$. Now suppose   $c<\sqrt{2mk}$. Then,
+from \eqref{eq:6.2.19},
+\[
+\rho'(\omega)=2\omega(2m^2\omega^2+c^2-2m^2\omega^2_0),
+\]
+and $\omega_{\max}$ is the value of $\omega$ for which the
+expression in parentheses equals zero; that is,
+\[
+\omega_{\max}=\sqrt{\omega^2_0-{c^2\over2m^2}}
+=\sqrt{{k\over m}\left(1-{c^2\over2km}\right)}.
+\]
+(To see that $\rho(\omega_{\max})$ is the minimum value of
+$\rho(\omega)$, note that $\rho'(\omega)<0$ if $\omega
+<\omega_{\max}$ and $\rho'(\omega)>0$ if $\omega>\omega_{\max}$.)
+Substituting $\omega=\omega_{\max}$ in \eqref{eq:6.2.18} and simplifying
+shows that the maximum amplitude $R_{\max}$ is
+\[
+R_{\max}={2mF_0\over c\sqrt{4mk-c^2}} \mbox{\quad if \quad} c<
+\sqrt{2mk}.
+\]
+We summarize our results  as follows.
+
+
+\begin{theorem}\color{blue} \label{thmtype:6.2.1}
+ Suppose we consider the amplitude $R$ of the steady state
+component of the solution of
+\[
+my''+cy'+ky=F_0\cos\omega t
+\]
+as a function of $\omega$.
+\newline\indent{\rm(a)} If $c\ge\sqrt{2mk}$,  the maximum amplitude is
+ $R_{\max}=F_0/k$ and it's attained when $\omega=
+\omega_{\max}=0$.
+\newline\indent
+{\rm(b)} If $c<\sqrt{2mk}$, the maximum amplitude is
+\begin{equation}\label{eq:6.2.20}
+R_{\max}={2m F_0\over c\sqrt{4mk-c^2}},
+\end{equation}
+and it's attained when
+\begin{equation}\label{eq:6.2.21}
+\omega=\omega_{\max}=\sqrt{{k\over m}\left(1-{c^2\over
+2km}\right)}.
+\end{equation}
+\end{theorem}
+Note that $R_{\max}$ and $\omega_{\max}$ are continuous functions
+of $c$, for $c\ge0$, since  \eqref{eq:6.2.20} and  \eqref{eq:6.2.21} reduce
+to $R_{\max}=F_0/k$ and $\omega_{\max}=0$ if $c=\sqrt{2km}$.
+
+\newpage
+\exercises
+\begin{exerciselist}
+
+\item\label{exer:6.2.1}
+A 64 lb object stretches a spring 4 ft in equilibrium. It is attached
+to a dashpot with damping constant $c=8$ lb-sec/ft. The object is
+initially displaced 18 inches above equilibrium and given a downward
+velocity of 4 ft/sec. Find its displacement and time--varying
+amplitude for $t>0$.
+
+\item\label{exer:6.2.2} \CGex
+A 16 lb weight is attached to a spring with natural length 5 ft. With
+the weight attached, the spring measures 8.2 ft. The weight is
+initially displaced 3 ft below equilibrium and given an upward
+velocity of 2 ft/sec. Find and graph its displacement
+ for $t>0$ if the medium resists the motion with a force of
+one lb for each ft/sec of velocity. Also, find its time--varying amplitude.
+
+\item\label{exer:6.2.3} \CGex
+An 8 lb weight stretches a spring 1.5 inches. It is attached to a
+dashpot with damping constant $c$=8 lb-sec/ft. The weight is
+initially displaced 3 inches above equilibrium and given an upward
+velocity of 6 ft/sec. Find and graph its displacement for $t>0$.
+
+\item\label{exer:6.2.4}
+A 96 lb weight stretches a spring 3.2 ft in equilibrium. It is
+attached to a dashpot with damping constant $c$=18 lb-sec/ft. The
+weight is initially displaced 15 inches below equilibrium and given a
+downward velocity of 12 ft/sec. Find its displacement for $t>0$.
+
+\item\label{exer:6.2.5}
+  A 16 lb weight  stretches a spring 6 inches in equilibrium.
+It is attached to a damping mechanism with constant $c$.  Find all values
+of $c$ such that the free vibration of the weight has infinitely many
+oscillations.
+
+\item\label{exer:6.2.6}
+An 8 lb weight stretches a spring .32 ft. The weight is initially
+displaced 6 inches above equilibrium and given an upward velocity of 4
+ft/sec. Find its displacement for $t>0$ if the medium exerts a
+damping force of 1.5 lb for each ft/sec of velocity.
+\item\label{exer:6.2.7}
+A 32 lb weight stretches a spring 2 ft in equilibrium. It is attached
+to a dashpot with constant $c=8$ lb-sec/ft. The weight is initially
+displaced 8 inches below equilibrium and released from rest. Find its
+displacement for $t>0$.
+
+\item\label{exer:6.2.8}
+  A mass of 20 gm stretches a  spring 5 cm.  The spring
+is attached to a dashpot with damping constant 400 dyne sec/cm.  Determine
+the displacement for $t>0$ if the mass is  initially displaced
+ 9 cm  above equilibrium  and released from rest.
+
+\item\label{exer:6.2.9}
+A 64 lb weight is suspended from a spring with constant $k=25$ lb/ft.
+It is initially displaced 18 inches above equilibrium and released
+from rest. Find its displacement for $t>0$ if the medium resists the
+motion with 6 lb of force for each ft/sec of velocity.
+
+\item\label{exer:6.2.10}
+A 32 lb weight stretches a spring 1 ft in equilibrium. The weight is
+initially displaced 6 inches above equilibrium and given a downward
+velocity of 3 ft/sec. Find its displacement for $t>0$ if the medium
+resists the motion with a force  equal to 3 times the speed
+in ft/sec.
+
+\item\label{exer:6.2.11}
+An 8 lb weight stretches a spring 2 inches. It is attached to a
+dashpot with damping constant $c$=4 lb-sec/ft. The weight is
+initially displaced 3 inches above equilibrium and given a downward
+velocity of 4 ft/sec. Find its displacement for $t>0$.
+
+\item\label{exer:6.2.12} \CGex
+A 2 lb weight stretches a spring .32 ft. The weight is initially
+displaced 4 inches below equilibrium and given an upward velocity of 5
+ft/sec. The medium provides damping with constant $c=1/8$ lb-sec/ft.
+Find and graph the displacement for $t>0$.
+
+\item\label{exer:6.2.13}
+  An 8 lb weight stretches a spring 8 inches in equilibrium.
+It is attached to a dashpot with damping constant $c=.5$ lb-sec/ft
+and subjected to an external force  $F(t)=4\cos2t$ lb.
+Determine the steady state component of the displacement for $t>0$.
+
+\item\label{exer:6.2.14}
+A 32 lb weight stretches a spring 1 ft in equilibrium. It is attached
+to a dashpot with constant $c=12$ lb-sec/ft. The weight is initially
+displaced 8 inches above equilibrium and released from rest. Find its
+displacement for $t>0$.
+
+\item\label{exer:6.2.15}
+A mass of one kg stretches a spring 49 cm in equilibrium. A dashpot
+attached to the spring supplies a damping force of 4 N for each m/sec
+of speed. The mass is initially displaced 10 cm above equilibrium and
+given a downward velocity of 1 m/sec. Find its displacement for $t>0$.
+
+\item\label{exer:6.2.16}
+A mass of 100 grams stretches a spring 98 cm in equilibrium. A dashpot
+attached to the spring supplies a damping force of 600 dynes for each
+cm/sec of speed. The mass is initially displaced 10 cm above
+equilibrium and given a downward velocity of 1 m/sec. Find its
+displacement for $t>0$.
+
+\item\label{exer:6.2.17}
+A 192 lb weight is suspended from a spring with constant $k=6$ lb/ft
+and subjected to an external force $F(t)=8\cos3t$ lb. Find the steady
+state component of the displacement for $t>0$ if the medium resists
+the motion with a force  equal to 8 times the speed in
+ft/sec.
+
+\item\label{exer:6.2.18}
+A 2 gm mass is attached to a spring with constant 20 dyne/cm. Find the
+steady state component of the displacement if the mass is subjected to
+an external force $F(t)=3\cos4t-5\sin4t$ dynes and a dashpot supplies
+4 dynes of damping for each cm/sec of velocity.
+
+\item\label{exer:6.2.19} \CGex
+A 96 lb weight is attached to a spring with constant 12 lb/ft. Find
+and graph the steady state component of the displacement if the mass is
+subjected to an external force $F(t)=18\cos t-9\sin t$ lb and a
+dashpot supplies 24 lb of damping for each ft/sec of velocity.
+
+\item\label{exer:6.2.20}
+A mass of one kg stretches a spring 49 cm in equilibrium. It is
+attached to a dashpot that supplies a damping force of 4 N for each
+m/sec of speed. Find the steady state component of its displacement if
+it's subjected to an external force $F(t)=8\sin2t-6\cos2t$ N.
+
+
+\item\label{exer:6.2.21}
+A mass $m$ is suspended from a spring with constant $k$ and subjected to an
+external force $F(t)=\alpha\cos\omega_0t+\beta\sin\omega_0t$, where
+$\omega_0$ is the natural frequency of the spring--mass system without
+damping. Find the steady state component of the displacement if a dashpot
+with constant $c$ supplies damping.
+
+\item\label{exer:6.2.22}
+Show that if $c_1$ and $c_2$ are not both zero then
+\[
+y=e^{r_1t}(c_1+c_2t)
+\]
+can't equal zero for more than one value of
+$t$.
+
+\item\label{exer:6.2.23}
+Show that if $c_1$ and $c_2$ are not both zero then
+\[
+y=c_1e^{r_1t}+c_2e^{r_2t}
+\]
+ can't equal zero for more than one
+value of $t$.
+
+\item\label{exer:6.2.24}
+Find the solution of the initial value problem
+\[
+my''+cy'+ky=0,\quad y(0)=y_0,\;y'(0)=v_0,
+\]
+given that the motion is underdamped, so  the general solution of
+the equation is
+\[
+y=e^{-ct/2m}(c_1\cos\omega_1t+c_2\sin\omega_1t).
+\]
+
+\item\label{exer:6.2.25}
+Find the solution of the initial value problem
+\[
+my''+cy'+ky=0,\quad y(0)=y_0,\;y'(0)=v_0,
+\]
+given that the motion is overdamped, so  the general solution of
+the equation is
+\[
+y=c_1e^{r_1t}+c_2e^{r_2t}\;(r_1,r_2<0).
+\]
+
+\item\label{exer:6.2.26}
+Find the solution of the initial value problem
+\[
+my''+cy'+ky=0,\quad y(0)=y_0,\;y'(0)=v_0,
+\]
+given that the motion is critically damped, so that the general
+solution of the equation is of the form
+\[
+y=e^{r_1t}(c_1+c_2t)\,(r_1<0).
+\]
+\end{exerciselist}
+
+
+\section{The $RLC$ Circuit}
+
+In this section we consider the \emph{\color{blue}$RLC$ circuit}, shown
+schematically in Figure~\ref{figure:6.3.1}. As we'll see, the $RLC$
+circuit is an electrical analog of a spring-mass system with
+damping.
+
+Nothing happens while the switch is open (dashed line). When the
+switch is closed (solid line) we say that the \emph{\color{blue}circuit is
+closed}. Differences in electrical potential in a closed circuit
+cause current to flow in the circuit. The battery or generator in
+Figure~\ref{figure:6.3.1} creates a difference in electrical potential
+$E=E(t)$ between its two terminals, which we've marked arbitrarily as
+positive and negative. (We could just as well interchange the
+markings.) We'll say that $E(t)>0$ if the potential at the positive
+terminal is greater than the potential at the negative terminal,
+$E(t)<0$ if the potential at the positive terminal is less than the
+potential at the negative terminal, and $E(t)=0$ if the potential is
+the same at the two terminals. We call $E$ the \emph{\color{blue}impressed
+voltage}.
+
+
+
+\begin{figure}[H]
+  \centering\color{blue}
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060301}
+\caption{ An $RLC$ circuit}
+  \label{figure:6.3.1}
+\end{figure}
+
+
+At any  time $t$, the same current flows in all points of the
+circuit. We denote current by $I=I(t)$. We say that $I(t)>0$ if the
+direction of flow is around the circuit from the positive terminal of
+the battery or generator back to the negative terminal, as indicated
+by the arrows in Figure~\ref{figure:6.3.1}   $I(t)<0$ if the flow is in the
+opposite direction, and $I(t)=0$ if no current flows at time $t$.
+
+Differences in potential occur at the resistor, induction coil, and
+capacitor in Figure~\ref{figure:6.3.1}. Note that the two sides of each
+of these components are also identified as positive and negative. The
+\emph{\color{blue}voltage drop across}  each component is defined to be the
+potential on the positive side of the component minus the potential on
+the negative side. This terminology is somewhat misleading, since
+``drop'' suggests a decrease even though changes in potential are
+signed quantities and therefore may be increases. Nevertheless,
+we'll go along with tradition and call them voltage drops.
+The voltage drop across the resistor in Figure~\ref{figure:6.3.1} is given
+by
+\begin{equation} \label{eq:6.3.1}
+V_R=IR,
+\end{equation}
+where $I$ is current and $R$ is a positive constant, the {\color{blue}\it
+resistance\/} of the resistor. The voltage drop across the induction
+coil is given by
+\begin{equation} \label{eq:6.3.2}
+V_I=L{dI\over dt}=LI',
+\end{equation}
+where $L$ is a positive constant, the \emph{\color{blue}inductance} of the coil.
+
+A capacitor stores electrical charge $Q=Q(t)$, which is related to
+the current in the circuit by the equation
+\begin{equation} \label{eq:6.3.3}
+Q(t)=Q_0+\int_0^tI(\tau)\,d\tau,
+\end{equation}
+where $Q_0$ is the charge on the capacitor at $t=0$. The voltage drop
+across a capacitor is given by
+\begin{equation} \label{eq:6.3.4}
+V_C={Q\over C},
+\end{equation}
+where $C$ is a positive constant, the \emph{\color{blue}capacitance} of the
+capacitor.
+
+Table~\ref{table:6.3.1} names the units for the quantities that we've
+discussed. The units are defined so that
+\begin{eqnarray*}
+1\mbox{\,volt}&=&1\mbox{\,ampere}\cdot1\mbox{\,ohm}\\
+&=&1\mbox{\,henry}\cdot1\,\mbox{ampere}/\mbox{second}\\
+&=&1\mbox{\,coulomb}/\mbox{\,farad}\\ [2\jot]\arraytext{and}\\
+1\mbox{\,ampere}&=&1\mbox{\,coulomb}/\mbox{second}.
+\end{eqnarray*}
+
+\medskip
+\begin{newtable} \label{table:6.3.1}
+{Electrical Units}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ {\bf Symbol}&{\bf Name}& {\bf Unit}\\\hline
+$E$  &  Impressed Voltage & volt  \\\hline
+$I$ & Current & ampere \\\hline
+$Q$ & Charge & coulomb\\\hline
+$R$ & Resistance& ohm\\\hline
+$L$ & Inductance& henry\\\hline
+$C$ & Capacitance&farad\\\hline
+\end{tabular}
+\end{center}
+\end{newtable}
+
+
+
+According to
+\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Kirchhoff.html}
+{\color{blue}\itshape Kirchoff's law}, the sum of
+the voltage drops in a closed $RLC$ circuit equals the impressed
+voltage. Therefore, from (\ref{eq:6.3.1}), (\ref{eq:6.3.2}), and (\ref{eq:6.3.4}),
+\begin{equation} \label{eq:6.3.5}
+ LI'+RI+{1\over C}Q=E(t).
+\end{equation}
+This equation contains two unknowns, the current $I$ in the
+circuit and the charge $Q$ on the capacitor. However, (\ref{eq:6.3.3})
+implies that $Q'=I$, so (\ref{eq:6.3.5}) can be converted into the second
+order equation
+\begin{equation} \label{eq:6.3.6}
+ LQ''+RQ'+{1\over C}Q=E(t)
+\end{equation}
+in $Q$. To find the current flowing in an $RLC$ circuit, we solve
+(\ref{eq:6.3.6}) for $Q$ and then differentiate the solution to obtain
+$I$.
+
+In Sections~6.1 and 6.2 we encountered the
+equation
+\begin{equation} \label{eq:6.3.7}
+my''+cy'+ky=F(t)
+\end{equation}
+in connection with spring-mass systems. Except for notation this
+equation is the same as (\ref{eq:6.3.6}). The correspondence between
+electrical and mechanical quantities connected with (\ref{eq:6.3.6}) and
+(\ref{eq:6.3.7}) is shown in Table~\ref{table:6.3.2}.
+
+
+\blankbox{
+\medskip
+\begin{newtable} \label{table:6.3.2}
+{Electrical and Mechanical Units}
+\begin{center}
+\begin{tabular}{|lc|lc|}\hline
+\multicolumn{2}{|c|}{\bf Electrical}&
+\multicolumn{2}{c|}{\bf Mechanical}\\\hline
+charge& $Q$& displacement&$y$\\\hline
+curent&$I$&velocity&$y'$\\\hline
+impressed voltage&$E(t)$&external force&$F(t)$\\\hline
+inductance&$L$&Mass&$m$\\\hline
+resistance&$R$&damping&$c$\\\hline
+1/capacitance&$1/C$&cpring constant&$k$\\\hline
+\end{tabular}
+\end{center}
+\end{newtable}}
+
+
+\medskip
+The equivalence between (\ref{eq:6.3.6}) and (\ref{eq:6.3.7}) is an example of
+how mathematics unifies fundamental similarities in diverse physical
+phenomena. Since we've already studied the properties of solutions of
+(\ref{eq:6.3.7}) in Sections~6.1 and 6.2, we
+can obtain
+results concerning solutions of (\ref{eq:6.3.6}) by simpling changing
+notation, according to Table~\ref{table:6.3.1}.
+
+\boxit{Free Oscillations}
+
+
+\noindent
+We say that an $RLC$ circuit is in \emph{\color{blue}free oscillation} if $E(t)=0$
+for $t>0$, so that (\ref{eq:6.3.6}) becomes
+\begin{equation} \label{eq:6.3.8}
+LQ''+RQ'+{1\over C}Q=0.
+\end{equation}
+The characteristic equation of (\ref{eq:6.3.8}) is
+\[
+Lr^2+Rr+{1\over C}=0,
+\]
+with roots
+\begin{equation}\label{eq:6.3.9}
+r_1={-R-\sqrt{R^2-4L/C}\over2L}\mbox{\quad and \quad} r_2=
+{-R+\sqrt{R^2-4L/C}\over2L}.
+\end{equation}
+There are three cases to consider, all analogous to the cases
+considered in Section~6.2 for free vibrations of a damped
+spring-mass system.
+
+{\sc Case 1.}
+The oscillation is \emph{\color{blue}underdamped} if $R<\sqrt{4L/C}$. In this
+case, $r_1$ and $r_2$ in (\ref{eq:6.3.9}) are complex conjugates, which we
+write as
+\[
+r_1=-{R\over2L}+i\omega_1\mbox{\quad and \quad} r_2=-{R\over2L}-i\omega_1,
+\]
+where
+\[
+\omega_1={\sqrt{4L/C-R^2}\over2L}.
+\]
+The general solution of  (\ref{eq:6.3.8})  is
+\[
+Q=e^{-Rt/2L}(c_1\cos\omega_1 t+c_2\sin\omega_1 t),
+\]
+which we can write as
+\begin{equation}\label{eq:6.3.10}
+Q=Ae^{-Rt/2L}\cos(\omega_1 t-\phi),
+\end{equation}
+ where
+\[
+A=\sqrt{c_1^2+c_2^2},\quad A\cos\phi=c_1,\mbox{\quad and \quad} A\sin\phi=c_2.
+\]
+In the idealized case where $R=0$, the solution (\ref{eq:6.3.10})
+reduces to
+\[
+Q=A\cos\left({t\over\sqrt{LC}}-\phi\right),
+\]
+which is analogous to  the simple harmonic motion of an undamped
+spring-mass system in free vibration.
+
+Actual $RLC$ circuits are usually underdamped, so the case we've just
+considered is the most important. However, for completeness we'll
+consider the other two possibilities.
+
+{\sc Case 2.}
+The oscillation is \emph{\color{blue}overdamped} if $R>\sqrt{4L/C}$. In this case,
+the zeros $r_1$ and $r_2$ of the characteristic polynomial are real,
+with $r_1<r_2<0$ (see (\ref{eq:6.3.9})), and the general solution of
+(\ref{eq:6.3.8}) is
+\begin{equation}\label{eq:6.3.11}
+Q=c_1e^{r_1t}+c_2e^{r_2t}.
+\end{equation}
+
+{\sc Case 3.}
+The oscillation is \emph{\color{blue}critically damped} if $R=\sqrt{4L/C}$. In
+this case, $r_1=r_2=-R/2L$ and the general solution of (\ref{eq:6.3.8}) is
+\begin{equation}\label{eq:6.3.12}
+Q=e^{-Rt/2L}(c_1+c_2t).
+\end{equation}
+
+If $R\ne0$, the exponentials in (\ref{eq:6.3.10}), (\ref{eq:6.3.11}),
+and
+(\ref{eq:6.3.12}) are negative, so the solution of any homogeneous initial
+value problem
+\[
+ LQ''+RQ'+{1\over C}Q=0,\quad Q(0)=Q_0,\quad Q'(0)=I_0,
+\]
+approaches zero exponentially as $t\to\infty$. Thus, all such
+solutions are \emph{\color{blue}transient}, in the sense defined
+Section~6.2 in the discussion of forced vibrations of a
+spring-mass system with damping.
+
+\begin{example}\label{example:6.3.1} \rm
+At $t=0$ a current of 2 amperes flows in an $RLC$ circuit with
+resistance $R=40$ ohms, inductance $L=.2$ henrys, and capacitance
+$C=10^{-5}$ farads. Find the current flowing in the circuit at $t>0$
+if the initial charge on the capacitor is 1 coulomb. Assume that
+$E(t)=0$ for $t>0$.
+\end{example}
+
+\solution The equation for the charge $Q$ is \[
+{1\over5}Q''+40Q'+10000Q=0, \] or
+\begin{equation} \label{eq:6.3.13}
+Q''+200Q'+50000Q=0.
+\end{equation}
+Therefore we must solve the initial value problem
+\begin{equation} \label{eq:6.3.14}
+Q''+200Q'+50000Q=0,\quad Q(0)=1,\quad Q'(0)=2.
+\end{equation}
+The desired current is the derivative of the solution of this initial
+value problem.
+
+The characteristic equation of (\ref{eq:6.3.13}) is
+\[
+r^2+200r+50000=0,
+\]
+which has complex zeros $r=-100\pm200i$. Therefore the general
+solution of (\ref{eq:6.3.13}) is
+\begin{equation} \label{eq:6.3.15}
+Q=e^{-100t}(c_1\cos200t+c_2\sin200t).
+\end{equation}
+Differentiating this and collecting like terms yields
+\begin{equation} \label{eq:6.3.16}
+Q'=-e^{-100t}\left[(100c_1-200c_2)\cos200t+
+(100c_2+200c_1)\sin200t\right].
+\end{equation}
+To find the solution of the initial value problem (\ref{eq:6.3.14}),
+we set $t=0$ in (\ref{eq:6.3.15}) and (\ref{eq:6.3.16}) to obtain
+\[
+c_1=Q(0)=1\mbox{\quad and \quad}   -100c_1+200c_2=Q'(0)=2;
+\]
+therefore, $c_1=1$ and $c_2=51/100$, so
+\[
+Q=e^{-100t}\left(\cos200t+{51\over100}\sin200t\right)
+\]
+is the solution of (\ref{eq:6.3.14}).
+Differentiating this yields
+\[
+I=e^{-100t}(2\cos200t-251\sin200t).
+\]
+
+\boxit{Forced Oscillations With Damping}
+
+
+\noindent
+An initial value problem for (\ref{eq:6.3.6})  has the form
+\begin{equation} \label{eq:6.3.17}
+ LQ''+RQ'+{1\over C}Q=E(t),\quad Q(0)=Q_0,\quad Q'(0)=I_0,
+\end{equation}
+where $Q_0$ is the initial charge on the capacitor and $I_0$ is the
+initial current in the circuit. We've already seen that if $E\equiv0$
+then all solutions of (\ref{eq:6.3.17}) are transient. If
+$E\not\equiv0$, we know that the solution of (\ref{eq:6.3.17}) has
+the form $Q=Q_c+Q_p$, where $Q_c$ satisfies the complementary
+equation, and approaches zero exponentially as $t\to\infty$ for any
+initial conditions , while $Q_p$ depends only on $E$ and is
+independent of the initial conditions. As in the case of forced
+oscillations of a spring-mass system with damping, we call $Q_p$ the
+\emph{\color{blue}steady state} charge on the capacitor of the $RLC$ circuit. Since
+$I=Q'=Q_c'+Q_p'$ and $Q_c'$ also tends to zero exponentially as
+$t\to\infty$, we say that $I_c=Q'_c$ is the \emph{\color{blue}transient} current
+and $I_p=Q_p'$ is the \emph{\color{blue}steady state} current. In most
+applications we're interested only in the steady state charge and
+current.
+
+\begin{example}\label{example:6.3.2} \rm
+Find the amplitude-phase form of the steady state current in the $RLC$
+circuit in Figure~\ref{figure:6.3.1} if the impressed voltage, provided by
+an alternating current generator, is $E(t)=E_0\cos\omega t$.
+\end{example}
+
+\solution
+We'll first find the steady state charge on the capacitor as
+a particular solution of
+\[
+LQ''+RQ'+{1\over C}Q=E_0\cos\omega t.
+\]
+To do, this we'll simply reinterpret a result obtained in
+Section~6.2, where we found that the steady state solution of
+\[
+my''+cy'+ky=F_0\cos\omega t
+\]
+is
+\[
+y_p={F_0\over\sqrt{(k-m\omega^2)^2+c^2\omega^2}}
+\cos(\omega t-\phi),
+\]
+where
+\[
+\cos\phi={k-m\omega^2\over\sqrt
+{(k-m\omega^2)^2+c^2\omega^2}}\mbox{\quad and \quad}
+\sin\phi={c\omega\over\sqrt{(k-m\omega^2)^2+c^2\omega^2}}.
+\]
+(See Equations~\eqref{eq:6.2.14} and \eqref{eq:6.2.15}.) By making the
+appropriate changes in the symbols
+(according to Table~2) yields the steady state charge
+\[
+Q_p={E_0\over\sqrt{(1/C-L\omega^2)^2+R^2\omega^2}}\cos(\omega
+t-\phi),
+\]
+where
+\[
+\cos\phi={1/C-L\omega^2\over\sqrt{(1/C-L\omega^2)^2+R^2\omega^2}}
+\mbox{\quad and \quad}
+\sin\phi={R\omega\over\sqrt{(1/C-L\omega^2)^2+R^2\omega^2}}.
+\]
+ Therefore the steady state current in the circuit
+is
+\[
+I_p=Q_p'=
+-{\omega E_0\over\sqrt{(1/C-L\omega^2)^2+R^2\omega^2}}\sin(\omega
+t-\phi).
+\]
+
+\exercises
+In Exercises~\ref{exer:6.3.1}-\ref{exer:6.3.5} find the current in the
+$RLC$ circuit, assuming that $E(t)=0$ for $t>0$.
+
+\begin{exerciselist}
+\item\label{exer:6.3.1}
+$R=3$ ohms;  \, $L=.1$ henrys;  \, $C=.01$ farads;   $Q_0=0$
+coulombs;  \,$I_0=2$ amperes.
+
+\item\label{exer:6.3.2}
+$R=2$ ohms;  \, $L=.05$ henrys;  \, $C=.01$ farads';  $Q_0=2$
+coulombs;  \,$I_0=-2$ amperes.
+
+\item\label{exer:6.3.3}
+$R=2$ ohms;  \, $L=.1$ henrys;  \, $C=.01$ farads;   $Q_0=2$
+coulombs;  \,$I_0=0$ amperes.
+
+\item\label{exer:6.3.4}
+$R=6$ ohms;  \, $L=.1$ henrys;  \, $C=.004$ farads';  $Q_0=3$
+coulombs;  \,$I_0=-10$ amperes.
+
+\item\label{exer:6.3.5}
+$R=4$ ohms;  \, $L=.05$ henrys;  \, $C=.008$ farads;   $Q_0=-1$
+coulombs;  \,$I_0=2$ amperes.
+
+
+\exercisetext{In Exercises~\ref{exer:6.3.6}-\ref{exer:6.3.10} find the steady
+state current in the circuit described by the  equation.}
+
+\item\label{exer:6.3.6}
+$\dst{1\over10}Q''+3Q'+100Q=5\cos10t-5\sin10t$
+
+\item\label{exer:6.3.7}
+$\dst{1\over20}Q''+2Q'+100Q=10\cos25t-5\sin25t$
+
+\item\label{exer:6.3.8}
+$\dst{1\over10}Q''+2Q'+100Q=3\cos50t-6\sin50t$
+
+\item\label{exer:6.3.9}
+$\dst{1\over10}Q''+6Q'+250Q=10\cos100t+30\sin100t$
+
+\item\label{exer:6.3.10}
+$\dst{1\over20}Q''+4Q'+125Q=15\cos30t-30\sin30t$
+
+\item\label{exer:6.3.11}
+Show that if $E(t)=U\cos\omega t+V\sin\omega t$ where $U$
+and $V$ are constants then the steady state current in
+the $RLC$ circuit shown in Figure~\ref{figure:6.3.1} is
+\[
+I_p={\omega^2RE(t)+(1/C-L\omega^2)E'(t)\over\Delta},
+\]
+where
+\[
+\Delta=(1/C-L\omega^2)^2+R^2\omega^2.
+\]
+
+\item\label{exer:6.3.12}
+Find the amplitude of the steady state current $I_p$ in the $RLC$
+circuit shown in Figure~\ref{figure:6.3.1}  if $E(t)=U\cos\omega
+t+V\sin\omega t$, where $U$ and $V$ are constants. Then find the value
+$\omega_0$ of $\omega$ maximizes the amplitude, and
+ find the maximum amplitude.
+
+\exercisetext{In Exercises~\ref{exer:6.3.13}-\ref{exer:6.3.17} plot the
+amplitude of the steady state current against $\omega$. Estimate the
+value of $\omega$ that maximizes the amplitude of the steady state
+current, and estimate this maximum amplitude. \hint{You can confirm
+your results by doing Exercise~$\ref{exer:6.3.12}$.}}
+
+\item\label{exer:6.3.13} \Lex
+$\dst{1\over10}Q''+3Q'+100Q=U\cos\omega t+V\sin\omega t$
+
+\item\label{exer:6.3.14} \Lex
+$\dst{1\over20}Q''+2Q'+100Q=U\cos\omega t+V\sin\omega t$
+
+\item\label{exer:6.3.15} \Lex
+$\dst{1\over10}Q''+2Q'+100Q=U\cos\omega t+V\sin\omega t$
+
+\item\label{exer:6.3.16} \Lex
+$\dst{1\over10}Q''+6Q'+250Q=U\cos\omega t+V\sin\omega t$
+
+\item\label{exer:6.3.17} \Lex
+$\dst{1\over20}Q''+4Q'+125Q=U\cos\omega t+V\sin\omega t$
+\end{exerciselist}
+
+
+\section{Motion Under a Central Force}
+
+We'll now study the motion of a object moving under the influence
+of a \emph{\color{blue}central force}; that is, a force whose magnitude at any
+point $P$ other than the origin depends only on the distance from
+$P$ to the origin, and whose direction at $P$ is parallel to the line
+connecting $P$ and the origin, as indicated in
+Figure~\ref{figure:6.4.1} for the case where the direction of the force
+at every point is toward the origin.
+ Gravitational forces are central
+forces;   for example, as mentioned in Section~4.3, if we
+assume that Earth is a perfect sphere with constant mass density then
+Newton's law of gravitation asserts that the force exerted on an
+object by Earth's gravitational field is proportional to the mass of
+the object and inversely proportional to the square of its distance
+from the center of Earth, which we take to be the origin.
+
+If the initial position and velocity vectors of an object moving under
+a central force are parallel, then the subsequent motion is along the
+line from the origin to the initial position. Here we'll assume that
+the initial position and velocity vectors are not parallel;   in this
+case the subsequent motion is in the plane determined by them. For
+convenience we take this to be the $xy$-plane. We'll
+consider
+the problem of determining the curve traversed by the object. We call
+this curve the \emph{\color{blue}orbit}.
+
+
+\begin{figure}[tbp]
+  \centering\color{blue}
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060401}
+  \caption{}
+  \label{figure:6.4.1}
+\end{figure}
+
+
+
+
+We can represent a central force in terms of polar coordinates
+\[
+x=r\cos\theta,\quad y=r\sin\theta
+\]
+ as
+\[
+{\bf F}(r,\theta)=f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
+\]
+We assume that $f$ is continuous for all $r>0$. The magnitude of ${\bf
+F}$ at $(x,y)=(r\cos\theta,r\sin\theta)$ is $|f(r)|$, so it depends
+only on the distance $r$ from the point to the origin   the direction
+of ${\bf F}$ is from the point to the origin if $f(r)<0$, or from the
+origin to the point if $f(r)>0$. We'll show that the orbit of an
+object with mass $m$ moving under this force is given by
+\[
+r(\theta)={1\over u(\theta)},
+\]
+where $u$  is solution of the differential equation
+\begin{equation} \label{eq:6.4.1}
+ {d^2u\over d\theta^2}+u=-{1\over mh^2u^2}f(1/u),
+\end{equation}
+and $h$ is a constant defined below.
+
+
+
+Newton's second law of motion (${\bf F}=m{\bf a}$) says that the polar
+coordinates
+$r=r(t)$ and $\theta=\theta(t)$ of
+the particle  satisfy the vector differential equation
+\begin{equation} \label{eq:6.4.2}
+m(r\cos\theta\,{\bf i}+r\sin\theta\,{\bf j})''=
+f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
+\end{equation}
+To deal with this equation we introduce  the unit vectors
+\[
+{\bf e}_1=\cos\theta\,{\bf i}+\sin\theta\,{\bf j}
+\mbox{\quad and \quad}
+{\bf e}_2=-\sin\theta\,{\bf i}+\cos\theta\,{\bf j}.
+\]
+Note that   ${\bf e}_1$ points in the
+direction of increasing $r$ and ${\bf e}_2$ points in the
+direction of increasing $\theta$ (Figure~\ref{figure:6.4.2});
+moreover,
+\begin{equation} \label{eq:6.4.3}
+{d{\bf e}_1\over d\theta}={\bf e}_2,\quad
+{d{\bf e}_2\over d\theta}=-{\bf e}_1,
+\end{equation}
+and
+\[
+{\bf e}_1\cdot{\bf
+e}_2=\cos\theta(-\sin\theta)+\sin\theta\cos\theta=0,
+\]
+so ${\bf e}_1$ and ${\bf e}_2$ are  perpendicular.
+Recalling that the single prime $(')$ stands for differentiation with
+respect to
+$t$, we see from \eqref{eq:6.4.3}  and the chain rule that
+\begin{equation} \label{eq:6.4.4}
+{\bf e}_1'=\theta'{\bf e}_2\mbox{\quad and \quad}
+{\bf e}_2'=-\theta'{\bf e}_1.
+\end{equation}
+
+
+
+\begin{figure}[tbp]
+  \centering\color{blue}
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060402}
+  \caption{}
+  \label{figure:6.4.2}
+\end{figure}
+
+
+
+Now we can write \eqref{eq:6.4.2} as
+\begin{equation} \label{eq:6.4.5}
+m(r{\bf e}_1)''=f(r){\bf e}_1.
+\end{equation}
+But
+\[
+(r{\bf e}_1)'=r'{\bf e}_1+r{\bf e}_1'=r'{\bf e}_1+r\theta'{\bf
+e}_2
+\]
+(from \eqref{eq:6.4.4}), and
+\begin{eqnarray*}
+(r{\bf e}_1)''&=&(r'{\bf e}_1+r\theta'{\bf e}_2)'\\
+&=&r''{\bf e}_1+r'{\bf e}_1'+(r\theta''+r'\theta'){\bf e}_2
++r\theta'{\bf e}_2'\\
+&=&r''{\bf e}_1+r'\theta'{\bf e}_2+(r\theta''+r'\theta'){\bf
+e}_2 -r(\theta')^2{\bf e}_1\mbox{\quad (from \eqref{eq:6.4.4})}\\
+&=&\left(r''-r(\theta')^2\right){\bf e}_1+(r\theta''+2r'\theta'){\bf
+e}_2.
+\end{eqnarray*}
+Substituting this into \eqref{eq:6.4.5} yields
+\[
+m\left(r''-r(\theta')^2\right){\bf e}_1+m(r\theta''+2r'\theta'){\bf
+e}_2=f(r){\bf e}_1.
+\]
+By equating the coefficients of ${\bf e}_1$ and ${\bf e}_2$ on the
+two sides of this equation we see that
+\begin{equation} \label{eq:6.4.6}
+m\left(r''-r(\theta')^2\right)=f(r)
+\end{equation}
+and
+\[
+r\theta''+2r'\theta'=0.
+\]
+Multiplying the last equation by $r$ yields
+\[
+r^2\theta''+2rr'\theta'=(r^2\theta')'=0,
+\]
+so
+\begin{equation} \label{eq:6.4.7}
+r^2\theta'=h,
+\end{equation}
+where $h$ is a constant that we can write in terms of the initial
+conditions as
+\[
+h=r^2(0)\theta'(0).
+\]
+Since the initial position and velocity vectors are
+\[
+ r(0){\bf e}_1(0)\mbox{\quad and \quad}
+r'(0){\bf e}_1(0)+r(0)\theta'(0){\bf e}_2(0),
+\]
+our assumption that these two vectors are not parallel implies that
+$\theta'(0)\ne0$, so $h\ne0$.
+
+
+Now let $u=1/r$.
+Then  $u^2=\theta'/h$ (from \eqref{eq:6.4.7}) and
+\[
+r'=-\dst{u'\over u^2}=-h\left(u'\over \theta'\right),
+\]
+which implies that
+\begin{equation} \label{eq:6.4.8}
+r'=-h{du\over d\theta},
+\end{equation}
+since
+\[
+{u'\over\theta'}={du\over dt}\left/{d\theta\over dt}\right.=
+{du\over d\theta}.
+\]
+Differentiating \eqref{eq:6.4.8} with respect to $t$ yields
+\[
+r''=-h{d\over dt}\left({du\over d\theta}\right)
+=-h{d^2u\over d\theta^2}\theta',
+\]
+which implies that
+\[
+r''=-h^2u^2{d^2u\over d\theta^2}
+\mbox{\quad since\quad} \theta'=hu^2.
+\]
+Substituting from these equalities into
+\eqref{eq:6.4.6} and recalling that $r=1/u$ yields
+\[
+-m\left(h^2u^2{d^2u\over d\theta^2}+{1\over u}h^2u^4\right)
+=f(1/u),
+\]
+and dividing through by $-mh^2u^2$ yields \eqref{eq:6.4.1}.
+
+
+Eqn.~\eqref{eq:6.4.7} has the following geometrical interpretation, which
+is known as
+\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Kepler.html}
+ {\color{blue}\itshape Kepler's Second Law}.
+
+\begin{theorem}\color{blue}\label{thmtype:6.4.1}
+ The position vector
+ of an object moving under a central force
+sweeps out equal areas in equal times;$   $ more precisely$,$ if
+$\theta(t_1)\le\theta(t_2)$ then the $($signed$)$ area of the sector
+\[
+\{(x,y)=(r\cos\theta,r\sin\theta)\;  :\;  0\le r\le r(\theta),\;
+\theta(t_1)\le\theta(t_2)\}
+\]
+{\rm (Figure~\ref{figure:6.4.3})} is given by
+\[
+A={h(t_2-t_1)\over2},
+\]
+where $h=r^2\theta',$ which we have shown to be constant.
+\end{theorem}
+
+
+
+
+\begin{figure}[tbp]
+  \centering\color{blue}
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060403}
+  \caption{}
+  \label{figure:6.4.3}
+\end{figure}
+
+
+
+
+
+\proof  Recall from calculus that the area of the shaded sector
+in Figure~\ref{figure:6.4.3} is
+\[
+A={1\over2}\int_{\theta(t_1)}^{\theta(t_2)} r^2(\theta)\,d\theta,
+\]
+where $r=r(\theta)$ is the polar representation of the orbit.
+Making the change of variable $\theta=\theta(t)$ yields
+\begin{equation} \label{eq:6.4.9}
+A={1\over2}\int_{t_1}^{t_2} r^2(\theta(t))\theta'(t)\,dt.
+\end{equation}
+ But
+\eqref{eq:6.4.7}  and \eqref{eq:6.4.9} imply that
+\[
+A={1\over2}\int_{t_1}^{t_2} h\,dt={h(t_2-t_1)\over2},
+\]
+which completes the proof.
+
+\boxit{Motion Under an Inverse Square Law Force}
+
+
+\noindent
+In the special case where
+ $f(r)=-mk/r^2=-mku^2$, so ${\bf F}$  can be interpreted
+as a gravitational force, \eqref{eq:6.4.1}  becomes
+\begin{equation} \label{eq:6.4.10}
+ {d^2u\over d\theta^2}+u={k\over h^2}.
+\end{equation}
+The general solution of the complementary equation
+\[
+ {d^2u\over d\theta^2}+u=0
+\]
+can be written in amplitude--phase form as
+\[
+u=A\cos(\theta-\phi),
+\]
+where $A\ge0$ and $\phi$ is a phase angle.
+Since $u_p=k/h^2$ is a particular solution of \eqref{eq:6.4.10},
+the general solution of \eqref{eq:6.4.10} is
+\[
+u=A\cos(\theta-\phi)+{k\over h^2};
+\]
+hence, the orbit is given by
+\[
+r=\left(A\cos(\theta-\phi)+{k\over h^2}\right)^{-1},
+\]
+which we rewrite as
+\begin{equation} \label{eq:6.4.11}
+r={\rho\over 1+e\cos(\theta-\phi)},
+\end{equation}
+where
+\[
+\rho={h^2\over k}\mbox{\quad and \quad} e=A\rho.
+\]
+A curve satisfying \eqref{eq:6.4.11} is a conic section with a focus at
+the origin (Exercise~\ref{exer:6.4.1}). The nonnegative constant $e$ is
+ the \emph{\color{blue}eccentricity} of the orbit, which is
+an ellipse if
+$e<1$
+ellipse (a circle if $e=0$), a parabola if $e=1$, or a hyperbola if $e>1$.
+
+\begin{figure}[H]
+  \centering\color{blue}
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060404}
+  \caption{}
+  \label{figure:6.4.4}
+\end{figure}
+
+If  the orbit is an ellipse, then the minimum and maximum
+values of $r$  are
+\begin{eqnarray*}
+r_{\min}&=&{\rho\over1+e}\quad\mbox{(the \emph{\color{blue}perihelion
+distance}, attained when
+$\theta=\phi$)}  \\
+ r_{\max}&=&{\rho\over1-e}\quad\mbox{(the
+\emph{\color{blue}aphelion distance}, attained when
+$\theta=\phi+\pi$)}.
+\end{eqnarray*}
+\enlargethispage{1in}
+ Figure~\ref{figure:6.4.4} shows
+a typical elliptic orbit.
+The point $P$ on the orbit where $r=r_{\min}$ is the  {\color{blue}\it
+perigee\/} and  the point $A$ where $r=r_{\max}$ is the {\color{blue}\it
+apogee\/}.
+\newpage
+
+
+
+
+
+For example, Earth's orbit around the Sun is approximately an ellipse
+with $e\approx.017$, $r_{\min}\approx91\times 10^6$ miles, and
+$r_{\max}\approx 95\times 10^6$ miles. Halley's comet has a very
+elongated approximately elliptical orbit around the sun, with
+$e\approx.967$, $r_{\min}\approx55\times10^6$ miles, and
+$r_{\max}\approx33\times10^8$ miles. Some comets (the nonrecurring
+type) have parabolic or hyperbolic orbits.
+
+\exercises
+\begin{exerciselist}
+
+
+\item\label{exer:6.4.1}
+Find the equation of the curve
+\[
+r={\rho\over 1+e\cos(\theta-\phi)}
+\eqno{\rm (A)}
+\]
+in terms of
+$(X,Y)=\left(r\cos(\theta-\phi),r\sin(\theta-\phi)\right)$,
+which are rectangular coordinates with respect to the axes shown in
+Figure~\ref{figure:6.4.5}. Use your results to verify that
+(A)
+is the equation of an ellipse if $0<e<1$, a parabola if $e=1$,
+or a hyperbola if $e>1$. If $e<1$, leave your answer in
+the form
+\[
+ {(X-X_0)^2\over a^2}+{(Y-Y_0)^2\over b^2}=1,
+\]
+and show that  the area of the ellipse is
+\[
+A={\pi\rho^2\over(1-e^2)^{3/2}}.
+\]
+Then use Theorem~\ref{thmtype:6.4.1} to show that the time required for
+the object to traverse the entire orbit is
+\[
+T={2\pi\rho^2\over h(1-e^2)^{3/2}}.
+\]
+(This is
+\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Kepler.html}
+{\color{blue}\itshape Kepler's third law};   $T$ is called the
+\emph{\color{blue}period} of the orbit.)
+
+
+        \begin{figure}[H]
+  \centering
+  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig060405}
+\color{blue}
+  \caption{}
+  \label{figure:6.4.5}
+\end{figure}
+
+
+\item\label{exer:6.4.2}
+Suppose an object with mass $m$ moves in the $xy$-plane under the
+central force
+\[
+{\bf F}(r,\theta)=-{mk\over r^2}(\cos\theta\,{\bf i}+\sin\theta\,{\bf
+j}),
+\]
+where $k$ is a positive constant. As we shown, the orbit of the
+object is given by
+\[
+r={\rho\over 1+e\cos(\theta-\phi)}.
+\]
+Determine $\rho$, $e$, and $\phi$ in terms of the initial conditions
+\[
+r(0)=r_0,\quad  r'(0)=r_0', \text{\; and \;} \theta(0)=\theta_0,\quad
+\theta'(0)=\theta_0'.
+\]
+Assume that the initial position and velocity vectors are not
+collinear.
+
+
+\item\label{exer:6.4.3}
+Suppose we wish to put a satellite with mass $m$ into an
+elliptical orbit around Earth. Assume that the only force acting on
+the object is Earth's gravity, given by
+\[
+{\bf F}(r,\theta)=-mg\left(R^2\over r^2\right)(\cos\theta\,{\bf
+i}+\sin\theta\,{\bf j}),
+\]
+where $R$ is Earth's radius, $g$ is the acceleration due to gravity at
+Earth's surface, and $r$ and $\theta$ are polar coordinates in the
+plane of the orbit, with the origin at Earth's center.
+
+\begin{alist}
+\item % (a)
+Find the eccentricity required to make the aphelion and perihelion
+distances equal to $R\gamma_1$ and $R\gamma_2$, respectively, where
+$1<\gamma_1<\gamma_2$.
+\item % (b)
+Find the  initial conditions
+\[
+r(0)=r_0,\quad  r'(0)=r_0', \text{\; and \;} \theta(0)=\theta_0,\quad
+\theta'(0)=\theta_0'
+\]
+required to make the initial point the perigee, and the motion along
+the orbit in the direction of increasing $\theta$. \hint{Use the
+results of Exercise~\ref{exer:6.4.2}.}
+\end{alist}
+
+
+\item\label{exer:6.4.4}
+ An object with mass $m$  moves in a spiral orbit
+$r=c\theta^2$ under a central force
+\[
+{\bf
+F}(r,\theta)=f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
+\]
+Find $f$.
+
+
+\item\label{exer:6.4.5}
+ An object with mass $m$  moves in the orbit
+$r=r_0e^{\gamma\theta}$ under a central force
+\[
+ {\bf
+F}(r,\theta)=f(r)(\cos\theta\,{\bf i}+\sin\theta\,{\bf j}).
+\]
+ Find $f$.
+
+
+\item\label{exer:6.4.6}
+Suppose an object with mass $m$ moves under the central force
+\[
+{\bf F}(r,\theta)=-{mk\over r^3}(\cos\theta\,{\bf i}+\sin\theta\,{\bf
+j}),
+\]
+with
+\[
+r(0)=r_0,\quad  r'(0)=r_0', \text{\; and \;} \theta(0)=\theta_0,\quad
+\theta'(0)=\theta_0',
+\]
+ where $h=r_0^2\theta_0'\ne0$.
+\begin{alist}
+\item % (a)
+ Set up a second order initial
+value problem for $u=1/r$ as a function of~$\theta$.
+\item % (b)
+Determine $r=r(\theta)$ if (i) $h^2<k$;\;   (ii) $h^2=k$;\;   (iii)
+$h^2>k$.
+\end{alist}
+
+\end{exerciselist}
