@@ -1082,8 +1082,8 @@ and write
 {\cal L}^{-1}\left({3s+3\over(s+1)^2+4}\right)+
 {\cal L}^{-1}\left({5\over(s+1)^2+4}\right)\\[10pt]&=&
 3{\cal L}^{-1}\left({s+1\over(s+1)^2+4}\right)+
-{5\over2}{\cal L}^{-1}\left({2\over(s+1)^2+4}\right)\\[10pt]&=&
-e^{-t}(3\cos 2t+{5\over2}\sin 2t).
+\frac{5}{2}{\cal L}^{-1}\left({2\over(s+1)^2+4}\right)\\[10pt]&=&
+e^{-t}(3\cos 2t+\frac{5}{2}\sin 2t).
 \end{eqnarray*}
 
 \color{blue}
@@ -1208,14 +1208,14 @@ F(s)={A\over s}+{B\over s-1}+{C\over s-2}+{D\over s+1}.
 To find $A$, we ignore the factor $s$ in the denominator of
 \eqref{eq:8.2.7} and set $s=0$ elsewhere. This yields
 \[
-A={6+(1)(11)\over(-1)(-2)(1)}={17\over2}.
+A={6+(1)(11)\over(-1)(-2)(1)}=\frac{17}{2}.
 \]
 Similarly, the other coefficients are given by
 \[
 B={6+(2)(7)\over(1)(-1)(2)}=-10,
 \]
 \[
-C={6+3(5)\over2(1)(3)}={7\over2},
+C={6+3(5)\over2(1)(3)}=\frac{7}{2},
 \]
 and
 \[
@@ -1223,17 +1223,17 @@ D={6\over(-1)(-2)(-3)}=-1.
 \]
 Therefore
 \[
-F(s)={17\over2}\,{1\over s}-{10\over s-1}+{7\over2}\,{1\over
+F(s)=\frac{17}{2}\,{1\over s}-{10\over s-1}+\frac{7}{2}\,{1\over
 s-2}-{1\over s+1}
 \]
 and
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
- {17\over2}{\cal L}^{-1}\left(1\over s\right)-10{\cal L}^{-1}\left(1
+ \frac{17}{2}{\cal L}^{-1}\left(1\over s\right)-10{\cal L}^{-1}\left(1
 \over s-1\right)+{7\over
 2}{\cal L}^{-1}\left(1\over s-2\right)-{\cal L}^{-1}\left(1\over
 s+1\right)\\[1\jot]
-&=& {17\over2}-10e^t+{7\over2}e^{2t}-e^{-t}.
+&=& \frac{17}{2}-10e^t+\frac{7}{2}e^{2t}-e^{-t}.
 \end{eqnarray*}
 
 \color{blue}
@@ -1311,9 +1311,9 @@ and
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
 {\cal L}^{-1}\left({1\over s+2}\right)-9{\cal
-L}^{-1}\left({1\over(s+2)^2}\right)+{21\over2}{\cal
+L}^{-1}\left({1\over(s+2)^2}\right)+\frac{21}{2}{\cal
 L}^{-1}\left({2\over(s+2)^3}\right)\\[10pt]&=&
-e^{-2t}\left(1-9t+{21\over2}t^2\right).
+e^{-2t}\left(1-9t+\frac{21}{2}t^2\right).
 \end{eqnarray*}
 
 \begin{example}\label{example:8.2.8}\rm %\exampleinverse
@@ -1360,21 +1360,21 @@ $s$.  Choosing $s=0$, $-1$, and $1$ yields the system
 \]
 Solving this system yields
 \[
-A={1\over2},\quad B=-{7\over2},\quad C=-{5\over2}.
+A=\frac{1}{2},\quad B=-\frac{7}{2},\quad C=-\frac{5}{2}.
 \]
 Hence, from  \eqref{eq:8.2.15},
 \[
-F(s)={1\over2s}-{7\over2}\,{s+1\over(s+1)^2+1}-
-{5\over2}\,{1\over(s+1)^2+1}.
+F(s)={1\over2s}-\frac{7}{2}\,{s+1\over(s+1)^2+1}-
+\frac{5}{2}\,{1\over(s+1)^2+1}.
 \]
 Therefore
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
-{1\over2}{\cal L}^{-1}\left(1\over s\right)-{7\over2}{\cal
+\frac{1}{2}{\cal L}^{-1}\left(1\over s\right)-\frac{7}{2}{\cal
 L}^{-1}\left(s+1
-\over(s+1)^2+1\right)-{5\over2} {\cal L}^{-1}\left(1\over
+\over(s+1)^2+1\right)-\frac{5}{2} {\cal L}^{-1}\left(1\over
 (s+1)^2+1\right)\\[1\jot]
-&=& {1\over2}-{7\over2}e^{-t}\cos t-{5\over2}e^{-t}\sin t.
+&=& \frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t.
 \end{eqnarray*}
 
 \begin{example}\label{example:8.2.9}\rm Find the inverse Laplace transform of
@@ -1397,21 +1397,21 @@ F_1(s)={1\over(s^2+1)(s^2+4)}
 \]
 can be obtained quickly by using Heaviside's method to expand
 \[
-{1\over(x+1)(x+4)}={1\over3}\left({1\over x+1}-{1\over x+4}\right)
+{1\over(x+1)(x+4)}=\frac{1}{3}\left({1\over x+1}-{1\over x+4}\right)
 \]
 and then setting $x=s^2$ to obtain
 \[
-{1\over(s^2+1)(s^2+4)}={1\over3}\left({1\over s^2+1}-{1\over
+{1\over(s^2+1)(s^2+4)}=\frac{1}{3}\left({1\over s^2+1}-{1\over
 s^2+4}\right).
 \]
 Multiplying this by $8+3s$ yields
 \[
-F(s)={8+3s\over(s^2+1)(s^2+4)}={1\over3}\left({8+3s\over s^2+1}-{8+3s\over
+F(s)={8+3s\over(s^2+1)(s^2+4)}=\frac{1}{3}\left({8+3s\over s^2+1}-{8+3s\over
 s^2+4}\right).
 \]
 Therefore
 \[
-{\cal L}^{-1}(F)={8\over3}\sin t+\cos t-{4\over3}\sin 2t-\cos 2t.
+{\cal L}^{-1}(F)=\frac{8}{3}\sin t+\cos t-\frac{4}{3}\sin 2t-\cos 2t.
 \]
 
 \technology
@@ -1768,11 +1768,11 @@ Y(s)={3+(s-2)(2s-9)\over(s-2)(s-5)(s-1)}.
 \]
 Heaviside's method yields the partial fraction expansion
 \[
-Y(s)=-{1\over s-2}+{1\over2}{1\over s-5}+{5\over2}{1\over s-1},
+Y(s)=-{1\over s-2}+\frac{1}{2}{1\over s-5}+\frac{5}{2}{1\over s-1},
 \]
 and taking the inverse transform of this yields
 \[
-y=-e^{2t}+{1\over2}e^{5t}+{5\over2}e^t
+y=-e^{2t}+\frac{1}{2}e^{5t}+\frac{5}{2}e^t
 \]
 as the solution of  \eqref{eq:8.3.6}.\bbox
 
@@ -1843,11 +1843,11 @@ Y(s)={4\left(1-(s+2)(s+1)\right)\over (s+1/2)(s+1)(s+2)}.
 \]
 Heaviside's method yields the partial fraction expansion
 \[
-Y(s)={4\over3}{1\over s+1/2}-{8\over s+1}+{8\over3}{1\over s+2},
+Y(s)=\frac{4}{3}{1\over s+1/2}-{8\over s+1}+\frac{8}{3}{1\over s+2},
 \]
 so the solution of  \eqref{eq:8.3.14} is
 \[
-y={\cal L}^{-1}(Y(s))={4\over3}e^{-t/2}-8e^{-t}+{8\over3}e^{-2t}
+y={\cal L}^{-1}(Y(s))=\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}
 \]
 (Figure~\ref{figure:8.3.1}).
 
@@ -1857,15 +1857,15 @@ y={\cal L}^{-1}(Y(s))={4\over3}e^{-t/2}-8e^{-t}+{8\over3}e^{-2t}
     \centering
    \scalebox{.65}{
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig080301}}
-\caption{ $y=\dst{{4\over3}e^{-t/2}-8e^{-t}+{8\over3}e^{-2t}}$}
+\caption{ $y=\dst{\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}}$}
   \label{figure:8.3.1}
 \end{minipage}
   \begin{minipage}[b]{0.5\linewidth}
     \centering
    \scalebox{.65}{
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig080302}}
-\caption{ $y=\dst{{1\over2}-{7\over2}e^{-t}\cos
-t-{5\over2}e^{-t}\sin t}$}
+\caption{ $y=\dst{\frac{1}{2}-\frac{7}{2}e^{-t}\cos
+t-\frac{5}{2}e^{-t}\sin t}$}
 \label{figure:8.3.2}
 \end{minipage}
 \end{figure}
@@ -1898,7 +1898,7 @@ Y(s)={1-s(5+3s)\over s\left[(s+1)^2+1\right]}.
 In Example~\ref{example:8.2.8}  we found the inverse transform of this
 function to be
 \[
-y={1\over2}-{7\over2}e^{-t}\cos t-{5\over2}e^{-t}\sin t
+y=\frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t
 \]
 (Figure~\ref{figure:8.3.2}),
 which is therefore  the solution of  \eqref{eq:8.3.15}.
@@ -3068,20 +3068,20 @@ H_1(s)=-{2\over (s^2+1)(s^2+4)}\quad\mbox{ and }\quad H_2(s)=-{s
 \end{equation}
 To simplify the required partial fraction expansions, we first write
 \[
-{1\over (x+1)(x+4)}={1\over3}\left[{1\over x+1}-{1\over
+{1\over (x+1)(x+4)}=\frac{1}{3}\left[{1\over x+1}-{1\over
 x+4}\right].
 \]
 Setting $x=s^2$ and substituting the result in  \eqref{eq:8.5.14} yields
 \[
-H_1(s)=-{2\over3}\left[{1\over s^2+1}-{1\over s^2+4}\right]
+H_1(s)=-\frac{2}{3}\left[{1\over s^2+1}-{1\over s^2+4}\right]
 \quad\mbox{ and }\quad
-H_2(s)=-{1\over3}\left[{s\over s^2+1}-{s\over s^2+4}\right].
+H_2(s)=-\frac{1}{3}\left[{s\over s^2+1}-{s\over s^2+4}\right].
 \]
 The inverse transforms are
 \[
-h_1(t)=-{2\over3}\sin t+{1\over3}\sin2t
+h_1(t)=-\frac{2}{3}\sin t+\frac{1}{3}\sin2t
 \quad\mbox{ and }\;
-h_2(t)=-{1\over3}\cos t+{1\over3}\cos2t.
+h_2(t)=-\frac{1}{3}\cos t+\frac{1}{3}\cos2t.
 \]
 From  \eqref{eq:8.5.13} and Theorem~8.4.2,
 \begin{equation}\label{eq:8.5.15}
@@ -3090,20 +3090,20 @@ u(t-\pi) h_2(t-\pi).
 \end{equation}
 Since
 \begin{eqnarray*}
-h_1\left(t-{\pi\over4}\right)&=&-{2\over3}\sin\left(t-{\pi\over
-4}\right)+{1\over3}\sin2\left(t-{\pi\over4}\right)\\
-&=&-{\sqrt{2}\over3} (\sin t-\cos t)-{1\over3}\cos2t
+h_1\left(t-{\pi\over4}\right)&=&-\frac{2}{3}\sin\left(t-{\pi\over
+4}\right)+\frac{1}{3}\sin2\left(t-{\pi\over4}\right)\\
+&=&-{\sqrt{2}\over3} (\sin t-\cos t)-\frac{1}{3}\cos2t
 \end{eqnarray*}
 and
 \begin{eqnarray*}
-h_2(t-\pi)&=&-{1\over3}\cos (t-\pi)+{1\over3}\cos2(t-\pi)\\
-&=&{1\over3}\cos t+{1\over3}\cos2t,
+h_2(t-\pi)&=&-\frac{1}{3}\cos (t-\pi)+\frac{1}{3}\cos2(t-\pi)\\
+&=&\frac{1}{3}\cos t+\frac{1}{3}\cos2t,
 \end{eqnarray*}
  \eqref{eq:8.5.15} can be rewritten as
 \[
-y=-{1\over3}u\left(t-{\pi\over4}\right)\left(\sqrt{2}(\sin
+y=-\frac{1}{3}u\left(t-{\pi\over4}\right)\left(\sqrt{2}(\sin
 t-\cos t)+\cos2t\right)
-+ {1\over3} u(t-\pi) (\cos t+\cos2t)
++ \frac{1}{3} u(t-\pi) (\cos t+\cos2t)
 \]
 or
 \begin{equation}\label{eq:8.5.16}
@@ -4636,20 +4636,20 @@ y''+6y'+5y=3e^{-2t}, \quad    y(0)=-3,\;   y'(0)=2
 \]
 is
 \[
-\hat y=-e^{-2t}+{1\over2}e^{-5t}-{5\over2}e^{-t}.
+\hat y=-e^{-2t}+\frac{1}{2}e^{-5t}-\frac{5}{2}e^{-t}.
 \]
 Since
 \[
 \begin{array}{ccccl}
 w(t)&=&{\cal L}^{-1}\left(\dst{1\over s^2+6s+5}\right)&=&
 {\cal L}^{-1}\left(\dst{1\over(s+1)(s+5)}\right)\\[2\jot]
-&=&\dst{{1\over4}{\cal L}^{-1}\left({1\over s+1}-{1\over s+5}\right)}
+&=&\dst{\frac{1}{4}{\cal L}^{-1}\left({1\over s+1}-{1\over s+5}\right)}
 &=&\dst{e^{-t}-e^{-5t}\over4},
 \end{array}
 \]
 the solution of  \eqref{eq:8.7.16} is
 \begin{equation} \label{eq:8.7.17}
-y=-e^{-2t}+{1\over2}e^{-5t}-{5\over2}e^{-t}
+y=-e^{-2t}+\frac{1}{2}e^{-5t}-\frac{5}{2}e^{-t}
 +u(t-1){e^{-(t-1)}-e^{-5(t-1)}\over2}
 \end{equation}
 (Figure~\ref{figure:8.7.4})\bbox.

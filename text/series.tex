@@ -581,7 +581,7 @@ combination of the Maclaurin series for $e^x$ and $e^{-x}$.
 \solution
 By definition,
 \[
-\cosh x={1\over2}e^x+{1\over2}e^{-x}.
+\cosh x=\frac{1}{2}e^x+\frac{1}{2}e^{-x}.
 \]
 Since
 \[ e^x=\sum_{n=0}^\infty  {x^n\over n!}\quad\mbox{ and }\quad
@@ -589,11 +589,11 @@ Since
 \]
 it follows that
 \begin{equation} \label{eq:7.1.12}
-\cosh x=\sum_{n=0}^\infty {1\over2}[1+(-1)^n]{x^n\over n!}.
+\cosh x=\sum_{n=0}^\infty \frac{1}{2}[1+(-1)^n]{x^n\over n!}.
 \end{equation}
 Since
 \[
-{1\over2}[1+(-1)^n]=\left\{\begin{array}{cl}1&\mbox{ if } n=2m,\mbox{
+\frac{1}{2}[1+(-1)^n]=\left\{\begin{array}{cl}1&\mbox{ if } n=2m,\mbox{
 an even integer},\\ 0&\mbox{ if }n=2m+1,\mbox{ an odd integer},
 \end{array}\right.
 \]
@@ -1320,13 +1320,13 @@ m\ge0. \label{eq:7.2.20}
 Computing the coefficients of even powers of $x$ from \eqref{eq:7.2.19}
 yields
 \begin{eqnarray*}
-a_2&=&-{1\over1}a_0,\\[5pt]
-a_4&=&-{3\over2}a_2=\left(-{3\over2}\right)\left(-{1\over1}\right)a_0
+a_2&=&-\frac{1}{1}a_0,\\[5pt]
+a_4&=&-\frac{3}{2}a_2=\left(-\frac{3}{2}\right)\left(-\frac{1}{1}\right)a_0
 ={1\cdot3\over1\cdot2}a_0,
-\\[5pt] a_6&=&-{5\over3}a_4=
--{5\over3}\left(1\cdot3\over1\cdot2\right)a_0
+\\[5pt] a_6&=&-\frac{5}{3}a_4=
+-\frac{5}{3}\left(1\cdot3\over1\cdot2\right)a_0
 =-{1\cdot3\cdot5\over1\cdot2\cdot3}a_0, \\[5pt]
-a_8&=&-{7\over4}a_6=-{7\over4}
+a_8&=&-\frac{7}{4}a_6=-\frac{7}{4}
 \left(-{1\cdot3\cdot5\over1\cdot2\cdot3}\right)a_0=
 {1\cdot3\cdot5\cdot7\over1\cdot2\cdot3\cdot4}a_0.\\
 \end{eqnarray*}
@@ -1340,13 +1340,13 @@ defined $\prod_{j=1}^0b_j=1$  for any~$b_j$.)
 Computing the coefficients of odd powers of $x$ from \eqref{eq:7.2.20}
 yields
 \begin{eqnarray*}
-a_3&=&-4\,{1\over3}a_1, \\[5pt]
-a_5&=&-4\,{2\over5}a_3=-4\,{2\over5}\left(-4{1\over3}\right)a_1
+a_3&=&-4\,\frac{1}{3}a_1, \\[5pt]
+a_5&=&-4\,\frac{2}{5}a_3=-4\,\frac{2}{5}\left(-4\frac{1}{3}\right)a_1
 =4^2{1\cdot2\over3\cdot5}a_1,
-\\[5pt] a_7&=&-4\,{3\over7}a_5=-4\,{3\over7}\left(
+\\[5pt] a_7&=&-4\,\frac{3}{7}a_5=-4\,\frac{3}{7}\left(
 4^2{1\cdot2\over3\cdot5}\right)a_1=
 -4^3{1\cdot2\cdot3\over3\cdot5\cdot7}a_1,\\[5pt]
-a_9&=&-4\, {4\over9}a_7=-4\, {4\over9}\left(
+a_9&=&-4\, \frac{4}{9}a_7=-4\, \frac{4}{9}\left(
 4^3{1\cdot2\cdot3\over3\cdot5\cdot7}\right)a_1=
 4^4{1\cdot2\cdot3\cdot4\over3\cdot5\cdot7\cdot9}a_1.
 \end{eqnarray*}
@@ -1456,7 +1456,7 @@ the terms, collecting powers of $x-1$;   thus,
 \]
 or, equivalently,
 \[
-\left(1-{1\over2}(x-1)^2\right)y''-3(x-1)y'-3y=0.
+\left(1-\frac{1}{2}(x-1)^2\right)y''-3(x-1)y'-3y=0.
 \]
 This is of the form \eqref{eq:7.2.23} with  $\alpha=-1/2$, $\beta=-3$, and
 $\gamma=-3$. Therefore, from \eqref{eq:7.2.25}
@@ -1520,21 +1520,21 @@ a_{2m+3}&=&-2{2m+3\over2m+2}a_{2m+1}=-{2m+3\over m+1}a_{2m+1},\quad m\ge0.
 Starting with  $a_0=y(0)=2$, we compute $a_2, a_4$, and $a_6$ from
 \eqref{eq:7.2.30}:
 \begin{eqnarray*}
-a_2&=&-4\,{1\over1}2=-8,\\[2\jot]
-a_4&=&-4\,{2\over3}(-8)={64\over3},\\[2\jot]
-a_6&=&-4\,{3\over5}\left(64\over3\right)=-{256\over5}.
+a_2&=&-4\,\frac{1}{1}2=-8,\\[2\jot]
+a_4&=&-4\,\frac{2}{3}(-8)=\frac{64}{3},\\[2\jot]
+a_6&=&-4\,\frac{3}{5}\left(64\over3\right)=-\frac{256}{5}.
 \end{eqnarray*}
 Starting with $a_1=y'(0)=-3$, we compute $a_3,a_5$ and $a_7$ from
 \eqref{eq:7.2.31}:
 \begin{eqnarray*}
-a_3&=&-{3\over1}(-3)=9,\\[2\jot]
-a_5&=&-{5\over2}9=-{45\over2},\\[2\jot]
-a_7&=&-{7\over3}\left(-{45\over2}\right)={105\over2}.
+a_3&=&-\frac{3}{1}(-3)=9,\\[2\jot]
+a_5&=&-\frac{5}{2}9=-\frac{45}{2},\\[2\jot]
+a_7&=&-\frac{7}{3}\left(-\frac{45}{2}\right)=\frac{105}{2}.
 \end{eqnarray*}
 Therefore the solution of \eqref{eq:7.2.29} is
 \[
-y=2-3x-8x^2+9x^3+{64\over3}x^4-{45\over2}x^5-{256\over5}
-x^6+{105\over2}x^7+\cdots\; .
+y=2-3x-8x^2+9x^3+\frac{64}{3}x^4-\frac{45}{2}x^5-\frac{256}{5}
+x^6+\frac{105}{2}x^7+\cdots\; .
 \]
 
 \technology
@@ -1612,7 +1612,7 @@ series in $x$ for the general solution.
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \item\label{exer:7.2.5} $(1+2x^2)y''+7xy'+2y=0$
 %&
-\item\label{exer:7.2.6} $\dst{(1+x^2)y''+2xy'+{1\over4}y=0}$
+\item\label{exer:7.2.6} $\dst{(1+x^2)y''+2xy'+\frac{1}{4}y=0}$
 %\end{tabular}
 
 %\vspace{-10pt}
@@ -2128,17 +2128,17 @@ From the initial conditions in \eqref{eq:7.3.2}, $a_0=y(0)=-1$ and
 $a_1=y'(0)=-2$.
 Setting $n=0$  in \eqref{eq:7.3.3} yields
 \[
-a_2=-{1\over2}a_1-a_0=-{1\over2}(-2)-(-1)=2.
+a_2=-\frac{1}{2}a_1-a_0=-\frac{1}{2}(-2)-(-1)=2.
 \]
 Setting $n=1$  in \eqref{eq:7.3.3} yields
 \[
-a_3=-{2\over3}a_2-{3\over2}a_1=-{2\over3}(2)-{3\over2}(-2)={5\over3}.
+a_3=-\frac{2}{3}a_2-\frac{3}{2}a_1=-\frac{2}{3}(2)-\frac{3}{2}(-2)=\frac{5}{3}.
 \]
 We leave it to you to compute $a_4,a_5,a_6,a_7$ from \eqref{eq:7.3.3} and
 show that
 \[
-y=-1-2x+2x^2+{5\over3}x^3-{55\over12}x^4+{3\over4}x^5+{61\over8}x^6-
-{443\over56}x^7+\cdots .
+y=-1-2x+2x^2+\frac{5}{3}x^3-\frac{55}{12}x^4+\frac{3}{4}x^5+\frac{61}{8}x^6-
+\frac{443}{56}x^7+\cdots .
 \]
 We also leave it to you (Exercise~\ref{exer:7.3.13}) to verify numerically
 that the Taylor polynomials $T_N(x)=\sum_{n=0}^Na_nx^n$ converge
@@ -2193,7 +2193,7 @@ b_n=2(n+2)(n+1)a_{n+2}+(n^2-1)a_{n+1}+(2n-3)a_n+a_{n-1},\quad n\ge1.
 Therefore $y=\sum^\infty_{n=0}a_n(x+1)^n$ is a solution of $Ly=0$
 if and only if
 \begin{equation} \label{eq:7.3.5}
-a_2={1\over4}(a_1+3a_0)
+a_2=\frac{1}{4}(a_1+3a_0)
 \end{equation}
 and
 \begin{equation} \label{eq:7.3.6}
@@ -2205,8 +2205,8 @@ $a_1=y'(-1)=-3$. We leave it to you to  compute $a_2$, \dots, $a_5$
 with  \eqref{eq:7.3.5} and \eqref{eq:7.3.6} and show that
 the solution of \eqref{eq:7.3.4} is
 \[
-y=-2-3(x+1)+{3\over4}(x+1)^2-{5\over12}(x+1)^3+{7\over48}(x+1)^4
--{1\over60}(x+1)^5+\cdots.
+y=-2-3(x+1)+\frac{3}{4}(x+1)^2-\frac{5}{12}(x+1)^3+\frac{7}{48}(x+1)^4
+-\frac{1}{60}(x+1)^5+\cdots.
 \]
 We also leave it to you (Exercise~\ref{exer:7.3.14}) to verify numerically
 that the Taylor polynomials $T_N(x)=\sum_{n=0}^Na_nx^n$ converge to
@@ -2255,7 +2255,7 @@ b_n=(n+2)(n+1)a_{n+2}+(3n+4)a_n+2a_{n-2},\quad n\ge2.
 Therefore $y=\sum^\infty_{n=0}a_nx^n$ is a solution of $Ly=0$
 if and only if
 \begin{equation} \label{eq:7.3.8}
-a_2=-2a_0,\quad a_3=-{7\over6}a_1,
+a_2=-2a_0,\quad a_3=-\frac{7}{6}a_1,
 \end{equation}
 and
 \begin{equation} \label{eq:7.3.9}
@@ -2266,7 +2266,7 @@ $a_1=y'(0)=-3$. We leave it to you to compute $a_2$, \dots, $a_5$ with
  \eqref{eq:7.3.8} and \eqref{eq:7.3.9} and show that the solution of
 \eqref{eq:7.3.7} is
 \[
-y=2-3x-4x^2+{7\over2}x^3+3x^4-{79\over40}x^5+\cdots.
+y=2-3x-4x^2+\frac{7}{2}x^3+3x^4-\frac{79}{40}x^5+\cdots.
 \]
 We also leave it to you (Exercise~\ref{exer:7.3.15}) to verify numerically
 that the Taylor polynomials $T_N(x)=\sum_{n=0}^Na_nx^n$ converge to
@@ -3498,9 +3498,9 @@ Calculating  with  \eqref{eq:7.5.18} and
 \eqref{eq:7.5.17}   yields the fundamental set of  Frobenius
 solutions
 \begin{eqnarray*}
-y_1&=&x^{-3/2}\left(1-{1\over3}x+{2\over5}x^2-{5\over21}x^3
-+{7\over135}x^4+{76\over1155}x^5+\cdots\right),\\[2\jot]
-y_2&=&x^{-2}\left(1+{1\over2}x^2-{1\over3}x^3+{1\over8}x^4+{1\over30}x^5
+y_1&=&x^{-3/2}\left(1-\frac{1}{3}x+\frac{2}{5}x^2-\frac{5}{21}x^3
++\frac{7}{135}x^4+\frac{76}{1155}x^5+\cdots\right),\\[2\jot]
+y_2&=&x^{-2}\left(1+\frac{1}{2}x^2-\frac{1}{3}x^3+\frac{1}{8}x^4+\frac{1}{30}x^5
 +\cdots\right).
 \end{eqnarray*}
 
@@ -4599,22 +4599,22 @@ a'_n(2)&=&\dst{{2n+3\over n}a'_{n-1}(2)-{n-1\over n}a'_{n-2}(2)
 Computing recursively with  \eqref{eq:7.6.13} and \eqref{eq:7.6.14}
 yields
 \[
-a_0(2)=1,\,a_1(2)=5,\,a_2(2)=17,\,a_3(2)={143\over3},\,a_4(2)={355\over3},
+a_0(2)=1,\,a_1(2)=5,\,a_2(2)=17,\,a_3(2)=\frac{143}{3},\,a_4(2)=\frac{355}{3},
 \]
 and
 \[
-a_1'(2)=-3,\,a_2'(2)=-{29\over2},\,a_3'(2)=-{859\over18},
-\,a_4'(2)=-{4693\over36}.
+a_1'(2)=-3,\,a_2'(2)=-\frac{29}{2},\,a_3'(2)=-\frac{859}{18},
+\,a_4'(2)=-\frac{4693}{36}.
 \]
 Substituting these coefficients into \eqref{eq:7.6.10} yields
 \[
-y_1=x^2\left(1+5x+17x^2+{143\over3}x^3
-+{355\over3}x^4+\cdots\right)
+y_1=x^2\left(1+5x+17x^2+\frac{143}{3}x^3
++\frac{355}{3}x^4+\cdots\right)
 \]
 and
 \[
 y_2=y_1 \ln x
--x^3\left(3+{29\over2}x+{859\over18}x^2+{4693\over36}x^3
+-x^3\left(3+\frac{29}{2}x+\frac{859}{18}x^2+\frac{4693}{36}x^3
 +\cdots\right). \bbox
 \]
 
@@ -5582,8 +5582,8 @@ Substituting $r_1=5/2,r_2=-1/2,k=3$, and $\alpha_0=4$ into
  \eqref{eq:7.7.4} yields $C=-15/128$.  Therefore, from
 \eqref{eq:7.7.12},
 \begin{equation} \label{eq:7.7.16}
-y_2=x^{-1/2}\left(1+{1\over8}x+{3\over32}x^2\right)
--{15\over128}
+y_2=x^{-1/2}\left(1+\frac{1}{8}x+\frac{3}{32}x^2\right)
+-\frac{15}{128}
 \left(y_1\ln x+x^{5/2}\sum_{n=1}^\infty a_n'(5/2)x^n\right).
 \end{equation}
 
@@ -5622,9 +5622,9 @@ a_n'(5/2)=-5{(-1)^n\prod_{j=1}^n(2j+5)\over4^nn!}
 \]
 Substituting this into \eqref{eq:7.7.16} yields
 \begin{eqnarray*}
-y_2&=&x^{-1/2}\left(1+{1\over8}x+{3\over32}x^2\right)-{15\over128}
+y_2&=&x^{-1/2}\left(1+\frac{1}{8}x+\frac{3}{32}x^2\right)-\frac{15}{128}
 y_1\ln x\\[10pt]
-&&\,+{75\over128}
+&&\,+\frac{75}{128}
 x^{5/2}\sum_{n=1}^\infty
 {(-1)^n\prod_{j=1}^n(2j+5)\over4^nn!}
 \left(\sum_{j=1}^n{1\over j(2j+5)}\right)x^n. \bbox
@@ -5717,13 +5717,13 @@ a_n(-6)&=&\dst{(n-4)(2n-13)\over n(n-5)}a_{n-1}(-6),\,n=1,2,3,4.
 The last formula yields
 \[
 a_1(-6)=-{33\over
-4},\,a_2(-6)={99\over4},\,a_3(-6)=-{231\over8},\,a_4(-6)=0.
+4},\,a_2(-6)=\frac{99}{4},\,a_3(-6)=-\frac{231}{8},\,a_4(-6)=0.
 \]
 Since $a_4(-6)=0$, \eqref{eq:7.7.4} implies that the constant $C$
 in \eqref{eq:7.7.19} is zero. Therefore \eqref{eq:7.7.19} reduces
 to
 \[
-y_2=x^{-6}\left(1-{33\over4}x+{99\over4}x^2-{231\over8}x^3\right).\bbox
+y_2=x^{-6}\left(1-\frac{33}{4}x+\frac{99}{4}x^2-\frac{231}{8}x^3\right).\bbox
 \]
 
 
@@ -5850,14 +5850,14 @@ a_{2m}(-5)=-{2m-5\over2(m-4)}a_{2m-2}(-5),\,m=1,2,3.
 
 This yields
 \[
-a_2(-5)=-{1\over2},\,a_4(-5)={1\over8},\,a_6(-5)={1\over16}.
+a_2(-5)=-\frac{1}{2},\,a_4(-5)=\frac{1}{8},\,a_6(-5)=\frac{1}{16}.
 \]
 Substituting $r_1=3$, $r_2=-5$, $k=4$, and $\alpha_0=1$   into
 \eqref{eq:7.7.23}
 yields $C=-3/16$.   Therefore, from \eqref{eq:7.7.24},
 \begin{equation} \label{eq:7.7.29}
-y_2=x^{-5} \left(1-{1\over2}x^2+{1\over8}x^4+{1\over16}x^6\right)
--{3\over16}
+y_2=x^{-5} \left(1-\frac{1}{2}x^2+\frac{1}{8}x^4+\frac{1}{16}x^6\right)
+-\frac{3}{16}
 \left(y_1\ln x+x^3\sum_{m=1}^\infty a_{2m}'(3)x^{2m}\right).
 \end{equation}
 
@@ -5891,15 +5891,15 @@ Since
 \]
 we can rewrite \eqref{eq:7.7.30} as
 \[
-a_{2m}'(3)=-{3\over2}{(-1)^n\prod_{j=1}^m(2j+3)\over2^mm!}
+a_{2m}'(3)=-\frac{3}{2}{(-1)^n\prod_{j=1}^m(2j+3)\over2^mm!}
 \left(\sum_{j=1}^n{1\over j(2j+3)}\right).
 \]
 Substituting this into \eqref{eq:7.7.29} yields
 \begin{eqnarray*}
 y_2&=&x^{-5}
-\left(1-{1\over2}x^2+{1\over8}x^4+{1\over16}x^6\right)
--{3\over16}y_1\ln x \\[10pt]
-&&\, +{9\over32}
+\left(1-\frac{1}{2}x^2+\frac{1}{8}x^4+\frac{1}{16}x^6\right)
+-\frac{3}{16}y_1\ln x \\[10pt]
+&&\, +\frac{9}{32}
 x^3\sum_{m=1}^\infty
 {(-1)^m\prod_{j=1}^m(2j+3)\over2^mm!}\left(\sum_{j=1}^m{1\over
 j(2j+3)}\right) x^{2m}.
@@ -5966,12 +5966,12 @@ a_{2m}(-6)&=&\dst{4m-9\over2m}a_{2m-2}(-6),\,m=1,2.
 \end{eqnarray*}
 The last formula yields
 \[
-a_2(-6)=-{5\over2}\text{\quad  and \quad}a_4(-6)={5\over8}.
+a_2(-6)=-\frac{5}{2}\text{\quad  and \quad}a_4(-6)=\frac{5}{8}.
 \]
 Since $p_2(-2)=0$, the constant $C$  in \eqref{eq:7.7.23} is zero.
 Therefore \eqref{eq:7.7.32} reduces to
 \[
-y_2=x^{-6}\left(1-{5\over2}x^2+{5\over8}x^4\right).
+y_2=x^{-6}\left(1-\frac{5}{2}x^2+\frac{5}{8}x^4\right).
 \]
 
 
