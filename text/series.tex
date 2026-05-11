@@ -6140,8 +6140,7 @@ and
 y_2&=&x^{r_2}\sum_{n=0}^{k-1} \frac{(-1)^n}{n!\prod_{j=1}^n(j-k)}
 \left(\frac{\gamma_1}{\alpha_0}\right)^n
 x^n\\[10pt]&&-\frac{1}{k!(k-1)!}\left(\frac{\gamma_1}{\alpha_0}\right)^k\left(y_1\ln x-
-x^{r_1}\sum_{n=1}^\infty {(-1)^n\over
-n!\prod_{j=1}^n(j+k)}\left(\frac{\gamma_1}{\alpha_0}\right)^n
+x^{r_1}\sum_{n=1}^\infty\frac{(-1)^n}{n!\prod_{j=1}^n(j+k)}\left(\frac{\gamma_1}{\alpha_0}\right)^n
 \left(\sum_{j=1}^n\frac{2j+k}{j(j+k)}\right)x^n\right).
 \end{eqnarray*}
 
@@ -6162,16 +6161,14 @@ p_0(r)=\alpha_0(r-r_1)(r-r_2)
 where $r_1-r_2=2k$, an even  positive integer, then $Ly=0$ has the
 solutions
 \[
-y_1=x^{r_1}\sum_{m=0}^\infty {(-1)^m\over
-4^mm!\prod_{j=1}^m(j+k)}\left(\frac{\gamma_2}{\alpha_0}\right)^m x^{2m}
+y_1=x^{r_1}\sum_{m=0}^\infty\frac{(-1)^m}{4^mm!\prod_{j=1}^m(j+k)}\left(\frac{\gamma_2}{\alpha_0}\right)^m x^{2m}
 \]
 and
 \begin{eqnarray*}
-y_2&=&x^{r_2}\sum_{m=0}^{k-1} {(-1)^m\over4^mm!\prod_{j=1}^m(j-k)}
+y_2&=&x^{r_2}\sum_{m=0}^{k-1}\frac{(-1)^m}{4^mm!\prod_{j=1}^m(j-k)}
 \left(\frac{\gamma_2}{\alpha_0}\right)^m
 x^{2m}\\[10pt]&&-\frac{2}{4^kk!(k-1)!}\left(\frac{\gamma_2}{\alpha_0}\right)^k\left(y_1\ln x-
-{x^{r_1}\over2}\sum_{m=1}^\infty {(-1)^m\over
-4^mm!\prod_{j=1}^m(j+k)}\left(\frac{\gamma_2}{\alpha_0}\right)^m
+\frac{x^{r_1}}{2}\sum_{m=1}^\infty\frac{(-1)^m}{4^mm!\prod_{j=1}^m(j+k)}\left(\frac{\gamma_2}{\alpha_0}\right)^m
 \left(\sum_{j=1}^m\frac{2j+k}{j(j+k)}\right)x^{2m}\right).
 \end{eqnarray*}
 
