@@ -310,11 +310,11 @@ R=\sqrt{c^2_1+c^2_2}=\sqrt{\left(\frac{3}{2}\right)^2+\left(\frac{3}{8}\right)^2
 \]
 The phase angle is determined by
 \begin{equation}\label{eq:6.1.11}
-\cos\phi={\frac{3}{2}\over\frac{3}{8}\sqrt{17}}=\frac{4}{\sqrt{17}}
+\cos\phi=\frac{\frac{3}{2}}{\frac{3}{8}\sqrt{17}}=\frac{4}{\sqrt{17}}
 \end{equation}
 and
 \begin{equation}\label{eq:6.1.12}
-\sin\phi={-\frac{3}{8}\over\frac{3}{8}\sqrt{17}}=-\frac{1}{\sqrt{17}}.
+\sin\phi=\frac{-\frac{3}{8}}{\frac{3}{8}\sqrt{17}}=-\frac{1}{\sqrt{17}}.
 \end{equation}
  Using a calculator, we see from \eqref{eq:6.1.11} that
 \[
@@ -488,24 +488,23 @@ Subtracting the second identity from the first yields
 \end{equation}
  so that
 \begin{equation}\label{eq:6.1.19}
-\alpha={(\omega_0+\omega)t\over2}\mbox{\quad and \quad
-}\beta={(\omega_0-\omega
-)t\over2}.
+\alpha=\frac{(\omega_0+\omega)t}{2}\mbox{\quad and \quad
+}\beta=\frac{(\omega_0-\omega)t}{2}.
 \end{equation}
  Substituting \eqref{eq:6.1.18} and \eqref{eq:6.1.19} into \eqref{eq:6.1.17}
 yields
  \[
 \cos\omega t-\cos\omega_0t=
-2\sin{(\omega_0-\omega)t\over2}\sin{(\omega_0+\omega)t\over2},
+2\sin\frac{(\omega_0-\omega)t}{2}\sin\frac{(\omega_0+\omega)t}{2},
 \]
 and substituting this into \eqref{eq:6.1.16} yields
 \begin{equation}\label{eq:6.1.20}
-y=R(t)\sin{(\omega_0+\omega)t\over2},
+y=R(t)\sin\frac{(\omega_0+\omega)t}{2},
 \end{equation}
  where
 \begin{equation}\label{eq:6.1.21}
 R(t)=\frac{2F_0}{m(\omega_0^2-\omega^2)}
-\sin{(\omega_0-\omega)t\over2}.
+\sin\frac{(\omega_0-\omega)t}{2}.
 \end{equation}
 
 From \eqref{eq:6.1.20} we can regard $y$ as a sinusoidal variation with
@@ -532,7 +531,7 @@ $R(t)$ is called a \emph{\color{blue}beat}.
 You can see from
 \eqref{eq:6.1.20} and \eqref{eq:6.1.21} that
 \[
-|y(t)|\le{2|F_0|\over m|\omega_0^2-\omega^2|};
+|y(t)|\le\frac{2|F_0|}{m|\omega_0^2-\omega^2|};
 \]
 moreover, if $\omega+\omega_0$ is sufficiently large compared with $\omega
 -\omega_0$, then $|y|$ assumes values close to (perhaps equal to) this
@@ -778,8 +777,8 @@ mr^2+cr+k=0.
 \]
 The roots of this equation are
 \begin{equation}\label{eq:6.2.2}
-r_1={-c-\sqrt{c^2-4mk}\over2m}\mbox{\quad and \quad} r_2=
-{-c+\sqrt{c^2-4mk}\over2m}.
+r_1=\frac{-c-\sqrt{c^2-4mk}}{2m}\mbox{\quad and \quad} r_2=
+\frac{-c+\sqrt{c^2-4mk}}{2m}.
 \end{equation}
 In Section~5.2 we saw that the form of the
 solution of  \eqref{eq:6.2.1} depends upon whether $c^2-4mk$ is positive,
@@ -798,7 +797,7 @@ r_2=-\frac{c}{2m}+i\omega_1,
 \]
 where
 \[
-\omega_1={\sqrt{4mk-c^2}\over2m}.
+\omega_1=\frac{\sqrt{4mk-c^2}}{2m}.
 \]
 The general solution of  \eqref{eq:6.2.1} in this case is
 \[
@@ -890,7 +889,7 @@ The characteristic equation  is
 \]
 which has  roots
 \[
-r={-c\pm\sqrt{c^2-8\cdot128}\over4}.
+r=\frac{-c\pm\sqrt{c^2-8\cdot128}}{4}.
 \]
 Therefore the damping is critical if
 \[
@@ -969,7 +968,7 @@ r^2+2r+64=0
 \]
 has complex conjugate roots
 \[
-r={-2\pm\sqrt{4-4\cdot64}\over2}=-1\pm3\sqrt7i.
+r=\frac{-2\pm\sqrt{4-4\cdot64}}{2}=-1\pm3\sqrt7i.
 \]
 Therefore the motion is underdamped and the
 general solution of  \eqref{eq:6.2.7} is
@@ -1605,8 +1604,8 @@ Lr^2+Rr+\frac{1}{C}=0,
 \]
 with roots
 \begin{equation}\label{eq:6.3.9}
-r_1={-R-\sqrt{R^2-4L/C}\over2L}\mbox{\quad and \quad} r_2=
-{-R+\sqrt{R^2-4L/C}\over2L}.
+r_1=\frac{-R-\sqrt{R^2-4L/C}}{2L}\mbox{\quad and \quad} r_2=
+\frac{-R+\sqrt{R^2-4L/C}}{2L}.
 \end{equation}
 There are three cases to consider, all analogous to the cases
 considered in Section~6.2 for free vibrations of a damped
@@ -1621,7 +1620,7 @@ r_1=-\frac{R}{2L}+i\omega_1\mbox{\quad and \quad} r_2=-\frac{R}{2L}-i\omega_1,
 \]
 where
 \[
-\omega_1={\sqrt{4L/C-R^2}\over2L}.
+\omega_1=\frac{\sqrt{4L/C-R^2}}{2L}.
 \]
 The general solution of  (\ref{eq:6.3.8})  is
 \[
@@ -1785,7 +1784,7 @@ t-\phi),
 \]
 where
 \[
-\cos\phi={1/C-L\omega^2\over\sqrt{(1/C-L\omega^2)^2+R^2\omega^2}}
+\cos\phi=\frac{1/C-L\omega^2}{\sqrt{(1/C-L\omega^2)^2+R^2\omega^2}}
 \mbox{\quad and \quad}
 \sin\phi=\frac{R\omega}{\sqrt{(1/C-L\omega^2)^2+R^2\omega^2}}.
 \]
@@ -1846,7 +1845,7 @@ Show that if $E(t)=U\cos\omega t+V\sin\omega t$ where $U$
 and $V$ are constants then the steady state current in
 the $RLC$ circuit shown in Figure~\ref{figure:6.3.1} is
 \[
-I_p={\omega^2RE(t)+(1/C-L\omega^2)E'(t)\over\Delta},
+I_p=\frac{\omega^2RE(t)+(1/C-L\omega^2)E'(t)}{\Delta},
 \]
 where
 \[
@@ -1965,8 +1964,8 @@ direction of increasing $r$ and ${\bf e}_2$ points in the
 direction of increasing $\theta$ (Figure~\ref{figure:6.4.2});
 moreover,
 \begin{equation} \label{eq:6.4.3}
-{d{\bf e}_1\over d\theta}={\bf e}_2,\quad
-{d{\bf e}_2\over d\theta}=-{\bf e}_1,
+\frac{d{\bf e}_1}{d\theta}={\bf e}_2,\quad
+\frac{d{\bf e}_2}{d\theta}=-{\bf e}_1,
 \end{equation}
 and
 \[
@@ -2097,7 +2096,7 @@ $\theta(t_1)\le\theta(t_2)$ then the $($signed$)$ area of the sector
 \]
 {\rm (Figure~\ref{figure:6.4.3})} is given by
 \[
-A={h(t_2-t_1)\over2},
+A=\frac{h(t_2-t_1)}{2},
 \]
 where $h=r^2\theta',$ which we have shown to be constant.
 \end{theorem}
@@ -2129,7 +2128,7 @@ A=\frac{1}{2}\int_{t_1}^{t_2} r^2(\theta(t))\theta'(t)\,dt.
  But
 \eqref{eq:6.4.7}  and \eqref{eq:6.4.9} imply that
 \[
-A=\frac{1}{2}\int_{t_1}^{t_2} h\,dt={h(t_2-t_1)\over2},
+A=\frac{1}{2}\int_{t_1}^{t_2} h\,dt=\frac{h(t_2-t_1)}{2},
 \]
 which completes the proof.
 
@@ -2232,7 +2231,7 @@ is the equation of an ellipse if $0<e<1$, a parabola if $e=1$,
 or a hyperbola if $e>1$. If $e<1$, leave your answer in
 the form
 \[
- {(X-X_0)^2\over a^2}+{(Y-Y_0)^2\over b^2}=1,
+\frac{(X-X_0)^2}{a^2}+\frac{(Y-Y_0)^2}{b^2}=1,
 \]
 and show that  the area of the ellipse is
 \[

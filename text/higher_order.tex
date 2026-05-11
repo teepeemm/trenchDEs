@@ -323,7 +323,7 @@ is normal on $(a,b),$ let $y_1,$ $y_2,$ \dots, $y_n$ be solutions of
 \eqref{eq:9.1.14} on $(a,b),$ and let $x_0$ be in $(a,b)$. Then the
 Wronskian of $\{y_1,y_2,\dots,y_n\}$ is given by
 \begin{equation}  \label{eq:9.1.15}
-W(x)=W(x_0)\exp\left\{-\int^x_{x_0}{P_1(t)\over P_0(t)}\,
+W(x)=W(x_0)\exp\left\{-\int^x_{x_0}\frac{P_1(t)}{P_0(t)}\,
 dt\right\},\quad a<x<b.
 \end{equation}
 Therefore$,$  either $W$ has no zeros in  $(a,b)$ or $W\equiv0$
@@ -1779,8 +1779,7 @@ z_k=\cos\left(\frac{2k\pi}{n}\right)+i\sin\left(\frac{2k\pi}{n}\right)
 \]
 and
 \[
-\zeta_k=\cos\left((2k+1)\pi\over
-n\right)+i\sin\left((2k+1)\pi\over n\right)
+\zeta_k=\cos\left(\frac{(2k+1)\pi}{n}\right)+i\sin\left(\frac{(2k+1)\pi}{n}\right)
 ,\quad k=0,1,\dots,n-1,
 \]
 then
@@ -1843,7 +1842,7 @@ then
 In general, it can be shown that if $r$ is any integer $\ge2$ then
 \[
 x^r \frac{d^ry}{dx^r}=\frac{d^rY}{dt^r}+
- A_{1r}{d^{r-1}Y\over dt^{r-1}}+\cdots+A_{r-1,r}
+ A_{1r}\frac{d^{r-1}Y}{dt^{r-1}}+\cdots+A_{r-1,r}
  \frac{dY}{dt}
 \]
 where $A_{1r}$, \dots, $A_{r-1,r}$ are integers.  Use these results to
@@ -2048,7 +2047,7 @@ u_p=\frac{x^2}{24}(-4+4x+x^2)
 \]
 is a particular solution of  \eqref{eq:9.3.5}, so
 \[
-y_p=e^{2x}u_p={x^2e^{2x}\over24}(-4+4x+x^2)
+y_p=e^{2x}u_p=\frac{x^2e^{2x}}{24}(-4+4x+x^2)
 \]
 is a particular solution of  \eqref{eq:9.3.4}.
 (Figure~\ref{figure:9.3.2}).
@@ -2056,7 +2055,7 @@ is a particular solution of  \eqref{eq:9.3.4}.
 \begin{figure}[tbp]
   \centering\color{blue}
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig090302}
-  \caption{ $y_p=\dst{{x^2e^{2x}\over24}(-4+4x+x^2)}$}
+  \caption{ $y_p=\dst{\frac{x^2e^{2x}}{24}(-4+4x+x^2)}$}
   \label{figure:9.3.2}
 \end{figure}
 
@@ -2237,7 +2236,7 @@ Substituting these into the last two equations  yields
 \begin{figure}[H]
   \centering\color{blue}
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig090304}
-\caption{ $\dst{y_p=-{xe^{-x}\over2}\left[(3-2x)\cos
+\caption{ $\dst{y_p=-\frac{xe^{-x}}{2}\left[(3-2x)\cos
 x+(1+x)\sin x\right]}$}
   \label{figure:9.3.4}
 \end{figure}
@@ -2253,7 +2252,7 @@ x+(1+x)\sin x\right]
 \]
 is a particular solution of  \eqref{eq:9.3.11}, so
 \[
- y_p=e^{-x}u_p=-{xe^{-x}\over2}\left[(3-2x)\cos
+ y_p=e^{-x}u_p=-\frac{xe^{-x}}{2}\left[(3-2x)\cos
 x+(1+x)\sin x\right]
 \]
 (Figure~\ref{figure:9.3.4}) is a particular  solution of \eqref{eq:9.3.10}.
@@ -2400,8 +2399,8 @@ a_0y^{(n)}+a_1y^{(n-1)}+\cdots+a_ny=e^{\alpha x}G(x)
 if and only if $y=ue^{\alpha x}$, where $u$ satisfies the differential
 equation
 \[
-a_0u^{(n)}+{p^{(n-1)}(\alpha)\over(n-1)!}u^{(n-1)}+
-{p^{(n-2)}(\alpha)\over(n-2)!}u^{(n-2)}+\cdots+p(\alpha)u=G(x)
+a_0u^{(n)}+\frac{p^{(n-1)}(\alpha)}{(n-1)!}u^{(n-1)}+
+\frac{p^{(n-2)}(\alpha)}{(n-2)!}u^{(n-2)}+\cdots+p(\alpha)u=G(x)
 \eqno{\rm(B)}
 \]
 and
@@ -2420,8 +2419,8 @@ Prove:
 The equation
 \[
 \begin{array}{lcl}
-a_0u^{(n)}&+&\dst{p^{(n-1)}(\alpha)\over(n-1)!}u^{(n-1)}+
-\dst{p^{(n-2)}(\alpha)\over(n-2)!}u^{(n-2)}+\cdots+p(\alpha)u\\
+a_0u^{(n)}&+&\dst\frac{p^{(n-1)}(\alpha)}{(n-1)!}u^{(n-1)}+
+\dst\frac{p^{(n-2)}(\alpha)}{(n-2)!}u^{(n-2)}+\cdots+p(\alpha)u\\
 &=&\left(p_0+p_1x+\cdots+p_kx^k\right)\cos
 \omega x\\&&\,+ \left(q_0+q_1x+\cdots+q_kx^k\right)\sin\omega x
 \end{array}
@@ -2550,7 +2549,7 @@ u_1'y_1^{(n-1)}+u_2'y_2^{(n-1)}+\cdots+u_n'y_n^{(n-1)}\right)=F(x).
 \]
 Since  $Ly_i=0$ $(1 \le i \le n)$, this reduces to
 \[
-u_1'y_1^{(n-1)}+u_2'y_2^{(n-1)}+\cdots+u_n'y_n^{(n-1)}={F(x)\over P_0(x)}.
+u_1'y_1^{(n-1)}+u_2'y_2^{(n-1)}+\cdots+u_n'y_n^{(n-1)}=\frac{F(x)}{P_0(x)}.
 \]
 Combining this equation with \eqref{eq:9.4.3} shows that
 \[
@@ -3052,7 +3051,7 @@ let $W$ be the Wronskian of $\{y_1,y_2,\dots,y_n\}$, and let $W_j$ be
 the determinant obtained by deleting the last row and the $j$-th
 column of $W$. Suppose $x_0$ is in $(a,b)$, let
 \[
-u_j(x)=(-1)^{(n-j)}\int_{x_0}^x{F(t)W_j(t)\over P_0(t)W(t)}\,dt,
+u_j(x)=(-1)^{(n-j)}\int_{x_0}^x\frac{F(t)W_j(t)}{P_0(t)W(t)}\,dt,
 \quad 1\le j\le n,
 \]
 and define
@@ -3102,7 +3101,7 @@ which is called  the
 \item % (c)
 Show that
 \[
-{\partial^{j}G(x,t)\over\partial x^j}
+\frac{\partial^{j}G(x,t)}{\partial x^j}
 =\frac{1}{P_0(t)W(t)}\left|\begin{array}{cccc}
 y_1(t)&y_2(t)&\cdots&y_n(t)\\[5pt]
 y_1'(t)&y_2'(t)&\cdots&y_n'(t)\\[5pt]
@@ -3114,7 +3113,7 @@ n.
 \item % (d)
 Show that if $a<t<b$ then
 \[
-\left.{\partial^{j}G(x,t)\over\partial x^j}\right|_{x=t}=
+\left.\frac{\partial^{j}G(x,t)}{\partial x^j}\right|_{x=t}=
 \left\{\begin{array}{cl} 0,&1\le j\le n-2,\\[5pt]
 \dst\frac{1}{P_0(t)},&j=n-1.
 \end{array}\right.
@@ -3123,9 +3122,9 @@ Show that if $a<t<b$ then
 Show that
 \[
  y_p^{(j)}(x)=\left\{\begin{array}{cl}\dst{\int_{x_0}^x
-{\partial^{j}G(x,t)\over\partial x^j}F(t)\,dt},&1\le j\le n-1,\\[10pt]
-\dst{{F(x)\over P_0(x)}+
-\int_{x_0}^x{\partial^{(n)}G(x,t)\over\partial x^n}F(t)\,dt},&j=n.
+\frac{\partial^{j}G(x,t)}{\partial x^j}F(t)\,dt},&1\le j\le n-1,\\[10pt]
+\dst\frac{{F(x)}{P_0(x)}+
+\int_{x_0}^x\frac{\partial^{(n)}G(x,t)}{\partial x^n}F(t)\,dt},&j=n.
 \end{array}\right.
 \]
 \end{alist}

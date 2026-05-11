@@ -286,7 +286,7 @@ provided that $P_0$, $P_1$, and $P_2$ are continuous and $P_0$
 has no zeros on $(a,b)$. To see this, we rewrite the differential
 equation in  \eqref{eq:5.1.12} as
 \[
-y''+{P_1(x)\over P_0(x)}y'+{P_2(x)\over P_0(x)}y=0
+y''+\frac{P_1(x)}{P_0(x)}y'+\frac{P_2(x)}{P_0(x)}y=0
 \]
 and apply Theorem~\ref{thmtype:5.1.1} with $p=P_1/P_0$ and $q=P_2/P_0$.
 
@@ -582,10 +582,8 @@ y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)\ne0
 quantity on the left  to obtain
 \begin{equation}\label{eq:5.1.26}
 \begin{array}{rcl}
-c_1&=&\dst{y_2'(x_0)k_0-y_2(x_0)k_1\over
-y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)}\\[4\jot]
-c_2&=&\dst{y_1(x_0)k_1-y_1'(x_0)k_0\over
-y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)},
+c_1&=&\dst\frac{y_2'(x_0)k_0-y_2(x_0)k_1}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)}\\[4\jot]
+c_2&=&\dst\frac{y_1(x_0)k_1-y_1'(x_0)k_0}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)},
 \end{array}
 \end{equation}
 no matter how $k_0$ and $k_1$ are chosen. This motivates us to
@@ -1043,7 +1041,7 @@ on $(a,b)$, and $\{y_1,y_2\}$ is a fundamental set of solutions on
 
 \item % (b)
 Conclude from \part{a} that if $y_2=uy_1$ where
-$u'=K\dst{e^{-P(x)}\over y_1^2(x)}$, then  $\{y_1,y_2\}$
+$u'=K\dst\frac{e^{-P(x)}}{y_1^2(x)}$, then  $\{y_1,y_2\}$
 is a fundamental set of solutions of (A)
 on  $(a,b)$.
 \end{alist}
@@ -1573,7 +1571,7 @@ From \eqref{eq:5.2.2} we can see that $y=e^{rx}$ is a solution of
 The roots of  the  characteristic equation are given by the quadratic
 formula
 \begin{equation} \label{eq:5.2.3}
-r={-b\pm\sqrt{b^2-4ac}\over2a}.
+r=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
 \end{equation}
 We consider three cases:
 \begin{description}
@@ -1903,8 +1901,8 @@ arbitrary complex roots;   thus, $b^2-4ac<0$ and, from \eqref{eq:5.2.3},
 the
 roots are
 \[
-r_1 = {-b+i\sqrt{4ac-b^2}\over 2a},\quad r_2 =
-{-b-i\sqrt{4ac-b^2}\over 2a},
+r_1 = \frac{-b+i\sqrt{4ac-b^2}}{2a},\quad r_2 =
+\frac{-b-i\sqrt{4ac-b^2}}{2a},
 \]
 which we rewrite as
 \begin{equation} \label{eq:5.2.17}
@@ -1912,7 +1910,7 @@ r_1=\lambda+i \omega,\quad r_2 = \lambda - i \omega,
 \end{equation}
  with
 \[
-\lambda = -\frac{b}{2a},\quad \omega = {\sqrt{4ac-b^2}\over 2a}.
+\lambda = -\frac{b}{2a},\quad \omega = \frac{\sqrt{4ac-b^2}}{2a}.
 \]
 Don't memorize these formulas. Just remember that $r_1$
 and $r_2$ are of the form \eqref{eq:5.2.17},
@@ -2087,8 +2085,7 @@ $6y''+y'-y=0, \quad  y(0)=-1,\quad y'(0)=3$
 
 
 \item\label{exer:5.2.16}
-$4y''-4y'-3y=0, \quad  y(0)=\dst\frac{13}{12},\quad y'(0)=\dst{23
-\over 24}$
+$4y''-4y'-3y=0, \quad  y(0)=\dst\frac{13}{12},\quad y'(0)=\dst\frac{23}{24}$
 
 \item\label{exer:5.2.17}
 $4y''-12y'+9y=0, \quad  y(0)=3,\quad y'(0)=\dst\frac{5}{2}$
@@ -2234,8 +2231,7 @@ x}(e^{rx}) +ce^{rx}=a(r-r_1)^2e^{rx}.
 Differentiate (B) with respect to $r$  to obtain
 \[
 a\frac{\partial}{\partial r}\left(\frac{\partial^2}{\partial^2
-x}(e^{rx})\right)+b\frac{\partial}{\partial r}\left({\partial
-\over\partial x}(e^{rx})\right)
+x}(e^{rx})\right)+b\frac{\partial}{\partial r}\left(\frac{\partial}{\partial x}(e^{rx})\right)
 +c(xe^{rx})=[2+(r-r_1)x]a(r-r_1)e^{rx}.
 \eqno{\rm (C)}
 \]
@@ -2263,16 +2259,16 @@ e^u=\sum_{n=0}^\infty \frac{u^n}{n!}
 \eqno{\rm (A)}
 \]
 \[
-\cos u=\sum_{n=0}^\infty (-1)^n{u^{2n}\over(2n)!}
-=1-\frac{u^2}{2!}+\frac{u^4}{4!}+\cdots+(-1)^n{u^{2n}\over(2n)!}
+\cos u=\sum_{n=0}^\infty (-1)^n\frac{u^{2n}}{(2n)!}
+=1-\frac{u^2}{2!}+\frac{u^4}{4!}+\cdots+(-1)^n\frac{u^{2n}}{(2n)!}
 +\cdots,
 \eqno{\rm (B)}
 \]
 and
 \[
-\sin u=\sum_{n=0}^\infty (-1)^n{u^{2n+1}\over(2n+1)!}
+\sin u=\sum_{n=0}^\infty (-1)^n\frac{u^{2n+1}}{(2n+1)!}
 =u-\frac{u^3}{3!}+\frac{u^5}{5!}+\cdots+(-1)^n
-{u^{2n+1}\over(2n+1)!}
+\frac{u^{2n+1}}{(2n+1)!}
 +\cdots
 \eqno{\rm (C)}
 \]
@@ -2281,7 +2277,7 @@ Even though you have previously considered (A)
 only for real values of $u$, we can set $u=i\theta$, where $\theta$ is
 real, to obtain
 \[
-e^{i\theta}=\sum_{n=0}^\infty {(i\theta)^n\over n!}.
+e^{i\theta}=\sum_{n=0}^\infty\frac{(i\theta)^n}{n!}.
 \eqno{\rm (D)}
 \]
 Given the proper background in the theory of infinite series with
@@ -2299,8 +2295,8 @@ Use this to group the terms in (D) as
 \begin{eqnarray*}
 e^{i\theta}&=&\left(1-\frac{\theta^2}{2}+\frac{\theta^4}{4}+\cdots\right)
 +i\left(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}+\cdots\right)\\[2\jot]
-&=&\sum_{n=0}^\infty (-1)^n{\theta^{2n}\over(2n)!}
-+i\sum_{n=0}^\infty (-1)^n{\theta^{2n+1}\over(2n+1)!}.
+&=&\sum_{n=0}^\infty (-1)^n\frac{\theta^{2n}}{(2n)!}
++i\sum_{n=0}^\infty (-1)^n\frac{\theta^{2n+1}}{(2n+1)!}.
 \end{eqnarray*}
 By comparing this result with (B) and
 (C), conclude that
@@ -2467,7 +2463,7 @@ P_0(x)y''+P_1(x)y'+P_2(x)y=0
 \]
 on $(a,b)$. To see this, we rewrite \eqref{eq:5.3.6} as
 \[
-y''+{P_1(x)\over P_0(x)}y'+{P_2(x)\over P_0(x)}y={F(x)\over P_0(x)}
+y''+\frac{P_1(x)}{P_0(x)}y'+\frac{P_2(x)}{P_0(x)}y=\frac{F(x)}{P_0(x)}
 \]
 and apply Theorem~\ref{thmtype:5.3.2} with $p=P_1/P_0$, $q=P_2/P_0$, and
 $f=F/P_0$.
@@ -3260,7 +3256,7 @@ u_p=-\frac{1}{4}(1+2x-2x^2)
 \]
 is a particular solution of  (\ref{eq:5.4.11}), and
 \[
-y_p=u_pe^{3x}=-{e^{3x}\over4}(1+2x-2x^2)
+y_p=u_pe^{3x}=-\frac{e^{3x}}{4}(1+2x-2x^2)
 \]
 is a particular solution of  (\ref{eq:5.4.10}).
 
@@ -3646,9 +3642,9 @@ Write $y=ue^{\alpha x}$ to find the general
 solution.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $y''+2y'+y=\dst{e^{-x}\over\sqrt x}$ &
+\part{a} $y''+2y'+y=\dst\frac{e^{-x}}{\sqrt x}$ &
 \part{b} $y''+6y'+9y=e^{-3x}\ln x$\\
-\part{c} $y''-4y'+4y=\dst{e^{2x}\over1+x}$ &
+\part{c} $y''-4y'+4y=\dst\frac{e^{2x}}{1+x}$ &
 \part{d} $4y''+4y'+y=\dst{4e^{-x/2}\left(\frac{1}{x}+x\right)}$
 \end{tabular}
 
@@ -4422,9 +4418,9 @@ B_k&=&\phantom{-}\frac{p_k}{2a\omega(k+1)},
 and, if $k\ge 1$,
 \begin{eqnarray*}
 A_{k-j}&=&-\frac{1}{2\omega}
-\left[{q_{k-j}\over a(k-j+1)}-(k-j+2)B_{k-j+1}\right]\\[2\jot]
+\left[\frac{q_{k-j}}{a(k-j+1)}-(k-j+2)B_{k-j+1}\right]\\[2\jot]
 B_{k-j}&=&\phantom{-}\frac{1}{2\omega}
-\left[{p_{k-j}\over a(k-j+1)}-(k-j+2)A_{k-j+1}\right]
+\left[\frac{p_{k-j}}{a(k-j+1)}-(k-j+2)A_{k-j+1}\right]
 \end{eqnarray*}
 for $1\le j\le k$.
 Conclude that (B) with this choice of the
@@ -5053,7 +5049,7 @@ Assume that $p$ and $q$ are continuous and $r$ is differentiable.
 Show that $y$ is a solution of  (A) if and only if
  $y={z'/rz}$,  where
 \[
- z''+\left[p(x)-{r'(x)\over r(x)}\right]
+ z''+\left[p(x)-\frac{r'(x)}{r(x)}\right]
 z'+r(x)q(x)z=0.
 \eqno{\rm (B)}
 \]
@@ -5248,7 +5244,7 @@ y_p=u_1x+u_2x^2,
 where
 \begin{eqnarray*}
 u_1'x+\phantom{2}u_2'x^2&=&0\\
-u_1'\phantom{x}+2u_2'x\phantom{^2}&=&{x^{9/2}\over x^2}=x^{5/2}.
+u_1'\phantom{x}+2u_2'x\phantom{^2}&=&\frac{x^{9/2}}{x^2}=x^{5/2}.
 \end{eqnarray*}
 From the first equation, $u_1'=-u_2'x$. Substituting this into the
 second equation yields $u_2'x=x^{5/2}$, so $u_2'=x^{3/2}$ and
@@ -5289,7 +5285,7 @@ y_p=u_1x+u_2e^x,
 where
 \begin{eqnarray*}
 u_1'x+u_2'e^x&=&0\\
-u_1'\phantom{x}+u_2'e^x&=&{(x-1)^2\over x-1}=x-1.
+u_1'\phantom{x}+u_2'e^x&=&\frac{(x-1)^2}{x-1}=x-1.
 \end{eqnarray*}
 Subtracting the first equation from the second yields
 $-u_1'(x-1)=x-1$, so $u_1'=-1$. From this and the first equation,
@@ -5361,7 +5357,7 @@ where
 Adding these two equations yields
 \[
 -u_2'e^{-2x}=\frac{1}{1+e^x},\mbox{\quad so \quad}
-u_2'=-{e^{2x}\over 1+e^x}.
+u_2'=-\frac{e^{2x}}{1+e^x}.
  \]
 From the first equation,
 \[
@@ -5375,7 +5371,7 @@ u_1=\int\frac{e^x}{1+e^x}\,dx=\int \frac{dv}{1+v}
 \]
 and
 \begin{eqnarray*}
-u_2&=&-\int{e^{2x}\over 1+e^x}\,dx=-\int \frac{v}{1+v}\,dv
+u_2&=&-\int\frac{e^{2x}}{1+e^x}\,dx=-\int \frac{v}{1+v}\,dv
 =\int\left[\frac{1}{1+v}-1\right]\,dv \\ [2\jot]
 &=&\ln(1+v)-v=\ln(1+e^x)-e^x.
 \end{eqnarray*}
@@ -5438,7 +5434,7 @@ the second equation yields
 \end{equation}
 Since
 \[
-\left[\frac{1}{x^2-1}-\frac{1}{(x+1)^2}\right]={(x+1)-(x-1)\over(x+1)(x^2-1)}
+\left[\frac{1}{x^2-1}-\frac{1}{(x+1)^2}\right]=\frac{(x+1)-(x-1)}{(x+1)(x^2-1)}
 =\frac{2}{(x+1)(x^2-1)},
 \]
 \eqref{eq:5.7.23} implies that $u_2'=1$. From \eqref{eq:5.7.22},
@@ -5458,8 +5454,8 @@ Therefore
 \begin{eqnarray*}
 y_p&=&\frac{u_1}{x-1}+\frac{u_2}{x+1}=\left[2\ln(x+1)-x\right]\frac{1}{x-1}
 +x\frac{1}{x+1} \\
-&=&{2\ln(x+1)\over x-1}+x\left[\frac{1}{x+1}-\frac{1}{x-1}\right]
-={2\ln(x+1)\over x-1}-\frac{2x}{(x+1)(x-1)}.
+&=&\frac{2\ln(x+1)}{x-1}+x\left[\frac{1}{x+1}-\frac{1}{x-1}\right]
+=\frac{2\ln(x+1)}{x-1}-\frac{2x}{(x+1)(x-1)}.
 \end{eqnarray*}
 However, since
 \[
@@ -5467,15 +5463,15 @@ However, since
 \]
 is a solution of the complementary equation, we redefine
 \[
-y_p={2\ln(x+1)\over x-1}.
+y_p=\frac{2\ln(x+1)}{x-1}.
 \]
 Therefore  the general solution of  \eqref{eq:5.7.24} is
 \begin{equation} \label{eq:5.7.24}
-y={2\ln(x+1)\over x-1}+\frac{c_1}{x-1}+\frac{c_2}{x+1}.
+y=\frac{2\ln(x+1)}{x-1}+\frac{c_1}{x-1}+\frac{c_2}{x+1}.
 \end{equation}
 Differentiating this yields
 \[
-y'=\frac{2}{x^2-1}-{2\ln(x+1)\over(x-1)^2}-\frac{c_1}{(x-1)^2}-\frac{c_2}{(x+1)^2}.
+y'=\frac{2}{x^2-1}-\frac{2\ln(x+1)}{(x-1)^2}-\frac{c_1}{(x-1)^2}-\frac{c_2}{(x+1)^2}.
 \]
 Setting $x=0$ in the last two equations and imposing the initial conditions
 $y(0)=-1$ and $y'(0)=-5$ yields the system
@@ -5487,8 +5483,8 @@ The solution of this system is $c_1=2,\,c_2=1$.  Substituting
 these into
 \eqref{eq:5.7.24} yields
 \begin{eqnarray*}
-y&=&{2\ln(x+1)\over x-1}+\frac{2}{x-1}+\frac{1}{x+1}\\
-&=&{2\ln(x+1)\over x-1}+\frac{3x+1}{x^2-1}
+y&=&\frac{2\ln(x+1)}{x-1}+\frac{2}{x-1}+\frac{1}{x+1}\\
+&=&\frac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^2-1}
 \end{eqnarray*}
 as the solution of  \eqref{eq:5.7.21}. Figure~\ref{figure:5.7.1} is a graph
 of the solution.
@@ -5498,7 +5494,7 @@ of the solution.
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig050701}
 \color{blue}
-  \caption{ $y=\dst{2\ln(x+1)\over x-1}+\frac{3x+1}{x^2-1}$}
+  \caption{ $y=\dst\frac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^2-1}$}
   \label{figure:5.7.1}
 \end{figure}
 
@@ -5551,8 +5547,7 @@ parameters to find a particular solution.
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \item\label{exer:5.7.5} $y''-2y'+y=14x^{3/2}e^x$
 %&\vspace*{-5pt} 
-\item\label{exer:5.7.6} $y''-y=\dst{4e^{-x}\over
-1-e^{-2x}}$
+\item\label{exer:5.7.6} $y''-y=\dst\frac{4e^{-x}}{1-e^{-2x}}$
 %\end{tabular}
 \newpage
 

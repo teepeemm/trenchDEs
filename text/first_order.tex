@@ -1546,7 +1546,7 @@ we can rewrite the last equation as
 interval.
  Solving for  $y$ yields
 \begin{equation} \label{eq:2.2.19}
-y={1+ce^{-x^2/2}\over  1-ce^{-x^2/2}}.
+y=\frac{1+ce^{-x^2/2}}{1-ce^{-x^2/2}}.
 \end{equation}
 
 We've now shown that if $y$ is a solution of \eqref{eq:2.2.18} that  is
@@ -1650,7 +1650,7 @@ the solution is valid on $(-\infty,\infty)$. If $y_0>0$, the solution
 %\end{tabular}
 
 \item\label{exer:2.2.5}
-$\dst{(3y^3+3y \cos y+1)y'+{(2x+1)y\over 1+x^2}=0}$
+$\dst{(3y^3+3y \cos y+1)y'+\frac{(2x+1)y}{1+x^2}=0}$
 
 
 \item\label{exer:2.2.6} $x^2yy'=(y^2-1)^{3/2}$
@@ -1691,7 +1691,7 @@ $(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1$
 
 
 \item\label{exer:2.2.14} \CGex
-$\dst{y'+{(y+1)(y-1)(y-2)\over x+1}=0, \quad y(1)=0}$
+$\dst\frac{y'+{(y+1)(y-1)(y-2)}{x+1}=0, \quad y(1)=0}$
 
 \item\label{exer:2.2.15} \CGex $y'+2x(y+1)=0, \quad y(0)=2$
 
@@ -1722,8 +1722,7 @@ $y'+x^2(y+1)(y-2)^2=0, \quad y(4)=2$
 \item\label{exer:2.2.23}
 $(x+1)(x-2)y'+y=0, \quad y(1)=-3$
 
-\item\label{exer:2.2.24} Solve $\dst{y'={(1+y^2)
-\over (1+x^2)}}$ explicitly.
+\item\label{exer:2.2.24} Solve $\dst{y'=\frac{(1+y^2)}{(1+x^2)}}$ explicitly.
 \hint{Use the identity
 $\dst{\tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B}}$.}
 
@@ -1902,15 +1901,15 @@ parameters followed by separation of variables.}
 
 % TODO 35--38 two columns
 % \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:2.2.35} $\dst{y'+y={2xe^{-x}\over1+ye^x}}$
+\item\label{exer:2.2.35} $\dst{y'+y=\frac{2xe^{-x}}{1+ye^x}}$
 %&
 \item\label{exer:2.2.36}\vspace*{7pt}  $\dst{xy'-2y=\frac{x^6}{y+x^2}}$
 %\end{tabular}
 
 % \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:2.2.37} $\dst{y'-y}={(x+1)e^{4x}\over(y+e^x)^2}$
+\item\label{exer:2.2.37} $\dst{y'-y}=\frac{(x+1)e^{4x}}{(y+e^x)^2}$
 %&
-\item\label{exer:2.2.38} $y'-2y=\dst{xe^{2x}\over1-ye^{-2x}}$
+\item\label{exer:2.2.38} $y'-2y=\dst\frac{xe^{2x}}{1-ye^{-2x}}$
 %\end{tabular}
 
 
@@ -1925,7 +1924,7 @@ equation.
 & {\bf (b)} $\dst{xy'-y=h(x) p\left(\frac{y}{x}\right)}$\\[2\jot]
 {\bf (c)} $y'+y=h(x) p(e^xy)$
 & {\bf (d)} $xy'+ry=h(x) p(x^ry)$\\[2\jot]
-{\bf (e)} $\dst{y'+{v'(x)\over v(x)}y= h(x)
+{\bf (e)} $\dst{y'+\frac{v'(x)}{v(x)}y= h(x)
 p\left(v(x)y\right)}$
 \end{tabular}
 \end{exerciselist}
@@ -2042,7 +2041,7 @@ y'=\frac{x^2-y^2 }{1+x^2+y^2}, \quad y(x_0)=y_0.
 Since
 \[
 f(x,y)  = \frac{x^2-y^2 }{1+x^2+y^2}\mbox{\quad and \quad}
-f_y(x,y)  =  -{2y(1+2x^2)\over (1+x^2+y^2)^2}
+f_y(x,y)  =  -\frac{2y(1+2x^2)}{(1+x^2+y^2)^2}
 \]
 are continuous for all $(x,y)$, Theorem~\ref{thmtype:2.3.1} implies that
 if $(x_0,y_0)$ is arbitrary, then
@@ -2337,9 +2336,7 @@ $x_0$.
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 % TODO 1--12 two columns
-\item\label{exer:2.3.1} $\dst {y'={x^2+y^2
-\over \sin
-x}}$
+\item\label{exer:2.3.1} $\dst {y'=\frac{x^2+y^2}{\sin x}}$
 % &  
 \item\label{exer:2.3.2}\vspace*{10pt} $\dst
 {y'=\frac{e^x+y }{x^2+y^2}}$
@@ -2348,8 +2345,7 @@ x}}$
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
  \item\label{exer:2.3.3} $y'= \tan xy$
 %&
-\item\label{exer:2.3.4} $\dst {y'={x^2+y^2
-\over \ln xy}}$
+\item\label{exer:2.3.4} $\dst {y'=\frac{x^2+y^2}{\ln xy}}$
 % \end{tabular}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -2365,8 +2361,7 @@ x}}$
 \item\label{exer:2.3.7} $\dst
 {y'=\ln(1+x^2+y^2)}$
 %& \vspace*{4pt}
-\item\label{exer:2.3.8} $\dst {y'={2x+3y
-\over x-4y}}$ 
+\item\label{exer:2.3.8} $\dst {y'=\frac{2x+3y}{x-4y}}$ 
 %\end{tabular}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -2409,8 +2404,8 @@ is a solution of the initial value problem
 y'=\frac{10}{3}xy^{2/5}, \quad y(0)=-1
 \]
 on $(-\infty,\infty)$. \hint{You'll need the definition \[
-y'(\overline{x}) = \lim_\frac{x \to }{line{x}} {y(x)-y(\overline{x})
-\over x-\overline{x}} \] to verify that $y$ satisfies the differential
+y'(\overline{x}) = \lim_\frac{x \to }{line{x}}\frac{y(x)-y(\overline{x})
+}{x-\overline{x}} \] to verify that $y$ satisfies the differential
 equation at $\overline{x} = \pm 1$.}
 
 \item %(b)
@@ -2535,7 +2530,7 @@ u'y_1(x)=f(x).
 Note that this last equation is separable, since it can be rewritten
 as
 \[
-u'={f(x)\over y_1(x)}.
+u'=\frac{f(x)}{y_1(x)}.
 \]
 In this section we'll consider nonlinear differential equations
 that are not separable to begin with, but can be solved in a similar
@@ -2649,7 +2644,7 @@ which is separable. After checking for constant solutions $u\equiv
 u_0$ such that $q(u_0)=u_0$, we can separate
 variables to obtain
 \[
-\frac{u'}{q(u)-u}={y_1'(x)\over y_1(x)}.
+\frac{u'}{q(u)-u}=\frac{y_1'(x)}{y_1(x)}.
 \]
 
 \boxit{Homogeneous Nonlinear Equations}
@@ -2671,7 +2666,7 @@ y'=q(y/x),
 where $q=q(u)$ is a function of a single variable.
 For example,
 \[
-y'={y+xe^{-y/x}\over x}=\frac{y}{x}+e^{-y/x}
+y'=\frac{y+xe^{-y/x}}{x}=\frac{y}{x}+e^{-y/x}
 \]
 and
 \[
@@ -2717,14 +2712,14 @@ not contain the point $x=0$.
 \begin{example}\label{example:2.4.2}\rm
 Solve
 \begin{equation} \label{eq:2.4.8}
-y'={y+xe^{-y/x}\over x}.
+y'=\frac{y+xe^{-y/x}}{x}.
 \end{equation}
 \end{example}
 
 \solution Substituting  $y=ux$
 into \eqref{eq:2.4.8} yields
 \[
-u'x+u =  {ux+xe^{-ux/x}\over x} = u+e^{-u}.
+u'x+u =  \frac{ux+xe^{-ux/x}}{x} = u+e^{-u}.
 \]
  Simplifying and separating variables yields
 \[
@@ -2774,7 +2769,7 @@ y'=\frac{y^2+xy-x^2}{x^2}
 \]
 for $x$ in any such interval. Substituting $y=ux$ yields
 \[
-u'x+u ={ (ux)^2+x(ux)-x^2 \over x^2}
+u'x+u =\frac{ (ux)^2+x(ux)-x^2}{x^2}
 = u^2+u-1,
 \]
 so
@@ -2841,7 +2836,7 @@ $x^{2}y'=y^{2}+xy-x^{2}$}
 \noindent
 Therefore
 \begin{equation} \label{eq:2.4.13}
-y=ux={x(1+cx^2)\over 1-cx^2}
+y=ux=\frac{x(1+cx^2)}{1-cx^2}
 \end{equation}
 is a solution of \eqref{eq:2.4.10} for any choice of the constant $c$.
 Setting $c=0$ in \eqref{eq:2.4.13} yields the solution $y=x$. However, the
@@ -2854,8 +2849,8 @@ The situation is more complicated if $x=0$ is the open interval.
 on $(-\infty,\infty)$. If $c_1$ and $c_2$ are arbitrary constants,
  the function
 \begin{equation} \label{eq:2.4.14}
-y=\left\{\begin{array}{ll} \dst{x(1+c_1x^2)\over 1-c_1x^2},&a<x<0,\\
-[2\jot]\dst{x(1+c_2x^2)\over 1-c_2x^2},&0\le x<b,
+y=\left\{\begin{array}{ll} \dst\frac{x(1+c_1x^2)}{1-c_1x^2},&a<x<0,\\
+[2\jot]\dst\frac{x(1+c_2x^2)}{1-c_2x^2},&0\le x<b,
  \end{array}\right.
 \end{equation}
 is a solution of \eqref{eq:2.4.9} on $(a,b)$, where
@@ -2884,16 +2879,15 @@ condition
 $y(1)=2$ implies that $u(1)=2$.  Substituting this into \eqref{eq:2.4.12}
 yields $c=1/3$.  Hence, the solution of \eqref{eq:2.4.10} is
 \[
-y={x(1+x^2/3)\over 1-x^2/3}.
+y=\frac{x(1+x^2/3)}{1-x^2/3}.
 \]
 The interval of validity of this solution is $(-\sqrt3,\sqrt3)$.
 However, the largest interval on which \eqref{eq:2.4.10} has a unique
 solution is $(0,\sqrt3)$. To see this, note from \eqref{eq:2.4.14}
 that any function of the form
 \begin{equation} \label{eq:2.4.15}
-y=\left\{\begin{array}{ll} \dst{x(1+cx^2)\over
-1-cx^2},&a<x\le0,\\[2\jot]
-\dst{x(1+x^2/3)\over 1-x^2/3},&0\le x<\sqrt3,
+y=\left\{\begin{array}{ll} \dst\frac{x(1+cx^2)}{1-cx^2},&a<x\le0,\\[2\jot]
+\dst\frac{x(1+x^2/3)}{1-x^2/3},&0\le x<\sqrt3,
 \end{array}\right.
 \end{equation}
 is a solution of \eqref{eq:2.4.10} on $(a,\sqrt3)$, where $a=-1/\sqrt c$
@@ -3034,7 +3028,7 @@ $xyy'=x^2+2y^2;  \quad \{-4\le x\le 4,-4\le y\le 4\}$
 
 
 \item\label{exer:2.4.21} \CGex
-$y'=\dst{2y^2+x^2e^{-(y/x)^2}\over 2xy};
+$y'=\dst\frac{2y^2+x^2e^{-(y/x)^2}}{2xy};
 \quad  \{-8\le x\le 8,-8\le y\le 8\}$
 
 
@@ -3633,7 +3627,7 @@ satisfies the exactness condition  $M_y=N_x$. If not,
 don't go further with this procedure.
 \item{\bf Step 2.} Integrate
 \[
-{\partial F(x,y)\over\partial x}=M(x,y)
+\frac{\partial F(x,y)}{\partial x}=M(x,y)
 \]
 with respect to $x$ to obtain
 \begin{equation} \label{eq:2.5.20}
@@ -3644,14 +3638,14 @@ is an unknown function of $y$.
 \item{\bf Step 3.} Differentiate \eqref{eq:2.5.20} with respect to
 $y$  to obtain
 \[
-{\partial F(x,y)\over\partial y}={\partial G(x,y)\over\partial
+\frac{\partial F(x,y)}{\partial y}=\frac{\partial G(x,y)}{\partial
 y}+\phi'(y).
 \]
 \item{\bf Step 4.} Equate the right side of this equation to $N$ and solve
 for $\phi'$;    thus,
 \[
- {\partial G(x,y)\over\partial y}+\phi'(y)=N(x,y),\mbox{\quad  so \quad }
-\phi'(y)=N(x,y)-{\partial G(x,y)\over\partial y}.
+\frac{\partial G(x,y)}{\partial y}+\phi'(y)=N(x,y),\mbox{\quad  so \quad }
+\phi'(y)=N(x,y)-\frac{\partial G(x,y)}{\partial y}.
 \]
 \item{\bf Step 5.} Integrate $\phi'$ with respect to $y$, taking the
 constant of integration to be zero, and substitute the result in
@@ -3800,8 +3794,7 @@ $\dst{\left(\frac{1}{x}+2x\right)\,dx+
 $(y\sin xy+xy^2\cos xy)\,dx+(x\sin xy+xy^2\cos xy)\,dy=0$
 
 \item\label{exer:2.5.13}
-$\dst{{x\,dx\over(x^2+y^2)^{3/2}}+{y\,dy
-\over(x^2+y^2)^{3/2}}=0}$
+$\dst{\frac{x\,dx}{(x^2+y^2)^{3/2}}+\frac{y\,dy}{(x^2+y^2)^{3/2}}=0}$
 
 \item\label{exer:2.5.14}
 $\left(e^x(x^2y^2+2xy^2)+6x\right)\,dx+(2x^2ye^x+2)\,dy=0$
@@ -4015,13 +4008,13 @@ y'+\frac{2}{x}y=-\frac{2xy}{x^2+2x^2y+1},\quad y(1)=-2.
 \item\label{exer:2.5.39}
 Solve the initial value problem
 \[
-y'-\frac{3}{x}y={2x^4(4x^3-3y)\over3x^5+3x^3+2y},\quad y(1)=1.
+y'-\frac{3}{x}y=\frac{2x^4(4x^3-3y)}{3x^5+3x^3+2y},\quad y(1)=1.
 \]
 
 \item\label{exer:2.5.40}
 Solve the initial value problem
 \[
-y'+2xy=-e^{-x^2}\left({3x+2ye^{x^2}\over2x+3ye^{x^2}}\right),\quad
+y'+2xy=-e^{-x^2}\left(\frac{3x+2ye^{x^2}}{2x+3ye^{x^2}}\right),\quad
 y(0)=-1.
 \]
 
@@ -4163,11 +4156,11 @@ P(x)Q(y)(M_y-N_x)=P'(x)Q(y)N-P(x)Q'(y)M,
 \end{equation}
 or, after dividing through by $P(x)Q(y)$,
 \begin{equation} \label{eq:2.6.7}
-M_y-N_x={P'(x)\over P(x)}N-{Q'(y)\over Q(y)}M.
+M_y-N_x=\frac{P'(x)}{P(x)}N-\frac{Q'(y)}{Q(y)}M.
 \end{equation}
 Now let
 \[
-p(x)={P'(x)\over P(x)} \mbox{\quad and \quad} q(y)={Q'(y)\over Q(y)},
+p(x)=\frac{P'(x)}{P(x)} \mbox{\quad and \quad} q(y)=\frac{Q'(y)}{Q(y)},
 \]
 so \eqref{eq:2.6.7} becomes
 \begin{equation} \label{eq:2.6.8}
