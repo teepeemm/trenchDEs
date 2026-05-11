@@ -335,8 +335,7 @@ x^2y_1''+xy_1'-4y_1=x^2(2)+x(2x)-4x^2=0
 for $x$ in $(-\infty,\infty)$.
 If $y_2=1/x^2$, then $y_2'=-2/x^3$ and $y_2''=6/x^4$, so
 \[
-x^2y_2''+xy_2'-4y_2=x^2\left(6\over
-x^4\right)-x\left(2\over x^3\right)-\frac{4}{x^2}=0
+x^2y_2''+xy_2'-4y_2=x^2\left(\frac{6}{x^4}\right)-x\left(\frac{2}{x^3}\right)-\frac{4}{x^2}=0
 \]
 for $x$ in $(-\infty,0)$ or $(0,\infty)$.
 
@@ -720,7 +719,7 @@ $y_2=1/x^2$ directly yields
 W=\left| \begin{array}{cc}
 x^2 & 1/x^2 \\[2\jot]
 2x & -2/x^3
-\end{array} \right|=x^2\left(-\frac{2}{x^3}\right)-2x\left(1\over x^2\right)=-\frac{4}{x}.
+\end{array} \right|=x^2\left(-\frac{2}{x^3}\right)-2x\left(\frac{1}{x^2}\right)=-\frac{4}{x}.
 \end{equation}
 To verify Abel's formula we
 rewrite the differential  equation as
@@ -730,13 +729,12 @@ y''+\frac{1}{x}y'-\frac{4}{x^2}y=0
 to see  that $p(x)=1/x$. If $x_0$ and $x$ are either both in
 $(-\infty,0)$ or both in $(0,\infty)$ then
 \[
-\int_{x_0}^x p(t)\,dt=\int_{x_0}^x \frac{dt}{t}=\ln\left(x\over
-x_0\right),
+\int_{x_0}^x p(t)\,dt=\int_{x_0}^x \frac{dt}{t}=\ln\left(\frac{x}{x_0}\right),
 \]
 so Abel's formula becomes
 \begin{eqnarray*}
 W(x)&=&W(x_0)e^{-\ln(x/x_0)}=W(x_0)\frac{x_0}{x}\\
-&=&-\left(4\over x_0\right)\left(x_0\over x\right)\mbox{\quad from
+&=&-\left(\frac{4}{x_0}\right)\left(\frac{x_0}{x}\right)\mbox{\quad from
 \eqref{eq:5.1.31}}\\
 &=&-\frac{4}{x},
 \end{eqnarray*}
@@ -765,7 +763,7 @@ subinterval, $y_1\equiv0$ on  $(a,b)$, so $y_1$ and $y_2$
 are linearly independent, and we're finished with this part of the
 proof.) Then $y_2/y_1$ is defined on $I$, and
 \begin{equation}\label{eq:5.1.33}
-\left(y_2\over y_1\right)'={y_1y_2'-y_1'y_2\over y_1^2}=\frac{W}{y_1^2}.
+\left(\frac{y_2}{y_1}\right)'={y_1y_2'-y_1'y_2\over y_1^2}=\frac{W}{y_1^2}.
 \end{equation}
 However, if $W(x_0)=0$,
  Theorem~\ref{thmtype:5.1.4} implies that $W\equiv0$ on  $(a,b)$.
@@ -795,7 +793,7 @@ $y_2$ isn't  a constant multiple of $y_1$ on  $(a,b)$.
 A similar argument shows that $y_1$ isn't  a constant multiple of
 $y_2$ on  $(a,b)$, since
 \[
-\left(y_1\over y_2\right)'={y_1'y_2-y_1y_2'\over y_2^2}=-\frac{W}{y_2^2}
+\left(\frac{y_1}{y_2}\right)'={y_1'y_2-y_1y_2'\over y_2^2}=-\frac{W}{y_2^2}
 \]
 on any subinterval of  $(a,b)$ where $y_2$ has no zeros. \bbox
 

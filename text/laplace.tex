@@ -1217,9 +1217,8 @@ F(s)=\frac{17}{2}\,\frac{1}{s}-\frac{10}{s-1}+\frac{7}{2}\,\frac{1}{s-2}-\frac{1
 and
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
- \frac{17}{2}{\cal L}^{-1}\left(1\over s\right)-10{\cal L}^{-1}\left(1
-\over s-1\right)+\frac{7}{2}{\cal L}^{-1}\left(1\over s-2\right)-{\cal L}^{-1}\left(1\over
-s+1\right)\\[1\jot]
+ \frac{17}{2}{\cal L}^{-1}\left(\frac{1}{s}\right)-10{\cal L}^{-1}\left(1
+\over s-1\right)+\frac{7}{2}{\cal L}^{-1}\left(\frac{1}{s-2}\right)-{\cal L}^{-1}\left(\frac{1}{s+1}\right)\\[1\jot]
 &=& \frac{17}{2}-10e^t+\frac{7}{2}e^{2t}-e^{-t}.
 \end{eqnarray*}
 
@@ -1267,8 +1266,7 @@ F(s)=\frac{2}{s+1}-\frac{6}{s+2}-\frac{8}{(s+2)^2}
 and
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
-2{\cal L}^{-1}\left(1\over s+1\right)-6{\cal L}^{-1}\left(1\over
-s+2\right)-8{\cal L}^{-1}\left(1\over(s+2)^2\right)\\[1\jot]
+2{\cal L}^{-1}\left(\frac{1}{s+1}\right)-6{\cal L}^{-1}\left(\frac{1}{s+2}\right)-8{\cal L}^{-1}\left(1\over(s+2)^2\right)\\[1\jot]
 &=&2e^{-t}-6e^{-2t}-8te^{-2t}.
 \end{eqnarray*}
 
@@ -1357,7 +1355,7 @@ F(s)=\frac{1}{2s}-\frac{7}{2}\,\frac{s+1}{(s+1)^2+1}-
 Therefore
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
-\frac{1}{2}{\cal L}^{-1}\left(1\over s\right)-\frac{7}{2}{\cal
+\frac{1}{2}{\cal L}^{-1}\left(\frac{1}{s}\right)-\frac{7}{2}{\cal
 L}^{-1}\left(s+1
 \over(s+1)^2+1\right)-\frac{5}{2} {\cal L}^{-1}\left(1\over
 (s+1)^2+1\right)\\[1\jot]
@@ -1968,8 +1966,8 @@ $9y''+6y'+y=3e^{3t}, \quad   y(0)=0,\;  y'(0)=-3$
 \item\label{exer:8.3.38}
 Suppose $a,b$, and $c$ are constants and $a\ne0$.  Let
 \[
-y_1={\cal L}^{-1}\left(as+b\over as^2+bs+c\right)\mbox{\quad and \quad}
-y_2={\cal L}^{-1}\left(a\over as^2+bs+c\right).
+y_1={\cal L}^{-1}\left(\frac{as+b}{as^2+bs+c}\right)\mbox{\quad and \quad}
+y_2={\cal L}^{-1}\left(\frac{a}{as^2+bs+c}\right).
 \]
 Show that
 \[
@@ -3582,7 +3580,7 @@ Y(s) =\frac{1}{(s^2+4)}F(s)+\frac{k_1+k_0s}{s^2+4}.
 \]
 From the table of Laplace transforms,
 \[
-{\cal L}^{-1}\left(k_1+k_0s\over s^2+4\right)=k_0\cos 2t+\frac{k_1}{2}\sin 2t.
+{\cal L}^{-1}\left(\frac{k_1+k_0s}{s^2+4}\right)=k_0\cos 2t+\frac{k_1}{2}\sin 2t.
 \]
 Since
 \[
@@ -4143,7 +4141,7 @@ d\tau.
 \item\label{exer:8.6.11}
 Let
 \[
-w={\cal L}^{-1}\left(1\over as^2+bs+c\right),
+w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right),
 \]
 where $a,b$, and $c$ are constants and $a\ne0$.
 \begin{alist}
@@ -4353,7 +4351,7 @@ Then
 \end{equation}
 where
 \[
-w={\cal L}^{-1}\left(1\over as^2+bs+c\right).
+w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right).
 \]
 \end{theorem}
 
@@ -4447,7 +4445,7 @@ y=u(t-t_0)w(t-t_0),
 \]
 where
 \[
-w={\cal L}^{-1}\left(1\over as^2+bs+c\right).
+w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right).
 \]
 \end{definition}
 
@@ -4536,7 +4534,7 @@ where $t_0>0$. Then interpret the solution for the case where $t_0=0$.
 \solution
 Here
 \[
-w={\cal L}^{-1}\left(1\over s^2-2s+1\right)={\cal L}^{-1}\left(
+w={\cal L}^{-1}\left(\frac{1}{s^2-2s+1}\right)={\cal L}^{-1}\left(
 1\over(s-1)^2\right)=te^{-t},
 \]
 so  Definition~\ref{thmtype:8.7.2} yields
@@ -4663,7 +4661,7 @@ y''+y=1, \quad    y(0)=-1,\quad    y'(0)=2.
 \]
 Since
 \[
-w={\cal L}^{-1}\left(1\over s^2+1\right)=\sin t,
+w={\cal L}^{-1}\left(\frac{1}{s^2+1}\right)=\sin t,
 \]
 the solution of  \eqref{eq:8.7.18} is
 \begin{eqnarray*}
@@ -4784,7 +4782,7 @@ ay_h''+by_h'+cy_h=
 \]
 where $t_0>0$ and $h>0$. Then find
 \[
-w={\cal L}^{-1}\left(1\over as^2+bs+c\right)
+w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right)
 \]
 and verify Theorem~\ref{thmtype:8.7.1} by graphing $w$ and $y_h$
 on the same axes, for small positive values of $h$.}
