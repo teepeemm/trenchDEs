@@ -418,8 +418,7 @@ $te^{at}\leftrightarrow\dst{\frac{1}{(s-a)^2}},\quad s>a$\\[9pt]
 $\sin\omega t\leftrightarrow\dst{\frac{\omega}{s^2+\omega^2}},\quad s>0$&
 $e^{\lambda t}\sin\omega t\leftrightarrow\dst{\frac{\omega}{(s-\lambda)^2+\omega^2}},\,s>\lambda$\\[9pt]
 $\cos\omega t\leftrightarrow\dst{\frac{s}{s^2+\omega^2}},\quad s>0$ &
-$e^{\lambda t}\sin\omega t\leftrightarrow\dst{{s-\lambda\over
-(s-\lambda)^2+\omega^2}},\,s>\lambda$\\[9pt]\hline
+$e^{\lambda t}\sin\omega t\leftrightarrow\dst{\frac{s-\lambda}{(s-\lambda)^2+\omega^2}},\,s>\lambda$\\[9pt]\hline
 \end{tabular}
 \end{center}
 
@@ -778,7 +777,7 @@ Use the known Laplace transforms
 \[
 {\cal L}(e^{\lambda t}\sin\omega t)=\frac{\omega}{(s-\lambda)^2+\omega^2}
 \quad\mbox{and }\quad
-{\cal L}(e^{\lambda t}\cos\omega t)={s-\lambda\over(s-\lambda)^2+\omega^2}
+{\cal L}(e^{\lambda t}\cos\omega t)=\frac{s-\lambda}{(s-\lambda)^2+\omega^2}
 \]
   and the result of Exercise~\ref{exer:8.1.6} to find
 ${\cal L}(te^{\lambda t}\cos\omega t)$ and
@@ -1050,28 +1049,28 @@ L}^{-1}\left(\frac{\sqrt3}{s^2+3}\right)\\[10pt]&=&8e^{-5t}+\frac{7}{\sqrt3}\sin
 
 \begin{example}\label{example:8.2.3}\rm Find
 \[
-{\cal L}^{-1}\left({3s+8\over s^2+2s+5}\right).
+{\cal L}^{-1}\left(\frac{3s+8}{s^2+2s+5}\right).
 \]
 \end{example}
 
 \solution
 Completing the square in the denominator yields
 \[
-{3s+8\over s^2+2s+5}={3s+8\over(s+1)^2+4}.
+\frac{3s+8}{s^2+2s+5}=\frac{3s+8}{(s+1)^2+4}.
 \]
 Because of the form of the denominator, we consider
 the transform pairs
 \[
- e^{-t}\cos 2t\leftrightarrow{s+1\over(s+1)^2+4}
+ e^{-t}\cos 2t\leftrightarrow\frac{s+1}{(s+1)^2+4}
 \mbox{\quad and \quad}
  e^{-t}\sin 2t\leftrightarrow\frac{2}{(s+1)^2+4},
 \]
 and write
 \begin{eqnarray*}
-{\cal L}^{-1}\left({3s+8\over(s+1)^2+4}\right)&=&
-{\cal L}^{-1}\left({3s+3\over(s+1)^2+4}\right)+
+{\cal L}^{-1}\left(\frac{3s+8}{(s+1)^2+4}\right)&=&
+{\cal L}^{-1}\left(\frac{3s+3}{(s+1)^2+4}\right)+
 {\cal L}^{-1}\left(\frac{5}{(s+1)^2+4}\right)\\[10pt]&=&
-3{\cal L}^{-1}\left({s+1\over(s+1)^2+4}\right)+
+3{\cal L}^{-1}\left(\frac{s+1}{(s+1)^2+4}\right)+
 \frac{5}{2}{\cal L}^{-1}\left(\frac{2}{(s+1)^2+4}\right)\\[10pt]&=&
 e^{-t}(3\cos 2t+\frac{5}{2}\sin 2t).
 \end{eqnarray*}
@@ -1105,18 +1104,18 @@ The next two examples illustrate this.
 \begin{example}\label{example:8.2.4}\rm Find the inverse Laplace transform
 of
 \begin{equation}\label{eq:8.2.1}
-F(s)={3s+2\over s^2-3s+2}.
+F(s)=\frac{3s+2}{s^2-3s+2}.
 \end{equation}
 \end{example}
 
 \solution ({\sc Method 1})
  Factoring the denominator in  \eqref{eq:8.2.1} yields
 \begin{equation}\label{eq:8.2.2}
-F(s)={3s+2\over(s-1)(s-2)}.
+F(s)=\frac{3s+2}{(s-1)(s-2)}.
 \end{equation}
 The form for the partial fraction expansion is
 \begin{equation}\label{eq:8.2.3}
-{3s+2\over(s-1)(s-2)}=\frac{A}{s-1}+\frac{B}{s-2}.
+\frac{3s+2}{(s-1)(s-2)}=\frac{A}{s-1}+\frac{B}{s-2}.
 \end{equation}
 Multiplying  this by $(s-1)(s-2)$ yields
 \[
@@ -1138,23 +1137,23 @@ to compute $A$ and $B$. We can obtain $A$ by simply ignoring the factor
 $s-1$ in the denominator of  \eqref{eq:8.2.2} and setting $s=1$ elsewhere;
 thus,
 \begin{equation}\label{eq:8.2.4}
-A=\left.{3s+2\over s-2}\right|_{s=1}={3\cdot1+2\over 1-2}=-5.
+A=\left.\frac{3s+2}{s-2}\right|_{s=1}=\frac{3\cdot1+2}{1-2}=-5.
 \end{equation}
 Similarly, we can obtain $B$ by ignoring the factor
 $s-2$ in the denominator of  \eqref{eq:8.2.2} and setting $s=2$ elsewhere;
 thus,
 \begin{equation}\label{eq:8.2.5}
-B=\left.{3s+2\over s-1}\right|_{s=2}={3\cdot2+2\over2-1}=8.
+B=\left.\frac{3s+2}{s-1}\right|_{s=2}=\frac{3\cdot2+2}{2-1}=8.
 \end{equation}
 To justify this, we observe that multiplying  \eqref{eq:8.2.3} by $s-1$
 yields
 \[
-{3s+2\over s-2}=A+(s-1)\frac{B}{s-2},
+\frac{3s+2}{s-2}=A+(s-1)\frac{B}{s-2},
 \]
 and setting $s=1$ leads to
 \eqref{eq:8.2.4}. Similarly, multiplying  \eqref{eq:8.2.3} by $s-2$ yields
 \[
-{3s+2\over s-1}=(s-2)\frac{A}{s-2}+B
+\frac{3s+2}{s-1}=(s-2)\frac{A}{s-2}+B
 \]
 and setting $s=2$ leads to
 \eqref{eq:8.2.5}.  (It isn't necesary to
@@ -1276,7 +1275,7 @@ s+2\right)-8{\cal L}^{-1}\left(1\over(s+2)^2\right)\\[1\jot]
 \begin{example}\label{example:8.2.7}\rm Find the inverse Laplace transform
 of
 \[
-F(s)={s^2-5s+7\over(s+2)^3}.
+F(s)=\frac{s^2-5s+7}{(s+2)^3}.
 \]
 \end{example}
 
@@ -1314,7 +1313,7 @@ F(s)={1-s(5+3s)\over s\left[(s+1)^2+1\right]}.
 \solution
 One  form for the partial fraction expansion of $F$ is
 \begin{equation}\label{eq:8.2.14}
-F(s)=\frac{A}{s}+{Bs+C\over(s+1)^2+1}.
+F(s)=\frac{A}{s}+\frac{Bs+C}{(s+1)^2+1}.
 \end{equation}
 However, we see from the table of Laplace transforms that the inverse
 transform of the second fraction on the right of \eqref{eq:8.2.14} will be
@@ -1324,7 +1323,7 @@ e^{-t}\cos t\quad\mbox{ and }\quad e^{-t}\sin t
 \]
 of
 \[
-{s+1\over(s+1)^2+1}\quad\mbox{ and }\quad \frac{1}{(s+1)^2+1}
+\frac{s+1}{(s+1)^2+1}\quad\mbox{ and }\quad \frac{1}{(s+1)^2+1}
 \]
 respectively. Therefore, instead of \eqref{eq:8.2.14} we write
 \begin{equation}\label{eq:8.2.15}
@@ -1352,7 +1351,7 @@ A=\frac{1}{2},\quad B=-\frac{7}{2},\quad C=-\frac{5}{2}.
 \]
 Hence, from  \eqref{eq:8.2.15},
 \[
-F(s)=\frac{1}{2s}-\frac{7}{2}\,{s+1\over(s+1)^2+1}-
+F(s)=\frac{1}{2s}-\frac{7}{2}\,\frac{s+1}{(s+1)^2+1}-
 \frac{5}{2}\,\frac{1}{(s+1)^2+1}.
 \]
 Therefore
@@ -1367,14 +1366,14 @@ L}^{-1}\left(s+1
 
 \begin{example}\label{example:8.2.9}\rm Find the inverse Laplace transform of
 \begin{equation}\label{eq:8.2.17}
-F(s)={8+3s\over(s^2+1)(s^2+4)}.
+F(s)=\frac{8+3s}{(s^2+1)(s^2+4)}.
 \end{equation}
 \end{example}
 
 \solution
 The form for the partial fraction expansion is
 \[
-F(s)={A+Bs\over s^2+1}+{C+Ds\over s^2+4}.
+F(s)=\frac{A+Bs}{s^2+1}+\frac{C+Ds}{s^2+4}.
 \]
 The coefficients $A$, $B$, $C$ and $D$ can be obtained by finding a common
 denominator and equating the resulting numerator to the numerator in
@@ -1393,8 +1392,7 @@ and then setting $x=s^2$ to obtain
 \]
 Multiplying this by $8+3s$ yields
 \[
-F(s)={8+3s\over(s^2+1)(s^2+4)}=\frac{1}{3}\left({8+3s\over s^2+1}-{8+3s\over
-s^2+4}\right).
+F(s)=\frac{8+3s}{(s^2+1)(s^2+4)}=\frac{1}{3}\left(\frac{8+3s}{s^2+1}-\frac{8+3s}{s^2+4}\right).
 \]
 Therefore
 \[
@@ -1420,14 +1418,14 @@ transform.
 
 \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
 \part{a} $\dst\frac{3}{(s-7)^4}$ &
-\part{b} $\dst{2s-4\over s^2-4s+13}$ &
+\part{b} $\dst\frac{2s-4}{s^2-4s+13}$ &
 \part{c} $\dst\frac{1}{s^2+4s+20}$\\[10pt]
 \part{d} $\dst\frac{2}{s^2+9}$ &
-\part{e} $\dst{s^2-1\over(s^2+1)^2}$ &
+\part{e} $\dst\frac{s^2-1}{(s^2+1)^2}$ &
 \part{f} $\dst\frac{1}{(s-2)^2-4}$\\[10pt]
-\part{g} $\dst{12s-24\over(s^2-4s+85)^2}$ &
+\part{g} $\dst\frac{12s-24}{(s^2-4s+85)^2}$ &
 \part{h} $\dst\frac{2}{(s-3)^2-9}$ &
-\part{i} $\dst{s^2-4s+3\over(s^2-4s+5)^2}$
+\part{i} $\dst\frac{s^2-4s+3}{(s^2-4s+5)^2}$
 \end{tabular}
 
 \item\label{exer:8.2.2}
@@ -1435,18 +1433,18 @@ transform.
   to find the inverse Laplace transform.
 
 \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a}  $\dst{2s+3\over(s-7)^4}$ &
-\part{b}  $\dst{s^2-1\over(s-2)^6}$ &
-\part{c}  $\dst{s+5\over s^2+6s+18}$\\[10pt]
-\part{d}  $\dst{2s+1\over s^2+9}$ &
+\part{a}  $\dst\frac{2s+3}{(s-7)^4}$ &
+\part{b}  $\dst\frac{s^2-1}{(s-2)^6}$ &
+\part{c}  $\dst\frac{s+5}{s^2+6s+18}$\\[10pt]
+\part{d}  $\dst\frac{2s+1}{s^2+9}$ &
 \part{e}  $\dst\frac{s}{s^2+2s+1}$ &
-\part{f}  $\dst{s+1\over s^2-9}$\\[10pt]
-\part{g}  $\dst{s^3+2s^2-s-3\over(s+1)^4}$ &
-\part{h}  $\dst{2s+3\over(s-1)^2+4}$ &
+\part{f}  $\dst\frac{s+1}{s^2-9}$\\[10pt]
+\part{g}  $\dst\frac{s^3+2s^2-s-3}{(s+1)^4}$ &
+\part{h}  $\dst\frac{2s+3}{(s-1)^2+4}$ &
 \part{i}  $\dst\frac{1}{s}-\frac{s}{s^2+1}$\\[10pt]
-\part{j}  $\dst{3s+4\over s^2-1}$ &
-\part{k}  $\dst\frac{3}{s-1}+{4s+1\over s^2+9}$ &
-\part{l}  $\dst\frac{3}{(s+2)^2}-{2s+6\over s^2+4}$
+\part{j}  $\dst\frac{3s+4}{s^2-1}$ &
+\part{k}  $\dst\frac{3}{s-1}+\frac{4s+1}{s^2+9}$ &
+\part{l}  $\dst\frac{3}{(s+2)^2}-\frac{2s+6}{s^2+4}$
 \end{tabular}
 
 \item\label{exer:8.2.3}
@@ -1467,12 +1465,12 @@ $\dst{3+(s-2)(10-2s-s^2)\over(s-2)(s+2)(s-1)(s+3)}$
  Find the inverse Laplace transform.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a}  $\dst{2+3s\over(s^2+1)(s+2)(s+1)}$&
-\part{b}  $\dst{3s^2+2s+1\over(s^2+1)(s^2+2s+2)}$\\[10pt]
-\part{c}  $\dst{3s+2\over(s-2)(s^2+2s+5)}$ &
-\part{d}  $\dst{3s^2+2s+1\over(s-1)^2(s+2)(s+3)}$\\[10pt]
-\part{e}  $\dst{2s^2+s+3\over(s-1)^2(s+2)^2}$ &
-\part{f}  $\dst{3s+2\over(s^2+1)(s-1)^2}$
+\part{a}  $\dst\frac{2+3s}{(s^2+1)(s+2)(s+1)}$&
+\part{b}  $\dst\frac{3s^2+2s+1}{(s^2+1)(s^2+2s+2)}$\\[10pt]
+\part{c}  $\dst\frac{3s+2}{(s-2)(s^2+2s+5)}$ &
+\part{d}  $\dst\frac{3s^2+2s+1}{(s-1)^2(s+2)(s+3)}$\\[10pt]
+\part{e}  $\dst\frac{2s^2+s+3}{(s-1)^2(s+2)^2}$ &
+\part{f}  $\dst\frac{3s+2}{(s^2+1)(s-1)^2}$
 \end{tabular}
 
 \item\label{exer:8.2.5}
@@ -1480,12 +1478,12 @@ $\dst{3+(s-2)(10-2s-s^2)\over(s-2)(s+2)(s-1)(s+3)}$
 inverse Laplace transform.
 
 \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a} $\dst{3s+2\over(s^2+4)(s^2+9)}$ &
-\part{b} $\dst{-4s+1\over(s^2+1)(s^2+16)}$ &
-\part{c} $\dst{5s+3\over(s^2+1)(s^2+4)}$\\[10pt]
-\part{d} $\dst{-s+1\over(4s^2+1)(s^2+1)}$ &
-\part{e} $\dst{17s-34\over(s^2+16)(16s^2+1)}$ &
-\part{f} $\dst{2s-1\over(4s^2+1)(9s^2+1)}$
+\part{a} $\dst\frac{3s+2}{(s^2+4)(s^2+9)}$ &
+\part{b} $\dst\frac{-4s+1}{(s^2+1)(s^2+16)}$ &
+\part{c} $\dst\frac{5s+3}{(s^2+1)(s^2+4)}$\\[10pt]
+\part{d} $\dst\frac{-s+1}{(4s^2+1)(s^2+1)}$ &
+\part{e} $\dst\frac{17s-34}{(s^2+16)(16s^2+1)}$ &
+\part{f} $\dst\frac{2s-1}{(4s^2+1)(9s^2+1)}$
 \end{tabular}
 
 
@@ -1494,11 +1492,11 @@ inverse Laplace transform.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \part{a} $\dst{17 s-15\over(s^2-2s+5)(s^2+2s+10)}$ &
-\part{b} $\dst{8s+56\over(s^2-6s+13)(s^2+2s+5)}$\\[10pt]
-\part{c} $\dst{s+9\over(s^2+4s+5)(s^2-4s+13)}$ &
-\part{d} $\dst{3s-2\over(s^2-4s+5)(s^2-6s+13)}$\\[10pt]
-\part{e} $\dst{3s-1\over(s^2-2s+2)(s^2+2s+5)}$ &
-\part{f} $\dst{20s+40\over(4s^2-4s+5)(4s^2+4s+5)}$
+\part{b} $\dst\frac{8s+56}{(s^2-6s+13)(s^2+2s+5)}$\\[10pt]
+\part{c} $\dst\frac{s+9}{(s^2+4s+5)(s^2-4s+13)}$ &
+\part{d} $\dst\frac{3s-2}{(s^2-4s+5)(s^2-6s+13)}$\\[10pt]
+\part{e} $\dst\frac{3s-1}{(s^2-2s+2)(s^2+2s+5)}$ &
+\part{f} $\dst\frac{20s+40}{(4s^2-4s+5)(4s^2+4s+5)}$
 \end{tabular}
 
 \item\label{exer:8.2.7}
@@ -1507,22 +1505,22 @@ Find the inverse Laplace transform.
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
  \part{a} $\dst\frac{1}{s(s^2+1)}$ &
 \part{b} $\dst\frac{1}{(s-1)(s^2-2s+17)}$\\[10pt]
-\part{c} $\dst{3s+2\over(s-2)(s^2+2s+10)}$ &
-\part{d} $\dst{34-17s\over(2s-1)(s^2-2s+5)}$\\[10pt]
-\part{e} $\dst{s+2\over(s-3)(s^2+2s+5)}$ &
-\part{f} $\dst{2s-2\over(s-2)(s^2+2s+10)}$
+\part{c} $\dst\frac{3s+2}{(s-2)(s^2+2s+10)}$ &
+\part{d} $\dst\frac{34-17s}{(2s-1)(s^2-2s+5)}$\\[10pt]
+\part{e} $\dst\frac{s+2}{(s-3)(s^2+2s+5)}$ &
+\part{f} $\dst\frac{2s-2}{(s-2)(s^2+2s+10)}$
 \end{tabular}
 
 \item\label{exer:8.2.8}
  Find the inverse Laplace transform.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $\dst{2s+1\over(s^2+1)(s-1)(s-3)}$ &
-\part{b} $\dst{s+2\over(s^2+2s+2)(s^2-1)}$\\[10pt]
-\part{c} $\dst{2s-1\over(s^2-2s+2)(s+1)(s-2)}$ &
-\part{d} $\dst{s-6\over(s^2-1)(s^2+4)}$\\[10pt]
-\part{e} $\dst{2s-3\over s(s-2)(s^2-2s+5)}$ &
-\part{f} $\dst{5s-15\over(s^2-4s+13)(s-2)(s-1)}$\\[10pt]
+\part{a} $\dst\frac{2s+1}{(s^2+1)(s-1)(s-3)}$ &
+\part{b} $\dst\frac{s+2}{(s^2+2s+2)(s^2-1)}$\\[10pt]
+\part{c} $\dst\frac{2s-1}{(s^2-2s+2)(s+1)(s-2)}$ &
+\part{d} $\dst\frac{s-6}{(s^2-1)(s^2+4)}$\\[10pt]
+\part{e} $\dst\frac{2s-3}{s(s-2)(s^2-2s+5)}$ &
+\part{f} $\dst\frac{5s-15}{(s^2-4s+13)(s-2)(s-1)}$\\[10pt]
 \end{tabular}
 
 \item\label{exer:8.2.9}
@@ -2331,9 +2329,8 @@ we see from \eqref{eq:8.4.11} that
 \begin{eqnarray*}
 {\cal L}(f)&=&{\cal L}(\sin t)-e^{-\pi s/2}{\cal L}(\sin t+4\cos t)
 -e^{-\pi s}{\cal L}(2\cos t+3\sin t)\\[1\jot]
-&=&\frac{1}{s^2+1}-e^{-\frac{\pi}{2}s}\left({1+4s\over
-s^2+1}\right)
--e^{-\pi s}\left({3+2s\over s^2+1}\right).\bbox
+&=&\frac{1}{s^2+1}-e^{-\frac{\pi}{2}s}\left(\frac{1+4s}{s^2+1}\right)
+-e^{-\pi s}\left(\frac{3+2s}{s^2+1}\right).\bbox
 \end{eqnarray*}
 
 \boxit{The Second Shifting Theorem}
@@ -2417,8 +2414,8 @@ h(t)=\left\{\begin{array}{cl}
 \begin{example}\label{example:8.4.8}\rm
  Find the inverse transform of
 \[
-H(s)=\frac{2s}{s^2+4}-e^{-\frac{\pi}{2}s} {3s+1\over s^2+9}+e^{-\pi
-s}{s+1\over s^2+6s+10}.
+H(s)=\frac{2s}{s^2+4}-e^{-\frac{\pi}{2}s} \frac{3s+1}{s^2+9}+e^{-\pi
+s}\frac{s+1}{s^2+6s+10}.
 \]
 \end{example}
 
@@ -2428,7 +2425,7 @@ G_0(s)=\frac{2s}{s^2+4},\quad G_1(s)=-{(3s+1)\over s^2+9},
 \]
 and
 \[
-G_2(s)={s+1\over s^2+6s+10}={(s+3)-2\over (s+3)^2+1}.
+G_2(s)=\frac{s+1}{s^2+6s+10}={(s+3)-2\over (s+3)^2+1}.
 \]
 Then
 \[
@@ -2591,10 +2588,10 @@ Where indicated by \CGex, graph the inverse transform.}
 
 \item\label{exer:8.4.24} $\dst{H(s)={e^{-\pi s} (1-2s)\over s^2+4s+5}}$
 
-\item\label{exer:8.4.25} \CGex $\dst{H(s)=\left(\frac{1}{s}-\frac{s}{s^2+1}\right)+e^{-\frac{\pi}{2}s}\left({3s-1\over s^2+1}\right)}$
+\item\label{exer:8.4.25} \CGex $\dst{H(s)=\left(\frac{1}{s}-\frac{s}{s^2+1}\right)+e^{-\frac{\pi}{2}s}\left(\frac{3s-1}{s^2+1}\right)}$
 
 \item\label{exer:8.4.26} $\dst{H(s)=
-e^{-2s}\left[{3(s-3)\over(s+1)(s-2)}-{s+1\over(s-1)(s-2)}\right]}$
+e^{-2s}\left[{3(s-3)\over(s+1)(s-2)}-\frac{s+1}{(s-1)(s-2)}\right]}$
 
 \item\label{exer:8.4.27} $\dst{H(s)=\frac{1}{s}+\frac{1}{s^2}+e^{-s}\left(\frac{3}{s}+\frac{2}{s^2}\right) +e^{-3s}\left(\frac{4}{s}+\frac{3}{s^2}\right)}$
 
@@ -2879,7 +2876,7 @@ Therefore, transforming  \eqref{eq:8.5.5} yields
 \]
  so
 \begin{equation}\label{eq:8.5.6}
-Y(s)=(1-2e^{-{\pi s/ 2}}) G(s)+{2s-1\over s^2+1},
+Y(s)=(1-2e^{-{\pi s/ 2}}) G(s)+\frac{2s-1}{s^2+1},
 \end{equation}
 with
 \[
@@ -2887,7 +2884,7 @@ G(s)=\frac{1}{s(s^2+1)}.
 \]
 The  form for the partial fraction expansion of $G$ is
 \begin{equation}\label{eq:8.5.7}
-\frac{1}{s(s^2+1)}=\frac{A}{s}+{Bs+C\over s^2+1}.
+\frac{1}{s(s^2+1)}=\frac{A}{s}+\frac{Bs+C}{s^2+1}.
 \end{equation}
 Multiplying through by $s(s^2+1)$ yields
 \[
@@ -2970,7 +2967,7 @@ Since transforming  \eqref{eq:8.5.8} yields
 \]
 we see that
 \begin{equation}\label{eq:8.5.9}
-Y(s)=(1-e^{-s})H(s)+{2-s\over s^2-1},
+Y(s)=(1-e^{-s})H(s)+\frac{2-s}{s^2-1},
 \end{equation}
 where
 \[
@@ -2982,7 +2979,7 @@ h(t)=\sinh t-t.
 \end{equation}
 Since
 \[
-{\cal L}^{-1}\left({2-s\over s^2-1}\right)=2\sinh t-\cosh t,
+{\cal L}^{-1}\left(\frac{2-s}{s^2-1}\right)=2\sinh t-\cosh t,
 \]
 we conclude from  \eqref{eq:8.5.9},  \eqref{eq:8.5.10}, and
 Theorem~\ref{thmtype:8.4.1} that
@@ -3543,12 +3540,12 @@ y''-2y'+y=f(t),\quad  y(0)=k_0,\quad y'(0)=k_1.
 \]
 Therefore
 \begin{eqnarray*}
-Y(s)&=&\frac{1}{(s-1)^2}F(s)+{k_1+k_0s-2k_0\over(s-1)^2}\\[2\jot]
-&=&\frac{1}{(s-1)^2}F(s)+\frac{k_0}{s-1}+{k_1-k_0\over(s-1)^2}.
+Y(s)&=&\frac{1}{(s-1)^2}F(s)+\frac{k_1+k_0s-2k_0}{(s-1)^2}\\[2\jot]
+&=&\frac{1}{(s-1)^2}F(s)+\frac{k_0}{s-1}+\frac{k_1-k_0}{(s-1)^2}.
 \end{eqnarray*}
 From the table of Laplace transforms,
 \[
-{\cal L}^{-1}\left(\frac{k_0}{s-1}+{k_1-k_0\over(s-1)^2}\right)
+{\cal L}^{-1}\left(\frac{k_0}{s-1}+\frac{k_1-k_0}{(s-1)^2}\right)
 =e^t\left(k_0+(k_1-k_0)t\right).
 \]
 Since
@@ -3581,7 +3578,7 @@ y''+4y=f(t),\quad y(0)=k_0,\quad y'(0)=k_1.
 \]
 Therefore
 \[
-Y(s) =\frac{1}{(s^2+4)}F(s)+{k_1+k_0s\over s^2+4}.
+Y(s) =\frac{1}{(s^2+4)}F(s)+\frac{k_1+k_0s}{s^2+4}.
 \]
 From the table of Laplace transforms,
 \[
@@ -3617,7 +3614,7 @@ y''+2y'+2y=f(t),\quad y(0)=k_0,\quad y'(0)=k_1.
 \]
 Therefore
 \begin{eqnarray*}
-Y(s)&=&\frac{1}{(s+1)^2+1}F(s)+{k_1+k_0s+2k_0\over(s+1)^2+1}\\[2\jot]
+Y(s)&=&\frac{1}{(s+1)^2+1}F(s)+\frac{k_1+k_0s+2k_0}{(s+1)^2+1}\\[2\jot]
 &=&\frac{1}{(s+1)^2+1}F(s)+{(k_1+k_0)+k_0(s+1)\over(s+1)^2+1}.
 \end{eqnarray*}
 From the table of Laplace transforms,
@@ -3820,7 +3817,7 @@ p(s)Y_1(s)=as+b\quad\mbox{and}\quad p(s)Y_2(s)=a.
 \]
 Therefore
 \[
-Y_1(s)={as+b\over p(s)}
+Y_1(s)=\frac{as+b}{p(s)}
 \]
 and
 \begin{equation}\label{eq:8.6.21}
@@ -3946,7 +3943,7 @@ complex conjugates, respectively.
 
 \item
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{i}  $\dst{s-1\over s^2(s^2-2s+2)}$&
+\part{i}  $\dst\frac{s-1}{s^2(s^2-2s+2)}$&
 \part{j}  $\dst{s(s+3)\over(s^2+4)(s^2+6s+10)}$
 \end{tabular}
 

@@ -1234,7 +1234,7 @@ u = {(t+100)^2\over 2} -4000.
 \]
  Hence,
  \[
-Q = \frac{u}{t+200}= {t+100\over 2}-\frac{4000}{t+100}.
+Q = \frac{u}{t+200}= \frac{t+100}{2}-\frac{4000}{t+100}.
 \]
 Now let $K(t)$ be the concentration of salt at
 time $t$.  Then
@@ -1886,12 +1886,12 @@ Integrating this yields
 \]
 Therefore
 \[
-\left|{v-7\over v+7}\right|=e^ke^{14t/5}.
+\left|\frac{v-7}{v+7}\right|=e^ke^{14t/5}.
 \]
 Since  Theorem~\ref{thmtype:2.3.1}  implies  that  $(v-7)/(v+7)$   can't
 change sign (why?), we can rewrite the last equation as
  \begin{equation} \label{eq:4.3.13}
- {v-7\over v+7}=ce^{14t/5},
+ \frac{v-7}{v+7}=ce^{14t/5},
 \end{equation}
 which is an implicit solution of (\ref{eq:4.3.10}).
 Solving this for $v$ yields
@@ -1901,7 +1901,7 @@ v=-7{c+e^{-14t/5}\over c-e^{-14t/5}}.
  Since $v(0)=v_0$, it
  (\ref{eq:4.3.13}) implies that
 \[
-c={v_0-7\over v_0+7}.
+c=\frac{v_0-7}{v_0+7}.
 \]
  Substituting this into (\ref{eq:4.3.14}) and simplifying yields
 \[
@@ -2351,14 +2351,14 @@ ft/s$^2$.  Find the escape velocity in miles/s.
 \item %(a)
 Show that Eqn.~(\ref{eq:4.3.23})  can be rewritten as
 \[
-v^2={h-y\over y+R} v^2_e+v_0^2.
+v^2=\frac{h-y}{y+R} v^2_e+v_0^2.
 \]
 \item %(b)
 Show that if $v_0=\rho v_e$ with $ 0\le \rho < 1$, then
 the maximum altitude $y_m$ attained by the space
 vehicle is
 \[
-y_m={h+R\rho^2\over 1-\rho^2}.
+y_m=\frac{h+R\rho^2}{1-\rho^2}.
 \]
 \item %(c)
 By requiring that $v(y_m)=0$, use Eqn.~(\ref{eq:4.3.22}) to
@@ -2636,7 +2636,7 @@ In this case we can find $y$ explicitly as a function of $t$. (Don't
 expect this to happen in more complicated problems!) If $v>0$ on an
 interval $I$,  \eqref{eq:4.4.10} implies that
 \[
-\frac{dy}{dt}=v=\sqrt{\rho-ky^2\over m}
+\frac{dy}{dt}=v=\sqrt\frac{\rho-ky^2}{m}
 \]
 on $I$. This is equivalent to
 \begin{equation} \label{eq:4.4.12}
@@ -4058,15 +4058,15 @@ and differentiating this implicitly with respect to $x$ yields
 \end{equation}
  From \eqref{eq:4.5.20},
 \[
-c={x^2+y^2\over2x},
+c=\frac{x^2+y^2}{2x},
 \]
 so
 \[
-x-c=x-{x^2+y^2\over2x}={x^2-y^2\over2x}.
+x-c=x-\frac{x^2+y^2}{2x}=\frac{x^2-y^2}{2x}.
 \]
 Substituting this into \eqref{eq:4.5.21} and solving for $y'$ yields
 \begin{equation} \label{eq:4.5.22}
-y'={y^2-x^2\over2xy}.
+y'=\frac{y^2-x^2}{2xy}.
 \end{equation}
 The curves defined by \eqref{eq:4.5.19} are integral curves of
 \eqref{eq:4.5.22}, and the integral curves of
@@ -4085,7 +4085,7 @@ u'x=\frac{2u}{1-u^2}-u={u(u^2+1)\over1-u^2},
 \]
 Separating variables yields
 \[
-{1-u^2\over u(u^2+1)}u'=\frac{1}{x},
+\frac{1-u^2}{u(u^2+1)}u'=\frac{1}{x},
 \]
 or, equivalently,
 \[
@@ -4231,7 +4231,7 @@ x^2+y^2=1
 \]
 at a point $(x_0,y_0)$  on the circle is
 \[
-y=\dst{1-x_0x\over y_0}\mbox{\quad if \quad} x_0\ne\pm1.
+y=\dst\frac{1-x_0x}{y_0}\mbox{\quad if \quad} x_0\ne\pm1.
 \eqno{\rm (B)}
 \]
 \item % (b)
