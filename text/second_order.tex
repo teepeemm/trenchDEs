@@ -763,7 +763,7 @@ subinterval, $y_1\equiv0$ on  $(a,b)$, so $y_1$ and $y_2$
 are linearly independent, and we're finished with this part of the
 proof.) Then $y_2/y_1$ is defined on $I$, and
 \begin{equation}\label{eq:5.1.33}
-\left(\frac{y_2}{y_1}\right)'={y_1y_2'-y_1'y_2\over y_1^2}=\frac{W}{y_1^2}.
+\left(\frac{y_2}{y_1}\right)'=\frac{y_1y_2'-y_1'y_2}{y_1^2}=\frac{W}{y_1^2}.
 \end{equation}
 However, if $W(x_0)=0$,
  Theorem~\ref{thmtype:5.1.4} implies that $W\equiv0$ on  $(a,b)$.
@@ -793,7 +793,7 @@ $y_2$ isn't  a constant multiple of $y_1$ on  $(a,b)$.
 A similar argument shows that $y_1$ isn't  a constant multiple of
 $y_2$ on  $(a,b)$, since
 \[
-\left(\frac{y_1}{y_2}\right)'={y_1'y_2-y_1y_2'\over y_2^2}=-\frac{W}{y_2^2}
+\left(\frac{y_1}{y_2}\right)'=\frac{y_1'y_2-y_1y_2'}{y_2^2}=-\frac{W}{y_2^2}
 \]
 on any subinterval of  $(a,b)$ where $y_2$ has no zeros. \bbox
 
@@ -4608,7 +4608,7 @@ Therefore $y=ue^x$ is a solution of \eqref{eq:5.6.6} if and only if
 \]
 which is a first order equation in $u'$. We rewrite it as
 \begin{equation} \label{eq:5.6.8}
-u''-{u'\over x}=xe^{-x}.
+u''-\frac{u'}{x}=xe^{-x}.
 \end{equation}
 To focus on how we apply variation of parameters to this equation, we
 temporarily write $z=u'$, so that \eqref{eq:5.6.8} becomes
@@ -4713,7 +4713,7 @@ for \eqref{eq:5.6.14}. By variation of parameters, every solution of
 \eqref{eq:5.6.14} is of the form
 \[
 z=\frac{v}{x^3}\mbox{\quad where \quad}
-{v'\over x^3}=\frac{1}{x}+\frac{1}{x^3}, \mbox{\quad so \quad}
+\frac{v'}{x^3}=\frac{1}{x}+\frac{1}{x^3}, \mbox{\quad so \quad}
  v'=x^2+1 \mbox{\quad
 and \quad} v=\frac{x^3}{3}+x+C_1.
 \]
@@ -4783,7 +4783,7 @@ x^3u''-x^2u'=0.
 \]
 Separating the variables $u'$ and $x$ yields
 \[
-{u''\over u'}=\frac{1}{x},
+\frac{u''}{u'}=\frac{1}{x},
 \]
 so
 \[
@@ -4975,8 +4975,7 @@ Show that $y$ is a solution of (A) if and only if $y={z'/z}$, where
 
 \item %(b)
  Show that the general solution of (A) is
-\[ y={c_1z'_1+c_2z'_2\over
-c_1z_1+c_2z_2},
+\[ y=\frac{c_1z'_1+c_2z'_2}{c_1z_1+c_2z_2},
 \eqno{\rm (C)}
 \]
  where $\{z_1,z_2\}$ is a fundamental
@@ -5062,7 +5061,7 @@ z'+r(x)q(x)z=0.
 \item %(b)
  Show that the general solution of (A) is
 \[
- y={c_1z'_1+c_2z'_2\over r(c_1z_1+c_2z_2)},
+ y=\frac{c_1z'_1+c_2z'_2}{r(c_1z_1+c_2z_2)},
 \]
 where $\{z_1,z_2\}$ is a fundamental set of solutions of
 (B) and $c_1$ and $c_2$ are arbitrary constants.
@@ -5429,9 +5428,8 @@ y_p=\frac{u_1}{x-1}+\frac{u_2}{x+1},
 \]
 where
 \begin{eqnarray}
-\phantom{-}{u_1'\over\phantom{(}x-1\phantom{)^2}}+{u_2'\over
-\phantom{(}x+1\phantom{)^2}}&=&0\label{eq:5.7.22}\\
--{u_1'\over(x-1)^2}-{u_2'\over(x+1)^2}&=&\frac{2}{(x+1)(x^2-1)}.\nonumber
+\phantom{-}\frac{u_1'}{\phantom{(}x-1\phantom{)^2}}+\frac{u_2'}{\phantom{(}x+1\phantom{)^2}}&=&0\label{eq:5.7.22}\\
+-\frac{u_1'}{(x-1)^2}-\frac{u_2'}{(x+1)^2}&=&\frac{2}{(x+1)(x^2-1)}.\nonumber
 \end{eqnarray}
 Multiplying the first equation by $1/(x-1)$ and adding the result to
 the second equation yields
