@@ -736,7 +736,7 @@ years $(1 \le j \le 52t)$.  Find the present value of each
 $\$50$ deposit assuming $6$\% interest compounded
 continuously, and use the formula
 \[
-1+x+x^2+\cdots+x^n={1-x^{n+1}\over 1-x}\
+1+x+x^2+\cdots+x^n=\frac{1-x^{n+1}}{1-x}\
 (x \ne 1)
 \]
 to find their total value.}
@@ -744,7 +744,7 @@ to find their total value.}
 \item % (b)
  Let
 \[
-p(t)={Q(t)-P(t)\over P(t)}
+p(t)=\frac{Q(t)-P(t)}{P(t)}
 \]
 be the relative error after $t$ years.  Find
 \[
@@ -997,7 +997,7 @@ e^{-\frac{\tau}{2} \ln \frac{8}{7}} =\frac{92}{80} =
 \]
 Taking logarithms and solving for $\tau$ yields
 \[
-\tau = -{2 \ln \frac{23}{20}\over \ln \frac{8}{7}} \approx-2.09\
+\tau = -\frac{2 \ln \frac{23}{20}}{\ln \frac{8}{7}} \approx-2.09\
 \mbox{min}.
 \]
 Therefore the object was placed outside
@@ -1088,8 +1088,8 @@ conclusion by arguing that
 \begin{array}{lcl}
 \mbox{rate out} & = & (\mbox{concentration})\times(\mbox{rate of
 flow out})\\[6pt] \mbox{}&=&(\mbox{lb/gal})\times(\mbox{gal/min})\\[10pt]
-&=&\dst{Q(t)\over600}\times
-4=\dst{Q(t)\over150}.
+&=&\dst\frac{Q(t)}{600}\times
+4=\dst\frac{Q(t)}{150}.
 \end{array}
 \]
  We can now
@@ -1191,7 +1191,7 @@ We're removing this same fraction of the salt per
 minute.  Therefore, since there are $Q(t)$ grams of salt in
 the tank at time $t$,
 \begin{equation} \label{eq:4.2.9}
-\mbox{rate out} = {Q(t)\over t+100}.
+\mbox{rate out} = \frac{Q(t)}{t+100}.
 \end{equation}
 Alternatively, we can arrive at this conclusion by arguing that
 \[
@@ -1199,8 +1199,8 @@ Alternatively, we can arrive at this conclusion by arguing that
 \mbox{rate out} & = & (\mbox{concentration})\times(\mbox{rate of
 flow out})
 =(\mbox{g/liter})\times(\mbox{liters/min})\\[10pt]
-&=&\dst{Q(t)\over2t+200}\times
-2=\dst{Q(t)\over t+100}.
+&=&\dst\frac{Q(t)}{2t+200}\times
+2=\dst\frac{Q(t)}{t+100}.
 \end{array}
 \]
  Substituting \eqref{eq:4.2.8} and \eqref{eq:4.2.9} into \eqref{eq:4.2.7}
@@ -1213,24 +1213,24 @@ By separation of variables, $1/(t+100)$ is a solution of the
 complementary equation, so the solutions of \eqref{eq:4.2.10}
 are of the form
 \[
-Q=\frac{u}{t+100},\mbox{\quad where \quad}{u'\over t+100}=1,\mbox{\quad
+Q=\frac{u}{t+100},\mbox{\quad where \quad}\frac{u'}{t+100}=1,\mbox{\quad
 so \quad} u'=t+100.
 \]
 Hence,
 \begin{equation} \label{eq:4.2.11}
-u = {(t+100)^2\over 2}+c.
+u = \frac{(t+100)^2}{2}+c.
 \end{equation}
 Since $Q(0)=10$  and $u=(t+100)Q$, \eqref{eq:4.2.11} implies that
 \[
-(100)(10) = {(100)^2\over 2}+c,
+(100)(10) = \frac{(100)^2}{2}+c,
 \]
 so
 \[
-c=100(10)-{(100)^2\over 2} =-4000
+c=100(10)-\frac{(100)^2}{2} =-4000
 \]
 and therefore
 \[
-u = {(t+100)^2\over 2} -4000.
+u = \frac{(t+100)^2}{2} -4000.
 \]
  Hence,
  \[
@@ -1546,7 +1546,7 @@ is always uniformly distributed throughout the mixture. Assume instead
 that the distribution approaches uniformity as $t\to\infty$.
 In this case the differential equation for $Q$ is  of the form
 \[
-Q'+{a(t)\over150}Q=2
+Q'+\frac{a(t)}{150}Q=2
 \]
 where  $\lim_{t\to\infty}a(t)=1$.
 \begin{alist}
@@ -1571,7 +1571,7 @@ throughout the mixture. Assume instead that the distribution
 approaches uniformity as $t\to\infty$. In this case the differential
 equation for $Q$ is of the form
 \[
-Q'+{a(t)\over t+100}Q=1
+Q'+\frac{a(t)}{t+100}Q=1
 \]
 where  $\lim_{t\to\infty}a(t)=1$.
 \begin{alist}
@@ -1896,7 +1896,7 @@ change sign (why?), we can rewrite the last equation as
 which is an implicit solution of (\ref{eq:4.3.10}).
 Solving this for $v$ yields
 \begin{equation} \label{eq:4.3.14}
-v=-7{c+e^{-14t/5}\over c-e^{-14t/5}}.
+v=-7\frac{c+e^{-14t/5}}{c-e^{-14t/5}}.
 \end{equation}
  Since $v(0)=v_0$, it
  (\ref{eq:4.3.13}) implies that
@@ -1905,8 +1905,7 @@ c=\frac{v_0-7}{v_0+7}.
 \]
  Substituting this into (\ref{eq:4.3.14}) and simplifying yields
 \[
-v=-7{v_0(1+e^{-14t/5})-7(1-e^{-14t/5})\over
-v_0(1-e^{-14t/5})-7(1+e^{-14t/5}}.
+v=-7\frac{v_0(1+e^{-14t/5})-7(1-e^{-14t/5})}{v_0(1-e^{-14t/5})-7(1+e^{-14t/5}}.
 \]
 Since $v_0\le0$, $v$ is defined and negative for all
 $t>0$. The terminal velocity is
@@ -1986,7 +1985,7 @@ with $A=\tan^{-1}(v_0/7)$ and $B=7t/5$, and noting that
 $\tan(\tan^{-1}\theta)=\theta$,
 we can simplify (\ref{eq:4.3.17}) to
 \[
-v=7{v_0-7\tan(7t/5)\over7+v_0\tan(7t/5)}.
+v=7\frac{v_0-7\tan(7t/5)}{7+v_0\tan(7t/5)}.
 \]
 
  Since $v(T)=0$ and $\tan^{-1}(0)=0$, (\ref{eq:4.3.16}) implies that
@@ -2364,7 +2363,7 @@ y_m=\frac{h+R\rho^2}{1-\rho^2}.
 By requiring that $v(y_m)=0$, use Eqn.~(\ref{eq:4.3.22}) to
 deduce that if $v_0 < v_e$ then
 \[
-|v|=v_e\left[{(1-\rho^2)(y_m-y)\over y+R}\right]^{1/2},
+|v|=v_e\left[\frac{(1-\rho^2)(y_m-y)}{y+R}\right]^{1/2},
 \]
 where $y_m$ and $\rho$ are as defined in \part{b} and
 $y \ge h$.
@@ -2646,7 +2645,7 @@ on $I$. This is equivalent to
 \end{equation}
 Since
 \[
-\int{\sqrt k\,dy\over\sqrt{\rho-ky^2}}=\sin^{-1}\left(\sqrt\frac{k}{\rho
+\int\frac{\sqrt k\,dy}{\sqrt{\rho-ky^2}}=\sin^{-1}\left(\sqrt\frac{k}{\rho
 }y\right)+c=\sin^{-1}\left(\frac{y}{R}\right)+c
 \]
 (see \eqref{eq:4.4.11}), \eqref{eq:4.4.12} implies that that there's a
@@ -3026,7 +3025,7 @@ hold. (For example, energy expended in overcoming friction is lost.)
 However, we can study the qualitative behavior of its solutions by
 rewriting it as
 \begin{equation} \label{eq:4.4.25}
-\frac{dv}{dy}=-q(y,v)-{p(y)\over v}
+\frac{dv}{dy}=-q(y,v)-\frac{p(y)}{v}
 \end{equation}
 and considering the direction fields for this equation. In the
 following examples we'll also be showing computer generated
@@ -3053,7 +3052,7 @@ y''+cy'+p(y)=0
 \end{equation}
 and
 \[
-\frac{dv}{dy}=-c-{p(y)\over v}.
+\frac{dv}{dy}=-c-\frac{p(y)}{v}.
 \]
 (We'll consider more general equations in the exercises.) The constant
 $c$ is called the \emph{\color{blue}damping constant}. In situations where
@@ -3609,7 +3608,7 @@ y'=2cx.
  Therefore $c=y'/2x$, and substituting this into
 \eqref{eq:4.5.8} yields
 \[
-y={xy'\over2}
+y=\frac{xy'}{2}
 \]
  as a differential equation for the family of
 curves defined by \eqref{eq:4.5.8}.  The graph of any function of
@@ -3858,7 +3857,7 @@ y+y'(x^2-x)=0.
 \]
 Therefor
 \[
-{y'\over y}=-\frac{1}{x^2-x}=-\frac{1}{x(x-1)}=\frac{1}{x}-\frac{1}{x-1},
+\frac{y'}{y}=-\frac{1}{x^2-x}=-\frac{1}{x(x-1)}=\frac{1}{x}-\frac{1}{x-1},
 \]
 so
 \[
@@ -4077,11 +4076,11 @@ are orthogonal trajectories of the family \eqref{eq:4.5.19}. This is a
 homogeneous nonlinear equation, which we studied in
 Section~2.4. Substituting $y=ux$ yields
 \[
-u'x+u={2x(ux)\over x^2-(ux)^2}=\frac{2u}{1-u^2},
+u'x+u=\frac{2x(ux)}{x^2-(ux)^2}=\frac{2u}{1-u^2},
 \]
 so
 \[
-u'x=\frac{2u}{1-u^2}-u={u(u^2+1)\over1-u^2},
+u'x=\frac{2u}{1-u^2}-u=\frac{u(u^2+1)}{1-u^2},
 \]
 Separating variables yields
 \[
@@ -4121,8 +4120,8 @@ x^2+(y-h)^2=h^2,
 \]
 where
 \[
-h=\left\{\begin{array}{rl} \dst{e^{-k}\over2}&\mbox{ if } y\ge
-0,\\[\jot]-\dst{e^{-k}\over2}&\mbox{ if } y\le0. \end{array}\right.
+h=\left\{\begin{array}{rl} \dst\frac{e^{-k}}{2}&\mbox{ if } y\ge
+0,\\[\jot]-\dst\frac{e^{-k}}{2}&\mbox{ if } y\le0. \end{array}\right.
 \]
 Thus, the orthogonal trajectories are circles centered on the $y$ axis
 and tangent to the $x$ axis (Figure~\ref{figure:4.5.13}(b)). The circles
@@ -4245,13 +4244,13 @@ circle (A) and $(x,y)$ is a point on the tangent line then
 Show that the segment of the tangent line (B) on which $(x-x_0)/y_0>0$
 is an integral curve of the differential equation
 \[
-y'={xy-\sqrt{x^2+y^2-1}\over x^2-1},
+y'=\frac{xy-\sqrt{x^2+y^2-1}}{x^2-1},
 \eqno{\rm (D)}
 \]
 while the segment on which $(x-x_0)/y_0<0$ is an integral curve of the
 differential equation
 \[
-y'={xy+\sqrt{x^2+y^2-1}\over x^2-1}.
+y'=\frac{xy+\sqrt{x^2+y^2-1}}{x^2-1}.
 \eqno{\rm (E)}
 \]
 
@@ -4295,13 +4294,13 @@ line then
 Show that the segment of the tangent line defined in \part{a} on which
 $x>x_0$ is an integral curve of the differential equation
 \[
-y'={y+\sqrt{y^2-x}\over2x},
+y'=\frac{y+\sqrt{y^2-x}}{2x},
 \eqno{\rm (D)}
 \]
 while the segment on which $x<x_0$ is an integral curve of the
 differential equation
 \[
-y'={y-\sqrt{y^2-x}\over2x},
+y'=\frac{y-\sqrt{y^2-x}}{2x},
 \eqno{\rm (E)}
 \]
 
@@ -4410,8 +4409,7 @@ intersects $C$ at the angle $\alpha$. Use the identity
 \]
 to show that if $C$ and $C_1$ are intersecting integral curves of
 \[
-y'=f(x,y)  \mbox{\quad and \quad} y'={f(x,y)+\tan\alpha\over
-1-f(x,y)\tan\alpha} \quad\left( \alpha \ne \frac{\pi}{2}\right),
+y'=f(x,y)  \mbox{\quad and \quad} y'=\frac{f(x,y)+\tan\alpha}{1-f(x,y)\tan\alpha} \quad\left( \alpha \ne \frac{\pi}{2}\right),
 \]
 respectively, then $C_1$ intersects $C$ at the angle $\alpha$.
 

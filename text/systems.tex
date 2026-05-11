@@ -238,14 +238,14 @@ Earth's gravitational force ${\bf F}={\bf F}(x,y,z)$ on the object is
 inversely proportional to the square of the distance of the object
 from Earth's center, and directed toward the center;   thus,
 \begin{equation} \label{eq:10.1.13}
-{\bf F}=\frac{K}{\|{\bf X}\|^2}\left(-{{\bf X}
-\over\|{\bf X}\|}\right)=-K{x\,{\bf
-i}+y\,{\bf j}+z\,{\bf k}\over\mbox{}\left(x^2+y^2+z^2\right)^{3/2}},
+{\bf F}=\frac{K}{\|{\bf X}\|^2}\left(-\frac{{\bf X}
+}{\|{\bf X}\|}\right)=-K\frac{x\,{\bf
+i}+y\,{\bf j}+z\,{\bf k}}{\mbox{}\left(x^2+y^2+z^2\right)^{3/2}},
 \end{equation}
 where $K$ is a constant.  To determine $K$,  we observe that the magnitude
 of ${\bf F}$  is
 \[
-\|{\bf F}\|=K{\|{\bf X}\|\over\|{\bf X}\|^3}=\frac{K}{\|{\bf X}\|^2}
+\|{\bf F}\|=K\frac{\|{\bf X}\|}{\|{\bf X}\|^3}=\frac{K}{\|{\bf X}\|^2}
 =\frac{K}{(x^2+y^2+z^2)}.
 \]
 Let $R$  be Earth's radius.
@@ -256,16 +256,16 @@ mg = \frac{K}{R^2},\quad\mbox{ so }\quad K=mgR^2.
 \]
 Therefore we can rewrite \eqref{eq:10.1.13} as
 \[
-{\bf F}=-mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf
-k}\over\mbox{}\left(x^2+y^2+z^2\right)^{3/2}}.
+{\bf F}=-mgR^2\frac{x\,{\bf i}+y\,{\bf j}+z\,{\bf
+k}}{\mbox{}\left(x^2+y^2+z^2\right)^{3/2}}.
 \]
 Now suppose ${\bf F}$ is the only force acting on the object.
 According to Newton's second law of motion, ${\bf F}=m{\bf X}''$;   that
 is,
 \[
  m(x''\,{\bf i}+y''\,{\bf j}+z''\,{\bf k})=
--mgR^2{x\,{\bf i}+y\,{\bf j}+z\,{\bf
-k}\over\left(x^2+y^2+z^2\right)^{3/2}}.
+-mgR^2\frac{x\,{\bf i}+y\,{\bf j}+z\,{\bf
+k}}{\left(x^2+y^2+z^2\right)^{3/2}}.
 \]
 Cancelling the common factor $m$ and equating components on the two sides
 of this equation yields the  system
@@ -1458,7 +1458,7 @@ the Wronskian (as defined in this section) of two solutions of this system.
 Apply Eqn.~\eqref{eq:10.3.6} to the system  derived in \part{a}, and
 show that
 \[
-W(x)=W(x_0)\exp\left\{-\int^x_{x_0}{P_1(s)\over P_0(s)}\,
+W(x)=W(x_0)\exp\left\{-\int^x_{x_0}\frac{P_1(s)}{P_0(s)}\,
 ds\right\},
 \]
 which is the form of Abel's formula given in
@@ -1492,7 +1492,7 @@ solutions of this system.
 Apply Eqn.~\eqref{eq:10.3.6} to the system  derived in \part{a}, and
 show that
 \[
-W(x)=W(x_0)\exp\left\{-\int^x_{x_0}{P_1(s)\over P_0(s)}\,
+W(x)=W(x_0)\exp\left\{-\int^x_{x_0}\frac{P_1(s)}{P_0(s)}\,
 ds\right\},
 \]
 which is the form of Abel's formula given in
@@ -2987,7 +2987,7 @@ $(A-I){\bf u}={\bf x}$. The augmented matrix of this system is
 \]
 which is row equivalent to
 \[
-\dst{\left[\begin{array}{rrcr}1&-\frac{5}{2}&\vdots&1\over2\\
+\dst{\left[\begin{array}{rrcr}1&-\frac{5}{2}&\vdots&\frac12\\
 0&0&\vdots&0\end{array}\right]}.
 \]
 Therefore the components of ${\bf u}$ must satisfy
@@ -3102,7 +3102,7 @@ arbitrary. Choosing $u_2=0$ yields
 and substituting this into  \eqref{eq:10.5.8}
 yields the solution
 \[
-{\bf y}_3=\threecol201{e^{-t}\over2}+\threecol{-1}10te^{-t}
+{\bf y}_3=\threecol201\frac{e^{-t}}{2}+\threecol{-1}10te^{-t}
 \]
 of  \eqref{eq:10.5.7}.
 
@@ -3110,14 +3110,14 @@ Since the Wronskian of $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$
 at $t=0$ is
 \[
 \left|\begin{array}{rrr}
-1&-1&1\\2&1&0\\1&0&1\over2\end{array}\right|=\frac{1}{2},
+1&-1&1\\2&1&0\\1&0&\frac12\end{array}\right|=\frac{1}{2},
 \]
 $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is a fundamental set of solutions
 of \eqref{eq:10.5.7}. Therefore the general solution of \eqref{eq:10.5.7}
 is
 \[
 {\bf y}=c_1\threecol121e^t+c_2\threecol{-1}10e^{-t}+c_3\left
-(\threecol201{e^{-t}\over2}+\threecol{-1}10te^{-t}\right).
+(\threecol201\frac{e^{-t}}{2}+\threecol{-1}10te^{-t}\right).
 \]
 
 \begin{theorem}\color{blue}\label{thmtype:10.5.2}
@@ -3142,7 +3142,7 @@ vectors ${\bf v}$ such that
 {\bf y}_2&=&{\bf u}e^{\lambda_1t}+{\bf x} te^{\lambda_1t},\mbox{
 and }\\
 {\bf y}_3&=&{\bf v}e^{\lambda_1t}+{\bf u}te^{\lambda_1t}+{\bf
-x} {t^2e^{\lambda_1t}\over2}
+x} \frac{t^2e^{\lambda_1t}}{2}
 \end{eqnarray*}
 are linearly independent solutions of  ${\bf y}'=A{\bf y}$.
 \end{theorem}
@@ -3212,14 +3212,14 @@ Letting $u_3=0$ yields $u_1=-1/2$ and $u_2=1/2$; hence,
 \]
 and
 \[
-{\bf y}_2=\threecol{-1}10{e^{2t}\over2}+\threecol101te^{2t}
+{\bf y}_2=\threecol{-1}10\frac{e^{2t}}{2}+\threecol101te^{2t}
 \]
 is a solution of  \eqref{eq:10.5.11}.
 
 We  now find a third solution of  \eqref{eq:10.5.11}  in the form
 \[
 {\bf y}_3={\bf
-v}e^{2t}+\threecol{-1}10{te^{2t}\over2}+\threecol101{t^2e^{2t}\over2}
+v}e^{2t}+\threecol{-1}10\frac{te^{2t}}{2}+\threecol101\frac{t^2e^{2t}}{2}
 \]
 where ${\bf v}$ satisfies $(A-2I){\bf v}={\bf u}$.
 The  augmented matrix  of this system is
@@ -3238,8 +3238,8 @@ Letting $v_3=0$ yields $v_1=1/2$ and $v_2=0$; hence,
 \]
 Therefore
 \[
-{\bf y}_3=\threecol100{e^{2t}\over2}+
-\threecol{-1}10{te^{2t}\over2}+\threecol101{t^2e^{2t}\over2}
+{\bf y}_3=\threecol100\frac{e^{2t}}{2}+
+\threecol{-1}10\frac{te^{2t}}{2}+\threecol101\frac{t^2e^{2t}}{2}
 \]
 is a solution of  \eqref{eq:10.5.11}. Since ${\bf y}_1$, ${\bf y}_2$, and
 ${\bf y}_3$ are linearly independent by Theorem~\ref{thmtype:10.5.2}, they
@@ -3247,9 +3247,9 @@ form a fundamental set of solutions of \eqref{eq:10.5.11}. Therefore the
 general solution of \eqref{eq:10.5.11} is
 \begin{eqnarray*}
 {\bf y} &=&\dst{c_1\threecol101e^{2t}+
-c_2\left(\threecol{-1}10{e^{2t}\over2}+\threecol101te^{2t}\right)}\\[2\jot]
-&&+c_3\dst{\left(\threecol100{e^{2t}\over2}+
-\threecol{-1}10{te^{2t}\over2}+\threecol101{t^2e^{2t}\over2}\right)}.
+c_2\left(\threecol{-1}10\frac{e^{2t}}{2}+\threecol101te^{2t}\right)}\\[2\jot]
+&&+c_3\dst{\left(\threecol100\frac{e^{2t}}{2}+
+\threecol{-1}10\frac{te^{2t}}{2}+\threecol101\frac{t^2e^{2t}}{2}\right)}.
 \end{eqnarray*}
 
 
@@ -3676,7 +3676,7 @@ Under the assumptions of Theorem~\ref{thmtype:10.5.2}, let
 {\bf y}_2&=&{\bf u}e^{\lambda_1t}+{\bf x} te^{\lambda_1t},\mbox{
 and }\\
 {\bf y}_3&=&{\bf v}e^{\lambda_1t}+{\bf u}te^{\lambda_1t}+{\bf
-x} {t^2e^{\lambda_1t}\over2}.
+x} \frac{t^2e^{\lambda_1t}}{2}.
 \end{eqnarray*}
 Complete the proof of Theorem~\ref{thmtype:10.5.2} by showing
 that ${\bf y}_3$ is a solution of ${\bf y}'=A{\bf y}$ and
@@ -4225,8 +4225,8 @@ and $({\bf u}_1,{\bf v}_1)=0$.
  Letting $k=-1/2$
 in \eqref{eq:10.6.11} yields
 \[
-{\bf u}_1={\bf u}+{{\bf v}\over2}=\twocol{5}5\mbox{\quad and \quad}
-{\bf v}_1={\bf v}-{{\bf u}\over2}=\frac{1}{2}\twocol{-5}{\phantom{-}5},
+{\bf u}_1={\bf u}+\frac{{\bf v}}{2}=\twocol{5}5\mbox{\quad and \quad}
+{\bf v}_1={\bf v}-\frac{{\bf u}}{2}=\frac{1}{2}\twocol{-5}{\phantom{-}5},
 \]
 and again $({\bf u}_1,{\bf v}_1)=0$. \bbox
 \end{example}
@@ -4259,15 +4259,15 @@ z_1(t)&=&\|{\bf u}\|(c_1\cos\beta t+c_2\sin\beta
 t)\\ z_2(t)&=&\|{\bf v}\|(-c_1\sin\beta t+c_2\cos\beta t).
 \end{eqnarray*}
 Therefore
-\[ {(z_1(t))^2\over\|{\bf
-u}\|^2}+{(z_2(t))^2\over\|{\bf v}\|^2} =c_1^2+c_2^2
+\[ \frac{(z_1(t))^2}{\|{\bf
+u}\|^2}+\frac{(z_2(t))^2}{\|{\bf v}\|^2} =c_1^2+c_2^2
 \]
 (verify!), which means that the shadow trajectories of \eqref{eq:10.6.10}
 are ellipses centered at the origin, with axes of symmetry parallel to
 ${\bf U}$ and ${\bf V}$. Since
 \[
-z_1'={\beta\|{\bf u}\|\over\|{\bf v}\|} z_2\mbox{\quad and \quad}
-z_2'=-{\beta\|{\bf v}\|\over\|{\bf u}\|} z_1,
+z_1'=\frac{\beta\|{\bf u}\|}{\|{\bf v}\|} z_2\mbox{\quad and \quad}
+z_2'=-\frac{\beta\|{\bf v}\|}{\|{\bf u}\|} z_1,
 \]
  the vector from the
 origin to a point on the shadow ellipse rotates in the same direction
@@ -4514,9 +4514,9 @@ v}_1^{(2)}={\bf v}+k_2{\bf u}$, so that $({\bf u}_1^{(1)},{\bf
 v}_1^{(1)}) =({\bf u}_1^{(2)},{\bf v}_1^{(2)})=0$, from the discussion
 given above. Show that
 \[
-{\bf u}_1^{(2)}={{\bf v}_1^{(1)}\over k_1}
+{\bf u}_1^{(2)}=\frac{{\bf v}_1^{(1)}}{k_1}
 \mbox{\quad and \quad}
-{\bf v}_1^{(2)}=-{{\bf u}_1^{(1)}\over k_1}.
+{\bf v}_1^{(2)}=-\frac{{\bf u}_1^{(1)}}{k_1}.
 \]
 \item % (c)
 Let ${\bf U}_1$, ${\bf V}_1$, ${\bf U}_2$, and ${\bf V}_2$ be unit
@@ -4718,11 +4718,11 @@ By Cramer's rule,
 \begin{array}{ccccccl}
 u_1'&=&-\dst\frac{1}{2e^{2t}}
 \left|\begin{array}{cr}2e^{4t}&e^{-t}\\e^{4t}&-e^{-t}
-\end{array}\right|&=&\dst{3e^{3t}\over2e^{2t}}&=
+\end{array}\right|&=&\dst\frac{3e^{3t}}{2e^{2t}}&=
 &\dst\frac{3}{2}e^t,\\[4\jot]
 u_2'&=&-\dst\frac{1}{2e^{2t}}
 \left|\begin{array}{rr}e^{3t}&2e^{4t}\\e^{3t}&e^{4t}
-\end{array}\right|&=&\dst{e^{7t}\over2e^{2t}}&=&\dst\frac{1}{2}e^{5t}.
+\end{array}\right|&=&\dst\frac{e^{7t}}{2e^{2t}}&=&\dst\frac{1}{2}e^{5t}.
 \end{array}
 \]
  Therefore
@@ -4811,10 +4811,10 @@ By Cramer's rule,
 \[
 \begin{array}{cccccll}
 u_1'&=&\dst\frac{1}{2e^{6t}}\left|\begin{array}{cc}1&-1\\1&e^{2t}
-\end{array}\right|&=&\dst{e^{2t}+1\over2e^{6t}}&=&\dst{e^{-4t}+e^{-6t}\over2}
+\end{array}\right|&=&\dst\frac{e^{2t}+1}{2e^{6t}}&=&\dst\frac{e^{-4t}+e^{-6t}}{2}
 \\[4\jot]
 u_2'&=&\dst\frac{1}{2e^{6t}}\left|\begin{array}{cc}e^{4t}&1\\e^{6t}&1
-\end{array}\right|&=&\dst{e^{4t}-e^{6t}\over2e^{6t}}&=&\dst{e^{-2t}-1\over2}.
+\end{array}\right|&=&\dst\frac{e^{4t}-e^{6t}}{2e^{6t}}&=&\dst\frac{e^{-2t}-1}{2}.
 \end{array}
 \]
 Therefore
@@ -4947,11 +4947,11 @@ Thus, by Cramer's rule,
 \[
 \begin{array}{cccccll}
 u_1'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}e^t&e^t&e^t\\0&e^t&0\\e^{-t}&0&e^t
-\end{array}\right|&=&-\dst{e^{3t}-e^t\over
+\end{array}\right|&=&-\dst\frac{e^{3t}-e^t}{
 e^{2t}}&=&e^{-t}-e^t\\[6\jot] u_2'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&0&0\\1&e^{-t}&e^t
-\end{array}\right|&=&-\dst{1-e^{2t}\over e^{2t}}&=&1-e^{-2t}\\[6\jot]
+\end{array}\right|&=&-\dst\frac{1-e^{2t}}{e^{2t}}&=&1-e^{-2t}\\[6\jot]
 u_3'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^{-t}
-\end{array}\right|&=&\dst{e^{2t}\over e^{2t}}&=&1.
+\end{array}\right|&=&\dst\frac{e^{2t}}{e^{2t}}&=&1.
 \end{array}
 \]
  Therefore
@@ -4961,7 +4961,7 @@ u_3'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^{-
 Integrating and taking the constants of integration to be zero yields
 \[
 {\bf
-u}=\left[\begin{array}{c}-e^t-e^{-t}\\\dst{e^{-2t}\over2}+t
+u}=\left[\begin{array}{c}-e^t-e^{-t}\\\dst\frac{e^{-2t}}{2}+t
 \\t\end{array}\right],
 \]
 so
@@ -4969,9 +4969,8 @@ so
 \begin{array}{ccccl}
 {\bf y}_p=Y{\bf u}&=&
 \left[\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{array}\right]
-\left[\begin{array}{c}-e^t-e^{-t}\\\dst{e^{-2t}\over2}+t\\t\end{array}\right]
-&=&\left[\begin{array}{c}e^t(2t-1)-\dst{e^{-t}\over2}\\[5pt]e^t(t-1)-\dst{e^{-t}
-\over2}\\[5pt]e^t(t-1)-\dst{e^{-t}}
+\left[\begin{array}{c}-e^t-e^{-t}\\\dst\frac{e^{-2t}}{2}+t\\t\end{array}\right]
+&=&\left[\begin{array}{c}e^t(2t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst{e^{-t}}
 \end{array}\right]
 \end{array}
 \]
@@ -4981,8 +4980,7 @@ is a particular solution of  \eqref{eq:10.7.8}.
 \eqref{eq:10.7.8} is
 \[
 {\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2+c_3{\bf y}_3=
-\left[\begin{array}{c}e^t(2t-1)-\dst{e^{-t}\over2}\\[5pt]e^t(t-1)-\dst{e^{-t}
-\over2}\\[5pt]e^t(t-1)-\dst{e^{-t}}
+\left[\begin{array}{c}e^t(2t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst{e^{-t}}
 \end{array}\right]+
 c_1\left[\begin{array}{c}1\\1\\1\end{array}\right]+
 c_2\left[\begin{array}{c}e^t\\e^t\\0\end{array}\right]
@@ -4991,8 +4989,7 @@ c_2\left[\begin{array}{c}e^t\\e^t\\0\end{array}\right]
 which can  be written as
 \[
 {\bf y}={\bf y}_p+Y{\bf c}=
-\left[\begin{array}{c}e^t(2t-1)-\dst{e^{-t}\over2}\\[5pt]e^t(t-1)-\dst{e^{-t}
-\over2}\\[5pt]e^t(t-1)-\dst{e^{-t}} \end{array}\right]+
+\left[\begin{array}{c}e^t(2t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst{e^{-t}} \end{array}\right]+
 \left[\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{array}\right]{\bf
 c}
 \]
@@ -5032,15 +5029,14 @@ By Cramer's rule,
 \begin{array}{ccccccl}
 u_1'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}1&0&e^{2t}\\e^t&e^{3t}&e^{3t}
 \\e^{-t}&1&0
-\end{array}\right|&=&\dst{e^{4t}\over2e^{4t}}&=&\dst\frac{1}{2}
+\end{array}\right|&=&\dst\frac{e^{4t}}{2e^{4t}}&=&\dst\frac{1}{2}
 \\[6\jot]
 u_2'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}e^t&1&e^{2t}\\0&e^t&e^{3t}
 \\e^{-t}&e^{-t}&0
-\end{array}\right|&=&\dst{e^{3t}\over2e^{4t}}&=&\dst\frac{1}{2}e^{-t}\\[6\jot]
+\end{array}\right|&=&\dst\frac{e^{3t}}{2e^{4t}}&=&\dst\frac{1}{2}e^{-t}\\[6\jot]
 u_3'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}e^t&0&1\\0&e^{3t}&e^t
 \\e^{-t}&1&e^{-t}
-\end{array}\right|&=&-\dst{e^{3t}-2e^{2t}\over2e^{4t}}&=&\dst{2e^{-2t}-e^{-t}
-\over2}.
+\end{array}\right|&=&-\dst\frac{e^{3t}-2e^{2t}}{2e^{4t}}&=&\dst\frac{2e^{-2t}-e^{-t}}{2}.
 \end{array}
 \]
 Therefore
@@ -5153,7 +5149,7 @@ t^3&t^4\\-1&t
 \item\label{exer:10.7.16}
 $\dst{{\bf y}'=
 \left[\begin{array}{cc}\dst\frac{1}{t-1}
-&-\dst{e^{-t}\over t-1}\\[2\jot]\dst\frac{e^t}{t+1}&\dst\frac{1}{t+1}\end{array}\right]{\bf y}+\left[\begin{array}{c}
+&-\dst\frac{e^{-t}}{t-1}\\[2\jot]\dst\frac{e^t}{t+1}&\dst\frac{1}{t+1}\end{array}\right]{\bf y}+\left[\begin{array}{c}
 t^2-1\\t^2-1\end{array}\right];  \quad Y=\left[\begin{array}{cc}
 t&e^{-t}\\e^t&t
 \end{array}\right]}$
@@ -5275,7 +5271,7 @@ Y^{-1}(s){\bf f}(s)\, ds\right).
 
 
 \item
-$\dst\int u^\alpha\; du={u^{\alpha+1}\over\alpha+1}+c$, \quad
+$\dst\int u^\alpha\; du=\frac{u^{\alpha+1}}{\alpha+1}+c$, \quad
 $\alpha\ne-1$
 
 \item
@@ -5345,38 +5341,38 @@ $\dst\int u\sin u\; du=-u\cos u +\sin u+c$
 $\dst\int ue^u\; du=ue^{u}-e^{u} +c$
 
 \item
-$\dst\int e^{\lambda u}\cos\omega u\; du={e^{\lambda u}(\lambda\cos
-\omega u+\omega\sin\omega u)\over \lambda^2+\omega^2}+c$
+$\dst\int e^{\lambda u}\cos\omega u\; du=\frac{e^{\lambda u}(\lambda\cos
+\omega u+\omega\sin\omega u)}{\lambda^2+\omega^2}+c$
 
 \item
-$\dst\int e^{\lambda u}\sin\omega u\; du={e^{\lambda u}(\lambda\sin
-\omega u-\omega\cos\omega u)\over\lambda^2+\omega^2}+c$
+$\dst\int e^{\lambda u}\sin\omega u\; du=\frac{e^{\lambda u}(\lambda\sin
+\omega u-\omega\cos\omega u)}{\lambda^2+\omega^2}+c$
 
 \item
 $\dst\int \ln|u|\; du=u\ln|u|-u+c$
 
 \item
-$\dst\int u\ln|u|\; du={u^2\ln|u|\over2}-\frac{u^2}{4}+c$
+$\dst\int u\ln|u|\; du=\frac{u^2\ln|u|}{2}-\frac{u^2}{4}+c$
 
 \item
-$\dst\int\cos\omega_1u\cos\omega_2u\,du={\sin
-(\omega_1+\omega_2)u\over2(\omega_1+\omega_2)}
-+{\sin(\omega_1-\omega_2)u\over2(\omega_1-\omega_2)}+c\quad
+$\dst\int\cos\omega_1u\cos\omega_2u\,du=\frac{\sin
+(\omega_1+\omega_2)u}{2(\omega_1+\omega_2)}
++\frac{\sin(\omega_1-\omega_2)u}{2(\omega_1-\omega_2)}+c\quad
 (\omega_1\ne\pm
 \omega_2)$
 
 \item
 $\dst\int\sin\omega_1 u\sin\omega_2 u\,du=
--{\sin(\omega_1+\omega_2)u\over2(\omega_1+\omega_2)}
-+{\sin(\omega_1-\omega_2)u\over2(\omega_1-\omega_2)}+c
+-\frac{\sin(\omega_1+\omega_2)u}{2(\omega_1+\omega_2)}
++\frac{\sin(\omega_1-\omega_2)u}{2(\omega_1-\omega_2)}+c
 \quad
 (\omega_1\ne\pm
 \omega_2)$
 
 \item
-$\dst\int\sin\omega_1u\cos\omega_2 u\,du=-{\cos
-(\omega_1+\omega_2)u\over2(\omega_1+\omega_2)}
--{\cos(\omega_1-\omega_2)u\over2(\omega_1-\omega_2)}+c\quad
+$\dst\int\sin\omega_1u\cos\omega_2 u\,du=-\frac{\cos
+(\omega_1+\omega_2)u}{2(\omega_1+\omega_2)}
+-\frac{\cos(\omega_1-\omega_2)u}{2(\omega_1-\omega_2)}+c\quad
 (\omega_1\ne\pm
 \omega_2)$
 
