@@ -200,7 +200,7 @@ values. For related theorems see Exercises~\ref{exer:7.1.2} and
 Suppose there's an integer $N$ such that $a_n\ne0$ if
 $n\ge N$ and
 \[
-\lim_{n\to\infty}\left|a_{n+1}\over a_n\right|=L,
+\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=L,
 \]
 where $0\le L\le\infty.$ Then the radius of convergence of
 $\sum_{n=0}^\infty a_n(x-x_0)^n$ is $R=1/ L,$ which should be interpreted
@@ -218,22 +218,22 @@ to mean that $R=0$ if $L=\infty,$ or $R=\infty$ if $L=0.$
 
 \solutionpart{a}   Here $a_n=n!$, so
 \[
-\lim_{n\to\infty}\left|a_{n+1}\over a_n\right|=\lim_{n\to\infty}
-{(n+1)!\over n!}=\lim_{n\to\infty}(n+1)=\infty.
+\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=\lim_{n\to\infty}
+\frac{(n+1)!}{n!}=\lim_{n\to\infty}(n+1)=\infty.
 \]
 Hence, $R=0$.
 
 \solutionpart{b}   Here $a_n=(1)^n/n!$ for $n\ge N=10$, so
 \[
-\lim_{n\to\infty}\left|a_{n+1}\over a_n\right|=\lim_{n\to\infty}
-{n!\over (n+1)!}=\lim_{n\to\infty}\frac{1}{n+1}=0.
+\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=\lim_{n\to\infty}
+\frac{n!}{(n+1)!}=\lim_{n\to\infty}\frac{1}{n+1}=0.
 \]
 Hence, $R=\infty$.
 
 \solutionpart{c}   Here $a_n=2^nn^2$, so
 \[
-\lim_{n\to\infty}\left|a_{n+1}\over a_n\right|=\lim_{n\to\infty}
-{2^{n+1}(n+1)^2\over2^nn^2}=2\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^2=2.
+\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=\lim_{n\to\infty}
+\frac{2^{n+1}(n+1)^2}{2^nn^2}=2\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^2=2.
 \]
 Hence, $R=1/2$.
 
@@ -248,7 +248,7 @@ then the
 {\color{blue}\itshape Taylor series of  $f$  about} $x_0$  is
 defined by
 \[
- \sum_{n=0}^\infty {f^{(n)}(x_0)\over n!}(x-x_0)^n.
+ \sum_{n=0}^\infty\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n.
 \]
 In the special case where $x_0=0$, this series is also called the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Maclaurin.html}
@@ -261,9 +261,9 @@ following Maclaurin series:
 \begin{eqnarray}
 e^x&=&\sum_{n=0}^\infty \frac{x^n}{n!},\quad
 -\infty<x<\infty,\label{eq:7.1.2}\\
-\sin x&=&\sum_{n=0}^\infty(-1)^n {x^{2n+1}\over(2n+1)!},\quad
+\sin x&=&\sum_{n=0}^\infty(-1)^n\frac{x^{2n+1}}{(2n+1)!},\quad
 -\infty<x<\infty, \label{eq:7.1.3}\\ %dummy \eqref{eq:7.1.3}
-\cos x&=&\sum_{n=0}^\infty(-1)^n {x^{2n}\over(2n)!},\quad
+\cos x&=&\sum_{n=0}^\infty(-1)^n\frac{x^{2n}}{(2n)!},\quad
 -\infty<x<\infty, \label{eq:7.1.4}\\ %dummy \eqref{eq:7.1.4}
 \frac{1}{1-x}&=&\sum_{n=0}^\infty x^n,\quad-1<x<1.\label{eq:7.1.5}
 \end{eqnarray}
@@ -313,12 +313,12 @@ Moreover$,$ all of these series have the same radius of convergence $R.$
 \begin{example}\label{example:7.1.2} \rm
 Let $f(x)=\sin x$. From \eqref{eq:7.1.3},
 \[
-f(x)=\sum_{n=0}^\infty(-1)^n {x^{2n+1}\over(2n+1)!}.
+f(x)=\sum_{n=0}^\infty(-1)^n\frac{x^{2n+1}}{(2n+1)!}.
 \]
 From  \eqref{eq:7.1.6},
 \[
-f'(x)=\sum_{n=0}^\infty(-1)^n\frac{d}{dx}\left[x^{2n+1}\over(2n+1)!\right]=
-\sum_{n=0}^\infty(-1)^n {x^{2n}\over(2n)!},
+f'(x)=\sum_{n=0}^\infty(-1)^n\frac{d}{dx}\left[\fracx^{2n+1}}{(2n+1)!}\right]=
+\sum_{n=0}^\infty(-1)^n\frac{x^{2n}}{(2n)!},
 \]
 which is the series  \eqref{eq:7.1.4} for $\cos x$.
 \end{example}
@@ -338,7 +338,7 @@ f(x)=\sum_{n=0}^\infty a_n(x-x_0)^n
 \]
 has a positive radius of convergence, then
 \begin{equation} \label{eq:7.1.9}
-a_n={f^{(n)}(x_0)\over n!};
+a_n=\frac{f^{(n)}(x_0)}{n!};
 \end{equation}
 that is, $\sum_{n=0}^\infty a_n(x-x_0)^n$ is the Taylor
 series of $f$ about $x_0$.
@@ -351,7 +351,7 @@ f^{(k)}(x_0)=k(k-1)\cdots1\cdot a_k=k!a_k.
 \]
 This implies that
 \[
-a_k={f^{(k)}(x_0)\over k!}.
+a_k=\frac{f^{(k)}(x_0)}{k!}.
 \]
 Except for notation, this is the same as \eqref{eq:7.1.9}.
 
@@ -385,7 +385,7 @@ same
 function $f$ on the open  interval; hence, Theorem~\ref{thmtype:7.1.5}
 implies that
 \[
-a_n=b_n={f^{(n)}(x_0)\over n!},\quad n=0,1,2, \dots.
+a_n=b_n=\frac{f^{(n)}(x_0)}{n!},\quad n=0,1,2, \dots.
 \]
 \part{b}  can be obtained from \part{a} by taking $b_n=0$ for
 $n=0$, $1$, $2$, \dots.
@@ -396,7 +396,7 @@ $n=0$, $1$, $2$, \dots.
 \noindent
 If $f$ has $N$ derivatives at a point $x_0$, we say that
 \[
-T_N(x)=\sum_{n=0}^N{f^{(n)}(x_0)\over n!}(x-x_0)^n
+T_N(x)=\sum_{n=0}^N\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n
 \]
 is the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Taylor.html}
@@ -597,7 +597,7 @@ an even integer},\\ 0&\mbox{ if }n=2m+1,\mbox{ an odd integer},
 \]
 we can rewrite \eqref{eq:7.1.12} more simply as
 \[
-\cosh x=\sum_{m=0}^\infty{x^{2m}\over(2m)!}.
+\cosh x=\sum_{m=0}^\infty\frac{x^{2m}}{(2m)!}.
 \]
 This result is valid on $(-\infty,\infty)$, since this is the open
 interval of convergence of the Maclaurin series for $e^x$ and
@@ -737,10 +737,10 @@ For each power series use Theorem~\ref{thmtype:7.1.3} to find the radius
 of convergence $R$. If $R>0$, find the open interval of convergence.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (a)} $\dst{\sum_{n=0}^\infty {(-1)^n\over2^nn}(x-1)^n}$&
+{\bf (a)} $\dst{\sum_{n=0}^\infty\frac{(-1)^n}{2^nn}(x-1)^n}$&
 {\bf (b)} $\dst{\sum_{n=0}^\infty 2^nn(x-2)^n}$\\
-{\bf (c)} $\dst{\sum_{n=0}^\infty {n!\over9^n}x^n}$&
-{\bf (d)} $\dst{\sum_{n=0}^\infty{n(n+1)\over16^n}(x-2)^n}$\\
+{\bf (c)} $\dst{\sum_{n=0}^\infty\frac{n!}{9^n}x^n}$&
+{\bf (d)} $\dst{\sum_{n=0}^\infty\frac{n(n+1)}{16^n}(x-2)^n}$\\
 {\bf (e)} $\dst{\sum_{n=0}^\infty (-1)^n\frac{7^n}{n!}x^n}$&
 {\bf (f)} $\dst{\sum_{n=0}^\infty \frac{3^n}{4^{n+1}(n+1)^2}(x+7)^n}$
 \end{tabular}
@@ -749,7 +749,7 @@ of convergence $R$. If $R>0$, find the open interval of convergence.
  Suppose there's an
 integer $M$ such that $b_m\ne0$ for $m\ge M$,  and
 \[
-\lim_{m\to\infty}\left|b_{m+1}\over b_m\right|=L,
+\lim_{m\to\infty}\left|\fracb_{m+1}}{b_m}\right|=L,
 \]
 where $0\le L\le\infty$. Show that the radius of convergence of
 \[
@@ -769,10 +769,10 @@ convergence.
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 {\bf (a)} $\dst{\sum_{m=0}^\infty (-1)^m(3m+1)(x-1)^{2m+1}}$&
 {\bf (b)} $\dst{\sum_{m=0}^\infty
-(-1)^m{m(2m+1)\over2^m}(x+2)^{2m}}$ \\
-{\bf (c)} $\dst{\sum_{m=0}^\infty {m!\over(2m)!}(x-1)^{2m}}$&
-{\bf (d)} $\dst{\sum_{m=0}^\infty (-1)^m{m!\over9^m}(x+8)^{2m}}$\\
-{\bf (e)} $\dst{\sum_{m=0}^\infty(-1)^m{(2m-1)\over3^m}x^{2m+1}}$&
+(-1)^m\frac{m(2m+1)}{2^m}(x+2)^{2m}}$ \\
+{\bf (c)} $\dst{\sum_{m=0}^\infty\frac{m!}{(2m)!}(x-1)^{2m}}$&
+{\bf (d)} $\dst{\sum_{m=0}^\infty (-1)^m\frac{m!}{9^m}(x+8)^{2m}}$\\
+{\bf (e)} $\dst{\sum_{m=0}^\infty(-1)^m\frac{(2m-1)}{3^m}x^{2m+1}}$&
 {\bf (f)} $\dst{\sum_{m=0}^\infty(x-1)^{2m}}$
 \end{tabular}
 
@@ -780,7 +780,7 @@ convergence.
 Suppose there's an integer $M$ such that $b_m\ne0$ for $m\ge M$,
 and
 \[
-\lim_{m\to\infty}\left|b_{m+1}\over b_m\right|=L,
+\lim_{m\to\infty}\left|\fracb_{m+1}}{b_m\right|=L,
 \]
 where $0\le L\le\infty$. Let $k$ be a positive integer. Show that the
 radius of convergence of
@@ -798,12 +798,12 @@ the radius of convergence $R$. If $R>0$, find the open interval of
 convergence.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (a)} $\dst{\sum_{m=0}^\infty{(-1)^m\over(27)^m}(x-3)^{3m+2}}$&
-{\bf (b)} $\dst{\sum_{m=0}^\infty{x^{7m+6}\over m}}$ \\
-{\bf (c)} $\dst{\sum_{m=0}^\infty{9^m(m+1)\over(m+2)}(x-3)^{4m+2}}$&
+{\bf (a)} $\dst{\sum_{m=0}^\infty\frac{(-1)^m}{(27)^m}(x-3)^{3m+2}}$&
+{\bf (b)} $\dst{\sum_{m=0}^\infty\frac{x^{7m+6}}{m}}$ \\
+{\bf (c)} $\dst{\sum_{m=0}^\infty\frac{9^m(m+1)}{(m+2)}(x-3)^{4m+2}}$&
 {\bf (d)} $\dst{\sum_{m=0}^\infty(-1)^m\frac{2^m}{m!}x^{4m+3}}$\\
-{\bf (e)} $\dst{\sum_{m=0}^\infty{m!\over(26)^m}(x+1)^{4m+3}}$&
-{\bf (f)} $\dst{\sum_{m=0}^\infty{(-1)^m\over8^mm(m+1)}(x-1)^{3m+1}}$
+{\bf (e)} $\dst{\sum_{m=0}^\infty\frac{m!}{(26)^m}(x+1)^{4m+3}}$&
+{\bf (f)} $\dst{\sum_{m=0}^\infty\frac{(-1)^m}{8^mm(m+1)}(x-1)^{3m+1}}$
 \end{tabular}
 
 
@@ -812,7 +812,7 @@ convergence.
 \item\label{exer:7.1.6} \Lex
 Graph $y=\sin x$ and the Taylor polynomial
 \[
-T_{2M+1}(x)=\sum_{n=0}^M{(-1)^nx^{2n+1}\over(2n+1)!}
+T_{2M+1}(x)=\sum_{n=0}^M\frac{(-1)^nx^{2n+1}}{(2n+1)!}
 \]
 on the interval $(-2\pi,2\pi)$ for $M=1$, $2$, $3$, \dots, until you find
 a value of $M$ for which there's no perceptible difference between the
@@ -822,7 +822,7 @@ two graphs.
 \item\label{exer:7.1.7} \Lex
 Graph $y=\cos x$ and the Taylor polynomial
 \[
-T_{2M}(x)=\sum_{n=0}^M{(-1)^nx^{2n}\over(2n)!}
+T_{2M}(x)=\sum_{n=0}^M\frac{(-1)^nx^{2n}}{(2n)!}
 \]
 on the interval $(-2\pi,2\pi)$ for $M=1$, $2$, $3$, \dots, until you find a
 value of $M$ for which there's no perceptible difference between the
@@ -840,7 +840,7 @@ two graphs. Choose the scale on the $y$-axis so that $0\le y\le20$.
 \item\label{exer:7.1.9} \Lex
 Graph $y=\cosh x$ and the Taylor polynomial
 \[
-T_{2M}(x)=\sum_{n=0}^M{x^{2n}\over(2n)!}
+T_{2M}(x)=\sum_{n=0}^M\frac{x^{2n}}{(2n)!}
 \]
 on the interval $(-5,5)$ for $M=1$, $2$, $3$, \dots, until you find a
 value of $M$ for which there's no perceptible difference between the
@@ -850,7 +850,7 @@ two graphs.
 \item\label{exer:7.1.10} \Lex
 Graph $y=\sinh x$ and the Taylor polynomial
 \[
-T_{2M+1}(x)=\sum_{n=0}^M{x^{2n+1}\over(2n+1)!}
+T_{2M+1}(x)=\sum_{n=0}^M\frac{x^{2n+1}}{(2n+1)!}
 \]
 on the interval $(-5,5)$ for $M=0$, $1$, $2$, \dots, until you find a
 value of $M$ for which there's no perceptible difference between the
@@ -1015,7 +1015,7 @@ has a unique solution on the largest open interval that contains $x_0$
 and does not contain any zeros of $P_0$. To see this, we rewrite the
 differential equation in \eqref{eq:7.2.4} as
 \[
-y''+{P_1(x)\over P_0(x)}y'+{P_2(x)\over P_0(x)}y=0
+y''+\frac{P_1(x)}{P_0(x)}y'+\frac{P_2(x)}{P_0(x)}y=0
 \]
 and apply Theorem~\ref{thmtype:5.1.1} with $p=P_1/P_0$ and $q=P_2/P_0$.
 In this section and the next we  consider the problem of
@@ -1133,16 +1133,16 @@ b_n=(n+2)(n+1)a_{n+2}+a_n.
 \]
 Therefore $Ly=0$ if and only if
 \begin{equation}\label{eq:7.2.10}
-a_{n+2}={-a_n\over(n+2)(n+1)},\quad n\ge0,
+a_{n+2}=\frac{-a_n}{(n+2)(n+1)},\quad n\ge0,
 \end{equation}
 where $a_0$ and $a_1$ are arbitrary. Since the indices on the left and
 right sides of \eqref{eq:7.2.10} differ by two, we write \eqref{eq:7.2.10}
 separately for $n$ even $(n=2m)$ and $n$ odd $(n=2m+1)$. This yields
 \begin{eqnarray}
-a_{2m+2}&=&{-a_{2m}\over(2m+2)(2m+1)},\quad m\ge0,
+a_{2m+2}&=&\frac{-a_{2m}}{(2m+2)(2m+1)},\quad m\ge0,
 \label{eq:7.2.11} \\%dummy \eqref{eq:7.2.14}
 \noalign{\hspace*{-15pt}\mbox{and}}\nonumber\\
-a_{2m+3}&=&{-a_{2m+1}\over(2m+3)(2m+2)},\quad  m\ge0.
+a_{2m+3}&=&\frac{-a_{2m+1}}{(2m+3)(2m+2)},\quad  m\ge0.
 \label{eq:7.2.12}
 \end{eqnarray}
 Computing the coefficients of the even powers of $x-x_0$ from
@@ -1175,7 +1175,7 @@ a_7&=&-\frac{a_5}{7\cdot6}=-\frac{1}{7\cdot6}
 \end{eqnarray*}
 and, in general,
 \begin{equation}\label{eq:7.2.14}
-a_{2m+1}={(-1)^ma_1\over(2m+1)!}\quad m\ge0.
+a_{2m+1}=\frac{(-1)^ma_1}{(2m+1)!}\quad m\ge0.
 \end{equation}
 Thus, the general solution of \eqref{eq:7.2.9} can be written as
 \[
@@ -1183,14 +1183,14 @@ y=\sum_{m=0}^\infty a_{2m}(x-x_0)^{2m}+\sum_{m=0}^\infty a_{2m+1}(x-x_0)^{2m+1},
 \]
 or, from \eqref{eq:7.2.13} and \eqref{eq:7.2.14}, as
 \begin{equation}\label{eq:7.2.15}
-y=a_0\sum_{m=0}^\infty(-1)^m{(x-x_0)^{2m}\over(2m)!}
-+a_1\sum_{m=0}^\infty(-1)^m{(x-x_0)^{2m+1}\over(2m+1)!}.
+y=a_0\sum_{m=0}^\infty(-1)^m\frac{(x-x_0)^{2m}}{(2m)!}
++a_1\sum_{m=0}^\infty(-1)^m\frac{(x-x_0)^{2m+1}}{(2m+1)!}.
 \end{equation}
 If we recall from calculus that
 \[
-\sum_{m=0}^\infty(-1)^m{(x-x_0)^{2m}\over(2m)!}=\cos(x-x_0)
+\sum_{m=0}^\infty(-1)^m\frac{(x-x_0)^{2m}}{(2m)!}=\cos(x-x_0)
 \mbox{\quad  and \quad }
-\sum_{m=0}^\infty(-1)^m{(x-x_0)^{2m+1}\over(2m+1)!}=\sin(x-x_0),
+\sum_{m=0}^\infty(-1)^m\frac{(x-x_0)^{2m+1}}{(2m+1)!}=\sin(x-x_0),
 \]
 then \eqref{eq:7.2.15} becomes
 \[
@@ -1302,7 +1302,7 @@ b_n=(n+2)(n+1)a_{n+2}+2(n+1)^2a_n,\quad n\ge0.
 To obtain solutions of \eqref{eq:7.2.17}, we set $b_n=0$ for $n\ge0$. This
 is equivalent to the recurrence relation
  \begin{equation}\label{eq:7.2.18}
-a_{n+2}=-2{n+1\over n+2}a_n,\quad n\ge0.
+a_{n+2}=-2\frac{n+1}{n+2}a_n,\quad n\ge0.
 \end{equation}
 Since the
 indices on the left and right differ by two, we write \eqref{eq:7.2.18}
