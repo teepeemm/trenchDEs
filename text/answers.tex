@@ -4928,19 +4928,19 @@ $\dst{1-t^2+u(t-2)\left(-\frac{t^2}{2}+2t+1\right) +u(t-4)(t-4)}=
 t<2\\[2\jot]-\dst\frac{3t^2}{2} +2t+2,&2\le
 t<4,\\[2\jot]-\dst\frac{3t^2}{2}+3t-2,&t\ge 4.\end{array}\right.}$
 
-\answer{8.4.29} $\dst{e^{-\tau s}\over s}$
+\answer{8.4.29} $\dst\frac{e^{-\tau s}}{s}$
 \answer{8.4.30} {\rm For each $t$ only finitely many terms are
 nonzero.}
 
 \answer{8.4.33} $\dst{1+\sum_{m=1}^\infty u(t-m);\;
 \frac{1}{s(1-e^{-s})}}$
 \answer{8.4.34} $\dst{1+2\sum_{m=1}^\infty (-1)^mu(t-m);\;
-\frac{1}{s};\; {1-e^{-s}\over 1+e^{-s}}}$
+\frac{1}{s};\; \frac{1-e^{-s}}{1+e^{-s}}}$
 
 \answer{8.4.35} $\dst{1+\sum_{m=1}^\infty(2m+1)u(t-m);\;
-{e^{-s}(1+e^{-s})\over s(1-e^{-s})^2}}$
+\frac{e^{-s}(1+e^{-s})}{s(1-e^{-s})^2}}$
 \answer{8.4.36}
-$\dst{\sum_{m=1}^\infty(-1)^m(2m-1)u(t-m);\;   \frac{1}{s}{(1-e^s)\over(1+e^s)^2}}$
+$\dst{\sum_{m=1}^\infty(-1)^m(2m-1)u(t-m);\;   \frac{1}{s}\frac{(1-e^s)}{(1+e^s)^2}}$
 
 \medskip{\bf Section~8.5 Answers,
 pp.~\pageref{exer:8.5.1}--\pageref{exer:8.5.26}}\medskip
@@ -4949,7 +4949,7 @@ pp.~\pageref{exer:8.5.1}--\pageref{exer:8.5.26}}\medskip
 
 \answer{8.5.2} $y=3-2\cos t+2u(t-4)\left(t-4-\sin
 (t-4)\right)$
-\answer{8.5.3}  $y=\dst{-\frac{15}{2}+\frac{3}{2}e^{2t}-2t+{u(t-1)\over2} (e^{2(t-1)}-2t+1)}$
+\answer{8.5.3}  $y=\dst{-\frac{15}{2}+\frac{3}{2}e^{2t}-2t+\frac{u(t-1)}{2} (e^{2(t-1)}-2t+1)}$
 
 \answer{8.5.4}
 $y=\dst{\frac{1}{2}e^t+\frac{13}{6}e^{-t}+ \frac{1}{3}e^{2t}
@@ -4970,8 +4970,7 @@ t-\frac{1}{6}\sin2t\right)}$
   $y=\dst{\frac{1}{4}-\frac{31}{12} e^{4t}+\frac{16}{3} e^t
 +u(t-1)\left(\frac{2}{3}e^{t-1}-\frac{1}{6}e^{4(t-1)}-\frac{1}{2}
 \right)
-+u(t-2)\left(\frac{1}{4}+{1
-\over12} e^{4(t-2)}-\frac{1}{3} e^{t-2}\right)}$
++u(t-2)\left(\frac{1}{4}+\frac{1}{12} e^{4(t-2)}-\frac{1}{3} e^{t-2}\right)}$
 
 \answer{8.5.8}
 $y=\dst{\frac{1}{8}\left(\cos t-\cos 3t\right) -
@@ -4987,7 +4986,7 @@ $y=\dst{\frac{1}{8}\left(\cos t-\cos 3t\right) -
  $y=\dst{t-\sin t-2u(t-\pi)(t+\sin t+\pi\cos t)}$
 
 \answer{8.5.11}
-$y=\dst{u(t-2)\left(t-\frac{1}{2}+{e^{2(t-2)}\over2}
+$y=\dst{u(t-2)\left(t-\frac{1}{2}+\frac{e^{2(t-2)}}{2}
 -2e^{t-2}\right)}$
 
 \answer{8.5.12}
@@ -5014,7 +5013,7 @@ $y=e^t-e^{-t}-2te^{-t}-u(t-1)\left(e^t-e^{-(t-2)}-2(t-1)e^{-(t-2)}\right)$
 $y=\dst{te^{-t}+e^{-2t}+u(t-1)\left(e^{-t}(2-t)-e^{-(2t-1)}\right)}$
 
 \answer{8.5.18}
-$y=y=\dst{t^2e^{2t}\over2}-te^{2t}-u(t-2)(t-2)^2e^{2t}$
+$y=y=\dst\frac{t^2e^{2t}}{2}-te^{2t}-u(t-2)(t-2)^2e^{2t}$
 
 \answer{8.5.19}
 $y=\dst{\frac{t^4}{12}+1-\frac{1}{12}u(t-1)(t^4+2t^3-10t+7)+
@@ -5034,7 +5033,7 @@ t+(3\pi+1)\sin t
 )+t\right)}$
 
 \answer{8.5.21}
-$y=\dst{\frac{t^2}{2}+\sum_{m=1}^\infty u(t-m){(t-m)^2\over2}}$
+$y=\dst{\frac{t^2}{2}+\sum_{m=1}^\infty u(t-m)\frac{(t-m)^2}{2}}$
 
 \answer{8.5.22}
 {\bf (a)} $y=\dst{\left\{\begin{array}{cll}2m+1-\cos t,&2m\pi\le
@@ -5052,19 +5051,17 @@ $y=(-1)^m-(2m+1)\cos t,\;  m\pi\le t<(m+1)\pi\quad(m=0,1,\dots)$
 
 \quad\;
 {\bf (d)}
-$y=\dst{{e^{m+1}-1\over2(e-1)}(e^{t-m}+e^{-t})-m-1,\quad m\le t<m+1
+$y=\dst{\frac{e^{m+1}-1}{2(e-1)}(e^{t-m}+e^{-t})-m-1,\quad m\le t<m+1
 \;  (m=0,1\dots)}$
 
 \quad\;
 {\bf (e)}
-$y=\dst{\left(m+1-\left({e^{2(m+1)\pi}-1\over
-e^{2\pi}-1}\right)e^{-t}\right)\sin
+$y=\dst{\left(m+1-\left(\frac{e^{2(m+1)\pi}-1}{e^{2\pi}-1}\right)e^{-t}\right)\sin
 t\;  2m\pi\le t<2(m+1)\pi\quad (m=0,1,\dots)}$
 
 \quad\;
 {\bf (f)}
-$y=\dst{\frac{m+1}{2}-e^{t-m}{e^{m+1}-1\over
-e-1}+\frac{1}{2}e^{2(t-m)}{e^{2m+2}-1\over e^2-1},
+$y=\dst{\frac{m+1}{2}-e^{t-m}\frac{e^{m+1}-1}{e-1}+\frac{1}{2}e^{2(t-m)}\frac{e^{2m+2}-1}{e^2-1},
 \;  m\le t<m+1\quad(m=0,1,\dots)}$
 
 \newpage
@@ -5091,7 +5088,7 @@ d\tau}$
 \part{g} $\dst{e^{-2t}\int_0^t\tau e^\tau\sin (t-\tau)\,d\tau}$
 
 \quad\;
- \part{h} $\dst{{e^{-2t}\over 2}\int_0^t\tau^2
+ \part{h} $\dst{\frac{e^{-2t}}{2}\int_0^t\tau^2
 (t-\tau)e^{3\tau}\,d\tau}$
 \part{i} $\dst{\int_0^t (t-\tau)e^\tau\cos\tau\,d\tau}$
 \part{j} $\dst{\int_0^t e^{-3\tau}\cos\tau\cos 2
@@ -5113,11 +5110,10 @@ e^{2(t-\tau)}\,d\tau}$
 \;  \,\part{a}   $\dst\frac{as}{(s^2+a^2)(s^2+b^2)}$\;
 \part{b}  $\dst\frac{a}{(s-1)(s^2+a^2)}$\;
 \part{c} $\dst\frac{as}{(s^2-a^2)^2}$\;
-\part{d}  $\dst{2\omega s(s^2-\omega^2)\over
-(s^2+\omega^2)^4}$
+\part{d}  $\dst\frac{2\omega s(s^2-\omega^2)}{(s^2+\omega^2)^4}$
 
 \quad\;  \;
-\part{e} $\dst{(s-1)\omega\over\left((s-1)^2+
+\part{e} $\dst\frac{(s-1)\omega}{\left((s-1)^2+
 \omega^2\right)^2}$\;
 \part{f} $\dst\frac{2}{(s-2)^3 (s-1)^2}$\;
 \part{g} $\dst\frac{s+1}{(s+2)^2\left[(s+1)^2+
@@ -5138,7 +5134,7 @@ e^{2(t-\tau)}\,d\tau}$
 
 \answer{8.6.3}\;
 \part{a} $\dst{y=\frac{2}{\sqrt{5}}\int_0^t
-f(t-\tau)e^{-3\tau/2}\sinh{\sqrt{5}\tau\over 2}\,d\tau}$\;
+f(t-\tau)e^{-3\tau/2}\sinh\frac{\sqrt{5}\tau}{2}\,d\tau}$\;
 \part{b}  $\dst{y=\frac{1}{2}\int_0^t
 f(t-\tau)\sin 2\tau\,d\tau}$
 
@@ -5318,7 +5314,7 @@ $y=\dst{2x^2-3x^3+\frac{1}{x}}$\;
 \answer{9.1.3}
 $y=2e^x+3e^{-x}-e^{2x}+e^{-3x}$\;
 \answer{9.1.4}
-$\dst{y_i={(x-x_0)^{i-1}\over(i-1)!},\,1\le i
+$\dst{y_i=\frac{(x-x_0)^{i-1}}{(i-1)!},\,1\le i
 \le n}$
 
 \answer{9.1.5}
@@ -5537,21 +5533,21 @@ $\mbox{distinct});$\;  $y=[c_1+c_2 \ln x+c_3(\ln x)^2]x^{r_1}$;
 pp.~\pageref{exer:9.3.1}--\pageref{exer:9.3.75}}\medskip
 
 \answer{9.3.1} $y_p=e^{-x}(2+x-x^2)$
-\answer{9.3.2} $y_p=-\dst{e^{-3x}\over4}(3-x+x^2)$
+\answer{9.3.2} $y_p=-\dst\frac{e^{-3x}}{4}(3-x+x^2)$
 \answer{9.3.3} $y_p=e^x(1+x-x^2)$
 
 \answer{9.3.4} $y_p=e^{-2x}(1-5x+x^2)$.
 \answer{9.3.5} $y_p=-\dst\frac{xe^x}{2}(1-x+x^2-x^3)$
 
 \answer{9.3.6} $y_p=x^2e^x(1+x)$
-\answer{9.3.7} $y_p=\dst{xe^{-2x}\over2}(2+x)$
+\answer{9.3.7} $y_p=\dst\frac{xe^{-2x}}{2}(2+x)$
 \answer{9.3.8} $y_p=\dst\frac{x^2e^x}{2}(2+x)$
 
-\answer{9.3.9} $y_p=\dst{x^2e^{2x}\over2}(1+2x)$
+\answer{9.3.9} $y_p=\dst\frac{x^2e^{2x}}{2}(1+2x)$
 \answer{9.3.10} $y_p=x^2e^{3x}(2+x-x^2)$
 \answer{9.3.11} $y_p=x^2e^{4x}(2+x)$
 
-\answer{9.3.12} $y_p=\dst{x^3e^{x/2}\over48}(1+x)$
+\answer{9.3.12} $y_p=\dst\frac{x^3e^{x/2}}{48}(1+x)$
 \answer{9.3.13} $y_p=e^{-x}(1-2x+x^2)$
 \answer{9.3.14} $y_p=e^{2x}(1-x)$
 
@@ -5561,18 +5557,18 @@ pp.~\pageref{exer:9.3.1}--\pageref{exer:9.3.75}}\medskip
 
 \answer{9.3.18} $y_p=xe^x(1+x^3)$
 \answer{9.3.19} $y_p=xe^x(2+x)$
-\answer{9.3.20} $y_p=\dst{xe^{2x}\over6}(1-x^2)$
+\answer{9.3.20} $y_p=\dst\frac{xe^{2x}}{6}(1-x^2)$
 
 \answer{9.3.21} $y_p=4xe^{-x/2}(1+x)$
 \answer{9.3.22} $y_p=\dst\frac{xe^x}{6}(1+x^2)$
 
-\answer{9.3.23}   $y_p=\dst{x^2e^{2x}\over6}(1+x+x^2)$
-\answer{9.3.24}   $y_p=\dst{x^2e^{2x}\over6}(3+x+x^2)$
+\answer{9.3.23}   $y_p=\dst\frac{x^2e^{2x}}{6}(1+x+x^2)$
+\answer{9.3.24}   $y_p=\dst\frac{x^2e^{2x}}{6}(3+x+x^2)$
 \answer{9.3.25} $y_p=\dst\frac{x^3e^x}{48}(2+x)$
 
 \answer{9.3.26}  $y_p=\dst\frac{x^3e^x}{6}(1+x)$
-\answer{9.3.27}  $y_p=-\dst{x^3e^{-x}\over6}(1-x+x^2)$
-\answer{9.3.28}  $y_p=\dst{x^3e^{2x}\over12}(2+x-x^2)$
+\answer{9.3.27}  $y_p=-\dst\frac{x^3e^{-x}}{6}(1-x+x^2)$
+\answer{9.3.28}  $y_p=\dst\frac{x^3e^{2x}}{12}(2+x-x^2)$
 
 \answer{9.3.29} $y_p=e^{-x}\left[(1+x)\cos x+(2-x)\sin x\right]$
 \answer{9.3.30} $y_p=e^{-x}\left[(1-x)\cos2x+(1+x)\sin2
@@ -5586,29 +5582,29 @@ x]$
 \answer{9.3.33} $y_p=\dst\frac{x}{13}(8\cos2x+14\sin2x)$
 
 \answer{9.3.34} $y_p=xe^x[(1+x)\cos x+(3+x)\sin x]$
-\answer{9.3.35} $y_p=\dst{xe^{2x}\over2}[(3-x)\cos
+\answer{9.3.35} $y_p=\dst\frac{xe^{2x}}{2}[(3-x)\cos
 2x+\sin2x]$
 
-\answer{9.3.36} $y_p=-\dst{xe^{3x}\over12}(x\cos
+\answer{9.3.36} $y_p=-\dst\frac{xe^{3x}}{12}(x\cos
 3x+\sin3x)$
 \answer{9.3.37} $y_p=-\dst\frac{e^x}{10}(\cos x+7\sin x)$
 
 \answer{9.3.38} $y_p=\dst\frac{e^x}{12}(\cos2x-\sin2x)$
 \answer{9.3.39} $y_p=xe^{2x}\cos2x$
 
-\answer{9.3.40} $y_p=-\dst{e^{-x}\over2}[(1+x)\cos
+\answer{9.3.40} $y_p=-\dst\frac{e^{-x}}{2}[(1+x)\cos
 x+(2-x)\sin x]$
-\answer{9.3.41} $y_p=\dst{xe^{-x}\over10}(\cos x+2\sin x)$
+\answer{9.3.41} $y_p=\dst\frac{xe^{-x}}{10}(\cos x+2\sin x)$
 
 \answer{9.3.42} $y_p=\dst\frac{xe^x}{40}(3\cos2x-\sin2x)$
-\answer{9.3.43} $y_p=\dst{xe^{-2x}\over8}[(1-x)\cos
+\answer{9.3.43} $y_p=\dst\frac{xe^{-2x}}{8}[(1-x)\cos
 3x+(1+x)\sin3x]$
 
 \answer{9.3.44} $y_p=-\dst\frac{xe^x}{4}(1+x)\sin2x$
-\answer{9.3.45} $y_p=\dst{x^2e^{-x}\over4}(\cos x-2\sin x)$
+\answer{9.3.45} $y_p=\dst\frac{x^2e^{-x}}{4}(\cos x-2\sin x)$
 
-\answer{9.3.46} $y_p=-\dst{x^2e^{2x}\over32}(\cos2x-\sin2x)$
-\answer{9.3.47} $y_p=\dst{x^2e^{2x}\over8}(1+x)\sin x$
+\answer{9.3.46} $y_p=-\dst\frac{x^2e^{2x}}{32}(\cos2x-\sin2x)$
+\answer{9.3.47} $y_p=\dst\frac{x^2e^{2x}}{8}(1+x)\sin x$
 
 \answer{9.3.48} $y_p=2x^2e^x+xe^{2x}-\cos x$
 \answer{9.3.49} $y_p=e^{2x}+xe^x+2x\cos x$
@@ -5642,7 +5638,7 @@ c_1e^x+e^{-x}(c_2\cos x+c_3\sin x)$
 \answer{9.3.64} $y=\dst\frac{x^3e^x}{24}(4+x)
 +e^x(c_1+c_2x+c_3x^2)$
 
-\answer{9.3.65}   $y=\dst{x^2e^{-x}\over16}(1+2x-x^2)
+\answer{9.3.65}   $y=\dst\frac{x^2e^{-x}}{16}(1+2x-x^2)
 +e^x(c_1+c_2x)+e^{-x}(c_3+c_4x)$
 
 \answer{9.3.66} $y=e^{-2x}\dst{\left[\left(1+\frac{x}{2}\right)
@@ -5673,24 +5669,24 @@ pp.~\pageref{exer:9.4.1}--\pageref{exer:9.4.42}}\medskip
 \answer{9.4.2} $y_p=\dst\frac{8}{105}x^{7/2} e^{-x^2}$
 \answer{9.4.3} $y_p=x\ln|x|$
 
-\answer{9.4.4} $y_p=\dst{-{2(x^2+2)\over x}}$
-\answer{9.4.5} $y_p=\dst{-{xe^{-3x}\over64}}$
+\answer{9.4.4} $y_p=\dst{-\frac{2(x^2+2)}{x}}$
+\answer{9.4.5} $y_p=\dst{-\frac{xe^{-3x}}{64}}$
 \answer{9.4.6} $y_p=-\dst\frac{2x^2}{3}$
 
-\answer{9.4.7} $y_p=-\dst{e^{-x}(x+1)\over x}$
+\answer{9.4.7} $y_p=-\dst\frac{e^{-x}(x+1)}{x}$
 \answer{9.4.8} $y_p=2x^2\ln|x|$
 \answer{9.4.9} $y_p=x^2+1$
 
 \answer{9.4.10} $y_p=\dst\frac{2x^2+6}{3}$
-\answer{9.4.11} $y_p=\dst{x^2\ln|x|\over3}$
+\answer{9.4.11} $y_p=\dst\frac{x^2\ln|x|}{3}$
 \answer{9.4.12} $y_p=-x^2-2$
 
  \answer{9.4.13} $\dst{\frac{1}{4} x^3
 \ln |x|-\frac{25}{48}x^3}$
-\answer{9.4.14} $y_p=\dst{x^{5/2}\over4}$
-\answer{9.4.15} $y_p=\dst{x(12-x^2)\over6}$
+\answer{9.4.14} $y_p=\dst\frac{x^{5/2}}{4}$
+\answer{9.4.15} $y_p=\dst\frac{x(12-x^2)}{6}$
 
-\answer{9.4.16} $y_p=\dst{x^4\ln|x|\over6}$
+\answer{9.4.16} $y_p=\dst\frac{x^4\ln|x|}{6}$
 \answer{9.4.17} $y_p=\dst\frac{x^3e^x}{2}$
 \answer{9.4.18} $y_p= x^2\ln|x|$
 
@@ -5712,46 +5708,45 @@ x)^2+3x-x^4+2x^4\ln x}$
 $y=\dst{\left(\frac{x^2}{3}-\frac{x}{2}\right)\ln|x|+4x-2x^2}$
 
 \answer{9.4.28}
-$y=\dst{-{xe^x(1+3x)\over2}+\frac{x+1}{2}-\frac{e^x}{4}+{e^{3x}\over2}}$
+$y=\dst\frac{-{xe^x(1+3x)}{2}+\frac{x+1}{2}-\frac{e^x}{4}+\frac{e^{3x}}{2}}$
 \answer{9.4.29} $y=-8x+2x^2-2x^3+2e^x-e^{-x}$
 
 \answer{9.4.30} $y=3x^2\ln x-7x^2$
 \answer{9.4.31}
-$y=\dst{{3(4x^2+9)\over2}+\frac{x}{2}-\frac{e^x}{2}+{e^{-x}\over2}+{e^{2x}\over4}}$
+$y=\dst{\frac{3(4x^2+9)}{2}+\frac{x}{2}-\frac{e^x}{2}+\frac{e^{-x}}{2}+\frac{e^{2x}}{4}}$
 
 \answer{9.4.32}
 $y=x\ln x+x-\sqrt x+\dst\frac{1}{x}+\frac{1}{\sqrt x}$.
 \answer{9.4.33}  $y=\dst{x^3\ln|x|+x-2x^3+\frac{1}{x}-\frac{1}{x^2}}$
 
 \answer{9.4.35}
-$y_p=\dst{\int_{x_0}^x {e^{(x-t)}-3e^{-(x-t)}+2e^{-2(x-t)}\over6}
+$y_p=\dst{\int_{x_0}^x\frac{e^{(x-t)}-3e^{-(x-t)}+2e^{-2(x-t)}}{6}
 F(t)\,dt}$
 \answer{9.4.36}
-$y_p=\dst{\int_{x_0}^x {(x-t)^2(2x+t)\over6xt^3}
+$y_p=\dst{\int_{x_0}^x\frac{(x-t)^2(2x+t)}{6xt^3}
 F(t)\,dt}$
 
 \answer{9.4.37}
-$y_p=\dst{\int_{x_0}^x {xe^{(x-t)}-x^2+x(t-1)\over t^4}
+$y_p=\dst{\int_{x_0}^x\frac{xe^{(x-t)}-x^2+x(t-1)}{t^4}
 F(t)\,dt}$
 \answer{9.4.38}
-$y_p=\dst{\int_{x_0}^x {x^2-t(t-2)-2te^{(x-t)}\over 2x(t-1)^2}
+$y_p=\dst{\int_{x_0}^x\frac{x^2-t(t-2)-2te^{(x-t)}}{2x(t-1)^2}
 F(t)\,dt}$
 
 \answer{9.4.39}
 $y_p=\dst{\int_{x_0}^x
-{e^{2(x-t)}-2e^{(x-t)}+2e^{-(x-t)}-e^{-2(x-t)}\over12
-} F(t)\,dt}$
+\frac{e^{2(x-t)}-2e^{(x-t)}+2e^{-(x-t)}-e^{-2(x-t)}}{12} F(t)\,dt}$
 
 \answer{9.4.40}
-$y_p=\dst{\int_{x_0}^x {(x-t)^3\over6x}
+$y_p=\dst{\int_{x_0}^x\frac{(x-t)^3}{6x}
 F(t)\,dt}$
 
 \answer{9.4.41}
-$y_p=\dst\int_{x_0}^x{(x+t)(x-t)^3\over12x^2t^3}F(t)\,dt$
+$y_p=\dst\int_{x_0}^x\frac{(x+t)(x-t)^3}{12x^2t^3}F(t)\,dt$
 
 \answer{9.4.42}
 $y_p=\dst{\int_{x_0}^x
-{e^{2(x-t)}(1+2t)+e^{-2(x-t)}(1-2t)-4x^2+4t^2-2\over32t^2}
+\frac{e^{2(x-t)}(1+2t)+e^{-2(x-t)}(1-2t)-4x^2+4t^2-2}{32t^2}
 F(t)\,dt}$
 
 
@@ -5784,15 +5779,12 @@ $m_2y_2''=(c_2-c_3)y_1'-(c_2+c_3)y_2'+c_3y_3'+(k_2-k_3)y_1
 $m_3y_3''=c_3y_1'+c_3y_2'-c_3y_3'+k_3y_1+k_3y_2-k_3y_3+F_3$
 
 \answer{10.1.4}
-$x''=-\dst{\frac{\alpha}{m}x'+{gR^2x
-\over(x^2+y^2+z^2)^{3/2}}}$\;
- $y''=-\dst{\frac{\alpha}{m}y'+{gR^2y
-\over\left(x^2+y^2+z^2\right)^{3/2}}}$
+$x''=-\dst{\frac{\alpha}{m}x'+\frac{gR^2x}{(x^2+y^2+z^2)^{3/2}}}$\;
+ $y''=-\dst{\frac{\alpha}{m}y'+\frac{gR^2y}{\left(x^2+y^2+z^2\right)^{3/2}}}$
 
 \smallskip
 \quad\;
-$z''=-\dst{\frac{\alpha}{m}z'+{gR^2z
-\over\left(x^2+y^2+z^2\right)^{3/2}}}$
+$z''=-\dst{\frac{\alpha}{m}z'+\frac{gR^2z}{\left(x^2+y^2+z^2\right)^{3/2}}}$
 
 \answer{10.1.5}
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -5898,14 +5890,14 @@ pp.~\pageref{exer:10.3.1}--\pageref{exer:10.3.18}}\medskip
 
 \answer{10.3.2}
 $\dst{{\bf
-y}'=\left[\begin{array}{cc}0&1\\[\jot]-\dst{P_2(x)\over P_0(x)
-}&-\dst{P_1(x)\over P_0(x)}\end{array}\right]{\bf y}}$
+y}'=\left[\begin{array}{cc}0&1\\[\jot]-\dst\frac{P_2(x)}{P_0(x)
+}&-\dst\frac{P_1(x)}{P_0(x)}\end{array}\right]{\bf y}}$
 \quad
 \answer{10.3.3}
 ${\bf y}'=\left[\begin{array}{cccc}
 0&1&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\\[\jot]
--\dst{P_n(x)\over P_0(x)}&-\dst{P_{n-1}(x)\over P_0(x)}&\cdots&
--\dst{P_1(x)\over P_0(x)}\end{array}\right]{\bf y}$
+-\dst\frac{P_n(x)}{P_0(x)}&-\dst\frac{P_{n-1}(x)}{P_0(x)}&\cdots&
+-\dst\frac{P_1(x)}{P_0(x)}\end{array}\right]{\bf y}$
 
 \smallskip
 
@@ -6322,17 +6314,17 @@ te^{-2t}\right)$
 \smallskip
 \answer{10.5.6}
 ${\bf y}=\dst{c_1\twocol32e^{-4t}+
-c_2\left(\twocol{-1}{\phantom{-}0}{e^{-4t}\over2}+\twocol32te^{-4t}\right)}$
+c_2\left(\twocol{-1}{\phantom{-}0}\frac{e^{-4t}}{2}+\twocol32te^{-4t}\right)}$
 
 \smallskip
 \answer{10.5.7}
  ${\bf y}=\dst{c_1\twocol43e^{-t}+
-c_2\left(\twocol{-1}{\phantom{-}0}{e^{-t}\over3}+\twocol43te^{-t}\right)}$
+c_2\left(\twocol{-1}{\phantom{-}0}\frac{e^{-t}}{3}+\twocol43te^{-t}\right)}$
 
 \smallskip
 \answer{10.5.8}
 ${\bf y}=\dst{c_1\threecol{-1}{-1}2+c_2\threecol112e^{4t}+
-c_3\left(\threecol010{e^{4t}\over2}+\threecol112te^{4t}\right)}$
+c_3\left(\threecol010\frac{e^{4t}}{2}+\threecol112te^{4t}\right)}$
 
 \smallskip
 \answer{10.5.9}
@@ -6342,19 +6334,19 @@ c_3\left(\threecol010{e^{4t}\over2}+\threecol112te^{4t}\right)}$
 \smallskip
 \answer{10.5.10}
 ${\bf y}=\dst{c_1\threecol011e^{2t}+c_2\threecol101e^{-2t}+c_3\left
-(\threecol110{e^{-2t}\over2}+\threecol101te^{-2t}\right)}$
+(\threecol110\frac{e^{-2t}}{2}+\threecol101te^{-2t}\right)}$
 
 \smallskip
 \answer{10.5.11}
  ${\bf y}=\dst{
 c_1\threecol{-2}{-3}1e^{2t}+c_2\threecol0{-1}1e^{4t}+c_3\left
-(\threecol100{e^{4t}\over2}+\threecol0{-1}1te^{4t}\right)}$
+(\threecol100\frac{e^{4t}}{2}+\threecol0{-1}1te^{4t}\right)}$
 
 \smallskip
 \answer{10.5.12}
  ${\bf y}=\dst{
 c_1\threecol{-1}{-1}1e^{-2t}+c_2\threecol111e^{4t}+c_3\left
-(\threecol100{e^{4t}\over2}+\threecol111te^{4t}\right)}$.
+(\threecol100\frac{e^{4t}}{2}+\threecol111te^{4t}\right)}$.
 
 \smallskip
 \answer{10.5.13}
@@ -6401,37 +6393,37 @@ ${\bf y}=\dst{\threecol363e^{4t}-\threecol341+\threecol844t}$
 
 \answer{10.5.24}
 ${\bf y}=\dst{c_1\threecol011e^{6t}+
-c_2\left(\threecol{-1}10{e^{6t}\over4}+\threecol011te^{6t}\right)}$
-\[+c_3\left(\threecol110{e^{6t}\over8}+\threecol{-1}10{t
-e^{6t}\over4}+\threecol011{t^2e^{6t}\over2}\right)\]
+c_2\left(\threecol{-1}10\frac{e^{6t}}{4}+\threecol011te^{6t}\right)}$
+\[+c_3\left(\threecol110\frac{e^{6t}}{8}+\threecol{-1}10\frac{t
+e^{6t}}{4}+\threecol011\frac{t^2e^{6t}}{2}\right)\]
 
 \smallskip
 \answer{10.5.25}
  ${\bf y}=\dst{c_1\threecol{-1}11e^{3t}+
-c_2\left(\threecol100{e^{3t}\over2}+\threecol{-1}11te^{3t}\right)}$
-\[+c_3\left(\threecol120{e^{3t}\over36}+\threecol100
-{te^{3t}\over2}+\threecol{-1}11{t^2e^{3t}\over2}\right)\]
+c_2\left(\threecol100\frac{e^{3t}}{2}+\threecol{-1}11te^{3t}\right)}$
+\[+c_3\left(\threecol120\frac{e^{3t}}{36}+\threecol100
+\frac{te^{3t}}{2}+\threecol{-1}11\frac{t^2e^{3t}}{2}\right)\]
 
 \smallskip
 \answer{10.5.26}
 ${\bf y}=\dst{c_1\threecol0{-1}1e^{-2t}+
 c_2\left(\threecol{{-1}}10e^{-2t}+\threecol0{-1}1te^{-2t}\right)}$
-\[+c_3\left(\threecol3{-2}0{e^{-2t}\over4}+\threecol{-1}10t
-e^{-2t}+\threecol0{-1}1{t^2e^{-2t}\over2}\right)\]
+\[+c_3\left(\threecol3{-2}0\frac{e^{-2t}}{4}+\threecol{-1}10t
+e^{-2t}+\threecol0{-1}1\frac{t^2e^{-2t}}{2}\right)\]
 
 \smallskip
 \answer{10.5.27}
  ${\bf y}=\dst{c_1\threecol011e^{2t}+
-c_2\left(\threecol110{e^{2t}\over2}+\threecol011te^{2t}\right)}$
-\[+c_3\left(\threecol{-1}10{e^{2t}\over8}+\threecol110{t
-e^{2t}\over2}+\threecol011{t^2e^{2t}\over2}\right)\]
+c_2\left(\threecol110\frac{e^{2t}}{2}+\threecol011te^{2t}\right)}$
+\[+c_3\left(\threecol{-1}10\frac{e^{2t}}{8}+\threecol110\frac{t
+e^{2t}}{2}+\threecol011\frac{t^2e^{2t}}{2}\right)\]
 
 \smallskip
 \answer{10.5.28}
  ${\bf y}=\dst{c_1\threecol{-2}12e^{-6t}+
-c_2\left(-\threecol610{e^{-6t}\over6}+\threecol{-2}12te^{-6t}\right)}$
-\[+c_3\left(-\threecol{12}10{e^{-6t}\over36}-\threecol610{t
-e^{-6t}\over6}+\threecol{-2}12{t^2e^{-6t}\over2}\right).\]\
+c_2\left(-\threecol610\frac{e^{-6t}}{6}+\threecol{-2}12te^{-6t}\right)}$
+\[+c_3\left(-\threecol{12}10\frac{e^{-6t}}{36}-\threecol610\frac{t
+e^{-6t}}{6}+\threecol{-2}12\frac{t^2e^{-6t}}{2}\right).\]\
 
 \smallskip
 \answer{10.5.29}
@@ -6450,7 +6442,7 @@ y}=\dst{c_1\threecol{-1}01e^{-3t}+c_2\threecol010e^{-3t}+c_3\left
 \answer{10.5.31}
  ${\bf y}=\dst{
 c_1\threecol201e^{-t}+c_2\threecol{-3}20e^{-t}+c_3\left
-(\threecol100{e^{-t}\over2}+\threecol{-1}21te^{-t}\right)}$
+(\threecol100\frac{e^{-t}}{2}+\threecol{-1}21te^{-t}\right)}$
 
 \smallskip
 \answer{10.5.32}

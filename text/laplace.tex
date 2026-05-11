@@ -345,7 +345,7 @@ Use  Theorem~\ref{thmtype:8.1.2} and the known Laplace transform
 
 \solution  By definition,
 \[
-\cosh bt={e^{bt}+e^{-bt}\over 2}.
+\cosh bt=\frac{e^{bt}+e^{-bt}}{2}.
 \]
 Therefore
 \begin{equation}\label{eq:8.1.9}
@@ -656,19 +656,16 @@ e^{-st}(-3e^{-t})\,dt.
 \]
 Since
 \[
-\int_0^1e^{-st}\,dt=\left\{\begin{array}{cl}\dst{{1-e^{-s}\over
-s}},&\quad s\ne0,\\[2\jot] 1,&\quad s=0,\end{array}\right.
+\int_0^1e^{-st}\,dt=\left\{\begin{array}{cl}\dst{\frac{1-e^{-s}}{s}},&\quad s\ne0,\\[2\jot] 1,&\quad s=0,\end{array}\right.
 \]
  and
 \[
 \int_1^\infty e^{-st}(-3e^{-t})\,dt=-3\int_1^\infty
-e^{-(s+1)t}\,dt=-{3e^{-(s+1)}\over s+1},\quad s>-1,
+e^{-(s+1)t}\,dt=-\frac{3e^{-(s+1)}}{s+1},\quad s>-1,
 \]
 it follows that
 \[
-F(s)=\left\{\begin{array}{rl}\dst{{1-e^{-s}\over
-s}-3{e^{-(s+1)}\over
-s+1}},&s>-1,\,s\ne0,\\\hfill\dst{1-\frac{3}{e}}\hfill,&
+F(s)=\left\{\begin{array}{rl}\dst{\frac{1-e^{-s}}{s}-3\frac{e^{-(s+1)}}{s+1}},&s>-1,\,s\ne0,\\\hfill\dst{1-\frac{3}{e}}\hfill,&
 s=0.\end{array}\right.
 \]
 This is consistent with Theorem~\ref{thmtype:8.1.6}, since
@@ -691,7 +688,7 @@ We stated  earlier that
 for all $s$, so Theorem~\ref{thmtype:8.1.6} implies that $f(t)=e^{t^2}$
 is not  of exponential order, since
 \[
-\lim_{t\to\infty} {e^{t^2}\over Me^{s_0t}}=\lim_{t\to\infty} \frac{1}{M} e^{t^2-s_0t}=\infty,
+\lim_{t\to\infty}\frac{e^{t^2}}{Me^{s_0t}}=\lim_{t\to\infty} \frac{1}{M} e^{t^2-s_0t}=\infty,
 \]
 so
 \[
@@ -838,7 +835,7 @@ the left.}
 Suppose $f$ is piecewise continuous and of exponential
 order, and that $\lim_{t\to 0+} f(t)/t$ exists.  Show that
 \[
-{\cal L}\left({f(t)\over t}\right)=\int^\infty_s F(r)\,dr.
+{\cal L}\left(\frac{f(t)}{t}\right)=\int^\infty_s F(r)\,dr.
 \]
 \hint{Use  the results of Exercises~$6$ and $11$.}
 
@@ -880,7 +877,7 @@ functions.
 \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
 \part{a} $\dst{\frac{\sin\omega t}{t}\quad(\omega>0)}$ &
 \part{b} $\dst{\frac{\cos\omega t-1}{t}}\quad (\omega>0)$ &
-\part{c} $\dst{{e^{at}-e^{bt}\over t}}$\\[2\jot]
+\part{c} $\dst{\frac{e^{at}-e^{bt}}{t}}$\\[2\jot]
 \part{d} $\dst{\frac{\cosh t-1}{t}}$ &
 \part{e} $\dst{\frac{\sinh^2 t}{t}}$
 \end{tabular}
@@ -902,7 +899,7 @@ which can be shown to converge if $\alpha>0$.
 \item % (c)
  From  \part{b} and the table of Laplace transforms,
 \[
-{\cal L}(t^\alpha)={\Gamma (\alpha+1)\over s^{\alpha+1}},\quad s>0,
+{\cal L}(t^\alpha)=\frac{\Gamma (\alpha+1)}{s^{\alpha+1}},\quad s>0,
 \]
 if $\alpha$ is a nonnegative integer.  Show that this formula is valid for
 any $\alpha>-1$. \hint{Change the variable of integration in the
@@ -1090,7 +1087,7 @@ Using the Laplace transform to
 often requires  finding the inverse
 transform of a rational function
 \[
-F(s)={P(s)\over Q(s)},
+F(s)=\frac{P(s)}{Q(s)},
 \]
 where $P$ and $Q$ are polynomials in $s$ with no common factors. Since
 it can be shown that $\lim_{s\to\infty}F(s)=0$ if $F$ is a Laplace
@@ -1172,7 +1169,7 @@ and an extension of this theorem, see Exercise~\ref{exer:8.2.10}.
 \begin{theorem}\color{blue}\label{thmtype:8.2.2}
 Suppose
 \begin{equation}\label{eq:8.2.6}
-F(s)={P(s)\over(s-s_1)(s-s_2)\cdots(s-s_n)},
+F(s)=\frac{P(s)}{(s-s_1)(s-s_2)\cdots(s-s_n)},
 \end{equation}
 where $s_1$, $s_2,$ \dots$,$ $s_n$ are distinct  and $P$ is a polynomial of
 degree less than $n.$  Then
@@ -1185,7 +1182,7 @@ by ignoring the factor $s-s_i$  and setting $s=s_i$ elsewhere.
 \begin{example}\label{example:8.2.5}\rm Find the inverse Laplace transform
 of
 \begin{equation}\label{eq:8.2.7}
-F(s)={6+(s+1)(s^2-5s+11)\over s(s-1)(s-2)(s+1)}.
+F(s)=\frac{6+(s+1)(s^2-5s+11)}{s(s-1)(s-2)(s+1)}.
 \end{equation}
 \end{example}
 
@@ -1197,14 +1194,14 @@ F(s)=\frac{A}{s}+\frac{B}{s-1}+\frac{C}{s-2}+\frac{D}{s+1}.
 To find $A$, we ignore the factor $s$ in the denominator of
 \eqref{eq:8.2.7} and set $s=0$ elsewhere. This yields
 \[
-A={6+(1)(11)\over(-1)(-2)(1)}=\frac{17}{2}.
+A=\frac{6+(1)(11)}{(-1)(-2)(1)}=\frac{17}{2}.
 \]
 Similarly, the other coefficients are given by
 \[
-B={6+(2)(7)\over(1)(-1)(2)}=-10,
+B=\frac{6+(2)(7)}{(1)(-1)(2)}=-10,
 \]
 \[
-C={6+3(5)\over2(1)(3)}=\frac{7}{2},
+C=\frac{6+3(5)}{2(1)(3)}=\frac{7}{2},
 \]
 and
 \[
@@ -1217,8 +1214,8 @@ F(s)=\frac{17}{2}\,\frac{1}{s}-\frac{10}{s-1}+\frac{7}{2}\,\frac{1}{s-2}-\frac{1
 and
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
- \frac{17}{2}{\cal L}^{-1}\left(\frac{1}{s}\right)-10{\cal L}^{-1}\left(1
-\over s-1\right)+\frac{7}{2}{\cal L}^{-1}\left(\frac{1}{s-2}\right)-{\cal L}^{-1}\left(\frac{1}{s+1}\right)\\[1\jot]
+ \frac{17}{2}{\cal L}^{-1}\left(\frac{1}{s}\right)-10{\cal L}^{-1}\left(\frac{1
+}{s-1}\right)+\frac{7}{2}{\cal L}^{-1}\left(\frac{1}{s-2}\right)-{\cal L}^{-1}\left(\frac{1}{s+1}\right)\\[1\jot]
 &=& \frac{17}{2}-10e^t+\frac{7}{2}e^{2t}-e^{-t}.
 \end{eqnarray*}
 
@@ -1232,7 +1229,7 @@ computing the coefficients in \eqref{eq:8.2.8}, since
 \begin{example}\label{example:8.2.6}\rm Find the inverse Laplace transform
 of
 \begin{equation}\label{eq:8.2.9}
-F(s)={8-(s+2)(4s+10)\over(s+1)(s+2)^2}.
+F(s)=\frac{8-(s+2)(4s+10)}{(s+1)(s+2)^2}.
 \end{equation}
 \end{example}
 
@@ -1245,7 +1242,7 @@ Because of the repeated factor $(s+2)^2$ in \eqref{eq:8.2.9}, Heaviside's
 method doesn't work. Instead, we find a common denominator in
 \eqref{eq:8.2.10}. This yields
 \begin{equation}\label{eq:8.2.11}
-F(s)={A(s+2)^2+B(s+1)(s+2)+C(s+1)\over(s+1)(s+2)^2}.
+F(s)=\frac{A(s+2)^2+B(s+1)(s+2)+C(s+1)}{(s+1)(s+2)^2}.
 \end{equation}
 If  \eqref{eq:8.2.9} and  \eqref{eq:8.2.11} are to be equivalent, then
 \begin{equation}\label{eq:8.2.12}
@@ -1266,7 +1263,7 @@ F(s)=\frac{2}{s+1}-\frac{6}{s+2}-\frac{8}{(s+2)^2}
 and
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
-2{\cal L}^{-1}\left(\frac{1}{s+1}\right)-6{\cal L}^{-1}\left(\frac{1}{s+2}\right)-8{\cal L}^{-1}\left(1\over(s+2)^2\right)\\[1\jot]
+2{\cal L}^{-1}\left(\frac{1}{s+1}\right)-6{\cal L}^{-1}\left(\frac{1}{s+2}\right)-8{\cal L}^{-1}\left(\frac{1}{(s+2)^2}\right)\\[1\jot]
 &=&2e^{-t}-6e^{-2t}-8te^{-2t}.
 \end{eqnarray*}
 
@@ -1289,7 +1286,7 @@ s^2-5s+7=[(s+2)-2]^2-5[(s+2)-2]+7=(s+2)^2-9(s+2)+21.
 \]
 Therefore
 \begin{eqnarray*}
-F(s)&=&{(s+2)^2-9(s+2)+21\over(s+2)^3}\\[10pt]
+F(s)&=&\frac{(s+2)^2-9(s+2)+21}{(s+2)^3}\\[10pt]
 &=&\frac{1}{s+2}-\frac{9}{(s+2)^2}+\frac{21}{(s+2)^3}
 \end{eqnarray*}
 and
@@ -1304,7 +1301,7 @@ e^{-2t}\left(1-9t+\frac{21}{2}t^2\right).
 \begin{example}\label{example:8.2.8}\rm %\exampleinverse
  Find the inverse Laplace transform of
 \begin{equation}\label{eq:8.2.13}
-F(s)={1-s(5+3s)\over s\left[(s+1)^2+1\right]}.
+F(s)=\frac{1-s(5+3s)}{s\left[(s+1)^2+1\right]}.
 \end{equation}
 \end{example}
 
@@ -1325,12 +1322,11 @@ of
 \]
 respectively. Therefore, instead of \eqref{eq:8.2.14} we write
 \begin{equation}\label{eq:8.2.15}
-F(s)=\frac{A}{s}+{B(s+1)+C\over(s+1)^2+1}.
+F(s)=\frac{A}{s}+\frac{B(s+1)+C}{(s+1)^2+1}.
 \end{equation}
 Finding a common denominator yields
 \begin{equation}\label{eq:8.2.16}
-F(s)={A\left[(s+1)^2+1\right]+B(s+1)s+Cs\over
-s\left[(s+1)^2+1\right]}.
+F(s)=\frac{A\left[(s+1)^2+1\right]+B(s+1)s+Cs}{s\left[(s+1)^2+1\right]}.
 \end{equation}
 If  \eqref{eq:8.2.13} and  \eqref{eq:8.2.16} are to be equivalent, then
 \[
@@ -1356,9 +1352,7 @@ Therefore
 \begin{eqnarray*}
 {\cal L}^{-1}(F)&=&
 \frac{1}{2}{\cal L}^{-1}\left(\frac{1}{s}\right)-\frac{7}{2}{\cal
-L}^{-1}\left(s+1
-\over(s+1)^2+1\right)-\frac{5}{2} {\cal L}^{-1}\left(1\over
-(s+1)^2+1\right)\\[1\jot]
+L}^{-1}\left(\frac{s+1}{(s+1)^2+1}\right)-\frac{5}{2} {\cal L}^{-1}\left(\frac{1}{(s+1)^2+1}\right)\\[1\jot]
 &=& \frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t.
 \end{eqnarray*}
 
@@ -1449,14 +1443,12 @@ transform.
  Use Heaviside's method to find the inverse Laplace transform.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a}  $\dst{3-(s+1)(s-2)\over(s+1)(s+2)(s-2)}$&
-\part{b}  $\dst{7+(s+4)(18-3s)\over(s-3)(s-1)(s+4)}$\\[10pt]
-\part{c}  $\dst{2+(s-2)(3-2s)\over(s-2)(s+2)(s-3)}$ &
-\part{d}  $\dst{3-(s-1)(s+1)\over(s+4)(s-2)(s-1)}$\\[10pt]
-\part{e}
-$\dst{3+(s-2)(10-2s-s^2)\over(s-2)(s+2)(s-1)(s+3)}$
-&
-\part{f}  $\dst{3+(s-3)(2s^2+s-21)\over(s-3)(s-1)(s+4)(s-2)}$
+\part{a}  $\dst\frac{3-(s+1)(s-2)}{(s+1)(s+2)(s-2)}$&
+\part{b}  $\dst\frac{7+(s+4)(18-3s)}{(s-3)(s-1)(s+4)}$\\[10pt]
+\part{c}  $\dst\frac{2+(s-2)(3-2s)}{(s-2)(s+2)(s-3)}$ &
+\part{d}  $\dst\frac{3-(s-1)(s+1)}{(s+4)(s-2)(s-1)}$\\[10pt]
+\part{e}  $\dst\frac{3+(s-2)(10-2s-s^2)}{(s-2)(s+2)(s-1)(s+3)}$ &
+\part{f}  $\dst\frac{3+(s-3)(2s^2+s-21)}{(s-3)(s-1)(s+4)(s-2)}$
 \end{tabular}
 
 \item\label{exer:8.2.4}
@@ -1532,7 +1524,7 @@ Laplace transform of $F(as-b)$, where $a>0$.
 If $s_1$, $s_2$, \dots, $s_n$ are distinct and $P$ is a polynomial of
 degree less than $n$, then
 \[
-{P(s)\over(s-s_1)(s-s_2)\cdots(s-s_n)}=
+\frac{P(s)}{(s-s_1)(s-s_2)\cdots(s-s_n)}=
 \frac{A_1}{s-s_1}+\frac{A_2}{s-s_2}+\cdots+\frac{A_n}{s-s_n}.
 \]
 Multiply through by $s-s_i$ to show that
@@ -1544,7 +1536,7 @@ $\mbox{degree}(P)\le\mbox{degree}(Q_1)$ and $Q_1(s_1)\ne0$.
 Show that the coefficient of $1/(s-s_1)$ in the partial fraction
 expansion of
 \[
-F(s)={P(s)\over(s-s_1)Q_1(s)}
+F(s)=\frac{P(s)}{(s-s_1)Q_1(s)}
 \]
 is $P(s_1)/Q_1(s_1)$.
 \item % (c)
@@ -1743,11 +1735,11 @@ Therefore
 \end{equation}
 so
 \[
-(s-5)(s-1)Y(s)={3+(s-2)(2s-9)\over s-2},
+(s-5)(s-1)Y(s)=\frac{3+(s-2)(2s-9)}{s-2},
 \]
 and
 \[
-Y(s)={3+(s-2)(2s-9)\over(s-2)(s-5)(s-1)}.
+Y(s)=\frac{3+(s-2)(2s-9)}{(s-2)(s-5)(s-1)}.
 \]
 Heaviside's method yields the partial fraction expansion
 \[
@@ -1822,7 +1814,7 @@ so \eqref{eq:8.3.13} becomes
 \]
 Solving  for $Y(s)$ yields
 \[
-Y(s)={4\left(1-(s+2)(s+1)\right)\over (s+1/2)(s+1)(s+2)}.
+Y(s)=\frac{4\left(1-(s+2)(s+1)\right)}{(s+1/2)(s+1)(s+2)}.
 \]
 Heaviside's method yields the partial fraction expansion
 \[
@@ -1876,7 +1868,7 @@ so \eqref{eq:8.3.13} becomes
 \]
 Solving for $Y(s)$ yields
 \[
-Y(s)={1-s(5+3s)\over s\left[(s+1)^2+1\right]}.
+Y(s)=\frac{1-s(5+3s)}{s\left[(s+1)^2+1\right]}.
 \]
 In Example~\ref{example:8.2.8}  we found the inverse transform of this
 function to be
@@ -2364,14 +2356,14 @@ argument of the inverse transform by $\tau$ units.}
 \begin{example}\label{example:8.4.6}\rm
  Use \eqref{eq:8.4.12} to find
 \[
-{\cal L}^{-1}\left(e^{-2s}\over s^2\right).
+{\cal L}^{-1}\left(\frac{e^{-2s}}{s^2}\right).
 \]
 \end{example}
 
 \solution  To apply \eqref{eq:8.4.12} we let
 $\tau=2$ and $G(s)=1/s^2$. Then $g(t)=t$ and \eqref{eq:8.4.12} implies that
 \[
-{\cal L}^{-1}\left(e^{-2s}\over s^2\right)=u(t-2)(t-2).\bbox
+{\cal L}^{-1}\left(\frac{e^{-2s}}{s^2}\right)=u(t-2)(t-2).\bbox
 \]
 
 \begin{example}\label{example:8.4.7}\rm
@@ -2419,11 +2411,11 @@ s}\frac{s+1}{s^2+6s+10}.
 
 \solution  Let
 \[
-G_0(s)=\frac{2s}{s^2+4},\quad G_1(s)=-{(3s+1)\over s^2+9},
+G_0(s)=\frac{2s}{s^2+4},\quad G_1(s)=-\frac{(3s+1)}{s^2+9},
 \]
 and
 \[
-G_2(s)=\frac{s+1}{s^2+6s+10}={(s+3)-2\over (s+3)^2+1}.
+G_2(s)=\frac{s+1}{s^2+6s+10}=\frac{(s+3)-2}{(s+3)^2+1}.
 \]
 Then
 \[
@@ -2571,29 +2563,29 @@ Where indicated by \CGex, graph the inverse transform.}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{112pt}@{}p{68pt}}
 % TODO 19--20 in two columns
-\item\label{exer:8.4.19} $\dst{H(s)={e^{-2s}\over s-2}}$%&
-\item\label{exer:8.4.20} $\dst{H(s)={e^{-s}\over s(s+1)}}$
+\item\label{exer:8.4.19} $\dst\frac{H(s)={e^{-2s}}{s-2}}$%&
+\item\label{exer:8.4.20} $\dst\frac{H(s)={e^{-s}}{s(s+1)}}$
 %\end{tabular}
 
-\item\label{exer:8.4.21} \CGex $\dst{H(s)={e^{-s}\over s^3}+
-{e^{-2s}\over s^2}}$
+\item\label{exer:8.4.21} \CGex $\dst\frac{H(s)={e^{-s}}{s^3}+
+\frac{e^{-2s}}{s^2}}$
 
 \item\label{exer:8.4.22} \CGex $\dst{H(s)=\left(\frac{2}{s}+\frac{1}{s^2}\right)
 +e^{-s}\left(\frac{3}{s}-\frac{1}{s^2}\right)+e^{-3s}\left(\frac{1}{s}+\frac{1}{s^2}\right)}$
 
 \item\label{exer:8.4.23} $\dst{H(s)=\left(\frac{5}{s}-\frac{1}{s^2}\right)
-+e^{-3s}\left(\frac{6}{s}+\frac{7}{s^2}\right)+{3e^{-6s}\over s^3}}$
++e^{-3s}\left(\frac{6}{s}+\frac{7}{s^2}\right)+\frac{3e^{-6s}}{s^3}}$
 
-\item\label{exer:8.4.24} $\dst{H(s)={e^{-\pi s} (1-2s)\over s^2+4s+5}}$
+\item\label{exer:8.4.24} $\dst{H(s)=\frac{e^{-\pi s} (1-2s)}{s^2+4s+5}}$
 
 \item\label{exer:8.4.25} \CGex $\dst{H(s)=\left(\frac{1}{s}-\frac{s}{s^2+1}\right)+e^{-\frac{\pi}{2}s}\left(\frac{3s-1}{s^2+1}\right)}$
 
 \item\label{exer:8.4.26} $\dst{H(s)=
-e^{-2s}\left[{3(s-3)\over(s+1)(s-2)}-\frac{s+1}{(s-1)(s-2)}\right]}$
+e^{-2s}\left[\frac{3(s-3)}{(s+1)(s-2)}-\frac{s+1}{(s-1)(s-2)}\right]}$
 
 \item\label{exer:8.4.27} $\dst{H(s)=\frac{1}{s}+\frac{1}{s^2}+e^{-s}\left(\frac{3}{s}+\frac{2}{s^2}\right) +e^{-3s}\left(\frac{4}{s}+\frac{3}{s^2}\right)}$
 
-\item\label{exer:8.4.28} $\dst{H(s)=\frac{1}{s}-\frac{2}{s^3}+e^{-2s}\left(\frac{3}{s}-\frac{1}{s^3}\right) +{e^{-4s}\over s^2}}$
+\item\label{exer:8.4.28} $\dst{H(s)=\frac{1}{s}-\frac{2}{s^3}+e^{-2s}\left(\frac{3}{s}-\frac{1}{s^3}\right) +\frac{e^{-4s}}{s^2}}$
 
 \item\label{exer:8.4.29} Find ${\cal L}\left(u(t-\tau)\right)$.
 
@@ -2866,11 +2858,11 @@ f(t)=1-2u\left(t-\frac{\pi}{2}\right),
 \]
 so Theorem~\ref{thmtype:8.4.1} (with $g(t)=1$) implies that
 \[
-{\cal L}(f)={1-2e^{-{\pi s/2}}\over s}.
+{\cal L}(f)=\frac{1-2e^{-{\pi s/2}}}{s}.
 \]
 Therefore, transforming  \eqref{eq:8.5.5} yields
 \[
-(s^2+1)Y(s)={1-2e^{-{\pi s/ 2}}\over s}-1+2s,
+(s^2+1)Y(s)=\frac{1-2e^{-{\pi s/ 2}}}{s}-1+2s,
 \]
  so
 \begin{equation}\label{eq:8.5.6}
@@ -2905,8 +2897,7 @@ g(t)=1-\cos t.
 From this,  \eqref{eq:8.5.6}, and
 Theorem~\ref{thmtype:8.4.2},
 \[
-y=1-\cos t-2u\left(t-\frac{\pi}{2}\right)\left(1-\cos\left(t-{\pi
-\over2}\right)\right)+2\cos t-\sin t.
+y=1-\cos t-2u\left(t-\frac{\pi}{2}\right)\left(1-\cos\left(t-\frac{\pi}{2}\right)\right)+2\cos t-\sin t.
 \]
 Simplifying this (recalling that $\cos (t-\pi/2)=\sin t)$ yields
 \[
@@ -2957,7 +2948,7 @@ so
 {\cal L}(f)&=&{\cal L}(t)-{\cal L}\left(u(t-1)(t-1)\right)\\[1\jot]
 &=&{\cal L}(t)-e^{-s}{\cal L}(t)\mbox{ (from
 Theorem~\ref{thmtype:8.4.1})}\\[1\jot]
-&=&\frac{1}{s^2}-{e^{-s}\over s^2}.
+&=&\frac{1}{s^2}-\frac{e^{-s}}{s^2}.
 \end{eqnarray*}
 Since transforming  \eqref{eq:8.5.8} yields
 \[
@@ -3022,7 +3013,7 @@ u(t-\pi)\cos2t\right)\\[1\jot]
 {\cal L}\left(\cos2(t+\pi)\right)\\[1\jot]
 &=&-e^{-{\pi s/4}}{\cal L}(\sin2t)-e^{-\pi s}
 {\cal L}(\cos2t)\\[1\jot]
-&=&-{2e^{-{\pi s/ 4}}\over s^2+4}-{se^{-\pi s}\over s^2+4}.
+&=&-\frac{2e^{-{\pi s/ 4}}}{s^2+4}-\frac{se^{-\pi s}}{s^2+4}.
 \end{eqnarray*}
 Since transforming  \eqref{eq:8.5.12} yields
 \[
@@ -3034,8 +3025,7 @@ Y(s)=e^{-{\pi s/ 4}} H_1(s)+e^{-\pi s} H_2(s),
 \end{equation}
 where
 \begin{equation}\label{eq:8.5.14}
-H_1(s)=-\frac{2}{(s^2+1)(s^2+4)}\quad\mbox{ and }\quad H_2(s)=-{s
-\over
+H_1(s)=-\frac{2}{(s^2+1)(s^2+4)}\quad\mbox{ and }\quad H_2(s)=-\frac{s}{
 (s^2+1)(s^2+4)}.
 \end{equation}
 To simplify the required partial fraction expansions, we first write
@@ -3062,7 +3052,7 @@ u(t-\pi) h_2(t-\pi).
 Since
 \begin{eqnarray*}
 h_1\left(t-\frac{\pi}{4}\right)&=&-\frac{2}{3}\sin\left(t-\frac{\pi}{4}\right)+\frac{1}{3}\sin2\left(t-\frac{\pi}{4}\right)\\
-&=&-{\sqrt{2}\over3} (\sin t-\cos t)-\frac{1}{3}\cos2t
+&=&-\frac{\sqrt{2}}{3} (\sin t-\cos t)-\frac{1}{3}\cos2t
 \end{eqnarray*}
 and
 \begin{eqnarray*}
@@ -3079,9 +3069,9 @@ or
 \begin{equation}\label{eq:8.5.16}
 y=\left\{\begin{array}{cl}
 0,&0\le t<\dst{\frac{\pi}{4}},\\[2\jot]
--\dst{{\sqrt{2}\over3}}(\sin t-\cos t)-\dst{\frac{1}{3}}\cos2t,&\dst\frac{\pi}{4}\le t<\pi,\\[2\jot]
--\dst{ {\sqrt{2}\over3}}\sin t+
-\dst{{1+\sqrt{2}\over3}}\cos t ,&t\ge\pi.
+-\dst{\frac{\sqrt{2}}{3}}(\sin t-\cos t)-\dst{\frac{1}{3}}\cos2t,&\dst\frac{\pi}{4}\le t<\pi,\\[2\jot]
+-\dst{ \frac{\sqrt{2}}{3}}\sin t+
+\dst{\frac{1+\sqrt{2}}{3}}\cos t ,&t\ge\pi.
 \end{array}\right.
 \end{equation}
 We leave it to you to verify that $y$ and $y'$ are continuous and
@@ -3198,7 +3188,7 @@ $y''+y=f(t), \quad  y(0)=0,\quad y'(0)=0$;
 $f(t)=(m+1)t, \quad   2m\pi\le t<2(m+1)\pi,\quad m=0,1,2,\dots$
 \hint{You'll need the formula}
 \[
-1+2+\cdots+m={m(m+1)\over2}.
+1+2+\cdots+m=\frac{m(m+1)}{2}.
 \]
 
 \item % (c)
@@ -3213,7 +3203,7 @@ $f(t)=m+1,\quad  m\le t<(m+1),\quad m=0,1,2,\dots.$
 
 \hint{You will need the formula
 \[
-1+r+\cdots+r^m={1-r^{m+1}\over1-r}\; (r\ne1).
+1+r+\cdots+r^m=\frac{1-r^{m+1}}{1-r}\; (r\ne1).
 \]}
 
 \item % (d)
@@ -3242,8 +3232,8 @@ and $(t_0,\beta)$. Suppose $A=\lim_{t\to t_0-}g'(t)$
 and $B=\lim_{t\to t_0+}g'(t)$ both exist. Use the mean value theorem
 to show that
 \[
-\lim_{t\to t_0-}{g(t)-g(t_0)\over t-t_0}=A\quad\mbox{ and }\quad
-\lim_{t\to t_0+}{g(t)-g(t_0)\over t-t_0}=B.
+\lim_{t\to t_0-}\frac{g(t)-g(t_0)}{t-t_0}=A\quad\mbox{ and }\quad
+\lim_{t\to t_0+}\frac{g(t)-g(t_0)}{t-t_0}=B.
 \]
 \item % (b)
 Conclude from \part{a} that $g'(t_0)$ exists and $g'$ is continuous at
@@ -3270,7 +3260,7 @@ ay''+by'+cy=f(t)
 on $(\alpha,t_0)$ and $(t_0,\beta)$.
 Show that
 \[
-y''(t_0+)-y''(t_0-)={f(t_0+)-f(t_0-)\over a}\ne0.
+y''(t_0+)-y''(t_0-)=\frac{f(t_0+)-f(t_0-)}{a}\ne0.
 \]
 \item % (b)
 Use \part{a}  and Exercise~\ref{exer:8.5.23}\part{c} to show that
@@ -3498,9 +3488,9 @@ We first compute
 \begin{array}{ccccc}
 (f\ast g)(t)&=&\dst\int_0^t e^{a\tau}e^{b(t-\tau)}\,d\tau
 &=&\dst e^{bt}\int_0^t e^{(a-b)\tau} d\tau\\[2\jot]
-&=&\dst{e^{bt} {e^{(a-b)\tau}\over a-b}\,\bigg|^t_0}&=&
-\dst{e^{bt}\left[e^{(a-b)t}-1\right]\over a-b}\\[2\jot]
-&=&\dst{e^{at}-e^{bt}\over a-b}.
+&=&\dst{e^{bt}\frac{e^{(a-b)\tau}}{a-b}\,\bigg|^t_0}&=&
+\dst\frac{e^{bt}\left[e^{(a-b)t}-1\right]}{a-b}\\[2\jot]
+&=&\dst\frac{e^{at}-e^{bt}}{a-b}.
 \end{array}
 \]
 Since
@@ -3613,11 +3603,11 @@ y''+2y'+2y=f(t),\quad y(0)=k_0,\quad y'(0)=k_1.
 Therefore
 \begin{eqnarray*}
 Y(s)&=&\frac{1}{(s+1)^2+1}F(s)+\frac{k_1+k_0s+2k_0}{(s+1)^2+1}\\[2\jot]
-&=&\frac{1}{(s+1)^2+1}F(s)+{(k_1+k_0)+k_0(s+1)\over(s+1)^2+1}.
+&=&\frac{1}{(s+1)^2+1}F(s)+\frac{(k_1+k_0)+k_0(s+1)}{(s+1)^2+1}.
 \end{eqnarray*}
 From the table of Laplace transforms,
 \[
-{\cal L}^{-1}\left((k_1+k_0)+k_0(s+1)\over(s+1)^2+1\right)=
+{\cal L}^{-1}\left(\frac{(k_1+k_0)+k_0(s+1)}{(s+1)^2+1}\right)=
 e^{-t}\left((k_1+k_0)\sin t+k_0\cos t\right).
 \]
 Since
@@ -3663,8 +3653,8 @@ t^5\leftrightarrow \frac{5!}{s^6}\quad\mbox{ and }\quad  t^7
 \]
 the convolution theorem implies that
 \[
-h(t)\leftrightarrow \frac{5!7!}{s^{14}}=\frac{5!7!}{13!}\, {13!
-\over s^{14}},
+h(t)\leftrightarrow \frac{5!7!}{s^{14}}=\frac{5!7!}{13!}\,\frac{13!
+}{s^{14}},
 \]
 where we have written the second equality because
 \[
@@ -3722,7 +3712,7 @@ Y(s)=F(s)+K(s) Y(s),
 \]
 and solving this for $Y(s)$ yields
 \[
-Y(s)={F(s)\over 1-K(s)}.
+Y(s)=\frac{F(s)}{1-K(s)}.
 \]
 We  then obtain the solution of  \eqref{eq:8.6.11} as
  $y={\cal L}^{-1}(Y)$.
@@ -3806,7 +3796,7 @@ W(s)=\frac{1}{p(s)}
 \end{equation}
 and
 \begin{equation}\label{eq:8.6.20}
-V(s)={a(k_1+k_0s)+bk_0\over p(s)}.
+V(s)=\frac{a(k_1+k_0s)+bk_0}{p(s)}.
 \end{equation}
 
 Taking Laplace transforms in  \eqref{eq:8.6.15} and  \eqref{eq:8.6.16} shows that
@@ -3888,7 +3878,7 @@ H(s)=W(s)F(s),
 \]
 we see that
 \[
-W(s)={H(s)\over F(s)}
+W(s)=\frac{H(s)}{F(s)}
 \]
 is the ratio of the transform of the steady state output to the transform
 of the input.
@@ -3942,7 +3932,7 @@ complex conjugates, respectively.
 \item
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \part{i}  $\dst\frac{s-1}{s^2(s^2-2s+2)}$&
-\part{j}  $\dst{s(s+3)\over(s^2+4)(s^2+6s+10)}$
+\part{j}  $\dst\frac{s(s+3)}{(s^2+4)(s^2+6s+10)}$
 \end{tabular}
 
 \item
@@ -4089,7 +4079,7 @@ integral.
 \item\label{exer:8.6.7} Use the convolution theorem to show that if
 $f(t)\leftrightarrow F(s)$ then
 \[
-\int_0^tf(\tau)\,d\tau\leftrightarrow {F(s)\over s}.
+\int_0^tf(\tau)\,d\tau\leftrightarrow\frac{F(s)}{s}.
 \]
 
 \item\label{exer:8.6.8}
@@ -4101,8 +4091,7 @@ ay''+by'+cy=f(t),\quad y(0)=k_0,\quad y'(0)=k_1
 \]
 is
 \begin{eqnarray*}
-y(t)&=&\; k_0{r_2e^{r_1t}-r_1e^{r_2t}\over r_2-r_1}+k_1{e^{r_2t}-e^{r_1t}
-\over r_2-r_1}
+y(t)&=&\; k_0\frac{r_2e^{r_1t}-r_1e^{r_2t}}{r_2-r_1}+k_1\frac{e^{r_2t}-e^{r_1t}}{r_2-r_1}
 \\
 &&+\frac{1}{a(r_2-r_1)}\int_0^t(e^{r_2\tau}-e^{r_1\tau})f(t-\tau)\,d\tau.
 \end{eqnarray*}
@@ -4190,7 +4179,7 @@ p(s)=as^2+bs+c.
 Show that the Laplace transform of the solution of  (A)
 is
 \[
-Y(s)={F_0(s)+e^{-st_1}G(s)\over p(s)}
+Y(s)=\frac{F_0(s)+e^{-st_1}G(s)}{p(s)}
 \]
 where  $g(t)=f_1(t+t_1)-f_0(t+t_1)$.
 \item % (b)
@@ -4215,7 +4204,7 @@ w'(t-t_1-\tau)g(\tau)\,d\tau
 \]
 for $t>0$, and
 \[
-y''(t)={f(t)\over a}+\int_0^t
+y''(t)=\frac{f(t)}{a}+\int_0^t
 w''(t-\tau)f_0(\tau)\,d\tau+u(t-t_1)\int_0^{t-t_1}
 w''(t-t_1-\tau)g(\tau)\,d\tau
 \]
@@ -4372,7 +4361,7 @@ w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right).
 \]
 so
 \[
-Y_h(s)={F_h(s)\over as^2+bs+c}.
+Y_h(s)=\frac{F_h(s)}{as^2+bs+c}.
 \]
 The convolution theorem implies that
 \[
@@ -4466,7 +4455,7 @@ On the other hand, we can solve \eqref{eq:8.7.12} by the methods of
 Section~5.2 and show that $w$ is defined on
 $(-\infty,\infty)$ by
 \begin{equation} \label{eq:8.7.13}
-w={e^{r_2t}-e^{r_1t}\over a(r_2-r_1)},\quad
+w=\frac{e^{r_2t}-e^{r_1t}}{a(r_2-r_1)},\quad
 w=\frac{1}{a}te^{r_1t}, \mbox{\quad or \quad}
 w=\frac{1}{a\omega}e^{\lambda t}\sin\omega t,
 \end{equation}
@@ -4534,8 +4523,7 @@ where $t_0>0$. Then interpret the solution for the case where $t_0=0$.
 \solution
 Here
 \[
-w={\cal L}^{-1}\left(\frac{1}{s^2-2s+1}\right)={\cal L}^{-1}\left(
-1\over(s-1)^2\right)=te^{-t},
+w={\cal L}^{-1}\left(\frac{1}{s^2-2s+1}\right)={\cal L}^{-1}\left(\frac{1}{(s-1)^2}\right)=te^{-t},
 \]
 so  Definition~\ref{thmtype:8.7.2} yields
 \[
@@ -4611,13 +4599,13 @@ Since
 w(t)&=&{\cal L}^{-1}\left(\dst\frac{1}{s^2+6s+5}\right)&=&
 {\cal L}^{-1}\left(\dst\frac{1}{(s+1)(s+5)}\right)\\[2\jot]
 &=&\dst{\frac{1}{4}{\cal L}^{-1}\left(\frac{1}{s+1}-\frac{1}{s+5}\right)}
-&=&\dst{e^{-t}-e^{-5t}\over4},
+&=&\dst\frac{e^{-t}-e^{-5t}}{4},
 \end{array}
 \]
 the solution of  \eqref{eq:8.7.16} is
 \begin{equation} \label{eq:8.7.17}
 y=-e^{-2t}+\frac{1}{2}e^{-5t}-\frac{5}{2}e^{-t}
-+u(t-1){e^{-(t-1)}-e^{-5(t-1)}\over2}
++u(t-1)\frac{e^{-(t-1)}-e^{-5(t-1)}}{2}
 \end{equation}
 (Figure~\ref{figure:8.7.4})\bbox.
 
@@ -4844,7 +4832,7 @@ $\dst{y''+y=\sum_{k=1}^\infty\delta(t-k\pi), \quad  y(0)=0,\quad y'(0)=0}$
   $t^n$  &  $\displaystyle{\frac{n!}{s^{n+1}}}$  & $(s > 0)$ \\
   ($n = \mbox{ integer } > 0$)  & {} & {} \\[15pt]
   $t^p,\;  p > -1$  &
-$\displaystyle{{\Gamma (p+1) \over s^{(p+1)}}}$ & $(s>0)$ \\[15pt]
+$\displaystyle{\frac{\Gamma (p+1)}{s^{(p+1)}}}$ & $(s>0)$ \\[15pt]
   $e^{at}$  &  $\displaystyle{\frac{1 }{s-a}}$  & $(s > a)$ \\[15pt]
   $t^ne^{at}$  &  $\displaystyle{\frac{n! }{(s-a)^{n+1}}}$  & $(s > 0)$ \\[15pt]
   ($n= \mbox{ integer } > 0$)  & {} & {} \\
@@ -4880,7 +4868,7 @@ $\displaystyle{\frac{\omega^3 }{s^2(s^2+\omega^2)^2}}$ & $(s>0)$ \\[15pt]
 $\displaystyle{{(-1)^kF^{(k)}(s)}}$  &  \\[15pt]
   $f(\omega t)$  &  $\displaystyle{\frac{1}{\omega} F\left(\frac{s }{\omega}\right),  \quad \omega > 0}$ &  \\[15pt]
   $u(t-\tau)$  &
-$\displaystyle{{e^{-\tau s} \over s}}$ & $(s>0)$  \\[15pt]
+$\displaystyle{\frac{e^{-\tau s}}{s}}$ & $(s>0)$  \\[15pt]
   $u(t-\tau)f(t-\tau)\, (\tau > 0)$  &
 $e^{-\tau s}F(s)$  &  \\[15pt]
   $\displaystyle{\int^t_o f(\tau)g(t-\tau)\, d\tau}$
