@@ -1322,7 +1322,7 @@ a_2&=&-\frac{1}{1}a_0,\\[5pt]
 a_4&=&-\frac{3}{2}a_2=\left(-\frac{3}{2}\right)\left(-\frac{1}{1}\right)a_0
 =\frac{1\cdot3}{1\cdot2}a_0,
 \\[5pt] a_6&=&-\frac{5}{3}a_4=
--\frac{5}{3}\left(1\cdot3\over1\cdot2\right)a_0
+-\frac{5}{3}\left(\frac{1\cdot3}{1\cdot2}\right)a_0
 =-\frac{1\cdot3\cdot5}{1\cdot2\cdot3}a_0, \\[5pt]
 a_8&=&-\frac{7}{4}a_6=-\frac{7}{4}
 \left(-\frac{1\cdot3\cdot5}{1\cdot2\cdot3}\right)a_0=
@@ -1330,7 +1330,7 @@ a_8&=&-\frac{7}{4}a_6=-\frac{7}{4}
 \end{eqnarray*}
 In general,
 \begin{equation}\label{eq:7.2.21}
-a_{2m}=(-1)^m{\prod_{j=1}^m(2j-1)\over m!}a_0,\quad m\ge0.
+a_{2m}=(-1)^m\frac{\prod_{j=1}^m(2j-1)}{m!}a_0,\quad m\ge0.
 \end{equation}
 (Note that \eqref{eq:7.2.21} is correct for $m=0$  because we
 defined $\prod_{j=1}^0b_j=1$  for any~$b_j$.)
@@ -1350,13 +1350,13 @@ a_9&=&-4\, \frac{4}{9}a_7=-4\, \frac{4}{9}\left(
 \end{eqnarray*}
 In general,
 \begin{equation}\label{eq:7.2.22}
-a_{2m+1}={(-1)^m4^m m!\over\prod_{j=1}^m(2j+1)}a_1,\quad m\ge0.
+a_{2m+1}=\frac{(-1)^m4^m m!}{\prod_{j=1}^m(2j+1)}a_1,\quad m\ge0.
 \end{equation}
 From \eqref{eq:7.2.21} and \eqref{eq:7.2.22},
 \[
 y=a_0
- \sum^\infty_{m=0}(-1)^m {\prod_{j=1}^m(2j-1)\over m!}x^{2m}
-+a_1 \sum^\infty_{m=0}(-1)^m {4^mm!\over\prod_{j=1}^m(2j+1)}
+ \sum^\infty_{m=0}(-1)^m\frac{\prod_{j=1}^m(2j-1)}{m!}x^{2m}
++a_1 \sum^\infty_{m=0}(-1)^m\frac{4^mm!}{\prod_{j=1}^m(2j+1)}
  x^{2m+1}.
 \]
 is the power series in $x$ for the general solution of \eqref{eq:7.2.17}.
@@ -1378,7 +1378,7 @@ $y=\sum_{n=0}^\infty a_n(x-x_0)^n$ of
 \end{equation}
 satisfy the recurrence relation
 \begin{equation}\label{eq:7.2.24}
-a_{n+2}=-{p(n) \over(n+2)(n+1)}a_n,\quad  n\ge0,
+a_{n+2}=-\frac{p(n)}{(n+2)(n+1)}a_n,\quad  n\ge0,
 \end{equation}
 where
 \begin{equation}\label{eq:7.2.25}
@@ -1387,9 +1387,9 @@ p(n)=\alpha n(n-1) +\beta n+\gamma.
 Moreover$,$ the coefficients of the even and odd powers of $x-x_0$ can
 be computed separately as
 \begin{eqnarray}
-a_{2m+2}&=&-{p(2m)\over(2m+2)(2m+1)}a_{2m},\quad m\ge0\label{eq:7.2.26}\\
+a_{2m+2}&=&-\frac{p(2m)}{(2m+2)(2m+1)}a_{2m},\quad m\ge0\label{eq:7.2.26}\\
 \noalign{\hspace*{-15pt}\mbox{and}}\nonumber\\
-a_{2m+3}&=&-{p(2m+1)\over(2m+3)(2m+2)}a_{2m+1},\quad m\ge0, \label{eq:7.2.27}
+a_{2m+3}&=&-\frac{p(2m+1)}{(2m+3)(2m+2)}a_{2m+1},\quad m\ge0, \label{eq:7.2.27}
 \end{eqnarray}
 where $a_0$ and $a_1$ are arbitrary.
 \end{theorem}
@@ -1459,16 +1459,16 @@ or, equivalently,
 This is of the form \eqref{eq:7.2.23} with  $\alpha=-1/2$, $\beta=-3$, and
 $\gamma=-3$. Therefore, from \eqref{eq:7.2.25}
 \[
-p(n)=-{n(n-1)\over2}-3n-3=-{(n+2)(n+3)\over2}.
+p(n)=-\frac{n(n-1)}{2}-3n-3=-\frac{(n+2)(n+3)}{2}.
 \]
 Hence, Theorem~\ref{thmtype:7.2.2} implies that
 \begin{eqnarray*}
-a_{2m+2}&=&-{p(2m)\over(2m+2)(2m+1)}a_{2m}\\[2\jot]&=&
-{(2m+2)(2m+3)\over2(2m+2)(2m+1)}
+a_{2m+2}&=&-\frac{p(2m)}{(2m+2)(2m+1)}a_{2m}\\[2\jot]&=&
+\frac{(2m+2)(2m+3)}{2(2m+2)(2m+1)}
 a_{2m}=\frac{2m+3}{2(2m+1)}a_{2m},\quad m\ge0\\
 \noalign{\hspace*{-15pt}\mbox{and}}\\
-a_{2m+3}&=&-{p(2m+1)\over(2m+3)(2m+2)}a_{2m+1}\\[2\jot]&=&
-{(2m+3)(2m+4)\over2
+a_{2m+3}&=&-\frac{p(2m+1)}{(2m+3)(2m+2)}a_{2m+1}\\[2\jot]&=&
+\frac{(2m+3)(2m+4)}{2
 (2m+3)(2m+2)}a_{2m+1}=\frac{m+2}{2(m+1)}a_{2m+1},\quad m\ge0.
 \end{eqnarray*}
 We leave it to you to show that
@@ -1505,11 +1505,11 @@ p(n)=2n(n-1)+10n+8=2(n+2)^2.
 \]
  Therefore
 \[
-a_{n+2}=-2{(n+2)^2\over(n+2)(n+1)}a_n=-2\frac{n+2}{n+1}a_n,\quad n\ge0.
+a_{n+2}=-2\frac{(n+2)^2}{(n+2)(n+1)}a_n=-2\frac{n+2}{n+1}a_n,\quad n\ge0.
 \]
 Writing this equation separately for $n=2m$  and $n=2m+1$ yields
 \begin{eqnarray}
-a_{2m+2}&=&-2{(2m+2)\over2m+1}a_{2m}=-4\frac{m+1}{2m+1}a_{2m},\quad m\ge
+a_{2m+2}&=&-2\frac{(2m+2)}{2m+1}a_{2m}=-4\frac{m+1}{2m+1}a_{2m},\quad m\ge
 0\label{eq:7.2.30}\\
 \noalign{\hspace*{-15pt}\mbox{and}}\nonumber\\
 a_{2m+3}&=&-2\frac{2m+3}{2m+2}a_{2m+1}=-\frac{2m+3}{m+1}a_{2m+1},\quad m\ge0.
@@ -1520,7 +1520,7 @@ Starting with  $a_0=y(0)=2$, we compute $a_2, a_4$, and $a_6$ from
 \begin{eqnarray*}
 a_2&=&-4\,\frac{1}{1}2=-8,\\[2\jot]
 a_4&=&-4\,\frac{2}{3}(-8)=\frac{64}{3},\\[2\jot]
-a_6&=&-4\,\frac{3}{5}\left(64\over3\right)=-\frac{256}{5}.
+a_6&=&-4\,\frac{3}{5}\left(\frac{64}{3}\right)=-\frac{256}{5}.
 \end{eqnarray*}
 Starting with $a_1=y'(0)=-3$, we compute $a_3,a_5$ and $a_7$ from
 \eqref{eq:7.2.31}:
@@ -1792,10 +1792,10 @@ $x$ for the general solution of
 is
 \[
 y=a_0\sum^\infty_{m=0}(-1)^m \left[\prod^{m-1}_{j=0}
-p(2j)\right] {x^{2m}\over(2m)!} +
+p(2j)\right]\frac{x^{2m}}{(2m)!} +
 a_1\sum^\infty_{m=0}(-1)^m
 \left[\prod^{m-1}_{j=0}p(2j+1)\right]
-{x^{2m+1}\over(2m+1)!}.
+\frac{x^{2m+1}}{(2m+1)!}.
 \]
 
 \item\label{exer:7.2.29}
@@ -1822,10 +1822,10 @@ for the general solution of
 is $y=a_0y_1+a_1y_2$, where
 \begin{eqnarray*}
 y_1&=&\sum_{m=0}^\infty \left[\prod_{j=0}^{m-1}(2j-\alpha)(2j+\alpha+2b-1)
-\right]{x^{2m}\over(2m)!}\\
+\right]\frac{x^{2m}}{(2m)!}\\
 \noalign{\hspace*{50pt}\mbox{and}}\\
 y_2&=&\sum_{m=0}^\infty \left[\prod_{j=0}^{m-1}(2j+1-\alpha)(2j+\alpha+2b)
-\right]{x^{2m+1}\over(2m+1)!}.
+\right]\frac{x^{2m+1}}{(2m+1)!}.
 \end{eqnarray*}
 \item % (b)
 Suppose $2b$ isn't  a negative odd integer and $k$ is a
@@ -1877,10 +1877,10 @@ y''-2xy'+2\alpha y=0
 is $y=a_0y_1+a_1y_1$, where
 \begin{eqnarray*}
 y_1&=&\sum_{m=0}^\infty \left[\prod_{j=0}^{m-1}(2j-\alpha)
-\right]{2^mx^{2m}\over(2m)!}\\
+\right]\frac{2^mx^{2m}}{(2m)!}\\
 \noalign{\hspace*{25pt}\mbox{and}}\\
 y_2&=&\sum_{m=0}^\infty \left[\prod_{j=0}^{m-1}(2j+1-\alpha)
-\right]{2^mx^{2m+1}\over(2m+1)!}.
+\right]\frac{2^mx^{2m+1}}{(2m+1)!}.
 \end{eqnarray*}
 \item % (b)
 Suppose $k$ is a nonnegative integer. Show that $y_1$ is a
@@ -1936,16 +1936,16 @@ y=\sum_{n=0}^\infty a_nx^n
   is a solution of
 (A)  if and only if  $a_2=0$  and
 \[
-a_{n+3}=-{p(n)\over(n+3)(n+2)}a_n,\quad n\ge0.
+a_{n+3}=-\frac{p(n)}{(n+3)(n+2)}a_n,\quad n\ge0.
 \]
 \item % (b)
 Show from (a)  that $a_n=0$  unless $n=3m$  or $n=3m+1$
 for some nonnegative integer $m$, and that
 \begin{eqnarray*}
-a_{3m+3}&=&-{p(3m)\over(3m+3)(3m+2)}a_{3m},\quad m\ge
+a_{3m+3}&=&-\frac{p(3m)}{(3m+3)(3m+2)}a_{3m},\quad m\ge
 0,\\
 \noalign{\hspace*{50pt}\mbox{and}}\\
-a_{3m+4}&=&-{p(3m+1)\over(3m+4)(3m+3)}
+a_{3m+4}&=&-\frac{p(3m+1)}{(3m+4)(3m+3)}
 a_{3m+1},\quad m\ge0,
 \end{eqnarray*}
 where $a_0$ and $a_1$ may be specified arbitrarily.
@@ -1956,10 +1956,10 @@ of (A)  is
 \[
 \begin{array}{l}
 y=\dst{a_0\sum^\infty_{m=0}(-1)^m \left[\prod^{m-1}_{j=0}
-{p(3j)\over3j+2}\right] {x^{3m}\over3^m m!}}\\[2\jot]
+\frac{p(3j)}{3j+2}\right]\frac{x^{3m}}{3^m m!}}\\[2\jot]
 \qquad\dst{+a_1\sum^\infty_{m=0}(-1)^m
-\left[\prod^{m-1}_{j=0}{p(3j+1)\over3j+4}\right]
-{x^{3m+1}\over3^mm!}}.
+\left[\prod^{m-1}_{j=0}\frac{p(3j+1)}{3j+4}\right]
+\frac{x^{3m+1}}{3^mm!}}.
 \end{array}
 \]
 \end{alist}
@@ -2002,17 +2002,16 @@ y=\sum_{n=0}^\infty a_nx^n
   is a solution of
 (A)  if and only if  $a_n=0$ for $2\le n\le k+1$ and
 \[
-a_{n+k+2}=-{p(n)\over(n+k+2)(n+k+1)}a_n,\quad n\ge0.
+a_{n+k+2}=-\frac{p(n)}{(n+k+2)(n+k+1)}a_n,\quad n\ge0.
 \]
 \item % (b)
 Show from \part{a}  that $a_n=0$  unless $n=(k+2)m$  or $n=(k+2)m+1$
 for some nonnegative integer $m$, and that
 \begin{eqnarray*}
-a_{(k+2)(m+1)}&=&-{p\left((k+2)m\right)\over
-(k+2)(m+1)[(k+2)(m+1)-1]}a_{(k+2)m},\quad m\ge
+a_{(k+2)(m+1)}&=&-\frac{p\left((k+2)m\right)}{(k+2)(m+1)[(k+2)(m+1)-1]}a_{(k+2)m},\quad m\ge
 0, \\
 \noalign{\hspace*{50pt}\mbox{and}}\\
-a_{(k+2)(m+1)+1}&=&-{p\left((k+2)m+1\right)\over[(k+2)(m+1)+1](k+2)(m+1)}
+a_{(k+2)(m+1)+1}&=&-\frac{p\left((k+2)m+1\right)}{[(k+2)(m+1)+1](k+2)(m+1)}
 a_{(k+2)m+1},\quad m\ge0,
 \end{eqnarray*}
 where $a_0$ and $a_1$ may be specified arbitrarily.
@@ -2023,11 +2022,11 @@ of (A) is
 \[
 \begin{array}{l}
 y=a_0\dst{\sum^\infty_{m=0}(-1)^m \left[\prod^{m-1}_{j=0}
-{p\left((k+2)j\right)\over(k+2)(j+1)-1}\right] {x^{(k+2)m}\over(k+2)^m
+\frac{p\left((k+2)j\right)}{(k+2)(j+1)-1}\right]\frac{x^{(k+2)m}}{(k+2)^m
 m!}}\\ [15pt]
 \qquad+a_1\dst{\sum^\infty_{m=0}(-1)^m
-\left[\prod^{m-1}_{j=0}{p\left((k+2)j+1\right)\over(k+2)(j+1)+1}\right]
-{x^{(k+2)m+1}\over(k+2)^mm!}}.
+\left[\prod^{m-1}_{j=0}\frac{p\left((k+2)j+1\right)}{(k+2)(j+1)+1}\right]
+\frac{x^{(k+2)m+1}}{(k+2)^mm!}}.
 \end{array}
 \]
 \end{alist}
