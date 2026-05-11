@@ -211,7 +211,7 @@ to mean that $R=0$ if $L=\infty,$ or $R=\infty$ if $L=0.$
  Find the radius of convergence of the series:
 \[
 \mbox{\bf (a)}\quad \sum_{n=0}^\infty n!x^n\quad\mbox{\bf (b) }\quad
-\sum_{n=10}^\infty (-1)^n {x^n\over n!}\quad \mbox{\bf (c) }\quad
+\sum_{n=10}^\infty (-1)^n \frac{x^n}{n!}\quad \mbox{\bf (c) }\quad
 \sum_{n=0}^\infty 2^nn^2 (x-1)^n.
 \]
 \end{example}
@@ -226,15 +226,14 @@ Hence, $R=0$.
 \solutionpart{b}   Here $a_n=(1)^n/n!$ for $n\ge N=10$, so
 \[
 \lim_{n\to\infty}\left|a_{n+1}\over a_n\right|=\lim_{n\to\infty}
-{n!\over (n+1)!}=\lim_{n\to\infty}{1\over n+1}=0.
+{n!\over (n+1)!}=\lim_{n\to\infty}\frac{1}{n+1}=0.
 \]
 Hence, $R=\infty$.
 
 \solutionpart{c}   Here $a_n=2^nn^2$, so
 \[
 \lim_{n\to\infty}\left|a_{n+1}\over a_n\right|=\lim_{n\to\infty}
-{2^{n+1}(n+1)^2\over2^nn^2}=2\lim_{n\to\infty}\left(1+{1\over
-n}\right)^2=2.
+{2^{n+1}(n+1)^2\over2^nn^2}=2\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^2=2.
 \]
 Hence, $R=1/2$.
 
@@ -260,13 +259,13 @@ functions converge to the functions on their open intervals of
 convergence. For example, you are probably  familiar with the
 following Maclaurin series:
 \begin{eqnarray}
-e^x&=&\sum_{n=0}^\infty {x^n\over n!},\quad
+e^x&=&\sum_{n=0}^\infty \frac{x^n}{n!},\quad
 -\infty<x<\infty,\label{eq:7.1.2}\\
 \sin x&=&\sum_{n=0}^\infty(-1)^n {x^{2n+1}\over(2n+1)!},\quad
 -\infty<x<\infty, \label{eq:7.1.3}\\ %dummy \eqref{eq:7.1.3}
 \cos x&=&\sum_{n=0}^\infty(-1)^n {x^{2n}\over(2n)!},\quad
 -\infty<x<\infty, \label{eq:7.1.4}\\ %dummy \eqref{eq:7.1.4}
-{1\over1-x}&=&\sum_{n=0}^\infty x^n,\quad-1<x<1.\label{eq:7.1.5}
+\frac{1}{1-x}&=&\sum_{n=0}^\infty x^n,\quad-1<x<1.\label{eq:7.1.5}
 \end{eqnarray}
 
 \boxit{Differentiation of Power Series}
@@ -318,8 +317,7 @@ f(x)=\sum_{n=0}^\infty(-1)^n {x^{2n+1}\over(2n+1)!}.
 \]
 From  \eqref{eq:7.1.6},
 \[
-f'(x)=\sum_{n=0}^\infty(-1)^n{d\over
-dx}\left[x^{2n+1}\over(2n+1)!\right]=
+f'(x)=\sum_{n=0}^\infty(-1)^n\frac{d}{dx}\left[x^{2n+1}\over(2n+1)!\right]=
 \sum_{n=0}^\infty(-1)^n {x^{2n}\over(2n)!},
 \]
 which is the series  \eqref{eq:7.1.4} for $\cos x$.
@@ -417,7 +415,7 @@ approximate $f$ on subintervals of the open interval of convergence of
 the power series. For example,  \eqref{eq:7.1.2} implies that the Taylor
 polynomial $T_N$ of $f(x)=e^x$ is
 \[
-T_N(x)=\sum_{n=0}^N{x^n\over n!}.
+T_N(x)=\sum_{n=0}^N\frac{x^n}{n!}.
 \]
 The solid curve in Figure~\ref{figure:7.1.1} is the graph
 of $y=e^x$ on the interval $[0,5]$. The  dotted curves
@@ -584,12 +582,12 @@ By definition,
 \cosh x=\frac{1}{2}e^x+\frac{1}{2}e^{-x}.
 \]
 Since
-\[ e^x=\sum_{n=0}^\infty  {x^n\over n!}\quad\mbox{ and }\quad
- e^{-x}=\sum_{n=0}^\infty (-1)^n {x^n\over n!},
+\[ e^x=\sum_{n=0}^\infty  \frac{x^n}{n!}\quad\mbox{ and }\quad
+ e^{-x}=\sum_{n=0}^\infty (-1)^n \frac{x^n}{n!},
 \]
 it follows that
 \begin{equation} \label{eq:7.1.12}
-\cosh x=\sum_{n=0}^\infty \frac{1}{2}[1+(-1)^n]{x^n\over n!}.
+\cosh x=\sum_{n=0}^\infty \frac{1}{2}[1+(-1)^n]\frac{x^n}{n!}.
 \end{equation}
 Since
 \[
@@ -743,8 +741,8 @@ of convergence $R$. If $R>0$, find the open interval of convergence.
 {\bf (b)} $\dst{\sum_{n=0}^\infty 2^nn(x-2)^n}$\\
 {\bf (c)} $\dst{\sum_{n=0}^\infty {n!\over9^n}x^n}$&
 {\bf (d)} $\dst{\sum_{n=0}^\infty{n(n+1)\over16^n}(x-2)^n}$\\
-{\bf (e)} $\dst{\sum_{n=0}^\infty (-1)^n{7^n\over n!}x^n}$&
-{\bf (f)} $\dst{\sum_{n=0}^\infty {3^n\over4^{n+1}(n+1)^2}(x+7)^n}$
+{\bf (e)} $\dst{\sum_{n=0}^\infty (-1)^n\frac{7^n}{n!}x^n}$&
+{\bf (f)} $\dst{\sum_{n=0}^\infty \frac{3^n}{4^{n+1}(n+1)^2}(x+7)^n}$
 \end{tabular}
 
 \item\label{exer:7.1.2}
@@ -803,7 +801,7 @@ convergence.
 {\bf (a)} $\dst{\sum_{m=0}^\infty{(-1)^m\over(27)^m}(x-3)^{3m+2}}$&
 {\bf (b)} $\dst{\sum_{m=0}^\infty{x^{7m+6}\over m}}$ \\
 {\bf (c)} $\dst{\sum_{m=0}^\infty{9^m(m+1)\over(m+2)}(x-3)^{4m+2}}$&
-{\bf (d)} $\dst{\sum_{m=0}^\infty(-1)^m{2^m\over m!}x^{4m+3}}$\\
+{\bf (d)} $\dst{\sum_{m=0}^\infty(-1)^m\frac{2^m}{m!}x^{4m+3}}$\\
 {\bf (e)} $\dst{\sum_{m=0}^\infty{m!\over(26)^m}(x+1)^{4m+3}}$&
 {\bf (f)} $\dst{\sum_{m=0}^\infty{(-1)^m\over8^mm(m+1)}(x-1)^{3m+1}}$
 \end{tabular}
@@ -1150,29 +1148,29 @@ a_{2m+3}&=&{-a_{2m+1}\over(2m+3)(2m+2)},\quad  m\ge0.
 Computing the coefficients of the even powers of $x-x_0$ from
 \eqref{eq:7.2.11} yields
 \begin{eqnarray*}
-a_2&=&-{a_0\over2\cdot1}\\[2\jot]
-a_4&=&-{a_2\over4\cdot3}=-{1\over4\cdot3}
- \left(-{a_0\over2\cdot1}\right)=
- {a_0\over4\cdot3\cdot2\cdot1}, \\
-a_6&=&-{a_4\over6\cdot5}=-{1\over6\cdot5}
- \left({a_0\over4\cdot3\cdot2\cdot1}\right)
-=-{a_0\over6\cdot5\cdot4\cdot3\cdot
+a_2&=&-\frac{a_0}{2\cdot1}\\[2\jot]
+a_4&=&-\frac{a_2}{4\cdot3}=-\frac{1}{4\cdot3}
+ \left(-\frac{a_0}{2\cdot1}\right)=
+ \frac{a_0}{4\cdot3\cdot2\cdot1}, \\
+a_6&=&-\frac{a_4}{6\cdot5}=-\frac{1}{6\cdot5}
+ \left(\frac{a_0}{4\cdot3\cdot2\cdot1}\right)
+=-\frac{a_0}{6\cdot5\cdot4\cdot3\cdot
  2\cdot1},
 \end{eqnarray*}
 and, in general,
 \begin{equation}\label{eq:7.2.13}
-a_{2m}=(-1)^m {a_0\over(2m)!}\;   ,\quad  m\ge0.
+a_{2m}=(-1)^m \frac{a_0}{(2m)!}\;   ,\quad  m\ge0.
 \end{equation}
 Computing the coefficients of the odd powers of $x-x_0$ from \eqref{eq:7.2.12}
 yields
 \begin{eqnarray*}
-a_3&=&-{a_1\over3\cdot2}\\[2\jot]
-a_5&=&-{a_3\over5\cdot4}=-{1\over5\cdot4}
- \left(-{a_1\over3\cdot2}\right)=
- {a_1\over5\cdot4\cdot3\cdot2}, \\
-a_7&=&-{a_5\over7\cdot6}=-{1\over7\cdot6}
- \left({a_1\over5\cdot4\cdot3\cdot2}\right)
-=-{a_1\over7\cdot6\cdot5\cdot4\cdot
+a_3&=&-\frac{a_1}{3\cdot2}\\[2\jot]
+a_5&=&-\frac{a_3}{5\cdot4}=-\frac{1}{5\cdot4}
+ \left(-\frac{a_1}{3\cdot2}\right)=
+ \frac{a_1}{5\cdot4\cdot3\cdot2}, \\
+a_7&=&-\frac{a_5}{7\cdot6}=-\frac{1}{7\cdot6}
+ \left(\frac{a_1}{5\cdot4\cdot3\cdot2}\right)
+=-\frac{a_1}{7\cdot6\cdot5\cdot4\cdot
  3\cdot2},
 \end{eqnarray*}
 and, in general,
@@ -1322,13 +1320,13 @@ yields
 \begin{eqnarray*}
 a_2&=&-\frac{1}{1}a_0,\\[5pt]
 a_4&=&-\frac{3}{2}a_2=\left(-\frac{3}{2}\right)\left(-\frac{1}{1}\right)a_0
-={1\cdot3\over1\cdot2}a_0,
+=\frac{1\cdot3}{1\cdot2}a_0,
 \\[5pt] a_6&=&-\frac{5}{3}a_4=
 -\frac{5}{3}\left(1\cdot3\over1\cdot2\right)a_0
-=-{1\cdot3\cdot5\over1\cdot2\cdot3}a_0, \\[5pt]
+=-\frac{1\cdot3\cdot5}{1\cdot2\cdot3}a_0, \\[5pt]
 a_8&=&-\frac{7}{4}a_6=-\frac{7}{4}
-\left(-{1\cdot3\cdot5\over1\cdot2\cdot3}\right)a_0=
-{1\cdot3\cdot5\cdot7\over1\cdot2\cdot3\cdot4}a_0.\\
+\left(-\frac{1\cdot3\cdot5}{1\cdot2\cdot3}\right)a_0=
+\frac{1\cdot3\cdot5\cdot7}{1\cdot2\cdot3\cdot4}a_0.\\
 \end{eqnarray*}
 In general,
 \begin{equation}\label{eq:7.2.21}
@@ -1342,13 +1340,13 @@ yields
 \begin{eqnarray*}
 a_3&=&-4\,\frac{1}{3}a_1, \\[5pt]
 a_5&=&-4\,\frac{2}{5}a_3=-4\,\frac{2}{5}\left(-4\frac{1}{3}\right)a_1
-=4^2{1\cdot2\over3\cdot5}a_1,
+=4^2\frac{1\cdot2}{3\cdot5}a_1,
 \\[5pt] a_7&=&-4\,\frac{3}{7}a_5=-4\,\frac{3}{7}\left(
-4^2{1\cdot2\over3\cdot5}\right)a_1=
--4^3{1\cdot2\cdot3\over3\cdot5\cdot7}a_1,\\[5pt]
+4^2\frac{1\cdot2}{3\cdot5}\right)a_1=
+-4^3\frac{1\cdot2\cdot3}{3\cdot5\cdot7}a_1,\\[5pt]
 a_9&=&-4\, \frac{4}{9}a_7=-4\, \frac{4}{9}\left(
-4^3{1\cdot2\cdot3\over3\cdot5\cdot7}\right)a_1=
-4^4{1\cdot2\cdot3\cdot4\over3\cdot5\cdot7\cdot9}a_1.
+4^3\frac{1\cdot2\cdot3}{3\cdot5\cdot7}\right)a_1=
+4^4\frac{1\cdot2\cdot3\cdot4}{3\cdot5\cdot7\cdot9}a_1.
 \end{eqnarray*}
 In general,
 \begin{equation}\label{eq:7.2.22}
@@ -1776,7 +1774,7 @@ Find a power series in $x$ for the general solution of
 \item % (b)
 Use (a) and the formula
 \[
-{1\over1-r}=1+r+r^2+\cdots+r^n+\cdots \quad(-1<r<1)
+\frac{1}{1-r}=1+r+r^2+\cdots+r^n+\cdots \quad(-1<r<1)
 \]
 for the sum of a geometric series to find a closed form expression for
 the general solution of (A) on $(-1,1)$.
@@ -2197,7 +2195,7 @@ a_2=\frac{1}{4}(a_1+3a_0)
 \end{equation}
 and
 \begin{equation} \label{eq:7.3.6}
-a_{n+2}=-{1\over2(n+2)(n+1)}\left[(n^2-1)a_{n+1}+(2n-3)a_n+a_{n-1}\right],
+a_{n+2}=-\frac{1}{2(n+2)(n+1)}\left[(n^2-1)a_{n+1}+(2n-3)a_n+a_{n-1}\right],
 \quad n\ge1.
 \end{equation}
 From the initial conditions in \eqref{eq:7.3.4}, $a_0=y(-1)=2$ and
@@ -2259,7 +2257,7 @@ a_2=-2a_0,\quad a_3=-\frac{7}{6}a_1,
 \end{equation}
 and
 \begin{equation} \label{eq:7.3.9}
-a_{n+2}=-{1\over (n+2)(n+1)}\left[(3n+4)a_n+2a_{n-2}\right],\quad n\ge2.
+a_{n+2}=-\frac{1}{(n+2)(n+1)}\left[(3n+4)a_n+2a_{n-2}\right],\quad n\ge2.
 \end{equation}
 From the initial conditions in \eqref{eq:7.3.7}, $a_0=y(0)=2$ and
 $a_1=y'(0)=-3$. We leave it to you to compute $a_2$, \dots, $a_5$ with
@@ -2534,7 +2532,7 @@ Use \part{b}  and the formula for the sum of a geometric series to show
 that
 the functions
 \[
-y_1={1\over1-r_1x}\quad\mbox{ and }\quad y_2={1\over1-r_2x}
+y_1=\frac{1}{1-r_1x}\quad\mbox{ and }\quad y_2=\frac{1}{1-r_2x}
 \]
 form a fundamental set of solutions of (A) on $(-\rho,\rho)$.
 \item % (d)
@@ -2556,7 +2554,7 @@ is a solution of (A) on $(-\rho,\rho)$.
 Use (e)  and the formula for the sum of a geometric series to show
 that the functions
 \[
-y_1={1\over1-r_1x}\quad\mbox{ and }\quad y_2={x\over(1-r_1x)^2}
+y_1=\frac{1}{1-r_1x}\quad\mbox{ and }\quad y_2=\frac{x}{(1-r_1x)^2}
 \]
 form a fundamental set of solutions of (A) on $(-\rho,\rho)$.
 \item % (g)
@@ -2786,7 +2784,7 @@ Theorem~\ref{thmtype:5.1.1} implies that \eqref{eq:7.4.6} has
 solutions defined on $(0,\infty)$ and $(-\infty,0)$,
 since \eqref{eq:7.4.6} can be rewritten as
 \[
-ay''+{b\over x}y'+{c\over x^2}y=0.
+ay''+\frac{b}{x}y'+\frac{c}{x^2}y=0.
 \]
 For convenience we'll restrict our attention to the interval
 $(0,\infty)$. (Exercise~\ref{exer:7.4.19} deals with solutions of
@@ -2835,7 +2833,7 @@ p(r)=r(r-1)-r-8=(r-4)(r+2).
 Therefore $y_1=x^4$ and $y_2=x^{-2}$ are solutions of \eqref{eq:7.4.8} on
 $(0,\infty)$, and its general solution on $(0,\infty)$ is
 \[
-y=c_1x^4+{c_2\over x^2}.
+y=c_1x^4+\frac{c_2}{x^2}.
 \]
 
 \begin{example}\label{example:7.4.5} \rm
@@ -2893,34 +2891,33 @@ $r_1,r_2=\lambda\pm i\omega$ with $\omega>0$}.
 $(0,\infty)$ if and only if $Y(t)=y(e^t)$ satisfies the constant
 coefficient equation
 \begin{equation} \label{eq:7.4.13}
-a{d^2Y\over dt^2}+(b-a){dY\over dt}+cY=0
+a\frac{d^2Y}{dt^2}+(b-a)\frac{dY}{dt}+cY=0
 \end{equation} on
 $(-\infty,\infty)$. To do this, it's convenient to write $x=e^t$, or,
 equivalently, $t=\ln x$;   thus, $Y(t)=y(x)$, where $x=e^t$. From the
 chain rule,
 \[
-{dY\over dt}={dy\over dx}{dx\over dt}
+\frac{dY}{dt}=\frac{dy}{dx}\frac{dx}{dt}
 \]
 and, since
 \[
-{dx\over dt}=e^t=x,
+\frac{dx}{dt}=e^t=x,
 \]
 it follows that
 \begin{equation} \label{eq:7.4.14}
-{dY\over dt}=x{dy\over dx}.
+\frac{dY}{dt}=x\frac{dy}{dx}.
 \end{equation}
 Differentiating this with
 respect to $t$ and using the chain rule again yields
 \begin{eqnarray*}
-{d^2Y\over dt^2}&=&{d\phantom{t}\over dt}\left(dY\over
-dt\right)={d\phantom{t}\over dt}\left(x{dy\over dx}\right)\\[2\jot]
-&=&{dx\over dt}{dy\over dx}+x{d^2y\over dx^2}{dx\over dt}\\[2\jot]
-&=&x{dy\over dx}+x^2{d^2y\over dx^2}\quad\left(\mbox{ since } {dx\over
-dt}=x\right).
+\frac{d^2Y}{dt^2}&=&{d\phantom{t}\over dt}\left(dY\over
+dt\right)={d\phantom{t}\over dt}\left(x\frac{dy}{dx}\right)\\[2\jot]
+&=&\frac{dx}{dt}\frac{dy}{dx}+x\frac{d^2y}{dx^2}\frac{dx}{dt}\\[2\jot]
+&=&x\frac{dy}{dx}+x^2\frac{d^2y}{dx^2}\quad\left(\mbox{ since } \frac{dx}{dt}=x\right).
 \end{eqnarray*}
 From this and \eqref{eq:7.4.14},
 \[
-x^2{d^2y\over dx^2}={d^2Y\over dt^2}-{dY\over dt}.
+x^2\frac{d^2y}{dx^2}=\frac{d^2Y}{dt^2}-\frac{dY}{dt}.
 \]
 Substituting this and \eqref{eq:7.4.14} into \eqref{eq:7.4.12} yields
 \eqref{eq:7.4.13}. Since \eqref{eq:7.4.11} is the characteristic equation of
@@ -2973,7 +2970,7 @@ p(r)=r(r-1)+3r+2=(r+1)^2+1.
 The roots of the indicial equation are $r=-1 \pm i$ and the general
 solution of \eqref{eq:7.4.16} on $(0,\infty)$ is
 \[
-y={1\over x}\left[c_1\cos(\ln x)+c_2\sin(\ln x)\right].
+y=\frac{1}{x}\left[c_1\cos(\ln x)+c_2\sin(\ln x)\right].
 \]
 
 \exercises
@@ -3043,7 +3040,7 @@ ax^2y''+bxy'+cy=0
 on $(-\infty,0)$
 if and only if  $Y(t)=y(-e^t)$
 \[
-a {d^2Y\over dt^2}+(b-a){dY\over dt}+cY=0.
+a \frac{d^2Y}{dt^2}+(b-a)\frac{dY}{dt}+cY=0.
 \]
 on   $(-\infty,\infty)$.
 \item % (b)
@@ -3097,7 +3094,7 @@ Introduce the new variables $t=x-1$  and $Y(t)=y(t+1)$, and show that
 $y$  is a solution of (A) if and only if
 $Y$ is a solution of
 \[
-t(2+t){d^2Y\over dt^2}+2(1+t){dY\over dt}-\alpha(\alpha+1)Y=0,
+t(2+t)\frac{d^2Y}{dt^2}+2(1+t)\frac{dY}{dt}-\alpha(\alpha+1)Y=0,
 \]
 which has a regular singular point at $t_0=0$.
 \item % (b)
@@ -3105,7 +3102,7 @@ Introduce the new variables $t=x+1$  and $Y(t)=y(t-1)$, and show that
 $y$  is a solution of (A) if and only if
 $Y$ is a solution of
 \[
-t(2-t){d^2Y\over dt^2}+2(1-t){dY\over dt}+\alpha(\alpha+1)Y=0,
+t(2-t)\frac{d^2Y}{dt^2}+2(1-t)\frac{dY}{dt}+\alpha(\alpha+1)Y=0,
 \]
 which has a regular singular point at $t_0=0$.
 \end{alist}
@@ -3123,7 +3120,7 @@ Let $t=x-x_0$ and $Y(t)=y(t+x_0)$.
 Show that $y$ is a solution of (A) if and only if $Y$
 is a solution of
 \[
-R_0(t){d^2Y\over dt^2}+R_1(t){dY\over dt}+R_2(t)Y=0.
+R_0(t)\frac{d^2Y}{dt^2}+R_1(t)\frac{dY}{dt}+R_2(t)Y=0.
 \eqno{\rm (B)}
 \]
 where
@@ -3587,7 +3584,7 @@ is a Frobenius solution of \eqref{eq:7.5.21}.
 Setting $r=-1$ in \eqref{eq:7.5.22} yields
 \begin{eqnarray*}
 a_0(-1)&=&1,\\
-a_n(-1)&=&-{n\over3n-4}a_{n-1}(-1),\quad n\ge1,
+a_n(-1)&=&-\frac{n}{3n-4}a_{n-1}(-1),\quad n\ge1,
 \end{eqnarray*}
 so
 \[
@@ -3690,12 +3687,12 @@ m\ge1,
 \end{eqnarray*}
 so
 \[
-a_{2m}(1/2)={1\over8^mm!}\prod_{j=1}^m{(4j-1)(4j+1)\over4j-3}.
+a_{2m}(1/2)=\frac{1}{8^mm!}\prod_{j=1}^m{(4j-1)(4j+1)\over4j-3}.
 \]
 Therefore
 \[
 y_2=x^{1/2}\sum_{m=0}^\infty
-{1\over8^mm!}\left(\prod_{j=1}^m{(4j-1)(4j+1)\over4j-3}\right)x^{2m}
+\frac{1}{8^mm!}\left(\prod_{j=1}^m{(4j-1)(4j+1)\over4j-3}\right)x^{2m}
 \]
 is a Frobenius solution of \eqref{eq:7.5.25} and $\{y_1,y_2\}$ is a
 fundamental set of solutions.
@@ -4058,8 +4055,8 @@ functions.
 \item % (a)
 Verify that
 \[
-{d\over dx}\left(|x|^rx^n\right)=(n+r)|x|^rx^{n-1}\mbox{\quad and \quad}
-{d^2\over dx^2}\left(|x|^rx^n\right)=(n+r)(n+r-1)|x|^rx^{n-2}
+\frac{d}{dx}\left(|x|^rx^n\right)=(n+r)|x|^rx^{n-1}\mbox{\quad and \quad}
+\frac{d^2}{dx^2}\left(|x|^rx^n\right)=(n+r)(n+r-1)|x|^rx^{n-2}
 \]
 if $x\ne0$.
 \item % (b)
@@ -4201,7 +4198,7 @@ y(x,r)=x^r\sum_{n=0}^\infty a_n(r)x^n
 where
 \begin{eqnarray*}
 a_0(r)&=&1,\\
-a_n(r)&=&-\dst{1\over p_0(n+r)}\sum_{j=1}^n p_j(n+r-j)a_{n-j}(r),\quad
+a_n(r)&=&-\dst\frac{1}{p_0(n+r)}\sum_{j=1}^n p_j(n+r-j)a_{n-j}(r),\quad
 n\ge1,
 \end{eqnarray*}
 then
@@ -4299,7 +4296,7 @@ Show that
 and infer that
 \[
 \sum_{n=0}^\infty
-a_nx^n={\alpha_0a_0\over\alpha_0+\alpha_1x+\alpha_2x^2}.
+a_nx^n=\frac{\alpha_0a_0}{\alpha_0+\alpha_1x+\alpha_2x^2}.
 \]
 \item % (b)
 With $\alpha_0,\alpha_1$, and $\alpha_2$ as in \part{a}, consider the
@@ -4316,9 +4313,9 @@ p_j(r)=\alpha_jr(r-1)+\beta_jr+\gamma_j,\quad j=0,1,2.
 Suppose
 \[
 {p_1(r-1)\over p_0(r)}=
-{\alpha_1\over\alpha_0},\qquad
+\frac{\alpha_1}{\alpha_0},\qquad
 {p_2(r-2)\over p_0(r)}=
-{\alpha_2\over\alpha_0},
+\frac{\alpha_2}{\alpha_0},
 \]
 and
 \[
@@ -4435,7 +4432,7 @@ formally
 with respect to $r$ in \eqref{eq:7.6.3} yields
 \begin{eqnarray*}
 {\partial y\over \partial
-r}(x,r)&=&\dst{{\partial\over\partial r}(x^r)\sum_{n=0}^\infty
+r}(x,r)&=&\dst{\frac{\partial}{\partial r}(x^r)\sum_{n=0}^\infty
 a_n(r)x^n +x^r\sum_{n=1}^\infty  a_n'(r)x^n}\\[10pt]
 &=&\dst{x^r\ln x\sum_{n=0}^\infty
 a_n(r)x^n +x^r\sum_{n=1}^\infty  a_n'(r)x^n}\\[10pt]
@@ -4466,8 +4463,8 @@ q_2(x)&=&\gamma_0+\gamma_1x+\gamma_2x^2.\\[5pt]
 Differentiating both sides of \eqref{eq:7.6.7} with respect to $r$
 yields
 \[
-x^2q_0(x){\partial^3y\over \partial r\partial x^2}(x,r)+
-xq_1(x){\partial^2y\over \partial r\partial x}(x,r)+q_2(x){\partial
+x^2q_0(x)\frac{\partial^3y}{\partial r\partial x^2}(x,r)+
+xq_1(x)\frac{\partial^2y}{\partial r\partial x}(x,r)+q_2(x){\partial
 y\over\partial r}(x,r)=p'_0(r)x^r+p_0(r) x^r \ln x.
 \]
 By changing the order of differentiation in the first two terms on the left
@@ -4479,9 +4476,9 @@ y\over \partial r}(x,r)=p'_0(r)x^r+p_0(r) x^r \ln x,
 \]
 or
 \[
-x^2q_0(x){\partial^2\over \partial x^2}
+x^2q_0(x)\frac{\partial^2}{\partial x^2}
 \left({\partial y\over\partial r}(x,r)\right)
-+xq_1(x){\partial\over\partial r}\left({\partial y\over\partial
++xq_1(x)\frac{\partial}{\partial r}\left({\partial y\over\partial
 x}(x,r)\right) +q_2(x){\partial y\over\partial r}(x,r)=
 p'_0(r)x^r+p_0(r) x^r \ln x,
 \]
@@ -4571,10 +4568,10 @@ p_0(n+r)}\\[10pt]
 Differentiating yields
 \begin{equation} \label{eq:7.6.12}
 \begin{array}{ccl}
-a'_1(r)&=&-\dst{3\over (r-1)^2},\\[10pt]
+a'_1(r)&=&-\dst\frac{3}{(r-1)^2},\\[10pt]
 a'_n(r)&=&\dst{{2n+2r-1\over n+r-2}a'_{n-1}(r)-{n+r-3\over
 n+r-2}a'_{n-2}(r)}\\[10pt]
-&&\dst{-{3\over(n+r-2)^2}a_{n-1}(r)-{1\over(n+r-2)^2}a_{n-2}(r)},\quad
+&&\dst{-\frac{3}{(n+r-2)^2}a_{n-1}(r)-\frac{1}{(n+r-2)^2}a_{n-2}(r)},\quad
 n\ge2.
 \end{array}
 \end{equation}
@@ -4593,7 +4590,7 @@ and
 \begin{array}{ccl}
 a_1'(2)&=&-3,\\[10pt]
 a'_n(2)&=&\dst{{2n+3\over n}a'_{n-1}(2)-{n-1\over n}a'_{n-2}(2)
--{3\over n^2}a_{n-1}(2)-{1\over n^2}a_{n-2}(2)},\quad n\ge2.
+-\frac{3}{n^2}a_{n-1}(2)-\frac{1}{n^2}a_{n-2}(2)},\quad n\ge2.
 \end{array}
 \end{equation}
 Computing recursively with  \eqref{eq:7.6.13} and \eqref{eq:7.6.14}
@@ -4697,32 +4694,30 @@ Therefore
 \]
 Differentiating with respect to $r$ yields
 \[
-{a'_n(r)\over a_n(r)}=\sum^n_{j=1} \left({1\over
-j+r}-{2\over2j+2r-1}\right).
+{a'_n(r)\over a_n(r)}=\sum^n_{j=1} \left(\frac{1}{j+r}-\frac{2}{2j+2r-1}\right).
 \]
 Therefore
 \[
-a'_n(r)=a_n(r) \sum^n_{j=1} \left({1\over j+r}-{2\over2j+2r-1}\right).
+a'_n(r)=a_n(r) \sum^n_{j=1} \left(\frac{1}{j+r}-\frac{2}{2j+2r-1}\right).
 \]
 Setting $r=1/2$ here and recalling \eqref{eq:7.6.19} yields
 \begin{equation} \label{eq:7.6.20}
-a'_n(1/2)={(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!}\left(\sum_{j=1}^n{1\over
-j+1/2}-\sum_{j=1}^n{1\over j}\right).
+a'_n(1/2)={(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!}\left(\sum_{j=1}^n\frac{1}{j+1/2}-\sum_{j=1}^n\frac{1}{j}\right).
 \end{equation}
 Since
 \[
-{1\over j+1/2}-{1\over j}={j-j-1/2\over j(j+1/2)}=-{1\over j(2j+1)},
+\frac{1}{j+1/2}-\frac{1}{j}={j-j-1/2\over j(j+1/2)}=-\frac{1}{j(2j+1)},
 \]
  \eqref{eq:7.6.20} can be rewritten as
 \[
 a'_n(1/2)=-{(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!}
-\sum_{j=1}^n{1\over j(2j+1)}.
+\sum_{j=1}^n\frac{1}{j(2j+1)}.
 \]
 Therefore, from \eqref{eq:7.6.17},
 \[
 y_2=y_1\ln
 x-x^{1/2}\sum_{n=1}^\infty{(-1)^n\prod_{j=1}^n(2j+1)\over4^nn!}
-\left(\sum_{j=1}^n{1\over j(2j+1)}\right)x^n.
+\left(\sum_{j=1}^n\frac{1}{j(2j+1)}\right)x^n.
 \]
 
 \begin{example}\label{example:7.6.3} \rm
@@ -4766,11 +4761,11 @@ y_2=y_1\ln x+x\sum_{m=1}^\infty a'_{2m}(1)x^{2m}
 form a fundamental set of  Frobenius solutions of \eqref{eq:7.6.21}.
 We leave it to you to show  that
 \begin{equation} \label{eq:7.6.24}
-a_{2m}(r)={1\over2^m}\prod_{j=1}^m{2j+r\over2j+r-1}.
+a_{2m}(r)=\frac{1}{2^m}\prod_{j=1}^m{2j+r\over2j+r-1}.
 \end{equation}
 Setting $r=1$ yields
 \begin{equation} \label{eq:7.6.25}
-a_{2m}(1)={1\over2^m}\prod_{j=1}^m{2j+1\over2j}
+a_{2m}(1)=\frac{1}{2^m}\prod_{j=1}^m{2j+1\over2j}
 ={\prod_{j=1}^m(2j+1)\over4^mm!},
 \end{equation}
 and substituting this into \eqref{eq:7.6.22} yields
@@ -4782,7 +4777,7 @@ To obtain $y_2$ in \eqref{eq:7.6.23}, we must compute $a_{2m}'(1)$
 for $m=1$, $2$, \dots. Again we use logarithmic differentiation. From
 \eqref{eq:7.6.24},
 \[
-|a_{2m}(r)|={1\over2^m}\prod_{j=1}^m{|2j+r|\over|2j+r-1|}.
+|a_{2m}(r)|=\frac{1}{2^m}\prod_{j=1}^m{|2j+r|\over|2j+r-1|}.
 \]
 Taking logarithms yields
 \[
@@ -4791,33 +4786,31 @@ Taking logarithms yields
 \]
 Differentiating with respect to $r$ yields
 \[
-{a'_{2m}(r)\over a_{2m}(r)}=\sum^m_{j=1} \left({1\over
-2j+r}-{1\over2j+r-1}\right).
+{a'_{2m}(r)\over a_{2m}(r)}=\sum^m_{j=1} \left(\frac{1}{2j+r}-\frac{1}{2j+r-1}\right).
 \]
 Therefore
 \[
-a'_{2m}(r)=a_{2m}(r) \sum^m_{j=1} \left({1\over
-2j+r}-{1\over2j+r-1}\right).
+a'_{2m}(r)=a_{2m}(r) \sum^m_{j=1} \left(\frac{1}{2j+r}-\frac{1}{2j+r-1}\right).
 \]
 Setting $r=1$  and recalling \eqref{eq:7.6.25} yields
 \begin{equation} \label{eq:7.6.26}
 a'_{2m}(1)=\dst{{\prod_{j=1}^m(2j+1)\over4^mm!}
-\sum_{j=1}^m\left({1\over2j+1}-{1\over2j}\right)}.
+\sum_{j=1}^m\left(\frac{1}{2j+1}-\frac{1}{2j}\right)}.
 \end{equation}
 Since
 \[
-{1\over2j+1}-{1\over2j}=-{1\over2j(2j+1)},
+\frac{1}{2j+1}-\frac{1}{2j}=-\frac{1}{2j(2j+1)},
 \]
 \eqref{eq:7.6.26} can be rewritten as
 \[
 a_{2m}'(1)=-\dst{{\prod_{j=1}^m(2j+1)\over2\cdot4^mm!}
-\sum_{j=1}^m{1\over j(2j+1)}}.
+\sum_{j=1}^m\frac{1}{j(2j+1)}}.
 \]
 Substituting this into \eqref{eq:7.6.23} yields
 \[
 y_2=y_1\ln
-x-{x\over2}\sum_{m=1}^\infty{\prod_{j=1}^m(2j+1)\over4^mm!}
-\left(\sum_{j=1}^m{1\over j(2j+1)}\right)x^{2m}. \bbox
+x-\frac{x}{2}\sum_{m=1}^\infty{\prod_{j=1}^m(2j+1)\over4^mm!}
+\left(\sum_{j=1}^m\frac{1}{j(2j+1)}\right)x^{2m}. \bbox
 \]
 
 If the solution $y_1=y(x,r_1)$ of $Ly=0$ reduces to a finite sum, then
@@ -4890,12 +4883,11 @@ so
 \]
 Differentiating  with respect to $r$ yields
 \[
-{a'_n(r)\over a_n(r)}=\sum^n_{j=1} \left({1\over
-j+r-5}-{2\over j+r-3}\right).
+{a'_n(r)\over a_n(r)}=\sum^n_{j=1} \left(\frac{1}{j+r-5}-\frac{2}{j+r-3}\right).
 \]
 Therefore
 \begin{equation} \label{eq:7.6.31}
-a'_n(r)=a_n(r) \sum^n_{j=1} \left({1\over j+r-5}-{2\over j+r-3}\right).
+a'_n(r)=a_n(r) \sum^n_{j=1} \left(\frac{1}{j+r-5}-\frac{2}{j+r-3}\right).
 \end{equation}
 However, we can't simply set $r=3$ here if $n\ge2$,  since the bracketed
 expression in the sum corresponding to  $j=2$ contains the term $1/(r-3)$.
@@ -5201,7 +5193,7 @@ y_2=y_1\ln x+x^{r_1}\sum_{n=1}^\infty a_n(r_1)J_nx^n,
 \]
 where
 \[
-J_n=\sum_{j=1}^n{p_1'(j+r_1-1)\over p_1(j+r_1-1)}-2\sum_{j=1}^n{1\over j}.
+J_n=\sum_{j=1}^n{p_1'(j+r_1-1)\over p_1(j+r_1-1)}-2\sum_{j=1}^n\frac{1}{j}.
 \]
 \item % (c)
 Conclude from \part{a} and \part{b} that if
@@ -5214,7 +5206,7 @@ and
 \[
 y_2=y_1\ln x-2x^{r_1}\sum_{n=1}^\infty
 {(-1)^n\over(n!)^2}\left(\gamma_1\over\alpha_0\right)^n
-\left(\sum_{j=1}^n{1\over j}\right)x^n
+\left(\sum_{j=1}^n\frac{1}{j}\right)x^n
 \]
 are solutions of
 \[
@@ -5257,7 +5249,7 @@ y_2=y_1\ln x+x^{r_1}\sum_{m=1}^\infty a_{qm}'(r_1)J_mx^{qm},
 where
 \[
 J_m=\sum_{j=1}^m{p_q'\left(q(j-1)+r_1\right)\over
-p_q\left(q(j-1)+r_1\right)}-{2\over q}\sum_{j=1}^m{1\over j}.
+p_q\left(q(j-1)+r_1\right)}-\frac{2}{q}\sum_{j=1}^m\frac{1}{j}.
 \]
 \item % (c)
 Conclude from \part{a} and \part{b} that if
@@ -5268,9 +5260,9 @@ y_1=x^{r_1}\sum_{m=0}^\infty
 \]
 and
 \[
-y_2=y_1\ln x-{2\over q}x^{r_1}\sum_{m=1}^\infty
+y_2=y_1\ln x-\frac{2}{q}x^{r_1}\sum_{m=1}^\infty
 {(-1)^m\over(m!)^2}\left(\gamma_q\over
-q^2\alpha_0\right)^m\left(\sum_{j=1}^m{1\over j}\right)x^{qm}
+q^2\alpha_0\right)^m\left(\sum_{j=1}^m\frac{1}{j}\right)x^{qm}
 \]
 are solutions of
 \[
@@ -5599,26 +5591,25 @@ Therefore
 \]
 Differentiating  with respect to $r$ yields
 \[
-{a'_n(r)\over a_n(r)}=\sum^n_{j=1} \left({1\over
-j+r}-{2\over2j+2r-5}\right).
+{a'_n(r)\over a_n(r)}=\sum^n_{j=1} \left(\frac{1}{j+r}-\frac{2}{2j+2r-5}\right).
 \]
 Therefore
 \[
-a'_n(r)=a_n(r) \sum^n_{j=1} \left({1\over j+r}-{2\over2j+2r-5}\right).
+a'_n(r)=a_n(r) \sum^n_{j=1} \left(\frac{1}{j+r}-\frac{2}{2j+2r-5}\right).
 \]
 Setting $r=5/2$ here and recalling \eqref{eq:7.7.15} yields
 \begin{equation} \label{eq:7.7.17}
 a_n'(5/2)={(-1)^n\prod_{j=1}^n(2j+5)\over4^nn!}\sum_{j=1}^n
-\left({1\over j+5/2}-{1\over j}\right).
+\left(\frac{1}{j+5/2}-\frac{1}{j}\right).
 \end{equation}
 Since
 \[
-{1\over j+5/2}-{1\over j}=-{5\over j(2j+5)},
+\frac{1}{j+5/2}-\frac{1}{j}=-\frac{5}{j(2j+5)},
 \]
 we can rewrite \eqref{eq:7.7.17} as
 \[
 a_n'(5/2)=-5{(-1)^n\prod_{j=1}^n(2j+5)\over4^nn!}
-\left(\sum_{j=1}^n{1\over j(2j+5)}\right).
+\left(\sum_{j=1}^n\frac{1}{j(2j+5)}\right).
 \]
 Substituting this into \eqref{eq:7.7.16} yields
 \begin{eqnarray*}
@@ -5627,7 +5618,7 @@ y_1\ln x\\[10pt]
 &&\,+\frac{75}{128}
 x^{5/2}\sum_{n=1}^\infty
 {(-1)^n\prod_{j=1}^n(2j+5)\over4^nn!}
-\left(\sum_{j=1}^n{1\over j(2j+5)}\right)x^n. \bbox
+\left(\sum_{j=1}^n\frac{1}{j(2j+5)}\right)x^n. \bbox
 \end{eqnarray*}
 
 If $C=0$ in \eqref{eq:7.7.4}, there's no need to compute
@@ -5871,27 +5862,25 @@ Therefore
 \]
 Differentiating  with respect to $r$ yields
 \[
-{a'_{2m}(r)\over a_{2m}(r)}=\sum^m_{j=1} \left({1\over
-2j+r}-{1\over2j+r-3}\right).
+{a'_{2m}(r)\over a_{2m}(r)}=\sum^m_{j=1} \left(\frac{1}{2j+r}-\frac{1}{2j+r-3}\right).
 \]
 Therefore
 \[
-a'_{2m}(r)=a_{2m}(r) \sum^n_{j=1} \left({1\over
-2j+r}-{1\over2j+r-3}\right).
+a'_{2m}(r)=a_{2m}(r) \sum^n_{j=1} \left(\frac{1}{2j+r}-\frac{1}{2j+r-3}\right).
 \]
 Setting $r=3$ here and recalling \eqref{eq:7.7.28} yields
 \begin{equation} \label{eq:7.7.30}
 a_{2m}'(3)={(-1)^m\prod_{j=1}^m(2j+3)\over2^mm!}\sum_{j=1}^m
-\left({1\over2j+3}-{1\over2j}\right).
+\left(\frac{1}{2j+3}-\frac{1}{2j}\right).
 \end{equation}
 Since
 \[
-{1\over2j+3}-{1\over2j}=-{3\over2j(2j+3)},
+\frac{1}{2j+3}-\frac{1}{2j}=-\frac{3}{2j(2j+3)},
 \]
 we can rewrite \eqref{eq:7.7.30} as
 \[
 a_{2m}'(3)=-\frac{3}{2}{(-1)^n\prod_{j=1}^m(2j+3)\over2^mm!}
-\left(\sum_{j=1}^n{1\over j(2j+3)}\right).
+\left(\sum_{j=1}^n\frac{1}{j(2j+3)}\right).
 \]
 Substituting this into \eqref{eq:7.7.29} yields
 \begin{eqnarray*}
@@ -5900,8 +5889,7 @@ y_2&=&x^{-5}
 -\frac{3}{16}y_1\ln x \\[10pt]
 &&\, +\frac{9}{32}
 x^3\sum_{m=1}^\infty
-{(-1)^m\prod_{j=1}^m(2j+3)\over2^mm!}\left(\sum_{j=1}^m{1\over
-j(2j+3)}\right) x^{2m}.
+{(-1)^m\prod_{j=1}^m(2j+3)\over2^mm!}\left(\sum_{j=1}^m\frac{1}{j(2j+3)}\right) x^{2m}.
 \end{eqnarray*}
 
 \begin{example}\label{example:7.7.4} \rm
@@ -6174,8 +6162,7 @@ and
 \begin{eqnarray*}
 y_2&=&x^{r_2}\sum_{n=0}^{k-1} {(-1)^n\over n!\prod_{j=1}^n(j-k)}
 \left(\gamma_1\over\alpha_0\right)^n
-x^n\\[10pt]&&-{1\over
-k!(k-1)!}\left(\gamma_1\over\alpha_0\right)^k\left(y_1\ln x-
+x^n\\[10pt]&&-\frac{1}{k!(k-1)!}\left(\gamma_1\over\alpha_0\right)^k\left(y_1\ln x-
 x^{r_1}\sum_{n=1}^\infty {(-1)^n\over
 n!\prod_{j=1}^n(j+k)}\left(\gamma_1\over\alpha_0\right)^n
 \left(\sum_{j=1}^n{2j+k\over j(j+k)}\right)x^n\right).
@@ -6205,8 +6192,7 @@ and
 \begin{eqnarray*}
 y_2&=&x^{r_2}\sum_{m=0}^{k-1} {(-1)^m\over4^mm!\prod_{j=1}^m(j-k)}
 \left(\gamma_2\over\alpha_0\right)^m
-x^{2m}\\[10pt]&&-{2\over
-4^kk!(k-1)!}\left(\gamma_2\over\alpha_0\right)^k\left(y_1\ln x-
+x^{2m}\\[10pt]&&-\frac{2}{4^kk!(k-1)!}\left(\gamma_2\over\alpha_0\right)^k\left(y_1\ln x-
 {x^{r_1}\over2}\sum_{m=1}^\infty {(-1)^m\over
 4^mm!\prod_{j=1}^m(j+k)}\left(\gamma_2\over\alpha_0\right)^m
 \left(\sum_{j=1}^m{2j+k\over j(j+k)}\right)x^{2m}\right).
@@ -6223,7 +6209,7 @@ with $k=r_1-r_2$, where $k$ is a positive integer. Define $a_0(r)=1$
 for all $r$.  If $r$ is a real number such that $p_0(n+r)$
 is nonzero for all positive integers $n$,  define
 \[
-a_n(r)=-{1\over p_0(n+r)}\sum_{j=1}^n p_j(n+r-j)a_{n-j}(r),\,n\ge1,
+a_n(r)=-\frac{1}{p_0(n+r)}\sum_{j=1}^n p_j(n+r-j)a_{n-j}(r),\,n\ge1,
 \]
 and let
 \[
@@ -6231,7 +6217,7 @@ y_1=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n.
 \]
 Define
 \[
-a_n(r_2)=-{1\over p_0(n+r_2)}\sum_{j=1}^n p_j(n+r_2-j)a_{n-j}(r_2)\mbox{
+a_n(r_2)=-\frac{1}{p_0(n+r_2)}\sum_{j=1}^n p_j(n+r_2-j)a_{n-j}(r_2)\mbox{
 if } n\ge1\mbox{ and }n\ne k,
 \]
 and let $a_k(r_2)$ be arbitrary.
@@ -6255,7 +6241,7 @@ A=\sum_{j=1}^k p_j(r_1-j)a_{k-j}(r_2).
 Show that $y_1$  and
 \[
 y_2=x^{r_2}\sum_{n=0}^\infty a_n(r_2)x^n
--{A\over k\alpha_0}
+-\frac{A}{k\alpha_0}
 \left(y_1 \ln x+x^{r_1}\sum_{n=1}^\infty a_n'(r_1)x^n\right)
 \]
 form a fundamental set of Frobenius solutions of $Ly=0$.

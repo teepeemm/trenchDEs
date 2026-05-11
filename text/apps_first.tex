@@ -58,7 +58,7 @@ Since the applications in this section deal with functions of time, we'll
 $t$, $Q'$ will denote the derivative of $Q$ with respect to $t$;
 thus,
 \[
-Q'={dQ\over dt}.
+Q'=\frac{dQ}{dt}.
 \]
 
 \boxit{Exponential Growth and Decay}
@@ -131,12 +131,11 @@ Q=Q_0e^{-k(t-t_0)}.
 
 The \emph{\color{blue}half--life} $\tau$ of a radioactive material is defined to be
 the time required for half of its mass to decay; that is, if
-$Q(t_0)=Q_0$, then \begin{equation} \label{eq:4.1.4} Q(\tau+t_0)={Q_0\over
-2}.
+$Q(t_0)=Q_0$, then \begin{equation} \label{eq:4.1.4} Q(\tau+t_0)=\frac{Q_0}{2}.
 \end{equation}
  From \eqref{eq:4.1.3} with $t=\tau+t_0$, \eqref{eq:4.1.4} is equivalent to
 \[
-Q_0e^{-k\tau}={Q_0\over 2},
+Q_0e^{-k\tau}=\frac{Q_0}{2},
 \]
  so
 \[
@@ -148,7 +147,7 @@ e^{-k\tau}=\frac{1}{2}.
 \]
  so the half-life is
 \begin{equation} \label{eq:4.1.5}
-\tau={1\over k}\ln2.
+\tau=\frac{1}{k}\ln2.
 \end{equation}
 (Figure \ref{figure:4.1.2}). The half-life is independent of $t_0$ and
 $Q_0$, since it's determined by the properties of material, not by
@@ -183,7 +182,7 @@ Q=4e^{-kt},
  where we determine $k$ from \eqref{eq:4.1.5}, with $\tau$=
 1620 years:
 \[
-k={\ln2\over\tau}={\ln2\over 1620}.
+k=\frac{\ln2}{\tau}=\frac{\ln2}{1620}.
 \]
  Substituting this in \eqref{eq:4.1.6} yields
 \begin{equation} \label{eq:4.1.7}
@@ -203,7 +202,7 @@ $Q(t_1)=1.5$ yields
 \]
 Dividing by 4 and taking logarithms yields
 \[
-\ln\frac{3}{8}=-{t_1\ln2\over1620}.
+\ln\frac{3}{8}=-\frac{t_1\ln2}{1620}.
 \]
 Since $\ln3/8=-\ln8/3$,
 \[
@@ -231,14 +230,14 @@ value of the account is multiplied by $(1+r/2)$ every 6 months.
 Since this occurs twice annually, the value of the account after $t$
 years is
 \[
-Q(t)=Q_0\left(1+{r\over 2}\right)^{2t}.
+Q(t)=Q_0\left(1+\frac{r}{2}\right)^{2t}.
 \]
 In general, if interest is compounded $n$ times per year, the value of
 the account is multiplied $n$ times per year by $(1+r/n)$;  therefore,
 the value of the account
 after $t$ years is
 \begin{equation} \label{eq:4.1.8}
-Q(t)=Q_0\left(1+{r\over n}\right)^{nt}.
+Q(t)=Q_0\left(1+\frac{r}{n}\right)^{nt}.
 \end{equation}
 Thus, increasing the  frequency of  compounding increases the value of the
 account after a fixed period of time. Table~\ref{table:4.1.1} shows the
@@ -276,13 +275,12 @@ step in this direction is to \emph{\color{blue}compound continuously}, by which 
 mean that $n\to\infty$ in \eqref{eq:4.1.8}. Since we know from calculus
 that
 \[
-\lim_{n\to\infty} \left(1+{r\over n}\right)^n=e^r,
+\lim_{n\to\infty} \left(1+\frac{r}{n}\right)^n=e^r,
 \]
  this yields
 \[\begin{array}{rl}
-Q(t) & \dst=\lim_{n\to\infty} Q_0\left(1+{r\over
-n}\right)^{nt}=Q_0 \left[
-\lim_{n\to\infty} \left(1+{r\over n}\right)^n\right]^t \\[12pt]
+Q(t) & \dst=\lim_{n\to\infty} Q_0\left(1+\frac{r}{n}\right)^{nt}=Q_0 \left[
+\lim_{n\to\infty} \left(1+\frac{r}{n}\right)^n\right]^t \\[12pt]
 &=Q_0e^{rt}.
 \end{array}\]
 Observe that $Q=Q_0e^{rt}$ is the solution of the initial value problem
@@ -365,26 +363,26 @@ $e^{-kt}$ is a solution of the complementary equation, the solutions
 of \eqref{eq:4.1.11} are of the form $Q=ue^{-kt}$, where $u'e^{-kt}=a$, so
 $u'=ae^{kt}$. Hence,
 \[
-u={a\over k}e^{kt}+c
+u=\frac{a}{k}e^{kt}+c
 \]
 and
 \[
-Q=ue^{-kt}={a\over k}+ce^{-kt}.
+Q=ue^{-kt}=\frac{a}{k}+ce^{-kt}.
 \]
  Since $Q(0)=Q_0$, setting $t=0$ here yields
 \[
-Q_0={a\over k}+c  \mbox{\quad or \quad} c=Q_0-{a\over k}.
+Q_0=\frac{a}{k}+c  \mbox{\quad or \quad} c=Q_0-\frac{a}{k}.
 \]
  Therefore
 \begin{equation} \label{eq:4.1.12}
-Q={a\over k}+\left(Q_0-{a\over k}\right)e^{-kt}.
+Q=\frac{a}{k}+\left(Q_0-\frac{a}{k}\right)e^{-kt}.
 \end{equation}
 
 \solutionpart{b}
 Since $k > 0$,  $\lim_{t\to\infty} e^{-kt}=0$, so
 from \eqref{eq:4.1.12}
 \[
-\lim_{t\to\infty} Q(t)={a\over k}.
+\lim_{t\to\infty} Q(t)=\frac{a}{k}.
 \]
 This limit depends only on $a$ and $k$, and not on $Q_0$.
 We say that $a/k$ is the \emph{\color{blue}steady state} value of $Q$. From
@@ -398,7 +396,7 @@ then $Q$ remains constant (Figure \ref{figure:4.1.3}).
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040103}
 \color{blue}
 \caption{$Q(t)$ approaches the steady state value
-$\dst{a\over k}$ as $t\to\infty$}
+$\dst\frac{a}{k}$ as $t\to\infty$}
   \label{figure:4.1.3}
 \end{figure}
 
@@ -449,7 +447,7 @@ that would be present in  live individuals.
 Since carbon-14 decays exponentially with half-life 5570 years, its
 decay constant is
 \[
-k={\ln2\over 5570}.
+k=\frac{\ln2}{5570}.
 \]
  Therefore
 \[
@@ -508,19 +506,19 @@ complementary equation, the solutions of \eqref{eq:4.1.13}  are of the
 form   $Q=ue^{.06t}$,  where $u'e^{.06t}=2600$. Hence,
 $u'=2600e^{-.06t}$,
 \[
-u=- {2600\over .06}e^{-.06t}+c
+u=- \frac{2600}{.06}e^{-.06t}+c
 \]
 and
 \begin{equation} \label{eq:4.1.14}
-Q=ue^{.06t}=-{2600\over .06}+ce^{.06t}.
+Q=ue^{.06t}=-\frac{2600}{.06}+ce^{.06t}.
 \end{equation}
  Setting $t=0$ and $Q=1000$ here yields
 \[
-c=1000+{2600\over .06},
+c=1000+\frac{2600}{.06},
 \]
 and substituting this into \eqref{eq:4.1.14} yields
 \begin{equation} \label{eq:4.1.15}
-Q=1000e^{.06t}+{2600\over .06}(e^{.06t}-1),%\tag15
+Q=1000e^{.06t}+\frac{2600}{.06}(e^{.06t}-1),%\tag15
 \end{equation}
 where the first term is the value due to the initial deposit and the
 second is due to the subsequent weekly deposits. \bbox
@@ -776,7 +774,7 @@ equal length.
 \item % (d)
  It can be shown that the exact value of $M$  is given by
 \[
-M={rP_0\over 12}\left(1-(1+r/12)^{-12N}\right)^{-1}.
+M=\frac{rP_0}{12}\left(1-(1+r/12)^{-12N}\right)^{-1}.
 \]
 Compare    the value of $M$ obtained from the answer in \part{c} to the
 exact value  if
@@ -814,7 +812,7 @@ continuously.
 A radioactive substance with decay constant $k$ is produced
 at the rate of
 \[
-{at\over1+btQ(t)}
+\frac{at}{1+btQ(t)}
 \]
  units of mass per unit time, where
 $a$ and $b$ are positive constants and $Q(t)$ is the mass of the
@@ -925,7 +923,7 @@ k=-\frac{1}{4} \ln \frac{7}{15}=\frac{1}{4}\ln \frac{15}{7}.
 \]
  Substituting this into \eqref{eq:4.2.3} yields
 \[
-T=25+375 e^{-{t\over 4} \ln \frac{15}{7}}
+T=25+375 e^{-\frac{t}{4} \ln \frac{15}{7}}
 \]
 (Figure~\ref{figure:4.2.1}).
 Therefore the temperature of the insulator after
@@ -986,15 +984,15 @@ k =-\frac{1}{2} \ln \frac{7}{8} = \frac{1}{2} \ln \frac{8}{7}.
 \]
  Substituting this into \eqref{eq:4.2.4} yields
 \[
-T = -20+80 e^{-{t\over 2}\ln \frac{8}{7}},
+T = -20+80 e^{-\frac{t}{2}\ln \frac{8}{7}},
 \]
  and the condition $T(\tau)=72$  implies that
 \[
-72 =-20+80 e^{-{\tau\over 2} \ln \frac{8}{7}};
+72 =-20+80 e^{-\frac{\tau}{2} \ln \frac{8}{7}};
 \]
  hence,
 \[
-e^{-{\tau\over 2} \ln \frac{8}{7}} =\frac{92}{80} =
+e^{-\frac{\tau}{2} \ln \frac{8}{7}} =\frac{92}{80} =
 \frac{23}{20}.
 \]
 Taking logarithms and solving for $\tau$ yields
@@ -1011,7 +1009,7 @@ at 11:02:55.
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040202}
 \color{blue}
-  \caption{$T = -20+80 e^{-{t\over 2}\ln \frac{8}{7}}$}
+  \caption{$T = -20+80 e^{-\frac{t}{2}\ln \frac{8}{7}}$}
   \label{figure:4.2.2}
 \end{figure}
 
@@ -1097,11 +1095,11 @@ flow out})\\[6pt] \mbox{}&=&(\mbox{lb/gal})\times(\mbox{gal/min})\\[10pt]
  We can now
 write \eqref{eq:4.2.5} as
 \[
-Q' = 2-{Q\over 150}.
+Q' = 2-\frac{Q}{150}.
 \]
 This first order equation can be rewritten as
 \[
-Q'+{Q\over 150} = 2.
+Q'+\frac{Q}{150} = 2.
 \]
 Since $e^{-t/150}$ is a solution of the complementary equation, the
 solutions of this equation are of the form  $Q=ue^{-t/150}$, where
@@ -1187,7 +1185,7 @@ rate of 2 liters/min and there are $2t+200$
 liters in the tank at time $t$, the fraction of the mixture
 being removed per minute at time $t$ is
 \[
-{2\over 2t+200} = {1\over t+100}.
+\frac{2}{2t+200} = \frac{1}{t+100}.
 \]
 We're removing this same fraction of the salt per
 minute.  Therefore, since there are $Q(t)$ grams of salt in
@@ -1208,14 +1206,14 @@ flow out})
  Substituting \eqref{eq:4.2.8} and \eqref{eq:4.2.9} into \eqref{eq:4.2.7}
 yields
 \begin{equation} \label{eq:4.2.10}
-Q'=1-{Q\over t+100},\quad\text{ \rm so }\quad
-Q'+{1\over t+100} Q=1.
+Q'=1-\frac{Q}{t+100},\quad\text{ \rm so }\quad
+Q'+\frac{1}{t+100} Q=1.
 \end{equation}
 By separation of variables, $1/(t+100)$ is a solution of the
 complementary equation, so the solutions of \eqref{eq:4.2.10}
 are of the form
 \[
-Q={u\over t+100},\mbox{\quad where \quad}{u'\over t+100}=1,\mbox{\quad
+Q=\frac{u}{t+100},\mbox{\quad where \quad}{u'\over t+100}=1,\mbox{\quad
 so \quad} u'=t+100.
 \]
 Hence,
@@ -1236,19 +1234,19 @@ u = {(t+100)^2\over 2} -4000.
 \]
  Hence,
  \[
-Q = {u\over t+200}= {t+100\over 2}-{4000\over t+100}.
+Q = \frac{u}{t+200}= {t+100\over 2}-\frac{4000}{t+100}.
 \]
 Now let $K(t)$ be the concentration of salt at
 time $t$.  Then
 \[
-K(t) = \frac{1}{4}-{2000\over(t+100)^2}
+K(t) = \frac{1}{4}-\frac{2000}{(t+100)^2}
 \]
 (Figure~\ref{figure:4.2.6}).
           \begin{figure}[H]
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040206}
 \color{blue}
-  \caption{$K(t) = \dst{\frac{1}{4}-{2000\over(t+100)^2}}$}
+  \caption{$K(t) = \dst{\frac{1}{4}-\frac{2000}{(t+100)^2}}$}
   \label{figure:4.2.6}
 \end{figure}
 
@@ -1751,35 +1749,35 @@ mv'=-mg-kv,
 \]
  or
 \begin{equation} \label{eq:4.3.6}
-v'+{k\over m}v=-g.
+v'+\frac{k}{m}v=-g.
 \end{equation}
 Since $e^{-kt/m}$ is a solution of the  complementary
 equation, the solutions of (\ref{eq:4.3.6}) are of the form
 $v=ue^{-kt/m}$, where $u'e^{-kt/m}=-g$, so $u'=-ge^{kt/m}$.
 Hence,
 \[
-u=-{mg\over k} e^{kt/m}+c,
+u=-\frac{mg}{k} e^{kt/m}+c,
 \]
 so
 \begin{equation} \label{eq:4.3.7}
-v=ue^{-kt/m}=-{mg\over k}+ce^{-kt/m}.
+v=ue^{-kt/m}=-\frac{mg}{k}+ce^{-kt/m}.
 \end{equation}
 Since
  $v(0)=v_0$,
 \[
-v_0=-{mg\over k}+c,
+v_0=-\frac{mg}{k}+c,
 \]
  so
 \[
-c=v_0+{mg\over k}
+c=v_0+\frac{mg}{k}
 \]
  and (\ref{eq:4.3.7}) becomes
 \[
-v=-{mg\over k}+\left(v_0+{mg\over k}\right) e^{-kt/m}.
+v=-\frac{mg}{k}+\left(v_0+\frac{mg}{k}\right) e^{-kt/m}.
 \]
 Letting $t\to\infty$ here shows that the terminal velocity is
 \[
-\lim_{t\to\infty} v(t)=-{mg\over k},
+\lim_{t\to\infty} v(t)=-\frac{mg}{k},
 \]
 which  is independent of the
 initial velocity $v_0$ (Figure~\ref{figure:4.3.2}).
@@ -1866,21 +1864,21 @@ $m=10$ and $g=9.8$, (\ref{eq:4.3.9}) becomes
 If $v_0=-7$, then $v\equiv-7$ for all $t\ge0$. If $v_0\ne-7$,
 we separate  variables to obtain
 \begin{equation} \label{eq:4.3.11}
-{1\over v^2-49}v'=\frac{1}{5},
+\frac{1}{v^2-49}v'=\frac{1}{5},
 \end{equation}
 which is convenient for the required partial fraction expansion
 \begin{equation} \label{eq:4.3.12}
 \frac{1}{v^2-49} =\frac{1}{(v-7)(v+7)}
-=\frac{1}{14}\left[{1\over v-7}
--{1\over v+7}\right].
+=\frac{1}{14}\left[\frac{1}{v-7}
+-\frac{1}{v+7}\right].
 \end{equation}
  Substituting (\ref{eq:4.3.12})  into (\ref{eq:4.3.11}) yields
 \[
-\frac{1}{14}\left[{1\over v-7}-{1\over v+7}\right]v'=\frac{1}{5},
+\frac{1}{14}\left[\frac{1}{v-7}-\frac{1}{v+7}\right]v'=\frac{1}{5},
 \]
  so
 \[
-\left[{1\over v-7}-{1\over v+7}\right]v'=\frac{14}{5}.
+\left[\frac{1}{v-7}-\frac{1}{v+7}\right]v'=\frac{14}{5}.
 \]
 Integrating this yields
 \[
@@ -1919,7 +1917,7 @@ independent of $v_0$. More generally, it
 can be shown (Exercise~\ref{exer:4.3.11}) that if $v$ is any solution
 of (\ref{eq:4.3.9}) such that $v_0\le0$ then
 \[
-\lim_{t\to\infty}v(t)=-\sqrt{mg\over k}
+\lim_{t\to\infty}v(t)=-\sqrt\frac{mg}{k}
 \]
 (Figure~\ref{figure:4.3.3}).
 
@@ -1959,26 +1957,26 @@ therefore, we replace (\ref{eq:4.3.10}) by
 
 Separating variables  yields
 \[
-{5\over v^2+49}v'=-1,
+\frac{5}{v^2+49}v'=-1,
 \]
  and integrating this yields
 \[
-\frac{5}{7}\tan^{-1}{v\over7}=-t+c.
+\frac{5}{7}\tan^{-1}\frac{v}{7}=-t+c.
 \]
  (Recall that $\tan^{-1}u$ is the number $\theta$
 such that $-\pi/2 < \theta < \pi/2$ and $\tan \theta=u$.)
  Since $v(0)=v_0$,
 \[
-c=\frac{5}{7}\tan^{-1}{v_0\over7},
+c=\frac{5}{7}\tan^{-1}\frac{v_0}{7},
 \]
 so $v$ is defined implicitly by
 \begin{equation} \label{eq:4.3.16}
-\frac{5}{7} \tan^{-1}{v\over7}=-t+\frac{5}{7}
-\tan^{-1}{v_0\over7}, \quad 0\le t\le T.
+\frac{5}{7} \tan^{-1}\frac{v}{7}=-t+\frac{5}{7}
+\tan^{-1}\frac{v_0}{7}, \quad 0\le t\le T.
 \end{equation}
 Solving this for $v$ yields
 \begin{equation} \label{eq:4.3.17}
-v=7\tan\left(-{7t\over5}+\tan^{-1}{v_0\over7}\right).
+v=7\tan\left(-\frac{7t}{5}+\tan^{-1}\frac{v_0}{7}\right).
 \end{equation}
 Using the identity
 \[
@@ -1993,17 +1991,17 @@ v=7{v_0-7\tan(7t/5)\over7+v_0\tan(7t/5)}.
 
  Since $v(T)=0$ and $\tan^{-1}(0)=0$, (\ref{eq:4.3.16}) implies that
 \[
--T+\frac{5}{7} \tan^{-1}{v_0\over7}=0.
+-T+\frac{5}{7} \tan^{-1}\frac{v_0}{7}=0.
 \]
 Therefore
 \[
-T=\frac{5}{7} \tan^{-1}{v_0\over7}.
+T=\frac{5}{7} \tan^{-1}\frac{v_0}{7}.
 \]
 Since $\tan^{-1}(v_0/7)<\pi/2$ for all $v_0$,
 the  time required for the mass to reach its maximum
 altitude is less than
 \[
-{5\pi\over 14} \approx 1.122\  \mbox{s}
+\frac{5\pi}{14} \approx 1.122\  \mbox{s}
 \]
 regardless of the initial velocity.  Figure~\ref{figure:4.3.4}
 shows graphs of $v$ over $[0,T]$ for various values of $v_0$.
@@ -2038,7 +2036,7 @@ square of the distance from Earth's center;  thus, if we take the
 upward direction to be positive then
 gravitational force on the vehicle at an altitude $y$ above Earth is
 \begin{equation} \label{eq:4.3.18}
-F=-{K\over(y+R)^2},
+F=-\frac{K}{(y+R)^2},
 \end{equation}
 where $R$ is  Earth's radius (Figure~\ref{figure:4.3.5}).
 
@@ -2055,21 +2053,21 @@ where $R$ is  Earth's radius (Figure~\ref{figure:4.3.5}).
  Since $F=-mg$ when $y=0$, setting $y=0$ in
 (\ref{eq:4.3.18}) yields
 \[
--mg=-{K\over R^2};
+-mg=-\frac{K}{R^2};
 \]
  therefore $K=mgR^2$ and (\ref{eq:4.3.18}) can be written more
 specifically as
 \begin{equation} \label{eq:4.3.19}
-F=-{mgR^2\over(y+R)^2}.
+F=-\frac{mgR^2}{(y+R)^2}.
 \end{equation}
 
 From Newton's second law of motion,
 \[
-F=m{d^2y\over dt^2},
+F=m\frac{d^2y}{dt^2},
 \]
 so (\ref{eq:4.3.19}) implies that
 \begin{equation} \label{eq:4.3.20}
-{d^2y\over dt^2}=-{gR^2\over(y+R)^2}.
+\frac{d^2y}{dt^2}=-\frac{gR^2}{(y+R)^2}.
 \end{equation}
 
 We'll show that there's a number $v_e$, called the {\color{blue}\it
@@ -2093,54 +2091,54 @@ Since
 so far. However, we're concerned with $v$ rather than $y$, and $v$ is
 easier to find. Since $v=y'$ the chain rule implies that
 \[
-{d^2y\over dt^2}={dv\over dt}={dv\over dy}{dy\over dt}=v{dv\over dy}.
+\frac{d^2y}{dt^2}=\frac{dv}{dt}=\frac{dv}{dy}\frac{dy}{dt}=v\frac{dv}{dy}.
 \]
  Substituting this into (\ref{eq:4.3.20}) yields the first order
 separable equation
 \begin{equation} \label{eq:4.3.21}
-v{dv\over dy}=-{gR^2\over(y+R)^2}.
+v\frac{dv}{dy}=-\frac{gR^2}{(y+R)^2}.
 \end{equation}
 When $t=0$, the velocity is $v_0$ and the altitude is $h$. Therefore
 we can
 obtain $v$ as a function of $y$ by solving the initial value problem
 \[
-v{dv\over dy}=-{gR^2\over(y+R)^2},\quad  v(h)=v_0.
+v\frac{dv}{dy}=-\frac{gR^2}{(y+R)^2},\quad  v(h)=v_0.
 \]
 
 Integrating (\ref{eq:4.3.21}) with respect to $y$ yields
 \begin{equation} \label{eq:4.3.22}
-{v^2\over 2}={gR^2\over y+R}+c.
+\frac{v^2}{2}=\frac{gR^2}{y+R}+c.
 \end{equation}
  Since $v(h)=v_0$,
 \[
-c={v_0^2\over 2}-{gR^2\over h+R},
+c=\frac{v_0^2}{2}-\frac{gR^2}{h+R},
 \]
  so (\ref{eq:4.3.22}) becomes
 \begin{equation} \label{eq:4.3.23}
-{v^2\over 2}={gR^2\over y+R}+\left({v_0^2\over 2}-
-{gR^2\over h+R}\right).
+\frac{v^2}{2}=\frac{gR^2}{y+R}+\left(\frac{v_0^2}{2}-
+\frac{gR^2}{h+R}\right).
 \end{equation}
 If
 \[
-v_0 \ge\left({2gR^2\over h+R}\right)^{1/2},
+v_0 \ge\left(\frac{2gR^2}{h+R}\right)^{1/2},
 \]
  the parenthetical expression in (\ref{eq:4.3.23})  is nonnegative,
  so $v(y)>0$ for $y>h$. This proves that there's an escape
 velocity $v_e$. We'll now prove that
 \[
-v_e=\left({2gR^2\over h+R}\right)^{1/2}
+v_e=\left(\frac{2gR^2}{h+R}\right)^{1/2}
 \]
 by showing that the vehicle falls back to Earth if
 \begin{equation} \label{eq:4.3.24}
-v_0 <\left({2gR^2\over h+R}\right)^{1/2}.
+v_0 <\left(\frac{2gR^2}{h+R}\right)^{1/2}.
 \end{equation}
 If (\ref{eq:4.3.24})  holds then  the parenthetical expression in
 (\ref{eq:4.3.23})
 is negative and the vehicle will attain a maximum altitude $y_m>h$
 that satisfies the equation
 \[
-0={gR^2\over y_m+R}+\left({v_0^2\over 2}-
-{gR^2\over h+R}\right).
+0=\frac{gR^2}{y_m+R}+\left(\frac{v_0^2}{2}-
+\frac{gR^2}{h+R}\right).
 \]
 The velocity will be zero at the maximum  altitude, and the object will
 then fall to Earth under the influence of gravity.
@@ -2211,7 +2209,7 @@ $y=y(t)$ be the
 altitude of the object at time $t$, with $y(0)=y_0$. Use the results
 of Example~\ref{example:4.3.1} to show that
 \[
- y(t)=y_0+{m\over k}(v_0-v-gt).
+ y(t)=y_0+\frac{m}{k}(v_0-v-gt).
 \]
 
 \item\label{exer:4.3.9}
@@ -2405,11 +2403,11 @@ v'=F(y,v).
 \end{equation}
 Since
 \begin{equation} \label{eq:4.4.3}
-v'={dv\over dt}={dv\over dy}{dy\over dt}=v{dv\over dy},
+v'=\frac{dv}{dt}=\frac{dv}{dy}\frac{dy}{dt}=v\frac{dv}{dy},
 \end{equation}
 \eqref{eq:4.4.2} can be rewritten as
 \begin{equation} \label{eq:4.4.4}
-v{dv\over dy}=F(y,v).
+v\frac{dv}{dy}=F(y,v).
 \end{equation}
 The integral curves of \eqref{eq:4.4.4} can be plotted in the $(y,v)$
 plane, which is called the
@@ -2443,7 +2441,7 @@ law of motion leads to \eqref{eq:4.4.5}.
 
 The phase plane equivalent of \eqref{eq:4.4.5} is
 \begin{equation} \label{eq:4.4.6}
-v{dv\over dy}+q(y,v)v+p(y)=0.
+v\frac{dv}{dy}+q(y,v)v+p(y)=0.
 \end{equation}
 Some  statements that we'll be making about the properties of
 \eqref{eq:4.4.5} and \eqref{eq:4.4.6} are intuitively reasonable, but
@@ -2537,11 +2535,11 @@ that it may model --- is \emph{\color{blue}undamped}.
 The phase plane equivalent of \eqref{eq:4.4.7} is  the
 separable equation
 \[
-v{dv\over dy}+p(y)=0.
+v\frac{dv}{dy}+p(y)=0.
 \]
  Integrating this  yields
 \begin{equation} \label{eq:4.4.8}
-{v^2\over2}+P(y)=c,
+\frac{v^2}{2}+P(y)=c,
 \end{equation}
 where $c$ is a constant of integration and $P(y)=\int p(y)\,dy$ is an
 antiderivative of $p$.
@@ -2555,7 +2553,7 @@ energy of the object remains constant, or is \emph{\color{blue}conserved}. In
 particular, if a trajectory passes through a given point $(y_0,v_0)$
 then
 \[
-c={v_0^2\over2}+P(y_0).
+c=\frac{v_0^2}{2}+P(y_0).
 \]
 
 
@@ -2596,11 +2594,11 @@ we'll consider the phase plane equivalent of \eqref{eq:4.4.9}.
 From \eqref{eq:4.4.3}, we can rewrite \eqref{eq:4.4.9} as the separable
 equation
 \[
- mv{dv\over dy}=-ky.
+ mv\frac{dv}{dy}=-ky.
 \]
 Integrating this  yields
 \[
-{mv^2\over2}=-{ky^2\over2}+c,
+\frac{mv^2}{2}=-\frac{ky^2}{2}+c,
 \]
 which implies that
 \begin{equation} \label{eq:4.4.10}
@@ -2626,7 +2624,7 @@ the maximum and minimum values of $y$ we set $v=0$ in \eqref{eq:4.4.10};
 thus,
 \begin{equation} \label{eq:4.4.11}
 y_{\max}=R\mbox{\quad and \quad}
-y_{\min}=-R,\mbox{\quad with } R=\sqrt{\rho\over k}.
+y_{\min}=-R,\mbox{\quad with } R=\sqrt\frac{\rho}{k}.
 \end{equation}
 Equation~\eqref{eq:4.4.9} has exactly one equilibrium, $\overline y=0$,
 and
@@ -2638,17 +2636,17 @@ In this case we can find $y$ explicitly as a function of $t$. (Don't
 expect this to happen in more complicated problems!) If $v>0$ on an
 interval $I$,  \eqref{eq:4.4.10} implies that
 \[
-{dy\over dt}=v=\sqrt{\rho-ky^2\over m}
+\frac{dy}{dt}=v=\sqrt{\rho-ky^2\over m}
 \]
 on $I$. This is equivalent to
 \begin{equation} \label{eq:4.4.12}
-{\sqrt k\over\sqrt{\rho-ky^2}}{dy\over dt}=\omega_0,\mbox{\quad where
+{\sqrt k\over\sqrt{\rho-ky^2}}\frac{dy}{dt}=\omega_0,\mbox{\quad where
 \quad}
-\omega_0=\sqrt{k\over m}.
+\omega_0=\sqrt\frac{k}{m}.
 \end{equation}
 Since
 \[
-\int{\sqrt k\,dy\over\sqrt{\rho-ky^2}}=\sin^{-1}\left(\sqrt{k\over\rho
+\int{\sqrt k\,dy\over\sqrt{\rho-ky^2}}=\sin^{-1}\left(\sqrt\frac{k}{\rho
 }y\right)+c=\sin^{-1}\left(y\over R\right)+c
 \]
 (see \eqref{eq:4.4.11}), \eqref{eq:4.4.12} implies that that there's a
@@ -2695,7 +2693,7 @@ mLy''=-mg\sin y,
 \]
 or
 \begin{equation} \label{eq:4.4.13}
-y''=-{g\over L} \sin y.
+y''=-\frac{g}{L} \sin y.
 \end{equation}
 
 \begin{figure}[tbp]
@@ -2733,29 +2731,29 @@ equilibrium}
 
 The phase plane equivalent of \eqref{eq:4.4.13} is
 \[
-v{dv\over dy}=-{g\over L}\sin y,
+v\frac{dv}{dy}=-\frac{g}{L}\sin y,
 \]
 where $v=y'$ is the angular velocity of the pendulum. Integrating this
 yields
 \begin{equation} \label{eq:4.4.14}
-{v^2\over2}={g\over L}\cos y+c.
+\frac{v^2}{2}=\frac{g}{L}\cos y+c.
 \end{equation}
 If $v=v_0$ when $y=0$, then
 \[
-c={v_0^2\over2}-{g\over L},
+c=\frac{v_0^2}{2}-\frac{g}{L},
 \]
 so \eqref{eq:4.4.14} becomes
 \[
-{v^2\over2}={v_0^2\over2}-{g\over L}(1-\cos y)
-={v_0^2\over2}-{2g\over L}\sin^2{y\over2},
+\frac{v^2}{2}=\frac{v_0^2}{2}-\frac{g}{L}(1-\cos y)
+=\frac{v_0^2}{2}-\frac{2g}{L}\sin^2\frac{y}{2},
 \]
 which is equivalent to
 \begin{equation} \label{eq:4.4.15}
-v^2=v_0^2-v_c^2\sin^2{y\over2},
+v^2=v_0^2-v_c^2\sin^2\frac{y}{2},
 \end{equation}
  where
 \[
-v_c=2\sqrt{g\over L}.
+v_c=2\sqrt\frac{g}{L}.
 \]
 
 The curves defined by \eqref{eq:4.4.15} are the trajectories of
@@ -2780,7 +2778,7 @@ the dashed curves in Figure~\ref{figure:4.4.7}. It can be shown (see
 Exercise~\ref{exer:4.4.21} for a partial proof) that the period of the
 oscillation is
 \begin{equation} \label{eq:4.4.16}
-T=8\int_0^{\pi/2}{d\theta\over\sqrt{v_c^2-v_0^2\sin^2\theta}}.
+T=8\int_0^{\pi/2}\frac{d\theta}{\sqrt{v_c^2-v_0^2\sin^2\theta}}.
 \end{equation}
 Although this integral can't be evaluated in terms of familiar
 elementary functions, you can see that it's finite if $|v_0|<v_c$.
@@ -2813,7 +2811,7 @@ then the separatrices are the curves given by \eqref{eq:4.4.8} that pass
 through unstable critical points. Thus, if $(\overline y,0)$ is an
 unstable critical point, then
 \begin{equation} \label{eq:4.4.17}
-{v^2\over 2}+P(y)=P(\overline y)
+\frac{v^2}{2}+P(y)=P(\overline y)
 \end{equation}
 \enlargethispage{30pt}
 defines a separatrix passing through $(\overline y,0)$.
@@ -2938,11 +2936,11 @@ stable.
 
 The phase plane equivalent of \eqref{eq:4.4.22} is the separable equation
 \[
-v{dv\over dy}+y(y-1)=0.
+v\frac{dv}{dy}+y(y-1)=0.
 \]
 Integrating yields
 \[
-{v^2\over2}+{y^3\over3}-{y^2\over2}=C,
+\frac{v^2}{2}+\frac{y^3}{3}-\frac{y^2}{2}=C,
 \]
 which we rewrite  as
 \begin{equation} \label{eq:4.4.23}
@@ -3018,7 +3016,7 @@ y''+q(y,y')y'+p(y)=0
 \end{equation}
 is
 \[
-v{dv\over dy}+q(y,v)v+p(y)=0.
+v\frac{dv}{dy}+q(y,v)v+p(y)=0.
 \]
 This equation isn't  separable, so we can't solve it for $v$ in terms
 of
@@ -3028,7 +3026,7 @@ hold. (For example, energy expended in overcoming friction is lost.)
 However, we can study the qualitative behavior of its solutions by
 rewriting it as
 \begin{equation} \label{eq:4.4.25}
-{dv\over dy}=-q(y,v)-{p(y)\over v}
+\frac{dv}{dy}=-q(y,v)-{p(y)\over v}
 \end{equation}
 and considering the direction fields for this equation. In the
 following examples we'll also be showing computer generated
@@ -3055,7 +3053,7 @@ y''+cy'+p(y)=0
 \end{equation}
 and
 \[
-{dv\over dy}=-c-{p(y)\over v}.
+\frac{dv}{dy}=-c-{p(y)\over v}.
 \]
 (We'll consider more general equations in the exercises.) The constant
 $c$ is called the \emph{\color{blue}damping constant}. In situations where
@@ -3083,7 +3081,7 @@ but that method isn't available here. Instead, we'll consider its
 phase plane equivalent, which can be written in the form \eqref{eq:4.4.25}
 as
 \begin{equation} \label{eq:4.4.28}
-{dv\over dy}=-{c\over m}-{ky\over mv}.
+\frac{dv}{dy}=-\frac{c}{m}-\frac{ky}{mv}.
 \end{equation}
 (A minor note: the $c$ in \eqref{eq:4.4.26} actually corresponds to
 $c/m$ in this equation.) Figure~\ref{figure:4.4.11} shows a
@@ -3171,7 +3169,7 @@ in \eqref{eq:4.4.26} actually corresponds to $c/mL$ in this equation.)
 To plot a direction field for \eqref{eq:4.4.29} we write its phase plane
 equivalent as
 \[
-{dv\over dy}=-{c\over mL}-{g\over Lv}\sin y.
+\frac{dv}{dy}=-\frac{c}{mL}-\frac{g}{Lv}\sin y.
 \]
 Figure~\ref{figure:4.4.15} shows
 trajectories of four solutions of \eqref{eq:4.4.29}, all satisfying
@@ -3344,19 +3342,19 @@ Let  $T_1$ be the time
 required for  $y$ to increase from zero to
 $y_{\max}=2\sin^{-1}(v_0/v_c)$. Show that
 \[
-{dy\over dt}=\sqrt{v_0^2-v_c^2\sin^2y/2},\quad 0\le t<T_1.
+\frac{dy}{dt}=\sqrt{v_0^2-v_c^2\sin^2y/2},\quad 0\le t<T_1.
 \eqno{\rm(A)}
 \]
 \item % (b)
 Separate variables in (A) and show that
 \[
-T_1=\int_0^{y_{\max}}{du\over\sqrt{v_0^2-v_c^2\sin^2u/2}}
+T_1=\int_0^{y_{\max}}\frac{du}{\sqrt{v_0^2-v_c^2\sin^2u/2}}
 \eqno{\rm(B)}
 \]
 \item % (c)
 Substitute $\sin u/2=(v_0/v_c)\sin\theta$ in (B) to obtain
 \[
-T_1=2\int_0^{\pi/2}{d\theta\over\sqrt{v_c^2-v_0^2\sin^2\theta}}.
+T_1=2\int_0^{\pi/2}\frac{d\theta}{\sqrt{v_c^2-v_0^2\sin^2\theta}}.
 \eqno{\rm(C)}
 \]
 \item % (d)
@@ -3789,7 +3787,7 @@ which can be rewritten as
 \]
 Integrating  yields $xy=c$,  or
 \[
-y={c\over x}.
+y=\frac{c}{x}.
 \]
 If $c=0$ this curve is the line $y=0$, which does not satisfy the
 geometric requirements imposed by the problem;   thus, $c\ne0$, and the
@@ -3860,16 +3858,16 @@ y+y'(x^2-x)=0.
 \]
 Therefor
 \[
-{y'\over y}=-{1\over x^2-x}=-{1\over x(x-1)}={1\over x}-{1\over x-1},
+{y'\over y}=-\frac{1}{x^2-x}=-\frac{1}{x(x-1)}=\frac{1}{x}-\frac{1}{x-1},
 \]
 so
 \[
 \ln|y|=\ln|x|-\ln|x-1|+k=
-\ln\left|{x\over x-1}\right|+k,
+\ln\left|\frac{x}{x-1}\right|+k,
 \]
 and
 \[
-y={cx\over x-1}.
+y=\frac{cx}{x-1}.
 \]
 If $c=0$, the graph of this function is the $x$-axis.   If $c\ne0$, it's
 a hyperbola with vertical asymptote $x=1$ and horizontal asymptote
@@ -3928,7 +3926,7 @@ $L_2$ with slopes $m_1$ and $m_2$, respectively, are perpendicular if
 and only if $m_2=-1/m_1$;  therefore, the integral curves of the
 differential equation
 \[
-y'=-{1\over f(x,y)}
+y'=-\frac{1}{f(x,y)}
 \]
 are orthogonal trajectories of the integral curves of the differential
 equation
@@ -3938,7 +3936,7 @@ y'=f(x,y),
 because at any point $(x_0,y_0)$ where curves from the two families
 intersect the slopes of the respective tangent lines are
 \[
-m_1=f(x_0,y_0)\mbox{\quad and \quad} m_2=-{1\over f(x_0,y_0)}.
+m_1=f(x_0,y_0)\mbox{\quad and \quad} m_2=-\frac{1}{f(x_0,y_0)}.
 \]
 
 This suggests a  method for finding orthogonal trajectories
@@ -3956,7 +3954,7 @@ y'=f(x,y)
 
 {\bf Step 2.} Solve the differential equation
 \[
-y'=-{1\over f(x,y)}
+y'=-\frac{1}{f(x,y)}
 \]
 to find the orthogonal trajectories.
 
@@ -3976,11 +3974,11 @@ differentiate \eqref{eq:4.5.17} implicitly with respect to $x$ to obtain
 \]
 or
 \[
-y'=-{x\over y}.
+y'=-\frac{x}{y}.
 \]
 Therefore the integral curves  of
 \[
-y'={y\over x}
+y'=\frac{y}{x}
 \]
 are orthogonal trajectories of the given family. We leave it to you to
 verify that the general solution of this equation is
@@ -4010,11 +4008,11 @@ y+xy'=0,
 \]
 or
 \[
-y'=-{y\over x};
+y'=-\frac{y}{x};
 \]
  thus, the integral curves of
 \[
-y'={x\over y}
+y'=\frac{x}{y}
 \]
 are orthogonal trajectories of the given family. Separating variables
 yields
@@ -4073,25 +4071,25 @@ y'={y^2-x^2\over2xy}.
 The curves defined by \eqref{eq:4.5.19} are integral curves of
 \eqref{eq:4.5.22}, and the integral curves of
 \[
-y'={2xy\over x^2-y^2}
+y'=\frac{2xy}{x^2-y^2}
 \]
 are orthogonal trajectories of the family \eqref{eq:4.5.19}. This is a
 homogeneous nonlinear equation, which we studied in
 Section~2.4. Substituting $y=ux$ yields
 \[
-u'x+u={2x(ux)\over x^2-(ux)^2}={2u\over1-u^2},
+u'x+u={2x(ux)\over x^2-(ux)^2}=\frac{2u}{1-u^2},
 \]
 so
 \[
-u'x={2u\over1-u^2}-u={u(u^2+1)\over1-u^2},
+u'x=\frac{2u}{1-u^2}-u={u(u^2+1)\over1-u^2},
 \]
 Separating variables yields
 \[
-{1-u^2\over u(u^2+1)}u'={1\over x},
+{1-u^2\over u(u^2+1)}u'=\frac{1}{x},
 \]
 or, equivalently,
 \[
-\left[{1\over u}-{2u\over u^2+1}\right]u'={1\over x}.
+\left[\frac{1}{u}-\frac{2u}{u^2+1}\right]u'=\frac{1}{x}.
 \]
 Therefore
 \[
@@ -4170,7 +4168,7 @@ differential equation for the given family of curves.
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \item\label{exer:4.5.5} $y=e^{x^2}+ce^{-x^2}$
 %&
- \item\label{exer:4.5.6} $\dst{y=x^3+{c\over x}}$
+ \item\label{exer:4.5.6} $\dst{y=x^3+\frac{c}{x}}$
 %\end{tabular}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -4282,7 +4280,7 @@ x=y^2
 \]
 at a point $(x_0,y_0)\ne(0,0)$  on the parabola is
 \[
-y=\dst{y_0\over2}+\dst{x\over2y_0}.
+y=\dst\frac{y_0}{2}+\dst\frac{x}{2y_0}.
 \eqno{\rm (B)}
 \]
 \item % (b)
@@ -4310,7 +4308,7 @@ y'={y-\sqrt{y^2-x}\over2x},
 \hint{Use the quadratic formula to solve ${\rm (C)}$ for $y'$. Then
 substitute {\rm (B)} for $y$ and choose the $\pm$ sign in the
 quadratic formula so that the resulting expression for $y'$ reduces to
-the known slope $y'=\dst{1\over2y_0}$.}
+the known slope $y'=\dst\frac{1}{2y_0}$.}
 
 \item % (d)
 Show that the upper and lower halves of the parabola (A), given by
@@ -4379,7 +4377,7 @@ orthogonal trajectories of the given family of curves.}
 %\end{tabular}
 
 \item\label{exer:4.5.29}
-$\dst{y={ce^x\over x}}$
+$\dst{y=\frac{ce^x}{x}}$
 
 \item\label{exer:4.5.30}
 Find a curve through $(-1,3)$ orthogonal to every parabola of the form
@@ -4413,7 +4411,7 @@ intersects $C$ at the angle $\alpha$. Use the identity
 to show that if $C$ and $C_1$ are intersecting integral curves of
 \[
 y'=f(x,y)  \mbox{\quad and \quad} y'={f(x,y)+\tan\alpha\over
-1-f(x,y)\tan\alpha} \quad\left( \alpha \ne {\pi\over2}\right),
+1-f(x,y)\tan\alpha} \quad\left( \alpha \ne \frac{\pi}{2}\right),
 \]
 respectively, then $C_1$ intersects $C$ at the angle $\alpha$.
 

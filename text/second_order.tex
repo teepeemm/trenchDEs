@@ -270,7 +270,7 @@ so that $y(0)=1$ and $y'(0)=3$. Setting $x=0$ in \eqref{eq:5.1.10}
 and \eqref{eq:5.1.11} shows that $c_1=1$ and $c_2=3/\omega$.
 Therefore
 \[
-y=\cos\omega x+{3\over\omega}\sin\omega x
+y=\cos\omega x+\frac{3}{\omega}\sin\omega x
 \]
  is the unique solution of \eqref{eq:5.1.9} on
 $(-\infty,\infty)$.
@@ -336,29 +336,29 @@ for $x$ in $(-\infty,\infty)$.
 If $y_2=1/x^2$, then $y_2'=-2/x^3$ and $y_2''=6/x^4$, so
 \[
 x^2y_2''+xy_2'-4y_2=x^2\left(6\over
-x^4\right)-x\left(2\over x^3\right)-{4\over x^2}=0
+x^4\right)-x\left(2\over x^3\right)-\frac{4}{x^2}=0
 \]
 for $x$ in $(-\infty,0)$ or $(0,\infty)$.
 
 \solutionpart{b} If
 \begin{equation}\label{eq:5.1.16}
-y=c_1x^2+{c_2\over x^2}
+y=c_1x^2+\frac{c_2}{x^2}
 \end{equation}
  then
 \begin{equation}\label{eq:5.1.17}
-y'=2c_1x-{2c_2\over x^3}
+y'=2c_1x-\frac{2c_2}{x^3}
 \end{equation}
 and
 \[
-y''=2c_1+{6c_2\over x^4},
+y''=2c_1+\frac{6c_2}{x^4},
 \]
 so
 \begin{eqnarray*}
-x^2y''+xy'-4y&=&x^2\dst{\left(2c_1+{6c_2\over x^4}\right)}
-+x\dst{\left(2c_1x-{2c_2\over x^3}\right)}
--4\dst{\left(c_1x^2+{c_2\over x^2}\right)}\\[2\jot]
+x^2y''+xy'-4y&=&x^2\dst{\left(2c_1+\frac{6c_2}{x^4}\right)}
++x\dst{\left(2c_1x-\frac{2c_2}{x^3}\right)}
+-4\dst{\left(c_1x^2+\frac{c_2}{x^2}\right)}\\[2\jot]
 &=&c_1(2x^2+2x^2-4x^2)
-+c_2\dst{\left({6\over x^2}-{2\over x^2}-{4\over x^2}\right)}\\[2\jot]
++c_2\dst{\left(\frac{6}{x^2}-\frac{2}{x^2}-\frac{4}{x^2}\right)}\\[2\jot]
 &=&c_1\cdot0+c_2\cdot0=0
 \end{eqnarray*}
 for $x$ in $(-\infty,0)$ or $(0,\infty)$.
@@ -660,13 +660,13 @@ y'_1 & y'_2
  The expressions in \eqref{eq:5.1.26} for $c_1$ and $c_2$ can
 be written in terms of determinants as
 \[
-c_1={1\over W(x_0)}
+c_1=\frac{1}{W(x_0)}
 \left| \begin{array}{cc}
 k_0 & y_2(x_0) \\[2\jot]
 k_1 & y'_2(x_0)
 \end{array} \right|
 \mbox{\quad and \quad}
-c_2={1\over W(x_0)}
+c_2=\frac{1}{W(x_0)}
 \left| \begin{array}{cc}
 y_1(x_0) & k_0 \\[2\jot]
 y'_1(x_0) &k_1
@@ -720,26 +720,25 @@ $y_2=1/x^2$ directly yields
 W=\left| \begin{array}{cc}
 x^2 & 1/x^2 \\[2\jot]
 2x & -2/x^3
-\end{array} \right|=x^2\left(-{2\over
-x^3}\right)-2x\left(1\over x^2\right)=-{4\over x}.
+\end{array} \right|=x^2\left(-\frac{2}{x^3}\right)-2x\left(1\over x^2\right)=-\frac{4}{x}.
 \end{equation}
 To verify Abel's formula we
 rewrite the differential  equation as
 \[
-y''+{1\over x}y'-{4\over x^2}y=0
+y''+\frac{1}{x}y'-\frac{4}{x^2}y=0
 \]
 to see  that $p(x)=1/x$. If $x_0$ and $x$ are either both in
 $(-\infty,0)$ or both in $(0,\infty)$ then
 \[
-\int_{x_0}^x p(t)\,dt=\int_{x_0}^x {dt\over t}=\ln\left(x\over
+\int_{x_0}^x p(t)\,dt=\int_{x_0}^x \frac{dt}{t}=\ln\left(x\over
 x_0\right),
 \]
 so Abel's formula becomes
 \begin{eqnarray*}
-W(x)&=&W(x_0)e^{-\ln(x/x_0)}=W(x_0){x_0\over x}\\
+W(x)&=&W(x_0)e^{-\ln(x/x_0)}=W(x_0)\frac{x_0}{x}\\
 &=&-\left(4\over x_0\right)\left(x_0\over x\right)\mbox{\quad from
 \eqref{eq:5.1.31}}\\
-&=&-{4\over x},
+&=&-\frac{4}{x},
 \end{eqnarray*}
 which is consistent with \eqref{eq:5.1.31}.\bbox
 
@@ -766,8 +765,7 @@ subinterval, $y_1\equiv0$ on  $(a,b)$, so $y_1$ and $y_2$
 are linearly independent, and we're finished with this part of the
 proof.) Then $y_2/y_1$ is defined on $I$, and
 \begin{equation}\label{eq:5.1.33}
-\left(y_2\over y_1\right)'={y_1y_2'-y_1'y_2\over y_1^2}={W\over
-y_1^2}.
+\left(y_2\over y_1\right)'={y_1y_2'-y_1'y_2\over y_1^2}=\frac{W}{y_1^2}.
 \end{equation}
 However, if $W(x_0)=0$,
  Theorem~\ref{thmtype:5.1.4} implies that $W\equiv0$ on  $(a,b)$.
@@ -797,8 +795,7 @@ $y_2$ isn't  a constant multiple of $y_1$ on  $(a,b)$.
 A similar argument shows that $y_1$ isn't  a constant multiple of
 $y_2$ on  $(a,b)$, since
 \[
-\left(y_1\over y_2\right)'={y_1'y_2-y_1y_2'\over y_2^2}=-{W\over
-y_2^2}
+\left(y_1\over y_2\right)'={y_1'y_2-y_1y_2'\over y_2^2}=-\frac{W}{y_2^2}
 \]
 on any subinterval of  $(a,b)$ where $y_2$ has no zeros. \bbox
 
@@ -1096,10 +1093,10 @@ $y_1=x^{1/2}$
 $(3x-1)y''-(3x+2)y'-(6x-8)y=0$;  \quad  $y_1=e^{2x}$
 
 \item\label{exer:5.1.21}
-$(x^2-4)y''+4xy'+2y=0$;  \quad  $y_1=\dst{1\over x-2}$
+$(x^2-4)y''+4xy'+2y=0$;  \quad  $y_1=\dst\frac{1}{x-2}$
 
 \item\label{exer:5.1.22}
-$(2x+1)xy''-2(2x^2-1)y'-4(x+1)y=0$;\quad  $y_1=\dst{1\over x}$
+$(2x+1)xy''-2(2x^2-1)y'-4(x+1)y=0$;\quad  $y_1=\dst\frac{1}{x}$
 
 \item\label{exer:5.1.23}
 $(x^2-2x)y''+(2-x^2)y'+(2x-2)y=0$;\quad  $y_1=e^x$
@@ -1917,7 +1914,7 @@ r_1=\lambda+i \omega,\quad r_2 = \lambda - i \omega,
 \end{equation}
  with
 \[
-\lambda = -{b\over 2a},\quad \omega = {\sqrt{4ac-b^2}\over 2a}.
+\lambda = -\frac{b}{2a},\quad \omega = {\sqrt{4ac-b^2}\over 2a}.
 \]
 Don't memorize these formulas. Just remember that $r_1$
 and $r_2$ are of the form \eqref{eq:5.2.17},
@@ -2231,15 +2228,15 @@ as a function of two real variables $x$ and $r$.
 \item % (a)
 Show that
 \[
-a{\partial^2\over\partial^2 x}(e^{rx})+b{\partial \over\partial
+a\frac{\partial^2}{\partial^2 x}(e^{rx})+b{\partial \over\partial
 x}(e^{rx}) +ce^{rx}=a(r-r_1)^2e^{rx}.
 \eqno{\rm (B)}
 \]
 \item % (b)
 Differentiate (B) with respect to $r$  to obtain
 \[
-a{\partial\over\partial r}\left({\partial^2\over\partial^2
-x}(e^{rx})\right)+b{\partial\over\partial r}\left({\partial
+a\frac{\partial}{\partial r}\left(\frac{\partial^2}{\partial^2
+x}(e^{rx})\right)+b\frac{\partial}{\partial r}\left({\partial
 \over\partial x}(e^{rx})\right)
 +c(xe^{rx})=[2+(r-r_1)x]a(r-r_1)e^{rx}.
 \eqno{\rm (C)}
@@ -2249,7 +2246,7 @@ Reverse the orders of the partial differentiations in the first two
 terms on the left side of
 (C) to obtain
 \[
-a{\partial^2\over\partial x^2}(xe^{rx})+b{\partial\over\partial
+a\frac{\partial^2}{\partial x^2}(xe^{rx})+b\frac{\partial}{\partial
 x}(xe^{rx})+c(xe^{rx})=[2+(r-r_1)x]a(r-r_1)e^{rx}.
 \eqno{\rm (D)}
 \]
@@ -2263,21 +2260,20 @@ of (A)
 In calculus you learned that $e^u$, $\cos u$, and $\sin u$
 can be represented by the infinite series
 \[
-e^u=\sum_{n=0}^\infty {u^n\over n!}
-=1+{u\over 1!}+{u^2\over 2!}+{u^3\over 3!}+\cdots+{u^n\over
-n!}+\cdots
+e^u=\sum_{n=0}^\infty \frac{u^n}{n!}
+=1+\frac{u}{1!}+\frac{u^2}{2!}+\frac{u^3}{3!}+\cdots+\frac{u^n}{n!}+\cdots
 \eqno{\rm (A)}
 \]
 \[
 \cos u=\sum_{n=0}^\infty (-1)^n{u^{2n}\over(2n)!}
-=1-{u^2\over2!}+{u^4\over4!}+\cdots+(-1)^n{u^{2n}\over(2n)!}
+=1-\frac{u^2}{2!}+\frac{u^4}{4!}+\cdots+(-1)^n{u^{2n}\over(2n)!}
 +\cdots,
 \eqno{\rm (B)}
 \]
 and
 \[
 \sin u=\sum_{n=0}^\infty (-1)^n{u^{2n+1}\over(2n+1)!}
-=u-{u^3\over3!}+{u^5\over5!}+\cdots+(-1)^n
+=u-\frac{u^3}{3!}+\frac{u^5}{5!}+\cdots+(-1)^n
 {u^{2n+1}\over(2n+1)!}
 +\cdots
 \eqno{\rm (C)}
@@ -2303,8 +2299,8 @@ that the sequence is repetitive:
 \]
 Use this to group the terms in (D) as
 \begin{eqnarray*}
-e^{i\theta}&=&\left(1-{\theta^2\over2}+{\theta^4\over4}+\cdots\right)
-+i\left(\theta-{\theta^3\over3!}+{\theta^5\over5!}+\cdots\right)\\[2\jot]
+e^{i\theta}&=&\left(1-\frac{\theta^2}{2}+\frac{\theta^4}{4}+\cdots\right)
++i\left(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}+\cdots\right)\\[2\jot]
 &=&\sum_{n=0}^\infty (-1)^n{\theta^{2n}\over(2n)!}
 +i\sum_{n=0}^\infty (-1)^n{\theta^{2n+1}\over(2n+1)!}.
 \end{eqnarray*}
@@ -2664,7 +2660,7 @@ if $A=1/6$;  therefore, $y_p=x^4/6$ is a particular solution of
 Theorem~\ref{thmtype:5.3.2} implies that the general solution of
 \eqref{eq:5.3.13} on  $(-\infty,0)$ and  $(0,\infty)$ is
 \[
-y={x^4\over6}+c_1x^2+{c_2\over x^2}.
+y=\frac{x^4}{6}+c_1x^2+\frac{c_2}{x^2}.
 \]
 
 \boxit{The Principle of Superposition}
@@ -2774,7 +2770,7 @@ F_1(x)=2x^4\quad\mbox{ and }\quad F_2(x)=4x^2.
 in  \eqref{eq:5.3.15}  and \eqref{eq:5.3.16}.
 Therefore the principle of superposition implies that
 \[
-y_p=y_{p_1}+y_{p_2}={x^4\over15}+{x^2\over3}
+y_p=y_{p_1}+y_{p_2}=\frac{x^4}{15}+\frac{x^2}{3}
 \]
 is a particular solution of \eqref{eq:5.3.17}.
 
@@ -2819,7 +2815,7 @@ particular solution by the method used in Example~\ref{example:5.3.3}.}
 
 % \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 % TODO 8--13 in two columns
-\item\label{exer:5.3.8} $x^2y''+7xy'+8y=\dst{6\over x}$
+\item\label{exer:5.3.8} $x^2y''+7xy'+8y=\dst\frac{6}{x}$
 %& 
 \item\label{exer:5.3.9} $x^2y''-7xy'+7y=13x^{1/2}$
 %\end{tabular}
@@ -2827,7 +2823,7 @@ particular solution by the method used in Example~\ref{example:5.3.3}.}
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \item\label{exer:5.3.10} $x^2y''-xy'+y=2x^3$
 %& 
-\item\label{exer:5.3.11} $x^2y''+5xy'+4y=\dst{1\over x^3}$
+\item\label{exer:5.3.11} $x^2y''+5xy'+4y=\dst\frac{1}{x^3}$
 %\end{tabular}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -2841,7 +2837,7 @@ Show that the method suggested for finding a particular
 solution in Exercises~\ref{exer:5.3.8}-\ref{exer:5.3.13}
 won't yield a particular solution of
 \[
-x^2y''+3xy'-3y={1\over x^3};
+x^2y''+3xy'-3y=\frac{1}{x^3};
 \eqno{\rm (A)}
 \]
 that is,  (A) doesn't have a particular
@@ -3350,7 +3346,7 @@ y=ue^{-x/2},\quad  y'=u'e^{-x/2}-\frac{1}{2}ue^{-x/2},\mbox{\quad and
 \]
 into (\ref{eq:5.4.14}) and  canceling $e^{-x/2}$  yields
 \[
-4\left(u''-u'+{u\over4}\right)+4\left(u'-{u\over2}\right)+u=4u''=-8+48x+144x^2,
+4\left(u''-u'+\frac{u}{4}\right)+4\left(u'-\frac{u}{2}\right)+u=4u''=-8+48x+144x^2,
 \]
 or
 \begin{equation} \label{eq:5.4.15}
@@ -3655,7 +3651,7 @@ solution.
 \part{a} $y''+2y'+y=\dst{e^{-x}\over\sqrt x}$ &
 \part{b} $y''+6y'+9y=e^{-3x}\ln x$\\
 \part{c} $y''-4y'+4y=\dst{e^{2x}\over1+x}$ &
-\part{d} $4y''+4y'+y=\dst{4e^{-x/2}\left({1\over x}+x\right)}$
+\part{d} $4y''+4y'+y=\dst{4e^{-x/2}\left(\frac{1}{x}+x\right)}$
 \end{tabular}
 
 \item\label{exer:5.4.38}
@@ -3741,9 +3737,9 @@ where $P$ and $Q$ are polynomials.
 
 Differentiating  $x^r\cos\omega x$ and $x^r\sin\omega x$ yields
 \begin{eqnarray*}
-\dst{d\over dx}x^r\cos\omega x&=&-\omega x^r\sin\omega x+
+\dst\frac{d}{dx}x^r\cos\omega x&=&-\omega x^r\sin\omega x+
 rx^{r-1}\cos\omega x \\[2\jot]  \arraytext{and}
-\dst{d\over dx}x^r\sin\omega x&=&\phantom{-}\omega x^r\cos\omega x+
+\dst\frac{d}{dx}x^r\sin\omega x&=&\phantom{-}\omega x^r\cos\omega x+
 rx^{r-1}\sin\omega x.
 \end{eqnarray*}
 This implies  that if
@@ -4422,14 +4418,14 @@ a(B''-2\omega A')&=&Q,
 where the pairs $(A_k,B_k)$, $(A_{k-1},B_{k-1})$, \dots, $(A_0,B_0)$ can be
 computed successively as follows:
 \begin{eqnarray*}
-A_k&=&-{q_k\over2a\omega(k+1)}\\[2\jot]
-B_k&=&\phantom{-}{p_k\over2a\omega(k+1)},
+A_k&=&-\frac{q_k}{2a\omega(k+1)}\\[2\jot]
+B_k&=&\phantom{-}\frac{p_k}{2a\omega(k+1)},
 \end{eqnarray*}
 and, if $k\ge 1$,
 \begin{eqnarray*}
-A_{k-j}&=&-{1\over2\omega}
+A_{k-j}&=&-\frac{1}{2\omega}
 \left[{q_{k-j}\over a(k-j+1)}-(k-j+2)B_{k-j+1}\right]\\[2\jot]
-B_{k-j}&=&\phantom{-}{1\over2\omega}
+B_{k-j}&=&\phantom{-}\frac{1}{2\omega}
 \left[{p_{k-j}\over a(k-j+1)}-(k-j+2)A_{k-j+1}\right]
 \end{eqnarray*}
 for $1\le j\le k$.
@@ -4619,12 +4615,12 @@ u''-{u'\over x}=xe^{-x}.
 To focus on how we apply variation of parameters to this equation, we
 temporarily write $z=u'$, so that \eqref{eq:5.6.8} becomes
 \begin{equation} \label{eq:5.6.9}
-z'-{z\over x}=xe^{-x}.
+z'-\frac{z}{x}=xe^{-x}.
 \end{equation}
 We leave it to you to show (by separation of variables) that $z_1=x$
 is a solution of the complementary equation
 \[
-z'-{z\over x}=0
+z'-\frac{z}{x}=0
 \]
 for \eqref{eq:5.6.9}. By applying variation of parameters as in
 Section~1.2, we can now see that every solution of
@@ -4640,11 +4636,11 @@ u'=vx=-xe^{-x}+C_1x.
 \]
 Integrating this yields
 \[
-u=(x+1)e^{-x}+{C_1\over2}x^2+C_2.
+u=(x+1)e^{-x}+\frac{C_1}{2}x^2+C_2.
 \]
 Therefore the general solution of  \eqref{eq:5.6.6} is
 \begin{equation} \label{eq:5.6.10}
-y=ue^x=x+1+{C_1\over2}x^2e^x+C_2e^x.
+y=ue^x=x+1+\frac{C_1}{2}x^2e^x+C_2e^x.
 \end{equation}
 
 \solutionpart{b} By letting $C_1=C_2=0$ in \eqref{eq:5.6.10}, we see that
@@ -4703,38 +4699,38 @@ x^3u''+3x^2u'=x^2+1,
 which is a first order equation in $u'$.
 We rewrite it as
 \begin{equation} \label{eq:5.6.13}
-u''+{3\over x}u'={1\over x}+{1\over x^3}.
+u''+\frac{3}{x}u'=\frac{1}{x}+\frac{1}{x^3}.
 \end{equation}
 To focus on how we apply variation of parameters to this equation, we
 temporarily write $z=u'$, so that \eqref{eq:5.6.13} becomes
 \begin{equation} \label{eq:5.6.14}
-z'+{3\over x}z={1\over x}+{1\over x^3}.
+z'+\frac{3}{x}z=\frac{1}{x}+\frac{1}{x^3}.
 \end{equation}
 We leave it to you to show by separation of variables that
 $z_1=1/x^3$ is a solution of the complementary equation
 \[
-z'+{3\over x}z=0
+z'+\frac{3}{x}z=0
 \]
 for \eqref{eq:5.6.14}. By variation of parameters, every solution of
 \eqref{eq:5.6.14} is of the form
 \[
-z={v\over x^3}\mbox{\quad where \quad}
-{v'\over x^3}={1\over x}+{1\over x^3}, \mbox{\quad so \quad}
+z=\frac{v}{x^3}\mbox{\quad where \quad}
+{v'\over x^3}=\frac{1}{x}+\frac{1}{x^3}, \mbox{\quad so \quad}
  v'=x^2+1 \mbox{\quad
-and \quad} v={x^3\over 3}+x+C_1.
+and \quad} v=\frac{x^3}{3}+x+C_1.
 \]
 Since $u'=z=v/x^3$,   $u$ is a solution of \eqref{eq:5.6.14} if and only
 if
 \[
-u'={v\over x^3}=\frac{1}{3}+{1\over x^2}+{C_1\over x^3}.
+u'=\frac{v}{x^3}=\frac{1}{3}+\frac{1}{x^2}+\frac{C_1}{x^3}.
 \]
 Integrating this yields
 \[
-u={x\over 3}-{1\over x}-{C_1\over2x^2}+C_2.
+u=\frac{x}{3}-\frac{1}{x}-\frac{C_1}{2x^2}+C_2.
 \]
 Therefore the general solution of  \eqref{eq:5.6.12} is
 \begin{equation} \label{eq:5.6.15}
-y=ux={x^2\over 3}-1-{C_1\over2x}+C_2x.
+y=ux=\frac{x^2}{3}-1-\frac{C_1}{2x}+C_2x.
 \end{equation}
 Reasoning as in  the solution of
 Example~\ref{example:5.6.1}\part{a}, we  conclude that $y_1=x$ and $y_2=1/x$
@@ -4743,12 +4739,12 @@ form a fundamental set of solutions for \eqref{eq:5.6.11}.
 As we explained above, we rename the constants in \eqref{eq:5.6.15} and
 rewrite it as
 \begin{equation}  \label{eq:5.6.16}
-y={x^2\over3}-1+c_1x+{c_2\over x}.
+y=\frac{x^2}{3}-1+c_1x+\frac{c_2}{x}.
 \end{equation}
 
 \solutionpart{b}   Differentiating  \eqref{eq:5.6.16} yields
 \begin{equation} \label{eq:5.6.17}
-y'={2x\over 3}+c_1-{c_2\over x^2}.
+y'=\frac{2x}{3}+c_1-\frac{c_2}{x^2}.
 \end{equation}
  Setting $x=1$ in  \eqref{eq:5.6.16} and  \eqref{eq:5.6.17} and imposing the
 initial conditions $y(1)=2$ and $y'(1)=-3$  yields
@@ -4759,7 +4755,7 @@ c_1-c_2&=& -\frac{11}{3}.
 Solving these  equations yields $c_1=-1/2$, $c_2=19/6$.
 Therefore the solution of \eqref{eq:5.6.12} is
 \[
-y={x^2\over 3}-1-{x\over 2}+{19\over 6x}.
+y=\frac{x^2}{3}-1-\frac{x}{2}+\frac{19}{6x}.
 \]
 
 
@@ -4789,7 +4785,7 @@ x^3u''-x^2u'=0.
 \]
 Separating the variables $u'$ and $x$ yields
 \[
-{u''\over u'}={1\over x},
+{u''\over u'}=\frac{1}{x},
 \]
 so
 \[
@@ -4797,11 +4793,11 @@ so
 \]
 Therefore
 \[
-u={C_1\over2}x^2+C_2,
+u=\frac{C_1}{2}x^2+C_2,
 \]
 so the general solution of \eqref{eq:5.6.18} is
 \[
-y=ux={C_1\over2}x^3+C_2x,
+y=ux=\frac{C_1}{2}x^3+C_2x,
 \]
 which we rewrite as
 \[
@@ -4821,13 +4817,13 @@ find a fundamental set of solutions of the complementary equation.
 $(2x+1)y''-2y'-(2x+3)y=(2x+1)^2;  \quad y_1=e^{-x}$
 
 \item\label{exer:5.6.2}
-$x^2y''+xy'-y=\dst{4\over x^2};   \quad y_1=x$
+$x^2y''+xy'-y=\dst\frac{4}{x^2};   \quad y_1=x$
 
 \item\label{exer:5.6.3}
 $x^2y''-xy'+y=x;   \quad y_1=x$
 
 \item\label{exer:5.6.4}
-$y''-3y'+2y=\dst{1\over1+e^{-x}};   \quad y_1=e^{2x}$
+$y''-3y'+2y=\dst\frac{1}{1+e^{-x}};   \quad y_1=e^{2x}$
 
 \item\label{exer:5.6.5}
 $y''-2y'+y=7x^{3/2}e^x;   \quad y_1=e^x$
@@ -4942,7 +4938,7 @@ y'(1)=\dst\frac{3}{2};   \quad y_1=x$
 
 \item\label{exer:5.6.35} \CGex
 $(x^2-4)y''+4xy'+2y=x+2, \quad  y(0)=-\dst\frac{1}{3},\quad y'(0)=-1;
-\quad y_1=\dst{1\over x-2}$
+\quad y_1=\dst\frac{1}{x-2}$
 
 \item\label{exer:5.6.36}
 Suppose $p_1$ and $p_2$ are continuous on $(a,b)$. Let $y_1$
@@ -4954,7 +4950,7 @@ be a solution of
 that has no zeros on $(a,b)$, and let $x_0$ be in $(a,b)$.
 Use reduction of order to show that $y_1$ and
 \[
- y_2(x)=y_1(x)\int^x_{x_0}{1\over y^2_1(t)} \exp
+ y_2(x)=y_1(x)\int^x_{x_0}\frac{1}{y^2_1(t)} \exp
 \left(-\int^t_{x_0}p_1(s)\, ds\right)\,dt
 \]
 form a fundamental set of solutions of (A) on
@@ -5036,7 +5032,7 @@ $(3x-1)(y'+y^2)-(3x+2)y-6x+8=0;   \quad y_1=2$
 
 \item %(e)
 $\dst{x^2(y'+y^2)+xy+x^2- \frac{1}{4}=0;
-\quad y_1=-\tan x -{1\over 2x}}$
+\quad y_1=-\tan x -\frac{1}{2x}}$
 
 \item %(f)
 $\dst{x^2(y'+y^2)-7xy+7=0;  \quad y_1=1/x}$
@@ -5169,7 +5165,7 @@ Therefore $y_p$ in \eqref{eq:5.7.3} satisfies \eqref{eq:5.7.1} if
 \begin{equation} \label{eq:5.7.9}
 \begin{array}{rcl}
 u_1'y_1+u_2'y_2 &=& 0  \\
-u_1'y_1'+u_2'y_2' &=& \dst{F\over P_0},
+u_1'y_1'+u_2'y_2' &=& \dst\frac{F}{P_0},
 \end{array}
 \end{equation}
 where the first equation is the same as \eqref{eq:5.7.5} and the second is
@@ -5182,23 +5178,23 @@ obtain $u_1'$, multiply the first equation in \eqref{eq:5.7.9} by $y_2'$
 and the second equation by $y_2$. This yields
 \begin{eqnarray*}
 u_1'y_1y_2'+u_2'y_2y_2'&=& 0  \\
-u_1'y_1'y_2+u_2'y_2'y_2 &=& {Fy_2\over P_0}.
+u_1'y_1'y_2+u_2'y_2'y_2 &=& \frac{Fy_2}{P_0}.
 \end{eqnarray*}
 Subtracting the second equation from the first yields
 \begin{equation} \label{eq:5.7.10}
-u_1'(y_1y_2'-y_1'y_2)=-{Fy_2\over P_0}.
+u_1'(y_1y_2'-y_1'y_2)=-\frac{Fy_2}{P_0}.
 \end{equation}
 Since $\{y_1,y_2\}$  is a fundamental set of solutions of \eqref{eq:5.7.2}
 on $(a,b)$, Theorem~\ref{thmtype:5.1.6}\; implies that the Wronskian
  $y_1y_2'-y_1'y_2$  has no zeros on $(a,b)$.  Therefore we can solve
 \eqref{eq:5.7.10} for $u_1'$, to obtain
 \begin{equation} \label{eq:5.7.11}
-u_1'=-{Fy_2\over P_0(y_1y_2'-y_1'y_2)}.
+u_1'=-\frac{Fy_2}{P_0(y_1y_2'-y_1'y_2)}.
 \end{equation}
 We leave it to you to start from \eqref{eq:5.7.9} and show by a similar
 argument that
 \begin{equation} \label{eq:5.7.12}
-u_2'={Fy_1\over P_0(y_1y_2'-y_1'y_2)}.
+u_2'=\frac{Fy_1}{P_0(y_1y_2'-y_1'y_2)}.
 \end{equation}
 
 We can now obtain $u_1$ and $u_2$ by integrating $u_1'$ and $u_2'$.
@@ -5220,7 +5216,7 @@ Write the system
 \begin{equation} \label{eq:5.7.14}
 \begin{array}{rcl}
 u_1'y_1+u_2'y_2 &=& 0  \\
-u_1'y_1'+u_2'y_2' &=& \dst{F\over P_0}
+u_1'y_1'+u_2'y_2' &=& \dst\frac{F}{P_0}
 \end{array}
 \end{equation}
 for the specific problem  you're trying to solve.
@@ -5342,7 +5338,7 @@ a solution of the complementary equation.
 \begin{example}\label{example:5.7.3} \rm
  Find a particular solution of
 \begin{equation}  \label{eq:5.7.19}
-y''+3y'+2y={1\over 1+e^x}.
+y''+3y'+2y=\frac{1}{1+e^x}.
 \end{equation}
 Then find the general solution.
 \end{example}
@@ -5363,27 +5359,27 @@ y_p=u_1e^{-x}+u_2e^{-2x},
 where
 \begin{eqnarray*}
 \phantom{-}u_1'e^{-x}+\phantom{2}u_2'e^{-2x}&=&0\\
--u_1'e^{-x}-2u_2'e^{-2x}&=&{1\over 1+e^x}.
+-u_1'e^{-x}-2u_2'e^{-2x}&=&\frac{1}{1+e^x}.
 \end{eqnarray*}
 Adding these two equations yields
 \[
--u_2'e^{-2x}={1\over1+e^x},\mbox{\quad so \quad}
+-u_2'e^{-2x}=\frac{1}{1+e^x},\mbox{\quad so \quad}
 u_2'=-{e^{2x}\over 1+e^x}.
  \]
 From the first equation,
 \[
-u_1'=-u_2'e^{-x}={e^x\over 1+e^x}.
+u_1'=-u_2'e^{-x}=\frac{e^x}{1+e^x}.
 \]
 Integrating by means of  the substitution $v=e^x$ and taking the
 constants of integration to be zero  yields
  \[
-u_1=\int{e^x\over 1+e^x}\,dx=\int {dv\over 1+v}
+u_1=\int\frac{e^x}{1+e^x}\,dx=\int \frac{dv}{1+v}
 =\ln(1+v)=\ln(1+e^x)
 \]
 and
 \begin{eqnarray*}
-u_2&=&-\int{e^{2x}\over 1+e^x}\,dx=-\int {v\over 1+v}\,dv
-=\int\left[{1\over 1+v}-1\right]\,dv \\ [2\jot]
+u_2&=&-\int{e^{2x}\over 1+e^x}\,dx=-\int \frac{v}{1+v}\,dv
+=\int\left[\frac{1}{1+v}-1\right]\,dv \\ [2\jot]
 &=&\ln(1+v)-v=\ln(1+e^x)-e^x.
 \end{eqnarray*}
 Therefore
@@ -5410,11 +5406,11 @@ y=y_p+c_1e^{-x}+c_2e^{-2x}=\left(e^{-x}+e^{-2x}\right)\ln(1+e^x)
 \begin{example}\label{example:5.7.4} \rm
 Solve the initial value problem
 \begin{equation} \label{eq:5.7.21}
-(x^2-1)y''+4xy'+2y={2\over x+1}, \quad  y(0)=-1,\quad y'(0)=-5,
+(x^2-1)y''+4xy'+2y=\frac{2}{x+1}, \quad  y(0)=-1,\quad y'(0)=-5,
 \end{equation}
  given that
 \[
-y_1={1\over x-1}\quad\mbox{ and }\quad y_2={1\over x+1}
+y_1=\frac{1}{x-1}\quad\mbox{ and }\quad y_2=\frac{1}{x+1}
 \]
 are  solutions of the complementary
 equation
@@ -5427,27 +5423,27 @@ equation
 We first use variation of parameters to find a particular solution
 of
 \[
-(x^2-1)y''+4xy'+2y={2\over x+1}
+(x^2-1)y''+4xy'+2y=\frac{2}{x+1}
 \]
 on $(-1,1)$ in the form
 \[
-y_p={u_1\over x-1}+{u_2\over x+1},
+y_p=\frac{u_1}{x-1}+\frac{u_2}{x+1},
 \]
 where
 \begin{eqnarray}
 \phantom{-}{u_1'\over\phantom{(}x-1\phantom{)^2}}+{u_2'\over
 \phantom{(}x+1\phantom{)^2}}&=&0\label{eq:5.7.22}\\
--{u_1'\over(x-1)^2}-{u_2'\over(x+1)^2}&=&{2\over(x+1)(x^2-1)}.\nonumber
+-{u_1'\over(x-1)^2}-{u_2'\over(x+1)^2}&=&\frac{2}{(x+1)(x^2-1)}.\nonumber
 \end{eqnarray}
 Multiplying the first equation by $1/(x-1)$ and adding the result to
 the second equation yields
 \begin{equation} \label{eq:5.7.23}
-\left[{1\over x^2-1}-{1\over(x+1)^2}\right]u_2'={2\over(x+1)(x^2-1)}.
+\left[\frac{1}{x^2-1}-\frac{1}{(x+1)^2}\right]u_2'=\frac{2}{(x+1)(x^2-1)}.
 \end{equation}
 Since
 \[
-\left[{1\over x^2-1}-{1\over(x+1)^2}\right]={(x+1)-(x-1)\over(x+1)(x^2-1)}
-={2\over(x+1)(x^2-1)},
+\left[\frac{1}{x^2-1}-\frac{1}{(x+1)^2}\right]={(x+1)-(x-1)\over(x+1)(x^2-1)}
+=\frac{2}{(x+1)(x^2-1)},
 \]
 \eqref{eq:5.7.23} implies that $u_2'=1$. From \eqref{eq:5.7.22},
 \[
@@ -5456,7 +5452,7 @@ u_1'=-{x-1\over x+1}u_2'=-{x-1\over x+1}.
 Integrating and taking the constants of integration to be zero yields
 \begin{eqnarray*}
 u_1&=&-\int{x-1\over x+1}\,dx=-\int{x+1-2\over x+1}\,dx \\
-&=&\int\left[{2\over x+1}-1\right]\,dx=2\ln(x+1)-x
+&=&\int\left[\frac{2}{x+1}-1\right]\,dx=2\ln(x+1)-x
 \end{eqnarray*}
 and
 \[
@@ -5464,15 +5460,14 @@ u_2=\int\,dx=x.
 \]
 Therefore
 \begin{eqnarray*}
-y_p&=&{u_1\over x-1}+{u_2\over x+1}=\left[2\ln(x+1)-x\right]{1\over
-x-1}
-+x{1\over x+1} \\
-&=&{2\ln(x+1)\over x-1}+x\left[{1\over x+1}-{1\over x-1}\right]
-={2\ln(x+1)\over x-1}-{2x\over(x+1)(x-1)}.
+y_p&=&\frac{u_1}{x-1}+\frac{u_2}{x+1}=\left[2\ln(x+1)-x\right]\frac{1}{x-1}
++x\frac{1}{x+1} \\
+&=&{2\ln(x+1)\over x-1}+x\left[\frac{1}{x+1}-\frac{1}{x-1}\right]
+={2\ln(x+1)\over x-1}-\frac{2x}{(x+1)(x-1)}.
 \end{eqnarray*}
 However, since
 \[
-{2x\over(x+1)(x-1)}=\left[{1\over x+1}+{1\over x-1}\right]
+\frac{2x}{(x+1)(x-1)}=\left[\frac{1}{x+1}+\frac{1}{x-1}\right]
 \]
 is a solution of the complementary equation, we redefine
 \[
@@ -5480,12 +5475,11 @@ y_p={2\ln(x+1)\over x-1}.
 \]
 Therefore  the general solution of  \eqref{eq:5.7.24} is
 \begin{equation} \label{eq:5.7.24}
-y={2\ln(x+1)\over x-1}+{c_1\over x-1}+{c_2\over x+1}.
+y={2\ln(x+1)\over x-1}+\frac{c_1}{x-1}+\frac{c_2}{x+1}.
 \end{equation}
 Differentiating this yields
 \[
-y'={2\over
-x^2-1}-{2\ln(x+1)\over(x-1)^2}-{c_1\over(x-1)^2}-{c_2\over(x+1)^2}.
+y'=\frac{2}{x^2-1}-{2\ln(x+1)\over(x-1)^2}-\frac{c_1}{(x-1)^2}-\frac{c_2}{(x+1)^2}.
 \]
 Setting $x=0$ in the last two equations and imposing the initial conditions
 $y(0)=-1$ and $y'(0)=-5$ yields the system
@@ -5497,7 +5491,7 @@ The solution of this system is $c_1=2,\,c_2=1$.  Substituting
 these into
 \eqref{eq:5.7.24} yields
 \begin{eqnarray*}
-y&=&{2\ln(x+1)\over x-1}+{2\over x-1}+{1\over x+1}\\
+y&=&{2\ln(x+1)\over x-1}+\frac{2}{x-1}+\frac{1}{x+1}\\
 &=&{2\ln(x+1)\over x-1}+{3x+1\over x^2-1}
 \end{eqnarray*}
 as the solution of  \eqref{eq:5.7.21}. Figure~\ref{figure:5.7.1} is a graph
@@ -5553,7 +5547,7 @@ parameters to find a particular solution.
 %\end{tabular}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.7.3}  $y''-3y'+2y=\dst{4\over 1+e^{-x}}$
+\item\label{exer:5.7.3}  $y''-3y'+2y=\dst\frac{4}{1+e^{-x}}$
 %&  
 \item\label{exer:5.7.4} $y''-2y'+2y=3e^x \sec x$
 %\end{tabular}
@@ -5573,11 +5567,11 @@ $y_1$, $y_2$ of the complementary equation.}
 
 \item\label{exer:5.7.7}
 $x^2y''+xy'- y=2x^2+2;   \quad y_1=x,
-\quad y_2=\dst{1\over x}$
+\quad y_2=\dst\frac{1}{x}$
 
 \item\label{exer:5.7.8}
 $\dst{xy''+(2-2x)y'+(x-2)y=e^{2x};   \quad y_1=e^x,
-\quad y_2={e^x\over x}}$
+\quad y_2=\frac{e^x}{x}}$
 
 \item\label{exer:5.7.9}
 $4x^2y''+(4x-8x^2)y'+(4x^2-4x-1)y=4x^{1/2}e^x, \quad   x > 0$;
@@ -5684,15 +5678,15 @@ equation.}
 
 \item\label{exer:5.7.33} \CGex
 $\dst{(x^2-1)y''+4xy'+2y=2x, \quad   y(0)=0,\;  y'(0)
-=-2; \quad   y_1={1\over x-1},\;  y_2={1\over x+1}}$
+=-2; \quad   y_1=\frac{1}{x-1},\;  y_2=\frac{1}{x+1}}$
 
 \item\label{exer:5.7.34} \CGex
 $\dst{x^2y''+2xy'-2y=-2x^2, \quad   y(1)=1,\;  y'(1)=
--1; \quad  y_1=x,\;  y_2={1\over x^2}}$
+-1; \quad  y_1=x,\;  y_2=\frac{1}{x^2}}$
 
 \item\label{exer:5.7.35} \CGex
 $(x+1)(2x+3)y''+2(x+2)y'-2y=(2x+3)^2, \quad  y(0)=0,\quad y'(0)=0$;
-\newline $y_1=x+2,\quad y_2=\dst{1\over x+1}$
+\newline $y_1=x+2,\quad y_2=\dst\frac{1}{x+1}$
 
 \item\label{exer:5.7.36}
 Suppose

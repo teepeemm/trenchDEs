@@ -238,21 +238,21 @@ Earth's gravitational force ${\bf F}={\bf F}(x,y,z)$ on the object is
 inversely proportional to the square of the distance of the object
 from Earth's center, and directed toward the center;   thus,
 \begin{equation} \label{eq:10.1.13}
-{\bf F}={K\over\|{\bf X}\|^2}\left(-{{\bf X}
+{\bf F}=\frac{K}{\|{\bf X}\|^2}\left(-{{\bf X}
 \over\|{\bf X}\|}\right)=-K{x\,{\bf
 i}+y\,{\bf j}+z\,{\bf k}\over\mbox{}\left(x^2+y^2+z^2\right)^{3/2}},
 \end{equation}
 where $K$ is a constant.  To determine $K$,  we observe that the magnitude
 of ${\bf F}$  is
 \[
-\|{\bf F}\|=K{\|{\bf X}\|\over\|{\bf X}\|^3}={K\over\|{\bf X}\|^2}
-={K\over(x^2+y^2+z^2)}.
+\|{\bf F}\|=K{\|{\bf X}\|\over\|{\bf X}\|^3}=\frac{K}{\|{\bf X}\|^2}
+=\frac{K}{(x^2+y^2+z^2)}.
 \]
 Let $R$  be Earth's radius.
 Since $\|{\bf F}\|=mg$ when the object is at Earth's
 surface,
 \[
-mg = {K\over R^2},\quad\mbox{ so }\quad K=mgR^2.
+mg = \frac{K}{R^2},\quad\mbox{ so }\quad K=mgR^2.
 \]
 Therefore we can rewrite \eqref{eq:10.1.13} as
 \[
@@ -271,9 +271,9 @@ Cancelling the common factor $m$ and equating components on the two sides
 of this equation yields the  system
 \begin{equation} \label{eq:10.1.14}
 \begin{array}{rcl}
- x''&=&-\dst{gR^2x\over(x^2+y^2+z^2)^{3/2}}\\[2\jot]
- y''&=&-\dst{gR^2y\over(x^2+y^2+z^2)^{3/2}}\\[2\jot]
- z''&=&-\dst{gR^2z\over(x^2+y^2+z^2)^{3/2}}.
+ x''&=&-\dst\frac{gR^2x}{(x^2+y^2+z^2)^{3/2}}\\[2\jot]
+ y''&=&-\dst\frac{gR^2y}{(x^2+y^2+z^2)^{3/2}}\\[2\jot]
+ z''&=&-\dst\frac{gR^2z}{(x^2+y^2+z^2)^{3/2}}.
 \end{array}
 \end{equation}
 \end{example}
@@ -341,9 +341,8 @@ system
 \begin{array}{rcl}
 y_1'&=&v_1\\[1\jot]
 y_2'&=&v_2\\[1\jot]
-v_1'&=&\dst{1\over
-m_1}\left[-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\right]\\[1\jot]
-v_2'&=&\dst{1\over m_2}\left[c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right].
+v_1'&=&\dst\frac{1}{m_1}\left[-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\right]\\[1\jot]
+v_2'&=&\dst\frac{1}{m_2}\left[c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right].
  \end{array}
 \end{equation}
 
@@ -476,17 +475,17 @@ given $y_{1i}$ and $y_{2i}$, compute
 \begin{eqnarray*}
 I_{1i}&=&g_1(t_i,y_{1i},y_{2i}),\\
 J_{1i}&=&g_2(t_i,y_{1i},y_{2i}),\\
-I_{2i}&=&g_1\left(t_i+{h\over2},y_{1i}+{h\over2}I_{1i},y_{2i}+{h\over2}J_{1i}\right),\\
-J_{2i}&=&g_2\left(t_i+{h\over2},y_{1i}+{h\over2}I_{1i},y_{2i}+{h\over2}J_{1i}\right),\\
-I_{3i}&=&g_1\left(t_i+{h\over2},y_{1i}+{h\over2}I_{2i},y_{2i}+{h\over2}J_{2i}\right),\\
-J_{3i}&=&g_2\left(t_i+{h\over2},y_{1i}+{h\over2}I_{2i},y_{2i}+{h\over2}J_{2i}\right),\\
+I_{2i}&=&g_1\left(t_i+\frac{h}{2},y_{1i}+\frac{h}{2}I_{1i},y_{2i}+\frac{h}{2}J_{1i}\right),\\
+J_{2i}&=&g_2\left(t_i+\frac{h}{2},y_{1i}+\frac{h}{2}I_{1i},y_{2i}+\frac{h}{2}J_{1i}\right),\\
+I_{3i}&=&g_1\left(t_i+\frac{h}{2},y_{1i}+\frac{h}{2}I_{2i},y_{2i}+\frac{h}{2}J_{2i}\right),\\
+J_{3i}&=&g_2\left(t_i+\frac{h}{2},y_{1i}+\frac{h}{2}I_{2i},y_{2i}+\frac{h}{2}J_{2i}\right),\\
 I_{4i}&=&g_1(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),\\
 J_{4i}&=&g_2(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),
 \end{eqnarray*}
 and
 \begin{eqnarray*}
-y_{1,i+1}&=&y_{1i}+{h\over6}(I_{1i}+2I_{2i}+2I_{3i}+I_{4i}),\\
-y_{2,i+1}&=&y_{2i}+{h\over6}(J_{1i}+2J_{2i}+2J_{3i}+J_{4i})
+y_{1,i+1}&=&y_{1i}+\frac{h}{6}(I_{1i}+2I_{2i}+2I_{3i}+I_{4i}),\\
+y_{2,i+1}&=&y_{2i}+\frac{h}{6}(J_{1i}+2J_{2i}+2J_{3i}+J_{4i})
 \end{eqnarray*}
 for $i=0$, \dots, $n-1$. Under appropriate conditions on $g_1$ and $g_2$,
 it can be shown that the global truncation error for the Runge-Kutta
@@ -3001,14 +3000,14 @@ where  $u_2$ is arbitrary. We choose $u_2=0$, so that $u_1=1/2$ and
 \]
 Thus,
 \[
-{\bf y}_2=\twocol10{e^t\over2}+\twocol52te^t.
+{\bf y}_2=\twocol10\frac{e^t}{2}+\twocol52te^t.
 \]
 Since ${\bf y}_1$ and ${\bf y}_2$ are linearly independent by
 Theorem~\ref{thmtype:10.5.1}, they form a fundamental set of solutions of
 \eqref{eq:10.5.6}. Therefore the general solution of \eqref{eq:10.5.6} is
 \[
 {\bf
-y}=c_1\twocol52e^t+c_2\left(\twocol10{e^t\over2}+\twocol52te^t\right).\bbox
+y}=c_1\twocol52e^t+c_2\left(\twocol10\frac{e^t}{2}+\twocol52te^t\right).\bbox
 \]
 
 Note that choosing the arbitrary constant $u_2$ to be nonzero is
@@ -4717,11 +4716,11 @@ The determinant of $Y$ is the Wronskian
 By Cramer's rule,
 \[
 \begin{array}{ccccccl}
-u_1'&=&-\dst{1\over2e^{2t}}
+u_1'&=&-\dst\frac{1}{2e^{2t}}
 \left|\begin{array}{cr}2e^{4t}&e^{-t}\\e^{4t}&-e^{-t}
 \end{array}\right|&=&\dst{3e^{3t}\over2e^{2t}}&=
 &\dst\frac{3}{2}e^t,\\[4\jot]
-u_2'&=&-\dst{1\over2e^{2t}}
+u_2'&=&-\dst\frac{1}{2e^{2t}}
 \left|\begin{array}{rr}e^{3t}&2e^{4t}\\e^{3t}&e^{4t}
 \end{array}\right|&=&\dst{e^{7t}\over2e^{2t}}&=&\dst\frac{1}{2}e^{5t}.
 \end{array}
@@ -4811,10 +4810,10 @@ e^{4t}&-1\\e^{6t}&e^{2t}\end{array}\right|=2e^{6t}.
 By Cramer's rule,
 \[
 \begin{array}{cccccll}
-u_1'&=&\dst{1\over2e^{6t}}\left|\begin{array}{cc}1&-1\\1&e^{2t}
+u_1'&=&\dst\frac{1}{2e^{6t}}\left|\begin{array}{cc}1&-1\\1&e^{2t}
 \end{array}\right|&=&\dst{e^{2t}+1\over2e^{6t}}&=&\dst{e^{-4t}+e^{-6t}\over2}
 \\[4\jot]
-u_2'&=&\dst{1\over2e^{6t}}\left|\begin{array}{cc}e^{4t}&1\\e^{6t}&1
+u_2'&=&\dst\frac{1}{2e^{6t}}\left|\begin{array}{cc}e^{4t}&1\\e^{6t}&1
 \end{array}\right|&=&\dst{e^{4t}-e^{6t}\over2e^{6t}}&=&\dst{e^{-2t}-1\over2}.
 \end{array}
 \]
@@ -4841,7 +4840,7 @@ is a particular solution of  \eqref{eq:10.7.6}.
 \begin{example}\label{example:10.7.3} \rm
 Find a particular solution of
 \begin{equation} \label{eq:10.7.7}
-{\bf y}'=-{2\over t^2
+{\bf y}'=-\frac{2}{t^2
 }\left[\begin{array}{cc}t&-3t^2\\1&-2t\end{array}\right]{\bf y}
 +t^2\twocol11,
 \end{equation}
@@ -4867,10 +4866,10 @@ The determinant of $Y$  is the Wronskian
 By Cramer's rule,
 \[
 \begin{array}{ccccccl}
-u_1'&=&\dst{1\over t^2}\left|\begin{array}{cc}t^2&3t^2\\t^2&2t
+u_1'&=&\dst\frac{1}{t^2}\left|\begin{array}{cc}t^2&3t^2\\t^2&2t
 \end{array}\right|&=&\dst{2t^3-3t^4\over t^2}&=&2t-3t^2,
 \\[4\jot]
-u_2'&=&\dst{1\over t^2}\left|\begin{array}{cc}2t&t^2\\1&t^2
+u_2'&=&\dst\frac{1}{t^2}\left|\begin{array}{cc}2t&t^2\\1&t^2
 \end{array}\right|&=&\dst{2t^3-t^2\over t^2}&=&2t-1.
 \end{array}
 \]
@@ -4947,14 +4946,11 @@ The determinant of $Y$  is the Wronskian
 Thus, by Cramer's rule,
 \[
 \begin{array}{cccccll}
-u_1'&=&-\dst{1\over
-e^{2t}}\left|\begin{array}{ccc}e^t&e^t&e^t\\0&e^t&0\\e^{-t}&0&e^t
+u_1'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}e^t&e^t&e^t\\0&e^t&0\\e^{-t}&0&e^t
 \end{array}\right|&=&-\dst{e^{3t}-e^t\over
-e^{2t}}&=&e^{-t}-e^t\\[6\jot] u_2'&=&-\dst{1\over
-e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&0&0\\1&e^{-t}&e^t
+e^{2t}}&=&e^{-t}-e^t\\[6\jot] u_2'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&0&0\\1&e^{-t}&e^t
 \end{array}\right|&=&-\dst{1-e^{2t}\over e^{2t}}&=&1-e^{-2t}\\[6\jot]
-u_3'&=&-\dst{1\over
-e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^{-t}
+u_3'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^{-t}
 \end{array}\right|&=&\dst{e^{2t}\over e^{2t}}&=&1.
 \end{array}
 \]
@@ -5034,17 +5030,14 @@ The determinant of $Y$  is the Wronskian
 By Cramer's rule,
 \[
 \begin{array}{ccccccl}
-u_1'&=&-\dst{1\over
-2e^{4t}}\left|\begin{array}{ccc}1&0&e^{2t}\\e^t&e^{3t}&e^{3t}
+u_1'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}1&0&e^{2t}\\e^t&e^{3t}&e^{3t}
 \\e^{-t}&1&0
 \end{array}\right|&=&\dst{e^{4t}\over2e^{4t}}&=&\dst\frac{1}{2}
 \\[6\jot]
-u_2'&=&-\dst{1\over
-2e^{4t}}\left|\begin{array}{ccc}e^t&1&e^{2t}\\0&e^t&e^{3t}
+u_2'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}e^t&1&e^{2t}\\0&e^t&e^{3t}
 \\e^{-t}&e^{-t}&0
 \end{array}\right|&=&\dst{e^{3t}\over2e^{4t}}&=&\dst\frac{1}{2}e^{-t}\\[6\jot]
-u_3'&=&-\dst{1\over
-2e^{4t}}\left|\begin{array}{ccc}e^t&0&1\\0&e^{3t}&e^t
+u_3'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}e^t&0&1\\0&e^{3t}&e^t
 \\e^{-t}&1&e^{-t}
 \end{array}\right|&=&-\dst{e^{3t}-2e^{2t}\over2e^{4t}}&=&\dst{2e^{-2t}-e^{-t}
 \over2}.
@@ -5123,24 +5116,21 @@ particular solution, given that $Y$ is a fundamental matrix for the
 complementary system.}
 
 \item\label{exer:10.7.11}
-$\dst{{\bf y}'={1\over
-t}\left[\begin{array}{rc}1&t\\-t&1\end{array}\right]{\bf y}
+$\dst{{\bf y}'=\frac{1}{t}\left[\begin{array}{rc}1&t\\-t&1\end{array}\right]{\bf y}
 +t\left[\begin{array}{cc}
 \cos t\\\sin t\end{array}\right];  \quad Y=t\left[\begin{array}{rc}\cos
 t&\sin t\\-\sin t&\cos t
 \end{array}\right]}$
 
 \item\label{exer:10.7.12}
-$\dst{{\bf y}'={1\over
-t}\left[\begin{array}{cc}1&t\\t&1\end{array}\right]{\bf y}
+$\dst{{\bf y}'=\frac{1}{t}\left[\begin{array}{cc}1&t\\t&1\end{array}\right]{\bf y}
 +\left[\begin{array}{c}
 t\\t^2\end{array}\right];  \quad Y=t\left[\begin{array}{cr}
 e^t&e^{-t}\\e^t&-e^{-t}
 \end{array}\right]}$
 
 \item\label{exer:10.7.13}
-$\dst{{\bf y}'={1\over
-t^2-1}\left[\begin{array}{rr}t&-1\\-1&t\end{array}\right]{\bf y}+
+$\dst{{\bf y}'=\frac{1}{t^2-1}\left[\begin{array}{rr}t&-1\\-1&t\end{array}\right]{\bf y}+
 t\left[\begin{array}{r}
 1\\-1\end{array}\right];  \quad Y=\left[\begin{array}{cc}
 t&1\\1&t
@@ -5154,25 +5144,22 @@ $\dst{{\bf y}'=\frac{1}{3}\left[\begin{array}{cc}1&-2e^{-t}\\2e^t&-1\end{array}\
 \end{array}\right]}$
 
 \item\label{exer:10.7.15}
-$\dst{{\bf y}'={1\over
-2t^4}\left[\begin{array}{cc}3t^3&t^6\\1&-3t^3\end{array}\right]{\bf y}+
-{1\over t}\left[\begin{array}{c}
-t^2\\1\end{array}\right];  \quad Y={1\over t^2}\left[\begin{array}{rc}
+$\dst{{\bf y}'=\frac{1}{2t^4}\left[\begin{array}{cc}3t^3&t^6\\1&-3t^3\end{array}\right]{\bf y}+
+\frac{1}{t}\left[\begin{array}{c}
+t^2\\1\end{array}\right];  \quad Y=\frac{1}{t^2}\left[\begin{array}{rc}
 t^3&t^4\\-1&t
 \end{array}\right]}$
 
 \item\label{exer:10.7.16}
 $\dst{{\bf y}'=
-\left[\begin{array}{cc}\dst{1\over t-1}
-&-\dst{e^{-t}\over t-1}\\[2\jot]\dst{e^t\over
-t+1}&\dst{1\over t+1}\end{array}\right]{\bf y}+\left[\begin{array}{c}
+\left[\begin{array}{cc}\dst\frac{1}{t-1}
+&-\dst{e^{-t}\over t-1}\\[2\jot]\dst\frac{e^t}{t+1}&\dst\frac{1}{t+1}\end{array}\right]{\bf y}+\left[\begin{array}{c}
 t^2-1\\t^2-1\end{array}\right];  \quad Y=\left[\begin{array}{cc}
 t&e^{-t}\\e^t&t
 \end{array}\right]}$
 
 \item\label{exer:10.7.17}
-$\dst{{\bf y}'={1\over
-t}\threebythree110021{-2}22{\bf y}
+$\dst{{\bf y}'=\frac{1}{t}\threebythree110021{-2}22{\bf y}
 +\threecol121
 \quad Y=\left[\begin{array}{ccr}
 t^2&t^3&1\\t^2&2t^3&-1\\0&2t^3&2
@@ -5188,21 +5175,18 @@ e^{5t}&e^{2t}&0\\e^{4t}&0&e^t\\e^{3t}&-1&-1
 \end{array}\right]}$
 
 \item\label{exer:10.7.19}
-$\dst{{\bf y}'={1\over
-t}\left[\begin{array}{crc}1&t&0\\0&1&t\\0&-t&1\end{array}\right]{\bf y}
+$\dst{{\bf y}'=\frac{1}{t}\left[\begin{array}{crc}1&t&0\\0&1&t\\0&-t&1\end{array}\right]{\bf y}
 +\left[\begin{array}{c}
 t\\t \\t \end{array}\right];  \quad Y=t\left[\begin{array}{crr}
 1&\cos t&\sin t \\0&-\sin t&\cos t\\0&-\cos t&-\sin t
 \end{array}\right]}$
 
 \item\label{exer:10.7.20}
-$\dst{{\bf y}'=-{1\over
-t}\left[\begin{array}{crr}e^{-t}&-t&1-e^{-t}\\e^{-t}&1&-t-e^{-t}\\e^{-t}&-t
+$\dst{{\bf y}'=-\frac{1}{t}\left[\begin{array}{crr}e^{-t}&-t&1-e^{-t}\\e^{-t}&1&-t-e^{-t}\\e^{-t}&-t
 &1-e^{-t}\end{array}\right]{\bf
 y}
-+{1\over t}\left[\begin{array}{c}
-e^t\\0 \\e^t \end{array}\right];  \quad Y={1\over
-t}\left[\begin{array}{crc} e^t&e^{-t}&t\\e^t&-e^{-t}&e^{-t}\\e^t&e^{-t}&0
++\frac{1}{t}\left[\begin{array}{c}
+e^t\\0 \\e^t \end{array}\right];  \quad Y=\frac{1}{t}\left[\begin{array}{crc} e^t&e^{-t}&t\\e^t&-e^{-t}&e^{-t}\\e^t&e^{-t}&0
 \end{array}\right]}$
 
 \item\label{exer:10.7.21}  Prove Theorem~\ref{thmtype:10.7.1}.
@@ -5295,7 +5279,7 @@ $\dst\int u^\alpha\; du={u^{\alpha+1}\over\alpha+1}+c$, \quad
 $\alpha\ne-1$
 
 \item
-$\dst\int{du\over u}=\ln|u|+c$
+$\dst\int\frac{du}{u}=\ln|u|+c$
 
 
 \item
@@ -5322,20 +5306,20 @@ $\dst\int \sec u\; du=\ln|\sec u+\tan u|+c$
 
 
 \item
-$\dst\int\cos^2 u\; du={u\over2}+\frac{1}{4}\sin2u
+$\dst\int\cos^2 u\; du=\frac{u}{2}+\frac{1}{4}\sin2u
 +c$
 
 
 \item
-$\dst\int\sin^2 u\; du={u\over2}-\frac{1}{4}\sin2u
+$\dst\int\sin^2 u\; du=\frac{u}{2}-\frac{1}{4}\sin2u
 +c$
 
 \item
-$\dst\int {du\over 1+u^2}\; du=\tan^{-1}u+c$
+$\dst\int \frac{du}{1+u^2}\; du=\tan^{-1}u+c$
 \item
-$\dst\int {du\over\sqrt{1-u^2}}\; du=\sin^{-1}u+c$
+$\dst\int \frac{du}{\sqrt{1-u^2}}\; du=\sin^{-1}u+c$
 \item
-$\dst\int {1\over u^2-1}\; du=\frac{1}{2}\ln\left|u-1\over u+1\right|+c$
+$\dst\int \frac{1}{u^2-1}\; du=\frac{1}{2}\ln\left|u-1\over u+1\right|+c$
 
 \item
 $\dst\int \cosh u\; du=\sinh u+c$
@@ -5372,7 +5356,7 @@ $\dst\int e^{\lambda u}\sin\omega u\; du={e^{\lambda u}(\lambda\sin
 $\dst\int \ln|u|\; du=u\ln|u|-u+c$
 
 \item
-$\dst\int u\ln|u|\; du={u^2\ln|u|\over2}-{u^2\over4}+c$
+$\dst\int u\ln|u|\; du={u^2\ln|u|\over2}-\frac{u^2}{4}+c$
 
 \item
 $\dst\int\cos\omega_1u\cos\omega_2u\,du={\sin

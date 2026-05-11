@@ -430,24 +430,24 @@ which implies that
 \end{equation}
 Since $x_{i+1}=x_i+h$, Taylor's theorem implies that
 \[
-y(x_{i+1})=y(x_i)+hy'(x_i)+{h^2\over2}y''(\tilde x_i),
+y(x_{i+1})=y(x_i)+hy'(x_i)+\frac{h^2}{2}y''(\tilde x_i),
 \]
 where $\tilde x_i$ is some number between $x_i$ and $x_{i+1}$.
 Since $y'(x_i)=f(x_i,y(x_i))$  this can be written as
 \[
-y(x_{i+1})=y(x_i)+hf(x_i,y(x_i))+{h^2\over2}y''(\tilde x_i),
+y(x_{i+1})=y(x_i)+hf(x_i,y(x_i))+\frac{h^2}{2}y''(\tilde x_i),
 \]
 or, equivalently,
 \[
-y(x_{i+1})-y(x_i)-hf(x_i,y(x_i))={h^2\over2}y''(\tilde x_i).
+y(x_{i+1})-y(x_i)-hf(x_i,y(x_i))=\frac{h^2}{2}y''(\tilde x_i).
 \]
 Comparing this with \eqref{eq:3.1.8} shows that
 \[
-T_i={h^2\over2}y''(\tilde x_i).
+T_i=\frac{h^2}{2}y''(\tilde x_i).
 \]
 Recalling \eqref{eq:3.1.9}, we can establish the bound
 \begin{equation} \label{eq:3.1.10}
-|T_i|\le{Mh^2\over2},\quad 1\le i\le n.
+|T_i|\le\frac{Mh^2}{2},\quad 1\le i\le n.
 \end{equation}
 Although it may be difficult to determine the constant $M$, what is
 important is that there's an $M$ such that \eqref{eq:3.1.10} holds.
@@ -488,7 +488,7 @@ step. The other terms reflect the way errors made at \emph{\color{blue}previous
 steps} affect $e_{i+1}$. Since $|T_i|\le Mh^2/2$, we see from
 \eqref{eq:3.1.13} that
 \begin{equation} \label{eq:3.1.14}
-|e_{i+1}|\le |e_i|+h|f(x_i,y(x_i))-f(x_i,y_i)|+{Mh^2\over2}.
+|e_{i+1}|\le |e_i|+h|f(x_i,y(x_i))-f(x_i,y_i)|+\frac{Mh^2}{2}.
 \end{equation}
 Since we assumed that $f_y$ is continuous and bounded, the mean
 value theorem implies that
@@ -501,16 +501,16 @@ where $y_i^*$ is between $y_i$ and $y(x_i)$. Therefore
 \]
 for some constant $R$. From this and \eqref{eq:3.1.14},
 \begin{equation} \label{eq:3.1.15}
-|e_{i+1}|\le (1+Rh)|e_i|+{Mh^2\over2},\quad 0\le i\le n-1.
+|e_{i+1}|\le (1+Rh)|e_i|+\frac{Mh^2}{2},\quad 0\le i\le n-1.
 \end{equation}
 For convenience, let $C=1+Rh$. Since $e_0=y(x_0)-y_0=0$, applying
 \eqref{eq:3.1.15} repeatedly yields
 \begin{eqnarray}
-|e_1| & \le & {Mh^2\over2}\nonumber\\
-|e_2| & \le & C|e_1|+{Mh^2\over2}\le(1+C){Mh^2\over2}\nonumber\\
-|e_3| & \le & C|e_2|+{Mh^2\over2}\le(1+C+C^2){Mh^2\over2}\nonumber\\
+|e_1| & \le & \frac{Mh^2}{2}\nonumber\\
+|e_2| & \le & C|e_1|+\frac{Mh^2}{2}\le(1+C)\frac{Mh^2}{2}\nonumber\\
+|e_3| & \le & C|e_2|+\frac{Mh^2}{2}\le(1+C+C^2)\frac{Mh^2}{2}\nonumber\\
  & \vdots &\nonumber \\|e_n| & \le &
-C|e_{n-1}|+{Mh^2\over2}\le(1+C+\cdots+C^{n-1}){Mh^2\over2}.\label{eq:3.1.16}
+C|e_{n-1}|+\frac{Mh^2}{2}\le(1+C+\cdots+C^{n-1})\frac{Mh^2}{2}.\label{eq:3.1.16}
 \end{eqnarray}
 
 Recalling the formula for the sum of a geometric series, we see that
@@ -519,7 +519,7 @@ Recalling the formula for the sum of a geometric series, we see that
 \]
 (since $C=1+Rh$). From this and \eqref{eq:3.1.16},
 \begin{equation} \label{eq:3.1.17}
-|y(b)-y_n|=|e_n|\le{(1+Rh)^n-1\over R}{Mh\over2}.
+|y(b)-y_n|=|e_n|\le{(1+Rh)^n-1\over R}\frac{Mh}{2}.
 \end{equation}
 Since Taylor's theorem implies that
 \[
@@ -727,7 +727,7 @@ which the approximations change less as the step size decreases.
 Applying Euler's method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to the initial value problem
 \begin{equation}\label{eq:3.1.25}
-y'-2y={x\over1+y^2},\quad y(1)=7
+y'-2y=\frac{x}{1+y^2},\quad y(1)=7
 \end{equation}
 on $[1,2]$ yields the results in
 Table~\ref{table:3.1.7}. Applying the Euler semilinear method
@@ -946,13 +946,13 @@ in a table like Table~\ref{table:3.1.1}.
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of the initial value problem
 \[
-y'+{2\over x}y={3\over x^3}+1,\quad y(1)=1
+y'+\frac{2}{x}y=\frac{3}{x^3}+1,\quad y(1)=1
 \]
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$. Compare these approximate
 values
 with the values of the exact solution
 \[
-y={1\over3x^2}(9\ln x+x^3+2),
+y=\frac{1}{3x^2}(9\ln x+x^3+2),
 \]
 which can be obtained by the method of Section~2.1. Present
 your results in a table like Table~\ref{table:3.1.1}.
@@ -1060,7 +1060,7 @@ solution of the given initial value problem at 11 equally spaced
 points (including the endpoints) in the interval.}
 
 \item\label{exer:3.1.14} \Cex
-$y'-2y=\dst{1\over1+x^2},\quad y(2)=2$;  \;
+$y'-2y=\dst\frac{1}{1+x^2},\quad y(2)=2$;  \;
 $h=0.1,0.05,0.025$ on $[2,3]$
 
 
@@ -1072,7 +1072,7 @@ $h=0.2,0.1,0.05$ on $[0,2]$
 
 
 \item\label{exer:3.1.16} \Cex
-$\dst{y'+{1\over x}y={\sin x\over x^2},\quad y(1)=2}$;\;
+$\dst{y'+\frac{1}{x}y={\sin x\over x^2},\quad y(1)=2}$;\;
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.39});  \;
 $h=0.2,0.1,0.05$ on $[1,3]$
 
@@ -1085,7 +1085,7 @@ $h=0.05,0.025,0.0125$ on $[1,1.5]$
 
 
 \item\label{exer:3.1.18} \Cex
-$\dst{y'+{2x\over 1+x^2}y={e^x\over (1+x^2)^2}, \quad y(0)=1}$;
+$\dst{y'+\frac{2x}{1+x^2}y=\frac{e^x}{(1+x^2)^2}, \quad y(0)=1}$;
 \; (Exercise~2.1.~\hspace*{-3pt}~\hspace*{-3pt}\ref{exer:2.1.41});  \;
 $h=0.2,0.1,0.05$ on $[0,2]$
 
@@ -1109,11 +1109,11 @@ $y'+3y=xy^2(y+1),\quad y(0)=1$;  \;
 $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.1.21} \Cex
-$\dst{y'-4y={x\over y^2(y+1)},\quad y(0)=1}$;  \;
+$\dst{y'-4y=\frac{x}{y^2(y+1)},\quad y(0)=1}$;  \;
  $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.1.22} \Cex
-$\dst{y'+2y={x^2\over1+y^2},\quad y(2)=1}$;  \;
+$\dst{y'+2y=\frac{x^2}{1+y^2},\quad y(2)=1}$;  \;
  $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.1.23}
@@ -1277,13 +1277,13 @@ y=y(x_i)+{f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))\over2}(x-x_i).
 \end{equation}
 Setting $x=x_{i+1}=x_i+h$ in (\ref{eq:3.2.2}) yields
 \begin{equation} \label{eq:3.2.3}
-y_{i+1}=y(x_i)+{h\over2}\left(f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))\right)
+y_{i+1}=y(x_i)+\frac{h}{2}\left(f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))\right)
 \end{equation}
 as an approximation to $y(x_{i+1})$. As in our derivation of Euler's
 method, we replace $y(x_i)$ (unknown if $i>0$) by its
 approximate value $y_i$; then (\ref{eq:3.2.3}) becomes
 \[
-y_{i+1}=y_i+{h\over2}\left(f(x_i,y_i)+f(x_{i+1},y(x_{i+1})\right).
+y_{i+1}=y_i+\frac{h}{2}\left(f(x_i,y_i)+f(x_{i+1},y(x_{i+1})\right).
 \]
 However, this still won't work, because we don't know $y(x_{i+1})$,
 which appears on the right. We overcome this by replacing $y(x_{i+1})$
@@ -1292,14 +1292,14 @@ assign to $y_{i+1}$. Thus,  the improved Euler method
 starts with the known value $y(x_0)=y_0$ and computes
 $y_1$, $y_2$, \dots, $y_n$ successively with the formula
 \begin{equation} \label{eq:3.2.4}
-y_{i+1}=y_i+{h\over2}\left(f(x_i,y_i)+f(x_{i+1},y_i+hf(x_i,y_i))\right).
+y_{i+1}=y_i+\frac{h}{2}\left(f(x_i,y_i)+f(x_{i+1},y_i+hf(x_i,y_i))\right).
 \end{equation}
 The computation indicated here can be conveniently organized as
 follows: given $y_i$, compute
 \begin{eqnarray*}
 k_{1i}&=&f(x_i,y_i),\\
 k_{2i}&=&f\left(x_i+h,y_i+hk_{1i}\right),\\
-y_{i+1}&=&y_i+{h\over2}(k_{1i}+k_{2i}).
+y_{i+1}&=&y_i+\frac{h}{2}(k_{1i}+k_{2i}).
 \end{eqnarray*}
 
 The improved Euler method requires two evaluations of $f(x,y)$ per
@@ -1346,21 +1346,21 @@ k_{10} & = & f(x_0,y_0)
   = f(0,1)=-2,\\
 k_{20} & = & f(x_1,y_0+hk_{10})=f(.1,1+(.1)(-2))\\
  &=& f(.1,.8)=-2(.8)+(.1)^3e^{-.2}=-1.599181269,\\
-y_1&=&y_0+{h\over2}(k_{10}+k_{20}),\\
+y_1&=&y_0+\frac{h}{2}(k_{10}+k_{20}),\\
 &=&1+(.05)(-2-1.599181269)=.820040937,\\[4\jot]
 k_{11} & = & f(x_1,y_1)
   = f(.1,.820040937)= -2(.820040937)+(.1)^3e^{-.2}=-1.639263142,\\
 k_{21} & = & f(x_2,y_1+hk_{11})=f(.2,.820040937+.1(-1.639263142)),\\
  &=&
 f(.2,.656114622)=-2(.656114622)+(.2)^3e^{-.4}=-1.306866684,\\
-y_2&=&y_1+{h\over2}(k_{11}+k_{21}),\\
+y_2&=&y_1+\frac{h}{2}(k_{11}+k_{21}),\\
 &=&.820040937+(.05)(-1.639263142-1.306866684)=.672734445,\\[4\jot]
 k_{12} & = & f(x_2,y_2)
   = f(.2,.672734445)= -2(.672734445)+(.2)^3e^{-.4}=-1.340106330,\\
 k_{22} & = & f(x_3,y_2+hk_{12})=f(.3,.672734445+.1(-1.340106330)),\\
  &=&
 f(.3,.538723812)=-2(.538723812)+(.3)^3e^{-.6}=-1.062629710,\\
-y_3&=&y_2+{h\over2}(k_{12}+k_{22})\\
+y_3&=&y_2+\frac{h}{2}(k_{12}+k_{22})\\
 &=&.672734445+(.05)(-1.340106330-1.062629710)=.552597643.
 \end{eqnarray*}
 
@@ -1587,17 +1587,17 @@ h)\right]
 in this approximation is $O(h^3)$, we begin by recalling from Taylor's
 theorem that
 \[
-y(x_{i+1})=y(x_i)+hy'(x_i)+{h^2\over2}y''(x_i)+{h^3\over6}y'''(\hat
+y(x_{i+1})=y(x_i)+hy'(x_i)+\frac{h^2}{2}y''(x_i)+\frac{h^3}{6}y'''(\hat
 x_i),
 \]
 where $\hat x_i$ is in $(x_i,x_{i+1})$. Since $y'''$ is bounded this
 implies that
 \[
- y(x_{i+1})-y(x_i)-hy'(x_i)-{h^2\over2}y''(x_i)=O(h^3).
+ y(x_{i+1})-y(x_i)-hy'(x_i)-\frac{h^2}{2}y''(x_i)=O(h^3).
 \]
 Comparing this with (\ref{eq:3.2.8}) shows that $E_i=O(h^3)$ if
 \begin{equation} \label{eq:3.2.9}
-\sigma y'(x_i)+\rho y'(x_i+\theta h)=y'(x_i)+{h\over2}y''(x_i)
+\sigma y'(x_i)+\rho y'(x_i+\theta h)=y'(x_i)+\frac{h}{2}y''(x_i)
 +O(h^2).
 \end{equation}
 However, applying Taylor's theorem to $y'$ shows that
@@ -1615,7 +1615,7 @@ two $O(h^2)$ terms is again $O(h^2)$ shows that
 $E_i=O(h^3)$ if
 \[
 (\sigma+\rho)y'(x_i)+\rho\theta h y''(x_i)=
-y'(x_i)+{h\over2}y''(x_i),
+y'(x_i)+\frac{h}{2}y''(x_i),
 \]
 which is true if
 \begin{equation} \label{eq:3.2.10}
@@ -1633,7 +1633,7 @@ we would for $i=0$), since we still wouldn't know $y(x_i+\theta h)$
 exactly. To overcome this difficulty, we again use Taylor's theorem to
 write
 \[
-y(x_i+\theta h)=y(x_i)+\theta h y'(x_i)+{h^2\over2}y''(\tilde x_i),
+y(x_i+\theta h)=y(x_i)+\theta h y'(x_i)+\frac{h^2}{2}y''(\tilde x_i),
 \]
 where $\tilde x_i$ is in $(x_i,x_i+\theta h)$. Since
 $y'(x_i)=f(x_i,y(x_i))$ and $y''$ is bounded, this implies that
@@ -1670,16 +1670,16 @@ satisfy (\ref{eq:3.2.10}). Substituting $\sigma=1-\rho$ and
 $\theta=1/2\rho$ here yields
 \begin{equation} \label{eq:3.2.13}
 y_{i+1}=y_i+h\left[(1-\rho)f(x_i,y_i)+\rho
-f\left(x_i+{h\over2\rho},
-y_i+{h\over2\rho}f(x_i,y_i)\right)\right].
+f\left(x_i+\frac{h}{2\rho},
+y_i+\frac{h}{2\rho}f(x_i,y_i)\right)\right].
 \end{equation}
 
 The computation indicated here can be conveniently organized as
 follows: given $y_i$, compute
 \begin{eqnarray*}
 k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+{h\over2\rho},
-y_i+{h\over2\rho}k_{1i}\right),\\
+k_{2i}&=&f\left(x_i+\frac{h}{2\rho},
+y_i+\frac{h}{2\rho}k_{1i}\right),\\
 y_{i+1}&=&y_i+h[(1-\rho)k_{1i}+\rho k_{2i}].
 \end{eqnarray*}
 
@@ -1695,20 +1695,20 @@ x_i+\frac{2}{3}h,y_i+\frac{2}{3}hf(x_i,y_i)\right)\right],
 which can be organized as
 \begin{eqnarray*}
 k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+{2h\over3},
-y_i+{2h\over3}k_{1i}\right),\\
-y_{i+1}&=&y_i+{h\over4}(k_{1i}+3k_{2i}).
+k_{2i}&=&f\left(x_i+\frac{2h}{3},
+y_i+\frac{2h}{3}k_{1i}\right),\\
+y_{i+1}&=&y_i+\frac{h}{4}(k_{1i}+3k_{2i}).
 \end{eqnarray*}
 Letting $\rho=1$ yields the \emph{\color{blue}midpoint
 method},
 \[
-y_{i+1}=y_i+hf\left(x_i+{h\over2},y_i+{h\over2}f(x_i,y_i)\right),
+y_{i+1}=y_i+hf\left(x_i+\frac{h}{2},y_i+\frac{h}{2}f(x_i,y_i)\right),
 \]
 which can be organized as
 \begin{eqnarray*}
 k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+{h\over2},
-y_i+{h\over2}k_{1i}\right),\\
+k_{2i}&=&f\left(x_i+\frac{h}{2},
+y_i+\frac{h}{2}k_{1i}\right),\\
 y_{i+1}&=&y_i+hk_{2i}.
 \end{eqnarray*}
 
@@ -1758,13 +1758,13 @@ Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of the initial
 value problem
 \[
-y'+{2\over x}y={3\over x^3}+1,\quad y(1)=1
+y'+\frac{2}{x}y=\frac{3}{x^3}+1,\quad y(1)=1
 \]
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$. Compare these approximate
 values with
 the values of the exact solution
 \[
-y={1\over3x^2}(9\ln x+x^3+2)
+y=\frac{1}{3x^2}(9\ln x+x^3+2)
 \]
 which can be obtained by the method of Section~2.1. Present
 your results in a table like Table~\ref{table:3.2.2}.
@@ -1870,7 +1870,7 @@ value problem at 11 equally spaced points (including the
 endpoints) in the interval.}
 
 \item\label{exer:3.2.14} \Cex
-$y'-2y=\dst{1\over1+x^2},\quad y(2)=2$;  \quad
+$y'-2y=\dst\frac{1}{1+x^2},\quad y(2)=2$;  \quad
 $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.2.15} \Cex
@@ -1879,7 +1879,7 @@ $h=0.2,0.1,0.05$ on $[0,2]$
 \quad (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38})
 
 \item\label{exer:3.2.16} \Cex
-$\dst{y'+{1\over x}y={\sin x\over x^2},\quad y(1)=2}$, \quad
+$\dst{y'+\frac{1}{x}y={\sin x\over x^2},\quad y(1)=2}$, \quad
 $h=0.2,0.1,0.05$ on $[1,3]$
 \quad (Exercise~2.1.\hspace*{-3pt}\ref{exer:2.1.39})
 
@@ -1889,7 +1889,7 @@ $h=0.05,0.025,0.0125$ on $[1,1.5]$\;
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40}),
 
 \item\label{exer:3.2.18} \Cex
-$\dst{y'+{2x\over 1+x^2}y={e^x\over (1+x^2)^2}, \quad y(0)=1}$;\;
+$\dst{y'+\frac{2x}{1+x^2}y=\frac{e^x}{(1+x^2)^2}, \quad y(0)=1}$;\;
 $h=0.2,0.1,0.05$ on $[0,2]$\quad
  (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.41})
 
@@ -1909,11 +1909,11 @@ $y'+3y=xy^2(y+1),\quad y(0)=1$;\quad
 $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.2.21} \Cex
-$\dst{y'-4y={x\over y^2(y+1)},\quad y(0)=1}$;\quad
+$\dst{y'-4y=\frac{x}{y^2(y+1)},\quad y(0)=1}$;\quad
  $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.2.22} \Cex
-$\dst{y'+2y={x^2\over1+y^2},\quad y(2)=1}$;\quad
+$\dst{y'+2y=\frac{x^2}{1+y^2},\quad y(2)=1}$;\quad
  $h=0.1,0.05,0.025$ on $[2,3]$
 
 
@@ -2019,13 +2019,13 @@ $y_1$, $y_2$, \dots, $y_n$ of the solution of \eqref{eq:3.3.1}
 at $x_0$, $x_0+h$, \dots, $x_0+nh$ as follows: Given $y_i$,
 compute
 \begin{eqnarray*} k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+{h\over2},y_i+{h\over2}k_{1i}\right),\\
-k_{3i}&=&f\left(x_i+{h\over2},y_i+{h\over2}k_{2i}\right),\\
+k_{2i}&=&f\left(x_i+\frac{h}{2},y_i+\frac{h}{2}k_{1i}\right),\\
+k_{3i}&=&f\left(x_i+\frac{h}{2},y_i+\frac{h}{2}k_{2i}\right),\\
 k_{4i}&=&f(x_i+h,y_i+hk_{3i}),
 \end{eqnarray*}
 and
 \[
-y_{i+1}=y_i+{h\over6}(k_{1i}+2k_{2i}+2k_{3i}+k_{4i}).
+y_{i+1}=y_i+\frac{h}{6}(k_{1i}+2k_{2i}+2k_{3i}+k_{4i}).
 \]
 
  The next example, which deals with the initial value problem
@@ -2063,7 +2063,7 @@ k_{30} & = & f(x_0+h/2,y_0+hk_{20}/2)=f(.05,1+(.05)(-1.799886895))\\
  &=& f(.05,.910005655)=-2(.910005655)+(.05)^3e^{-.1}=-1.819898206,\\
 k_{40} & = & f(x_0+h,y_0+hk_{30})=f(.1,1+(.1)(-1.819898206))\\
 &=&f(.1,.818010179)=-2(.818010179)+(.1)^3e^{-.2}=-1.635201628,\\
-y_1&=&y_0+{h\over6}(k_{10}+2k_{20}+2k_{30}+k_{40}),\\
+y_1&=&y_0+\frac{h}{6}(k_{10}+2k_{20}+2k_{30}+k_{40}),\\
 &=&1+{.1\over6}(-2+2(-1.799886895)+2(-1.819898206)
 -1.635201628)=.818753803,\\[4\jot]
 k_{11} & = & f(x_1,y_1)
@@ -2075,7 +2075,7 @@ k_{31} & = & f(x_1+h/2,y_1+hk_{21}/2)=f(.15,.818753803+(.05)(-1.471338457))\\
 k_{41} & = &
 f(x_1+h,y_1+hk_{31})=f(.2,.818753803+(.1)(-1.487873498))\\
 &=&f(.2,.669966453)=-2(.669966453)+(.2)^3e^{-.4}=-1.334570346,\\
-y_2&=&y_1+{h\over6}(k_{11}+2k_{21}+2k_{31}+k_{41}),\\
+y_2&=&y_1+\frac{h}{6}(k_{11}+2k_{21}+2k_{31}+k_{41}),\\
 &=&.818753803+{.1\over6}(-1.636688875+2(-1.471338457)+2(-1.487873498)-1.334570346)
 \\&=&.670592417.
 \end{eqnarray*}
@@ -2425,13 +2425,13 @@ Use the Runge-Kutta method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of the initial
 value problem
 \[
-y'+{2\over x}y={3\over x^3}+1,\quad y(1)=1
+y'+\frac{2}{x}y=\frac{3}{x^3}+1,\quad y(1)=1
 \]
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$. Compare these approximate
 values
 with the values of the exact solution
 \[
-y={1\over3x^2}(9\ln x+x^3+2),
+y=\frac{1}{3x^2}(9\ln x+x^3+2),
 \]
 which can be obtained by the method of Section~2.1. Present
 your results in a table like Table~\ref{table:3.3.1}.
@@ -2538,7 +2538,7 @@ given initial value problem at $11$ equally spaced points (including
 the endpoints) in the interval.}
 
 \item\label{exer:3.3.14} \Cex
-$y'-2y=\dst{1\over1+x^2},\quad y(2)=2$;  \,
+$y'-2y=\dst\frac{1}{1+x^2},\quad y(2)=2$;  \,
 $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.3.15} \Cex
@@ -2547,7 +2547,7 @@ $h=0.2,0.1,0.05$ on $[0,2]$
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38})
 
 \item\label{exer:3.3.16} \Cex
-$\dst{y'+{1\over x}y={\sin x\over x^2},\quad y(1)=2;}$\quad
+$\dst{y'+\frac{1}{x}y={\sin x\over x^2},\quad y(1)=2;}$\quad
 $h=0.2,0.1,0.05$ on $[1,3]$
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.39})
 
@@ -2557,7 +2557,7 @@ $h=0.05,0.025,0.0125$ on $[1,1.5]$
 (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40})
 
 \item\label{exer:3.3.18} \Cex
-$\dst{y'+{2x\over 1+x^2}y={e^x\over (1+x^2)^2}, \quad y(0)=1};$ \quad
+$\dst{y'+\frac{2x}{1+x^2}y=\frac{e^x}{(1+x^2)^2}, \quad y(0)=1};$ \quad
 $h=0.2,0.1,0.05$ on $[0,2]$
  (Exercise~2.1,~\hspace*{-3pt}\ref{exer:2.1.41})
 
@@ -2579,11 +2579,11 @@ $h=0.1,0.05,0.025$ on $[0,1]$
 
 
 \item\label{exer:3.3.21} \Cex
-$\dst{y'-4y={x\over y^2(y+1)},\quad y(0)=1}$;  \,
+$\dst{y'-4y=\frac{x}{y^2(y+1)},\quad y(0)=1}$;  \,
  $h=0.1,0.05,0.025$ on $[0,1]$
 
 \item\label{exer:3.3.22} \Cex
-$\dst{y'+2y={x^2\over1+y^2},\quad y(2)=1}$;  \,
+$\dst{y'+2y=\frac{x^2}{1+y^2},\quad y(2)=1}$;  \,
  $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.3.23} \Cex
@@ -2626,13 +2626,13 @@ Use the Runge-Kutta  method with step sizes $h=0.1$,  $h=0.05$,
 and $h=0.025$
  to find approximate values of the solution of
 \[
-y'+{1\over x}y={7\over x^2}+3,\quad y(1)=\frac{3}{2}
+y'+\frac{1}{x}y=\frac{7}{x^2}+3,\quad y(1)=\frac{3}{2}
 \]
 at $x=0.5$, $0.6$,\dots, $1.5$.
  Compare these approximate values
 with the values of the exact solution
 \[
-y={7\ln x\over x}+{3x\over2},
+y={7\ln x\over x}+\frac{3x}{2},
 \]
 which can be obtained by the method discussed in
 Section~2.1.
@@ -2648,7 +2648,7 @@ at $x=1.0$, $1.1$, $1.2$, \dots, $3.0$.
  Compare these approximate values
 with the values of the exact solution
 \[
-y=2x^2-{12\over x^2},
+y=2x^2-\frac{12}{x^2},
 \]
 which can be obtained by the method discussed in Section~2.1.
 
@@ -2660,8 +2660,8 @@ Exercise~3.1.~\hspace*{-3pt}\ref{exer:3.1.23}).
 \item % (a)
 Derive the quadrature formula
 \[
-\int_a^bf(x)\,dx\approx {h\over6}(f(a)+f(b))+
-{h\over3}\sum_{i=1}^{n-1}f(a+ih)+{2h\over3}\sum_{i=1}^n
+\int_a^bf(x)\,dx\approx \frac{h}{6}(f(a)+f(b))+
+\frac{h}{3}\sum_{i=1}^{n-1}f(a+ih)+\frac{2h}{3}\sum_{i=1}^n
 f\left(a+(2i-1)h/2\right)
 \eqno{\rm(A)}
 \]

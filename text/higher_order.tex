@@ -155,15 +155,15 @@ $(0,\infty)$.
 \solution
 Suppose
 \begin{equation} \label{eq:9.1.6}
-c_1x^2+c_2x^3+{c_3\over x}=0
+c_1x^2+c_2x^3+\frac{c_3}{x}=0
 \end{equation}
 on $(0,\infty)$. We must show that $c_1=c_2=c_3=0$. Differentiating
 \eqref{eq:9.1.6} twice yields  the system
 \begin{equation} \label{eq:9.1.7}
 \begin{array}{rcl}
-c_1x^2+c_2x^3+\dst{c_3\over x}&=&0\\[2\jot]
-2c_1x+3c_2x^2-\dst{c_3\over x^2}&=&0\\[2\jot]
-2c_1+6c_2x+\dst{2c_3\over x^3}&=&0.
+c_1x^2+c_2x^3+\dst\frac{c_3}{x}&=&0\\[2\jot]
+2c_1x+3c_2x^2-\dst\frac{c_3}{x^2}&=&0\\[2\jot]
+2c_1+6c_2x+\dst\frac{2c_3}{x^3}&=&0.
 \end{array}
 \end{equation}
 If \eqref{eq:9.1.7} holds for all $x$ in $(0,\infty)$, then it
@@ -188,7 +188,7 @@ it follows that \eqref{eq:9.1.8} has only the trivial solution, so
 $\{y_1,y_2,y_3\}$ is linearly independent on $(0,\infty)$. Now
 Theorem~\ref{thmtype:9.1.2} implies that
 \[
-y=c_1x^2+c_2x^3+{c_3\over x}
+y=c_1x^2+c_2x^3+\frac{c_3}{x}
 \]
 is the general solution of \eqref{eq:9.1.5} on $(0,\infty)$.
 To see that this is also true
@@ -374,14 +374,13 @@ the Wronskian  of $\{y_1,y_2,y_3\}$.
 If $x\ne0$,  then
 \[
 W(x)=\left|\begin{array}{ccc}
-x^2&\phantom{2}x^3&\phantom{-}\dst{1\over x}\\[2\jot]
-2x&3x^2\phantom{^2}&\dst-\dst{1\over x^2}\\[2\jot]
-2&6x\phantom{x^2}&\phantom{-}\dst{2\over x^3}\end{array}
+x^2&\phantom{2}x^3&\phantom{-}\dst\frac{1}{x}\\[2\jot]
+2x&3x^2\phantom{^2}&\dst-\dst\frac{1}{x^2}\\[2\jot]
+2&6x\phantom{x^2}&\phantom{-}\dst\frac{2}{x^3}\end{array}
 \right|
 =2x^3\left|\begin{array}{ccc}
-1&\phantom{3}x&\phantom{-}\dst{1\over x^3}\\[2\jot]2&3x&-\dst{1\over
-x^3}
-\\[2\jot]1&3x&\phantom{-}\dst{1\over x^3}\end{array}\right|,
+1&\phantom{3}x&\phantom{-}\dst\frac{1}{x^3}\\[2\jot]2&3x&-\dst\frac{1}{x^3}
+\\[2\jot]1&3x&\phantom{-}\dst\frac{1}{x^3}\end{array}\right|,
 \]
 where we factored $x^2$, $x$, and $2$ out of the first, second, and
 third  rows of
@@ -389,8 +388,7 @@ $W(x)$, respectively. Adding the second row of the last determinant
 to the first and third rows yields
 \[
 W(x)=2x^3\left|\begin{array}{ccc}
-3&4x&\phantom{-}0\\[2\jot]2&3x&-\dst{1\over
-x^3}
+3&4x&\phantom{-}0\\[2\jot]2&3x&-\dst\frac{1}{x^3}
 \\[2\jot]3&6x&\phantom{-}0\end{array}\right|
 =2x^3\left(1\over x^3\right)\left|\begin{array}{cc}3&4x\\3&6x
 \end{array}\right|=12x.
@@ -520,15 +518,15 @@ throughout the rest of this chapter.
 Verify that the given function is the solution of the initial
 value problem.
 
-\part{a} $ x^3y'''-3x^2y''+6xy'-6y=-\dst{24\over x}, \quad  y(-1)=0$, $
+\part{a} $ x^3y'''-3x^2y''+6xy'-6y=-\dst\frac{24}{x}, \quad  y(-1)=0$, $
 y'(-1)=0, \quad  y''(-1)=0$;
 
-\hspace*{15pt}$\dst{y=-6x-8x^2-3x^3+{1\over x}}$
+\hspace*{15pt}$\dst{y=-6x-8x^2-3x^3+\frac{1}{x}}$
 
-\part{b} $\dst{ y'''-{1\over x}y''-y'+{1\over x}y={x^2-4\over x^4}, \quad
+\part{b} $\dst{ y'''-\frac{1}{x}y''-y'+\frac{1}{x}y={x^2-4\over x^4}, \quad
 y(1)=\frac{3}{2},\quad y'(1)=\frac{1}{2}}$, $ y''(1)=1$;
 
-\hspace*{15pt} $y=x+\dst{1\over2x}$
+\hspace*{15pt} $y=x+\dst\frac{1}{2x}$
 
 \part{c} $xy'''-y''-xy'+y=x^2, \quad  y(1)=2,\quad y'(1)=5,\quad
 y''(1)=-1$;
@@ -584,7 +582,7 @@ y_i^{(j)}(x_0)=\left\{\begin{array}{cl}
 \item %(a)
 Verify that the function
 \[
-y=c_1x^3+c_2x^2+{c_3\over x}
+y=c_1x^3+c_2x^2+\frac{c_3}{x}
 \]
 satisfies
 \[
@@ -679,8 +677,8 @@ Compute the Wronskian of the given set of functions.
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \part{e} $\dst{\{1,\,x,\,{x^2\over2!},\,
-{x^3\over3!}\,,\cdots,\,{x^n\over n!}}\}$&
+ \part{e} $\dst{\{1,\,x,\,\frac{x^2}{2!},\,
+\frac{x^3}{3!}\,,\cdots,\,\frac{x^n}{n!}}\}$&
 \part{f} $\{e^x,\,e^{-x},\,x\}$
 \end{tabular}
 
@@ -1838,15 +1836,15 @@ Show that if
 \]
 then
 \begin{eqnarray*}
-\dst x {dy\over dx}&=&\dst{dY\over dt}\\[2\jot]
-\dst x^2{d^2y\over dx^2}&=&\dst{d^2Y\over dt^2}-{dY\over dt}\\[2\jot]
-\dst x^3{d^3y\over dx^3}&=&\dst{d^3Y\over dt^3}-3{d^2Y\over dt^2}+2{dY\over dt}.
+\dst x \frac{dy}{dx}&=&\dst\frac{dY}{dt}\\[2\jot]
+\dst x^2\frac{d^2y}{dx^2}&=&\dst\frac{d^2Y}{dt^2}-\frac{dY}{dt}\\[2\jot]
+\dst x^3\frac{d^3y}{dx^3}&=&\dst\frac{d^3Y}{dt^3}-3\frac{d^2Y}{dt^2}+2\frac{dY}{dt}.
 \end{eqnarray*}
 In general, it can be shown that if $r$ is any integer $\ge2$ then
 \[
-x^r {d^ry\over dx^r}={d^rY\over dt^r}+
+x^r \frac{d^ry}{dx^r}=\frac{d^rY}{dt^r}+
  A_{1r}{d^{r-1}Y\over dt^{r-1}}+\cdots+A_{r-1,r}
- {dY\over dt}
+ \frac{dY}{dt}
 \]
 where $A_{1r}$, \dots, $A_{r-1,r}$ are integers.  Use these results to
 show that the substitution (B) transforms (A) into a
@@ -1863,8 +1861,8 @@ the equation
 on $(0,\infty)$
 if and only if the function $Y(t)=y(e^t)$ satisfies
 \[
-a_0{d^3Y\over dt^3}+(a_1-3a_0) {d^2Y\over dt^2}+(a_2-a_1+2a_0)
-{dY\over dt}+a_3Y=0.
+a_0\frac{d^3Y}{dt^3}+(a_1-3a_0) \frac{d^2Y}{dt^2}+(a_2-a_1+2a_0)
+\frac{dY}{dt}+a_3Y=0.
 \]
 Assuming that $a_0$, $a_1$, $a_2$, $a_3$ are real and $a_0 \ne0$, find
 the possible forms for the general solution of (A).
@@ -2046,7 +2044,7 @@ if
 Solving these equations successively yields $C=1/24$, $B=1/6$, $A=-1/6$.
 Substituting these into \eqref{eq:9.3.6} shows that
 \[
-u_p={x^2\over24}(-4+4x+x^2)
+u_p=\frac{x^2}{24}(-4+4x+x^2)
 \]
 is a particular solution of  \eqref{eq:9.3.5}, so
 \[
@@ -2146,7 +2144,7 @@ x+(1+x)\sin x\right]
 \]
 is a particular solution of  \eqref{eq:9.3.8}, so
 \[
-y_p=e^xu_p=-{e^x\over2}\left[(2-x)\cos x+(1+x)\sin x\right]
+y_p=e^xu_p=-\frac{e^x}{2}\left[(2-x)\cos x+(1+x)\sin x\right]
 \]
 is a particular  solution of \eqref{eq:9.3.7} (Figure~\ref{figure:9.3.3}).
 
@@ -2154,7 +2152,7 @@ is a particular  solution of \eqref{eq:9.3.7} (Figure~\ref{figure:9.3.3}).
      \begin{figure}[tbp]
   \centering\color{blue}
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig090303}
-\caption{ $y_p=\dst{e^xu_p=-{e^x\over2}\left[(2-x)\cos x+(1+x)\sin
+\caption{ $y_p=\dst{e^xu_p=-\frac{e^x}{2}\left[(2-x)\cos x+(1+x)\sin
 x\right]}$}
   \label{figure:9.3.3}
 \end{figure}
@@ -2250,7 +2248,7 @@ so $A_0=-3/2$ and $B_0=-1/2$.
 Substituting $A_0=-3/2$, $A_1=1$, $B_0=-1/2$, $B_1=-1/2$ into
 \eqref{eq:9.3.12} shows that
 \[
-u_p=-\dst{x\over2}\left[(3-2x)\cos
+u_p=-\dst\frac{x}{2}\left[(3-2x)\cos
 x+(1+x)\sin x\right]
 \]
 is a particular solution of  \eqref{eq:9.3.11}, so
@@ -2590,7 +2588,7 @@ which has no zeros on $(a,b)$, by Theorem~\ref{thmtype:9.1.4}.
 Solving
 \eqref{eq:9.4.5} by Cramer's rule  yields
 \begin{equation} \label{eq:9.4.6}
-u'_j=(-1)^{n-j}{FW_j\over P_0W},\quad 1\le j\le n,
+u'_j=(-1)^{n-j}\frac{FW_j}{P_0W},\quad 1\le j\le n,
 \end{equation}
  where $W_j$ is the Wronskian of the set of
 functions obtained by deleting $y_j$ from  $\{y_1,y_2,\dots,y_n\}$
@@ -2643,8 +2641,8 @@ y'_1&y'_2 \end{array} \right|,
 \]
 and  \eqref{eq:9.4.6}  becomes
 \begin{equation} \label{eq:9.4.7}
-u'_1={FW_1\over P_0W},\quad u'_2=-{FW_2\over P_0W},\quad
-u'_3={FW_3\over P_0W}.
+u'_1=\frac{FW_1}{P_0W},\quad u'_2=-\frac{FW_2}{P_0W},\quad
+u'_3=\frac{FW_3}{P_0W}.
 \end{equation}
 
 
@@ -2692,7 +2690,7 @@ W=0W_1-e^x W_2+e^{-x}W_3=0(-2)-e^x\left(-e^{-x}(x+1)\right)
 \]
  Since $F(x)=8x^2e^x$ and $P_0(x)=x$,
 \[
-{F\over P_0W}={8x^2e^x\over x\cdot 2x}=4e^x.
+\frac{F}{P_0W}=\frac{8x^2e^x}{x\cdot 2x}=4e^x.
 \]
 Therefore, from \eqref{eq:9.4.7}
 \begin{eqnarray*}
@@ -2762,8 +2760,8 @@ y_1''&y''_2&y_3''
 \]
 and  \eqref{eq:9.4.6}  becomes
 \begin{equation} \label{eq:9.4.9}
-u'_1=-{FW_1\over P_0W},\quad u'_2={FW_2\over P_0W},\quad
-u'_3=-{FW_3\over P_0W},\quad u'_4={FW_4\over P_0W}.
+u'_1=-\frac{FW_1}{P_0W},\quad u'_2=\frac{FW_2}{P_0W},\quad
+u'_3=-\frac{FW_3}{P_0W},\quad u'_4=\frac{FW_4}{P_0W}.
 \end{equation}
 
 
@@ -2783,7 +2781,7 @@ $(0,\infty)$.
 \solution
 We seek a particular solution of \eqref{eq:9.4.10} of the form
 \[
-y_p=u_1x+u_2x^2+{u_3\over x}+{u_4\over x^2}.
+y_p=u_1x+u_2x^2+\frac{u_3}{x}+\frac{u_4}{x^2}.
 \]
 The Wronskian of  $\{y_1,y_2,y_3,y_4\}$ is
 \[
@@ -2799,54 +2797,51 @@ W_1&=&
 \left| \begin{array}{ccr}
 x^2&1/x&1/x^2\\[5pt]2x&-1/x^2&-2/x^3\\[5pt]
 2&2/x^3&6/x^4
-\end{array} \right|=-{12\over x^4},\\[10pt]
+\end{array} \right|=-\frac{12}{x^4},\\[10pt]
 W_2&=&
 \left| \begin{array}{ccr}
 x&1/x&1/x^2\\[5pt]1&-1/x^2&-2/x^3\\[5pt]
 0&2/x^3&6/x^4
-\end{array} \right|=-{6\over x^5},\\[10pt]
+\end{array} \right|=-\frac{6}{x^5},\\[10pt]
 W_3&=&
 \left| \begin{array}{ccc}
 x&x^2&1/x^2\\[5pt]1&2x&-2/x^3\\[5pt]
 0&2&6/x^4
-\end{array} \right|={12\over x^2},  \\
+\end{array} \right|=\frac{12}{x^2},  \\
 W_4&=&
 \left| \begin{array}{ccc}
 x&x^2&1/x\\[5pt]1&2x&-1/x^2\\[5pt]
 0&2&2/x^3
-\end{array} \right|={6\over x}.
+\end{array} \right|=\frac{6}{x}.
 \end{eqnarray*}
 Expanding $W$ by cofactors of the last row yields
 \begin{eqnarray*}
-W&=&-0W_1+0 W_2-\left(-{6\over
-x^4}\right)W_3+\left(-{24\over
-x^5}\right)W_4\\
-&=&{6\over x^4}{12\over x^2}-{24\over x^5}{6\over x}=-{72\over x^6}.
+W&=&-0W_1+0 W_2-\left(-\frac{6}{x^4}\right)W_3+\left(-\frac{24}{x^5}\right)W_4\\
+&=&\frac{6}{x^4}\frac{12}{x^2}-\frac{24}{x^5}\frac{6}{x}=-\frac{72}{x^6}.
 \end{eqnarray*}
  Since $F(x)=12x^2$ and $P_0(x)=x^4$,
 \[
-{F\over P_0W}={12x^2\over x^4}\left(-{x^6\over72}\right)=-{x^4\over 6}.
+\frac{F}{P_0W}=\frac{12x^2}{x^4}\left(-\frac{x^6}{72}\right)=-\frac{x^4}{6}.
 \]
 Therefore, from \eqref{eq:9.4.9},
 \begin{eqnarray*}
-u'_1&=&-\left(-{x^4\over6}\right)W_1={x^4\over6}\left(-{12\over
-x^4}\right)=-2,\\[5pt]
- u_2'&=&\phantom{-}-{x^4\over6}W_2=-{x^4\over6}\left(-{6\over x^5}\right)
-={1\over x},\\[5pt]
-u_3'&=&-\left(-{x^4\over6}\right)W_3={x^4\over6}{12\over x^2}=2x^2,\\
-  u_4'&=&\phantom{-}-{x^4\over6}W_4=-{x^4\over6}{6\over x}=-x^3.
+u'_1&=&-\left(-\frac{x^4}{6}\right)W_1=\frac{x^4}{6}\left(-\frac{12}{x^4}\right)=-2,\\[5pt]
+ u_2'&=&\phantom{-}-\frac{x^4}{6}W_2=-\frac{x^4}{6}\left(-\frac{6}{x^5}\right)
+=\frac{1}{x},\\[5pt]
+u_3'&=&-\left(-\frac{x^4}{6}\right)W_3=\frac{x^4}{6}\frac{12}{x^2}=2x^2,\\
+  u_4'&=&\phantom{-}-\frac{x^4}{6}W_4=-\frac{x^4}{6}\frac{6}{x}=-x^3.
 \end{eqnarray*}
  Integrating these and taking the constants of
 integration to be zero yields
 \[
-u_1=-2x,\quad u_2=\ln|x|,\quad u_3={2x^3\over3},
-u_4=-{x^4\over4}.
+u_1=-2x,\quad u_2=\ln|x|,\quad u_3=\frac{2x^3}{3},
+u_4=-\frac{x^4}{4}.
 \]
 Hence,
 \begin{eqnarray*}
 y_p&=&u_1y_1+u_2y_2+u_3y_3+u_4y_4\\
-&=&(-2x)x+(\ln|x|)x^2+{2x^3\over3}{1\over x}+\left(-{x^4\over4}\right)
-{1\over x^2} \\&=&x^2\ln|x|-{19x^2\over12}.
+&=&(-2x)x+(\ln|x|)x^2+\frac{2x^3}{3}\frac{1}{x}+\left(-\frac{x^4}{4}\right)
+\frac{1}{x^2} \\&=&x^2\ln|x|-\frac{19x^2}{12}.
 \end{eqnarray*}
 Since $-19x^2/12$ is a solution of the complementary equation, we redefine
 \[
@@ -2854,7 +2849,7 @@ y_p=x^2\ln|x|.
 \]
  Therefore
 \[
-y=x^2\ln|x|+c_1x+c_2x^2+{c_3\over x}+{c_4\over x^2}
+y=x^2\ln|x|+c_1x+c_2x^2+\frac{c_3}{x}+\frac{c_4}{x^2}
 \]
 is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
 
@@ -3073,7 +3068,7 @@ y_p^{(r)}=u_1y^{(r)}_1+u_2y_2^{(r)}\cdots+u_ny^{(r)}_n,\quad 1
 \]
 and
 \[
-y_p^{(n)}=u_1y_1^{(n)}+u_2y_2^{(n)}+\cdots+u_ny_n^{(n)}+{F\over P_0}.
+y_p^{(n)}=u_1y_1^{(n)}+u_2y_2^{(n)}+\cdots+u_ny_n^{(n)}+\frac{F}{P_0}.
 \]
 \hint{See the derivation of the method of variation of
 parameters at the beginning of the section.}
@@ -3094,7 +3089,7 @@ y_p(x)=\int_{x_0}^x G(x,t)F(t)\,dt,
 \]
 where
 \[
-G(x,t)={1\over P_0(t)W(t)}\left|\begin{array}{cccc}
+G(x,t)=\frac{1}{P_0(t)W(t)}\left|\begin{array}{cccc}
 y_1(t)&y_2(t)&\cdots&y_n(t)\\[5pt]
 y_1'(t)&y_2'(t)&\cdots&y_n'(t)\\[5pt]
 \vdots&\vdots&\ddots&\vdots\\[5pt]
@@ -3108,7 +3103,7 @@ which is called  the
 Show that
 \[
 {\partial^{j}G(x,t)\over\partial x^j}
-={1\over P_0(t)W(t)}\left|\begin{array}{cccc}
+=\frac{1}{P_0(t)W(t)}\left|\begin{array}{cccc}
 y_1(t)&y_2(t)&\cdots&y_n(t)\\[5pt]
 y_1'(t)&y_2'(t)&\cdots&y_n'(t)\\[5pt]
 \vdots&\vdots&\ddots&\vdots\\[5pt]
@@ -3121,7 +3116,7 @@ Show that if $a<t<b$ then
 \[
 \left.{\partial^{j}G(x,t)\over\partial x^j}\right|_{x=t}=
 \left\{\begin{array}{cl} 0,&1\le j\le n-2,\\[5pt]
-\dst{1\over P_0(t)},&j=n-1.
+\dst\frac{1}{P_0(t)},&j=n-1.
 \end{array}\right.
 \]
 \item % (e)

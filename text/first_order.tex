@@ -1207,7 +1207,7 @@ Then, from the chain rule,
 \]
 Therefore \eqref{eq:2.2.1} is equivalent to
 \[
-{d\over dx}H(y(x))={d\over dx}G(x).
+\frac{d}{dx}H(y(x))=\frac{d}{dx}G(x).
 \]
 Integrating both sides of this equation and combining the constants of
 integration yields
@@ -1249,11 +1249,11 @@ yields
 \]
 Integrating yields
 \[
-\tan^{-1}y={x^2\over2}+c
+\tan^{-1}y=\frac{x^2}{2}+c
 \]
 Therefore
 \[
-y=\tan\left({x^2\over2}+c\right).
+y=\tan\left(\frac{x^2}{2}+c\right).
 \]
 
 \begin{example}\label{example:2.2.2} \rm  \mbox{}\newline
@@ -1261,19 +1261,19 @@ y=\tan\left({x^2\over2}+c\right).
 \item %(a)
 Solve the equation
 \begin{equation} \label{eq:2.2.4}
-y'=-{x\over y}.
+y'=-\frac{x}{y}.
 \end{equation}
 
 \item %(b)
 Solve the initial value problem
 \begin{equation} \label{eq:2.2.5}
-y'=-{x\over y}, \quad y(1)=1.
+y'=-\frac{x}{y}, \quad y(1)=1.
 \end{equation}
 
 \item %(c)
 Solve the initial value problem
 \begin{equation} \label{eq:2.2.6}
-y'=-{x\over y}, \quad y(1)=-2.
+y'=-\frac{x}{y}, \quad y(1)=-2.
 \end{equation}
 \end{alist}
 \end{example}
@@ -1285,7 +1285,7 @@ yy'=-x.
 \]
 Integrating yields
 \[
-{y^2\over2}=-{x^2\over2}+c,\mbox{\quad or,\, equivalently, \quad}
+\frac{y^2}{2}=-\frac{x^2}{2}+c,\mbox{\quad or,\, equivalently, \quad}
 x^2+y^2=2c.
 \]
 The last equation shows that $c$ must be positive if $y$ is to be a
@@ -1451,7 +1451,7 @@ y'=g(x)p(y)
 \]
  is separable, since it can be rewritten as
 \[
-{1\over p(y)}y'=g(x).
+\frac{1}{p(y)}y'=g(x).
 \]
  However, the division by  $p(y)$
 is not legitimate  if $p(y)=0$ for some values of $y$.  The
@@ -1476,11 +1476,11 @@ variables in \eqref{eq:2.2.16} to obtain
 \]
  Integrating this yields
 \[
--{1\over y}=x^2+c,
+-\frac{1}{y}=x^2+c,
 \]
 which is equivalent to
 \begin{equation} \label{eq:2.2.17}
-y=-{1\over x^2+c}.
+y=-\frac{1}{x^2+c}.
 \end{equation}
 
 
@@ -1525,11 +1525,11 @@ legitimate for $x$ in this interval, we can separate variables in
 \]
  A partial fraction expansion on the left yields
 \[
-\left[{1\over y-1}-{1\over y+1}\right]y'=-x,
+\left[\frac{1}{y-1}-\frac{1}{y+1}\right]y'=-x,
 \]
 and integrating  yields
 \[
-\ln\left|{y-1\over y+1}\right|=-{x^2\over2}+k;
+\ln\left|{y-1\over y+1}\right|=-\frac{x^2}{2}+k;
 \]
  hence,
 \[
@@ -1601,7 +1601,7 @@ nonlinear equation by simply examining the equation, since the
 interval of validity may depend on the initial condition. For
 instance, in Example~\ref{example:2.2.2} we saw that the solution of
 \[
-{dy\over dx}=-{x\over y},\quad y(x_0)=y_0
+\frac{dy}{dx}=-\frac{x}{y},\quad y(x_0)=y_0
 \]
 is valid on $(-a,a)$, where $a=\sqrt{x_0^2+y_0^2}$.
 
@@ -1617,13 +1617,13 @@ y'=2xy^2, \quad y(0)=y_0
 \solution  First suppose   $y_0\ne0$. From
 Example~\ref{example:2.2.4}, we know that $y$ must be of the form
 \begin{equation} \label{eq:2.2.20}
-y=-{1\over x^2+c}.
+y=-\frac{1}{x^2+c}.
 \end{equation}
  Imposing the initial condition shows  that $c=-1/y_0$.
 Substituting this into \eqref{eq:2.2.20} and rearranging terms yields
 the solution
 \[
-y= {y_0\over 1-y_0x^2}.
+y= \frac{y_0}{1-y_0x^2}.
 \]
 This is also the solution if $y_0=0$. If $y_0<0$,
 the denominator isn't  zero for any value of $x$, so the
@@ -1709,7 +1709,7 @@ $y'(x^2+2)+ 4x(y^2+2y+1)=0, \quad y(1)=-1$
 $y'=-2x(y^2-3y+2), \quad y(0)=3$
 
  \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:2.2.19} $\dst{y'={2x\over 1+2y},
+\item\label{exer:2.2.19} $\dst{y'=\frac{2x}{1+2y},
 \quad y(2)=0}$ & \item \vspace*{5.5pt}\label{exer:2.2.20} $y'=2y-y^2,
 \quad y(0)=1$ \end{tabular}
 
@@ -1733,7 +1733,7 @@ $\dst{\tan(A+B)={\tan A+\tan B\over1-\tan A\tan B}}$.}
 $\sin(A-B)=\sin A\cos B-\cos A\sin B$.}
 
 \item\label{exer:2.2.26}
-Solve $\dst{y'={\cos x\over \sin y},\quad y (\pi)={\pi\over2}}$
+Solve $\dst{y'={\cos x\over \sin y},\quad y (\pi)=\frac{\pi}{2}}$
 explicitly. \hint{Use the identity $\cos(x+\pi/2)=-\sin x$ and the
 periodicity of the cosine.}
 
@@ -1904,7 +1904,7 @@ parameters followed by separation of variables.}
 % \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \item\label{exer:2.2.35} $\dst{y'+y={2xe^{-x}\over1+ye^x}}$
 %&
-\item\label{exer:2.2.36}\vspace*{7pt}  $\dst{xy'-2y={x^6\over y+x^2}}$
+\item\label{exer:2.2.36}\vspace*{7pt}  $\dst{xy'-2y=\frac{x^6}{y+x^2}}$
 %\end{tabular}
 
 % \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -1922,7 +1922,7 @@ equation.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 {\bf (a)} $xy'+y=h(x)p(xy)$
-& {\bf (b)} $\dst{xy'-y=h(x) p\left({y\over x}\right)}$\\[2\jot]
+& {\bf (b)} $\dst{xy'-y=h(x) p\left(\frac{y}{x}\right)}$\\[2\jot]
 {\bf (c)} $y'+y=h(x) p(e^xy)$
 & {\bf (d)} $xy'+ry=h(x) p(x^ry)$\\[2\jot]
 {\bf (e)} $\dst{y'+{v'(x)\over v(x)}y= h(x)
@@ -2078,7 +2078,7 @@ y'={x+y\over x-y},\quad y(x_0)=y_0.
 Here
 \[
 f(x,y)  =  {x+y\over x-y}\mbox{\quad and \quad}
-f_y(x,y)  =  {2x\over (x-y)^2}
+f_y(x,y)  =  \frac{2x}{(x-y)^2}
 \]
 are continuous everywhere except on the line $y=x$. If $y_0\ne x_0$,
 there's an open rectangle $R$ that contains $(x_0,y_0)$ that
@@ -2592,15 +2592,15 @@ Separating variables yields
 \]
 and integrating yields
 \[
--{1\over u}=(x-1)e^x+c.
+-\frac{1}{u}=(x-1)e^x+c.
 \]
 Hence,
 \[
-u=-{1\over(x-1)e^x+c}
+u=-\frac{1}{(x-1)e^x+c}
 \]
 and
 \[
-y=-{1\over x-1+ce^{-x}}.
+y=-\frac{1}{x-1+ce^{-x}}.
 \]
 
 Figure~\ref{eq:2.4.1}  shows
@@ -2671,11 +2671,11 @@ y'=q(y/x),
 where $q=q(u)$ is a function of a single variable.
 For example,
 \[
-y'={y+xe^{-y/x}\over x}={y\over x}+e^{-y/x}
+y'={y+xe^{-y/x}\over x}=\frac{y}{x}+e^{-y/x}
 \]
 and
 \[
-y'={y^2+xy-x^2\over x^2}=\left(y\over x\right)^2+{y\over x}
+y'={y^2+xy-x^2\over x^2}=\left(y\over x\right)^2+\frac{y}{x}
 -1
 \]
 are of the form  \eqref{eq:2.4.7}, with
@@ -2692,7 +2692,7 @@ u'x+u=q(u),
 and separation of variables (after checking for constant
 solutions $u\equiv u_0$ such that $q(u_0)=u_0$) yields
 \[
-{u'\over q(u)-u}={1\over x}.
+{u'\over q(u)-u}=\frac{1}{x}.
 \]
 
 Before turning to examples, we point out something that you may've have
@@ -2728,7 +2728,7 @@ u'x+u =  {ux+xe^{-ux/x}\over x} = u+e^{-u}.
 \]
  Simplifying and separating variables yields
 \[
-e^uu'={1\over x}.
+e^uu'=\frac{1}{x}.
 \]
 Integrating yields
 $e^u=\ln |x|+c$.
@@ -2787,12 +2787,12 @@ $u\equiv-1$. Therefore $y=x$ and $y=-x$ are solutions of
 assume the values $\pm 1$ on some interval,  separating variables
 yields
 \[
-{u'\over u^2-1}={1\over x},
+{u'\over u^2-1}=\frac{1}{x},
 \]
  or, after a partial fraction expansion,
 \[
-\frac{1}{2}\left[{1\over u-1}-{1\over u+1}\right]u'=
-{1\over x}.
+\frac{1}{2}\left[\frac{1}{u-1}-\frac{1}{u+1}\right]u'=
+\frac{1}{x}.
 \]
  Multiplying by 2 and integrating yields
 \[
@@ -2860,10 +2860,10 @@ y=\left\{\begin{array}{ll} \dst{x(1+c_1x^2)\over 1-c_1x^2},&a<x<0,\\
 \end{equation}
 is a solution of \eqref{eq:2.4.9} on $(a,b)$, where
 \[
-a=\left\{\begin{array}{cl}-\dst{1\over\sqrt{c_1}}&\mbox{ if }c_1>0,\\
+a=\left\{\begin{array}{cl}-\dst\frac{1}{\sqrt{c_1}}&\mbox{ if }c_1>0,\\
 -\infty&\mbox{ if }c_1\le 0,
 \end{array}\right. \mbox{\quad and \quad}
-b=\left\{\begin{array}{cl}\dst{1\over\sqrt{c_2}}&\mbox{ if }c_2>0,\\
+b=\left\{\begin{array}{cl}\dst\frac{1}{\sqrt{c_2}}&\mbox{ if }c_2>0,\\
 \infty&\mbox{ if }c_2\le 0.
 \end{array}\right.
 \]
@@ -2953,7 +2953,7 @@ initial value problem.}
 \item\label{exer:2.4.8} $y'-xy=xy^{3/2},\quad y(1)=4$
 \item\label{exer:2.4.9} $xy'+y=x^4y^4,\quad y(1)=1/2$
 \item\label{exer:2.4.10} $y'-2y=2y^{1/2},\quad y(0)=1$
-\item\label{exer:2.4.11} $\dst{y'-4y={48x\over y^2},\quad y(0)=1}$
+\item\label{exer:2.4.11} $\dst{y'-4y=\frac{48x}{y^2},\quad y(0)=1}$
 
 
 
@@ -3017,7 +3017,7 @@ $y'=\dst{y^2+2xy \over x^2}$
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
  \item\label{exer:2.4.17} $xy^3y'=y^4+x^4$
 % &
- \item\label{exer:2.4.18} $y'=\dst{y\over x}+\sec{y\over x}$
+ \item\label{exer:2.4.18} $y'=\dst\frac{y}{x}+\sec\frac{y}{x}$
 %\end{tabular}
 
 
@@ -3137,7 +3137,7 @@ Let $K$ be a positive integer. (You may have to try several
 choices for $K$.)
 Graph solutions of the initial value problems
 \[
-xyy'=x^2-xy+y^2,\quad y(r/2)={kr\over K},
+xyy'=x^2-xy+y^2,\quad y(r/2)=\frac{kr}{K},
 \]
 for $k=1$, $2$, \dots, $K$. Based on your observations, find
  conditions on the positive numbers $x_0$
@@ -3248,13 +3248,13 @@ explicitly.}
 \item\label{exer:2.4.52}
 Solve the initial value problem
 \[
-y'+{2\over x}y={3x^2y^2+6xy+2\over x^2(2xy+3)},\quad y(2)=2.
+y'+\frac{2}{x}y={3x^2y^2+6xy+2\over x^2(2xy+3)},\quad y(2)=2.
 \]
 
 \item\label{exer:2.4.53}
 Solve the initial value problem
 \[
-y'+{3\over x}y={3x^4y^2+10x^2y+6\over x^3(2x^2y+5)},\quad y(1)=1.
+y'+\frac{3}{x}y={3x^4y^2+10x^2y+6\over x^3(2x^2y+5)},\quad y(1)=1.
 \]
 
 \item\label{exer:2.4.54}
@@ -3303,12 +3303,12 @@ M(x,y)\,dx+N(x,y)\,dy=0.
 \end{equation}
 This equation  can be interpreted as
 \begin{equation} \label{eq:2.5.2}
-M(x,y)+N(x,y)\,{dy\over dx}=0,
+M(x,y)+N(x,y)\,\frac{dy}{dx}=0,
 \end{equation}
 where $x$ is the independent variable and $y$ is the dependent
 variable, or as
 \begin{equation} \label{eq:2.5.3}
-M(x,y)\,{dx\over dy}+N(x,y)=0,
+M(x,y)\,\frac{dx}{dy}+N(x,y)=0,
 \end{equation}
 where $y$ is the independent variable and $x$ is the dependent
 variable. Since the solutions of \eqref{eq:2.5.2} and \eqref{eq:2.5.3} will
@@ -3327,18 +3327,17 @@ Here are  some examples:
 & & \\[-6pt]
 Equation \eqref{eq:2.5.1}&Equation \eqref{eq:2.5.2}&Equation \eqref{eq:2.5.3}
 \\[9pt]\hline & & \\[-6pt]
-$3x^2y^2\,dx+2x^3y\,dy =0$ &$3x^2y^2+2x^3y\,\dst{dy\over
-dx} =0$  &$3x^2y^2\,\dst{dx\over dy}+2x^3y=0$
+$3x^2y^2\,dx+2x^3y\,dy =0$ &$3x^2y^2+2x^3y\,\dst\frac{dy}{dx} =0$  &$3x^2y^2\,\dst\frac{dx}{dy}+2x^3y=0$
 \\[9pt]\hline
 & & \\[-6pt]
 $(x^2+y^2)\,dx +2xy\,dy=0$ &
-$(x^2+y^2)+2xy\,\dst{dy\over dx}=0$&
-$(x^2+y^2)\,\dst{dx\over dy} +2xy=0$
+$(x^2+y^2)+2xy\,\dst\frac{dy}{dx}=0$&
+$(x^2+y^2)\,\dst\frac{dx}{dy} +2xy=0$
 \\[9pt]\hline
 & & \\[-6pt]
 $3y\sin x\,dx-2xy\cos x\,dy =0$
-&$3y\sin x-2xy\cos x\,\dst{dy\over dx} =0$
-& $3y\sin x\,\dst{dx\over dy}-2xy\cos x  =0$
+&$3y\sin x-2xy\cos x\,\dst\frac{dy}{dx} =0$
+& $3y\sin x\,\dst\frac{dx}{dy}-2xy\cos x  =0$
 \\[9pt]\hline
 \end{tabular}
 \end{center}
@@ -3372,13 +3371,13 @@ Regarding $y$ as a function of $x$ and
 differentiating \eqref{eq:2.5.4} implicitly with respect to
 $x$ yields
 \[
-(4x^3y^3+2xy^5+2y)+(3x^4y^2+5x^2y^4+2x)\,{dy\over dx}=0.
+(4x^3y^3+2xy^5+2y)+(3x^4y^2+5x^2y^4+2x)\,\frac{dy}{dx}=0.
 \]
 Similarly, regarding $x$ as a function of $y$ and
 differentiating \eqref{eq:2.5.4} implicitly with respect to
 $y$ yields
 \[
-(4x^3y^3+2xy^5+2y){dx\over dy}+(3x^4y^2+5x^2y^4+2x)=0.
+(4x^3y^3+2xy^5+2y)\frac{dx}{dy}+(3x^4y^2+5x^2y^4+2x)=0.
 \]
 Therefore \eqref{eq:2.5.4} is an implicit solution of \eqref{eq:2.5.5}
 in either of its two possible interpretations. \bbox
@@ -3404,13 +3403,13 @@ F_x(x,y)\,dx+F_y(x,y)\,dy=0.
 \proof Regarding $y$ as a function of $x$ and  differentiating
 \eqref{eq:2.5.6}  implicitly with respect to $x$ yields
 \[
-F_x(x,y)+F_y(x,y)\,{dy\over dx}=0.
+F_x(x,y)+F_y(x,y)\,\frac{dy}{dx}=0.
 \]
 On the other hand,
  regarding $x$ as a function of $y$ and  differentiating
 \eqref{eq:2.5.6}  implicitly with respect to $y$ yields
 \[
-F_x(x,y)\,{dx\over dy}+F_y(x,y)=0.
+F_x(x,y)\,\frac{dx}{dy}+F_y(x,y)=0.
 \]
 Thus, \eqref{eq:2.5.6} is an
 implicit solution of  \eqref{eq:2.5.7} in either of its two possible
@@ -3796,8 +3795,8 @@ $(3x^2+2xy+4y^2)\,dx+(x^2+8xy+18y)\,dy=0$
 $(2x^2+8xy+y^2)\,dx+(2x^2+xy^3/3)\,dy=0$
 
 \item\label{exer:2.5.11}
-$\dst{\left({1\over x}+2x\right)\,dx+
-\left({1\over y}+2y\right)\,dy=0}$
+$\dst{\left(\frac{1}{x}+2x\right)\,dx+
+\left(\frac{1}{y}+2y\right)\,dy=0}$
 
 \item\label{exer:2.5.12}
 $(y\sin xy+xy^2\cos xy)\,dx+(x\sin xy+xy^2\cos xy)\,dy=0$
@@ -4012,13 +4011,13 @@ $(3x^2+2y)\,dx+(2y+2x)\,dy=0$
 \item\label{exer:2.5.38}
 Solve the initial value problem
 \[
-y'+{2\over x}y=-{2xy\over x^2+2x^2y+1},\quad y(1)=-2.
+y'+\frac{2}{x}y=-\frac{2xy}{x^2+2x^2y+1},\quad y(1)=-2.
 \]
 
 \item\label{exer:2.5.39}
 Solve the initial value problem
 \[
-y'-{3\over x}y={2x^4(4x^3-3y)\over3x^5+3x^3+2y},\quad y(1)=1.
+y'-\frac{3}{x}y={2x^4(4x^3-3y)\over3x^5+3x^3+2y},\quad y(1)=1.
 \]
 
 \item\label{exer:2.5.40}
@@ -4131,7 +4130,7 @@ and $\mu N$), we see that \eqref{eq:2.6.4} is exact on an open rectangle
 $R$ if $\mu M$, $\mu N$, $(\mu M)_y$, and $(\mu N)_x$ are continuous
 and
 \[
-{\partial\over\partial y}(\mu M)={\partial\over\partial x}
+\frac{\partial}{\partial y}(\mu M)=\frac{\partial}{\partial x}
 (\mu N) \mbox{\quad or, equivalently, \quad}
 \mu_yM+\mu M_y=\mu_xN+\mu N_x
 \]
@@ -4342,12 +4341,12 @@ M_y-N_x=6xy^2-(6xy^2+2xy^3)=-2xy^3,
 \]
 so \eqref{eq:2.6.18} isn't  exact.  Moreover,
 \[
-{M_y-N_x\over N}=-{2xy^3\over 3x^2y^2+x^2y^2+1}
+{M_y-N_x\over N}=-\frac{2xy^3}{3x^2y^2+x^2y^2+1}
 \]
 is not independent of $y$, so Theorem~\ref{thmtype:2.6.1}(a) does not
 apply. However,   Theorem~\ref{thmtype:2.6.1}(b) does apply, since
 \[
-{N_x-M_y\over M}={2xy^3\over 2xy^3}=1
+{N_x-M_y\over M}=\frac{2xy^3}{2xy^3}=1
 \]
 is independent of $x$, so we can take $q(y)=1$.
  Since
@@ -4459,8 +4458,8 @@ on both sides shows that the last equation holds for all $(x,y)$ if
 \end{eqnarray*}
  which has the solution $A=1$, $B=1$. Therefore
 \eqref{eq:2.6.24} implies that
- \[ p(x)={1\over x}\mbox{\quad and \quad}
-q(y)={1\over y}.
+ \[ p(x)=\frac{1}{x}\mbox{\quad and \quad}
+q(y)=\frac{1}{y}.
 \]
 Since
  \[ \int p(x)\,dx=\ln|x|\mbox{\quad
@@ -4514,17 +4513,17 @@ $(3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0$}
 \end{equation}
 can be converted to the exact equation
 \begin{equation} \label{eq:2.6.27}
--{dx\over x+x^6}+{dy\over y}=0
+-\frac{dx}{x+x^6}+\frac{dy}{y}=0
 \end{equation}
 by multiplying through
 by the  integrating factor
 \[
-\mu(x,y)={1\over y(x+x^6)}.
+\mu(x,y)=\frac{1}{y(x+x^6)}.
 \]
 However, to solve \eqref{eq:2.6.27} by the method of Section~2.5
 we would have to evaluate the nasty integral
 \[
-\int {dx\over x+x^6}.
+\int \frac{dx}{x+x^6}.
 \]
 Instead, we solve \eqref{eq:2.6.26} explicitly for $y$ by finding  an
 integrating factor of the form
@@ -4565,23 +4564,23 @@ The right side will contain the term $-6x^5$ if $p(x)=-6/x$.   Then
 \]
 so  $q(y)=4/y$.  Since
 \[
-\int p(x)\,dx=-\int{6\over x}\,dx=-6\ln|x|=\ln{1\over x^6},
+\int p(x)\,dx=-\int\frac{6}{x}\,dx=-6\ln|x|=\ln\frac{1}{x^6},
 \]
  and
 \[
-\int q(y)\,dy=\int{4\over y}\,dy=4\ln
+\int q(y)\,dy=\int\frac{4}{y}\,dy=4\ln
 |y|=\ln{y^4},
 \]
 we can take $P(x)=x^{-6}$ and $Q(y)=y^4$,
 which yields the integrating factor $\mu(x,y)=x^{-6}y^4$.
 Multiplying \eqref{eq:2.6.26} by  $\mu$ yields the exact equation
 \[
--{y^5\over x^6}\,dx+\left({y^4\over x^5}+y^4\right)
+-\frac{y^5}{x^6}\,dx+\left(\frac{y^4}{x^5}+y^4\right)
 \,dy=0.
 \]
  We leave it to you to use the method of the Section~2.5
 to show that this equation has the implicit solution \[
-\left({y\over x}\right)^5+y^5=k.
+\left(\frac{y}{x}\right)^5+y^5=k.
 \]
  Solving for $y$ yields
 \[
@@ -4611,7 +4610,7 @@ Figure~\ref{figure:2.6.4} shows a direction field and some integral curves
 \item % (a)
 Verify that $\mu(x,y)=y$ is an integrating factor for
 \[
-y\,dx+\left(2x+{1\over y}\right)\,dy=0
+y\,dx+\left(2x+\frac{1}{y}\right)\,dy=0
 \eqno{\rm (A)}
 \]
 on any open rectangle that does not intersect  the $x$ axis
@@ -4647,14 +4646,14 @@ Verify that $\mu(x,y)=1/(x-y)^2$ is an integrating factor for
 on any open rectangle  that does not intersect the line $y=x$
 or, equivalently, that
 \[
--{y^2\over(x-y)^2}\,dx+{x^2\over(x-y)^2}\,dy=0
+-\frac{y^2}{(x-y)^2}\,dx+\frac{x^2}{(x-y)^2}\,dy=0
 \eqno{\rm (B)}
 \]
 is exact on any such rectangle.
 \item % (b)
 Use Theorem~\ref{thmtype:2.2.1} to show that
 \[
-{xy\over(x-y)}=c
+\frac{xy}{(x-y)}=c
 \eqno{\rm (C)}
 \]
 is an implicit solution of (B), and explain why
@@ -4687,8 +4686,7 @@ that is a function of only one variable, and solve the given equation.}
 
 \item\label{exer:2.6.9} $(6xy^2+2y)\,dx+(12x^2y+6x+3)\,dy=0$
 
-\item\label{exer:2.6.10} $y^2\,dx+\dst{\left(xy^2+3xy+{1\over
-y}\right)\,dy=0}$
+\item\label{exer:2.6.10} $y^2\,dx+\dst{\left(xy^2+3xy+\frac{1}{y}\right)\,dy=0}$
 
 
 \item\label{exer:2.6.11} $(12x^3y+24x^2y^2)\,dx+(9x^4+32x^3y+4y)\,dy=0$
@@ -4811,7 +4809,7 @@ the resulting equation can be rewritten as
 Then integrate both sides of this equation and solve for $y$
 to show that the general solution of (A) is
 \[
-y={1\over\mu(x)}\left(c+\int f(x)\mu(x)\,dx\right).
+y=\frac{1}{\mu(x)}\left(c+\int f(x)\mu(x)\,dx\right).
 \]
 Why is this form of the general solution
  equivalent to (B)?
