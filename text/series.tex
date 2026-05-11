@@ -2483,7 +2483,7 @@ solution of
 \]
 satisfy the recurrrence relation
 \[
-a_{n+2}=-{\gamma+\alpha n\over n+2}\,a_{n+1}-{\beta n(n-1)+\delta
+a_{n+2}=-\frac{\gamma+\alpha n}{n+2}\,a_{n+1}-{\beta n(n-1)+\delta
 n+\epsilon\over(n+2)(n+1)}\, a_n.
 \]
 
@@ -4415,12 +4415,12 @@ Ly(x,r)=p_0(r)x^r.
 \end{equation}
 Moreover$,$
 \begin{equation} \label{eq:7.6.5}
-{\partial y\over \partial r}(x,r)=y(x,r)\ln x+x^r\sum_{n=1}^\infty
+\frac{\partial y}{\partial r}(x,r)=y(x,r)\ln x+x^r\sum_{n=1}^\infty
 a_n'(r) x^n,
 \end{equation}
 and
 \begin{equation} \label{eq:7.6.6}
-L\left({\partial y\over \partial
+L\left(\frac{\partial y}{\partial
 r}(x,r)\right)=p'_0(r)x^r+x^rp_0(r)\ln x.
 \end{equation}
 \end{theorem}
@@ -4430,7 +4430,7 @@ Theorem~\ref{thmtype:7.5.2} implies \eqref{eq:7.6.4}. Differentiating
 formally
 with respect to $r$ in \eqref{eq:7.6.3} yields
 \begin{eqnarray*}
-{\partial y\over \partial
+\frac{\partial y}{\partial
 r}(x,r)&=&\dst{\frac{\partial}{\partial r}(x^r)\sum_{n=0}^\infty
 a_n(r)x^n +x^r\sum_{n=1}^\infty  a_n'(r)x^n}\\[10pt]
 &=&\dst{x^r\ln x\sum_{n=0}^\infty
@@ -4445,13 +4445,12 @@ view $y$ in \eqref{eq:7.6.2} as a function $y=y(x,r)$  of two
 variables, where the prime indicates partial differentiation with
 respect to $x$;   thus,
 \[
-y'=y'(x,r)={\partial y\over\partial x}(x,r)\mbox{\quad and \quad}
-y''=y''(x,r)={\partial^2 y\over\partial x^2}(x,r).
+y'=y'(x,r)=\frac{\partial y}{\partial x}(x,r)\mbox{\quad and \quad}
+y''=y''(x,r)=\frac{\partial^2 y}{\partial x^2}(x,r).
 \]
 With this notation we can use \eqref{eq:7.6.2} to rewrite \eqref{eq:7.6.4} as
 \begin{equation} \label{eq:7.6.7}
-x^2q_0(x){\partial^2 y\over \partial x^2}(x,r)+xq_1(x){\partial y\over
-\partial x}(x,r)+q_2(x)y(x,r)=p_0(r)x^r,
+x^2q_0(x)\frac{\partial^2 y}{\partial x^2}(x,r)+xq_1(x)\frac{\partial y}{\partial x}(x,r)+q_2(x)y(x,r)=p_0(r)x^r,
 \end{equation}
 where
 \begin{eqnarray*}
@@ -4469,16 +4468,16 @@ y\over\partial r}(x,r)=p'_0(r)x^r+p_0(r) x^r \ln x.
 By changing the order of differentiation in the first two terms on the left
 we can rewrite this  as
 \[
-x^2q_0(x){\partial^3 y\over \partial x^2\partial r}(x,r)
-+xq_1(x){\partial^2 y\over \partial x\partial r}(x,r)+q_2(x){\partial
+x^2q_0(x)\frac{\partial^3 y}{\partial x^2\partial r}(x,r)
++xq_1(x)\frac{\partial^2 y}{\partial x\partial r}(x,r)+q_2(x){\partial
 y\over \partial r}(x,r)=p'_0(r)x^r+p_0(r) x^r \ln x,
 \]
 or
 \[
 x^2q_0(x)\frac{\partial^2}{\partial x^2}
-\left({\partial y\over\partial r}(x,r)\right)
-+xq_1(x)\frac{\partial}{\partial r}\left({\partial y\over\partial
-x}(x,r)\right) +q_2(x){\partial y\over\partial r}(x,r)=
+\left(\frac{\partial y}{\partial r}(x,r)\right)
++xq_1(x)\frac{\partial}{\partial r}\left(\frac{\partial y}{\partial
+x}(x,r)\right) +q_2(x)\frac{\partial y}{\partial r}(x,r)=
 p'_0(r)x^r+p_0(r) x^r \ln x,
 \]
 which is equivalent to \eqref{eq:7.6.6}.
@@ -4492,7 +4491,7 @@ y_1(x)=y(x,r_1)=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n
 \]
 and
 \begin{equation} \label{eq:7.6.8}
-y_2(x)={\partial y\over\partial r}(x,r_1)=y_1(x)\ln
+y_2(x)=\frac{\partial y}{\partial r}(x,r_1)=y_1(x)\ln
 x+x^{r_1}\sum_{n=1}^\infty a_n'(r_1)x^n
 \end{equation}
 form a fundamental set of solutions of $Ly=0.$
@@ -5332,7 +5331,7 @@ $9x^2(1+x+x^2)y''+3x(1+7x+13x^2)y'+(1+4x+25x^2)y=0$
 Let $L$ and $y(x,r)$ be as in Exercises~\ref{exer:7.5.57} and
 \ref{exer:7.5.58}. Extend Theorem~\ref{thmtype:7.6.1} by showing that
 \[
-L\left({\partial y\over \partial
+L\left(\frac{\partial y}{\partial
 r}(x,r)\right)=p'_0(r)x^r+x^rp_0(r)\ln x.
 \]
 \item % (b)

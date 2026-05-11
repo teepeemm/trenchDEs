@@ -878,11 +878,11 @@ Exercise~\ref{exer:8.1.13} to find the Laplace transforms of the following
 functions.
 
 \begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a} $\dst{{\sin\omega t\over t}\quad(\omega>0)}$ &
-\part{b} $\dst{{\cos\omega t-1\over t}}\quad (\omega>0)$ &
+\part{a} $\dst{\frac{\sin\omega t}{t}\quad(\omega>0)}$ &
+\part{b} $\dst{\frac{\cos\omega t-1}{t}}\quad (\omega>0)$ &
 \part{c} $\dst{{e^{at}-e^{bt}\over t}}$\\[2\jot]
-\part{d} $\dst{{\cosh t-1\over t}}$ &
-\part{e} $\dst{{\sinh^2 t\over t}}$
+\part{d} $\dst{\frac{\cosh t-1}{t}}$ &
+\part{e} $\dst{\frac{\sinh^2 t}{t}}$
 \end{tabular}
 
 \item\label{exer:8.1.16}
@@ -1491,7 +1491,7 @@ inverse Laplace transform.
  Find the inverse Laplace transform.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $\dst{17 s-15\over(s^2-2s+5)(s^2+2s+10)}$ &
+\part{a} $\dst\frac{17 s-15}{(s^2-2s+5)(s^2+2s+10)}$ &
 \part{b} $\dst\frac{8s+56}{(s^2-6s+13)(s^2+2s+5)}$\\[10pt]
 \part{c} $\dst\frac{s+9}{(s^2+4s+5)(s^2-4s+13)}$ &
 \part{d} $\dst\frac{3s-2}{(s^2-4s+5)(s^2-6s+13)}$\\[10pt]
@@ -3137,7 +3137,7 @@ t,&0\le t<\dst{\frac{3\pi}{2}},\\[2\jot] \sin
 t,&t\ge\dst{\frac{3\pi}{2}},\end{array}\right.\qquad y(0)=0,\;  y'(0)=0}$
 
 \item\label{exer:8.5.9} \CGex $\dst{y''+4y= \left\{\begin{array}{cl} t,&0\le
-t<\dst{\pi \over2},\\[2\jot]\pi,&t\ge\dst{ \frac{\pi}{2}},
+t<\dst\frac{\pi }{2},\\[2\jot]\pi,&t\ge\dst{ \frac{\pi}{2}},
 \end{array}\right.\quad y(0)=0,\quad y'(0)=0}$
 
 \item\label{exer:8.5.10}
@@ -4848,44 +4848,41 @@ s^{n+1}}}$  & $(s > 0)$ \\
   ($n = \mbox{ integer } > 0$)  & {} & {} \\[15pt]
   $t^p,\;  p > -1$  &
 $\displaystyle{{\Gamma (p+1) \over s^{(p+1)}}}$ & $(s>0)$ \\[15pt]
-  $e^{at}$  &  $\displaystyle{{1 \over
-s-a}}$  & $(s > a)$ \\[15pt]
+  $e^{at}$  &  $\displaystyle{\frac{1 }{s-a}}$  & $(s > a)$ \\[15pt]
   $t^ne^{at}$  &  $\displaystyle{{n! \over
 (s-a)^{n+1}}}$  & $(s > 0)$ \\[15pt]
   ($n= \mbox{ integer } > 0$)  & {} & {} \\
   $\cos \omega t$  &
-$\displaystyle{{s \over s^2+\omega^2}}$  & $(s > 0)$ \\[15pt]
+$\displaystyle{\frac{s }{s^2+\omega^2}}$  & $(s > 0)$ \\[15pt]
  $\sin \omega t$  &
-$\displaystyle{{\omega \over s^2+\omega^2}}$  & $(s > 0)$ \\[15pt]
+$\displaystyle{\frac{\omega }{s^2+\omega^2}}$  & $(s > 0)$ \\[15pt]
   $e^{\lambda t} \cos \omega t$  &
-$\displaystyle{{s - \lambda \over (s-\lambda)^2+\omega^2}}$  & $(s >
+$\displaystyle{\frac{s - \lambda }{(s-\lambda)^2+\omega^2}}$  & $(s >
 \lambda)$ \\[15pt]
  $e^{\lambda t} \sin \omega t$  &
-$\displaystyle{{\omega \over (s-\lambda)^2+\omega^2}}$  & $(s >
+$\displaystyle{\frac{\omega }{(s-\lambda)^2+\omega^2}}$  & $(s >
 \lambda)$ \\[15pt]
-  $\cosh bt$  &  $\displaystyle{{s \over
-s^2-b^2}}$  & $(s > |b|)$\\[15pt]
-  $\sinh bt$  &  $\displaystyle{{b \over
-s^2-b^2}}$  & $(s > |b|)$ \\[15pt]
+  $\cosh bt$  &  $\displaystyle{\frac{s }{s^2-b^2}}$  & $(s > |b|)$\\[15pt]
+  $\sinh bt$  &  $\displaystyle{\frac{b }{s^2-b^2}}$  & $(s > |b|)$ \\[15pt]
  $t \cos \omega t$  &
-$\displaystyle{{s^2-\omega^2 \over (s^2+\omega^2)^2}}$  & $(s>0)$
+$\displaystyle{\frac{s^2-\omega^2 }{(s^2+\omega^2)^2}}$  & $(s>0)$
 \end{tabular}
 \end{center}
 
 \begin{center}
 \begin{tabular}{ccc}
   $t \sin \omega t$  &
-$\displaystyle{{2\omega s \over (s^2+\omega^2)^2}}$  & $(s>0)$\\[15pt]
+$\displaystyle{\frac{2\omega s }{(s^2+\omega^2)^2}}$  & $(s>0)$\\[15pt]
   $\sin \omega t -\omega t\cos  \omega t $
  & $\displaystyle{\frac{2\omega^3}{(s^2+\omega^2)^2}}$ & $(s>0)$\\[15pt]
   $\omega t - \sin  \omega t $  &
-$\displaystyle{{\omega^3 \over s^2(s^2+\omega^2)^2}}$ & $(s>0)$ \\[15pt]
-  $\displaystyle{{1 \over t} \sin  \omega t }$
-& $\displaystyle{\arctan \left({\omega \over s}\right)}$ & $(s>0)$ \\[15pt]
+$\displaystyle{\frac{\omega^3 }{s^2(s^2+\omega^2)^2}}$ & $(s>0)$ \\[15pt]
+  $\displaystyle{\frac{1 }{t} \sin  \omega t }$
+& $\displaystyle{\arctan \left(\frac{\omega }{s}\right)}$ & $(s>0)$ \\[15pt]
   $e^{at}f(t)$  &  $F(s-a)$  & \\[15pt]
   $t^kf(t)$  &
 $\displaystyle{{(-1)^kF^{(k)}(s)}}$  &  \\[15pt]
-  $f(\omega t)$  &  $\displaystyle{\frac{1}{\omega} F\left({s \over \omega}\right),  \quad \omega > 0}$ &  \\[15pt]
+  $f(\omega t)$  &  $\displaystyle{\frac{1}{\omega} F\left(\frac{s }{\omega}\right),  \quad \omega > 0}$ &  \\[15pt]
   $u(t-\tau)$  &
 $\displaystyle{{e^{-\tau s} \over s}}$ & $(s>0)$  \\[15pt]
   $u(t-\tau)f(t-\tau)\, (\tau > 0)$  &

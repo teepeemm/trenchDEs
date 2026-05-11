@@ -1725,7 +1725,7 @@ $(x+1)(x-2)y'+y=0, \quad y(1)=-3$
 \item\label{exer:2.2.24} Solve $\dst{y'={(1+y^2)
 \over (1+x^2)}}$ explicitly.
 \hint{Use the identity
-$\dst{\tan(A+B)={\tan A+\tan B\over1-\tan A\tan B}}$.}
+$\dst{\tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B}}$.}
 
 \item\label{exer:2.2.25} Solve $\dst
 {y'\sqrt{1-x^2}+\sqrt{1-y^2}=0}$ explicitly.
@@ -1733,7 +1733,7 @@ $\dst{\tan(A+B)={\tan A+\tan B\over1-\tan A\tan B}}$.}
 $\sin(A-B)=\sin A\cos B-\cos A\sin B$.}
 
 \item\label{exer:2.2.26}
-Solve $\dst{y'={\cos x\over \sin y},\quad y (\pi)=\frac{\pi}{2}}$
+Solve $\dst{y'=\frac{\cos x}{\sin y},\quad y (\pi)=\frac{\pi}{2}}$
 explicitly. \hint{Use the identity $\cos(x+\pi/2)=-\sin x$ and the
 periodicity of the cosine.}
 
@@ -2037,11 +2037,11 @@ case where $a>-\infty$.
 \begin{example}\label{example:2.3.1}
 \rm   Consider  the initial value problem
 \begin{equation} \label{eq:2.3.3}
-y'={x^2-y^2 \over 1+x^2+y^2}, \quad y(x_0)=y_0.
+y'=\frac{x^2-y^2 }{1+x^2+y^2}, \quad y(x_0)=y_0.
 \end{equation}
 Since
 \[
-f(x,y)  = {x^2-y^2 \over 1+x^2+y^2}\mbox{\quad and \quad}
+f(x,y)  = \frac{x^2-y^2 }{1+x^2+y^2}\mbox{\quad and \quad}
 f_y(x,y)  =  -{2y(1+2x^2)\over (1+x^2+y^2)^2}
 \]
 are continuous for all $(x,y)$, Theorem~\ref{thmtype:2.3.1} implies that
@@ -2054,12 +2054,12 @@ $x_0$.
 \begin{example}\label{example:2.3.2}
 \rm  Consider  the initial value problem
 \begin{equation} \label{eq:2.3.4}
-y'={x^2-y^2 \over x^2+y^2}, \quad y(x_0)=y_0.
+y'=\frac{x^2-y^2 }{x^2+y^2}, \quad y(x_0)=y_0.
 \end{equation}
 Here
 \[
-f(x,y)  =  {x^2-y^2 \over x^2+y^2}\mbox{\quad and \quad}
-f_y(x,y)  =  \dst -{4x^2y \over (x^2+y^2)^2}
+f(x,y)  =  \frac{x^2-y^2 }{x^2+y^2}\mbox{\quad and \quad}
+f_y(x,y)  =  \dst -\frac{4x^2y }{(x^2+y^2)^2}
 \]
 are continuous everywhere except at $(0,0)$. If $(x_0,y_0)
 \ne(0,0)$, there's an open rectangle $R$ that contains
@@ -2096,7 +2096,7 @@ y'=2xy^2
 \end{equation}
 are
  \[
-y\equiv0\mbox{\quad and \quad} y=-{1 \over x^2+c},
+y\equiv0\mbox{\quad and \quad} y=-\frac{1 }{x^2+c},
 \]
 where $c$ is an arbitrary constant. In particular, this implies that
 no solution of \eqref{eq:2.3.6} other than $y\equiv0$ can equal zero for
@@ -2152,7 +2152,7 @@ implies that \eqref{eq:2.3.8} has a solution for every $(x_0,y_0)$.
 
 \solutionpart{b} Here
 \[
-f_y(x,y) = {4 \over 3}xy^{-3/5}
+f_y(x,y) = \frac{4 }{3}xy^{-3/5}
 \]
 is continuous for all $(x,y)$ with $y\ne 0$. Therefore, if $y_0\ne0$
 there's an open rectangle on which both $f$ and $f_y$ are
@@ -2167,7 +2167,7 @@ $y_0=0$.
 \rm  Example~\ref{example:2.3.5} leaves open the possibility  that the
 initial value problem
 \begin{equation} \label{eq:2.3.9}
-y'={10 \over 3}xy^{2/5}, \quad y(0)=0
+y'=\frac{10 }{3}xy^{2/5}, \quad y(0)=0
 \end{equation}
 has more than one solution on every open interval that contains $x_0=0$.  Show
 that this is true.
@@ -2177,7 +2177,7 @@ that this is true.
 By inspection, $y\equiv0$ is a solution of the
 differential equation
 \begin{equation} \label{eq:2.3.10}
-y'={10 \over 3} xy ^{2/5}.
+y'=\frac{10 }{3} xy ^{2/5}.
 \end{equation}
  Since $y\equiv0$ satisfies the initial condition $y(0)=0$,
 it's a solution of \eqref{eq:2.3.9}.
@@ -2186,7 +2186,7 @@ Now suppose  $y$ is a solution of \eqref{eq:2.3.10} that isn't
 identically zero.
  Separating variables in \eqref{eq:2.3.10} yields
 \[
- y^{-2/5}y'={10 \over 3}x
+ y^{-2/5}y'=\frac{10 }{3}x
 \]
 on any open interval where $y$ has no zeros.
  Integrating this and rewriting the arbitrary constant as $5c/3$ yields
@@ -2203,7 +2203,7 @@ derivation of \eqref{eq:2.3.11} is legitimate only on open intervals where $y$
 has no zeros. However, \eqref{eq:2.3.11} actually defines $y$ for all $x$,
 and differentiating \eqref{eq:2.3.11} shows that
 \[
-y'={10 \over 3}x(x^2+c)^{2/3}={10 \over 3}xy^{2/5},\,-\infty<x<\infty.
+y'=\frac{10 }{3}x(x^2+c)^{2/3}=\frac{10 }{3}xy^{2/5},\,-\infty<x<\infty.
 \]
 Therefore \eqref{eq:2.3.11} satisfies \eqref{eq:2.3.10} on
 $(-\infty,\infty)$
@@ -2235,7 +2235,7 @@ differ on every interval  containing $x_{0}=0$}
 \rm  From Example~\ref{example:2.3.5}, the initial value
 problem
 \begin{equation} \label{eq:2.3.12}
-y'={10 \over 3}xy^{2/5}, \quad y(0)=-1
+y'=\frac{10 }{3}xy^{2/5}, \quad y(0)=-1
 \end{equation}
  has a  unique solution on some open interval that contains $x_0=0$.
 Find a solution and determine the largest open interval $(a,b)$ on
@@ -2300,7 +2300,7 @@ interval}
 \rm  From Example~\ref{example:2.3.5}, the initial value
 problem
 \begin{equation} \label{eq:2.3.14}
-y'={10 \over 3}xy^{2/5}, \quad y(0)=1
+y'=\frac{10 }{3}xy^{2/5}, \quad y(0)=1
 \end{equation}
  has a unique solution on some open interval that contains $x_0=0$.
 Find the solution and determine the largest open interval on which it's
@@ -2342,7 +2342,7 @@ $x_0$.
 x}}$
 % &  
 \item\label{exer:2.3.2}\vspace*{10pt} $\dst
-{y'={e^x+y \over x^2+y^2}}$
+{y'=\frac{e^x+y }{x^2+y^2}}$
 %\end{tabular}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -2385,7 +2385,7 @@ x(y^2-1)^{2/3}$
 
 
 \item\label{exer:2.3.13}
-$\dst {y'={\tan y \over x-1}}$
+$\dst {y'=\frac{\tan y }{x-1}}$
 
 \item\label{exer:2.3.14}
 Apply Theorem~\ref{thmtype:2.3.1} to the initial value problem
@@ -2409,7 +2409,7 @@ is a solution of the initial value problem
 y'=\frac{10}{3}xy^{2/5}, \quad y(0)=-1
 \]
 on $(-\infty,\infty)$. \hint{You'll need the definition \[
-y'(\overline{x}) = \lim_{x \to \overline{x}} {y(x)-y(\overline{x})
+y'(\overline{x}) = \lim_\frac{x \to }{line{x}} {y(x)-y(\overline{x})
 \over x-\overline{x}} \] to verify that $y$ satisfies the differential
 equation at $\overline{x} = \pm 1$.}
 
@@ -2924,7 +2924,7 @@ equation.
 % TODO 1--4 two columns
 \item\label{exer:2.4.1} $y'+y=y^2$
 %&
-\item\label{exer:2.4.2} $\dst {7xy'-2y=-{x^2 \over y^6}}$
+\item\label{exer:2.4.2} $\dst {7xy'-2y=-\frac{x^2 }{y^6}}$
 %\end{tabular}
 
 
@@ -2932,7 +2932,7 @@ equation.
 \item\label{exer:2.4.3} $x^2y'+2y=2e^{1/x}y^{1/2}$
 %&
  \item\label{exer:2.4.4} \vspace*{-5pt}$\dst {(1+x^2)y'+2xy
-={1 \over (1+x^2)y}}$
+=\frac{1 }{(1+x^2)y}}$
 %\end{tabular}
 
 \exercisetext{In Exercises~\ref{exer:2.4.5} and \ref{exer:2.4.6} find all
@@ -3009,7 +3009,7 @@ the equation explicitly.}
  \item\label{exer:2.4.15} $y'=\dst\frac{y+x}{x}$
 %& \vspace*{5pt}
 \item\label{exer:2.4.16}
-$y'=\dst{y^2+2xy \over x^2}$
+$y'=\dst\frac{y^2+2xy }{x^2}$
 %\end{tabular}
 
 
@@ -3050,7 +3050,7 @@ the initial value problem.}
  $xyy'+x^2+y^2=0, \quad y(1)=2$
 
 \item\label{exer:2.4.25}
-$y'=\dst{y^2-3xy-5x^2 \over x^2}, \quad y(1)=-1$
+$y'=\dst\frac{y^2-3xy-5x^2 }{x^2}, \quad y(1)=-1$
 
 \item\label{exer:2.4.26}
 $x^2y'=2x^2+y^2+4xy, \quad y(1)=1$
@@ -3063,7 +3063,7 @@ given homogeneous equation implicitly.}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 % TODO 28--33 two columns
-\item\label{exer:2.4.28} $y'=\dst{x+y \over x-y}$
+\item\label{exer:2.4.28} $y'=\dst\frac{x+y }{x-y}$
 %&
 \item\label{exer:2.4.29}\vspace*{13pt} $(y'x-y)(\ln |y|-\ln |x|)=x$
 %\end{tabular}
@@ -3071,17 +3071,17 @@ given homogeneous equation implicitly.}
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \item\label{exer:2.4.30} $y'=\dst\frac{y^3+2xy^2+x^2y+x^3}{x(y+x)^2}$ 
 %&
-\item\label{exer:2.4.31}  $y'=\dst{x+2y \over 2x+y}$
+\item\label{exer:2.4.31}  $y'=\dst\frac{x+2y }{2x+y}$
 %\end{tabular}
 
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:2.4.32}  $y'=\dst{y \over y-2x}$
+\item\label{exer:2.4.32}  $y'=\dst\frac{y }{y-2x}$
 %&
 \item\label{exer:2.4.33} $y'=\dst\frac{xy^2+2y^3}{x^3+x^2y+xy^2}$
 %\end{tabular}
 
-\item\label{exer:2.4.34} $y'=\dst{x^3+x^2y+3y^3 \over x^3+3xy^2}$
+\item\label{exer:2.4.34} $y'=\dst\frac{x^3+x^2y+3y^3 }{x^3+3xy^2}$
 
 
 \item\label{exer:2.4.35} \Lex
@@ -3157,7 +3157,7 @@ as $x\to\infty$? (Again, assume that $x_0>0$ and $y_0>0$.)
 \item % (a)
 Solve the equation
 \[
-y'={2y^2-xy+2x^2 \over xy+2x^2}
+y'=\frac{2y^2-xy+2x^2 }{xy+2x^2}
 \eqno{\rm(A)}
 \]
 implicitly.
@@ -3175,7 +3175,7 @@ $y(x_0)=y_0$.
 \item\label{exer:2.4.38} \Lex
 Follow the instructions of Exercise~\ref{exer:2.4.37} for the equation
 \[
-y'={xy+x^2+y^2 \over xy}.
+y'=\frac{xy+x^2+y^2 }{xy}.
 \]
 
 \item\label{exer:2.4.39} \Lex
@@ -3188,11 +3188,11 @@ Why?
 \item\label{exer:2.4.40}
 Prove:  If $ad-bc\ne 0$, the equation
 \[
-y'={ax+by+\alpha \over cx+dy+\beta}
+y'=\frac{ax+by+\alpha }{cx+dy+\beta}
 \]
 can be transformed into the homogeneous nonlinear equation
 \[
-{dY \over dX}={aX+bY \over cX+dY}
+\frac{dY }{dX}=\frac{aX+bY }{cX+dY}
 \]
 by the substitution $x=X-X_0,\  y=Y-Y_0$,
 where $X_0$ and $Y_0$ are suitably chosen constants.
@@ -3203,13 +3203,13 @@ given equation implicitly.}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 % TODO 41--42 two columns
-\item\label{exer:2.4.41} $y'=\dst{-6x+y-3 \over 2x-y-1}$
+\item\label{exer:2.4.41} $y'=\dst\frac{-6x+y-3 }{2x-y-1}$
 %& 
-\item\label{exer:2.4.42}\vspace*{10pt} $y'=\dst{2x+y+1 \over x+2y-4}$
+\item\label{exer:2.4.42}\vspace*{10pt} $y'=\dst\frac{2x+y+1 }{x+2y-4}$
 %\end{tabular}
 
 \item\label{exer:2.4.43}
-$y'=\dst{-x+3y-14 \over x+y-2}$
+$y'=\dst\frac{-x+3y-14 }{x+y-2}$
 
 \exercisetext{In Exercises~\ref{exer:2.4.44}--\ref{exer:2.4.51} find
 a function $y_1$ such that the substitution $y=uy_1$ transforms
@@ -3231,7 +3231,7 @@ explicitly.}
 %\end{tabular}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:2.4.48} $y'=\dst{y^2+y\tan x+\tan^2 x\over\sin^2x}$ 
+\item\label{exer:2.4.48} $y'=\dst\frac{y^2+y\tan x+\tan^2 x}{\sin^2x}$ 
 %&
 \item\label{exer:2.4.49} $x(\ln x)^2y'=-4(\ln x)^2+y\ln x+y^2$
 %\end{tabular}
@@ -3710,7 +3710,7 @@ is an implicit solution of \eqref{eq:2.5.21}. \bbox
 Attempting to apply our procedure to an equation that isn't  exact
 will lead to failure in  Step 4, since the function
 \[
- N-{\partial G\over\partial y}
+ N-\frac{\partial G}{\partial y}
 \]
 won't be independent of $x$ if $M_y\ne N_x$
 (Exercise~\ref{exer:2.5.31}), and therefore
@@ -3949,11 +3949,11 @@ Suppose $M,N,$ and their partial derivatives are continuous on
 an open rectangle
 $R$, and $G$ is an antiderivative of $M$ with respect to $x$; that is,
 \[
-{\partial G\over\partial x}=M.
+\frac{\partial G}{\partial x}=M.
 \]
 Show that if $M_y\ne N_x$ in $R$ then the function
 \[
- N-{\partial  G\over\partial y}
+ N-\frac{\partial  G}{\partial y}
 \]
 is not independent of $x$.
 
