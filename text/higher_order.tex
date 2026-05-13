@@ -771,23 +771,21 @@ and only if at least one of the functions $y_1$, $y_2$, \dots, $y_n$ can be
 written as a linear combination of the others on $(a,b)$.
 
 \exercisetext{Take the following as a hint in
-Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.19}:
-
-\color{blue}\it
+Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.19}:\\
+\color{blue}
  By the definition of determinant,
 \[
-\left|\begin{array}{cccc}
-a_{11}&a_{12}&\cdots&a_{1n}\\[2\jot]
-a_{21}&a_{22}&\cdots&a_{2n}\\[2\jot]
-\vdots&\vdots&\ddots&\vdots\\[2\jot]
-a_{n1}&a_{n2}&\cdots&a_{nn}\end{array}\right|
+\begin{vmatrix}
+a_{11}&a_{12}&\cdots&a_{1n}\\
+a_{21}&a_{22}&\cdots&a_{2n}\\
+\vdots&\vdots&\ddots&\vdots\\
+a_{n1}&a_{n2}&\cdots&a_{nn}
+\end{vmatrix}
 =\sum\pm a_{1i_1}a_{2i_2},\dots,a_{ni_n},
 \]
 where the sum is over all permutations $(i_1,i_2,\dots,i_n)$ of
 $(1,2,\dots, n)$ and the choice of $+$ or $-$ in each term depends
 only on the permutation associated with that term.}
-\color{black}\rm
-
 
 \item\label{exer:9.1.17}
 Prove:  If
@@ -1551,17 +1549,15 @@ Find a fundamental set of solutions of the given equation, and verify
 that it's a fundamental set by evaluating  its Wronskian
 at $x=0$.
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\begin{enumext*}[label=\alph*,font=\bfseries,wrap-label={(#1)},labelsep=1em,columns=2]
-% TODO bug https://github.com/pablgonz/enumext/issues/5
-\setcounter{enumXvii}{0}
+\begin{alist}[columns=2]
+% TODO horizontal
 \item $(D-1)^2(D-2)y=0$
 \item $(D^2+4)(D-3)y=0$
 \item $(D^2+2D+2)(D-1)y=0$
 \item $D^3(D-1)y=0$
 \item $(D^2-1)(D^2+1)y=0$
 \item $(D^2-2D+2)(D^2+1)y=0$
-\end{enumext*}
+\end{alist}
 
 \exercisetext{In Exercises~\ref{exer:9.2.29}--\ref{exer:9.2.38} find a
 fundamental set of solutions.}
