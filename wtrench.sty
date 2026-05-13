@@ -8,14 +8,14 @@
 \pagestyle{headings}
 
 \newtheorem{theorem}{\sc\bf Theorem}
-\newtheorem{example}{\sc\bf Example}
+\newtheorem{example}{\scshape\bfseries Example}
 
 \def\R{\mathbb R}
 \def\E{\mathbb E}
 
-\def\endproof{{\hfill \vbox{\hrule\hbox{
-   \vrule height1.3ex\hskip0.8ex\vrule}\hrule
-  }}\par}
+%\def\endproof{{\hfill \vbox{\hrule\hbox{
+%   \vrule height1.3ex\hskip0.8ex\vrule}\hrule
+%  }}\par}
 
 \newcommand{\markonleft}[1] {\hspace*{1em}{\rm Chapter \thechapter}
 {#1 }\hfill}
@@ -52,7 +52,7 @@
 \newcommand{\exer}[1]{\par\noindent{\bf #1}.}
 \newcommand{\answer}[1]{\;{\bf $\mathbf{#1}$ (p.~\pageref{exer:#1})}\;}
 \newcommand{\df}{=_{\mbox{\small df}}}
-\newcommand{\proof}{\noindent{\sc\bf Proof}\quad }
+%\newcommand{\proof}{\noindent{\sc\bf Proof}\quad }
 \newcommand{\bbox}{\phantom{1}\hfill{\rule{6pt}{6pt}}}
 \newcommand{\helpbox}{\vspace*{-20pt}}
 \newcommand{\topfig}[1]{\newpage\mbox{}\newline\vspace*{#1pc}}
@@ -60,7 +60,7 @@
 \vskip-6pt\hskip-\parindent}
 \newcommand{\twotab} {\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}}
 \newcommand{\threetab} {\begin{tabular}[t]{@{}p{112pt}@{}p{122pt}@{}p{112pt}}}
-\newcommand{\solution}{\vskip10pt\noindent{\sc\bf Solution }\  }
+\newcommand{\solution}{\vskip10pt\noindent{\scshape\bfseries Solution }\  }
 
 \newcounter{place}
 \newcommand{\exercisetext}[1]{\setcounter{place}
@@ -82,6 +82,7 @@ CHAPTER~\thechapter}\\\bigskip{\Huge\bf
 %\bigskip{\centerline{\color{red}\large\bf\thesection\
 %Exercises}}\noindent\mbox{}\hrulefill\mbox{}\label{exerstart:\thesection}\vskip6pt\noindent}
 
+\usepackage{enumext}
 
 \newcommand{\exercises}{%
 \bigskip{\centerline{\color{red}\large\bf\thesection\
@@ -94,11 +95,27 @@ Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\these
 \labelsep 12pt\leftmargin 28pt
 \itemsep 0pt\usecounter{exercise}}}{\end{list}}
 
-\newcounter{lcal}
-\newenvironment{alist}{\begin{list}{\bf (\alph{lcal})}
-{\topsep 0pt\partopsep 0pt\labelwidth 14pt
-\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-\usecounter{lcal}}}{\end{list}}
+%\newcounter{lcal}
+%\newenvironment{alist}{\begin{list}{\bf (\alph{lcal})}
+%{\topsep 0pt\partopsep 0pt\labelwidth 14pt
+%\labelsep 8pt\leftmargin 22pt\itemsep 0pt
+%\usecounter{lcal}}}{\end{list}}
+\newenvironment{alist}[1][]{%
+ \begin{enumext}[
+  label=\alph*,
+  font=\bfseries,
+  wrap-label*={(##1)},
+  topsep=0pt,
+  partopsep=0pt,
+  itemsep=0pt,
+  labelwidth=14pt,
+  labelsep=8pt,
+%  leftmargin=22pt,
+  #1
+ ]%
+}{%
+ \end{enumext}%
+}
 
 \newenvironment{Alist}{\begin{list}{\bf (\Alph{lcal})}
 {\topsep 0pt\partopsep 0pt\labelwidth 14pt

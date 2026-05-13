@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report>
+  <buildInformation>
+    <releaseDetails id="core" version="1.30.1" buildDate="2026-04-15T20:39:00-05:00"></releaseDetails>
+    <releaseDetails id="validation-model" version="1.30.1" buildDate="2026-04-16T08:24:00-05:00"></releaseDetails>
+    <releaseDetails id="apps" version="1.30.1" buildDate="2026-04-17T13:26:00-05:00"></releaseDetails>
+  </buildInformation>
+  <jobs>
+    <job>
+      <item size="18115788">
+        <name>/Users/timothyprescott/Documents/programming/git/trenchDEs/TRENCH_DIFFEQ.pdf</name>
+      </item>
+      <validationReport jobEndStatus="normal" profileName="PDF/UA-2 + Tagged PDF validation profile" statement="PDF file is not compliant with Validation Profile requirements." isCompliant="false">
+        <details passedRules="1725" failedRules="2" passedChecks="5607890" failedChecks="54">
+          <rule specification="ISO 32005:2023" clause="Table 5. Aside-Caption" testNumber="1" status="failed" failedChecks="23" tags="structure,caption">
+            <description>&lt;Aside&gt; shall contain at most one &lt;Caption&gt;</description>
+            <object>SEAside</object>
+            <test>kidsStandardTypes.split('&amp;').filter(elem =&gt; elem == 'Caption').length &lt;= 1</test>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[4](27380 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[6](27684 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[13](34120 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[15](35317 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[36](54581 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[37](55644 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[38](56370 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[39](56416 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[40](56569 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[47](73036 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[61](93194 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[62](96456 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[71](102535 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[78](116116 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[79](116254 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+          </rule>
+          <rule specification="ISO 14289-2:2024" clause="8.2.5.27" testNumber="1" status="failed" failedChecks="31" tags="structure,caption">
+            <description>When present, the Caption element shall be the first or the last child of the structure element</description>
+            <object>PDStructElem</object>
+            <test>kidsStandardTypes.indexOf('&amp;Caption&amp;') &lt; 0</test>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)</context>
+              <errorMessage>Structure element 54048 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)/K[0](54049 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 54049 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)</context>
+              <errorMessage>Structure element 97096 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)/K[0](97097 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 97097 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)</context>
+              <errorMessage>Structure element 115871 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)/K[0](115872 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 115872 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)</context>
+              <errorMessage>Structure element 118719 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)/K[0](118720 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 118720 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)</context>
+              <errorMessage>Structure element 118742 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)/K[0](118743 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 118743 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120433 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)/K[0](120434 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120434 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120569 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)/K[0](120570 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120570 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120598 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)/K[0](120599 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120599 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[4](27380 0 obj SEAside float)</context>
+              <errorMessage>Structure element 27380 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[6](27684 0 obj SEAside float)</context>
+              <errorMessage>Structure element 27684 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[13](34120 0 obj SEAside float)</context>
+              <errorMessage>Structure element 34120 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[15](35317 0 obj SEAside float)</context>
+              <errorMessage>Structure element 35317 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[36](54581 0 obj SEAside float)</context>
+              <errorMessage>Structure element 54581 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[37](55644 0 obj SEAside float)</context>
+              <errorMessage>Structure element 55644 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[38](56370 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56370 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[39](56416 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56416 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[40](56569 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56569 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[47](73036 0 obj SEAside float)</context>
+              <errorMessage>Structure element 73036 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[61](93194 0 obj SEAside float)</context>
+              <errorMessage>Structure element 93194 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[62](96456 0 obj SEAside float)</context>
+              <errorMessage>Structure element 96456 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[71](102535 0 obj SEAside float)</context>
+              <errorMessage>Structure element 102535 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[78](116116 0 obj SEAside float)</context>
+              <errorMessage>Structure element 116116 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[79](116254 0 obj SEAside float)</context>
+              <errorMessage>Structure element 116254 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+          </rule>
+        </details>
+      </validationReport>
+      <validationReport jobEndStatus="normal" profileName="WTPDF 1.0 Accessibility validation profile" statement="PDF file is not compliant with Validation Profile requirements." isCompliant="false">
+        <details passedRules="1721" failedRules="2" passedChecks="5607886" failedChecks="54">
+          <rule specification="WTPDF1.0" clause="8.2.5.27" testNumber="1" status="failed" failedChecks="31" tags="structure,caption">
+            <description>When present, the Caption element shall be the first or the last child of the structure element</description>
+            <object>PDStructElem</object>
+            <test>kidsStandardTypes.indexOf('&amp;Caption&amp;') &lt; 0</test>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)</context>
+              <errorMessage>Structure element 54048 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)/K[0](54049 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 54049 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)</context>
+              <errorMessage>Structure element 97096 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)/K[0](97097 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 97097 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)</context>
+              <errorMessage>Structure element 115871 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)/K[0](115872 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 115872 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)</context>
+              <errorMessage>Structure element 118719 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)/K[0](118720 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 118720 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)</context>
+              <errorMessage>Structure element 118742 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)/K[0](118743 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 118743 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120433 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)/K[0](120434 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120434 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120569 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)/K[0](120570 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120570 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120598 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)/K[0](120599 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120599 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[4](27380 0 obj SEAside float)</context>
+              <errorMessage>Structure element 27380 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[6](27684 0 obj SEAside float)</context>
+              <errorMessage>Structure element 27684 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[13](34120 0 obj SEAside float)</context>
+              <errorMessage>Structure element 34120 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[15](35317 0 obj SEAside float)</context>
+              <errorMessage>Structure element 35317 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[36](54581 0 obj SEAside float)</context>
+              <errorMessage>Structure element 54581 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[37](55644 0 obj SEAside float)</context>
+              <errorMessage>Structure element 55644 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[38](56370 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56370 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[39](56416 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56416 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[40](56569 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56569 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[47](73036 0 obj SEAside float)</context>
+              <errorMessage>Structure element 73036 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[61](93194 0 obj SEAside float)</context>
+              <errorMessage>Structure element 93194 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[62](96456 0 obj SEAside float)</context>
+              <errorMessage>Structure element 96456 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[71](102535 0 obj SEAside float)</context>
+              <errorMessage>Structure element 102535 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[78](116116 0 obj SEAside float)</context>
+              <errorMessage>Structure element 116116 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[79](116254 0 obj SEAside float)</context>
+              <errorMessage>Structure element 116254 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+          </rule>
+          <rule specification="ISO 32005:2023" clause="Table 5. Aside-Caption" testNumber="1" status="failed" failedChecks="23" tags="structure,caption">
+            <description>&lt;Aside&gt; shall contain at most one &lt;Caption&gt;</description>
+            <object>SEAside</object>
+            <test>kidsStandardTypes.split('&amp;').filter(elem =&gt; elem == 'Caption').length &lt;= 1</test>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[4](27380 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[6](27684 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[13](34120 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[15](35317 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[36](54581 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[37](55644 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[38](56370 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[39](56416 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[40](56569 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[47](73036 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[61](93194 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[62](96456 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[71](102535 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[78](116116 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[79](116254 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+          </rule>
+        </details>
+      </validationReport>
+      <validationReport jobEndStatus="normal" profileName="WTPDF 1.0 Reuse validation profile" statement="PDF file is not compliant with Validation Profile requirements." isCompliant="false">
+        <details passedRules="1708" failedRules="2" passedChecks="5129311" failedChecks="54">
+          <rule specification="WTPDF1.0" clause="8.2.5.27" testNumber="1" status="failed" failedChecks="31" tags="structure,caption">
+            <description>When present, the Caption element shall be the first or the last child of the structure element</description>
+            <object>PDStructElem</object>
+            <test>kidsStandardTypes.indexOf('&amp;Caption&amp;') &lt; 0</test>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)</context>
+              <errorMessage>Structure element 54048 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)/K[0](54049 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 54049 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)</context>
+              <errorMessage>Structure element 97096 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)/K[0](97097 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 97097 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)</context>
+              <errorMessage>Structure element 115871 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)/K[0](115872 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 115872 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)</context>
+              <errorMessage>Structure element 118719 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)/K[0](118720 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 118720 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)</context>
+              <errorMessage>Structure element 118742 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)/K[0](118743 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 118743 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120433 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)/K[0](120434 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120434 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120569 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)/K[0](120570 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120570 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)</context>
+              <errorMessage>Structure element 120598 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)/K[0](120599 0 obj SEPart text-unit)</context>
+              <errorMessage>Structure element 120599 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[4](27380 0 obj SEAside float)</context>
+              <errorMessage>Structure element 27380 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[6](27684 0 obj SEAside float)</context>
+              <errorMessage>Structure element 27684 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[13](34120 0 obj SEAside float)</context>
+              <errorMessage>Structure element 34120 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[15](35317 0 obj SEAside float)</context>
+              <errorMessage>Structure element 35317 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[36](54581 0 obj SEAside float)</context>
+              <errorMessage>Structure element 54581 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[37](55644 0 obj SEAside float)</context>
+              <errorMessage>Structure element 55644 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[38](56370 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56370 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[39](56416 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56416 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[40](56569 0 obj SEAside float)</context>
+              <errorMessage>Structure element 56569 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[47](73036 0 obj SEAside float)</context>
+              <errorMessage>Structure element 73036 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[61](93194 0 obj SEAside float)</context>
+              <errorMessage>Structure element 93194 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[62](96456 0 obj SEAside float)</context>
+              <errorMessage>Structure element 96456 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[71](102535 0 obj SEAside float)</context>
+              <errorMessage>Structure element 102535 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[78](116116 0 obj SEAside float)</context>
+              <errorMessage>Structure element 116116 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[79](116254 0 obj SEAside float)</context>
+              <errorMessage>Structure element 116254 0 obj contains Caption as its 2 child instead of first or last one</errorMessage>
+            </check>
+          </rule>
+          <rule specification="ISO 32005:2023" clause="Table 5. Aside-Caption" testNumber="1" status="failed" failedChecks="23" tags="structure,caption">
+            <description>&lt;Aside&gt; shall contain at most one &lt;Caption&gt;</description>
+            <object>SEAside</object>
+            <test>kidsStandardTypes.split('&amp;').filter(elem =&gt; elem == 'Caption').length &lt;= 1</test>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[10](47614 0 obj SESect Sect)/K[10](52902 0 obj SESect Sect)/K[15](54048 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[14](92251 0 obj SESect Sect)/K[13](96976 0 obj SESect Sect)/K[4](97096 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[10](114769 0 obj SESect Sect)/K[23](115871 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[39](118719 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[11](117126 0 obj SESect Sect)/K[40](118742 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[22](120433 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[26](120569 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[16](110765 0 obj SESect Sect)/K[12](119375 0 obj SESect Sect)/K[27](120598 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[4](27380 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[6](27684 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[13](34120 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[15](35317 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[36](54581 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[37](55644 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[38](56370 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[39](56416 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[40](56569 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[47](73036 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[61](93194 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[62](96456 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[71](102535 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[78](116116 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+            <check status="failed">
+              <context>root/document[0]/StructTreeRoot[0](5 0 obj PDStructTreeRoot)/K[0](22 0 obj SEDocument Document)/K[2130](24072 0 obj SESect figures)/K[79](116254 0 obj SEAside float)</context>
+              <errorMessage>&lt;Aside&gt; contains more than one &lt;Caption&gt;</errorMessage>
+            </check>
+          </rule>
+        </details>
+      </validationReport>
+      <duration start="1778633397329" finish="1778633426205">00:00:28.876</duration>
+    </job>
+  </jobs>
+  <batchSummary totalJobs="1" failedToParse="0" encrypted="0" outOfMemory="0" veraExceptions="0">
+    <validationReports compliant="0" nonCompliant="1" failedJobs="0">1</validationReports>
+    <featureReports failedJobs="0">0</featureReports>
+    <repairReports failedJobs="0">0</repairReports>
+    <duration start="1778633397065" finish="1778633426305">00:00:29.240</duration>
+  </batchSummary>
+</report>

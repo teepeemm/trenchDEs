@@ -47,8 +47,6 @@ the behavior of the solutions.
 SECTION~4.5 deals with applications of differential
 equations to curves.
 
-\vspace*{2in}
-\centerline{129}
 \newpage
 
 \section{Growth and Decay}
@@ -247,22 +245,23 @@ deposit of $Q_0=100$ (dollars), at an annual interest rate of 6\%.
 
 \medskip
 
-\begin{newtable} \label{table:4.1.1}
-{Table \label{table:4.1.1} The effect of
-compound interest}
-\begin{center}
-\[\begin{array}{|c|c|}\hline
-n & \dst\$100 \left(1+\frac{.06}{n}\right)^{5n}\\
-\hbox{(number of compoundings} &   \hbox{(value in dollars}\\
-\hbox{per year)} &\hbox{after 5 years)}\\
-\hline
+\begin{newtable}% \label{table:4.1.1}
+{\label{table:4.1.1}The effect of compound interest}\\
+\centering
+\begin{tabular}{S[table-format=3]c}\toprule
+%\[\begin{array}{|c|c|}\hline
+$n$ & $\$100 \left(1+\dfrac{.06}{n}\right)^{5n}$\\
+{(number of compoundings} &  (value in dollars\\
+{per year)} & after 5 years)\\\midrule
+%\hline
 1 & \$133.82 \\
 2 & \$134.39 \\
 4 & \$134.68 \\
 8 & \$134.83 \\
-364 & \$134.98 \\\hline
-\end{array}\]
-\end{center}
+364 & \$134.98 \\\bottomrule
+%\end{array}\]
+\end{tabular}
+%\end{center}
 \end{newtable}
 
 \medskip
@@ -278,11 +277,11 @@ that
 \lim_{n\to\infty} \left(1+\frac{r}{n}\right)^n=e^r,
 \]
  this yields
-\[\begin{array}{rl}
-Q(t) & \dst=\lim_{n\to\infty} Q_0\left(1+\frac{r}{n}\right)^{nt}=Q_0 \left[
-\lim_{n\to\infty} \left(1+\frac{r}{n}\right)^n\right]^t \\[12pt]
+\begin{align*}
+Q(t) & =\lim_{n\to\infty} Q_0\left(1+\frac{r}{n}\right)^{nt}
+=Q_0 \left[\lim_{n\to\infty} \left(1+\frac{r}{n}\right)^n\right]^t \\
 &=Q_0e^{rt}.
-\end{array}\]
+\end{align*}
 Observe that $Q=Q_0e^{rt}$ is the solution of the initial value problem
 \[
 Q'=rQ, \quad Q(0)=Q_0;
@@ -575,7 +574,6 @@ $(Q-P)/P$ \cr \noalign{\vskip16pt}
 \noalign{\vskip7pt}
 10 & \, 37,447.27 & \, 37,426.72 & 20.55 &\ \; $.0549 $ \cr}}
 \]
-\newpage
 
 \exercises
 
@@ -1253,7 +1251,6 @@ K(t) = \frac{1}{4}-\frac{2000}{(t+100)^2}
 
 
 
-\newpage
 \exercises
 
 
@@ -2017,7 +2014,6 @@ $v_0>0$}
 
 
 
-\newpage
 
 \boxit{Escape Velocity}
 
@@ -2816,7 +2812,6 @@ unstable critical point, then
 defines a separatrix passing through $(\overline y,0)$.
 \end{example}
 
-\newpage
 \vspace*{-.2in}
 \begin{figure}[H]
   \centering
@@ -3198,7 +3193,6 @@ $my''+cy'+ky=0$ with $c>c_1$}
   \label{figure:4.4.15}
 \end{figure}
 
-\newpage
 
 \exercises
 In Exercises~\ref{exer:4.4.1}--\ref{exer:4.4.4} find the equations of the
@@ -4142,7 +4136,6 @@ $x^2+(y-h)^2=h^2$}
   \label{figure:4.5.13}
 \end{figure}
 
-\newpage
 
 
 \exercises

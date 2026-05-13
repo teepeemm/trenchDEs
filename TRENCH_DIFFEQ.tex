@@ -1,3 +1,4 @@
+% !TEX TS-program = LuaLaTeX-dev
 \DocumentMetadata{
   tagging=on,
   lang=en-US,
@@ -9,17 +10,23 @@
 }
 \documentclass{book}
 
+\usepackage{wtrench}
 \input{header}
 
-%\includeonly{text/index}
+\includeonly{text/laplace}
 
 \begin{document}
+\setkeys{Gin}{alt={FAKE ALT TEXT}}
 
 \frontmatter
 
 \include{text/preface}
 
 \mainmatter
+
+%\input{text/mwe}
+%
+%\end{document}
 
 \include{text/intro}
 

@@ -73,9 +73,6 @@ linear second order equation provided that we know two nontrivial
 solutions (with nonconstant ratio)  of the associated homogeneous
 equation.
 
-\vspace*{.5in}
-
-\centerline{193}
 \newpage
 
 \section{Homogeneous Linear Equations}
@@ -189,10 +186,10 @@ and
 y''=c_1e^x+c_2e^{-x},
 \]
  so
-\begin{eqnarray*}
-y''-y&=&(c_1e^x+c_2e^{-x})-(c_1e^x+c_2e^{-x})\\
-&=&c_1(e^x-e^x)+c_2(e^{-x}-e^{-x})=0
-\end{eqnarray*}
+\begin{align*}
+y''-y&=(c_1e^x+c_2e^{-x})-(c_1e^x+c_2e^{-x})\\
+&=c_1(e^x-e^x)+c_2(e^{-x}-e^{-x})=0
+\end{align*}
 for all $x$. Therefore $y=c_1e^x+c_2e^{-x}$ is a solution of
 \eqref{eq:5.1.4} on $(-\infty,\infty)$.
 
@@ -200,10 +197,10 @@ for all $x$. Therefore $y=c_1e^x+c_2e^{-x}$ is a solution of
 We can solve \eqref{eq:5.1.5} by choosing $c_1$ and $c_2$ in \eqref{eq:5.1.6}
 so that $y(0)=1$ and $y'(0)=3$. Setting $x=0$ in \eqref{eq:5.1.6} and
 \eqref{eq:5.1.7} shows that this is equivalent to
-\begin{eqnarray*}
-c_1+c_2&=&1\\
-c_1-c_2&=&3.
-\end{eqnarray*}
+\begin{align*}
+c_1+c_2&=1\\
+c_1-c_2&=3.
+\end{align*}
 Solving these equations yields  $c_1=2$  and $c_2=-1$.
 Therefore $y=2e^x-e^{-x}$ is the unique solution of
 \eqref{eq:5.1.5} on $(-\infty,\infty)$.
@@ -254,12 +251,12 @@ and
 y''=-\omega^2(c_1\cos\omega x+c_2\sin\omega x),
 \]
 so
-\begin{eqnarray*}
-y''+\omega^2y&=& -\omega^2(c_1\cos\omega x+c_2\sin\omega x)
+\begin{align*}
+y''+\omega^2y&= -\omega^2(c_1\cos\omega x+c_2\sin\omega x)
 +\omega^2(c_1\cos\omega x+c_2\sin\omega x)\\
-&=&c_1\omega^2(-\cos\omega x+\cos\omega x)+
+&=c_1\omega^2(-\cos\omega x+\cos\omega x)+
 c_2\omega^2(-\sin\omega x+\sin\omega x)=0
-\end{eqnarray*}
+\end{align*}
 for all $x$. Therefore $y=c_1\cos\omega x+c_2\sin\omega x$ is a
 solution of \eqref{eq:5.1.8} on $(-\infty,\infty)$.
 
@@ -352,14 +349,14 @@ and
 y''=2c_1+\frac{6c_2}{x^4},
 \]
 so
-\begin{eqnarray*}
-x^2y''+xy'-4y&=&x^2\dst{\left(2c_1+\frac{6c_2}{x^4}\right)}
+\begin{align*}
+x^2y''+xy'-4y&=x^2\dst{\left(2c_1+\frac{6c_2}{x^4}\right)}
 +x\dst{\left(2c_1x-\frac{2c_2}{x^3}\right)}
 -4\dst{\left(c_1x^2+\frac{c_2}{x^2}\right)}\\[2\jot]
-&=&c_1(2x^2+2x^2-4x^2)
+&=c_1(2x^2+2x^2-4x^2)
 +c_2\dst{\left(\frac{6}{x^2}-\frac{2}{x^2}-\frac{4}{x^2}\right)}\\[2\jot]
-&=&c_1\cdot0+c_2\cdot0=0
-\end{eqnarray*}
+&=c_1\cdot0+c_2\cdot0=0
+\end{align*}
 for $x$ in $(-\infty,0)$ or $(0,\infty)$.
 
 \solutionpart{c}
@@ -367,10 +364,10 @@ To solve
 \eqref{eq:5.1.14}, we choose $c_1$ and $c_2$ in \eqref{eq:5.1.16}
 so that $y(1)=2$ and $y'(1)=0$. Setting $x=1$ in \eqref{eq:5.1.16}
 and \eqref{eq:5.1.17} shows that this is equivalent to
-\begin{eqnarray*}
-\phantom{2}c_1+\phantom{2}c_2&=&2\\
-2c_1-2c_2&=&0.
-\end{eqnarray*}
+\begin{align*}
+\phantom{2}c_1+\phantom{2}c_2&=2\\
+2c_1-2c_2&=0.
+\end{align*}
 Solving these equations yields  $c_1=1$  and $c_2=1$.
 Therefore $y=x^2+1/x^2$ is the unique  solution of \eqref{eq:5.1.14}
 on $(0,\infty)$.
@@ -380,10 +377,10 @@ We can solve
 \eqref{eq:5.1.15} by choosing $c_1$ and $c_2$ in \eqref{eq:5.1.16}
 so that $y(-1)=2$ and $y'(-1)=0$. Setting $x=-1$ in \eqref{eq:5.1.16}
 and \eqref{eq:5.1.17} shows that this is equivalent to
-\begin{eqnarray*}
-\phantom{-2}c_1+\phantom{2}c_2&=&2\\
--2c_1+2c_2&=&0.
-\end{eqnarray*}
+\begin{align*}
+\phantom{-2}c_1+\phantom{2}c_2&=2\\
+-2c_1+2c_2&=0.
+\end{align*}
 Solving these equations yields  $c_1=1$  and $c_2=1$.
 Therefore $y=x^2+1/x^2$ is the unique solution of \eqref{eq:5.1.15}
 on $(-\infty,0)$.
@@ -429,7 +426,7 @@ y=c_1y_1+c_2y_2
 of $y_1$ and $y_2$ is also a solution of $\eqref{eq:5.1.18}$ on $(a,b).$
 \end{theorem}
 
-\proof
+\begin{proof}
  If
 \[
 y=c_1y_1+c_2y_2
@@ -439,14 +436,15 @@ y=c_1y_1+c_2y_2
 y'=c_1y_1'+c_2y_2'\mbox{\quad and \quad} y''=c_1y_1''+c_2y_2''.
 \]
 Therefore
-\begin{eqnarray*}
-y''+p(x)y'+q(x)y&=&(c_1y_1''+c_2y_2'')+p(x)(c_1y_1'+c_2y_2')
+\begin{align*}
+y''+p(x)y'+q(x)y&=(c_1y_1''+c_2y_2'')+p(x)(c_1y_1'+c_2y_2')
 +q(x)(c_1y_1+c_2y_2)\\[2\jot]
-&=&c_1\left(y_1''+p(x)y_1'+q(x)y_1\right)
+&=c_1\left(y_1''+p(x)y_1'+q(x)y_1\right)
 +c_2\left(y_2''+p(x)y_2'+q(x)y_2\right)\\[2\jot]
-&=&c_1\cdot0+c_2\cdot0=0,
-\end{eqnarray*}
-since $y_1$ and $y_2$ are solutions of \eqref{eq:5.1.18}. \bbox
+&=c_1\cdot0+c_2\cdot0=0,
+\end{align*}
+since $y_1$ and $y_2$ are solutions of \eqref{eq:5.1.18}.% \bbox
+\end{proof}
 
 We say that  $\{y_1,y_2\}$ is a \emph{\color{blue}fundamental set of
 solutions of $\eqref{eq:5.1.18}$ on}  $(a,b)$ if every solution
@@ -533,20 +531,20 @@ solution of an arbitrary initial value problem \eqref{eq:5.1.21}
 as $y=c_1y_1+c_2y_2$. This is equivalent to requiring that the
 system
 \begin{equation}\label{eq:5.1.22}
-\begin{array}{rcl}
-c_1y_1(x_0)+c_2y_2(x_0)&=&k_0\\
-c_1y_1'(x_0)+c_2y_2'(x_0)&=&k_1
-\end{array}
+\begin{aligned}
+c_1y_1(x_0)+c_2y_2(x_0)&=k_0\\
+c_1y_1'(x_0)+c_2y_2'(x_0)&=k_1
+\end{aligned}
 \end{equation}
 has  a solution $(c_1,c_2)$ for every choice of $(k_0,k_1)$.
 Let's try to solve \eqref{eq:5.1.22}.
 
 Multiplying the first equation in \eqref{eq:5.1.22} by $y_2'(x_0)$
 and the second by $y_2(x_0)$ yields
-\begin{eqnarray*}
-c_1y_1(x_0)y_2'(x_0)+c_2y_2(x_0)y_2'(x_0)&=& y_2'(x_0)k_0\\
-c_1y_1'(x_0)y_2(x_0)+c_2y_2'(x_0)y_2(x_0)&=& y_2(x_0)k_1,
-\end{eqnarray*}
+\begin{align*}
+c_1y_1(x_0)y_2'(x_0)+c_2y_2(x_0)y_2'(x_0)&= y_2'(x_0)k_0\\
+c_1y_1'(x_0)y_2(x_0)+c_2y_2'(x_0)y_2(x_0)&= y_2(x_0)k_1,
+\end{align*}
 and subtracting the second equation here from the first yields
 \begin{equation}\label{eq:5.1.23}
 \left(y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)\right)c_1=
@@ -554,10 +552,10 @@ y_2'(x_0)k_0-y_2(x_0)k_1.
 \end{equation}
 Multiplying the first equation in \eqref{eq:5.1.22} by $y_1'(x_0)$
 and the second by $y_1(x_0)$ yields
-\begin{eqnarray*}
-c_1y_1(x_0)y_1'(x_0)+c_2y_2(x_0)y_1'(x_0)&=& y_1'(x_0)k_0\\
-c_1y_1'(x_0)y_1(x_0)+c_2y_2'(x_0)y_1(x_0)&=& y_1(x_0)k_1,
-\end{eqnarray*}
+\begin{align*}
+c_1y_1(x_0)y_1'(x_0)+c_2y_2(x_0)y_1'(x_0)&= y_1'(x_0)k_0\\
+c_1y_1'(x_0)y_1(x_0)+c_2y_2'(x_0)y_1(x_0)&= y_1(x_0)k_1,
+\end{align*}
 and subtracting the first equation here from the second yields
 \begin{equation}\label{eq:5.1.24}
 \left(y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)\right)c_2=
@@ -570,10 +568,10 @@ y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)=0,
  it's impossible to satisfy \eqref{eq:5.1.23} and \eqref{eq:5.1.24}
 (and therefore \eqref{eq:5.1.22})
 unless $k_0$ and $k_1$ happen to satisfy
-\begin{eqnarray*}
-y_1(x_0)k_1-y_1'(x_0)k_0&=&0\\
-y_2'(x_0)k_0-y_2(x_0)k_1&=&0.
-\end{eqnarray*}
+\begin{align*}
+y_1(x_0)k_1-y_1'(x_0)k_0&=0\\
+y_2'(x_0)k_0-y_2(x_0)k_1&=0.
+\end{align*}
 On the other hand, if
 \begin{equation}\label{eq:5.1.25}
 y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)\ne0
@@ -581,10 +579,10 @@ y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)\ne0
  we can  divide \eqref{eq:5.1.23} and \eqref{eq:5.1.24} through by the
 quantity on the left  to obtain
 \begin{equation}\label{eq:5.1.26}
-\begin{array}{rcl}
-c_1&=&\dst\frac{y_2'(x_0)k_0-y_2(x_0)k_1}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)}\\[4\jot]
-c_2&=&\dst\frac{y_1(x_0)k_1-y_1'(x_0)k_0}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)},
-\end{array}
+\begin{aligned}
+c_1&=\frac{y_2'(x_0)k_0-y_2(x_0)k_1}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)}\\[4\jot]
+c_2&=\frac{y_1(x_0)k_1-y_1'(x_0)k_0}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)},
+\end{aligned}
 \end{equation}
 no matter how $k_0$ and $k_1$ are chosen. This motivates us to
 consider conditions on $y_1$ and $y_2$ that imply \eqref{eq:5.1.25}.
@@ -610,7 +608,7 @@ on  $(a,b).$
 
 
 
-\proof
+\begin{proof}
 Differentiating \eqref{eq:5.1.28} yields
 \begin{equation}\label{eq:5.1.30}
 W'=y'_1y'_2+y_1y''_2-y'_1y'_2-y''_1y_2=
@@ -622,12 +620,12 @@ y''_1 =-py'_1-qy_1\mbox{\quad and \quad}
 y''_2 =-py'_2-qy_2.
 \]
 Substituting these into \eqref{eq:5.1.30} yields
-\begin{eqnarray*}
-W'&=& \dst -y_1\bigl(py'_2+qy_2\bigr)
+\begin{align*}
+W'&= -y_1\bigl(py'_2+qy_2\bigr)
 +y_2\bigl(py'_1+qy_1\bigr) \\
-&=& \dst -p(y_1y'_2-y_2y'_1)-q(y_1y_2-y_2y_1)\\
-&=& -p(y_1y'_2-y_2y'_1)=-pW.
-\end{eqnarray*}
+&= -p(y_1y'_2-y_2y'_1)-q(y_1y_2-y_2y_1)\\
+&= -p(y_1y'_2-y_2y'_1)=-pW.
+\end{align*}
 Therefore $W'+p(x)W=0$;
 that is, $W$ is the solution of the initial value problem
 \[
@@ -638,7 +636,8 @@ implies \eqref{eq:5.1.29}. If $W(x_0)\ne0$, \eqref{eq:5.1.29} implies
 that
 $W$ has no zeros in $(a,b)$, since an exponential is never zero. On
 the other hand, if $W(x_0)=0$,  \eqref{eq:5.1.29} implies that $W(x)=0$
-for all $x$ in $(a,b)$.\bbox
+for all $x$ in $(a,b)$.%\bbox
+\end{proof}
 
 The function $W$ defined in \eqref{eq:5.1.28} is  the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Wronski.html}
@@ -649,25 +648,25 @@ The function $W$ defined in \eqref{eq:5.1.28} is  the
 
 The Wronskian of  $\{y_1,y_2\}$ is usually written as the determinant
 \[
-W=\left| \begin{array}{cc}
+W=\begin{vmatrix}
 y_1 & y_2 \\[2\jot]
 y'_1 & y'_2
-\end{array} \right|.
+\end{vmatrix}.
 \]
  The expressions in \eqref{eq:5.1.26} for $c_1$ and $c_2$ can
 be written in terms of determinants as
 \[
 c_1=\frac{1}{W(x_0)}
-\left| \begin{array}{cc}
+\begin{vmatrix}
 k_0 & y_2(x_0) \\[2\jot]
 k_1 & y'_2(x_0)
-\end{array} \right|
+\end{vmatrix}
 \mbox{\quad and \quad}
 c_2=\frac{1}{W(x_0)}
-\left| \begin{array}{cc}
+\begin{vmatrix}
 y_1(x_0) & k_0 \\[2\jot]
 y'_1(x_0) &k_1
-\end{array} \right|.
+\end{vmatrix}.
 \]
 If you've taken linear algebra you may recognize this as
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Cramer.html}
@@ -690,34 +689,36 @@ $x^2y''+xy'-4y=0;\quad  y_1=x^2,\;  y_2=1/x^2$
 \solutionpart{a} Since $p\equiv0$, we can verify Abel's formula
 by showing that $W$ is constant, which is true, since
 \[
-W(x)=\left| \begin{array}{rr}
+W(x)=\begin{vmatrix}
 e^x & e^{-x} \\[2\jot]
 e^x & -e^{-x}
-\end{array} \right|=e^x(-e^{-x})-e^xe^{-x}=-2
+\end{vmatrix}
+=e^x(-e^{-x})-e^xe^{-x}=-2
 \]
 for all $x$.
 
 \solutionpart{b} Again, since $p\equiv0$, we can verify Abel's
 formula
 by showing that $W$ is constant, which is true, since
-\begin{eqnarray*}
-W(x)&=&\dst{\left| \begin{array}{cc}
+\begin{align*}
+W(x)&=\dst{\begin{vmatrix}
 \cos\omega x & \sin\omega x \\[2\jot]
 -\omega\sin\omega x &\omega\cos\omega x
-\end{array} \right|}\\[2\jot]
-&=&\cos\omega x (\omega\cos\omega x)-(-\omega\sin\omega x)\sin\omega
-x\\ &=&\omega(\cos^2\omega x+\sin^2\omega x)=\omega
-\end{eqnarray*}
+\end{vmatrix}}\\[2\jot]
+&=\cos\omega x (\omega\cos\omega x)-(-\omega\sin\omega x)\sin\omega x\\
+&=\omega(\cos^2\omega x+\sin^2\omega x)=\omega
+\end{align*}
 for all $x$.
 
 \solutionpart{c}
 Computing the Wronskian of $y_1=x^2$ and
 $y_2=1/x^2$ directly yields
 \begin{equation}\label{eq:5.1.31}
-W=\left| \begin{array}{cc}
+W=\begin{vmatrix}
 x^2 & 1/x^2 \\[2\jot]
 2x & -2/x^3
-\end{array} \right|=x^2\left(-\frac{2}{x^3}\right)-2x\left(\frac{1}{x^2}\right)=-\frac{4}{x}.
+\end{vmatrix}
+=x^2\left(-\frac{2}{x^3}\right)-2x\left(\frac{1}{x^2}\right)=-\frac{4}{x}.
 \end{equation}
 To verify Abel's formula we
 rewrite the differential  equation as
@@ -730,12 +731,12 @@ $(-\infty,0)$ or both in $(0,\infty)$ then
 \int_{x_0}^x p(t)\,dt=\int_{x_0}^x \frac{dt}{t}=\ln\left(\frac{x}{x_0}\right),
 \]
 so Abel's formula becomes
-\begin{eqnarray*}
-W(x)&=&W(x_0)e^{-\ln(x/x_0)}=W(x_0)\frac{x_0}{x}\\
-&=&-\left(\frac{4}{x_0}\right)\left(\frac{x_0}{x}\right)\mbox{\quad from
+\begin{align*}
+W(x)&=W(x_0)e^{-\ln(x/x_0)}=W(x_0)\frac{x_0}{x}\\
+&=-\left(\frac{4}{x_0}\right)\left(\frac{x_0}{x}\right)\mbox{\quad from
 \eqref{eq:5.1.31}}\\
-&=&-\frac{4}{x},
-\end{eqnarray*}
+&=-\frac{4}{x},
+\end{align*}
 which is consistent with \eqref{eq:5.1.31}.\bbox
 
 The next theorem will enable us to complete the proof of
@@ -752,7 +753,7 @@ Then $y_1$ and $y_2$ are linearly independent on  $(a,b)$ if and only
 if $W$ has no zeros on  $(a,b).$
 \end{theorem}
 
-\proof
+\begin{proof}
 We first show that if $W(x_0)=0$ for some $x_0$ in  $(a,b)$, then
 $y_1$ and $y_2$ are linearly dependent on  $(a,b)$.  Let $I$ be a
 subinterval
@@ -793,7 +794,8 @@ $y_2$ on  $(a,b)$, since
 \[
 \left(\frac{y_1}{y_2}\right)'=\frac{y_1'y_2-y_1y_2'}{y_2^2}=-\frac{W}{y_2^2}
 \]
-on any subinterval of  $(a,b)$ where $y_2$ has no zeros. \bbox
+on any subinterval of  $(a,b)$ where $y_2$ has no zeros.% \bbox
+\end{proof}
 
 We can now complete the proof of Theorem~\ref{thmtype:5.1.3}.
 From Theorem~\ref{thmtype:5.1.5}, two solutions $y_1$ and $y_2$ of
@@ -854,17 +856,19 @@ Then $\{y_{1},y_{2}\}$ isn't  linearly independent on $(a,b).$
 \end{theorem}
 
 
-\proof Since $\alpha$ and $\beta$ are not both zero,   \eqref{eq:5.1.35}
+\begin{proof}
+Since $\alpha$ and $\beta$ are not both zero,   \eqref{eq:5.1.35}
 implies that
 \[
-\left|\begin{array}{ccccccc}
+\begin{vmatrix}
 y_{1}(c)&y_{1}'(c)\\y_{2}(c)& y_{2}'(c)
-\end{array}\right|=0, \text{\;    so\;  \;  }
-\left|\begin{array}{cccccc}
+\end{vmatrix}=0, \text{\;    so\;  \;  }
+\begin{vmatrix}
 y_{1}(c)&y_{2}(c)\\ y_{1}'(c)&y_{2}'(c)
-\end{array}\right|=0
+\end{vmatrix}=0
 \]
 and Theorem~\ref{thmtype:5.1.6} implies the stated conclusion.
+\end{proof}
 
 \exercises
 \begin{exerciselist}
@@ -1169,8 +1173,8 @@ $\{y_1,y_2\}$ is identically zero on  $(a,b)$.
 \item\label{exer:5.1.29}
 Let
 \[
-y_1=x^3\quad\mbox{ and }\quad y_2=\left\{\begin{array}{rl}
-x^3,&x\ge 0,\\ -x^3,&x<0.\end{array}\right.
+y_1=x^3\quad\mbox{ and }\quad y_2=\begin{cases}
+x^3,&x\ge 0,\\ -x^3,&x<0.\end{cases}
 \]
 \begin{alist}
 \item % (a)
@@ -1244,11 +1248,11 @@ Show that if $y_1$ and $y_2$ are twice continuously differentiable on
 $(a,b)$ and the Wronskian $W$ of $\{y_1,y_2\}$ has no zeros in
 $(a,b)$ then the equation
 \[
-\frac{1}{W} \left| \begin{array}{ccc}
+\frac{1}{W} \begin{vmatrix}
 y & y_1 & y_2 \\[2\jot]
 y' & y'_1 & y'_2 \\[2\jot]
 y'' & y_1'' & y_2''
-\end{array} \right|=0
+\end{vmatrix}=0
 \]
 can be written as
 \[
@@ -1367,10 +1371,10 @@ y''+\omega^2y=0,\quad y(x_0)=k_0,\quad y'(x_0)=k_1
 \]
 as a linear combination of $y_1$ and $y_2$.
 Use the identities
-\begin{eqnarray*}
-\cos(A+B)&=&\cos A\cos B-\sin A\sin B\\
-\sin(A+B)&=&\sin A\cos B+\cos A\sin B
-\end{eqnarray*}
+\begin{align*}
+\cos(A+B)&=\cos A\cos B-\sin A\sin B\\
+\sin(A+B)&=\sin A\cos B+\cos A\sin B
+\end{align*}
 to  simplify your expressions for $y_1$, $y_2$, and $y$.
 
 \item\label{exer:5.1.41}
@@ -1408,20 +1412,20 @@ $(0,\infty)$.
 \item % (b)
 Let $a_1$, $a_2$, $b_1$, and $b_2$ be constants. Show that
 \[
-y=\left\{\begin{array}{rr}
+y=\begin{cases}
 a_1x^2+a_2x^3,&x\ge 0,\\
 b_1x^2+b_2x^3,&x<0\phantom{,}
-\end{array}\right.
+\end{cases}
 \]
 is a solution of  (A) on $(-\infty,\infty)$
 if and only if $a_1=b_1$. From this, justify the statement that
 $y$ is a  solution of (A) on $(-\infty,\infty)$
 if and only if
 \[
-y=\left\{\begin{array}{rr}
+y=\begin{cases}
 c_1x^2+c_2x^3,&x\ge 0,\\
 c_1x^2+c_3x^3,&x<0,
-\end{array}\right.
+\end{cases}
 \]
 where $c_1$, $c_2$, and $c_3$ are arbitrary constants.
 
@@ -1458,10 +1462,10 @@ $(0,\infty)$.
 \item % (b)
 Let $a_1$, $a_2$, $b_1$, and $b_2$ be constants. Show that
 \[
-y=\left\{\begin{array}{rr}
+y=\begin{cases}
 a_1x+a_2x^2,&x\ge 0,\\
 b_1x+b_2x^2,&x<0\phantom{,}
-\end{array}\right.
+\end{cases}
 \]
 is a solution of  (A) on $(-\infty,\infty)$
 if and only if $a_1=b_1$ and $a_2=b_2$. From this, justify the
@@ -1503,10 +1507,10 @@ Show that
 $y$ is a solution of  (A) on $(-\infty,\infty)$
 if and only if
 \[
-y=\left\{\begin{array}{rr}
+y=\begin{cases}
 a_1x^3+a_2x^4,&x\ge 0,\\
 b_1x^3+b_2x^4,&x<0,
-\end{array}\right.
+\end{cases}
 \]
 where $a_1$, $a_2$, $b_1$, and $b_2$  are arbitrary constants.
 
@@ -1625,10 +1629,10 @@ y'=-c_1e^{-x}-5c_2e^{-5x}.
 \end{equation}
 Imposing the initial conditions $y(0)=3,\, y'(0)=-1$ in \eqref{eq:5.2.6}
 and \eqref{eq:5.2.7} yields
-\[\begin{array}{rcr}
-\phantom{-}c_1+\phantom{5}c_2 & = & 3\phantom{.}\\
--c_1-5c_2 & = & -1.
-\end{array}\]
+\begin{align*}
+\phantom{-}c_1+\phantom{5}c_2 & = \phantom{-}3\phantom{.}\\
+-c_1-5c_2 & = -1.
+\end{align*}
  The solution of this system is $c_1=7/2,c_2=-1/2$.  Therefore
 the solution of  \eqref{eq:5.2.5} is
 \[
@@ -1654,7 +1658,6 @@ set of solutions of $ay''+by'+cy=0$.
 
 
 
-\newpage
 \boxit{Case 2: A Repeated Real Root}
 
 \noindent
@@ -1704,10 +1707,10 @@ y'=u'e^{-3x}-3ue^{-3x}\mbox{\quad and \quad}
 y''=u''e^{-3x}-6u'e^{-3x}+9ue^{-3x},
 \]
 so
-\begin{eqnarray*}
-y''+6y'+9y&=&e^{-3x}\left[(u''-6u'+9u)+6(u'-3u)+9u\right]\\
-&=&e^{-3x}\left[u''-(6-6)u'+(9-18+9)u\right]=u''e^{-3x}.
-\end{eqnarray*}
+\begin{align*}
+y''+6y'+9y&=e^{-3x}\left[(u''-6u'+9u)+6(u'-3u)+9u\right]\\
+&=e^{-3x}\left[u''-(6-6)u'+(9-18+9)u\right]=u''e^{-3x}.
+\end{align*}
 Therefore $y=ue^{-3x}$ is a solution of \eqref{eq:5.2.8} if and only if
 $u''=0$, which is equivalent to $u=c_1+c_2x$, where $c_1$ and $c_2$
 are constants. Therefore any function of the form
@@ -1746,7 +1749,6 @@ Figure~\ref{figure:5.2.2} is a graph of this solution.
   \label{figure:5.2.2}
 \end{figure}
 
-\newpage
 If the characteristic equation of $ay''+by'+cy=0$
 has an arbitrary repeated root $r_1$,  the
 characteristic polynomial must be
@@ -1775,11 +1777,11 @@ y'=u'e^{r_1x}+rue^{r_1x}\mbox{\quad and \quad}
 y''=u''e^{r_1x}+2r_1u'e^{r_1x}+r_1^2ue^{r_1x},
 \]
 so
-\begin{eqnarray*}
-y''-2r_1y'+r_1^2y&=&e^{rx}\left[(u''+2r_1u'+r_1^2u)-
+\begin{align*}
+y''-2r_1y'+r_1^2y&=e^{rx}\left[(u''+2r_1u'+r_1^2u)-
 2r_1(u'+r_1u)+r_1^2u\right]\\
-&=&e^{r_1x}\left[u''+(2r_1-2r_1)u'+(r_1^2-2r_1^2+r_1^2)u\right]=u''e^{r_1x}.
-\end{eqnarray*}
+&=e^{r_1x}\left[u''+(2r_1-2r_1)u'+(r_1^2-2r_1^2+r_1^2)u\right]=u''e^{r_1x}.
+\end{align*}
 Therefore $y=ue^{r_1x}$ is a solution of \eqref{eq:5.2.12} if and only if
 $u''=0$, which is equivalent to $u=c_1+c_2x$, where $c_1$ and $c_2$
 are constants. Hence, any function of the form
@@ -1845,10 +1847,10 @@ y'=u'e^{-2x}-2ue^{-2x}\mbox{\quad and \quad}
 y''=u''e^{-2x}-4u'e^{-2x}+4ue^{-2x},
 \]
 so
-\begin{eqnarray*}
-y''+4y'+13y&=&e^{-2x}\left[(u''-4u'+4u)+4(u'-2u)+13u\right]\\
-&=&e^{-2x}\left[u''-(4-4)u'+(4-8+13)u\right]=e^{-2x}(u''+9u).
-\end{eqnarray*}
+\begin{align*}
+y''+4y'+13y&=e^{-2x}\left[(u''-4u'+4u)+4(u'-2u)+13u\right]\\
+&=e^{-2x}\left[u''-(4-4)u'+(4-8+13)u\right]=e^{-2x}(u''+9u).
+\end{align*}
 Therefore $y=ue^{-2x}$ is a solution of \eqref{eq:5.2.14} if and only if
 \[
 u''+9u=0.
@@ -1940,14 +1942,13 @@ $y=ue^{\lambda x}$, where $u$ depends upon $x$.
 To determine $u$ we first observe that since $r_1=\lambda+i\omega$
 and $r_2=\lambda-i\omega$ are the roots of the characteristic
 equation,  $p$ must be of  the form
-\[
-\begin{array}{ccl}
-p(r)&=&a(r-r_1)(r-r_2)\\
-&=&a(r-\lambda-i\omega)(r-\lambda+i\omega)\\
-&=& a \left[(r-\lambda)^2+\omega^2\right]\\
-&=&a(r^2-2\lambda r +\lambda^2+\omega^2).
-\end{array}
-\]
+\begin{align*}
+p(r)
+&=a(r-r_1)(r-r_2)\\
+&=a(r-\lambda-i\omega)(r-\lambda+i\omega)\\
+&= a \left[(r-\lambda)^2+\omega^2\right]\\
+&=a(r^2-2\lambda r +\lambda^2+\omega^2).
+\end{align*}
 Therefore $ay''+by'+cy=0$ can be written as
 \[
 a\left[y''-2\lambda y'+(\lambda^2+\omega^2)y\right]=0.
@@ -2151,7 +2152,7 @@ Theorem~\ref{thmtype:5.2.1} in a form more convenient for solving
 (B).
 \end{alist}
 
-\enlargethispage{1in}
+%\enlargethispage{1in}
 \exercisetext{In Exercises \ref{exer:5.2.23}--\ref{exer:5.2.28} use a method
 suggested by Exercise~\ref{exer:5.2.22} to solve the initial value
 problem.}
@@ -2160,7 +2161,6 @@ problem.}
 
 \item\label{exer:5.2.23}
 $y''+3y'+2y=0, \quad  y(1)=-1,\quad y'(1)=4$
-\newpage
 
 \item\label{exer:5.2.24}
 $y''-6y'-7y=0, \quad  y(2)=-\dst\frac{1}{3},\quad y'(2)=-5$
@@ -2292,12 +2292,13 @@ that the sequence is repetitive:
 1,i,-1,-i,1,i,-1,-i,1,i,-1,-i,1,i,-1,-i,\cdots.
 \]
 Use this to group the terms in (D) as
-\begin{eqnarray*}
-e^{i\theta}&=&\left(1-\frac{\theta^2}{2}+\frac{\theta^4}{4}+\cdots\right)
+\begin{align*}
+e^{i\theta}
+&=\left(1-\frac{\theta^2}{2}+\frac{\theta^4}{4}+\cdots\right)
 +i\left(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}+\cdots\right)\\[2\jot]
-&=&\sum_{n=0}^\infty (-1)^n\frac{\theta^{2n}}{(2n)!}
+&=\sum_{n=0}^\infty (-1)^n\frac{\theta^{2n}}{(2n)!}
 +i\sum_{n=0}^\infty (-1)^n\frac{\theta^{2n+1}}{(2n+1)!}.
-\end{eqnarray*}
+\end{align*}
 By comparing this result with (B) and
 (C), conclude that
 \[
@@ -2316,10 +2317,10 @@ e^{i\theta_1}e^{i\theta_2}=(\cos\theta_1+i\sin\theta_1)
 collect the real part (the terms not multiplied by $i$)
 and the imaginary part (the terms  multiplied by $i$) on the
 right, and use the trigonometric identities
-\begin{eqnarray*}
-\cos(\theta_1+\theta_2)&=&\cos\theta_1\cos\theta_2-\sin\theta_1\sin\theta_2\\
-\sin(\theta_1+\theta_2)&=&\sin\theta_1\cos\theta_2+\cos\theta_1\sin\theta_2
-\end{eqnarray*}
+\begin{align*}
+\cos(\theta_1+\theta_2)&=\cos\theta_1\cos\theta_2-\sin\theta_1\sin\theta_2\\
+\sin(\theta_1+\theta_2)&=\sin\theta_1\cos\theta_2+\cos\theta_1\sin\theta_2
+\end{align*}
 to verify that
 \[
 e^{i(\theta_1+\theta_2)}=e^{i\theta_1}e^{i\theta_2},
@@ -2413,7 +2414,8 @@ y=y_p+c_1y_1+c_2y_2,
 where $c_1$ and $c_2$  are constants.
 \end{theorem}
 
-\proof We first show that $y$ in \eqref{eq:5.3.5} is a solution of
+\begin{proof}
+We first show that $y$ in \eqref{eq:5.3.5} is a solution of
 \eqref{eq:5.3.3} for any choice of the constants $c_1$ and $c_2$.
 Differentiating \eqref{eq:5.3.5} twice yields
 \[
@@ -2421,13 +2423,14 @@ y'=y_p'+c_1y_1'+c_2y_2'\mbox{\quad and \quad}
 y''=y_p''+ c_1y_1''+c_2y_2'',
 \]
 so
-\begin{eqnarray*}
-y''+p(x)y'+q(x)y&=&(y_p''+c_1y_1''+c_2y_2'')
-+p(x)(y_p'+c_1y_1'+c_2y_2')\\&&\; +q(x)(y_p+c_1y_1+c_2y_2)\\
-&=&(y_p''+p(x)y_p'+q(x)y_p)+c_1(y_1''+p(x)y_1'+q(x)y_1)\\
-&&\; +c_2(y_2''+p(x)y_2'+q(x)y_2)\\
-&=& f+c_1\cdot0+c_2\cdot0=f,
-\end{eqnarray*}
+\begin{align*}
+y''+p(x)y'+q(x)y&=(y_p''+c_1y_1''+c_2y_2'')
++p(x)(y_p'+c_1y_1'+c_2y_2')\\
+&\; +q(x)(y_p+c_1y_1+c_2y_2)\\
+&=(y_p''+p(x)y_p'+q(x)y_p)+c_1(y_1''+p(x)y_1'+q(x)y_1)\\
+&\; +c_2(y_2''+p(x)y_2'+q(x)y_2)\\
+&= f+c_1\cdot0+c_2\cdot0=f,
+\end{align*}
 since $y_p$ satisfies \eqref{eq:5.3.3} and $y_1$ and $y_2$ satisfy
 \eqref{eq:5.3.4}.
 
@@ -2437,13 +2440,16 @@ Suppose $y$ is a solution of \eqref{eq:5.3.3}. We'll show that
 $y-y_p$ is a solution of \eqref{eq:5.3.4}, and therefore of the form
 $y-y_p=c_1y_1+c_2y_2$, which implies \eqref{eq:5.3.5}. To see this, we
 compute
-\begin{eqnarray*}
-(y-y_p)''+p(x)(y-y_p)'+q(x)(y-y_p)&=&(y''-y_p'')+p(x)(y'-y_p')\\ &&
-+q(x)(y-y_p)\\
-&=&(y''+p(x)y'+q(x)y)\\ && -(y_p''+p(x)y_p'+q(x)y_p)\\
-&=&f(x)-f(x)=0,
-\end{eqnarray*}
-since $y$ and $y_p$ both satisfy \eqref{eq:5.3.3}. \bbox
+\begin{align*}
+(y-y_p)''+p(x)(y-y_p)'+q(x)(y-y_p)
+&=(y''-y_p'')+p(x)(y'-y_p')\\
+&+q(x)(y-y_p)\\
+&=(y''+p(x)y'+q(x)y)\\
+& -(y_p''+p(x)y_p'+q(x)y_p)\\
+&=f(x)-f(x)=0,
+\end{align*}
+since $y$ and $y_p$ both satisfy \eqref{eq:5.3.3}.% \bbox
+\end{proof}
 
 We say that \eqref{eq:5.3.5} is the \emph{\color{blue}general solution of
 $\eqref{eq:5.3.3}$ on $(a,b)$}.
@@ -2580,17 +2586,18 @@ y_p=A+Bx+Cx^2\mbox{\quad then \quad}
 y_p'=B+2Cx\mbox{\quad and \quad} y_p''=2C,
 \]
 so
-\begin{eqnarray*}
-y_p''-2y_p'+y_p&=&2C-2(B+2Cx)+(A+Bx+Cx^2)\\
-&=&(2C-2B+A)+(-4C+B)x+Cx^2=-3-x+x^2.
-\end{eqnarray*}
+\begin{align*}
+y_p''-2y_p'+y_p
+&=2C-2(B+2Cx)+(A+Bx+Cx^2)\\
+&=(2C-2B+A)+(-4C+B)x+Cx^2=-3-x+x^2.
+\end{align*}
 Equating  coefficients of like powers of $x$ on the two sides of the
 last equality yields
-\begin{eqnarray*}
-C&=&\phantom{-}1\phantom{.}\\
-B-4C&=&-1\phantom{.}\\
-A-2B+2C&=& -3,
-\end{eqnarray*}
+\begin{align*}
+C&=\phantom{-}1\phantom{.}\\
+B-4C&=-1\phantom{.}\\
+A-2B+2C&= -3,
+\end{align*}
 so $C=1$, $B=-1+4C=3$, and $A=-3-2C+2B=1$.
 Therefore $y_p=1+3x+x^2$ is a particular solution of
 \eqref{eq:5.3.10} and  Theorem~\ref{thmtype:5.3.2} implies that
@@ -2687,14 +2694,17 @@ y''+p(x)y'+q(x)y=f_1(x)+f_2(x)
 on  $(a,b)$.
 \end{theorem}
 
-\proof If $y_p=y_{p_1}+y_{p_2}$ then
-\begin{eqnarray*}
-y_p''+p(x)y_p'+q(x)y_p&=&(y_{p_1}+y_{p_2})''+p(x)(y_{p_1}+y_{p_2})'
+\begin{proof}
+If $y_p=y_{p_1}+y_{p_2}$ then
+\begin{align*}
+y_p''+p(x)y_p'+q(x)y_p
+&=(y_{p_1}+y_{p_2})''+p(x)(y_{p_1}+y_{p_2})'
 +q(x)(y_{p_1}+y_{p_2})\\
-&=&\left(y_{p_1}''+p(x)y_{p_1}'+q(x)y_{p_1}\right)
+&=\left(y_{p_1}''+p(x)y_{p_1}'+q(x)y_{p_1}\right)
 +\left(y_{p_2}''+p(x)y_{p_2}'+q(x)y_{p_2}\right)\\
-&=&f_1(x)+f_2(x).\bbox
-\end{eqnarray*}
+&=f_1(x)+f_2(x).%\bbox
+\end{align*}
+\end{proof}
 
 
 
@@ -3236,19 +3246,18 @@ $A$, $B$, and $C$;   thus,
 u_p'=B+2Cx\mbox{\quad and \quad} u_p''=2C.
 \]
 If $u_p$ is to satisfy (\ref{eq:5.4.11}),  we must have
-\begin{eqnarray*}
-u_p''+3u_p'+2u_p&=&2C+3(B+2Cx)+2(A+Bx+Cx^2)\\
-&=&(2C+3B+2A)+(6C+2B)x+2Cx^2=-1+2x+x^2.
-\end{eqnarray*}
+\begin{align*}
+u_p''+3u_p'+2u_p
+&=2C+3(B+2Cx)+2(A+Bx+Cx^2)\\
+&=(2C+3B+2A)+(6C+2B)x+2Cx^2=-1+2x+x^2.
+\end{align*}
 Equating  coefficients of like powers of $x$ on the two sides of the
 last equality yields
-\[
-\begin{array}{rcr}
-2C&=&1\phantom{.}\\
-2B+6C&=&2\phantom{.}\\
-2A+3B+2C&=& -1.
-\end{array}
-\]
+\begin{align*}
+2C&=1\phantom{.}\\
+2B+6C&=2\phantom{.}\\
+2A+3B+2C&= -1.
+\end{align*}
 Solving these equations for $C$, $B$, and $A$ (in that order) yields
  $C=1/2,B=-1/2,A=-1/4$.  Therefore
 \[
@@ -3307,13 +3316,11 @@ Substituting these expressions in place of $u'$ and $u''$  in
 \]
 Comparing coefficients of like powers of $x$ on the two sides of the
 last equality shows that $u_p$ satisfies (\ref{eq:5.4.13}) if
-\[
-\begin{array}{rcr}
-6C&=&12\phantom{.}\\
-4B+6C&=&8\phantom{.}\\
-2A+2B\phantom{+6u_2}&=&6.
-\end{array}
-\]
+\begin{align*}
+6C&=12\phantom{.}\\
+4B+6C&=8\phantom{.}\\
+2A+2B\phantom{+6u_2}&=6.
+\end{align*}
 Solving these equations successively yields $C=2$, $B=-1$, and $A=4$.
 Therefore
 \[
@@ -3519,7 +3526,6 @@ solution.}
 
 \item\label{exer:5.4.19} $y''-2y'+y=e^x(2-12x)$
 
-\newpage
 \exercisetext{In Exercises \ref{exer:5.4.20}--\ref{exer:5.4.23} solve the
 initial value problem and plot the solution.}
 
@@ -3730,12 +3736,12 @@ ay''+by'+cy=P(x)\cos\omega x+Q(x)\sin\omega x,
 where $P$ and $Q$ are polynomials.
 
 Differentiating  $x^r\cos\omega x$ and $x^r\sin\omega x$ yields
-\begin{eqnarray*}
-\dst\frac{d}{dx}x^r\cos\omega x&=&-\omega x^r\sin\omega x+
-rx^{r-1}\cos\omega x \\[2\jot]  \arraytext{and}
-\dst\frac{d}{dx}x^r\sin\omega x&=&\phantom{-}\omega x^r\cos\omega x+
-rx^{r-1}\sin\omega x.
-\end{eqnarray*}
+\begin{align*}
+\dst\frac{d}{dx}x^r\cos\omega x
+&=-\omega x^r\sin\omega x+rx^{r-1}\cos\omega x\qquad\text{and} \\[2\jot]
+\dst\frac{d}{dx}x^r\sin\omega x
+&=\phantom{-}\omega x^r\cos\omega x+rx^{r-1}\sin\omega x.
+\end{align*}
 This implies  that if
 \[
 y_p=A(x)\cos\omega x+B(x)\sin\omega x
@@ -3809,18 +3815,18 @@ y_p'=-2A\sin2x+2B\cos2x\mbox{\quad and \quad}
 y_p''=-4(A\cos2x+B\sin2x),
 \]
 replacing $y$ by $y_p$ in  \eqref{eq:5.5.4} yields
-\begin{eqnarray*}
-y_p''-2y_p'+y_p&=&-4(A\cos2x+B\sin2x)-4(-A\sin2x+B\cos2x)
-\\ &&+(A\cos2x+B\sin2x)\\ &=&
-(-3A-4B)\cos2x+(4A-3B)\sin2x.
-\end{eqnarray*}
+\begin{align*}
+y_p''-2y_p'+y_p&=-4(A\cos2x+B\sin2x)-4(-A\sin2x+B\cos2x)\\
+&+(A\cos2x+B\sin2x)\\
+&=(-3A-4B)\cos2x+(4A-3B)\sin2x.
+\end{align*}
 Equating the coefficients of $\cos2x$ and $\sin2x$ here with the
 corresponding coefficients on the right side of \eqref{eq:5.5.4}
 shows that $y_p$ is a solution of \eqref{eq:5.5.4}  if
-\begin{eqnarray*}
--3A-4B&=&\phantom{1}5\phantom{.}\\
-\phantom{-}4A-3B&=&10.
-\end{eqnarray*}
+\begin{align*}
+-3A-4B&=\phantom{1}5\phantom{.}\\
+\phantom{-}4A-3B&=10.
+\end{align*}
 Solving these equations yields $A=1$, $B=-2$.  Therefore
 \[
 y_p=\cos2x-2\sin2x
@@ -3848,12 +3854,11 @@ should therefore try a particular solution of the form
 y_p=x(A\cos2x+B\sin2x).
 \end{equation}
 Then
-\begin{eqnarray*}
-y_p'&=&A\cos2x+B\sin2x+2x(-A\sin2x+B\cos2x)
-\\ \arraytext{and}
-y_p''&=&-4A\sin2x+4B\cos2x-4x(A\cos2x+B\sin2x)\\
-&=&-4A\sin2x+4B\cos2x-4y_p \mbox{ (see \eqref{eq:5.5.6})},
-\end{eqnarray*}
+\begin{align*}
+y_p'&=A\cos2x+B\sin2x+2x(-A\sin2x+B\cos2x)\qquad\text{and}\\
+y_p''&=-4A\sin2x+4B\cos2x-4x(A\cos2x+B\sin2x)\\
+&=-4A\sin2x+4B\cos2x-4y_p \mbox{ (see \eqref{eq:5.5.6})},
+\end{align*}
 so
 \[
 y_p''+4y_p=-4A\sin2x+4B\cos2x.
@@ -3893,28 +3898,27 @@ and
 \end{equation}
 so
 \begin{equation} \label{eq:5.5.11}
-\begin{array}{rcl}
-y_p''+3y_p'+2y_p&=&\left[A_0+3 A_1+3 B_0+2 B_1+(A_1+3 B_1)x\right]\cos
-x\\ &&+ \left[B_0+3 B_1-3 A_0-2 A_1+(B_1-3 A_1)x\right]\sin x.
-\end{array}
+\begin{aligned}
+y_p''+3y_p'+2y_p
+&=\left[A_0+3 A_1+3 B_0+2 B_1+(A_1+3 B_1)x\right]\cos x\\
+&\;+ \left[B_0+3 B_1-3 A_0-2 A_1+(B_1-3 A_1)x\right]\sin x.
+\end{aligned}
 \end{equation}
 Comparing the coefficients of $x\cos x$, $x\sin x$, $\cos x$, and
 $\sin x$ here with the corresponding coefficients in \eqref{eq:5.5.7}
 shows that $y_p$ is a solution of \eqref{eq:5.5.7} if
-\[
-\begin{array}{rcr}
-\phantom{-3}A_1+3B_1&=&20\phantom{.}\\
--3A_1+\phantom{3}B_1&=&0\phantom{.}\\
-\phantom{-3}A_0+3B_0+3A_1+2B_1&=&16\phantom{.}\\
--3A_0+\phantom{3}B_0-2A_1+3B_1&=&10.
-\end{array}
-\]
+\begin{align*}
+\phantom{-3}A_1+3B_1&=20\phantom{.}\\
+-3A_1+\phantom{3}B_1&=0\phantom{.}\\
+\phantom{-3}A_0+3B_0+3A_1+2B_1&=16\phantom{.}\\
+-3A_0+\phantom{3}B_0-2A_1+3B_1&=10.
+\end{align*}
 Solving the first two equations yields $A_1=2$, $B_1=6$.
 Substituting these into the last two equations  yields
-\begin{eqnarray*}
-\phantom{-3}A_0+3B_0&=&16-3A_1-2B_1=-2\phantom{.}\\
--3A_0+\phantom{3}B_0&=&10+2A_1-3B_1=-4.
- \end{eqnarray*}
+\begin{align*}
+\phantom{-3}A_0+3B_0&=16-3A_1-2B_1=-2\phantom{.}\\
+-3A_0+\phantom{3}B_0&=10+2A_1-3B_1=-4.
+\end{align*}
 Solving these equations yields $A_0=1$, $B_0=-1$.
 Substituting $A_0=1$, $A_1=2$, $B_0=-1$, $B_1=6$ into
 \eqref{eq:5.5.8} shows that
@@ -3989,13 +3993,12 @@ or $x\sin x$,  \eqref{eq:5.5.14} can't satisfy
 \eqref{eq:5.5.12} no matter how we choose $A_0$, $A_1$, $B_0$, and $B_1$.
 
 Now let $y_p$ be as in \eqref{eq:5.5.13}. Then
-\begin{eqnarray*}
-y_p'&=&\left[A_0+(2A_1+B_0)x+B_1x^2\right]\cos x\\ &&
-+\left[B_0+(2B_1-A_0)x-A_1x^2\right]\sin x\\  \arraytext{and}
-y_p''&=&
-\left[2A_1+2B_0-(A_0-4B_1)x-A_1x^2\right]\cos x\\ &&+
-\left[2B_1-2A_0-(B_0+4A_1)x-B_1x^2\right]\sin x,
-\end{eqnarray*}
+\begin{align*}
+y_p'&=\left[A_0+(2A_1+B_0)x+B_1x^2\right]\cos x\\
+&\;+\left[B_0+(2B_1-A_0)x-A_1x^2\right]\sin x\qquad \text{and}\\
+y_p''&=\left[2A_1+2B_0-(A_0-4B_1)x-A_1x^2\right]\cos x\\
+&\;+\left[2B_1-2A_0-(B_0+4A_1)x-B_1x^2\right]\sin x,
+\end{align*}
 so
 \[
 y_p''+y_p=(2A_1+2B_0+4B_1x)\cos x+(2B_1-2A_0-4A_1x)\sin x.
@@ -4004,14 +4007,12 @@ Comparing the  coefficients of $\cos x$ and
 $\sin x$ here  with the corresponding coefficients  in \eqref{eq:5.5.12}
 shows that
 $y_p$ is a solution of \eqref{eq:5.5.12} if
-\[
-\begin{array}{rcr}
-\phantom{-}4B_1&=&-4\phantom{.}\\
--4A_1&=&-8\phantom{.}\\
-\phantom{-}2B_0+2A_1&=&8\phantom{.}\\
--2A_0+2B_1&=&-8.
-\end{array}
-\]
+\begin{align*}
+\phantom{-}4B_1&=-4\phantom{.}\\
+-4A_1&=-8\phantom{.}\\
+\phantom{-}2B_0+2A_1&=8\phantom{.}\\
+-2A_0+2B_1&=-8.
+\end{align*}
 The solution of this system is  $A_1=2$, $B_1=-1$, $A_0=3$, $B_0=2$.
   Therefore
 \[
@@ -4047,13 +4048,13 @@ y''-3y'+2y=e^{-2x}\left[2\cos 3x-(34-150x)\sin 3x\right].
 
 \solution
 Let $y=ue^{-2x}$. Then
-\begin{eqnarray*}
-y''-3y'+2y&=&e^{-2x}\left[(u''-4u'+4u)-3(u'-2u)+2u\right]\\
-&=&e^{-2x}(u''-7u'+12u)\\ &=&
-e^{-2x}\left[2\cos 3x-(34-150x)\sin 3x\right]
-\end{eqnarray*}
+\begin{align*}
+y''-3y'+2y&=e^{-2x}\left[(u''-4u'+4u)-3(u'-2u)+2u\right]\\
+&=e^{-2x}(u''-7u'+12u)\\
+&=e^{-2x}\left[2\cos 3x-(34-150x)\sin 3x\right]
+\end{align*}
 if
- \begin{equation} \label{eq:5.5.17}
+\begin{equation} \label{eq:5.5.17}
 u''-7u'+12u=2\cos 3x-(34-150x)\sin 3x.
 \end{equation}
 Since $\cos3x$ and $\sin3x$ aren't solutions of
@@ -4067,34 +4068,34 @@ of \eqref{eq:5.5.17} of the form
 u_p=(A_0+A_1x)\cos 3x +(B_0+B_1x)\sin 3x.
 \end{equation}
 Then
-\begin{eqnarray*}
-u_p'&=&(A_1+3B_0+3B_1x)\cos 3x+(B_1-3A_0-3A_1x)\sin 3x\\
-\arraytext{and}
-u_p''&=&(-9A_0+6B_1-9A_1x)\cos 3x-(9B_0+6A_1+9B_1x)\sin 3x,
-\end{eqnarray*}
+\begin{align*}
+u_p'&=(A_1+3B_0+3B_1x)\cos 3x+(B_1-3A_0-3A_1x)\sin 3x\qquad\text{and}\\
+u_p''&=(-9A_0+6B_1-9A_1x)\cos 3x-(9B_0+6A_1+9B_1x)\sin 3x,
+\end{align*}
 so
-\begin{eqnarray*}
-u_p''-7u_p'+12u_p&=&\left[3A_0-21B_0-7A_1+6B_1+(3A_1-21B_1)x\right]\cos
-3x\\ &&+\left[21A_0+3B_0-6A_1-7B_1+(21A_1+3B_1)x\right]\sin 3x.
-\end{eqnarray*}
+\begin{align*}
+u_p''-7u_p'+12u_p
+&=\left[3A_0-21B_0-7A_1+6B_1+(3A_1-21B_1)x\right]\cos3x\\
+&\;+\left[21A_0+3B_0-6A_1-7B_1+(21A_1+3B_1)x\right]\sin 3x.
+\end{align*}
 Comparing the coefficients of $x\cos 3x$, $x\sin 3x$, $\cos 3x$, and
 $\sin 3x$ here with the corresponding coefficients on the right side
 of \eqref{eq:5.5.17} shows that $u_p$ is a solution of \eqref{eq:5.5.17} if
 \begin{equation} \label{eq:5.5.19}
-\begin{array}{rcr}
-3A_1-21B_1&=&0\phantom{.}\\
-21A_1+\phantom{2}3B_1&=&150\phantom{.}\\
-3A_0-21B_0-7A_1+\phantom{2}6B_1&=&\phantom{-3}2\phantom{.}\\
-21A_0+\phantom{2}3B_0-6A_1-\phantom{5}7B_1&=&-34.
-\end{array}
+\begin{aligned}
+3A_1-21B_1&=0\phantom{.}\\
+21A_1+\phantom{2}3B_1&=150\phantom{.}\\
+3A_0-21B_0-7A_1+\phantom{2}6B_1&=\phantom{-3}2\phantom{.}\\
+21A_0+\phantom{2}3B_0-6A_1-\phantom{5}7B_1&=-34.
+\end{aligned}
 \end{equation}
 Solving the first two equations yields $A_1=7$, $B_1=1$.
 Substituting these values into the last two equations of \eqref{eq:5.5.19}
 yields
-\begin{eqnarray*}
-\phantom{2}3A_0-21B_0&=&\phantom{-3}2+7A_1-6B_1=45\phantom{.}\\
-21A_0+\phantom{2}3B_0&=&-34+6A_1+7B_1=15.
-\end{eqnarray*}
+\begin{align*}
+\phantom{2}3A_0-21B_0&=\phantom{-3}2+7A_1-6B_1=45\phantom{.}\\
+21A_0+\phantom{2}3B_0&=-34+6A_1+7B_1=15.
+\end{align*}
 Solving this system  yields  $A_0=1$, $B_0=-2$.
 Substituting $A_0=1$, $A_1=7$, $B_0=-2$, and $B_1=1$ into
 \eqref{eq:5.5.18} shows that
@@ -4116,11 +4117,11 @@ y''+2y'+5y=e^{-x}\left[(6-16x)\cos2x-(8+8x)\sin2x\right].
 
 \solution
 Let $y=ue^{-x}$. Then
-\begin{eqnarray*}
-y''+2y'+5y&=&e^{-x}\left[(u''-2u'+u)+2(u'-u)+5u\right]\\
-&=&e^{-x}(u''+4u)\\ &=&
-e^{-x}\left[(6-16x)\cos2x-(8+8x)\sin2x\right]
-\end{eqnarray*}
+\begin{align*}
+y''+2y'+5y&=e^{-x}\left[(u''-2u'+u)+2(u'-u)+5u\right]\\
+&=e^{-x}(u''+4u)\\
+&=e^{-x}\left[(6-16x)\cos2x-(8+8x)\sin2x\right]
+\end{align*}
 if
 \begin{equation} \label{eq:5.5.21}
 u''+4u=(6-16x)\cos2x-(8+8x)\sin2x.
@@ -4136,12 +4137,14 @@ of \eqref{eq:5.5.21} of the form
 u_p=(A_0x+A_1x^2)\cos2x+(B_0x+B_1x^2)\sin2x.
 \]
 Then
-\begin{eqnarray*}
-u_p'&=&\left[A_0+(2A_1+2B_0)x+2B_1x^2\right]\cos2x \\ &&
-+\left[B_0+(2B_1-2A_0)x-2A_1x^2\right]\sin2x\\ \arraytext{and}
-u_p''&=&\left[2A_1+4B_0-(4A_0-8B_1)x-4A_1x^2\right]\cos2x\\ &&
-+\left[2B_1-4A_0-(4B_0+8A_1)x-4B_1x^2\right]\sin2x,
-\end{eqnarray*}
+\begin{align*}
+u_p'
+&=\left[A_0+(2A_1+2B_0)x+2B_1x^2\right]\cos2x \\
+&\;+\left[B_0+(2B_1-2A_0)x-2A_1x^2\right]\sin2x\qquad\text{and}\\
+u_p''
+&=\left[2A_1+4B_0-(4A_0-8B_1)x-4A_1x^2\right]\cos2x\\
+&\;+\left[2B_1-4A_0-(4B_0+8A_1)x-4B_1x^2\right]\sin2x,
+\end{align*}
 so
 \[
 u_p''+4u_p=(2A_1+4B_0+8B_1x)\cos2x+(2B_1-4A_0-8A_1x)\sin2x.
@@ -4152,12 +4155,12 @@ corresponding
 coefficients on the right side of \eqref{eq:5.5.21} shows that $u_p$
 is a solution of \eqref{eq:5.5.21} if
 \begin{equation} \label{eq:5.5.22}
-\begin{array}{rcr}
-8B_1&=&-16\phantom{.}\\
--8A_1&=&-\phantom{1}8\phantom{.}\\
-\phantom{-}4B_0+2A_1&=&6\phantom{.}\\
--4A_0+2B_1&=&-8.
-\end{array}
+\begin{aligned}
+8B_1&=-16\phantom{.}\\
+-8A_1&=-\phantom{1}8\phantom{.}\\
+\phantom{-}4B_0+2A_1&=6\phantom{.}\\
+-4A_0+2B_1&=-8.
+\end{aligned}
 \end{equation}
 The solution of this system is  $A_1=1$, $B_1=-2$, $B_0=1$, $A_0=1$.
 Therefore
@@ -4307,20 +4310,18 @@ Verify that if
 y_p=A(x)\cos\omega x+B(x)\sin\omega x
 \]
 where $A$ and $B$ are twice differentiable, then
-\begin{eqnarray*}
- y_p'&=&(A'+\omega B)\cos\omega x+(B'-\omega A)
-\sin\omega x\mbox{ and}\\
- y_p''&=&(A''+2\omega B'-\omega^2A)\cos\omega x
+\begin{align*}
+ y_p'&=(A'+\omega B)\cos\omega x+(B'-\omega A)\sin\omega x\mbox{ and}\\
+ y_p''&=(A''+2\omega B'-\omega^2A)\cos\omega x
 +(B''-2\omega A'-\omega^2B)\sin\omega x.
-\end{eqnarray*}
+\end{align*}
 \item % (b)
 Use the results of \part{a}  to verify that
-\begin{eqnarray*}
-ay_p''+by_p'+cy_p&=&\left[(c-a\omega^2)A+b\omega B+2a\omega
-B'+bA'+aA''\right] \cos\omega x+\\[2\jot] &&
-\left[-b\omega A+(c-a\omega^2)B-2a\omega A'+bB'+aB''\right]\sin\omega
-x.
-\end{eqnarray*}
+\begin{align*}
+ay_p''+by_p'+cy_p&=\left[(c-a\omega^2)A+b\omega B+2a\omega
+B'+bA'+aA''\right] \cos\omega x\\[2\jot]
+&\;+\left[-b\omega A+(c-a\omega^2)B-2a\omega A'+bB'+aB''\right]\sin\omega x.
+\end{align*}
 \item % (c)
 Use the results of \part{a}  to verify that
 \[
@@ -4354,29 +4355,21 @@ B(x)=B_0+B_1x+\cdots+B_kx^k
 \eqno{\rm (A)}
 \]
 such that
-\[
-\begin{array}{lcl}
-\quad (c-a\omega^2)A+b\omega B+2a\omega
-B'+bA'+aA''&=&P\phantom{.}\\[2\jot]
--b\omega A+(c-a\omega^2)B-2a\omega A'+bB'+aB''&=&Q,
-\end{array}
-\]
+\begin{align*}
+\quad (c-a\omega^2)A+b\omega B+2a\omega B'+bA'+aA''&=P\phantom{.}\\[2\jot]
+-b\omega A+(c-a\omega^2)B-2a\omega A'+bB'+aB''&=Q,
+\end{align*}
 where $(A_k,B_k)$, $(A_{k-1},B_{k-1})$, \dots,$(A_0,B_0)$ can be computed
 successively by solving the systems
-\[
-\begin{array}{lcl}
-\phantom{-}(c-a\omega^2)A_k+b\omega B_k&=&p_k\phantom{.}\\[2\jot]
--b\omega A_k+(c-a\omega^2)B_k&=&q_k,
-\end{array}
-\]
+\begin{align*}
+\phantom{-}(c-a\omega^2)A_k+b\omega B_k&=p_k\phantom{.}\\[2\jot]
+-b\omega A_k+(c-a\omega^2)B_k&=q_k,
+\end{align*}
 and, if $1\le r\le k$,
-\[
-\begin{array}{lcl}
-\phantom{-}(c-a\omega^2)A_{k-r}+b\omega
-B_{k-r}&=&p_{k-r}+\cdots\phantom{.}\\[2\jot]
--b\omega A_{k-r}+(c-a\omega^2)B_{k-r}&=&q_{k-r}+\cdots,
-\end{array}
-\]
+\begin{align*}
+\phantom{-}(c-a\omega^2)A_{k-r}+b\omega B_{k-r}&=p_{k-r}+\cdots\phantom{.}\\[2\jot]
+-b\omega A_{k-r}+(c-a\omega^2)B_{k-r}&=q_{k-r}+\cdots,
+\end{align*}
 where the terms indicated by ``$\cdots$'' depend upon the previously
 computed coefficients with subscripts greater than $k-r$.
 Conclude from this and Exercise~\ref{exer:5.5.36}\part{b} that
@@ -4403,25 +4396,23 @@ A(x)=A_0x+A_1x^2+\cdots+A_kx^{k+1}\mbox{\quad and \quad}
  B(x)=B_0x+B_1x^2+\cdots+B_kx^{k+1}
 \]
 such that
-\[
-\begin{array}{rcl}
-a(A''+2\omega B')&=&P\\[2\jot]
-a(B''-2\omega A')&=&Q,
-\end{array}
-\]
+\begin{align*}
+a(A''+2\omega B')&=P\\[2\jot]
+a(B''-2\omega A')&=Q,
+\end{align*}
 where the pairs $(A_k,B_k)$, $(A_{k-1},B_{k-1})$, \dots, $(A_0,B_0)$ can be
 computed successively as follows:
-\begin{eqnarray*}
-A_k&=&-\frac{q_k}{2a\omega(k+1)}\\[2\jot]
-B_k&=&\phantom{-}\frac{p_k}{2a\omega(k+1)},
-\end{eqnarray*}
+\begin{align*}
+A_k&=-\frac{q_k}{2a\omega(k+1)}\\[2\jot]
+B_k&=\phantom{-}\frac{p_k}{2a\omega(k+1)},
+\end{align*}
 and, if $k\ge 1$,
-\begin{eqnarray*}
-A_{k-j}&=&-\frac{1}{2\omega}
+\begin{align*}
+A_{k-j}&=-\frac{1}{2\omega}
 \left[\frac{q_{k-j}}{a(k-j+1)}-(k-j+2)B_{k-j+1}\right]\\[2\jot]
-B_{k-j}&=&\phantom{-}\frac{1}{2\omega}
+B_{k-j}&=\phantom{-}\frac{1}{2\omega}
 \left[\frac{p_{k-j}}{a(k-j+1)}-(k-j+2)A_{k-j+1}\right]
-\end{eqnarray*}
+\end{align*}
 for $1\le j\le k$.
 Conclude that (B) with this choice of the
 polynomials $A$ and $B$ is a particular solution of
@@ -4430,7 +4421,7 @@ polynomials $A$ and $B$ is a particular solution of
 
 \item\label{exer:5.5.38}
 Show that  Theorem~\ref{thmtype:5.5.1} implies the next theorem:
-\emph{\color{blue}Suppose $\omega$ is a positive  number and $P$ and $Q$
+{\color{blue}\itshape Suppose $\omega$ is a positive  number and $P$ and $Q$
 are polynomials. Let $k$ be the larger of the degrees of $P$ and $Q$.
 Then the equation
 \[
@@ -4503,22 +4494,21 @@ where $c$ is a constant of integration.
 \end{alist}
 
 \item\label{exer:5.5.40}
+% TODO a--f are in two columns
 Use the method of Exercise~\ref{exer:5.5.39} to evaluate the integral.
-
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $\int x^2\cos x\,dx$ &
- \part{b} $\int x^2e^x\cos x\,dx$ \\[2\jot]
-  \part{c} $\int xe^{-x}\sin2x\,dx$ &
- \part{d} $\int x^2e^{-x}\sin x\,dx$ \\[2\jot]
-  \part{e} $\int x^3e^x\sin x\,dx$ &
- \part{f} $\int e^x\left[x\cos x-(1+3x)\sin x\right]\,dx$ \\[2\jot]
-\end{tabular}
-
- \part{g} $\int e^{-x}\left[(1+x^2)\cos x+(1-x^2)\sin x\right]\,dx$
+\begin{enumext*}[label=\alph*,font=\bfseries,wrap-label={(#1)},labelsep=1em,columns=2]
+% TODO bug https://github.com/pablgonz/enumext/issues/5
+\setcounter{enumXvii}{0}
+\item $\int x^2\cos x\,dx$
+\item $\int x^2e^x\cos x\,dx$
+\item $\int xe^{-x}\sin2x\,dx$
+\item $\int x^2e^{-x}\sin x\,dx$
+\item $\int x^3e^x\sin x\,dx$
+\item $\int e^x\left[x\cos x-(1+3x)\sin x\right]\,dx$
+\item(2) $\int e^{-x}\left[(1+x^2)\cos x+(1-x^2)\sin x\right]\,dx$
+\end{enumext*}
 
 \end{exerciselist}
-
-
 
 \section{Reduction of Order}
 
@@ -4537,17 +4527,17 @@ Unlike the method of undetermined coefficients, it does not require
 $P_0$, $P_1$, and $P_2$ to be constants, or $F$ to be of any special
 form.
 
-By now you shoudn't be surprised that we look for
+By now you shouldn't be surprised that we look for
 solutions of \eqref{eq:5.6.1} in the form
 \begin{equation} \label{eq:5.6.3}
 y=uy_1
 \end{equation}
 where $u$ is to be determined so that $y$ satisfies \eqref{eq:5.6.1}.
 Substituting \eqref{eq:5.6.3} and
-\[\begin{array}{rcl}
-y'&=& u'y_1+uy_1' \\
-y''&=& u''y_1+2u'y_1'+uy_1''
-\end{array}\]
+\begin{align*}
+y'&= u'y_1+uy_1' \\
+y''&= u''y_1+2u'y_1'+uy_1''
+\end{align*}
 into \eqref{eq:5.6.1} yields
 \[
 P_0(x)(u''y_1+2u'y_1'+uy_1'')+P_1(x)(u'y_1+uy_1')+P_2(x)uy_1=F(x).
@@ -4593,11 +4583,11 @@ As a byproduct of \part{a}, find a fundamental set of solutions of
 If
 $y=ue^x$, then $y'=u'e^x+ue^x$ and
 $y''=u''e^x+2u'e^x+ue^x$, so
-\begin{eqnarray*}
-xy''-(2x+1)y'+(x+1)y&=&x(u''e^x+2u'e^x+ue^x)\\
-&&-(2x+1)(u'e^x+ue^x)+(x+1)ue^x\\
-&=&(xu''-u')e^x.
-\end{eqnarray*}
+\begin{align*}
+xy''-(2x+1)y'+(x+1)y&=x(u''e^x+2u'e^x+ue^x)\\
+&\;-(2x+1)(u'e^x+ue^x)+(x+1)ue^x\\
+&=(xu''-u')e^x.
+\end{align*}
 Therefore $y=ue^x$ is a solution of \eqref{eq:5.6.6} if and only if
 \[
 (xu''-u')e^x=x^2,
@@ -4682,10 +4672,10 @@ x^2y''+xy'-y=x^2+1, \quad   y(1)=2,\;  y'(1)=-3.
 \end{example}
 
 \solutionpart{a}  If $y=ux$, then $y'=u'x+u$ and $y''=u''x+2u'$, so
-\begin{eqnarray*}
-x^2y''+xy'-y&=&x^2(u''x+2u')+x(u'x+u)-ux\\
-&=&x^3u''+3x^2u'.
-\end{eqnarray*}
+\begin{align*}
+x^2y''+xy'-y&=x^2(u''x+2u')+x(u'x+u)-ux\\
+&=x^3u''+3x^2u'.
+\end{align*}
 Therefore $y=ux$ is a solution of \eqref{eq:5.6.12} if and only if
 \[
 x^3u''+3x^2u'=x^2+1,
@@ -4742,10 +4732,10 @@ y'=\frac{2x}{3}+c_1-\frac{c_2}{x^2}.
 \end{equation}
  Setting $x=1$ in  \eqref{eq:5.6.16} and  \eqref{eq:5.6.17} and imposing the
 initial conditions $y(1)=2$ and $y'(1)=-3$  yields
-\begin{eqnarray*}
-c_1+c_2&=& \phantom{-}\frac{8}{3} \\
-c_1-c_2&=& -\frac{11}{3}.
-\end{eqnarray*}
+\begin{align*}
+c_1+c_2&= \phantom{-}\frac{8}{3} \\
+c_1-c_2&= -\frac{11}{3}.
+\end{align*}
 Solving these  equations yields $c_1=-1/2$, $c_2=19/6$.
 Therefore the solution of \eqref{eq:5.6.12} is
 \[
@@ -4769,10 +4759,10 @@ x^2y''-3xy'+3y=0,
 
 \solution
  If $y=ux$ then $y'=u'x+u$ and $y''=u''x+2u'$, so
-\begin{eqnarray*}
-x^2y''-3xy'+3y&=&x^2(u''x+2u')-3x(u'x+u)+3ux\\
-&=&x^3u''-x^2u'.
-\end{eqnarray*}
+\begin{align*}
+x^2y''-3xy'+3y&=x^2(u''x+2u')-3x(u'x+u)+3ux\\
+&=x^3u''-x^2u'.
+\end{align*}
 Therefore $y=ux$ is a solution of \eqref{eq:5.6.18} if and only if
 \[
 x^3u''-x^2u'=0.
@@ -5156,10 +5146,10 @@ last equation  as
 \end{equation}
 Therefore $y_p$ in \eqref{eq:5.7.3} satisfies \eqref{eq:5.7.1} if
 \begin{equation} \label{eq:5.7.9}
-\begin{array}{rcl}
-u_1'y_1+u_2'y_2 &=& 0  \\
-u_1'y_1'+u_2'y_2' &=& \dst\frac{F}{P_0},
-\end{array}
+\begin{aligned}
+u_1'y_1+u_2'y_2 &= 0  \\
+u_1'y_1'+u_2'y_2' &= \dst\frac{F}{P_0},
+\end{aligned}
 \end{equation}
 where the first equation is the same as \eqref{eq:5.7.5} and the second is
 from \eqref{eq:5.7.8}.
@@ -5169,10 +5159,10 @@ and $u_2'$. (The method that we use here will always work, but simpler
 methods usually work when you're dealing with specific equations.) To
 obtain $u_1'$, multiply the first equation in \eqref{eq:5.7.9} by $y_2'$
 and the second equation by $y_2$. This yields
-\begin{eqnarray*}
-u_1'y_1y_2'+u_2'y_2y_2'&=& 0  \\
-u_1'y_1'y_2+u_2'y_2'y_2 &=& \frac{Fy_2}{P_0}.
-\end{eqnarray*}
+\begin{align*}
+u_1'y_1y_2'+u_2'y_2y_2'&= 0  \\
+u_1'y_1'y_2+u_2'y_2'y_2 &= \frac{Fy_2}{P_0}.
+\end{align*}
 Subtracting the second equation from the first yields
 \begin{equation} \label{eq:5.7.10}
 u_1'(y_1y_2'-y_1'y_2)=-\frac{Fy_2}{P_0}.
@@ -5207,10 +5197,10 @@ to remind yourself of what you're doing.
 \item % (b)
 Write the system
 \begin{equation} \label{eq:5.7.14}
-\begin{array}{rcl}
-u_1'y_1+u_2'y_2 &=& 0  \\
-u_1'y_1'+u_2'y_2' &=& \dst\frac{F}{P_0}
-\end{array}
+\begin{aligned}
+u_1'y_1+u_2'y_2 &= 0  \\
+u_1'y_1'+u_2'y_2' &= \dst\frac{F}{P_0}
+\end{aligned}
 \end{equation}
 for the specific problem  you're trying to solve.
 \item % (c)
@@ -5242,10 +5232,10 @@ We set
 y_p=u_1x+u_2x^2,
 \]
 where
-\begin{eqnarray*}
-u_1'x+\phantom{2}u_2'x^2&=&0\\
-u_1'\phantom{x}+2u_2'x\phantom{^2}&=&\frac{x^{9/2}}{x^2}=x^{5/2}.
-\end{eqnarray*}
+\begin{align*}
+u_1'x+\phantom{2}u_2'x^2&=0\\
+u_1'\phantom{x}+2u_2'x\phantom{^2}&=\frac{x^{9/2}}{x^2}=x^{5/2}.
+\end{align*}
 From the first equation, $u_1'=-u_2'x$. Substituting this into the
 second equation yields $u_2'x=x^{5/2}$, so $u_2'=x^{3/2}$ and
 therefore $u_1'=-u_2'x=-x^{5/2}$. Integrating and taking the constants
@@ -5283,10 +5273,10 @@ We set
 y_p=u_1x+u_2e^x,
 \]
 where
-\begin{eqnarray*}
-u_1'x+u_2'e^x&=&0\\
-u_1'\phantom{x}+u_2'e^x&=&\frac{(x-1)^2}{x-1}=x-1.
-\end{eqnarray*}
+\begin{align*}
+u_1'x+u_2'e^x&=0\\
+u_1'\phantom{x}+u_2'e^x&=\frac{(x-1)^2}{x-1}=x-1.
+\end{align*}
 Subtracting the first equation from the second yields
 $-u_1'(x-1)=x-1$, so $u_1'=-1$. From this and the first equation,
 $u_2'=-xe^{-x}u_1'=xe^{-x}$.
@@ -5350,10 +5340,10 @@ $y_1=e^{-x}$ and $y_2=e^{-2x}$ form a fundamental set of solutions of
 y_p=u_1e^{-x}+u_2e^{-2x},
 \]
 where
-\begin{eqnarray*}
-\phantom{-}u_1'e^{-x}+\phantom{2}u_2'e^{-2x}&=&0\\
--u_1'e^{-x}-2u_2'e^{-2x}&=&\frac{1}{1+e^x}.
-\end{eqnarray*}
+\begin{align*}
+\phantom{-}u_1'e^{-x}+\phantom{2}u_2'e^{-2x}&=0\\
+-u_1'e^{-x}-2u_2'e^{-2x}&=\frac{1}{1+e^x}.
+\end{align*}
 Adding these two equations yields
 \[
 -u_2'e^{-2x}=\frac{1}{1+e^x},\mbox{\quad so \quad}
@@ -5370,16 +5360,16 @@ u_1=\int\frac{e^x}{1+e^x}\,dx=\int \frac{dv}{1+v}
 =\ln(1+v)=\ln(1+e^x)
 \]
 and
-\begin{eqnarray*}
-u_2&=&-\int\frac{e^{2x}}{1+e^x}\,dx=-\int \frac{v}{1+v}\,dv
-=\int\left[\frac{1}{1+v}-1\right]\,dv \\ [2\jot]
-&=&\ln(1+v)-v=\ln(1+e^x)-e^x.
-\end{eqnarray*}
+\begin{align*}
+u_2&=-\int\frac{e^{2x}}{1+e^x}\,dx=-\int \frac{v}{1+v}\,dv
+=\int\left[\frac{1}{1+v}-1\right]\,dv \\[2\jot]
+&=\ln(1+v)-v=\ln(1+e^x)-e^x.
+\end{align*}
 Therefore
-\begin{eqnarray*}
-y_p&=&u_1e^{-x}+u_2e^{-2x}\\
-&=&[\ln(1+e^x)]e^{-x}+\left[\ln(1+e^x)-e^x\right]e^{-2x},
-\end{eqnarray*}
+\begin{align*}
+y_p&=u_1e^{-x}+u_2e^{-2x}\\
+&=[\ln(1+e^x)]e^{-x}+\left[\ln(1+e^x)-e^x\right]e^{-2x},
+\end{align*}
 so
 \[
 y_p=\left(e^{-x}+e^{-2x}\right)\ln(1+e^x)-e^{-x}.
@@ -5423,10 +5413,12 @@ on $(-1,1)$ in the form
 y_p=\frac{u_1}{x-1}+\frac{u_2}{x+1},
 \]
 where
-\begin{eqnarray}
-\phantom{-}\frac{u_1'}{\phantom{(}x-1\phantom{)^2}}+\frac{u_2'}{\phantom{(}x+1\phantom{)^2}}&=&0\label{eq:5.7.22}\\
--\frac{u_1'}{(x-1)^2}-\frac{u_2'}{(x+1)^2}&=&\frac{2}{(x+1)(x^2-1)}.\nonumber
-\end{eqnarray}
+\begin{align}
+\phantom{-}\frac{u_1'}{\phantom{(}x-1\phantom{)^2}}+\frac{u_2'}{\phantom{(}x+1\phantom{)^2}}
+&=0\label{eq:5.7.22}\\
+-\frac{u_1'}{(x-1)^2}-\frac{u_2'}{(x+1)^2}
+&=\frac{2}{(x+1)(x^2-1)}.\nonumber
+\end{align}
 Multiplying the first equation by $1/(x-1)$ and adding the result to
 the second equation yields
 \begin{equation} \label{eq:5.7.23}
@@ -5442,21 +5434,21 @@ Since
 u_1'=-\frac{x-1}{x+1}u_2'=-\frac{x-1}{x+1}.
 \]
 Integrating and taking the constants of integration to be zero yields
-\begin{eqnarray*}
-u_1&=&-\int\frac{x-1}{x+1}\,dx=-\int\frac{x+1-2}{x+1}\,dx \\
-&=&\int\left[\frac{2}{x+1}-1\right]\,dx=2\ln(x+1)-x
-\end{eqnarray*}
+\begin{align*}
+u_1&=-\int\frac{x-1}{x+1}\,dx=-\int\frac{x+1-2}{x+1}\,dx \\
+&=\int\left[\frac{2}{x+1}-1\right]\,dx=2\ln(x+1)-x
+\end{align*}
 and
 \[
 u_2=\int\,dx=x.
 \]
 Therefore
-\begin{eqnarray*}
-y_p&=&\frac{u_1}{x-1}+\frac{u_2}{x+1}=\left[2\ln(x+1)-x\right]\frac{1}{x-1}
+\begin{align*}
+y_p&=\frac{u_1}{x-1}+\frac{u_2}{x+1}=\left[2\ln(x+1)-x\right]\frac{1}{x-1}
 +x\frac{1}{x+1} \\
-&=&\frac{2\ln(x+1)}{x-1}+x\left[\frac{1}{x+1}-\frac{1}{x-1}\right]
+&=\frac{2\ln(x+1)}{x-1}+x\left[\frac{1}{x+1}-\frac{1}{x-1}\right]
 =\frac{2\ln(x+1)}{x-1}-\frac{2x}{(x+1)(x-1)}.
-\end{eqnarray*}
+\end{align*}
 However, since
 \[
 \frac{2x}{(x+1)(x-1)}=\left[\frac{1}{x+1}+\frac{1}{x-1}\right]
@@ -5475,17 +5467,17 @@ y'=\frac{2}{x^2-1}-\frac{2\ln(x+1)}{(x-1)^2}-\frac{c_1}{(x-1)^2}-\frac{c_2}{(x+1
 \]
 Setting $x=0$ in the last two equations and imposing the initial conditions
 $y(0)=-1$ and $y'(0)=-5$ yields the system
-\begin{eqnarray*}
--c_1+c_2&=&-1\phantom{.}\\
--2-c_1-c_2&=&-5.
-\end{eqnarray*}
+\begin{align*}
+-c_1+c_2&=-1\phantom{.}\\
+-2-c_1-c_2&=-5.
+\end{align*}
 The solution of this system is $c_1=2,\,c_2=1$.  Substituting
 these into
 \eqref{eq:5.7.24} yields
-\begin{eqnarray*}
-y&=&\frac{2\ln(x+1)}{x-1}+\frac{2}{x-1}+\frac{1}{x+1}\\
-&=&\frac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^2-1}
-\end{eqnarray*}
+\begin{align*}
+y&=\frac{2\ln(x+1)}{x-1}+\frac{2}{x-1}+\frac{1}{x+1}\\
+&=\frac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^2-1}
+\end{align*}
 as the solution of  \eqref{eq:5.7.21}. Figure~\ref{figure:5.7.1} is a graph
 of the solution.
 
@@ -5549,7 +5541,6 @@ parameters to find a particular solution.
 %&\vspace*{-5pt} 
 \item\label{exer:5.7.6} $y''-y=\dst\frac{4e^{-x}}{1-e^{-2x}}$
 %\end{tabular}
-\newpage
 
 
 \exercisetext{In Exercises \ref{exer:5.7.7}--\ref{exer:5.7.29} use variation
@@ -5659,7 +5650,6 @@ $(x-1)^2y''-(x^2-1)y'+(x+1)y=(x-1)^3e^x, \quad  y(0)=4,\quad y'(0)=-6$;
 
 $y_1=(x-1)e^x,\quad y_2=x-1$
 
-\newpage
 
 \exercisetext{In Exercises \ref{exer:5.7.33}--\ref{exer:5.7.35} use variation
 of parameters to solve the initial value problem and graph the
@@ -5713,23 +5703,18 @@ value problem
 y''+p(x)y'+q(x)y=f(x), \quad   y(x_0)=k_0,\;  y'(x_0)=k_1,
 \]
 is
-\[
-\begin{array}{rcl}
-y(x) &=& k_0y_1(x)+k_1y_2(x) \\
-& & \dst \qquad+\int^x_{x_0}\left(y_1(t)y_2(x)-
-y_1(x)y_2(t)\right)
+\begin{multline*}
+y(x) = k_0y_1(x)+k_1y_2(x) \\
++\int^x_{x_0}\left(y_1(t)y_2(x)-y_1(x)y_2(t)\right)
 f(t)\exp\left(\int^t_{x_0}p(s)\,ds\right)\,dt.
-\end{array}
-\]
+\end{multline*}
 \hint{Use Abel's formula for the Wronskian of $\{y_1,y_2\}$, and
 integrate $u_1'$ and $u_2'$ from $x_0$ to $x$.} Show also that
-\[
-\begin{array}{rcl}
-y'(x) &=& k_0y_1'(x)+k_1y_2'(x) \\[2\jot]
-& & \dst \qquad+\int^x_{x_0}\left(y_1(t)y_2'(x)-y_1'(x)y_2(t)
-\right)f(t)\exp\left(\int^t_{x_0}p(s)\,ds\right)\,dt.
-\end{array}
-\]
+\begin{multline*}
+y'(x) = k_0y_1'(x)+k_1y_2'(x) \\[2\jot]
++\int^x_{x_0}\left(y_1(t)y_2'(x)-y_1'(x)y_2(t)\right)
+f(t)\exp\left(\int^t_{x_0}p(s)\,ds\right)\,dt.
+\end{multline*}
 
 \item\label{exer:5.7.38}
 Suppose $f$ is continuous on an open interval
@@ -5752,18 +5737,17 @@ find a formula for the solution of the initial value problem
 y''+y=f(x), \quad  y(0)=k_0,\quad y'(0)=k_1.
 \]
 \hint{You will need the addition formulas for the sine and cosine:
-\begin{eqnarray*}
-\sin(A+B)&=&\sin A\cos B+\cos A\sin B\\
-\cos(A+B)&=&\cos A\cos B-\sin A\sin B.
-\end{eqnarray*}}
+\begin{align*}
+\sin(A+B)&=\sin A\cos B+\cos A\sin B\\
+\cos(A+B)&=\cos A\cos B-\sin A\sin B.
+\end{align*}}
 \end{alist}
 
 For the rest of this exercise assume that the improper
 integral
 $\int_{0}^\infty f(t)\,dt$ is absolutely convergent.
 
-\begin{alist}
-\setcounter{lcal}{1}
+\begin{alist}[resume]
 \item % (b)
 Show that if $y$ is a solution of
 \[

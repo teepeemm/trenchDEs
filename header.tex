@@ -6,7 +6,10 @@
 %\renewcommand{\rmdefault}{ptm}
 %\usepackage[scaled=0.92]{helvet}
 \usepackage[psamsfonts]{amsfonts}
-\usepackage{amsmath, amsbsy, wtrench}
+\usepackage{amsmath, amsbsy}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{capt-of}
 \usepackage[%dvips,
  bookmarks = true,
  colorlinks=true,
@@ -55,7 +58,7 @@ filecolor = blue,
 #1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
 % TODO
 \newcommand{\solutionpart}[1]{\vskip10pt\noindent{%\underbar
-\color{blue}\scshape Solution({\bf #1})\ }
+\color{blue}\scshape Solution({\bfseries #1})\ }
 }
 \newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
 \newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
@@ -92,3 +95,5 @@ Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
 \setlength{\oddsidemargin}{15.5pt}
 \setlength{\evensidemargin}{15.5pt}
 
+\title{Elementary Differential Equations}
+\author{William F. Trench}

@@ -31,9 +31,7 @@ SECTION~9.4  extends the
 method of  variation of parameters to  higher order
 equations.
 
-\vspace*{4.5in}
-\centerline{465}
-
+\newpage
 
 \section{Introduction to Linear Higher Order Equations}
 
@@ -443,7 +441,8 @@ Then $\{y_{1},y_{2},\dots y_{n}\}$ isn't  linearly independent on $(a,b).$
 \end{theorem}
 
 
-\proof Since $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{n}$
+\begin{proof}
+Since $\alpha_{1}$, $\alpha_{2}$, \dots, $\alpha_{n}$
 are not all zero,
 \eqref{eq:9.1.14} implies that
 \[
@@ -465,7 +464,7 @@ y_{1}^{(n-1)}(c)&y_{2}^{(n-1)}(c)(c)&\cdots& y_{n}^{(n-1)}(c)(c)\\
 \]
 \nopagebreak
 and Theorem~\ref{thmtype:9.1.4} implies the stated conclusion.
-\newpage
+\end{proof}
 
 
 
@@ -1287,7 +1286,7 @@ is a fundamental set of solutions of
 \end{equation}
 \end{theorem}
 
-\proof
+\begin{proof}
 We'll show that if
 \[
 f(x)=c_1+c_2x+\cdots+c_mx^{m-1}
@@ -1334,6 +1333,7 @@ c_1+c_2x+c\dots+c_{m-1}x^{m-1}=0
 \]
 for all $x$ in $(a,b)$.  However, we know from algebra that if this
 polynomial has more than $m-1$ zeros then $c_1=c_2=\cdots=c_n=0$.
+\end{proof}
 
 \begin{example}\label{example:9.2.5} \rm
 Find the general solution of
@@ -1551,20 +1551,17 @@ Find a fundamental set of solutions of the given equation, and verify
 that it's a fundamental set by evaluating  its Wronskian
 at $x=0$.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (a)} $(D-1)^2(D-2)y=0$
-&{\bf (b)} $(D^2+4)(D-3)y=0$
-\end{tabular}
-
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (c)} $(D^2+2D+2)(D-1)y=0$
-&{\bf (d)} $D^3(D-1)y=0$
-\end{tabular}
-
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (e)} $(D^2-1)(D^2+1)y=0$&
-{\bf (f)}  $(D^2-2D+2)(D^2+1)y=0$
-\end{tabular}
+%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+\begin{enumext*}[label=\alph*,font=\bfseries,wrap-label={(#1)},labelsep=1em,columns=2]
+% TODO bug https://github.com/pablgonz/enumext/issues/5
+\setcounter{enumXvii}{0}
+\item $(D-1)^2(D-2)y=0$
+\item $(D^2+4)(D-3)y=0$
+\item $(D^2+2D+2)(D-1)y=0$
+\item $D^3(D-1)y=0$
+\item $(D^2-1)(D^2+1)y=0$
+\item $(D^2-2D+2)(D^2+1)y=0$
+\end{enumext*}
 
 \exercisetext{In Exercises~\ref{exer:9.2.29}--\ref{exer:9.2.38} find a
 fundamental set of solutions.}
@@ -1575,25 +1572,26 @@ $(D^2+6D+13)(D-2)^2D^3y=0$
 \item\label{exer:9.2.30}
 $(D-1)^2(2D-1)^3(D^2+1)y=0$
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:9.2.31}  $(D^2+9)^3D^2y=0$
-&\item\label{exer:9.2.32} $(D-2)^3(D+1)^2Dy=0$
-\end{tabular}
+% TODO 31--38 in two columns
+%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+\item\label{exer:9.2.31}  $(D^2+9)^3D^2y=0$%&
+\item\label{exer:9.2.32} $(D-2)^3(D+1)^2Dy=0$
+%\end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:9.2.33} $(D^2+1)(D^2+9)^2(D-2)y=0$&
+%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+\item\label{exer:9.2.33} $(D^2+1)(D^2+9)^2(D-2)y=0$%&
 \item\label{exer:9.2.34} $(D^4-16)^2y=0$
-\end{tabular}
+%\end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:9.2.35} $(4D^2+4D+9)^3y=0$&
+%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+\item\label{exer:9.2.35} $(4D^2+4D+9)^3y=0$%&
 \item\label{exer:9.2.36} $D^3(D-2)^2(D^2+4)^2y=0$
-\end{tabular}
+%\end{tabular}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:9.2.37} $(4D^2+1)^2(9D^2+4)^3y=0$&
+%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+\item\label{exer:9.2.37} $(4D^2+1)^2(9D^2+4)^3y=0$%&
 \item\label{exer:9.2.38} $\left[(D-1)^4-16\right]y=0$
-\end{tabular}
+%\end{tabular}
 
 \item\label{exer:9.2.39}
 It can be shown that
@@ -1609,8 +1607,7 @@ a^{n-1}_1&a^{n-1}_2&\cdots&a^{n-1}_n\end{array}\right|=
 \]
 where the left side is  the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Vandermonde.html}
- {\color{blue}\itshape Vandermonde
-  determinant\/} and
+ {\color{blue}\itshape Vandermonde determinant} and
 the right side is the product of all factors of the form $(a_j-a_i)$
 with $i$ and $j$ between $1$ and $n$ and $i<j$.
 
@@ -2193,7 +2190,6 @@ that  \eqref{eq:9.3.11} has a particular solution of the form
 \begin{equation} \label{eq:9.3.12}
 u_p=(A_0x+A_1x^2)\cos x+(B_0x+B_1x^2)\sin x.
 \end{equation}
-\newpage
 
 
 
@@ -2864,7 +2860,6 @@ given the fundamental set of solutions of the complementary equation.
 \item\label{exer:9.4.1}
 $x^3y'''-x^2(x+3)y''+2x(x+3)y'-2(x+3)y=-4x^4$;\quad
 $\{x,\,x^2,\,xe^x\}$
-\newpage
 
 \item\label{exer:9.4.2}
 $y'''+6xy''+(6+12x^2)y'+(12x+8x^3)y=x^{1/2}e^{-x^2}$;\quad
@@ -2996,7 +2991,6 @@ $x^3y'''+x^2y''-2xy'+2y=x(x+1), \quad  y(-1)=-6,\quad y'(-1)=\dst\frac{43}{6},\q
 -\dst\frac{5}{2}$;\quad
 
   $\{x,\,x^2,\,1/x\}$
-\newpage
 
 \item\label{exer:9.4.28}
 $(3x-1)y'''-(12x-1)y''+9(x+1)y'-9y=2e^x(3x-1)^2, \quad  y(0)=\dst\frac{3}{4}$,

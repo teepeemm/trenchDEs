@@ -50,7 +50,6 @@ by a function known called \emph{\color{blue}integrating factor}.
 
 
 
-\centerline{29}
 \newpage
 
 \section{Linear First Order Equations}
@@ -226,8 +225,10 @@ y=ce^{ax}
 \end{equation}
 where
 \[
-c=\left\{\begin{array}{cl}\phantom{-}e^k&\mbox{if } y>0,
-\\ -e^k&\mbox{if } y<0.\end{array}\right.
+c=\begin{cases}
+\phantom{-}e^k&\mbox{if } y>0,\\
+-e^k&\mbox{if } y<0.
+\end{cases}
 \]
 This shows that every nontrivial solution of \eqref{eq:2.1.6} is of the
 form $y=ce^{ax}$ for some nonzero constant $c$. Since setting $c=0$
@@ -250,7 +251,8 @@ $a$.
 
 \begin{figure}[tbp]
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020101}
+  \includegraphics[%bb=-78 148 689 643,
+  width=5.67in,height=3.66in,keepaspectratio]{fig020101}
 \color{blue}
   \caption{Solutions of $y'-ay=0$, $y(0)=1$}
   \label{figure:2.1.1}
@@ -299,8 +301,11 @@ y=\frac{c}{x}
 \end{equation}
 where
 \[
-c=\left\{\begin{array}{cl}\phantom{-}e^k&\mbox{if } y>0,
-\\ -e^k&\mbox{if } y<0.\end{array}\right.
+c=
+\begin{cases}
+\phantom{-}e^k&\mbox{if } y>0,\\
+-e^k&\mbox{if } y<0.
+\end{cases}
 \]
 We've now shown that every solution of \eqref{eq:2.1.10} is given by
 \eqref{eq:2.1.11} for some choice of $c$. (Even though we assumed that $y$
@@ -331,10 +336,10 @@ The interval of validity of this solution is  $(0,\infty)$.
 
    \begin{figure}[tbp]
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020102}
+  \includegraphics[%bb=-78 148 689 643,
+  width=5.67in,height=3.66in,keepaspectratio]{fig020102}
 \color{blue}
-  \caption{Solutions of $xy'+y=0$ on $(0,\infty)$ and
-$(-\infty,0)$}
+  \caption{Solutions of $xy'+y=0$ on $(0,\infty)$ and $(-\infty,0)$}
   \label{figure:2.1.2}
 \end{figure}
 
@@ -364,7 +369,8 @@ P'(x)=p(x),\quad a<x<b.
 \end{equation}
 \end{theorem}
 
-\proof
+
+\begin{proof}
 If $y=ce^{-P(x)}$,  differentiating $y$ and using \eqref{eq:2.1.14}
 shows that
 \[
@@ -392,13 +398,17 @@ where $k$ is a constant. This implies that
 \]
 Since $P$ is defined for all $x$ in $(a,b)$  and an exponential can
 never equal zero,  we can take $I=(a,b)$, so $y$
-has zeros on $(a,b)$
+has no zeros on %$(a,b)$
 $(a,b)$, so we can rewrite the last equation as $y=ce^{-P(x)}$, where
 \[
-c=\left\{\begin{array}{cl}\phantom{-}e^k&\mbox{if } y>0\mbox{ on }
-(a,b),\\ -e^k&\mbox{if } y<0\mbox{ on }(a,b).\end{array}\right.
+c=\begin{cases}
+\phantom{-}e^k&\mbox{if } y>0\mbox{ on }(a,b),\\
+-e^k&\mbox{if } y<0\mbox{ on }(a,b).
+\end{cases}
 \]
+\end{proof}
 
+{
 \color{blue}
 \remark{Rewriting a first order differential equation so that one
 side depends only on $y$ and $y'$ and the other depends only on $x$
@@ -406,7 +416,7 @@ is called \emph{\color{blue}separation of variables}. We did this in
 Examples~ \ref{example:2.1.3} and  \ref{example:2.1.4}, and in rewriting
 \eqref{eq:2.1.12} as \eqref{eq:2.1.15}.We'llapply this method to nonlinear
 equations in Section~2.2.}
-\color{black}
+}
 
 \boxit{Linear Nonhomogeneous First Order Equations}
 
@@ -470,7 +480,6 @@ y'+2y=x^3e^{-2x}.
 \end{example}
 
 
-
 By applying \part{a} of Example~ \ref{example:2.1.3} with $a=-2$, we see
 that $y_1=e^{-2x}$ is a solution of the  complementary equation
 $y'+2y=0$. Therefore we seek solutions of \eqref{eq:2.1.18} in the form
@@ -498,14 +507,12 @@ for \eqref{eq:2.1.18}.
 
 \begin{figure}[tbp]
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020103}
+  \includegraphics[%bb=-78 148 689 643,
+  width=5.67in,height=3.66in,keepaspectratio]{fig020103}
 \color{blue}
   \caption{A direction field and integral curves for $y'+2y=x^{2}e^{-2x}$}
   \label{figure:2.1.3}
 \end{figure}
-
-
-
 
 
 \begin{example}\label{example:2.1.6}%\rm\mbox{}%\newline
@@ -522,8 +529,6 @@ y'+(\cot x)y=x\csc x,\quad y(\pi/2)=1.
 \end{equation}
 \end{alist}
 \end{example}
-
-
 
 \solutionpart{a} Here $p(x)=\cot x$ and $f(x)= x\csc x$ are both
 continuous except at the points $x=r\pi$, where $r$ is an integer.
@@ -551,16 +556,14 @@ so that
  y'=\frac{u'}{\sin x}-\frac{u\cos x}{\sin^2x}
 \end{equation}
 and
-\begin{equation} \label{eq:2.1.24}
-\begin{array}{rcl}
-y'+(\cot x)y&=&
-\dst\frac{u'}{\sin x}-\dst\frac{u\cos x}{\sin^2x}+\dst\frac{u\cot x}{\sin
-x}\\[2\jot]
-&=&\dst\frac{u'}{\sin x}-\dst\frac{u\cos x}{\sin^2x}+\dst\frac{u\cos
-x}{\sin^2 x}\\[2\jot]
-&=&\dst\frac{u'}{\sin x}.
-\end{array}
-\end{equation}
+\begin{align}
+y'+(\cot x)y
+&=\dst\frac{u'}{\sin x}-\dst\frac{u\cos x}{\sin^2x}+\dst\frac{u\cot x}{\sin
+x}\notag\\
+&=\dst\frac{u'}{\sin x}-\dst\frac{u\cos x}{\sin^2x}+\dst\frac{u\cos
+x}{\sin^2 x}\\\label{eq:2.1.24}
+&=\dst\frac{u'}{\sin x}.\notag
+\end{align}
 Therefore $y$ is a solution of \eqref{eq:2.1.20} if and only if
 \[
 u'/\sin x=x\csc x=x/\sin x\mbox{\quad or, equivalently, \quad} u'=x.
@@ -776,7 +779,8 @@ on $(a,b).$
 \end{alist}
 \end{theorem}
 
-\proof \part{a} To show that \eqref{eq:2.1.32} is the general solution of
+\begin{proof}
+\part{a} To show that \eqref{eq:2.1.32} is the general solution of
 \eqref{eq:2.1.31} on $(a,b)$, we must prove that:
 
 \begin{rmlist}
@@ -833,6 +837,7 @@ y(x_0)= y_1(x_0)\left(c +\int^{x_0}_{x_0} \frac{f(t)}{y_1(t)}\, dt\right)=cy_1(x
 \]
 we see that
  $y(x_0)=y_0$ if and only if $c=y_0/y_1(x_0)$.
+\end{proof}
 
 \exercises
 In Exercises~\ref{exer:2.1.1}--\ref{exer:2.1.5} find
@@ -1179,6 +1184,7 @@ u^{(j+1)}=\frac{f_j}{y_1},\quad 0\le j\le m.
 \]
 
 \end{exerciselist}
+
 
 \section{Separable Equations}
 
@@ -1691,7 +1697,7 @@ $(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1$
 
 
 \item\label{exer:2.2.14} \CGex
-$\dst\frac{y'+{(y+1)(y-1)(y-2)}{x+1}=0, \quad y(1)=0}$
+$\dst{y'+\frac{(y+1)(y-1)(y-2)}{x+1}=0, \quad y(1)=0}$
 
 \item\label{exer:2.2.15} \CGex $y'+2x(y+1)=0, \quad y(0)=2$
 
@@ -1708,10 +1714,13 @@ $y'(x^2+2)+ 4x(y^2+2y+1)=0, \quad y(1)=-1$
 \item\label{exer:2.2.18}
 $y'=-2x(y^2-3y+2), \quad y(0)=3$
 
- \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+% \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+% TODO 19--20 in tow columns
 \item\label{exer:2.2.19} $\dst{y'=\frac{2x}{1+2y},
-\quad y(2)=0}$ & \item \vspace*{5.5pt}\label{exer:2.2.20} $y'=2y-y^2,
-\quad y(0)=1$ \end{tabular}
+\quad y(2)=0}$ %& 
+\item \vspace*{5.5pt}\label{exer:2.2.20} $y'=2y-y^2,
+\quad y(0)=1$
+% \end{tabular}
 
 \item\label{exer:2.2.21}
 $x+yy'=0, \quad y(3) =-4$
@@ -1928,6 +1937,7 @@ equation.
 p\left(v(x)y\right)}$
 \end{tabular}
 \end{exerciselist}
+
 
 \section{Existence and Uniqueness of Solutions of Nonlinear Equations}
 
@@ -3392,7 +3402,8 @@ F_x(x,y)\,dx+F_y(x,y)\,dy=0.
 \end{equation}
 \end{theorem}
 
-\proof Regarding $y$ as a function of $x$ and  differentiating
+\begin{proof}
+Regarding $y$ as a function of $x$ and  differentiating
 \eqref{eq:2.5.6}  implicitly with respect to $x$ yields
 \[
 F_x(x,y)+F_y(x,y)\,\frac{dy}{dx}=0.
@@ -3405,7 +3416,8 @@ F_x(x,y)\,\frac{dx}{dy}+F_y(x,y)=0.
 \]
 Thus, \eqref{eq:2.5.6} is an
 implicit solution of  \eqref{eq:2.5.7} in either of its two possible
-interpretations. \bbox
+interpretations.
+\end{proof}
 
 We'll say that  the equation
 \begin{equation} \label{eq:2.5.8}
@@ -3503,15 +3515,15 @@ The next example illustrates two possible methods for finding a
 function $F$ that satisfies the condition $F_x=M$ and $F_y=N$ if
 $M\,dx+N\,dy=0 $ is exact.
 
-\begin{example}\label{example:2.5.3} \rm
+\begin{example}\label{example:2.5.3}\rmfamily
 Solve
-\begin{equation} \label{eq:2.5.13}
+\begin{equation}\label{eq:2.5.13}
 (4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0.
 \end{equation}
 \end{example}
 
 
-\solution{(Method 1)}
+\solution (Method 1)
 Here
 \[
 M(x,y)=4x^3y^3+3x^2,\quad N(x,y)=3x^4y^2+6y^2,
@@ -3571,7 +3583,7 @@ yields the explicit solution
 y=\left(\frac{c-x^3}{2+x^4}\right)^{1/3}.
 \]
 
-\solution{(Method 2)} Instead of first integrating
+\solution (Method 2) Instead of first integrating
 \eqref{eq:2.5.14}
 with respect to $x$, we could begin by integrating \eqref{eq:2.5.15} with
 respect to $y$ to obtain
@@ -3597,11 +3609,12 @@ integration to be zero yields
  Substituting this into \eqref{eq:2.5.18} yields \eqref{eq:2.5.17}.
 
 Figure~\ref{figure:2.5.1} shows a direction field and  some
-integral curves of \eqref{eq:2.5.13},
+integral curves of \eqref{eq:2.5.13}.
 
               \begin{figure}[tbp]
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020501}
+  \includegraphics[%bb=-78 148 689 643,
+  width=5.67in,height=3.66in,keepaspectratio]{fig020501}
 \color{blue}
 \caption{A direction field and  integral curves for
 $(4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0$}
@@ -3769,10 +3782,11 @@ $14x^2y^3\,dx+21 x^2y^2\,dy=0$
 \item\label{exer:2.5.4}
 $(2x-2y^2)\,dx+(12y^2-4xy)\,dy=0$
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \item\label{exer:2.5.5}$(x+y)^2\,dx+(x+y)^2\,dy=0$&
+%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+% TODO 5--6 in two columns
+ \item\label{exer:2.5.5}$(x+y)^2\,dx+(x+y)^2\,dy=0$%&
 \item\label{exer:2.5.6}$(4x+7y)\,dx+(3x+4y)\,dy=0$
-\end{tabular}
+%\end{tabular}
 
 \item\label{exer:2.5.7}
 $(-2y^2\sin x+3y^3-2x)\,dx+(4y\cos x+9xy^2)\,dy=0$
@@ -4064,8 +4078,7 @@ harmonic conjugates.  (See Exercise~\ref{exer:2.5.43}.)
 
 \end{exerciselist}
 
-
-\section{Exact Equations}
+\section{Integrating Factors}
 
 In  Section~2.5 we saw that if $M$, $N$, $M_y$ and $N_x$ are
 continuous and $M_y=N_x$ on an open rectangle $R$ then
@@ -4223,7 +4236,8 @@ then
 
 \medskip
 
-\proof (a)
+\begin{proof}
+(a)
 If $(M_y-N_x)/N$ is independent of $y$, then \eqref{eq:2.6.8}
  holds with $p=(M_y-N_x)/N$ and $q\equiv0$. Therefore
  \[
@@ -4234,7 +4248,8 @@ so \eqref{eq:2.6.10} is an integrating factor for \eqref{eq:2.6.11} on $R$.
 
 (b) If $(N_x-M_y)/M$ is independent of $x$ then eqref{eq:2.6.8} holds
 with $p\equiv0$ and $q=(N_x-M_y)/M$, and a similar argument shows that
-\eqref{eq:2.6.12} is an integrating factor for \eqref{eq:2.6.11} on $R$.\bbox
+\eqref{eq:2.6.12} is an integrating factor for \eqref{eq:2.6.11} on $R$.
+\end{proof}
 
 The next two examples show how to apply
 Theorem~\ref{thmtype:2.6.1}.
