@@ -17,8 +17,8 @@ def replace_over(content: str) -> str:
   return content
 
 def trim_trailing_space(content: str) -> str:
-  content = re.sub(r'(?<=\\item\\label{exer:\d+.\d+.\d+})\s*$', '%', content)
-  content = re.sub(r'(?<=\\item\\label{exer:\d+.\d+.\d+})\s+(?=\S)', '', content)
+  content = re.sub(r'(?<=\\item\\label{exer:)(\d+.\d+.\d+})\s*$', r'\1%', content)
+  content = re.sub(r'(?<=\\item\\label{exer:)(\d+.\d+.\d+})\s+(?=\S)', r'\1', content)
   return content
 
 for texfile in glob('*.tex'):
