@@ -1,5 +1,5 @@
 
-\chapter{First Order Equations}
+\chapter{First Order Equations}\label{ch:first_order}
 
 
 \noindent
@@ -52,7 +52,7 @@ by a function known called \emph{\color{blue}integrating factor}.
 
 \newpage
 
-\section{Linear First Order Equations}
+\section{Linear First Order Equations}\label{sec:linar_first_order}
 
 A first order differential equation is said to be \emph{\color{blue}linear} if it
 can be written as
@@ -840,8 +840,9 @@ we see that
 \end{proof}
 
 \exercises
-In Exercises~\ref{exer:2.1.1}--\ref{exer:2.1.5} find
-the general solution.
+
+\emph{In Exercises~\ref{exer:2.1.1}--\ref{exer:2.1.5} find
+the general solution.}
 
 
 \begin{exerciselist}
@@ -2281,28 +2282,22 @@ y = \left\{ \begin{array}{cl}
 (Figure \ref{figure:2.3.3}).
 
 
-
-\begin{figure}[htbp]
-\color{blue}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-   \scalebox{.65}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020303}}
-\caption{ Two solutions of
-\eqref{eq:2.3.12} on
-$(-\infty,\infty)$ that coincide on $(-1,1)$, but on no larger open
-interval}
-  \label{figure:2.3.3}
-  \end{minipage}
-  \hspace{0.6cm}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-   \scalebox{.65}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020304} }
-  \caption{The unique solution of \eqref{eq:2.3.14}}
-  \label{figure:2.3.4}
-  \end{minipage}
-\end{figure}
+\noindent
+\begin{minipage}[t]{0.49\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig020303}
+\captionof{figure}{Two solutions of \eqref{eq:2.3.12} on $(-\infty,\infty)$
+that coincide on $(-1,1)$, but on no larger open interval}
+\label{figure:2.3.3}
+\tagstructend
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\linewidth}
+\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig020304}
+\captionof{figure}{The unique solution of \eqref{eq:2.3.14}}
+\label{figure:2.3.4}
+\tagstructend
+\end{minipage}
 
 
 \begin{example}\label{example:2.3.8}
@@ -2522,6 +2517,7 @@ any point in $(a,b)$.
 
 
 \section{Transformation of Nonlinear Equations into Separable Equations}
+\label{sec:transform_separable}
 
 In Section~2.1 we found that the solutions of a linear
 nonhomogeneous equation
@@ -2816,34 +2812,24 @@ where $c$ is an arbitrary constant.
 \[
 u =\frac{1+cx^2}{1-cx^2}.
 \]
-
-
-\begin{figure}[htbp]
-\color{blue}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-   \scalebox{.6}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020403} }
-\color{blue}
-\caption{A direction field and  integral curves for
+%
+\begin{minipage}[t]{0.49\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig020403}
+\captionof{figure}{A direction field and integral curves for
 $x^{2}y'=y^{2}+xy-x^{2}$}
-  \label{figure:2.4.3}
-  \end{minipage}
-  \hspace{0.6cm}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-   \scalebox{.7}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020404}}
-\caption{Solutions of  $x^{2}y'=y^{2}+xy-x^{2}$,\; $y(1)=2$}
-  \label{figure:2.4.4}
-  \end{minipage}
-\end{figure}
-
-
-
-
-
-\noindent
+\label{figure:2.4.3}
+\tagstructend
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig020404}
+\captionof{figure}{Solutions of $x^{2}y'=y^{2}+xy-x^{2}$,\; $y(1)=2$}
+\label{figure:2.4.4}
+\tagstructend
+\end{minipage}
+%
 Therefore
 \begin{equation} \label{eq:2.4.13}
 y=ux=\frac{x(1+cx^2)}{1-cx^2}

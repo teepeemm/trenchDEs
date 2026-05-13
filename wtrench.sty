@@ -7,8 +7,8 @@
 \setlength{\parindent}{10pt}
 \pagestyle{headings}
 
-\newtheorem{theorem}{\sc\bf Theorem}
-\newtheorem{example}{\scshape\bfseries Example}
+\newtheorem{theorem}{\scshape Theorem}
+\newtheorem{example}{\scshape Example}
 
 \def\R{\mathbb R}
 \def\E{\mathbb E}
@@ -39,7 +39,7 @@
 
 \newcommand{\svc}[1]{\mbox{\tiny{\bf #1}}}
 \newcommand{\flushtable}{\mbox{}\hskip-7pt}
-\renewcommand{\part}[1]{{\bf (#1)}}
+\renewcommand{\part}[1]{{(#1)}}
 \newcommand{\dst}{\displaystyle}
 \newcommand{\set}[2]{\left\{#1\, \big|\, #2\right\}}
 \newcommand{\dist}{\mathop{\rm dist}}
@@ -49,10 +49,9 @@
 \newcommand{\casespace}{\negthickspace\negthickspace}
 \newcommand{\ar}[1]{\hspace*{-.75em}&{#1}&\hspace*{-.75em}}
 \newcommand{\eq}{$\ar{$=$}$}
-\newcommand{\exer}[1]{\par\noindent{\bf #1}.}
-\newcommand{\answer}[1]{\;{\bf $\mathbf{#1}$ (p.~\pageref{exer:#1})}\;}
+\newcommand{\exer}[1]{\par\noindent#1.}
+\newcommand{\answer}[1]{\;{$\mathbf{#1}$ (p.~\pageref{exer:#1})}\;}
 \newcommand{\df}{=_{\mbox{\small df}}}
-%\newcommand{\proof}{\noindent{\sc\bf Proof}\quad }
 \newcommand{\bbox}{\phantom{1}\hfill{\rule{6pt}{6pt}}}
 \newcommand{\helpbox}{\vspace*{-20pt}}
 \newcommand{\topfig}[1]{\newpage\mbox{}\newline\vspace*{#1pc}}
@@ -60,40 +59,60 @@
 \vskip-6pt\hskip-\parindent}
 \newcommand{\twotab} {\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}}
 \newcommand{\threetab} {\begin{tabular}[t]{@{}p{112pt}@{}p{122pt}@{}p{112pt}}}
-\newcommand{\solution}{\vskip10pt\noindent{\scshape\bfseries Solution }\  }
+\newcommand{\solution}{\vskip10pt\noindent{\scshape Solution }\  }
 
-\newcounter{place}
-\newcommand{\exercisetext}[1]{\setcounter{place}
-{\value{exercise}}\end{exerciselist}{\it #1}
-\begin{exerciselist}\setcounter{exercise}{\value{place}}}
+\newcommand{\exercisetext}[1]{%
+ \end{exerciselist}\emph{#1}\begin{exerciselist}[resume]}
 
 \newcommand{\arraytext}[1]{\noalign{\hspace*{-1.75em}
 \mbox{#1}\vspace*{-9\jot}}\nonumber\\}
 %this command comes after a \newline command (\\)
 
-\newcommand{\sectiontitle}[1]{\noindent{\color{red}\bf\thesection\small\bf\  #1}
-\vskip15pt}
-
-\newcommand{\chaptertitle}[1]{\vspace*{2.2pc}\begin{center}{\Huge\bf
-CHAPTER~\thechapter}\\\bigskip{\Huge\bf
-#1}\vskip4.8pc\label{sectionstart:\thesection}\end{center}}
-
-%\newcommand{\exercises}{
-%\bigskip{\centerline{\color{red}\large\bf\thesection\
-%Exercises}}\noindent\mbox{}\hrulefill\mbox{}\label{exerstart:\thesection}\vskip6pt\noindent}
-
 \usepackage{enumext}
 
 \newcommand{\exercises}{%
-\bigskip{\centerline{\color{red}\large\bf\thesection\
+\bigskip{\centerline{\color{red}\large\bfseries\thesection\
 Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\thesection}\vskip6pt\noindent}
 
-\newcounter{exercise}
-\newenvironment{exerciselist}{\begin{list}{\bf
-\arabic{exercise}.}
-{\topsep 10pt\partopsep 0pt\labelwidth 16pt
-\labelsep 12pt\leftmargin 28pt
-\itemsep 0pt\usecounter{exercise}}}{\end{list}}
+\ExplSyntaxOn
+\keys_define:nn { enumext / enumext* }
+  {
+    item_columns .int_set:N = \l__enumext_item_columns_int,
+    item_columns .default:n = { 1 }
+  }
+\cs_set_protected:Nn \__enumext_item_peek_args_vii:
+  {
+    \peek_meaning:NTF (
+      { \__enumext_joined_item_vii:w }
+      { \__enumext_joined_item_vii:w ( \l__enumext_item_columns_int ) } 
+  }
+\ExplSyntaxOff
+
+%\newcounter{exercise}
+%\newenvironment{exerciselist}{\begin{list}{\bf
+%\arabic{exercise}.}
+%{\topsep 10pt\partopsep 0pt\labelwidth 16pt
+%\labelsep 12pt\leftmargin 28pt
+%\itemsep 0pt\usecounter{exercise}}}{\end{list}}
+\newenvironment{exerciselist}[1][]{%
+ \begin{enumext*}[
+  label=\arabic*,
+  font=\bfseries,
+  wrap-label*={##1.},
+  topsep=10pt,
+  partopsep=0pt,
+  itemsep=0pt,
+  labelwidth=16pt,
+  labelsep=12pt,
+%  leftmargin=28pt,
+  columns=2,
+  item_columns=2,
+%  leftmargin=22pt,
+  #1
+ ]%
+}{%
+ \end{enumext*}%
+}
 
 %\newcounter{lcal}
 %\newenvironment{alist}{\begin{list}{\bf (\alph{lcal})}

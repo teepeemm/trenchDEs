@@ -830,13 +830,15 @@ y=- \frac{gt^2}{2}+v_0t+y_0.
 \item\label{exer:1.2.1}
 Find the order of the   equation.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (a)}\   $\dst\frac{d^2y}{dx^2}+2
-\frac{dy}{dx}\   \frac{d^3y}{dx^3}+x=0$
-& {\bf (b)}\   $y''-3y'+2y=x^7$\\[9pt]
-{\bf (c)}\   $y'-y^7=0$
-& {\bf (d)}\   $y''y-(y')^2=2$
-\end{tabular}
+% TODO these were ordered horizontally
+\begin{enumext}[columns=2,label=\alph*,wrap-label*={(#1)},labelsep=1em]
+%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
+\item $\dst\frac{d^2y}{dx^2}+2\frac{dy}{dx}\ \frac{d^3y}{dx^3}+x=0$
+\item $y''-3y'+2y=x^7$
+\item $y'-y^7=0$
+\item $y''y-(y')^2=2$
+%\end{tabular}
+\end{enumext}
 
 \item\label{exer:1.2.2}
 Verify that the  function is a solution of the
@@ -1143,28 +1145,23 @@ y'=1+xy^2,\text{\quad and \quad}
 which are all of the form \eqref{eq:1.3.1} with $f$
  continuous for all $(x,y)$.
 
-\begin{figure}[htbp]
-\color{blue}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-   \scalebox{.6}{
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig010302}}
-  \caption{\,A direction field and integral curves for
+\noindent
+\begin{minipage}[t]{0.49\linewidth}
+\tagstructbegin{tag=Sect}%
+\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010302}
+\captionof{figure}{A direction field and integral curves for
 $y =\dst{\frac{x^{2}-y^{2}}{1+x^{2}+y^{2}}}$}
-  \label{figure:1.3.2}
-  \end{minipage}
-  \hspace{0.6cm}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-   \scalebox{.7}{
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig010303}}
-\caption{A direction field and integral curves
-for $y'=1+xy^2$}
-  \label{figure:1.3.3}
-  \end{minipage}
-\end{figure}
+\label{figure:1.3.2}
+\tagstructend
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\tagstructbegin{tag=Sect}%
+\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010303}
+\captionof{figure}{A direction field and integral curves for $y'=1+xy^2$}
+\label{figure:1.3.3}
+\tagstructend
+\end{minipage}
 
 \begin{figure}[tbp]
   \centering
@@ -1271,30 +1268,25 @@ of using modern technology as an aid to learning. Just be careful that
 you use the technology as a supplement to thought rather than a
 substitute for it.
 
-
-\begin{figure}[htbp]
-\color{blue}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-   \scalebox{.7}{
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig010306} }
-\caption{A direction field and integral curves for
+\noindent
+\begin{minipage}[t]{0.49\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010306}
+\captionof{figure}{A direction field and integral curves for
 $y'=\dst\frac{x^2}{-x^2-y^2}$}
-  \label{figure:1.3.6}
-  \end{minipage}
-  \hspace{0.6cm}
-  \begin{minipage}[b]{0.5\linewidth}
-    \centering
-   \scalebox{.7}{
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig010307} }
-\caption{}
-  \label{figure:1.3.7}
-  \end{minipage}
-\end{figure}
+\label{figure:1.3.6}
+\tagstructend
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.49\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010307}
+\captionof{figure}{}
+\label{figure:1.3.7}
+\tagstructend
+\end{minipage}
 
-\enlargethispage{1in}
+\clearpage
 
 \exercises
 \noindent
@@ -1430,8 +1422,8 @@ direction
 field and plot some integral curves in the indicated rectangular region.}
 
 
-\begin{exerciselist}
-\setcounter{exercise}{11}
+\begin{exerciselist}[resume]
+%\setcounter{exercise}{11}
 \item\label{exer:1.3.12}\CGex
 $y'=y(y-1);    \quad  \{-1\le x\le 2,\ -2\le y\le2\}$
 

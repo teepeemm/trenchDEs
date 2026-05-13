@@ -7,14 +7,13 @@
 
  \vspace*{.15in}
 
-\begin{figure}[H]
- \centering
- \includegraphics[%bb=-78 148 689 643,
- width=5.67in,height=3.66in%,keepaspectratio
+\begin{center}
+ \includegraphics[width=5.67in,height=3.66in,keepaspectratio,
+  alt={Arrows moving through the plain up and left, but circling clockwise around the origin.  Lines follow the arrows, creating a denser line that starts and ends along y=-x, but also circles clockwise around the origin.}
  ]{cover}
-\end{figure}
+\end{center}
 \vspace*{.15in}
-\bf\LARGE
+\bfseries\LARGE
 \href{http://ramanujan.math.trinity.edu/wtrench/index.shtml}
 {William F. Trench}
 \medskip
@@ -99,7 +98,7 @@ are  prohibited.
  is
 written for students in science, engineering, and mathematics who have
 completed calculus  through partial  differentiation. If  your syllabus
-includes Chapter~10 (Linear  Systems of Differential  Equations),
+includes \zcref{ch:systems} (Linear Systems of Differential Equations),
 your students should have some preparation in linear algebra.
 
 In writing this book I have been guided by the these principles:
@@ -141,10 +140,12 @@ simply ignore these exercises and the  advice.
 
 There are two schools of thought on whether techniques and
 applications should be treated together or separately. I have chosen
-to separate them;   thus, Chapter~2 deals with techniques for solving
-first order equations, and Chapter~4 deals with applications.
-Similarly, Chapter~5 deals with techniques for solving second order
-equations, and Chapter~6 deals with applications. However, the
+to separate them;
+thus, \zcref{ch:first_order} deals with techniques for solving
+first order equations, and \zcref{ch:apps_first} deals with applications.
+Similarly,
+\zcref{ch:second_order} deals with techniques for solving second order
+equations, and \zcref{ch:apps_second} deals with applications. However, the
 exercise sets of the sections dealing with techniques  include some
 applied problems.
 
@@ -155,8 +156,9 @@ this is true;     after all, no single method  applies to all
 situations. Nevertheless, I believe that one idea can go a long way
 toward unifying some of the techniques for solving diverse problems:
 variation of parameters. I use variation of parameters at the earliest
-opportunity in Section~2.1, to solve the nonhomogeneous linear
-equation, given a nontrivial solution of the complementary equation.
+opportunity in \zcref{sec:linar_first_order},
+to solve the nonhomogeneous linear equation,
+given a nontrivial solution of the complementary equation.
 You may find this annoying, since most of us learned that one should
 use integrating factors for this task, while perhaps mentioning the
 variation of parameters option in an exercise. However, there's
@@ -171,13 +173,14 @@ determined. I use this idea in nonstandard ways, as follows:
 
 \begin{itemize}
 \item
-In Section~2.4 to solve nonlinear first order equations, such as
-Bernoulli equations and nonlinear homogeneous equations.
+In \zcref{sec:transform_separable} to solve nonlinear first order equations,
+such as Bernoulli equations and nonlinear homogeneous equations.
 
-\item  In Chapter~3  for  numerical solution of
+\item  In \zcref{ch:numerical}  for  numerical solution of
 semilinear  first order equations.
 
-\item In Section 5.2 to avoid the necessity of introducing complex
+\item In \zcref{sec:const_coeff_homog} to avoid the necessity of introducing
+complex
 exponentials in solving a second order constant coefficient
 homogeneous equation with characteristic polynomials  that have complex
 zeros.

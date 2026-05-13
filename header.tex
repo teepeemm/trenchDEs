@@ -10,6 +10,7 @@
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{capt-of}
+\usepackage{zref-clever}
 \usepackage[%dvips,
  bookmarks = true,
  colorlinks=true,
@@ -19,6 +20,12 @@ urlcolor = blue,
 filecolor = blue,
  pageanchor = true]
 {hyperref}
+
+\zcRefTypeSetup{chapter}{cap}
+\zcRefTypeSetup{section}{cap}
+
+%\colorlet{blue}{DarkBlue}
+\colorlet{red}{DarkRed}
 
 \setcounter{secnumdepth}{2}
 \usepackage[justification=centering, labelsep=space, skip=-10 pt]{caption}
