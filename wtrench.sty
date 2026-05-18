@@ -136,6 +136,27 @@ Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\these
  \end{enumext}%
 }
 
+%\newenvironment{numberlist}{\begin{list}{\bfseries \arabic{rm}.}
+%{\topsep 12pt\partopsep 0pt\labelwidth 14pt
+%\labelsep 8pt\leftmargin 22pt\itemsep 0pt
+%\usecounter{rm}}}{\end{list}}
+\newenvironment{numberlist}[1][]{%
+ \begin{enumext}[
+  label=\arabic*,
+%  fotn=\bfseries,
+  wrap-label*={##1.},
+  topsep=12pt,
+  partopsep=0pt,
+  itemsep=0pt,
+  labelwidth=14pt,
+  labelsep=8pt,
+%  leftmargin=22pt,
+  #1
+ ]%
+}{%
+ \end{enumext}%
+}
+
 \newenvironment{Alist}{\begin{list}{\bf (\Alph{lcal})}
 {\topsep 0pt\partopsep 0pt\labelwidth 14pt
 \labelsep 8pt\leftmargin 22pt\itemsep 0pt

@@ -545,16 +545,16 @@ speed of the object. Let $\alpha$ be the constant of proportionality.
 
 \item\label{exer:10.1.5}Rewrite the given system as a first order system.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-${\bf (a)}\begin{array}{lcc} x''' = f(t,x,y,y')\\[1\jot] y'' =
-g(t,y,y') \end{array}$&
-{\bf (b)}$\begin{array}{lcl} u' =
-f(t,u,v,v',w')\\[1\jot] v''=g(t,u,v,v',w)
-\\[1\jot] w''=h(t,u,v,v',w,w')\end{array}$\\[30pt]{\bf (c)} $y''' =
-f(t,y,y',y'')$&{\bf (d)} $y^{(4)} = f(t,y)$\\[20pt]
-{\bf (e)}$\begin{array}{lcc} x'' = f(t,x,y)\\[1\jot] y'' =
-g(t,x,y) \end{array}$
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO was horizontal
+\item $\begin{aligned} x''' &= f(t,x,y,y')\\ y'' &= g(t,y,y') \end{aligned}$
+\item $\begin{aligned}
+u' &=f(t,u,v,v',w')\\ v''&=g(t,u,v,v',w)\\w''&=h(t,u,v,v',w,w')
+\end{aligned}$
+\item $y''' =f(t,y,y',y'')$
+\item $y^{(4)} = f(t,y)$
+\item $\begin{aligned} x'' &= f(t,x,y)\\ y'' &=g(t,x,y) \end{aligned}$
+\end{alist}
 
 \item\label{exer:10.1.6}Rewrite the system \eqref{eq:10.1.14} of differential equations derived in
 Example~\ref{example:10.1.3}   as a first order system.
@@ -562,12 +562,10 @@ Example~\ref{example:10.1.3}   as a first order system.
 
 \item\label{exer:10.1.7}Formulate a version of Euler's method (Section~3.1)
 for the numerical solution of the initial value problem
-\[
-\begin{array}{rcl}
-y_1'&=&g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\
-y_2'&=&g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20},
-\end{array}
-\]
+\begin{align*}
+y_1'&=g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\
+y_2'&=g_2(t,y_1,y_2),\quad y_2(t_0)=y_{20},
+\end{align*}
 on an interval $[t_0,b]$.
 
 

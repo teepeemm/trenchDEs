@@ -409,6 +409,7 @@ listed on the right are obtained  by applying
 Theorem~\ref{thmtype:8.1.3}.
 
 \begin{center}
+\tagpdfsetup{table/header-rows={1}}
 \renewcommand{\arraystretch}{1.8}
 \begin{tabular}{c@{\qquad}c}\toprule
 $f(t)\leftrightarrow F(s)$ & $e^{at}f(t)\leftrightarrow F(s-a)$ \\\midrule
@@ -706,21 +707,30 @@ for sufficiently large values of $t$, for any choice of $M$ and $s_{0}$
 \item\label{exer:8.1.1}Find the Laplace transforms of the following functions by evaluating
 the integral $F(s)=\int_0^\infty e^{-st} f(t)\,dt$.
 
-\begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a} $t$  & \part{b} $te^{-t}$ & \part{c} $\sinh bt$\\
- \part{d} $e^{2t}-3e^t$  & \part{e} $t^2$
-\end{tabular}
+\begin{alist}[columns=3]
+% TODO was horizontal
+\item $t$
+\item $te^{-t}$
+\item $\sinh bt$
+\item $e^{2t}-3e^t$
+\item $t^2$
+\end{alist}
 
 \item\label{exer:8.1.2}Use  the table of Laplace transforms to
 find the Laplace transforms of the following functions.
 
-\begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a}  $\cosh t\sin t$ & \part{b}  $\sin^2t$ & \part{c}  $\cos^2
-2t$\\ \part{d}  $\cosh^2 t$ & \part{e}  $t\sinh 2t$ & \part{f}
-$\sin
-t\cos t$\\ \part{g}  $\dst{\sin\left(t+\frac{\pi}{4}\right)}$ & \part{h}  $\cos 2t -\cos 3t$ & \part{i}  $\sin 2t +\cos
-4t$
-\end{tabular}
+\begin{alist}[columns=3]
+% TODO was horizontal
+\item $\cosh t\sin t$
+\item $\sin^2t$
+\item $\cos^2 2t$
+\item $\cosh^2 t$
+\item $t\sinh 2t$
+\item $\sin t\cos t$
+\item $\dst{\sin\left(t+\frac{\pi}{4}\right)}$
+\item $\cos 2t -\cos 3t$
+\item $\sin 2t +\cos 4t$
+\end{alist}
 
 \item\label{exer:8.1.3}Show that
 \[
@@ -731,34 +741,36 @@ for every real number $s$.
 \item\label{exer:8.1.4}Graph the following piecewise continuous functions and evaluate
 $f(t+)$, $f(t-)$, and $f(t)$ at each point of discontinuity.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\part{a} $f(t)=\begin{cases} -t,
+\begin{alist}[columns=2]
+% TODO was horizontal
+\item $f(t)=\begin{cases} -t,
 & 0\le t<2,\\ t-4, & 2\le t<3,\\ 1, & t\ge
-3.\end{cases}$} &
-{\part{b} $f(t)=\begin{cases} t^2+2, & 0
+3.\end{cases}$
+\item $f(t)=\begin{cases} t^2+2, & 0
 \le t<1,\\4, & t=1,\\ t, & t>
-1.\end{cases}$}\\[15pt]
-{\part{c} $f(t)=\begin{cases}
+1.\end{cases}$
+\item $f(t)=\begin{cases}
 \sin t, & 0\le t<\pi/ 2,\\ 2\sin t, &\pi/ 2
-\le t<\pi,\\ \cos t, & t\ge\pi.\end{cases}$} &
-{\part{d} $f(t)=\begin{cases}t,
+\le t<\pi,\\ \cos t, & t\ge\pi.\end{cases}$
+\item $f(t)=\begin{cases}t,
  & 0\le t<1,\\ 2, & t=1,\\ 2-t, & 1
 \le t<2,\\ 3, & t=2,\\ 6, & t>
-2.\end{cases}$}
-\end{tabular}
+2.\end{cases}$
+\end{alist}
 
 \item\label{exer:8.1.5}Find the Laplace transform:
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\part{a} $f(t)=\begin{cases} e^{-t}, &
-0\le t<1,\\ e^{-2t}, & t\ge 1.\end{cases}$} &
-{\part{b} $f(t)=\begin{cases} 1, & 0\le t<
-4,\\ t, & t\ge 4.\end{cases}$}\\[2\jot]
-{\part{c} $f(t)=\begin{cases} t, & 0\le
-t<1,\\ 1, & t\ge 1.\end{cases}$}&
-{\part{d}  $f(t)=\begin{cases} te^t, & 0\le
-t<1,\\\phantom{t} e^t, & t\ge 1.\end{cases}$}
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO was horizontal
+\item $f(t)=\begin{cases} e^{-t}, &
+0\le t<1,\\ e^{-2t}, & t\ge 1.\end{cases}$
+\item $f(t)=\begin{cases} 1, & 0\le t<
+4,\\ t, & t\ge 4.\end{cases}$
+\item $f(t)=\begin{cases} t, & 0\le
+t<1,\\ 1, & t\ge 1.\end{cases}$
+\item $f(t)=\begin{cases} te^t, & 0\le
+t<1,\\\phantom{t} e^t, & t\ge 1.\end{cases}$
+\end{alist}
 
 \item\label{exer:8.1.6}Prove that if $f(t)\leftrightarrow F(s)$ then $t^kf(t)\leftrightarrow
 (-1)^kF^{(k)}(s)$. \hint{Assume that it's permissible to differentiate
@@ -861,13 +873,14 @@ exponential order.
 Exercise~\ref{exer:8.1.13} to find the Laplace transforms of the following
 functions.
 
-\begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a} $\dst{\frac{\sin\omega t}{t}\quad(\omega>0)}$ &
-\part{b} $\dst{\frac{\cos\omega t-1}{t}}\quad (\omega>0)$ &
-\part{c} $\dst{\frac{e^{at}-e^{bt}}{t}}$\\[2\jot]
-\part{d} $\dst{\frac{\cosh t-1}{t}}$ &
-\part{e} $\dst{\frac{\sinh^2 t}{t}}$
-\end{tabular}
+\begin{alist}[columns=3]
+% TODO was horizontal
+\item $\dst{\frac{\sin\omega t}{t}\quad(\omega>0)}$
+\item $\dst{\frac{\cos\omega t-1}{t}}\quad (\omega>0)$
+\item $\dst{\frac{e^{at}-e^{bt}}{t}}$
+\item $\dst{\frac{\cosh t-1}{t}}$
+\item $\dst{\frac{\sinh^2 t}{t}}$
+\end{alist}
 
 \item\label{exer:8.1.16}The \emph{\color{blue}gamma function} is defined by
 \[
@@ -1391,103 +1404,109 @@ technique.
 \item\label{exer:8.2.1}Use the table of Laplace transforms  to find the inverse Laplace
 transform.
 
-\begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a} $\dst\frac{3}{(s-7)^4}$ &
-\part{b} $\dst\frac{2s-4}{s^2-4s+13}$ &
-\part{c} $\dst\frac{1}{s^2+4s+20}$\\[10pt]
-\part{d} $\dst\frac{2}{s^2+9}$ &
-\part{e} $\dst\frac{s^2-1}{(s^2+1)^2}$ &
-\part{f} $\dst\frac{1}{(s-2)^2-4}$\\[10pt]
-\part{g} $\dst\frac{12s-24}{(s^2-4s+85)^2}$ &
-\part{h} $\dst\frac{2}{(s-3)^2-9}$ &
-\part{i} $\dst\frac{s^2-4s+3}{(s^2-4s+5)^2}$
-\end{tabular}
+\begin{alist}[columns=3]
+% TODO was horizontal
+\item $\dst\frac{3}{(s-7)^4}$
+\item $\dst\frac{2s-4}{s^2-4s+13}$
+\item $\dst\frac{1}{s^2+4s+20}$
+\item $\dst\frac{2}{s^2+9}$
+\item $\dst\frac{s^2-1}{(s^2+1)^2}$
+\item $\dst\frac{1}{(s-2)^2-4}$
+\item $\dst\frac{12s-24}{(s^2-4s+85)^2}$
+\item $\dst\frac{2}{(s-3)^2-9}$
+\item $\dst\frac{s^2-4s+3}{(s^2-4s+5)^2}$
+\end{alist}
 
 \item\label{exer:8.2.2}Use Theorem~\ref{thmtype:8.2.1} and the table of Laplace transforms
   to find the inverse Laplace transform.
 
-\begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a}  $\dst\frac{2s+3}{(s-7)^4}$ &
-\part{b}  $\dst\frac{s^2-1}{(s-2)^6}$ &
-\part{c}  $\dst\frac{s+5}{s^2+6s+18}$\\[10pt]
-\part{d}  $\dst\frac{2s+1}{s^2+9}$ &
-\part{e}  $\dst\frac{s}{s^2+2s+1}$ &
-\part{f}  $\dst\frac{s+1}{s^2-9}$\\[10pt]
-\part{g}  $\dst\frac{s^3+2s^2-s-3}{(s+1)^4}$ &
-\part{h}  $\dst\frac{2s+3}{(s-1)^2+4}$ &
-\part{i}  $\dst\frac{1}{s}-\frac{s}{s^2+1}$\\[10pt]
-\part{j}  $\dst\frac{3s+4}{s^2-1}$ &
-\part{k}  $\dst\frac{3}{s-1}+\frac{4s+1}{s^2+9}$ &
-\part{l}  $\dst\frac{3}{(s+2)^2}-\frac{2s+6}{s^2+4}$
-\end{tabular}
+\begin{alist}[columns=3]
+% TODO was horizontal
+\item $\dst\frac{2s+3}{(s-7)^4}$
+\item $\dst\frac{s^2-1}{(s-2)^6}$
+\item $\dst\frac{s+5}{s^2+6s+18}$
+\item $\dst\frac{2s+1}{s^2+9}$
+\item $\dst\frac{s}{s^2+2s+1}$
+\item $\dst\frac{s+1}{s^2-9}$
+\item $\dst\frac{s^3+2s^2-s-3}{(s+1)^4}$
+\item $\dst\frac{2s+3}{(s-1)^2+4}$
+\item $\dst\frac{1}{s}-\frac{s}{s^2+1}$
+\item $\dst\frac{3s+4}{s^2-1}$
+\item $\dst\frac{3}{s-1}+\frac{4s+1}{s^2+9}$
+\item $\dst\frac{3}{(s+2)^2}-\frac{2s+6}{s^2+4}$
+\end{alist}
 
 \item\label{exer:8.2.3}Use Heaviside's method to find the inverse Laplace transform.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a}  $\dst\frac{3-(s+1)(s-2)}{(s+1)(s+2)(s-2)}$&
-\part{b}  $\dst\frac{7+(s+4)(18-3s)}{(s-3)(s-1)(s+4)}$\\[10pt]
-\part{c}  $\dst\frac{2+(s-2)(3-2s)}{(s-2)(s+2)(s-3)}$ &
-\part{d}  $\dst\frac{3-(s-1)(s+1)}{(s+4)(s-2)(s-1)}$\\[10pt]
-\part{e}  $\dst\frac{3+(s-2)(10-2s-s^2)}{(s-2)(s+2)(s-1)(s+3)}$ &
-\part{f}  $\dst\frac{3+(s-3)(2s^2+s-21)}{(s-3)(s-1)(s+4)(s-2)}$
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO was horizontal
+\item $\dst\frac{3-(s+1)(s-2)}{(s+1)(s+2)(s-2)}$
+\item $\dst\frac{7+(s+4)(18-3s)}{(s-3)(s-1)(s+4)}$
+\item $\dst\frac{2+(s-2)(3-2s)}{(s-2)(s+2)(s-3)}$
+\item $\dst\frac{3-(s-1)(s+1)}{(s+4)(s-2)(s-1)}$
+\item $\dst\frac{3+(s-2)(10-2s-s^2)}{(s-2)(s+2)(s-1)(s+3)}$
+\item $\dst\frac{3+(s-3)(2s^2+s-21)}{(s-3)(s-1)(s+4)(s-2)}$
+\end{alist}
 
 \item\label{exer:8.2.4}Find the inverse Laplace transform.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a}  $\dst\frac{2+3s}{(s^2+1)(s+2)(s+1)}$&
-\part{b}  $\dst\frac{3s^2+2s+1}{(s^2+1)(s^2+2s+2)}$\\[10pt]
-\part{c}  $\dst\frac{3s+2}{(s-2)(s^2+2s+5)}$ &
-\part{d}  $\dst\frac{3s^2+2s+1}{(s-1)^2(s+2)(s+3)}$\\[10pt]
-\part{e}  $\dst\frac{2s^2+s+3}{(s-1)^2(s+2)^2}$ &
-\part{f}  $\dst\frac{3s+2}{(s^2+1)(s-1)^2}$
-\end{tabular}
+\begin{alist}[columns=2]
+\item $\dst\frac{2+3s}{(s^2+1)(s+2)(s+1)}$
+\item $\dst\frac{3s^2+2s+1}{(s^2+1)(s^2+2s+2)}$
+\item $\dst\frac{3s+2}{(s-2)(s^2+2s+5)}$
+\item $\dst\frac{3s^2+2s+1}{(s-1)^2(s+2)(s+3)}$
+\item $\dst\frac{2s^2+s+3}{(s-1)^2(s+2)^2}$
+\item $\dst\frac{3s+2}{(s^2+1)(s-1)^2}$
+\end{alist}
 
-\item\label{exer:8.2.5}Use the method of Example~\ref{example:8.2.9}  to find the
-inverse Laplace transform.
+\item\label{exer:8.2.5}Use the method of Example~\ref{example:8.2.9}  to find the inverse Laplace transform.
 
-\begin{tabular}[t]{@{}p{112pt}@{}p{112pt}@{}p{112pt}}
-\part{a} $\dst\frac{3s+2}{(s^2+4)(s^2+9)}$ &
-\part{b} $\dst\frac{-4s+1}{(s^2+1)(s^2+16)}$ &
-\part{c} $\dst\frac{5s+3}{(s^2+1)(s^2+4)}$\\[10pt]
-\part{d} $\dst\frac{-s+1}{(4s^2+1)(s^2+1)}$ &
-\part{e} $\dst\frac{17s-34}{(s^2+16)(16s^2+1)}$ &
-\part{f} $\dst\frac{2s-1}{(4s^2+1)(9s^2+1)}$
-\end{tabular}
+\begin{alist}[columns=3]
+% TODO was horizontal
+\item $\dst\frac{3s+2}{(s^2+4)(s^2+9)}$
+\item $\dst\frac{-4s+1}{(s^2+1)(s^2+16)}$
+\item $\dst\frac{5s+3}{(s^2+1)(s^2+4)}$
+\item $\dst\frac{-s+1}{(4s^2+1)(s^2+1)}$
+\item $\dst\frac{17s-34}{(s^2+16)(16s^2+1)}$
+\item $\dst\frac{2s-1}{(4s^2+1)(9s^2+1)}$
+\end{alist}
 
 
 \item\label{exer:8.2.6}Find the inverse Laplace transform.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $\dst\frac{17 s-15}{(s^2-2s+5)(s^2+2s+10)}$ &
-\part{b} $\dst\frac{8s+56}{(s^2-6s+13)(s^2+2s+5)}$\\[10pt]
-\part{c} $\dst\frac{s+9}{(s^2+4s+5)(s^2-4s+13)}$ &
-\part{d} $\dst\frac{3s-2}{(s^2-4s+5)(s^2-6s+13)}$\\[10pt]
-\part{e} $\dst\frac{3s-1}{(s^2-2s+2)(s^2+2s+5)}$ &
-\part{f} $\dst\frac{20s+40}{(4s^2-4s+5)(4s^2+4s+5)}$
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO was horinzontal
+\item $\dst\frac{17 s-15}{(s^2-2s+5)(s^2+2s+10)}$
+\item $\dst\frac{8s+56}{(s^2-6s+13)(s^2+2s+5)}$
+\item $\dst\frac{s+9}{(s^2+4s+5)(s^2-4s+13)}$
+\item $\dst\frac{3s-2}{(s^2-4s+5)(s^2-6s+13)}$
+\item $\dst\frac{3s-1}{(s^2-2s+2)(s^2+2s+5)}$
+\item $\dst\frac{20s+40}{(4s^2-4s+5)(4s^2+4s+5)}$
+\end{alist}
 
 \item\label{exer:8.2.7}Find the inverse Laplace transform.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \part{a} $\dst\frac{1}{s(s^2+1)}$ &
-\part{b} $\dst\frac{1}{(s-1)(s^2-2s+17)}$\\[10pt]
-\part{c} $\dst\frac{3s+2}{(s-2)(s^2+2s+10)}$ &
-\part{d} $\dst\frac{34-17s}{(2s-1)(s^2-2s+5)}$\\[10pt]
-\part{e} $\dst\frac{s+2}{(s-3)(s^2+2s+5)}$ &
-\part{f} $\dst\frac{2s-2}{(s-2)(s^2+2s+10)}$
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO was horizontal
+\item $\dst\frac{1}{s(s^2+1)}$
+\item $\dst\frac{1}{(s-1)(s^2-2s+17)}$
+\item $\dst\frac{3s+2}{(s-2)(s^2+2s+10)}$
+\item $\dst\frac{34-17s}{(2s-1)(s^2-2s+5)}$
+\item $\dst\frac{s+2}{(s-3)(s^2+2s+5)}$
+\item $\dst\frac{2s-2}{(s-2)(s^2+2s+10)}$
+\end{alist}
 
 \item\label{exer:8.2.8}Find the inverse Laplace transform.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $\dst\frac{2s+1}{(s^2+1)(s-1)(s-3)}$ &
-\part{b} $\dst\frac{s+2}{(s^2+2s+2)(s^2-1)}$\\[10pt]
-\part{c} $\dst\frac{2s-1}{(s^2-2s+2)(s+1)(s-2)}$ &
-\part{d} $\dst\frac{s-6}{(s^2-1)(s^2+4)}$\\[10pt]
-\part{e} $\dst\frac{2s-3}{s(s-2)(s^2-2s+5)}$ &
-\part{f} $\dst\frac{5s-15}{(s^2-4s+13)(s-2)(s-1)}$\\[10pt]
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO was horizontal
+\item $\dst\frac{2s+1}{(s^2+1)(s-1)(s-3)}$
+\item $\dst\frac{s+2}{(s^2+2s+2)(s^2-1)}$
+\item $\dst\frac{2s-1}{(s^2-2s+2)(s+1)(s-2)}$
+\item $\dst\frac{s-6}{(s^2-1)(s^2+4)}$
+\item $\dst\frac{2s-3}{s(s-2)(s^2-2s+5)}$
+\item $\dst\frac{5s-15}{(s^2-4s+13)(s-2)(s-1)}$
+\end{alist}
 
 \item\label{exer:8.2.9}Given that $f(t)\leftrightarrow F(s)$, find the inverse
 Laplace transform of $F(as-b)$, where $a>0$.
@@ -4654,54 +4673,51 @@ $\dst{y''+y=\sum_{k=1}^\infty\delta(t-k\pi), \quad  y(0)=0,\quad y'(0)=0}$
 
 \section{A Brief Table of Laplace Transforms}
 
-\begin{center}
-\begin{tabular}{ccc}
- {$f(t)$}  &  {$F(s)$}  &  {}  \\[15pt]\midrule
-  1  &  $\displaystyle{\frac{1}{s}}$
-& $(s > 0)$ \\[15pt]
-  $t^n$  &  $\displaystyle{\frac{n!}{s^{n+1}}}$  & $(s > 0, n \text{ a positive integer})$ \\[15pt]
-  $t^p,\;  p > -1$  &
-$\displaystyle{\frac{\Gamma (p+1)}{s^{(p+1)}}}$ & $(s>0)$ \\[15pt]
-  $e^{at}$  &  $\displaystyle{\frac{1 }{s-a}}$  & $(s > a)$ \\[15pt]
-  $t^ne^{at}$  &  $\displaystyle{\frac{n! }{(s-a)^{n+1}}}$  & $(s > 0, n \text{ a positive integer})$ \\[15pt]
-  $\cos \omega t$  &
-$\displaystyle{\frac{s }{s^2+\omega^2}}$  & $(s > 0)$ \\[15pt]
- $\sin \omega t$  &
-$\displaystyle{\frac{\omega }{s^2+\omega^2}}$  & $(s > 0)$ \\[15pt]
-  $e^{\lambda t} \cos \omega t$  &
-$\displaystyle{\frac{s - \lambda }{(s-\lambda)^2+\omega^2}}$  & $(s >
-\lambda)$ \\[15pt]
- $e^{\lambda t} \sin \omega t$  &
-$\displaystyle{\frac{\omega }{(s-\lambda)^2+\omega^2}}$  & $(s >
-\lambda)$ \\[15pt]
-  $\cosh bt$  &  $\displaystyle{\frac{s }{s^2-b^2}}$  & $(s > |b|)$\\[15pt]
-  $\sinh bt$  &  $\displaystyle{\frac{b }{s^2-b^2}}$  & $(s > |b|)$ \\[15pt]
- $t \cos \omega t$  &
-$\displaystyle{\frac{s^2-\omega^2 }{(s^2+\omega^2)^2}}$  & $(s>0)$
-\end{tabular}
-\end{center}
+\[
+\tagpdfsetup{table/header-rows={1}}
+\renewcommand{\arraystretch}{3}
+\begin{array}{ccc}
+f(t) & F(s) &  \\\midrule
+  1  &  \displaystyle{\frac{1}{s}} & (s > 0) \\
+  t^n  &  \displaystyle{\frac{n!}{s^{n+1}}}  & (s > 0, n \text{ a positive integer}) \\
+  t^p,\;  p > -1  &
+\displaystyle{\frac{\Gamma (p+1)}{s^{(p+1)}}} & (s>0) \\
+  e^{at}  &  \displaystyle{\frac{1 }{s-a}}  & (s > a) \\
+  t^ne^{at}  &  \displaystyle{\frac{n! }{(s-a)^{n+1}}}  & (s > 0, n \text{ a positive integer}) \\
+  \cos \omega t  & \displaystyle{\frac{s }{s^2+\omega^2}}  & (s > 0) \\
+\sin\omega t  & \displaystyle{\frac{\omega }{s^2+\omega^2}}  & (s > 0) \\
+  e^{\lambda t} \cos \omega t  &
+  \displaystyle{\frac{s - \lambda }{(s-\lambda)^2+\omega^2}}  &
+   (s > \lambda) \\
+ e^{\lambda t} \sin \omega t  &
+\displaystyle{\frac{\omega }{(s-\lambda)^2+\omega^2}}  & (s >\lambda) \\
+  \cosh bt  &  \displaystyle{\frac{s }{s^2-b^2}}  & (s > |b|)\\
+  \sinh bt  &  \displaystyle{\frac{b }{s^2-b^2}}  & (s > |b|) \\
+ t \cos \omega t  &
+\displaystyle{\frac{s^2-\omega^2 }{(s^2+\omega^2)^2}}  & (s>0)
+\end{array}
+\]
 
-\begin{center}
-\begin{tabular}{ccc}
- {$f(t)$}  &  {$F(s)$}  &  {}  \\[15pt]\midrule
-  $t \sin \omega t$  &
-$\displaystyle{\frac{2\omega s }{(s^2+\omega^2)^2}}$  & $(s>0)$\\[15pt]
-  $\sin \omega t -\omega t\cos  \omega t $
- & $\displaystyle{\frac{2\omega^3}{(s^2+\omega^2)^2}}$ & $(s>0)$\\[15pt]
-  $\omega t - \sin  \omega t $  &
-$\displaystyle{\frac{\omega^3 }{s^2(s^2+\omega^2)^2}}$ & $(s>0)$ \\[15pt]
-  $\displaystyle{\frac{1 }{t} \sin  \omega t }$
-& $\displaystyle{\arctan \left(\frac{\omega }{s}\right)}$ & $(s>0)$ \\[15pt]
-  $e^{at}f(t)$  &  $F(s-a)$  & \\[15pt]
-  $t^kf(t)$  &
-$\displaystyle{{(-1)^kF^{(k)}(s)}}$  &  \\[15pt]
-  $f(\omega t)$  &  $\displaystyle{\frac{1}{\omega} F\left(\frac{s }{\omega}\right),  \quad \omega > 0}$ &  \\[15pt]
-  $u(t-\tau)$  &
-$\displaystyle{\frac{e^{-\tau s}}{s}}$ & $(s>0)$  \\[15pt]
-  $u(t-\tau)f(t-\tau)\, (\tau > 0)$  &
-$e^{-\tau s}F(s)$  &  \\[15pt]
-  $\displaystyle{\int^t_o f(\tau)g(t-\tau)\, d\tau}$
- &  $F(s) \cdot G(s)$ &  \\[15pt]
-  $\delta(t-a)$  &  $e^{-as}$ & $(s>0)$\\[15pt]
-\end{tabular}
-\end{center}
+\[
+\tagpdfsetup{table/header-rows={1}}
+\renewcommand{\arraystretch}{3}
+\begin{array}{ccc}
+ f(t)  &  F(s)  &    \\\midrule
+  t \sin \omega t  &
+\displaystyle{\frac{2\omega s }{(s^2+\omega^2)^2}}  & (s>0)\\
+  \sin \omega t -\omega t\cos  \omega t 
+ & \displaystyle{\frac{2\omega^3}{(s^2+\omega^2)^2}} & (s>0)\\
+  \omega t - \sin  \omega t   &
+\displaystyle{\frac{\omega^3 }{s^2(s^2+\omega^2)^2}} & (s>0) \\
+  \displaystyle{\frac{1 }{t} \sin  \omega t }
+& \displaystyle{\arctan \left(\frac{\omega }{s}\right)} & (s>0) \\
+  e^{at}f(t)  &  F(s-a)  & \\
+  t^kf(t)  & \displaystyle{{(-1)^kF^{(k)}(s)}}  &  \\
+  f(\omega t)  &  \displaystyle{\frac{1}{\omega} F\left(\frac{s }{\omega}\right),  \quad \omega > 0} &  \\
+  u(t-\tau)  & \displaystyle{\frac{e^{-\tau s}}{s}} & (s>0)  \\
+  u(t-\tau)f(t-\tau)\, (\tau > 0)  & e^{-\tau s}F(s)  &  \\
+  \displaystyle{\int^t_o f(\tau)g(t-\tau)\, d\tau}
+ &  F(s) \cdot G(s) &  \\
+  \delta(t-a)  &  e^{-as} & (s>0)
+\end{array}
+\]

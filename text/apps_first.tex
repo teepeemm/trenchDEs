@@ -1,3 +1,5 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Applications of First Order Equations}\label{ch:apps_first}
 
@@ -532,48 +534,67 @@ follwing table
 corresponds to the time of the year-end deposit, and each year is
 assumed to have exactly 52 weeks.
 
-\[
-\vbox{\tabskip=0pt \offinterlineskip
-\def\tablerule{\noalign{\hrule}}
-\halign{\hfill#\hfill&\qquad\hfill#\hfill&\qquad\hfill#\hfill
-  &\qquad\hfill#\hfill&\qquad#\hfill\cr
-%\noalign{\centerline{\bf Table \label{table:4.1.2}}}
-\noalign{\vskip12pt}
-%\noalign{\centerline{Value of the Saver's Account (Example
-%\ref{example:4.1.6})}}
-\noalign{\vskip22pt}
-Year & Approximate Value of $Q$ & Exact Value of  $P$ & Error & Percentage
-Error
-\cr & (Example~\ref{example:4.1.6}) & (Exercise~\ref{exer:4.1.21}) & $Q-P$ &\ \;
-$(Q-P)/P$ \cr \noalign{\vskip16pt}
-\  1 & \$ 3741.42 & \$ 3739.87 & \$ 1.55 &\ \; $.0413 $\% \cr
-\noalign{\vskip7pt}
-\  2 &\  \, 6652.36 &\ \;  6649.17 &\ \; 3.19 &\ \; $.0479$
-\cr
-\noalign{\vskip7pt}
-\  3 &\  \, 9743.30 &\ \;  9738.37 &\ \; 4.93 &\ \; $.0506$
-\cr
-\noalign{\vskip7pt}
-\  4 & \, 13,025.38 & \, 13,018.60 &\ \; 6.78 &\ \; $.0521$
-\cr
-\noalign{\vskip7pt}
-\  5 & \, 16,510.41 & \, 16,501.66 &\ \; 8.75 &\ \; $.0530 $
-\cr
-\noalign{\vskip7pt}
-\  6 & \, 20,210.94 & \, 20,200.11 & 10.83 &\ \; $.0536$
-\cr
-\noalign{\vskip7pt}
-\  7 & \, 24,140.30 & \, 24,127.25 & 13.05 &\ \; $.0541 $
-\cr
-\noalign{\vskip7pt}
-\  8 & \, 28,312.63 & \, 28,297.23 & 15.40 &\ \; $.0544 $
-\cr
-\noalign{\vskip7pt}
-\  9 & \, 32,742.97 & \, 32,725.07 & 17.90 &\ \; $.0547 $
-\cr
-\noalign{\vskip7pt}
-10 & \, 37,447.27 & \, 37,426.72 & 20.55 &\ \; $.0549 $ \cr}}
-\]
+%\[
+%\vbox{\tabskip=0pt \offinterlineskip
+%\def\tablerule{\noalign{\hrule}}
+%\halign{\hfill#\hfill&\qquad\hfill#\hfill&\qquad\hfill#\hfill
+%  &\qquad\hfill#\hfill&\qquad#\hfill\cr
+%%\noalign{\centerline{\bf Table \label{table:4.1.2}}}
+%\noalign{\vskip12pt}
+%%\noalign{\centerline{Value of the Saver's Account (Example
+%%\ref{example:4.1.6})}}
+%\noalign{\vskip22pt}
+%Year & Approximate Value of $Q$ & Exact Value of  $P$ & Error & Percentage
+%Error
+%\cr & (Example~\ref{example:4.1.6}) & (Exercise~\ref{exer:4.1.21}) & $Q-P$ &\ \;
+%$(Q-P)/P$ \cr \noalign{\vskip16pt}
+%\  1 & \$ 3741.42 & \$ 3739.87 & \$ 1.55 &\ \; $.0413 $\% \cr
+%\noalign{\vskip7pt}
+%\  2 &\  \, 6652.36 &\ \;  6649.17 &\ \; 3.19 &\ \; $.0479$
+%\cr
+%\noalign{\vskip7pt}
+%\  3 &\  \, 9743.30 &\ \;  9738.37 &\ \; 4.93 &\ \; $.0506$
+%\cr
+%\noalign{\vskip7pt}
+%\  4 & \, 13,025.38 & \, 13,018.60 &\ \; 6.78 &\ \; $.0521$
+%\cr
+%\noalign{\vskip7pt}
+%\  5 & \, 16,510.41 & \, 16,501.66 &\ \; 8.75 &\ \; $.0530 $
+%\cr
+%\noalign{\vskip7pt}
+%\  6 & \, 20,210.94 & \, 20,200.11 & 10.83 &\ \; $.0536$
+%\cr
+%\noalign{\vskip7pt}
+%\  7 & \, 24,140.30 & \, 24,127.25 & 13.05 &\ \; $.0541 $
+%\cr
+%\noalign{\vskip7pt}
+%\  8 & \, 28,312.63 & \, 28,297.23 & 15.40 &\ \; $.0544 $
+%\cr
+%\noalign{\vskip7pt}
+%\  9 & \, 32,742.97 & \, 32,725.07 & 17.90 &\ \; $.0547 $
+%\cr
+%\noalign{\vskip7pt}
+%10 & \, 37,447.27 & \, 37,426.72 & 20.55 &\ \; $.0549 $ \cr}}
+%\]
+\begin{center}
+\tagpdfsetup{table/header-rows={1,2}}
+\begin{tabular}{ S[table-format=2] *2{S[table-format=5.2]} S[table-format=2.2] S[table-format=1.4] }\toprule
+{Year} & {Approximate Value $Q$} & {Exact Value $P$} & {Error} & {Percentage
+Error} \\
+& {(Example~\ref{example:4.1.6}, \$)} & {(Exercise~\ref{exer:4.1.21}, \$)} & {$Q-P$} & {$(Q-P)/P$} \\\midrule
+ 1 & 3741.42 & 3739.87 & 1.55 & .0413\\
+ 2 & 6652.36 & 6649.17 & 3.19 & .0479\\
+ 3 & 9743.30 & 9738.37 & 4.93 & .0506\\
+ 4 &13025.38 &13018.60 & 6.78 & .0521\\
+ 5 &16510.41 &16501.66 & 8.75 & .0530\\
+ 6 &20210.94 &20200.11 &10.83 & .0536\\
+ 7 &24140.30 &24127.25 &13.05 & .0541\\
+ 8 &28312.63 &28297.23 &15.40 & .0544\\
+ 9 &32742.97 &32725.07 &17.90 & .0547\\
+10 &37447.27 &37426.72 &20.55 & .0549\\
+\bottomrule
+\end{tabular}
+\end{center}
 
 \exercises
 
@@ -1058,16 +1079,12 @@ are also removing $1/150$ of the salt per minute. Therefore, if there
 are $Q(t)$ pounds of salt in the tank at time $t$, the rate out
 at any time $t$ is $Q(t)/150$. Alternatively, we can arrive at this
 conclusion by arguing that
-\[
-\begin{array}{lcl}
-\mbox{rate out} & = & (\mbox{concentration})\times(\mbox{rate of
-flow out})\\[6pt] \mbox{}&=&(\mbox{lb/gal})\times(\mbox{gal/min})\\[10pt]
-&=&\dst\frac{Q(t)}{600}\times
-4=\dst\frac{Q(t)}{150}.
-\end{array}
-\]
- We can now
-write \eqref{eq:4.2.5} as
+\begin{align*}
+\text{rate out} & = (\text{concentration})\times(\text{rate of flow out})\\
+&=(\text{lb/gal})\times(\text{gal/min})\\
+&=\dst\frac{Q(t)}{600}\times 4=\dst\frac{Q(t)}{150}.
+\end{align*}
+We can now write \eqref{eq:4.2.5} as
 \[
 Q' = 2-\frac{Q}{150}.
 \]
@@ -1081,7 +1098,7 @@ $u'e^{-t/150}=2$, so $u'=2e^{t/150}$. Hence,
 \[
 u = 300e^{t/150}+c,
 \]
- so
+so
 \begin{equation} \label{eq:4.2.6}
 Q=ue^{-t/150}=300+ce^{-t/150}
 \end{equation}
@@ -1573,19 +1590,18 @@ force in each system is defined to be the force required to impart an
 acceleration of (one unit of length)$/s^2$ to one unit of
 mass.
 
-\bigskip
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline
-& {\bf Length}&{\bf Force}& {\bf Mass}\\\hline
-  cgs & centimeter (cm) & dyne (d) & gram (g)\\\hline
- mks & meter (m) & newton (N) & kilogram (kg) \\\hline
-British & foot (ft) & pound (lb) & slug (sl)\\\hline
+\begin{table}
+\centering
+\caption{}
+\tagpdfsetup{table/header-rows={1}}
+\begin{tabular}{cccc}\toprule
+& Length & Force & Mass \\\midrule
+  cgs & centimeter (cm) & dyne (d) & gram (g)\\
+ mks & meter (m) & newton (N) & kilogram (kg) \\
+British & foot (ft) & pound (lb) & slug (sl)\\
+\bottomrule
 \end{tabular}
-
-\medskip
-Table 1.
-\end{center}
+\end{table}
 
 If we assume that Earth is a perfect sphere with constant mass
 density,  Newton's law of gravitation (discussed later in this
@@ -2890,13 +2906,10 @@ curves,
 so solutions associated with them are periodic. Solutions associated
 with other trajectories are not periodic. If $y$ is any such solution
 with trajectory not  on the separatrix, then
-\[
-\begin{array}{llrllr}
-\dst\lim_{t\to\infty}y(t)&=&-\infty, &\dst\lim_{t\to-\infty}y(t)&=&-\infty,\\
-\dst\lim_{t\to\infty}v(t)&=&-\infty,
-&\dst\lim_{t\to-\infty}v(t)&=&\infty.
-\end{array}
-\]
+\begin{align*}
+\dst\lim_{t\to\infty}y(t)&=-\infty, &\dst\lim_{t\to-\infty}y(t)&=-\infty,\\
+\dst\lim_{t\to\infty}v(t)&=-\infty, &\dst\lim_{t\to-\infty}v(t)&=\infty.
+\end{align*}
 
  \begin{figure}[H]
   \centering
@@ -2914,22 +2927,17 @@ separatrix marked \part{a}, \part{b}, and \part{c} -- which don't include $(0,0)
 are distinct trajectories, none of which can be traversed in finite
 time. Solutions with these trajectories have the following asymptotic
 behavior:
-\[
-\begin{array}{llrllrl}
-\dst\lim_{t\to\infty}y(t)&=&0, &\dst\lim_{t\to-\infty}y(t)&=&-\infty,\\
-\dst\lim_{t\to\infty}v(t)&=&0,
-&\dst\lim_{t\to-\infty}v(t)&=&\infty\phantom{,}&
-\mbox{ (on \part{a})}  \\
-\dst\lim_{t\to\infty}y(t)&=&0, &\dst\lim_{t\to-\infty}y(t)&=&0,\\
-\dst\lim_{t\to\infty}v(t)&=&0,
-&\dst\lim_{t\to-\infty}v(t)&=&0\phantom{,}&
-\mbox{ (on \part{b})}  \\
-\dst\lim_{t\to\infty}y(t)&=&-\infty, &\dst\lim_{t\to-\infty}y(t)&=&0,\\
-\dst\lim_{t\to\infty}v(t)&=&-\infty,
-&\dst\lim_{t\to-\infty}v(t)&=&0\phantom{,}&
-\mbox{ (on \part{c})}.
-\end{array}.
-\]
+\begin{align*}
+\lim_{t\to\infty}y(t)&=0, &\lim_{t\to-\infty}y(t)&=-\infty,\\
+\lim_{t\to\infty}v(t)&=0, &\lim_{t\to-\infty}v(t)&=\infty\qquad
+\text{(on \part{a})}  \\
+\lim_{t\to\infty}y(t)&=0, &\lim_{t\to-\infty}y(t)&=0,\\
+\lim_{t\to\infty}v(t)&=0, &\lim_{t\to-\infty}v(t)&=0\qquad
+\text{(on \part{b})}  \\
+\lim_{t\to\infty}y(t)&=-\infty, &\lim_{t\to-\infty}y(t)&=0,\\
+\lim_{t\to\infty}v(t)&=-\infty, &\lim_{t\to-\infty}v(t)&=0\qquad
+\text{ (on \part{c})}.
+\end{align*}
 \end{example}
 
 

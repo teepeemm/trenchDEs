@@ -1,3 +1,5 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Numerical Methods}\label{ch:numerical}
 
@@ -202,50 +204,64 @@ which can be obtained by the method of Section~2.1. (Verify.)
 \eqref{eq:3.1.6} at the specified points, and the approximate values of
 the solution at these points obtained by Euler's method with step
 sizes $h=0.1$, $h=0.05$, and $h=0.025$. In examining this table, keep
-in mind that the approximate values in the column corresponding to
+in mind that the approximate values in the row corresponding to
 $h=.05$ are actually the results of 20 steps with Euler's method. We
 haven't listed the estimates of the solution obtained for
 $x=0.05$, $0.15$, \dots, since there's nothing to compare them with in
-the column corresponding to $h=0.1$. Similarly, the approximate values
-in the column corresponding to $h=0.025$ are actually the results of
+the row corresponding to $h=0.1$. Similarly, the approximate values
+in the row corresponding to $h=0.025$ are actually the results of
 40 steps with Euler's method.
 
-\begin{newtable} \label{table:3.1.1}
-{Numerical solution of
-$y'+2y=x^3e^{-2x},\ y(0)=1$, by Euler's method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.025$}&
-\multicolumn{1}{|c|}{Exact}\\ \hline
-0.0 & 1.000000000 & 1.000000000 & 1.000000000 & 1.000000000 \\
-0.1 & 0.800000000 & 0.810005655 & 0.814518349 & 0.818751221 \\
-0.2 & 0.640081873 & 0.656266437 & 0.663635953 & 0.670588174 \\
-0.3 & 0.512601754 & 0.532290981 & 0.541339495 & 0.549922980 \\
-0.4 & 0.411563195 & 0.432887056 & 0.442774766 & 0.452204669 \\
-0.5 & 0.332126261 & 0.353785015 & 0.363915597 & 0.373627557 \\
-0.6 & 0.270299502 & 0.291404256 & 0.301359885 & 0.310952904 \\
-0.7 & 0.222745397 & 0.242707257 & 0.252202935 & 0.261398947 \\
-0.8 & 0.186654593 & 0.205105754 & 0.213956311 & 0.222570721 \\
-0.9 & 0.159660776 & 0.176396883 & 0.184492463 & 0.192412038 \\
-1.0 & 0.139778910 & 0.154715925 & 0.162003293 & 0.169169104\\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'+2y=x^3e^{-2x},\ y(0)=1$, by Euler's method.}
+\label{table:3.1.1}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.1&h=0.05&h=0.025&\text{Exact}\\\midrule
+%0.0 & 1.000000000 & 1.000000000 & 1.000000000 & 1.000000000 \\
+%0.1 & 0.800000000 & 0.810005655 & 0.814518349 & 0.818751221 \\
+%0.2 & 0.640081873 & 0.656266437 & 0.663635953 & 0.670588174 \\
+%0.3 & 0.512601754 & 0.532290981 & 0.541339495 & 0.549922980 \\
+%0.4 & 0.411563195 & 0.432887056 & 0.442774766 & 0.452204669 \\
+%0.5 & 0.332126261 & 0.353785015 & 0.363915597 & 0.373627557 \\
+%0.6 & 0.270299502 & 0.291404256 & 0.301359885 & 0.310952904 \\
+%0.7 & 0.222745397 & 0.242707257 & 0.252202935 & 0.261398947 \\
+%0.8 & 0.186654593 & 0.205105754 & 0.213956311 & 0.222570721 \\
+%0.9 & 0.159660776 & 0.176396883 & 0.184492463 & 0.192412038 \\
+%1.0 & 0.139778910 & 0.154715925 & 0.162003293 & 0.169169104\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{@{} S[table-format=1.3]
+    H
+    *{5}{H S[table-format=1.9,table-auto-round]}
+    @{} }\toprule
+{h}&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.1}&{0.2}&{0.3}&{0.4}&{0.5}&{0.6}&{0.7}&{0.8}&{0.9}&{1.0}\\\midrule
+0.1&
+1.000000000&0.800000000&0.640081873&0.512601754&0.411563195&0.332126261&0.270299502&0.222745397&0.186654593&0.159660776&0.139778910\\
+0.05&
+1.000000000&0.810005655&0.656266437&0.532290981&0.432887056&0.353785015&0.291404256&0.242707257&0.205105754&0.176396883&0.154715925\\
+0.025&
+1.000000000&0.814518349&0.663635953&0.541339495&0.442774766&0.363915597&0.301359885&0.252202935&0.213956311&0.184492463&0.162003293\\
+\text{Exact}&
+1.000000000&0.818751221&0.670588174&0.549922980&0.452204669&0.373627557&0.310952904&0.261398947&0.222570721&0.192412038&0.169169104\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 You can see from Table~\ref{table:3.1.1} that decreasing the step size
 improves the accuracy of Euler's method. For example,
 \[
-y_{\mbox{\tiny exact}}(1)-y_{\mbox{\tiny approx}}(1)\approx
-\left\{\begin{array}{l}
-.0293\mbox{ with }h=0.1,\\
-.0144\mbox{ with }h=0.05,\\
-.0071\mbox{ with }h=0.025.
-\end{array}\right.
+y_{\text{\tiny exact}}(1)-y_{\text{\tiny approx}}(1)\approx
+\begin{cases}
+.0293\text{ with }h=0.1,\\
+.0144\text{ with }h=0.05,\\
+.0071\text{ with }h=0.025.
+\end{cases}
 \]
 Based on this scanty evidence, you might guess that the error in
 approximating the exact solution at a \emph{\color{blue}fixed value of} $x$ by
@@ -255,30 +271,41 @@ Table~\ref{table:3.1.2}, which lists the approximate values of
 $y_{\mbox{\tiny exact}}-y_{\mbox{\tiny approx}}$ at
 $x=0.1$, $0.2$, \dots, $1.0$.
 
-\begin{newtable} \label{table:3.1.2}
-{Errors in approximate solutions of $y'+2y=x^3e^{-2x},\
+\begin{table}
+\caption{Errors in approximate solutions of $y'+2y=x^3e^{-2x},\
 y(0)=1$, obtained by Euler's method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.025$}\\ \hline
-0.1 & 0.0187 & 0.0087 & 0.0042\\
-0.2 & 0.0305 & 0.0143 & 0.0069\\
-0.3 & 0.0373 & 0.0176 & 0.0085\\
-0.4 & 0.0406 & 0.0193 & 0.0094\\
-0.5 & 0.0415 & 0.0198 & 0.0097\\
-0.6 & 0.0406 & 0.0195 & 0.0095\\
-0.7 & 0.0386 & 0.0186 & 0.0091\\
-0.8 & 0.0359 & 0.0174 & 0.0086\\
-0.9 & 0.0327 & 0.0160 & 0.0079\\
-1.0 & 0.0293 & 0.0144 & 0.0071\\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\label{table:3.1.2}
+%\[
+%\begin{array}{cccc}\toprule
+%x&h=0.1&h=0.05&h=0.025\\ \midrule
+%0.1 & 0.0187 & 0.0087 & 0.0042\\
+%0.2 & 0.0305 & 0.0143 & 0.0069\\
+%0.3 & 0.0373 & 0.0176 & 0.0085\\
+%0.4 & 0.0406 & 0.0193 & 0.0094\\
+%0.5 & 0.0415 & 0.0198 & 0.0097\\
+%0.6 & 0.0406 & 0.0195 & 0.0095\\
+%0.7 & 0.0386 & 0.0186 & 0.0091\\
+%0.8 & 0.0359 & 0.0174 & 0.0086\\
+%0.9 & 0.0327 & 0.0160 & 0.0079\\
+%1.0 & 0.0293 & 0.0144 & 0.0071\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{S[table-format=1.3] *{10}{c}}\toprule
+{h}&\multicolumn{10}{c}{x}\\\cmidrule(l){2-11}
+&0.1&0.2&0.3&0.4&0.5&0.6&0.7&0.8&0.9&1.0\\\midrule
+0.1&
+0.0187&0.0305&0.0373&0.0406&0.0415&0.0406&0.0386&0.0359&0.0327&0.0293\\
+0.05&
+0.0087&0.0143&0.0176&0.0193&0.0198&0.0195&0.0186&0.0174&0.0160&0.0144\\
+0.025&
+0.0042&0.0069&0.0085&0.0094&0.0097&0.0095&0.0091&0.0086&0.0079&0.0071\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 \begin{example}\label{example:3.1.3} \rm
 Tables~\ref{table:3.1.3} and \ref{table:3.1.4} show analogous results
@@ -287,81 +314,107 @@ for the nonlinear initial value problem
 y'=-2y^2+xy+x^2,\ y(0)=1,
 \end{equation}
 except in this case we can't solve \eqref{eq:3.1.7} exactly.
-The results in the ``Exact'' column were obtained by using a
+The results in the ``Exact'' row were obtained by using a
 more accurate numerical method known as the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Runge.html}
 {\color{blue}\itshape Runge}-\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Kutta.html}{\itshape\color{blue}Kutta\/}
-method
- with a small step size. They are
-exact to eight decimal places.\bbox
+method with a small step size.
+%They are exact to eight decimal places.
+\bbox
 \end{example}
 
 
 Since we think it's important in evaluating the accuracy of the
 numerical methods that we'll be studying in this chapter, we
-often include a column listing values of the exact solution of the
+often include a row listing values of the exact solution of the
 initial value problem, even if the directions in the example or
 exercise don't specifically call for it. If  quotation marks are
 included in the heading, the values were obtained by applying the
 Runge-Kutta method in a way that's explained in Section~3.3.
-If  quotation marks are not included,  the values were
+If quotation marks are not included,  the values were
 obtained from a known formula for the solution.
-In either case, the values are exact to eight places to the
-right of the decimal point.
+In either case,
+the shown values are correct.
+%the values are exact to eight places to the right of the decimal point.
 
 
 
-\begin{newtable} \label{table:3.1.3}
-{Numerical solution of
-$y'=-2y^2+xy+x^2,\ y(0)=1$, by Euler's method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.025$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0 & 1.000000000 & 1.000000000 & 1.000000000 & 1.000000000 \\
-0.1 & 0.800000000 & 0.821375000 & 0.829977007 & 0.837584494 \\
-0.2 & 0.681000000 & 0.707795377 & 0.719226253 & 0.729641890 \\
-0.3 & 0.605867800 & 0.633776590 & 0.646115227 & 0.657580377 \\
-0.4 & 0.559628676 & 0.587454526 & 0.600045701 & 0.611901791 \\
-0.5 & 0.535376972 & 0.562906169 & 0.575556391 & 0.587575491 \\
-0.6 & 0.529820120 & 0.557143535 & 0.569824171 & 0.581942225 \\
-0.7 & 0.541467455 & 0.568716935 & 0.581435423 & 0.593629526 \\
-0.8 & 0.569732776 & 0.596951988 & 0.609684903 & 0.621907458 \\
-0.9 & 0.614392311 & 0.641457729 & 0.654110862 & 0.666250842 \\
-1.0 & 0.675192037 & 0.701764495 & 0.714151626 & 0.726015790\\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'=-2y^2+xy+x^2,\ y(0)=1$, by Euler's method.}
+\label{table:3.1.3}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.1&h=0.05&h=0.025&\text{``Exact''}\\ \midrule
+%0.0 & 1.000000000 & 1.000000000 & 1.000000000 & 1.000000000 \\
+%0.1 & 0.800000000 & 0.821375000 & 0.829977007 & 0.837584494 \\
+%0.2 & 0.681000000 & 0.707795377 & 0.719226253 & 0.729641890 \\
+%0.3 & 0.605867800 & 0.633776590 & 0.646115227 & 0.657580377 \\
+%0.4 & 0.559628676 & 0.587454526 & 0.600045701 & 0.611901791 \\
+%0.5 & 0.535376972 & 0.562906169 & 0.575556391 & 0.587575491 \\
+%0.6 & 0.529820120 & 0.557143535 & 0.569824171 & 0.581942225 \\
+%0.7 & 0.541467455 & 0.568716935 & 0.581435423 & 0.593629526 \\
+%0.8 & 0.569732776 & 0.596951988 & 0.609684903 & 0.621907458 \\
+%0.9 & 0.614392311 & 0.641457729 & 0.654110862 & 0.666250842 \\
+%1.0 & 0.675192037 & 0.701764495 & 0.714151626 & 0.726015790\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.3]
+    H
+    *{5}{ H S[table-format=1.9,table-auto-round]}
+    @{} }\toprule
+h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.1}&{0.2}&{0.3}&{0.4}&{0.5}&{0.6}&{0.7}&{0.8}&{0.9}&{1.0}\\\midrule
+0.1&
+1.000000000&0.800000000&0.681000000&0.605867800&0.559628676&0.535376972&0.529820120&0.541467455&0.569732776&0.614392311&0.675192037\\
+0.05&
+1.000000000&0.821375000&0.707795377&0.633776590&0.587454526&0.562906169&0.557143535&0.568716935&0.596951988&0.641457729&0.701764495\\
+0.025&
+1.000000000&0.829977007&0.719226253&0.646115227&0.600045701&0.575556391&0.569824171&0.581435423&0.609684903&0.654110862&0.714151626\\
+\text{``Exact''}&
+1.000000000&0.837584494&0.729641890&0.657580377&0.611901791&0.587575491&0.581942225&0.593629526&0.621907458&0.666250842&0.726015790\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
-\begin{newtable} \label{table:3.1.4}
-{Errors in approximate solutions of $y'=-2y^2+xy+x^2,\
+\begin{table}
+\caption{Errors in approximate solutions of $y'=-2y^2+xy+x^2,\
 y(0)=1$, obtained by Euler's method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.025$}\\ \hline
-0.1 & 0.0376 & 0.0162 &0.0076 \\
-0.2 & 0.0486 & 0.0218 &0.0104 \\
-0.3 & 0.0517 & 0.0238 &0.0115 \\
-0.4 & 0.0523 & 0.0244 &0.0119 \\
-0.5 & 0.0522 & 0.0247 &0.0121 \\
-0.6 & 0.0521 & 0.0248 &0.0121 \\
-0.7 & 0.0522 & 0.0249 &0.0122 \\
-0.8 & 0.0522 & 0.0250 &0.0122 \\
-0.9 & 0.0519 & 0.0248 &0.0121 \\
-1.0 & 0.0508 & 0.0243 &0.0119 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\label{table:3.1.4}
+%\[
+%\begin{array}{cccc}\toprule
+%x&h=0.1&h=0.05&h=0.025\\ \midrule
+%0.1 & 0.0376 & 0.0162 &0.0076 \\
+%0.2 & 0.0486 & 0.0218 &0.0104 \\
+%0.3 & 0.0517 & 0.0238 &0.0115 \\
+%0.4 & 0.0523 & 0.0244 &0.0119 \\
+%0.5 & 0.0522 & 0.0247 &0.0121 \\
+%0.6 & 0.0521 & 0.0248 &0.0121 \\
+%0.7 & 0.0522 & 0.0249 &0.0122 \\
+%0.8 & 0.0522 & 0.0250 &0.0122 \\
+%0.9 & 0.0519 & 0.0248 &0.0121 \\
+%1.0 & 0.0508 & 0.0243 &0.0119 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{S[table-format=1.3] *{10}{c} }\toprule
+h&\multicolumn{10}{c}{x}\\\cmidrule(l){2-11}
+&0.1&0.2&0.3&0.4&0.5&0.6&0.7&0.8&0.9&1.0\\\midrule
+0.1&
+0.0376&0.0486&0.0517&0.0523&0.0522&0.0521&0.0522&0.0522&0.0519&0.0508\\
+0.05&
+0.0162&0.0218&0.0238&0.0244&0.0247&0.0248&0.0249&0.0250&0.0248&0.0243\\
+0.025&
+0.0076&0.0104&0.0115&0.0119&0.0121&0.0121&0.0122&0.0122&0.0121&0.0119\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 
 \boxit{Truncation Error in Euler's Method}
@@ -413,10 +466,10 @@ this, we differentiate
 y'(x)=f(x,y(x))
 \]
 to obtain
-\begin{eqnarray*}
-y''(x) & = & f_x(x,y(x))+f_y(x,y(x))y'(x)\\
- & = & f_x(x,y(x))+f_y(x,y(x))f(x,y(x)).
-\end{eqnarray*}
+\begin{align*}
+y''(x) & = f_x(x,y(x))+f_y(x,y(x))y'(x)\\
+ & = f_x(x,y(x))+f_y(x,y(x))f(x,y(x)).
+\end{align*}
 Since we assumed that $f$, $f_x$ and $f_y$ are bounded, there's
 a constant $M$ such that
 \[
@@ -503,13 +556,14 @@ for some constant $R$. From this and \eqref{eq:3.1.14},
 \end{equation}
 For convenience, let $C=1+Rh$. Since $e_0=y(x_0)-y_0=0$, applying
 \eqref{eq:3.1.15} repeatedly yields
-\begin{eqnarray}
-|e_1| & \le & \frac{Mh^2}{2}\nonumber\\
-|e_2| & \le & C|e_1|+\frac{Mh^2}{2}\le(1+C)\frac{Mh^2}{2}\nonumber\\
-|e_3| & \le & C|e_2|+\frac{Mh^2}{2}\le(1+C+C^2)\frac{Mh^2}{2}\nonumber\\
- & \vdots &\nonumber \\|e_n| & \le &
-C|e_{n-1}|+\frac{Mh^2}{2}\le(1+C+\cdots+C^{n-1})\frac{Mh^2}{2}.\label{eq:3.1.16}
-\end{eqnarray}
+\begin{align}
+|e_1| & \le \frac{Mh^2}{2}\nonumber\\
+|e_2| & \le C|e_1|+\frac{Mh^2}{2}\le(1+C)\frac{Mh^2}{2}\nonumber\\
+|e_3| & \le C|e_2|+\frac{Mh^2}{2}\le(1+C+C^2)\frac{Mh^2}{2}\nonumber\\
+      & \vdots\nonumber \\
+|e_n| & \le C|e_{n-1}|+\frac{Mh^2}{2}\le(1+C+\cdots+C^{n-1})\frac{Mh^2}{2}.
+\label{eq:3.1.16}
+\end{align}
 
 Recalling the formula for the sum of a geometric series, we see that
 \[
@@ -584,8 +638,6 @@ We'll call this procedure the
 The next two examples show that the Euler and Euler semilinear
 methods may yield drastically different results.
 
-\enlargethispage{3in}
-
 \begin{example}\label{example:3.1.4} \rm
 In Example~\ref{example:2.1.7} we had to leave the solution of the initial
 value
@@ -618,32 +670,48 @@ between the estimates obtained for the three values of $h$, it
 would be clear that these results are useless even if the ``exact''
 values were not included in the table.
 
-\begin{newtable} \label{table:3.1.5}
-{Numerical solution of
-$y'-2xy=1,\ y(0)=3$, with Euler's method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.2$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0 &  3.000000000 & 3.000000000 & 3.000000000     &   3.000000000 \\
-0.2 &  3.200000000 & 3.262000000 &3.294348537      &   3.327851973 \\
-0.4 &  3.656000000 & 3.802028800 & 3.881421103     &   3.966059348 \\
-0.6 &  4.440960000 & 4.726810214 & 4.888870783     &   5.067039535 \\
-0.8 &  5.706790400 & 6.249191282 & 6.570796235     &   6.936700945 \\
-1.0 &  7.732963328 & 8.771893026 & 9.419105620     &  10.184923955 \\
-1.2 & 11.026148659 &13.064051391 &14.405772067     &  16.067111677 \\
-1.4 & 16.518700016 &20.637273893 & 23.522935872    &  27.289392347 \\
-1.6 & 25.969172024 &34.570423758 & 41.033441257    &  50.000377775 \\
-1.8 & 42.789442120 &61.382165543 & 76.491018246    &  98.982969504 \\
-2.0 & 73.797840446 & 115.440048291 & 152.363866569 & 211.954462214 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'-2xy=1,\ y(0)=3$, with Euler's method.}
+\label{table:3.1.5}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.2&h=0.1&h=0.05&\text{``Exact''}\\ \midrule
+%0.0 &  3.000000000 & 3.000000000 & 3.000000000     &   3.000000000 \\
+%0.2 &  3.200000000 & 3.262000000 &3.294348537      &   3.327851973 \\
+%0.4 &  3.656000000 & 3.802028800 & 3.881421103     &   3.966059348 \\
+%0.6 &  4.440960000 & 4.726810214 & 4.888870783     &   5.067039535 \\
+%0.8 &  5.706790400 & 6.249191282 & 6.570796235     &   6.936700945 \\
+%1.0 &  7.732963328 & 8.771893026 & 9.419105620     &  10.184923955 \\
+%1.2 & 11.026148659 &13.064051391 &14.405772067     &  16.067111677 \\
+%1.4 & 16.518700016 &20.637273893 & 23.522935872    &  27.289392347 \\
+%1.6 & 25.969172024 &34.570423758 & 41.033441257    &  50.000377775 \\
+%1.8 & 42.789442120 &61.382165543 & 76.491018246    &  98.982969504 \\
+%2.0 & 73.797840446 & 115.440048291 & 152.363866569 & 211.954462214 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.2]
+    H
+    *{2}{HS[table-format=1.9,table-auto-round]}
+    *{2}{HS[table-format=2.8,table-auto-round]}
+    *{1}{HS[table-format=3.7,table-auto-round]}
+    @{} }\toprule
+h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.2}&{0.4}&{0.6}&{0.8}&{1.0}&{1.2}&{1.4}&{1.6}&{1.8}&{2.0}\\\midrule
+0.2&
+3.000000000&3.200000000&3.656000000&4.440960000&5.706790400&7.732963328&11.026148659&16.518700016&25.969172024&42.789442120&73.797840446\\
+0.1&
+3.000000000&3.262000000&3.802028800&4.726810214&6.249191282&8.771893026&13.064051391&20.637273893&34.570423758&61.382165543&115.440048291\\
+0.05&
+3.000000000&3.294348537&3.881421103&4.888870783&6.570796235&9.419105620&14.405772067&23.522935872&41.033441257&76.491018246&152.363866569\\
+\text{``Exact''}&
+3.000000000&3.327851973&3.966059348&5.067039535&6.936700945&10.184923955&16.067111677&27.289392347&50.000377775&98.982969504&211.954462214 \\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 
 It's easy to see why Euler's method yields such poor results.
@@ -676,32 +744,48 @@ u'=e^{-x^2},\quad u(0)=3.
 The results listed in Table~\ref{table:3.1.6} are clearly better than
 those obtained by Euler's method.
 
-\begin{newtable} \label{table:3.1.6}
-{Numerical solution of
-$y'-2xy=1,\ y(0)=3$, by the Euler semilinear method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.2$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0 &  3.000000000  &   3.000000000 &   3.000000000 &   3.000000000 \\
-0.2 &  3.330594477  &   3.329558853 &   3.328788889 &   3.327851973 \\
-0.4 &  3.980734157  &   3.974067628 &   3.970230415 &   3.966059348 \\
-0.6 &  5.106360231  &   5.087705244 &   5.077622723 &   5.067039535 \\
-0.8 &  7.021003417  &   6.980190891 &   6.958779586 &   6.936700945 \\
-1.0 & 10.350076600  &  10.269170824 &  10.227464299 &  10.184923955 \\
-1.2 & 16.381180092  &  16.226146390 &  16.147129067 &  16.067111677 \\
-1.4 & 27.890003380  &  27.592026085 &  27.441292235 &  27.289392347 \\
-1.6 & 51.183323262  &  50.594503863 &  50.298106659 &  50.000377775 \\
-1.8 &101.424397595  & 100.206659076 &  99.595562766 &  98.982969504 \\
-2.0 &217.301032800  & 214.631041938 & 213.293582978 & 211.954462214\\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'-2xy=1,\ y(0)=3$, by the Euler semilinear method.}
+\label{table:3.1.6}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.2&h=0.1&h=0.05&\text{``Exact''}\\ \midrule
+%0.0 &  3.000000000  &   3.000000000 &   3.000000000 &   3.000000000 \\
+%0.2 &  3.330594477  &   3.329558853 &   3.328788889 &   3.327851973 \\
+%0.4 &  3.980734157  &   3.974067628 &   3.970230415 &   3.966059348 \\
+%0.6 &  5.106360231  &   5.087705244 &   5.077622723 &   5.067039535 \\
+%0.8 &  7.021003417  &   6.980190891 &   6.958779586 &   6.936700945 \\
+%1.0 & 10.350076600  &  10.269170824 &  10.227464299 &  10.184923955 \\
+%1.2 & 16.381180092  &  16.226146390 &  16.147129067 &  16.067111677 \\
+%1.4 & 27.890003380  &  27.592026085 &  27.441292235 &  27.289392347 \\
+%1.6 & 51.183323262  &  50.594503863 &  50.298106659 &  50.000377775 \\
+%1.8 &101.424397595  & 100.206659076 &  99.595562766 &  98.982969504 \\
+%2.0 &217.301032800  & 214.631041938 & 213.293582978 & 211.954462214\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.2]
+   H
+   *{2}{HS[table-format=1.9,table-auto-round]}
+   *{2}{HS[table-format=2.8,table-auto-round]}
+   HS[table-format=3.7,table-auto-round]
+   @{} }\toprule
+h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.2}&{0.4}&{0.6}&{0.8}&{1.0}&{1.2}&{1.4}&{1.6}&{1.8}&{2.0}\\\midrule
+0.2&
+3.000000000&3.330594477&3.980734157&5.106360231&7.021003417&10.350076600&16.381180092&27.890003380&51.183323262&101.424397595&217.301032800\\
+0.1&
+3.000000000&3.329558853&3.974067628&5.087705244&6.980190891&10.269170824&16.226146390&27.592026085&50.594503863&100.206659076&214.631041938\\
+0.05&
+3.000000000&3.328788889&3.970230415&5.077622723&6.958779586&10.227464299&16.147129067&27.441292235&50.298106659&99.595562766&213.293582978\\
+\text{``Exact''}&
+3.000000000&3.327851973&3.966059348&5.067039535&6.936700945&10.184923955&16.067111677&27.289392347&50.000377775&98.982969504&211.954462214\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 
 We can't give a general procedure for determining in advance
@@ -741,60 +825,88 @@ two methods with the ``exact'' values of the solution.
 \end{example}
 
 
-\begin{newtable} \label{table:3.1.7}
-{Numerical solution of
-$y'-2y=x/(1+y^2),\ y(1)=7$, by Euler's method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.025$}&
-\multicolumn{1}{|c|}{``Exact''} \\ \hline
-1.0 &  7.000000000 &  7.000000000 &  7.000000000 &  7.000000000\\
-1.1 &  8.402000000 &  8.471970569 &  8.510493955 &  8.551744786\\
-1.2 & 10.083936450 & 10.252570169 & 10.346014101 & 10.446546230\\
-1.3 & 12.101892354 & 12.406719381 & 12.576720827 & 12.760480158\\
-1.4 & 14.523152445 & 15.012952416 & 15.287872104 & 15.586440425\\
-1.5 & 17.428443554 & 18.166277405 & 18.583079406 & 19.037865752\\
-1.6 & 20.914624471 & 21.981638487 & 22.588266217 & 23.253292359\\
-1.7 & 25.097914310 & 26.598105180 & 27.456479695 & 28.401914416\\
-1.8 & 30.117766627 & 32.183941340 & 33.373738944 & 34.690375086\\
-1.9 & 36.141518172 & 38.942738252 & 40.566143158 & 42.371060528\\
-2.0 & 43.369967155 & 47.120835251 & 49.308511126 & 51.752229656\\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'-2y=x/(1+y^2),\ y(1)=7$, by Euler's method.}
+\label{table:3.1.7}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.1&h=0.05&h=0.025&\text{``Exact''}\\ \midrule
+%1.0 &  7.000000000 &  7.000000000 &  7.000000000 &  7.000000000\\
+%1.1 &  8.402000000 &  8.471970569 &  8.510493955 &  8.551744786\\
+%1.2 & 10.083936450 & 10.252570169 & 10.346014101 & 10.446546230\\
+%1.3 & 12.101892354 & 12.406719381 & 12.576720827 & 12.760480158\\
+%1.4 & 14.523152445 & 15.012952416 & 15.287872104 & 15.586440425\\
+%1.5 & 17.428443554 & 18.166277405 & 18.583079406 & 19.037865752\\
+%1.6 & 20.914624471 & 21.981638487 & 22.588266217 & 23.253292359\\
+%1.7 & 25.097914310 & 26.598105180 & 27.456479695 & 28.401914416\\
+%1.8 & 30.117766627 & 32.183941340 & 33.373738944 & 34.690375086\\
+%1.9 & 36.141518172 & 38.942738252 & 40.566143158 & 42.371060528\\
+%2.0 & 43.369967155 & 47.120835251 & 49.308511126 & 51.752229656\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.3]
+    H
+    *{5}{HS[table-format=2.8,table-auto-round]}
+    @{} }\toprule
+h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{1.0}&{1.1}&{1.2}&{1.3}&{1.4}&{1.5}&{1.6}&{1.7}&{1.8}&{1.9}&{2.0}\\\midrule
+0.1&
+7.000000000&8.402000000&10.083936450&12.101892354&14.523152445&17.428443554&20.914624471&25.097914310&30.117766627&36.141518172&43.369967155\\
+0.05&
+7.000000000&8.471970569&10.252570169&12.406719381&15.012952416&18.166277405&21.981638487&26.598105180&32.183941340&38.942738252&47.120835251\\
+0.025&
+7.000000000&8.510493955&10.346014101&12.576720827&15.287872104&18.583079406&22.588266217&27.456479695&33.373738944&40.566143158&49.308511126\\
+\text{``Exact''}&
+7.000000000&8.551744786&10.446546230&12.760480158&15.586440425&19.037865752&23.253292359&28.401914416&34.690375086&42.371060528&51.752229656\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 
-\begin{newtable} \label{table:3.1.8}
-{Numerical solution of
-$y'-2y=x/(1+y^2),\ y(1)=7$, by the Euler semilinear method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.025$}&
-\multicolumn{1}{|c|}{``Exact''} \\ \hline
-1.0 &  7.000000000 &  7.000000000 &  7.000000000 &  7.000000000\\
-1.1 &  8.552262113 &  8.551993978 &  8.551867007 &  8.551744786\\
-1.2 & 10.447568674 & 10.447038547 & 10.446787646 & 10.446546230\\
-1.3 & 12.762019799 & 12.761221313 & 12.760843543 & 12.760480158\\
-1.4 & 15.588535141 & 15.587448600 & 15.586934680 & 15.586440425\\
-1.5 & 19.040580614 & 19.039172241 & 19.038506211 & 19.037865752\\
-1.6 & 23.256721636 & 23.254942517 & 23.254101253 & 23.253292359\\
-1.7 & 28.406184597 & 28.403969107 & 28.402921581 & 28.401914416\\
-1.8 & 34.695649222 & 34.692912768 & 34.691618979 & 34.690375086\\
-1.9 & 42.377544138 & 42.374180090 & 42.372589624 & 42.371060528\\
-2.0 & 51.760178446 & 51.756054133 & 51.754104262 & 51.752229656\\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'-2y=x/(1+y^2),\ y(1)=7$, by the Euler semilinear method.}
+\label{table:3.1.8}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.1&h=0.05&h=0.025&\text{``Exact''} \\ \midrule
+%1.0 &  7.000000000 &  7.000000000 &  7.000000000 &  7.000000000\\
+%1.1 &  8.552262113 &  8.551993978 &  8.551867007 &  8.551744786\\
+%1.2 & 10.447568674 & 10.447038547 & 10.446787646 & 10.446546230\\
+%1.3 & 12.762019799 & 12.761221313 & 12.760843543 & 12.760480158\\
+%1.4 & 15.588535141 & 15.587448600 & 15.586934680 & 15.586440425\\
+%1.5 & 19.040580614 & 19.039172241 & 19.038506211 & 19.037865752\\
+%1.6 & 23.256721636 & 23.254942517 & 23.254101253 & 23.253292359\\
+%1.7 & 28.406184597 & 28.403969107 & 28.402921581 & 28.401914416\\
+%1.8 & 34.695649222 & 34.692912768 & 34.691618979 & 34.690375086\\
+%1.9 & 42.377544138 & 42.374180090 & 42.372589624 & 42.371060528\\
+%2.0 & 51.760178446 & 51.756054133 & 51.754104262 & 51.752229656\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.3]
+    H%*{2}{S[table-format=1.3,table-auto-round]}
+    *{5}{HS[table-format=2.8,table-auto-round]}
+    @{} }\toprule
+h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{1.0}&{1.1}&{1.2}&{1.3}&{1.4}&{1.5}&{1.6}&{1.7}&{1.8}&{1.9}&{2.0}\\\midrule
+0.1&
+7.000000000&8.552262113&10.447568674&12.762019799&15.588535141&19.040580614&23.256721636&28.406184597&34.695649222&42.377544138&51.760178446\\
+0.05&
+7.000000000&8.551993978&10.447038547&12.761221313&15.587448600&19.039172241&23.254942517&28.403969107&34.692912768&42.374180090&51.756054133\\
+0.025&
+7.000000000&8.551867007&10.446787646&12.760843543&15.586934680&19.038506211&23.254101253&28.402921581&34.691618979&42.372589624&51.754104262\\
+\text{``Exact''}&
+7.000000000&8.551744786&10.446546230&12.760480158&15.586440425&19.037865752&23.253292359&28.401914416&34.690375086&42.371060528&51.752229656\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 \begin{example}{\color{blue}}\label{example:3.1.6} \rm
 Applying Euler's method with step sizes $h=0.1$, $h=0.05$, and
@@ -809,69 +921,97 @@ y=ue^{-x^3}\mbox{\quad and \quad}u'=e^{x^3}(1+u^2e^{-2x^3}),\quad
 u(2)=2e^8
 \]
 yields the results in Table~\ref{table:3.1.10}. Noting the close
-agreement among the  three columns of Table~\ref{table:3.1.9} (at
+agreement among the  three rowss of Table~\ref{table:3.1.9} (at
 least for larger values of $x$) and the lack of any such agreement
-among the columns of Table~\ref{table:3.1.10}, we conclude that
+among the rowss of Table~\ref{table:3.1.10}, we conclude that
 Euler's method is better than the Euler semilinear method for
 \eqref{eq:3.1.26}. Comparing the results with the exact values
 supports this conclusion.
 \end{example}
 
 
-\begin{newtable} \label{table:3.1.9}
-{Numerical solution of
-$y'+3x^2y=1+y^2,\quad y(2)=2$, by Euler's method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.025$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-2.0 &2.000000000 & 2.000000000 & 2.000000000 & 2.000000000 \\
-2.1 &0.100000000 & 0.493231250 & 0.609611171 & 0.701162906 \\
-2.2 &0.068700000 & 0.122879586 & 0.180113445 & 0.236986800 \\
-2.3 &0.069419569 & 0.070670890 & 0.083934459 & 0.103815729 \\
-2.4 &0.059732621 & 0.061338956 & 0.063337561 & 0.068390786 \\
-2.5 &0.056871451 & 0.056002363 & 0.056249670 & 0.057281091 \\
-2.6 &0.050560917 & 0.051465256 & 0.051517501 & 0.051711676 \\
-2.7 &0.048279018 & 0.047484716 & 0.047514202 & 0.047564141 \\
-2.8 &0.042925892 & 0.043967002 & 0.043989239 & 0.044014438 \\
-2.9 &0.042148458 & 0.040839683 & 0.040857109 & 0.040875333 \\
-3.0 &0.035985548 & 0.038044692 & 0.038058536 & 0.038072838 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'+3x^2y=1+y^2,\quad y(2)=2$, by Euler's method.}
+\label{table:3.1.9}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.1&h=0.05&h=0.025&\text{``Exact''}\\ \midrule
+%2.0 &2.000000000 & 2.000000000 & 2.000000000 & 2.000000000 \\
+%2.1 &0.100000000 & 0.493231250 & 0.609611171 & 0.701162906 \\
+%2.2 &0.068700000 & 0.122879586 & 0.180113445 & 0.236986800 \\
+%2.3 &0.069419569 & 0.070670890 & 0.083934459 & 0.103815729 \\
+%2.4 &0.059732621 & 0.061338956 & 0.063337561 & 0.068390786 \\
+%2.5 &0.056871451 & 0.056002363 & 0.056249670 & 0.057281091 \\
+%2.6 &0.050560917 & 0.051465256 & 0.051517501 & 0.051711676 \\
+%2.7 &0.048279018 & 0.047484716 & 0.047514202 & 0.047564141 \\
+%2.8 &0.042925892 & 0.043967002 & 0.043989239 & 0.044014438 \\
+%2.9 &0.042148458 & 0.040839683 & 0.040857109 & 0.040875333 \\
+%3.0 &0.035985548 & 0.038044692 & 0.038058536 & 0.038072838 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.3]
+    H
+    *{5}{HS[table-format=1.9,table-auto-round]}
+    @{} }\toprule
+h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{2.0}&{2.1}&{2.2}&{2.3}&{2.4}&{2.5}&{2.6}&{2.7}&{2.8}&{2.9}&{3.0}\\\midrule
+0.1&
+2.000000000&0.100000000&0.068700000&0.069419569&0.059732621&0.056871451&0.050560917&0.048279018&0.042925892&0.042148458&0.035985548\\
+0.05&
+2.000000000&0.493231250&0.122879586&0.070670890&0.061338956&0.056002363&0.051465256&0.047484716&0.043967002&0.040839683&0.038044692\\
+0.025&
+2.000000000&0.609611171&0.180113445&0.083934459&0.063337561&0.056249670&0.051517501&0.047514202&0.043989239&0.040857109&0.038058536\\
+\text{``Exact''}&
+2.000000000&0.701162906&0.236986800&0.103815729&0.068390786&0.057281091&0.051711676&0.047564141&0.044014438&0.040875333&0.038072838 \\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
-\begin{newtable} \label{table:3.1.10}
-{Numerical solution of
-$y'+3x^2y=1+y^2,\quad y(2)=2$, by the Euler semilinear method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.025$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-$x$ & $h=0.1$ & $h=0.05$ & $h=0.025$ &$h=.0125$\\ \hline
-2.0 &2.000000000 & 2.000000000 & 2.000000000 & 2.000000000 \\
-2.1 &0.708426286 & 0.702568171 & 0.701214274 & 0.701162906 \\
-2.2 &0.214501852 & 0.222599468 & 0.228942240 & 0.236986800 \\
-2.3 &0.069861436 & 0.083620494 & 0.092852806 & 0.103815729 \\
-2.4 &0.032487396 & 0.047079261 & 0.056825805 & 0.068390786 \\
-2.5 &0.021895559 & 0.036030018 & 0.045683801 & 0.057281091 \\
-2.6 &0.017332058 & 0.030750181 & 0.040189920 & 0.051711676 \\
-2.7 &0.014271492 & 0.026931911 & 0.036134674 & 0.047564141 \\
-2.8 &0.011819555 & 0.023720670 & 0.032679767 & 0.044014438 \\
-2.9 &0.009776792 & 0.020925522 & 0.029636506 & 0.040875333 \\
-3.0 &0.008065020 & 0.018472302 & 0.026931099 & 0.038072838 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'+3x^2y=1+y^2,\quad y(2)=2$, by the Euler semilinear method.}
+\label{table:3.1.10}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.1&h=0.05&h=0.025&\text{``Exact''}\\ \midrule
+%%$x$ & $h=0.1$ & $h=0.05$ & $h=0.025$ &$h=.0125$\\ \hline
+%2.0 &2.000000000 & 2.000000000 & 2.000000000 & 2.000000000 \\
+%2.1 &0.708426286 & 0.702568171 & 0.701214274 & 0.701162906 \\
+%2.2 &0.214501852 & 0.222599468 & 0.228942240 & 0.236986800 \\
+%2.3 &0.069861436 & 0.083620494 & 0.092852806 & 0.103815729 \\
+%2.4 &0.032487396 & 0.047079261 & 0.056825805 & 0.068390786 \\
+%2.5 &0.021895559 & 0.036030018 & 0.045683801 & 0.057281091 \\
+%2.6 &0.017332058 & 0.030750181 & 0.040189920 & 0.051711676 \\
+%2.7 &0.014271492 & 0.026931911 & 0.036134674 & 0.047564141 \\
+%2.8 &0.011819555 & 0.023720670 & 0.032679767 & 0.044014438 \\
+%2.9 &0.009776792 & 0.020925522 & 0.029636506 & 0.040875333 \\
+%3.0 &0.008065020 & 0.018472302 & 0.026931099 & 0.038072838 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.3]
+    H
+    *{5}{HS[table-format=1.9,table-auto-round]}
+    @{} }\toprule
+h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{2.0}&{2.1}&{2.2}&{2.3}&{2.4}&{2.5}&{2.6}&{2.7}&{2.8}&{2.9}&{3.0}\\\midrule
+0.1&
+2.000000000&0.708426286&0.214501852&0.069861436&0.032487396&0.021895559 &0.017332058&0.014271492&0.011819555&0.009776792&0.008065020\\
+0.05&
+2.000000000&0.702568171&0.222599468&0.083620494&0.047079261&0.036030018&0.030750181&0.026931911&0.023720670&0.020925522&0.018472302\\
+0.025&
+2.000000000&0.701214274&0.228942240&0.092852806&0.056825805&0.045683801&0.040189920&0.036134674&0.032679767&0.029636506&0.026931099\\
+\text{``Exact''}&
+2.000000000&0.701162906&0.236986800&0.103815729&0.068390786&0.057281091&0.051711676&0.047564141&0.044014438&0.040875333&0.038072838 \\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 
 
@@ -1202,11 +1342,34 @@ each step in Euler's method requires one evaluation of $f$, the number
 of evaluations of $f$ in each of these attempts is $n=12$, $24$, and
 $48$, respectively. In each case we accept $y_n$ as an approximation
 to $e$.  The second column of
-Table~\ref{table:3.2.1} shows the results. The first column of the table
-indicates
-the number of evaluations of $f$ required to obtain the approximation, and
-the last column contains the value of $e$ rounded to ten significant
-figures.
+\zcref{table:3.2.1} shows the results.
+%The first column of the table indicates
+%the number of evaluations of $f$ required to obtain the approximation, and
+%the last column contains the value of $e$ rounded to ten significant
+%figures.
+
+\begin{table}
+\caption{Approximations to $e\approx2.718281828$ obtained by three numerical methods.}
+\label{table:3.2.1}
+\centering
+\tagpdfsetup{table/header-rows={1}}
+\begin{tabular}{cccc}\toprule
+Evaluations of $f$&Euler&Improved Euler&Runge-Kutta\\ \midrule
+12 & \textbf{2}.613035290  &\textbf{2.7}07188994  &\textbf{2.718}069764 \\
+24 & \textbf{2}.663731258  &\textbf{2.71}5327371  &\textbf{2.7182}66612 \\
+48 & \textbf{2}.690496599  &\textbf{2.71}7519565  &\textbf{2.71828}0809\\
+\bottomrule
+\end{tabular}
+%\begin{tabular}{lccc}\toprule
+%Method&\multicolumn{3}{c}{Evaluations of $f$}\\\cmidrule(l){2-4}
+%&12&24&48\\\midrule
+%Euler&\textbf{2}.613035290&\textbf{2}.663731258&\textbf{2}.690496599\\
+%Improved Euler&\textbf{2.7}07188994&\textbf{2.71}5327371&\textbf{2.71}7519565\\
+%Runge-Kutta&\textbf{2.718}069764&\textbf{2.7182}66612&\textbf{2.71828}0809\\
+%%Exact&2.718281828&2.718281828&2.718281828 \\
+%\bottomrule
+%\end{tabular}
+\end{table}
 
 In this section we'll study the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Euler.html}
@@ -1215,40 +1378,21 @@ requires two evaluations of $f$ at each step. We've used this method
 with $h=1/6$, $1/12$, and $1/24$. The required number of evaluations
 of $f$ were 12, 24, and $48$, as in the three applications of Euler's
 method;     however, you can see from the third column of
-Table~\ref{table:3.2.1} that the approximation to $e$ obtained by the
+\zcref{table:3.2.1} that the approximation to $e$ obtained by the
 improved Euler method with only 12 evaluations of $f$ is better than
 the approximation obtained by Euler's method with 48 evaluations.
 
-In Section~3.1 we'll study the
+In \zcref{sec:runge_kutta} we'll study the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Runge.html}
 {\color{blue}\itshape Runge}-\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Kutta.html}{\color{blue}\itshape Kutta method\/},
 which requires four evaluations of $f$ at each step. We've used this
 method with $h=1/3$, $1/6$, and $1/12$. The required number of
 evaluations of $f$ were again 12, 24, and $48$, as in the three
 applications of Euler's method and the improved Euler method;     however,
-you can see from the fourth column of Table~\ref{table:3.2.1} that the
+you can see from the fourth column of \zcref{table:3.2.1} that the
 approximation to $e$ obtained by the Runge-Kutta method with only 12
 evaluations of $f$ is better than the approximation obtained by the
 improved Euler method with 48 evaluations.
-
-\begin{newtable} \label{table:3.2.1}
-{Approximations to $e$ obtained by three numerical methods.}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\multicolumn{1}{|c|}{$n$}&
-\multicolumn{1}{|c|}{Euler}&
-\multicolumn{1}{|c|}{Improved Euler}&
-\multicolumn{1}{|c|}{Runge-Kutta}&
-\multicolumn{1}{|c|}{Exact}\\ \hline
-12 & 2.613035290  &2.707188994  &2.718069764 & 2.718281828 \\
-24 & 2.663731258   &2.715327371   &2.718266612 & 2.718281828 \\
-48 & 2.690496599  &2.717519565  &2.718280809 & 2.718281828
-\\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
 
 
 \boxit{The Improved Euler Method}
@@ -1292,9 +1436,9 @@ y_{i+1}=y_i+\frac{h}{2}\left(f(x_i,y_i)+f(x_{i+1},y_i+hf(x_i,y_i))\right).
 The computation indicated here can be conveniently organized as
 follows: given $y_i$, compute
 \begin{eqnarray*}
-k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+h,y_i+hk_{1i}\right),\\
-y_{i+1}&=&y_i+\frac{h}{2}(k_{1i}+k_{2i}).
+k_{1,i}&=&f(x_i,y_i),\\
+k_{2,i}&=&f\left(x_i+h,y_i+hk_{1,i}\right),\\
+y_{i+1}&=&y_i+\frac{h}{2}(k_{1,i}+k_{2,i}).
 \end{eqnarray*}
 
 The improved Euler method requires two evaluations of $f(x,y)$ per
@@ -1334,30 +1478,25 @@ which is of the form (\ref{eq:3.2.1}), with
 f(x,y)=-2y+x^3e^{-2x},\; x_0=0,\mbox{\; and}\; y_0=1.
 \]
 The improved Euler method yields
-
-\enlargethispage{.75in}
-\begin{eqnarray*}
-k_{10} & = & f(x_0,y_0)
-  = f(0,1)=-2,\\
-k_{20} & = & f(x_1,y_0+hk_{10})=f(.1,1+(.1)(-2))\\
- &=& f(.1,.8)=-2(.8)+(.1)^3e^{-.2}=-1.599181269,\\
-y_1&=&y_0+\frac{h}{2}(k_{10}+k_{20}),\\
-&=&1+(.05)(-2-1.599181269)=.820040937,\\[4\jot]
-k_{11} & = & f(x_1,y_1)
+{\allowdisplaybreaks
+\begin{align*}
+k_{1,0} & = f(x_0,y_0) = f(0,1)=-2,\\
+k_{2,0} & = f(x_1,y_0+hk_{1,0})=f(.1,1+(.1)(-2))\\
+ &= f(.1,.8)=-2(.8)+(.1)^3e^{-.2}=-1.599181269,\\
+y_1&=y_0+\frac{h}{2}(k_{1,0}+k_{2,0})=1+(.05)(-2-1.599181269)=.820040937,\\\addlinespace
+k_{1,1} & = f(x_1,y_1)
   = f(.1,.820040937)= -2(.820040937)+(.1)^3e^{-.2}=-1.639263142,\\
-k_{21} & = & f(x_2,y_1+hk_{11})=f(.2,.820040937+.1(-1.639263142)),\\
- &=&
-f(.2,.656114622)=-2(.656114622)+(.2)^3e^{-.4}=-1.306866684,\\
-y_2&=&y_1+\frac{h}{2}(k_{11}+k_{21}),\\
-&=&.820040937+(.05)(-1.639263142-1.306866684)=.672734445,\\[4\jot]
-k_{12} & = & f(x_2,y_2)
+k_{2,1} & = f(x_2,y_1+hk_{1,1})=f(.2,.820040937+.1(-1.639263142))\\
+ &=f(.2,.656114622)=-2(.656114622)+(.2)^3e^{-.4}=-1.306866684,\\
+y_2&=y_1+\frac{h}{2}(k_{1,1}+k_{2,1})
+=.820040937+(.05)(-1.639263142-1.306866684)=.672734445,\\\addlinespace
+k_{1,2} & = f(x_2,y_2)
   = f(.2,.672734445)= -2(.672734445)+(.2)^3e^{-.4}=-1.340106330,\\
-k_{22} & = & f(x_3,y_2+hk_{12})=f(.3,.672734445+.1(-1.340106330)),\\
- &=&
-f(.3,.538723812)=-2(.538723812)+(.3)^3e^{-.6}=-1.062629710,\\
-y_3&=&y_2+\frac{h}{2}(k_{12}+k_{22})\\
-&=&.672734445+(.05)(-1.340106330-1.062629710)=.552597643.
-\end{eqnarray*}
+k_{2,2} & = f(x_3,y_2+hk_{1,2})=f(.3,.672734445+.1(-1.340106330)),\\
+ &=f(.3,.538723812)=-2(.538723812)+(.3)^3e^{-.6}=-1.062629710,\\
+y_3&=y_2+\frac{h}{2}(k_{1,2}+k_{2,2})
+=.672734445+(.05)(-1.340106330-1.062629710)=.552597643.
+\end{align*}}
 
 \begin{example}\label{example:3.2.2} \rm
 Table~\ref{table:3.2.2} shows results of using the improved Euler method
@@ -1366,10 +1505,11 @@ solution of the initial value problem
 \[
 y'+2y=x^3e^{-2x},\quad y(0)=1
 \]
-at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. For comparison, it also shows
-the
+%at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$.
+at $x=0.2$, $0.4$, \dots, $1.0$.
+For comparison, it also shows the
 corresponding approximate values obtained with Euler's method in
-\ref{example:3.1.2}, and the values of the exact solution
+Example~\ref{example:3.1.2}, and the values of the exact solution
 \[
 y=\frac{e^{-2x}}{4}(x^4+4).
 \]
@@ -1378,35 +1518,51 @@ obtained by the improved Euler method with $h=0.1$ are better than
 those obtained by Euler's method with $h=0.05$.
 \end{example}
 
-\begin{newtable} \label{table:3.2.2}
-{Numerical solution of $y'+2y=x^3e^{-2x},\ y(0)=1$, by Euler's method
-and the improved Euler method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{Exact}\\ \hline
-0.0 & 1.000000000& 1.000000000& 1.000000000   &1.000000000 & 1.000000000 \\
-0.1 & 0.800000000& 0.810005655& 0.820040937   &0.819050572 & 0.818751221 \\
-0.2 & 0.640081873& 0.656266437& 0.672734445   &0.671086455 & 0.670588174 \\
-0.3 & 0.512601754& 0.532290981& 0.552597643   &0.550543878 & 0.549922980 \\
-0.4 & 0.411563195& 0.432887056& 0.455160637   &0.452890616 & 0.452204669 \\
-0.5 & 0.332126261& 0.353785015& 0.376681251   &0.374335747 & 0.373627557 \\
-0.6 & 0.270299502& 0.291404256& 0.313970920   &0.311652239 & 0.310952904 \\
-0.7 & 0.222745397& 0.242707257& 0.264287611   &0.262067624 & 0.261398947 \\
-0.8 & 0.186654593& 0.205105754& 0.225267702   &0.223194281 & 0.222570721 \\
-0.9 & 0.159660776& 0.176396883& 0.194879501   &0.192981757 & 0.192412038 \\
-1.0 & 0.139778910& 0.154715925& 0.171388070   &0.169680673 & 0.169169104\\
-\hline
-&\multicolumn{2}{c|}{Euler}&
-\multicolumn{2}{c|}{Improved Euler}&\multicolumn{1}{c|}{Exact}\\\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'+2y=x^3e^{-2x},\ y(0)=1$, by Euler's method and the improved Euler method.}
+\label{table:3.2.2}
+%\[
+%\begin{array}{cccccc}\toprule
+%x&\multicolumn{2}{c}{\text{Euler}}&\multicolumn{2}{c}{\text{Improved Euler}}&\text{Exact}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+%&h=0.1&h=0.05&h=0.1&h=0.05& \\\midrule
+%0.0 & 1.000000000& 1.000000000& 1.000000000   &1.000000000 & 1.000000000 \\
+%0.1 & 0.800000000& 0.810005655& 0.820040937   &0.819050572 & 0.818751221 \\
+%0.2 & 0.640081873& 0.656266437& 0.672734445   &0.671086455 & 0.670588174 \\
+%0.3 & 0.512601754& 0.532290981& 0.552597643   &0.550543878 & 0.549922980 \\
+%0.4 & 0.411563195& 0.432887056& 0.455160637   &0.452890616 & 0.452204669 \\
+%0.5 & 0.332126261& 0.353785015& 0.376681251   &0.374335747 & 0.373627557 \\
+%0.6 & 0.270299502& 0.291404256& 0.313970920   &0.311652239 & 0.310952904 \\
+%0.7 & 0.222745397& 0.242707257& 0.264287611   &0.262067624 & 0.261398947 \\
+%0.8 & 0.186654593& 0.205105754& 0.225267702   &0.223194281 & 0.222570721 \\
+%0.9 & 0.159660776& 0.176396883& 0.194879501   &0.192981757 & 0.192412038 \\
+%1.0 & 0.139778910& 0.154715925& 0.171388070   &0.169680673 & 0.169169104\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.2]
+    H
+    *{5}{HS[table-format=1.9,table-auto-round]}
+    @{} }\toprule
+{h}&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.1}&{0.2}&{0.3}&{0.4}&{0.5}&{0.6}&{0.7}&{0.8}&{0.9}&{1.0}\\\midrule
+\multicolumn{12}{@{}l}{\text{Euler}}\\
+0.1&
+1.000000000&0.800000000&0.640081873&0.512601754&0.411563195&0.332126261&0.270299502&0.222745397&0.186654593&0.159660776&0.139778910\\
+0.05&
+1.000000000&0.810005655&0.656266437&0.532290981&0.432887056&0.353785015&0.291404256&0.242707257&0.205105754&0.176396883&0.154715925\\
+\multicolumn{12}{@{}l}{\text{Improved Euler}}\\
+0.1&
+1.000000000&0.820040937&0.672734445&0.552597643&0.455160637&0.376681251&0.313970920&0.264287611&0.225267702&0.194879501&0.171388070\\
+0.05&
+1.000000000&0.819050572&0.671086455&0.550543878&0.452890616&0.374335747&0.311652239&0.262067624&0.223194281&0.192981757&0.169680673\\\addlinespace
+\text{Exact}&
+1.000000000&0.818751221&0.670588174&0.549922980&0.452204669&0.373627557&0.310952904&0.261398947&0.222570721&0.192412038&0.169169104\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 \begin{example}\label{example:3.2.3} \rm
 Table~\ref{table:3.2.3} shows analogous results for the nonlinear
@@ -1418,37 +1574,52 @@ We applied Euler's  method to this problem in
 Example~\ref{example:3.1.3}.
 \end{example}
 
-\begin{newtable} \label{table:3.2.3}
-{Numerical solution of
-$y'=-2y^2+xy+x^2,\ y(0)=1$,
+\begin{table}
+\caption{Numerical solution of $y'=-2y^2+xy+x^2,\ y(0)=1$,
 by Euler's method and the improved Euler method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0 & 1.000000000 & 1.000000000 &1.000000000 & 1.000000000 & 1.000000000 \\
-0.1 & 0.800000000 & 0.821375000 &0.840500000 & 0.838288371 & 0.837584494 \\
-0.2 & 0.681000000 & 0.707795377 &0.733430846 & 0.730556677 & 0.729641890 \\
-0.3 & 0.605867800 & 0.633776590 &0.661600806 & 0.658552190 & 0.657580377 \\
-0.4 & 0.559628676 & 0.587454526 &0.615961841 & 0.612884493 & 0.611901791 \\
-0.5 & 0.535376972 & 0.562906169 &0.591634742 & 0.588558952 & 0.587575491 \\
-0.6 & 0.529820120 & 0.557143535 &0.586006935 & 0.582927224 & 0.581942225 \\
-0.7 & 0.541467455 & 0.568716935 &0.597712120 & 0.594618012 & 0.593629526 \\
-0.8 & 0.569732776 & 0.596951988 &0.626008824 & 0.622898279 & 0.621907458 \\
-0.9 & 0.614392311 & 0.641457729 &0.670351225 & 0.667237617 & 0.666250842 \\
-1.0 & 0.675192037 & 0.701764495 &0.730069610 & 0.726985837 & 0.726015790\\
-\hline
-&\multicolumn{2}{c|}{Euler}&
-\multicolumn{2}{c|}{Improved
-Euler}&\multicolumn{1}{c|}{``Exact''}\\\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\label{table:3.2.3}
+%\[
+%\begin{array}{cccccc}\toprule
+%x&\multicolumn{2}{c}{\text{Euler}}&\multicolumn{2}{c}{\text{Improved Euler}}&\text{``Exact''}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+%&h=0.1&h=0.05&h=0.1&h=0.05& \\\midrule
+%0.0 & 1.000000000 & 1.000000000 &1.000000000 & 1.000000000 & 1.000000000 \\
+%0.1 & 0.800000000 & 0.821375000 &0.840500000 & 0.838288371 & 0.837584494 \\
+%0.2 & 0.681000000 & 0.707795377 &0.733430846 & 0.730556677 & 0.729641890 \\
+%0.3 & 0.605867800 & 0.633776590 &0.661600806 & 0.658552190 & 0.657580377 \\
+%0.4 & 0.559628676 & 0.587454526 &0.615961841 & 0.612884493 & 0.611901791 \\
+%0.5 & 0.535376972 & 0.562906169 &0.591634742 & 0.588558952 & 0.587575491 \\
+%0.6 & 0.529820120 & 0.557143535 &0.586006935 & 0.582927224 & 0.581942225 \\
+%0.7 & 0.541467455 & 0.568716935 &0.597712120 & 0.594618012 & 0.593629526 \\
+%0.8 & 0.569732776 & 0.596951988 &0.626008824 & 0.622898279 & 0.621907458 \\
+%0.9 & 0.614392311 & 0.641457729 &0.670351225 & 0.667237617 & 0.666250842 \\
+%1.0 & 0.675192037 & 0.701764495 &0.730069610 & 0.726985837 & 0.726015790\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.2]
+    H
+    *{5}{HS[table-format=1.9,table-auto-round]}
+    @{} }\toprule
+{h}&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.1}&{0.2}&{0.3}&{0.4}&{0.5}&{0.6}&{0.7}&{0.8}&{0.9}&{1.0}\\\midrule
+\multicolumn{12}{@{}l}{\text{Euler}}\\
+0.1&
+1.000000000&0.800000000&0.681000000&0.605867800&0.559628676&0.535376972&0.529820120&0.541467455&0.569732776&0.614392311&0.675192037\\
+0.05&
+1.000000000&0.821375000&0.707795377&0.633776590&0.587454526&0.562906169&0.557143535&0.568716935&0.596951988&0.641457729&0.701764495\\
+\multicolumn{12}{@{}l}{\text{Improved Euler}}\\
+0.1&
+1.000000000&0.840500000&0.733430846&0.661600806&0.615961841&0.591634742&0.586006935&0.597712120&0.626008824&0.670351225&0.730069610\\
+0.05&
+1.000000000&0.838288371&0.730556677&0.658552190&0.612884493&0.588558952&0.582927224&0.594618012&0.622898279&0.667237617&0.726985837\\\addlinespace
+\text{``Exact''}&
+1.000000000&0.837584494&0.729641890&0.657580377&0.611901791&0.587575491&0.581942225&0.593629526&0.621907458&0.666250842&0.726015790\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 \begin{example}\label{example:3.2.4} \rm
 Use step sizes $h=0.2$, $h=0.1$, and $h=0.05$ to find approximate
@@ -1459,7 +1630,7 @@ y'-2xy=1,\quad y(0)=3
 at $x=0$, $0.2$, $0.4$, $0.6$, \dots, $2.0$ by
 {\bf (a)} the improved Euler method;   {\bf (b)} the improved Euler
 semilinear method. (We used Euler's method and the Euler semilinear
-method on this problem in~\ref{example:3.1.4}.)
+method on this problem in Example~\ref{example:3.1.4}.)
 \end{example}
 
 \solutionpart{a}
@@ -1482,71 +1653,105 @@ u'=e^{-x^2},\quad u(0)=3.
 The results listed in Table~\ref{table:3.2.5} are clearly better than
 those obtained by the improved Euler method.
 
-\begin{newtable} \label{table:3.2.4}
-{Numerical solution of $y'-2xy=1,\ y(0)=3$, by the improved Euler
+\begin{table}
+\caption{Numerical solution of $y'-2xy=1,\ y(0)=3$, by the improved Euler
 method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.2$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0 &   3.000000000 &   3.000000000 &   3.000000000 &   3.000000000 \\
-0.2 &   3.328000000 &   3.328182400 &   3.327973600 &   3.327851973 \\
-0.4 &   3.964659200 &   3.966340117 &   3.966216690 &   3.966059348 \\
-0.6 &   5.057712497 &   5.065700515 &   5.066848381 &   5.067039535 \\
-0.8 &   6.900088156 &   6.928648973 &   6.934862367 &   6.936700945 \\
-1.0 &  10.065725534 &  10.154872547 &  10.177430736 &  10.184923955 \\
-1.2 &  15.708954420 &  15.970033261 &  16.041904862 &  16.067111677 \\
-1.4 &  26.244894192 &  26.991620960 &  27.210001715 &  27.289392347 \\
-1.6 &  46.958915746 &  49.096125524 &  49.754131060 &  50.000377775 \\
-1.8 &  89.982312641 &  96.200506218 &  98.210577385 &  98.982969504 \\
-2.0 & 184.563776288 & 203.151922739 & 209.464744495 & 211.954462214 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
-
-\begin{newtable} \label{table:3.2.5}
-{Numerical solution of $y'-2xy=1,\ y(0)=3$, by the improved Euler
+\label{table:3.2.4}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.2&h=0.1&h=0.05&\text{``Exact''}\\ \midrule
+%0.0 &   3.000000000 &   3.000000000 &   3.000000000 &   3.000000000 \\
+%0.2 &   3.328000000 &   3.328182400 &   3.327973600 &   3.327851973 \\
+%0.4 &   3.964659200 &   3.966340117 &   3.966216690 &   3.966059348 \\
+%0.6 &   5.057712497 &   5.065700515 &   5.066848381 &   5.067039535 \\
+%0.8 &   6.900088156 &   6.928648973 &   6.934862367 &   6.936700945 \\
+%1.0 &  10.065725534 &  10.154872547 &  10.177430736 &  10.184923955 \\
+%1.2 &  15.708954420 &  15.970033261 &  16.041904862 &  16.067111677 \\
+%1.4 &  26.244894192 &  26.991620960 &  27.210001715 &  27.289392347 \\
+%1.6 &  46.958915746 &  49.096125524 &  49.754131060 &  50.000377775 \\
+%1.8 &  89.982312641 &  96.200506218 &  98.210577385 &  98.982969504 \\
+%2.0 & 184.563776288 & 203.151922739 & 209.464744495 & 211.954462214 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.1]
+    H
+    *{2}{HS[table-format=1.9,table-auto-round]}
+    *{2}{HS[table-format=2.8,table-auto-round]}
+    HS[table-format=3.7,table-auto-round]
+    @{} }\toprule
+{h}&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.2}&{0.4}&{0.6}&{0.8}&{1.0}&{1.2}&{1.4}&{1.6}&{1.8}&{2.0}\\\midrule
+0.2&
+3.000000000&3.328000000&3.964659200&5.057712497&6.900088156&10.065725534&15.708954420&26.244894192&46.958915746&89.982312641&184.563776288\\
+0.1&
+3.000000000&3.328182400&3.966340117&5.065700515&6.928648973&10.154872547&15.970033261&26.991620960&49.096125524&96.200506218&203.151922739\\
+0.05&
+3.000000000&3.327973600&3.966216690&5.066848381&6.934862367&10.177430736&16.041904862&27.210001715&49.754131060&98.210577385&209.464744495\\
+\text{``Exact''}&
+3.000000000&3.327851973&3.966059348&5.067039535&6.936700945&10.184923955&16.067111677&27.289392347&50.000377775&98.982969504&211.954462214 \\
+\bottomrule
+\end{array}
+\]
+%\end{table}
+%
+%\begin{table}
+\caption{Numerical solution of $y'-2xy=1,\ y(0)=3$, by the improved Euler
 semilinear method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.2$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0 &   3.000000000 &  3.000000000  &   3.000000000 &   3.000000000 \\
-0.2 &   3.326513400 &  3.327518315  &   3.327768620 &   3.327851973 \\
-0.4 &   3.963383070 &  3.965392084  &   3.965892644 &   3.966059348 \\
-0.6 &   5.063027290 &  5.066038774  &   5.066789487 &   5.067039535 \\
-0.8 &   6.931355329 &  6.935366847  &   6.936367564 &   6.936700945 \\
-1.0 &  10.178248417 & 10.183256733  &  10.184507253 &  10.184923955 \\
-1.2 &  16.059110511 & 16.065111599  &  16.066611672 &  16.067111677 \\
-1.4 &  27.280070674 & 27.287059732  &  27.288809058 &  27.289392347 \\
-1.6 &  49.989741531 & 49.997712997  &  49.999711226 &  50.000377775 \\
-1.8 &  98.971025420 & 98.979972988  &  98.982219722 &  98.982969504 \\
-2.0 & 211.941217796 &211.951134436  & 211.953629228 & 211.954462214 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\label{table:3.2.5}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.2&h=0.1&h=0.05&\text{``Exact''}\\ \midrule
+%0.0 &   3.000000000 &  3.000000000  &   3.000000000 &   3.000000000 \\
+%0.2 &   3.326513400 &  3.327518315  &   3.327768620 &   3.327851973 \\
+%0.4 &   3.963383070 &  3.965392084  &   3.965892644 &   3.966059348 \\
+%0.6 &   5.063027290 &  5.066038774  &   5.066789487 &   5.067039535 \\
+%0.8 &   6.931355329 &  6.935366847  &   6.936367564 &   6.936700945 \\
+%1.0 &  10.178248417 & 10.183256733  &  10.184507253 &  10.184923955 \\
+%1.2 &  16.059110511 & 16.065111599  &  16.066611672 &  16.067111677 \\
+%1.4 &  27.280070674 & 27.287059732  &  27.288809058 &  27.289392347 \\
+%1.6 &  49.989741531 & 49.997712997  &  49.999711226 &  50.000377775 \\
+%1.8 &  98.971025420 & 98.979972988  &  98.982219722 &  98.982969504 \\
+%2.0 & 211.941217796 &211.951134436  & 211.953629228 & 211.954462214 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.1]
+    H
+    *{2}{HS[table-format=1.9,table-auto-round]}
+    *{2}{HS[table-format=2.8,table-auto-round]}
+    HS[table-format=3.7,table-auto-round]
+    @{} }\toprule
+{h}&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.2}&{0.4}&{0.6}&{0.8}&{1.0}&{1.2}&{1.4}&{1.6}&{1.8}&{2.0}\\\midrule
+0.2&
+3.000000000&3.326513400&3.963383070&5.063027290&6.931355329&10.178248417&16.059110511&27.280070674&49.989741531&98.971025420&211.941217796\\
+0.1&
+3.000000000&3.327518315&3.965392084&5.066038774&6.935366847&10.183256733&16.065111599&27.287059732&49.997712997&98.979972988&211.951134436\\
+0.05&
+3.000000000&3.327768620&3.965892644&5.066789487&6.936367564&10.184507253&16.066611672&27.288809058&49.999711226&98.982219722&211.953629228\\
+\text{``Exact''}&
+3.000000000&3.327851973&3.966059348&5.067039535&6.936700945&10.184923955&16.067111677&27.289392347&50.000377775&98.982969504&211.954462214\\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 \boxit{A Family of Methods with $O(h^3)$ Local Truncation Error}
 
 \noindent
 We'll now derive a class of methods with $O(h^3)$ local truncation
-error for solving (\ref{eq:3.2.1}). For simplicity, we
+error for solving \eqref{eq:3.2.1}. For simplicity, we
 assume that $f$, $f_x$, $f_y$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are
 continuous and bounded for all $(x,y)$. This implies that if $y$ is
-the solution of (\ref{eq:3.2.1} then $y''$ and $y'''$ are bounded
+the solution of \eqref{eq:3.2.1} then $y''$ and $y'''$ are bounded
 (Exercise~\ref{exer:3.2.31}).
 
-We begin by approximating the integral curve of (\ref{eq:3.2.1}) at
+We begin by approximating the integral curve of \eqref{eq:3.2.1} at
 $(x_i,y(x_i))$ by the line through $(x_i,y(x_i))$ with slope
 \[
 m_i=\sigma y'(x_i)+\rho y'(x_i+\theta h),
@@ -1559,10 +1764,10 @@ x_i<x_i+\theta h\le x_{i+1}.
 \]
 The equation of the approximating line is
 \begin{equation} \label{eq:3.2.7}
-\begin{array}{rcl}
-y&=&y(x_i)+m_i(x-x_i)\\
-&=&y(x_i)+\left[\sigma y'(x_i)+\rho y'(x_i+\theta h)\right](x-x_i).
-\end{array}
+\begin{aligned}
+y&=y(x_i)+m_i(x-x_i)\\
+&=y(x_i)+\left[\sigma y'(x_i)+\rho y'(x_i+\theta h)\right](x-x_i).
+\end{aligned}
 \end{equation}
 Setting $x=x_{i+1}=x_i+h$ in (\ref{eq:3.2.7}) yields
 \[
@@ -1572,11 +1777,11 @@ as an approximation to $y(x_{i+1})$.
 
 To determine $\sigma$, $\rho$, and $\theta$ so that the error
 \begin{equation} \label{eq:3.2.8}
-\begin{array}{rcl}
-E_i&=&y(x_{i+1})-\hat y_{i+1}\\
-&=&y(x_{i+1})-y(x_i)-h\left[\sigma y'(x_i)+\rho y'(x_i+\theta
+\begin{aligned}
+E_i&=y(x_{i+1})-\hat y_{i+1}\\
+&=y(x_{i+1})-y(x_i)-h\left[\sigma y'(x_i)+\rho y'(x_i+\theta
 h)\right]
-\end{array}
+\end{aligned}
 \end{equation}
 in this approximation is $O(h^3)$, we begin by recalling from Taylor's
 theorem that
@@ -1650,10 +1855,10 @@ f(x_i+\theta h,y(x_i+\theta h))=f(x_i+\theta h,y(x_i)+\theta h
 f(x_i,y(x_i)))+O(h^2).
 \]
 Substituting this into (\ref{eq:3.2.11})   yields
-\begin{eqnarray*}
-y(x_{i+1})&=&y(x_i)+h\left[\sigma f(x_i,y(x_i))+\right.\\&&\left.\rho
-f(x_i+\theta h,y(x_i)+\theta hf(x_i,y(x_i)))\right]+O(h^3).
-\end{eqnarray*}
+\begin{align*}
+y(x_{i+1})&=y(x_i)+h[\sigma f(x_i,y(x_i))\\
+&\qquad+\rho f(x_i+\theta h,y(x_i)+\theta hf(x_i,y(x_i)))]+O(h^3).
+\end{align*}
 This implies that the formula
 \[
 y_{i+1}=y_i+h\left[\sigma f(x_i,y_i)+\rho f(x_i+\theta
@@ -1670,12 +1875,11 @@ y_i+\frac{h}{2\rho}f(x_i,y_i)\right)\right].
 
 The computation indicated here can be conveniently organized as
 follows: given $y_i$, compute
-\begin{eqnarray*}
-k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+\frac{h}{2\rho},
-y_i+\frac{h}{2\rho}k_{1i}\right),\\
-y_{i+1}&=&y_i+h[(1-\rho)k_{1i}+\rho k_{2i}].
-\end{eqnarray*}
+\begin{align*}
+k_{1,i}&=f(x_i,y_i),\\
+k_{2,i}&=f\left(x_i+\frac{h}{2\rho},y_i+\frac{h}{2\rho}k_{1,i}\right),\\
+y_{i+1}&=y_i+h[(1-\rho)k_{1,i}+\rho k_{2,i}].
+\end{align*}
 
 Consistent with our requirement that $0<\theta<1$, we require that
 $\rho\ge1/2$. Letting $\rho=1/2$ in (\ref{eq:3.2.13}) yields the improved
@@ -1687,27 +1891,25 @@ y_{i+1}=y_i+h\left[\frac{1}{4}f(x_i,y_i)+\frac{3}{4}f\left(
 x_i+\frac{2}{3}h,y_i+\frac{2}{3}hf(x_i,y_i)\right)\right],
 \]
 which can be organized as
-\begin{eqnarray*}
-k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+\frac{2h}{3},
-y_i+\frac{2h}{3}k_{1i}\right),\\
-y_{i+1}&=&y_i+\frac{h}{4}(k_{1i}+3k_{2i}).
-\end{eqnarray*}
+\begin{align*}
+k_{1,i}&=(x_i,y_i),\\
+k_{2,i}&=f\left(x_i+\frac{2h}{3},y_i+\frac{2h}{3}k_{1,i}\right),\\
+y_{i+1}&=y_i+\frac{h}{4}(k_{1,i}+3k_{2,i}).
+\end{align*}
 Letting $\rho=1$ yields the \emph{\color{blue}midpoint
 method},
 \[
 y_{i+1}=y_i+hf\left(x_i+\frac{h}{2},y_i+\frac{h}{2}f(x_i,y_i)\right),
 \]
 which can be organized as
-\begin{eqnarray*}
-k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+\frac{h}{2},
-y_i+\frac{h}{2}k_{1i}\right),\\
-y_{i+1}&=&y_i+hk_{2i}.
-\end{eqnarray*}
+\begin{align*}
+k_{1,i}&=f(x_i,y_i),\\
+k_{2,i}&=f\left(x_i+\frac{h}{2},y_i+\frac{h}{2}k_{1,i}\right),\\
+y_{i+1}&=y_i+hk_{2,i}.
+\end{align*}
 
 Examples involving the midpoint method and Heun's method are given in
-Exercises~\ref{exer:3.2.23}-\ref{exer:3.2.30}.
+Exercises~\ref{exer:3.2.23}--\ref{exer:3.2.30}.
 
 \exercises
 Most of the following numerical exercises involve initial value
@@ -1983,8 +2185,8 @@ and explain what you find.
 \end{alist}
 
 \end{exerciselist}
-\setcounter{table}{0}
-\section{The Runge-Kutta Method}
+
+\section{The Runge-Kutta Method}\label{sec:runge_kutta}
 
 In general, if $k$ is any  positive  integer  and $f$
 satisfies appropriate assumptions, there are numerical methods with
@@ -2010,17 +2212,15 @@ The Runge-Kutta method computes approximate values
 $y_1$, $y_2$, \dots, $y_n$ of the solution of \eqref{eq:3.3.1}
 at $x_0$, $x_0+h$, \dots, $x_0+nh$ as follows: Given $y_i$,
 compute
-\begin{eqnarray*} k_{1i}&=&f(x_i,y_i),\\
-k_{2i}&=&f\left(x_i+\frac{h}{2},y_i+\frac{h}{2}k_{1i}\right),\\
-k_{3i}&=&f\left(x_i+\frac{h}{2},y_i+\frac{h}{2}k_{2i}\right),\\
-k_{4i}&=&f(x_i+h,y_i+hk_{3i}),
-\end{eqnarray*}
-and
-\[
-y_{i+1}=y_i+\frac{h}{6}(k_{1i}+2k_{2i}+2k_{3i}+k_{4i}).
-\]
+\begin{align*}
+k_{1,i}&=f(x_i,y_i),\\
+k_{2,i}&=f\left(x_i+\frac{h}{2},y_i+\frac{h}{2}k_{1,i}\right),\\
+k_{3,i}&=f\left(x_i+\frac{h}{2},y_i+\frac{h}{2}k_{2,i}\right),\\
+k_{4,i}&=f(x_i+h,y_i+hk_{3,i}),\qquad\text{and}\\
+y_{i+1}&=y_i+\frac{h}{6}(k_{1,i}+2k_{2,i}+2k_{3,i}+k_{4,i}).
+\end{align*}
 
- The next example, which deals with the initial value problem
+The next example, which deals with the initial value problem
 considered in Examples~\ref{example:3.1.1} and \ref{example:3.2.1},
 illustrates
 the computational procedure indicated in the Runge-Kutta method.
@@ -2043,34 +2243,32 @@ which is of the form \eqref{eq:3.3.1}, with
 \[
 f(x,y)=-2y+x^3e^{-2x},\ x_0=0,\mbox{\ and}\ y_0=1.
 \]
-\enlargethispage{.1in}
 
+{\allowdisplaybreaks
 The Runge-Kutta method yields
-\begin{eqnarray*}
-k_{10} & = & f(x_0,y_0)
-  = f(0,1)=-2,\\
-k_{20} & = & f(x_0+h/2,y_0+hk_{10}/2)=f(.05,1+(.05)(-2))\\
- &=& f(.05,.9)=-2(.9)+(.05)^3e^{-.1}=-1.799886895,\\
-k_{30} & = & f(x_0+h/2,y_0+hk_{20}/2)=f(.05,1+(.05)(-1.799886895))\\
- &=& f(.05,.910005655)=-2(.910005655)+(.05)^3e^{-.1}=-1.819898206,\\
-k_{40} & = & f(x_0+h,y_0+hk_{30})=f(.1,1+(.1)(-1.819898206))\\
-&=&f(.1,.818010179)=-2(.818010179)+(.1)^3e^{-.2}=-1.635201628,\\
-y_1&=&y_0+\frac{h}{6}(k_{10}+2k_{20}+2k_{30}+k_{40}),\\
-&=&1+\frac{.1}{6}(-2+2(-1.799886895)+2(-1.819898206)
--1.635201628)=.818753803,\\[4\jot]
-k_{11} & = & f(x_1,y_1)
-  = f(.1,.818753803)=-2(.818753803))+(.1)^3e^{-.2}=-1.636688875,\\
-k_{21} & = & f(x_1+h/2,y_1+hk_{11}/2)=f(.15,.818753803+(.05)(-1.636688875))\\
- &=& f(.15,.736919359)=-2(.736919359)+(.15)^3e^{-.3}=-1.471338457,\\
-k_{31} & = & f(x_1+h/2,y_1+hk_{21}/2)=f(.15,.818753803+(.05)(-1.471338457))\\
- &=& f(.15,.745186880)=-2(.745186880)+(.15)^3e^{-.3}=-1.487873498,\\
-k_{41} & = &
-f(x_1+h,y_1+hk_{31})=f(.2,.818753803+(.1)(-1.487873498))\\
-&=&f(.2,.669966453)=-2(.669966453)+(.2)^3e^{-.4}=-1.334570346,\\
-y_2&=&y_1+\frac{h}{6}(k_{11}+2k_{21}+2k_{31}+k_{41}),\\
-&=&.818753803+\frac{.1}{6}(-1.636688875+2(-1.471338457)+2(-1.487873498)-1.334570346)
-\\&=&.670592417.
-\end{eqnarray*}
+\begin{align*}
+k_{1,0} &= f(x_0,y_0) = f(0,1)=-2,\\
+k_{2,0} &= f(x_0+h/2,y_0+hk_{1,0}/2)=f(.05,1+(.05)(-2))\\
+ &= f(.05,.9)=-2(.9)+(.05)^3e^{-.1}=-1.799886895,\\
+k_{3,0} &= f(x_0+h/2,y_0+hk_{2,0}/2)=f(.05,1+(.05)(-1.799886895))\\
+ &= f(.05,.910005655)=-2(.910005655)+(.05)^3e^{-.1}=-1.819898206,\\
+k_{4,0} &= f(x_0+h,y_0+hk_{3,0})=f(.1,1+(.1)(-1.819898206))\\
+&=f(.1,.818010179)=-2(.818010179)+(.1)^3e^{-.2}=-1.635201628,\\
+y_1&=y_0+\frac{h}{6}(k_{1,0}+2k_{2,0}+2k_{3,0}+k_{4,0}),\\
+&=1+\frac{.1}{6}(-2+2(-1.799886895)+2(-1.819898206)
+-1.635201628)=.818753803,\\\addlinespace
+k_{1,1} &= f(x_1,y_1) = f(.1,.818753803)=-2(.818753803))+(.1)^3e^{-.2}=-1.636688875,\\
+k_{2,1} &= f(x_1+h/2,y_1+hk_{1,1}/2)=f(.15,.818753803+(.05)(-1.636688875))\\
+ &= f(.15,.736919359)=-2(.736919359)+(.15)^3e^{-.3}=-1.471338457,\\
+k_{3,1} &= f(x_1+h/2,y_1+hk_{2,1}/2)=f(.15,.818753803+(.05)(-1.471338457))\\
+ &= f(.15,.745186880)=-2(.745186880)+(.15)^3e^{-.3}=-1.487873498,\\
+k_{4,1} &= f(x_1+h,y_1+hk_{3,1})=f(.2,.818753803+(.1)(-1.487873498))\\
+&=f(.2,.669966453)=-2(.669966453)+(.2)^3e^{-.4}=-1.334570346,\\
+y_2&=y_1+\frac{h}{6}(k_{1,1}+2k_{2,1}+2k_{3,1}+k_{4,1}),\\
+&=.818753803+\frac{.1}{6}(-1.636688875+2(-1.471338457)+2(-1.487873498)-1.334570346)
+\\&=.670592417.
+\end{align*}
+}
 
 The Runge-Kutta method is sufficiently accurate for most
 applications.
@@ -2098,37 +2296,53 @@ obtained by the improved Euler method with $h=0.05$.
 
 
 
-\begin{newtable} \label{table:3.3.1}
-{Numerical solution of
-$y'+2y=x^3e^{-2x},\ y(0)=1$, by
-the Runge-Kuttta method and the improved Euler
-method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{Exact}\\ \hline
-0.0 & 1.000000000   &1.000000000 &1.000000000 & 1.000000000& 1.000000000 \\
-0.1 & 0.820040937   &0.819050572 &0.818753803 & 0.818751370& 0.818751221 \\
-0.2 & 0.672734445   &0.671086455 &0.670592417 & 0.670588418& 0.670588174 \\
-0.3 & 0.552597643   &0.550543878 &0.549928221 & 0.549923281& 0.549922980 \\
-0.4 & 0.455160637   &0.452890616 &0.452210430 & 0.452205001& 0.452204669 \\
-0.5 & 0.376681251   &0.374335747 &0.373633492 & 0.373627899& 0.373627557 \\
-0.6 & 0.313970920   &0.311652239 &0.310958768 & 0.310953242& 0.310952904 \\
-0.7 & 0.264287611   &0.262067624 &0.261404568 & 0.261399270& 0.261398947 \\
-0.8 & 0.225267702   &0.223194281 &0.222575989 & 0.222571024& 0.222570721 \\
-0.9 & 0.194879501   &0.192981757 &0.192416882 & 0.192412317& 0.192412038 \\
-1.0 & 0.171388070   &0.169680673 &0.169173489 & 0.169169356& 0.169169104\\
-\hline
-&\multicolumn{2}{c|}{Improved Euler}&
-\multicolumn{2}{c|}{Runge-Kutta}&\multicolumn{1}{c|}{Exact}\\\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'+2y=x^3e^{-2x},\ y(0)=1$, by
+the Runge-Kuttta method and the improved Euler method.}
+\label{table:3.3.1}
+%\[
+%\begin{array}{cccccc}\toprule
+%x&
+%\multicolumn{2}{c}{\text{Improved Euler}}&
+%\multicolumn{2}{c}{\text{Runge-Kutta}}&
+%\text{Exact}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+%&h=0.1&h=0.05&h=0.1&h=0.05&\\ \midrule
+%0.0 & 1.000000000   &1.000000000 &1.000000000 & 1.000000000& 1.000000000 \\
+%0.1 & 0.820040937   &0.819050572 &0.818753803 & 0.818751370& 0.818751221 \\
+%0.2 & 0.672734445   &0.671086455 &0.670592417 & 0.670588418& 0.670588174 \\
+%0.3 & 0.552597643   &0.550543878 &0.549928221 & 0.549923281& 0.549922980 \\
+%0.4 & 0.455160637   &0.452890616 &0.452210430 & 0.452205001& 0.452204669 \\
+%0.5 & 0.376681251   &0.374335747 &0.373633492 & 0.373627899& 0.373627557 \\
+%0.6 & 0.313970920   &0.311652239 &0.310958768 & 0.310953242& 0.310952904 \\
+%0.7 & 0.264287611   &0.262067624 &0.261404568 & 0.261399270& 0.261398947 \\
+%0.8 & 0.225267702   &0.223194281 &0.222575989 & 0.222571024& 0.222570721 \\
+%0.9 & 0.194879501   &0.192981757 &0.192416882 & 0.192412317& 0.192412038 \\
+%1.0 & 0.171388070   &0.169680673 &0.169173489 & 0.169169356& 0.169169104\\
+%\bottomrule
+%\end{array}
+%\]
+\[
+\begin{array}{ @{} S[table-format=1.2] H
+    *{5}{HS[table-format=1.9,table-auto-round]}
+    @{} }\toprule
+h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.1}&{0.2}&{0.3}&{0.4}&{0.5}&{0.6}&{0.7}&{0.8}&{0.9}&{1.0}\\\midrule
+\multicolumn{12}{@{}l}{\text{Improved Euler}}\\
+0.1 &
+1.000000000 & 0.820040937 & 0.672734445 & 0.552597643 & 0.455160637 & 0.376681251 & 0.313970920 & 0.264287611 & 0.225267702 & 0.194879501 & 0.171388070 \\
+0.05 &
+1.000000000 & 0.819050572 & 0.671086455 & 0.550543878 & 0.452890616 & 0.374335747 & 0.311652239 & 0.262067624 & 0.223194281 & 0.192981757 & 0.169680673 \\
+\multicolumn{12}{@{}l}{\text{Runge-Kutta}}\\
+0.1 &
+1.000000000 & 0.818753803 & 0.670592417 & 0.549928221 & 0.452210430 & 0.373633492 & 0.310958768 & 0.261404568 & 0.222575989 & 0.192416882 & 0.169173489 \\
+0.05 &
+1.000000000 & 0.818751370 & 0.670588418 & 0.549923281 & 0.452205001 & 0.373627899 & 0.310953242 & 0.261399270 & 0.222571024 & 0.192412317 & 0.169169356 \\\addlinespace
+\text{Exact} &
+1.000000000 & 0.818751221 & 0.670588174 & 0.549922980 & 0.452204669 & 0.373627557 & 0.310952904 & 0.261398947 & 0.222570721 & 0.192412038 & 0.169169104 \\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 \begin{example}\label{example:3.3.3} \rm
 Table~\ref{table:3.3.2}   shows analogous results
@@ -2140,38 +2354,54 @@ We applied the improved Euler  method to this problem in
 Example~\ref{exer:3.2.3}.
 \end{example}
 
-\begin{newtable} \label{table:3.3.2}
-{Numerical solution of
-$y'=-2y^2+xy+x^2,\ y(0)=1$, by
- the Runge-Kuttta method and the improved Euler
-method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0  &1.000000000 & 1.000000000 &1.000000000 & 1.000000000& 1.000000000 \\
-0.1  &0.840500000 & 0.838288371 &0.837587192 & 0.837584759& 0.837584494 \\
-0.2  &0.733430846 & 0.730556677 &0.729644487 & 0.729642155& 0.729641890 \\
-0.3  &0.661600806 & 0.658552190 &0.657582449 & 0.657580598& 0.657580377 \\
-0.4  &0.615961841 & 0.612884493 &0.611903380 & 0.611901969& 0.611901791 \\
-0.5  &0.591634742 & 0.588558952 &0.587576716 & 0.587575635& 0.587575491 \\
-0.6  &0.586006935 & 0.582927224 &0.581943210 & 0.581942342& 0.581942225 \\
-0.7  &0.597712120 & 0.594618012 &0.593630403 & 0.593629627& 0.593629526 \\
-0.8  &0.626008824 & 0.622898279 &0.621908378 & 0.621907553& 0.621907458 \\
-0.9  &0.670351225 & 0.667237617 &0.666251988 & 0.666250942& 0.666250842 \\
-1.0  &0.730069610 & 0.726985837 &0.726017378 & 0.726015908& 0.726015790\\
-\hline
-&\multicolumn{2}{c|}{Improved Euler}&
-\multicolumn{2}{c|}{Runge-Kutta}
-&\multicolumn{1}{c|}{``Exact''}\\\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $y'=-2y^2+xy+x^2,\ y(0)=1$, by
+ the Runge-Kuttta method and the improved Euler method.}
+\label{table:3.3.2}
+%\[
+%\begin{array}{cccccc}\toprule
+%x&
+%\multicolumn{2}{c}{\text{Improved Euler}}&
+%\multicolumn{2}{c}{\text{Runge-Kutta}}&
+%\text{``Exact''}\\\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+%&h=0.1&h=0.05&h=0.1&h=0.05&\\ \midrule
+%0.0  &1.000000000 & 1.000000000 &1.000000000 & 1.000000000& 1.000000000 \\
+%0.1  &0.840500000 & 0.838288371 &0.837587192 & 0.837584759& 0.837584494 \\
+%0.2  &0.733430846 & 0.730556677 &0.729644487 & 0.729642155& 0.729641890 \\
+%0.3  &0.661600806 & 0.658552190 &0.657582449 & 0.657580598& 0.657580377 \\
+%0.4  &0.615961841 & 0.612884493 &0.611903380 & 0.611901969& 0.611901791 \\
+%0.5  &0.591634742 & 0.588558952 &0.587576716 & 0.587575635& 0.587575491 \\
+%0.6  &0.586006935 & 0.582927224 &0.581943210 & 0.581942342& 0.581942225 \\
+%0.7  &0.597712120 & 0.594618012 &0.593630403 & 0.593629627& 0.593629526 \\
+%0.8  &0.626008824 & 0.622898279 &0.621908378 & 0.621907553& 0.621907458 \\
+%0.9  &0.670351225 & 0.667237617 &0.666251988 & 0.666250942& 0.666250842 \\
+%1.0  &0.730069610 & 0.726985837 &0.726017378 & 0.726015908& 0.726015790\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.2] H
+    *{5}{HS[table-format=1.9,table-auto-round]}
+    @{} }\toprule
+{h}&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.1}&{0.2}&{0.3}&{0.4}&{0.5}&{0.6}&{0.7}&{0.8}&{0.9}&{1.0}\\\midrule
+\multicolumn{12}{@{}l}{\text{Improved Euler}}\\
+0.1 &
+1.000000000 & 0.840500000 & 0.733430846 & 0.661600806 & 0.615961841 & 0.591634742 & 0.586006935 & 0.597712120 & 0.626008824 & 0.670351225 & 0.730069610 \\
+0.05 &
+1.000000000 & 0.838288371 & 0.730556677 & 0.658552190 & 0.612884493 & 0.588558952 & 0.582927224 & 0.594618012 & 0.622898279 & 0.667237617 & 0.726985837 \\
+\multicolumn{12}{@{}l}{\text{Runge-Kutta}}\\
+0.1 &
+1.000000000 & 0.837587192 & 0.729644487 & 0.657582449 & 0.611903380 & 0.587576716 & 0.581943210 & 0.593630403 & 0.621908378 & 0.666251988 & 0.726017378 \\
+0.05 &
+1.000000000 & 0.837584759 & 0.729642155 & 0.657580598 & 0.611901969 & 0.587575635 & 0.581942342 & 0.593629627 & 0.621907553 & 0.666250942 & 0.726015908 \\\addlinespace
+\text{``Exact''} &
+1.000000000 & 0.837584494 & 0.729641890 & 0.657580377 & 0.611901791 & 0.587575491 & 0.581942225 & 0.593629526 & 0.621907458 & 0.666250842 & 0.726015790 \\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 
 \begin{example}\label{example:3.3.4} \rm
@@ -2185,67 +2415,97 @@ which we considered in Examples~\ref{example:3.1.4}  and
 \ref{example:3.2.4}.
 \end{example}
 
-\begin{newtable} \label{table:3.3.3}
-{Numerical solution of
-$y'-2xy=1,\ y(0)=3$, by
+\begin{table}
+\caption{Numerical solution of $y'-2xy=1,\ y(0)=3$, by
  the Runge-Kutta method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.2$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0 &   3.000000000 &   3.000000000 &   3.000000000 &   3.000000000 \\
-0.2 &   3.327846400 &   3.327851633 &   3.327851952 &   3.327851973 \\
-0.4 &   3.966044973 &   3.966058535 &   3.966059300 &   3.966059348 \\
-0.6 &   5.066996754 &   5.067037123 &   5.067039396 &   5.067039535 \\
-0.8 &   6.936534178 &   6.936690679 &   6.936700320 &   6.936700945 \\
-1.0 &  10.184232252 &  10.184877733 &  10.184920997 &  10.184923955 \\
-1.2 &  16.064344805 &  16.066915583 &  16.067098699 &  16.067111677 \\
-1.4 &  27.278771833 &  27.288605217 &  27.289338955 &  27.289392347 \\
-1.6 &  49.960553660 &  49.997313966 &  50.000165744 &  50.000377775 \\
-1.8 &  98.834337815 &  98.971146146 &  98.982136702 &  98.982969504 \\
-2.0 & 211.393800152 & 211.908445283 & 211.951167637 & 211.954462214 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
-
-\begin{newtable} \label{table:3.3.4}
-{Numerical solution of
-$y'-2xy=1,\ y(0)=3$, by
- the Runge-Kutta semilinear
-method.}
-\begin{center}
-\begin{tabular}{|c|r|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$h=0.2$}&
-\multicolumn{1}{|c|}{$h=0.1$}&
-\multicolumn{1}{|c|}{$h=0.05$}&
-\multicolumn{1}{|c|}{``Exact''}\\ \hline
-0.0 &   3.000000000 &   3.000000000 &   3.000000000 &   3.000000000 \\
-0.2 &   3.327853286 &   3.327852055 &   3.327851978 &   3.327851973 \\
-0.4 &   3.966061755 &   3.966059497 &   3.966059357 &   3.966059348 \\
-0.6 &   5.067042602 &   5.067039725 &   5.067039547 &   5.067039535 \\
-0.8 &   6.936704019 &   6.936701137 &   6.936700957 &   6.936700945 \\
-1.0 &  10.184926171 &  10.184924093 &  10.184923963 &  10.184923955 \\
-1.2 &  16.067111961 &  16.067111696 &  16.067111678 &  16.067111677 \\
-1.4 &  27.289389418 &  27.289392167 &  27.289392335 &  27.289392347 \\
-1.6 &  50.000370152 &  50.000377302 &  50.000377745 &  50.000377775 \\
-1.8 &  98.982955511 &  98.982968633 &  98.982969450 &  98.982969504 \\
-2.0 & 211.954439983 & 211.954460825 & 211.954462127 & 211.954462214 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\label{table:3.3.3}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.2&h=0.1&h=0.05&\text{``Exact''}\\ \midrule
+%0.0 &   3.000000000 &   3.000000000 &   3.000000000 &   3.000000000 \\
+%0.2 &   3.327846400 &   3.327851633 &   3.327851952 &   3.327851973 \\
+%0.4 &   3.966044973 &   3.966058535 &   3.966059300 &   3.966059348 \\
+%0.6 &   5.066996754 &   5.067037123 &   5.067039396 &   5.067039535 \\
+%0.8 &   6.936534178 &   6.936690679 &   6.936700320 &   6.936700945 \\
+%1.0 &  10.184232252 &  10.184877733 &  10.184920997 &  10.184923955 \\
+%1.2 &  16.064344805 &  16.066915583 &  16.067098699 &  16.067111677 \\
+%1.4 &  27.278771833 &  27.288605217 &  27.289338955 &  27.289392347 \\
+%1.6 &  49.960553660 &  49.997313966 &  50.000165744 &  50.000377775 \\
+%1.8 &  98.834337815 &  98.971146146 &  98.982136702 &  98.982969504 \\
+%2.0 & 211.393800152 & 211.908445283 & 211.951167637 & 211.954462214 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.2]
+    H
+    *{2}{HS[table-format=1.9,table-auto-round]}
+    *{2}{HS[table-format=2.8,table-auto-round]}
+    HS[table-format=3.7,table-auto-round]
+    @{} }\toprule
+{h}&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.2}&{0.4}&{0.6}&{0.8}&{1.0}&{1.2}&{1.4}&{1.6}&{1.8}&{2.0}\\\midrule
+0.2 &
+3.000000000 & 3.327846400 & 3.966044973 & 5.066996754 & 6.936534178 & 10.184232252 & 16.064344805 & 27.278771833 & 49.960553660 & 98.834337815 & 211.393800152 \\
+0.1 &
+3.000000000 & 3.327851633 & 3.966058535 & 5.067037123 & 6.936690679 & 10.184877733 & 16.066915583 & 27.288605217 & 49.997313966 & 98.971146146 & 211.908445283 \\
+0.05 &
+3.000000000 & 3.327851952 & 3.966059300 & 5.067039396 & 6.936700320 & 10.184920997 & 16.067098699 & 27.289338955 & 50.000165744 & 98.982136702 & 211.951167637 \\
+\text{``Exact''} &
+3.000000000 & 3.327851973 & 3.966059348 & 5.067039535 & 6.936700945 & 10.184923955 & 16.067111677 & 27.289392347 & 50.000377775 & 98.982969504 & 211.954462214 \\
+\bottomrule
+\end{array}
+\]
+%\end{table}
+%
+%\begin{table}
+\caption{Numerical solution of $y'-2xy=1,\ y(0)=3$, by
+ the Runge-Kutta semilinear method.}
+\label{table:3.3.4}
+%\[
+%\begin{array}{ccccc}\toprule
+%x&h=0.2&h=0.1&h=0.05&\text{``Exact''}\\ \midrule
+%0.0 &   3.000000000 &   3.000000000 &   3.000000000 &   3.000000000 \\
+%0.2 &   3.327853286 &   3.327852055 &   3.327851978 &   3.327851973 \\
+%0.4 &   3.966061755 &   3.966059497 &   3.966059357 &   3.966059348 \\
+%0.6 &   5.067042602 &   5.067039725 &   5.067039547 &   5.067039535 \\
+%0.8 &   6.936704019 &   6.936701137 &   6.936700957 &   6.936700945 \\
+%1.0 &  10.184926171 &  10.184924093 &  10.184923963 &  10.184923955 \\
+%1.2 &  16.067111961 &  16.067111696 &  16.067111678 &  16.067111677 \\
+%1.4 &  27.289389418 &  27.289392167 &  27.289392335 &  27.289392347 \\
+%1.6 &  50.000370152 &  50.000377302 &  50.000377745 &  50.000377775 \\
+%1.8 &  98.982955511 &  98.982968633 &  98.982969450 &  98.982969504 \\
+%2.0 & 211.954439983 & 211.954460825 & 211.954462127 & 211.954462214 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-rows={1,2}}
+\[
+\begin{array}{ @{} S[table-format=1.2]
+    H
+    *{2}{HS[table-format=1.9,table-auto-round]}
+    *{2}{HS[table-format=2.8,table-auto-round]}
+    HS[table-format=3.7,table-auto-round]
+    @{} }\toprule
+{h}&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
+&{0.0}&{0.2}&{0.4}&{0.6}&{0.8}&{1.0}&{1.2}&{1.4}&{1.6}&{1.8}&{2.0}\\\midrule
+0.2 &
+3.000000000 & 3.327853286 & 3.966061755 & 5.067042602 & 6.936704019 & 10.184926171 & 16.067111961 & 27.289389418 & 50.000370152 & 98.982955511 & 211.954439983 \\
+0.1 &
+3.000000000 & 3.327852055 & 3.966059497 & 5.067039725 & 6.936701137 & 10.184924093 & 16.067111696 & 27.289392167 & 50.000377302 & 98.982968633 & 211.954460825 \\
+0.05 &
+3.000000000 & 3.327851978 & 3.966059357 & 5.067039547 & 6.936700957 & 10.184923963 & 16.067111678 & 27.289392335 & 50.000377745 & 98.982969450 & 211.954462127 \\
+\text{``Exact''} &
+3.000000000 & 3.327851973 & 3.966059348 & 5.067039535 & 6.936700945 & 10.184923955 & 16.067111677 & 27.289392347 & 50.000377775 & 98.982969504 & 211.954462214 \\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 \boxit{The Case Where $x_0$ Isn't  The Left Endpoint}
 
 
-\enlargethispage{.5in}
 \noindent
 So far in this chapter we've considered numerical methods
  for solving an initial value problem
@@ -2261,6 +2521,7 @@ $x_0-h, \dots,x_0-nh$,
 where $h=(x_0-a)/n$?  Here's the answer to this question:
 
 \medskip
+{
 \color{blue}
  Consider the initial value problem
 \begin{equation} \label{eq:3.3.4}
@@ -2273,7 +2534,7 @@ $-x_0+h$, $-x_0+2h$, \dots, $-x_0+nh=-a$. Then
 $y_{-1}=z_1$, $y_{-2}=z_2$, $\dots$, $y_{-n}=z_n$
 are approximate values of the solution of $\eqref{eq:3.3.3}$ at
 $x_0-h$, $x_0-2h$, \dots, $x_0-nh=a$.
-\color{black}
+}
 \medskip
 
 The justification for this answer is sketched in
@@ -2308,9 +2569,11 @@ on the interval $[-1,0]$.
 \eqref{eq:3.3.4} is related to \eqref{eq:3.3.3}.)
  Table~\ref{table:3.3.5} shows the results.  Reversing the
 order of the
-rows in Table~\ref{table:3.3.5} and changing the signs of the values of $x$
-yields the first two columns of Table~\ref{table:3.3.6}.   The last
-column of Table~\ref{table:3.3.6} shows the exact values of $y$, which
+columns in Table~\ref{table:3.3.5} and changing the signs of the values of $x$
+yields the two rows of Table~\ref{table:3.3.6}.   The
+%last column of Table~\ref{table:3.3.6} shows the
+exact values of $y$
+%, which
 are given by
 \[
 y=1+(3x^2+9x+15)^{1/3}.
@@ -2318,54 +2581,73 @@ y=1+(3x^2+9x+15)^{1/3}.
 (Since the differential equation in \eqref{eq:3.3.6} is separable,
 this formula can be obtained by the method of Section~2.2.)
 
-\begin{newtable} \label{table:3.3.5}
-{Numerical solution of $z'=\dst\frac{2x-3}{(z-1)^2},\ z(-1)=4$, on
+\begin{table}
+\caption{Numerical solution of $z'=\dst\frac{2x-3}{(z-1)^2},\ z(-1)=4$, on
 $[-1,0]$.}
-\begin{center}
-\begin{tabular}{|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$z$}\\ \hline
--1.0 & 4.000000000  \\
--0.9 & 3.944536474  \\
--0.8 & 3.889298649  \\
--0.7 & 3.834355648  \\
--0.6 & 3.779786399  \\
--0.5 & 3.725680888  \\
--0.4 & 3.672141529  \\
--0.3 & 3.619284615  \\
--0.2 & 3.567241862  \\
--0.1 & 3.516161955  \\
- 0.0 & 3.466212070 \\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\label{table:3.3.5}
+%\[
+%\begin{array}{cc}\toprule
+%x&z\\ \midrule
+%-1.0 & 4.000000000  \\
+%-0.9 & 3.944536474  \\
+%-0.8 & 3.889298649  \\
+%-0.7 & 3.834355648  \\
+%-0.6 & 3.779786399  \\
+%-0.5 & 3.725680888  \\
+%-0.4 & 3.672141529  \\
+%-0.3 & 3.619284615  \\
+%-0.2 & 3.567241862  \\
+%-0.1 & 3.516161955  \\
+% 0.0 & 3.466212070 \\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-columns={1}}
+\[
+\begin{array}{ @{} c H
+    *{5}{ HS[table-format=1.9] }
+    @{} }\toprule
+x&{-1.0}&{-0.9}&{-0.8}&{-0.7}&{-0.6}&{-0.5}&{-0.4}&{-0.3}&{-0.2}&{-0.1}&{0.0}\\\midrule
+z & 4.000000000 & 3.944536474 & 3.889298649 & 3.834355648 & 3.779786399 & 3.725680888 & 3.672141529 & 3.619284615 & 3.567241862 & 3.516161955 & 3.466212070 \\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
-\begin{newtable} \label{table:3.3.6}
-{Numerical solution of $(y-1)^2y'=2x+3,\ y(1)=4$, on
-$[0,1]$.}
-\begin{center}
-\begin{tabular}{|r|r|r|}
-\hline
-\multicolumn{1}{|c|}{$x$}&
-\multicolumn{1}{|c|}{$y$}&
-\multicolumn{1}{|c|}{Exact}\\ \hline
-0.00  &   3.466212070 &  3.466212074\\
-0.10  &   3.516161955 &  3.516161958\\
-0.20  &   3.567241862 &  3.567241864\\
-0.30  &   3.619284615 &  3.619284617\\
-0.40  &   3.672141529 &  3.672141530\\
-0.50  &   3.725680888 &  3.725680889\\
-0.60  &   3.779786399 &  3.779786399\\
-0.70  &   3.834355648 &  3.834355648\\
-0.80  &   3.889298649 &  3.889298649\\
-0.90  &   3.944536474 &  3.944536474\\
-1.00  &   4.000000000 &  4.000000000\\
-\hline
-\end{tabular}
-\end{center}
-\end{newtable}
+\begin{table}
+\caption{Numerical solution of $(y-1)^2y'=2x+3,\ y(1)=4$, on $[0,1]$.}
+\label{table:3.3.6}
+%\[
+%\begin{array}{ccc}\toprule
+%x&y&\text{Exact}\\ \midrule
+%0.0  &   3.466212070 &  3.466212074\\
+%0.1  &   3.516161955 &  3.516161958\\
+%0.2  &   3.567241862 &  3.567241864\\
+%0.3  &   3.619284615 &  3.619284617\\
+%0.4  &   3.672141529 &  3.672141530\\
+%0.5  &   3.725680888 &  3.725680889\\
+%0.6  &   3.779786399 &  3.779786399\\
+%0.7  &   3.834355648 &  3.834355648\\
+%0.8  &   3.889298649 &  3.889298649\\
+%0.9  &   3.944536474 &  3.944536474\\
+%1.0  &   4.000000000 &  4.000000000\\
+%\bottomrule
+%\end{array}
+%\]
+\tagpdfsetup{table/header-columns={1}}
+\[
+\begin{array}{ @{} c
+    *{5}{ S[table-format=1.9] H}
+    H @{} }\toprule
+x&{0.0}&{0.1}&{0.2}&{0.3}&{0.4}&{0.5}&{0.6}&{0.7}&{0.8}&{0.9}&{1.0}\\\midrule
+y &
+3.466212070 & 3.516161955 & 3.567241862 & 3.619284615 & 3.672141529 & 3.725680888 & 3.779786399 & 3.834355648 & 3.889298649 & 3.944536474 & 4.000000000 \\
+\text{Exact} &
+3.466212074 & 3.516161958 & 3.567241864 & 3.619284617 & 3.672141530 & 3.725680889 & 3.779786399 & 3.834355648 & 3.889298649 & 3.944536474 & 4.000000000 \\
+\bottomrule
+\end{array}
+\]
+\end{table}
 
 We leave it to you to develop a procedure for handling the
 numerical solution of \eqref{eq:3.3.3} on an interval $[a,b]$

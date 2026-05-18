@@ -11,6 +11,8 @@
 \usepackage{siunitx}
 \usepackage{capt-of}
 \usepackage{zref-clever}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage[%dvips,
  bookmarks = true,
  colorlinks=true,
@@ -23,15 +25,20 @@ filecolor = blue,
 
 \zcRefTypeSetup{chapter}{cap}
 \zcRefTypeSetup{section}{cap}
+\zcRefTypeSetup{table}{cap}
 
 %\colorlet{blue}{DarkBlue}
 \colorlet{red}{DarkRed}
 
 \setcounter{secnumdepth}{2}
-\usepackage[justification=centering, labelsep=space, skip=-10 pt]{caption}
+\usepackage[justification=centering, labelsep=space%, skip=-10 pt
+]{caption}
 \usepackage[a4paper]{geometry}
 \usepackage{float}
 \usepackage{upref}
+
+\usepackage{array}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
 
 \usepackage{graphicx}
 \graphicspath{%
@@ -93,11 +100,6 @@ TECHNOLOGY}\par}
 \kern5pt\strut}\kern5pt}}}
 \newenvironment{newtable}[1]{ \begin{quote}
 Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
-
-\newenvironment{numberlist}{\begin{list}{\bfseries \arabic{rm}.}
-{\topsep 12pt\partopsep 0pt\labelwidth 14pt
-\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-\usecounter{rm}}}{\end{list}}
 
 \setlength{\oddsidemargin}{15.5pt}
 \setlength{\evensidemargin}{15.5pt}

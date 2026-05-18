@@ -1,3 +1,5 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Introduction}
 
@@ -572,12 +574,27 @@ y''+2y'+y=2x
  on $(-\infty,\infty)$.
 \end{example}
 
-\begin{figure}[thp]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig010201}
+%  \includegraphics[%bb=-78 148 689 643,
+%  width=5.67in,height=3.66in,keepaspectratio]{fig010201}
+\begin{tikzpicture}[alt={A curve starting near (-2,1), crossing the x-axis near x=-1.5, and going toward negative infinity as x approaches zero from the left.  Starting near positive infinity when x approaches zero from the right, the curve decreases to a local minimum near (1,1.7) and then increases to finish near (2,2).}]
+\begin{axis}[width=\textwidth, height=3in,
+axis y line=middle,axis x line=middle, tick label style={font=\footnotesize},
+ymin=-9.5,ymax=9.5,xmin=-2,xmax=2,
+name=myplot] % ticks=none, 
+\addplot[draw=blue, domain=-2:-.05, smooth] {x*x/3+1/x} ;
+\addplot[draw=blue, domain=.05:2, smooth] {x*x/3+1/x} ;
+\end{axis}
+\node [right] at (myplot.right of origin) {\scriptsize $x$};
+\node [above] at (myplot.above origin) {\scriptsize $y$};
+%\node at (0,1.8)  {\scriptsize $g(x)$};
+%\node at (0.2,2.4){\scriptsize $h(x)$};
+%\node at (.15,.9) {\scriptsize $f(x)$};
+%\node at (2.2,1.35) {\scriptsize $c$};
+\end{tikzpicture}
 \color{blue}
-  \caption{$y=\dst{\frac{x^{2}}{3}+\frac{1}{x}}$}
+  \caption{$y=\dfrac{x^{2}}{3}+\dfrac{1}{x}$}
   \label{figure:1.2.1}
 \end{figure}
 
@@ -871,17 +888,18 @@ $x^2y''+xy'+\dst{\left(x^2-\frac{1}{4}\right)}y=4x^3+8x^2+3x-2$
 
 \item\label{exer:1.2.3}Find all solutions of the  equation.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (a)}\quad  $y'=-x$
-& {\bf (b)}\quad  $y'=-x \sin x$\\
-{\bf (c)}\quad  $y'=x \ln x$
-& {\bf (d)}\quad  $y''=x \cos x$\\
-{\bf (e)}\quad  $y''=2xe^x$
-& {\bf (f)}\quad  $y''=2x+\sin x+e^x$\\
-{\bf (g)}\quad  $y'''=-\cos x$
-& {\bf (h)}\quad  $y'''=-x^2+e^x$\\
-{\bf (i)}\quad  $y'''=7e^{4x}$&
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO horizontal
+\item  $y'=-x$
+\item $y'=-x \sin x$
+\item $y'=x \ln x$
+\item $y''=x \cos x$
+\item $y''=2xe^x$
+\item $y''=2x+\sin x+e^x$
+\item $y'''=-\cos x$
+\item $y'''=-x^2+e^x$
+\item $y'''=7e^{4x}$
+\end{alist}
 
 \item\label{exer:1.2.4}Solve the  initial value problem.
 
