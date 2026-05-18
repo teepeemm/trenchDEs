@@ -143,7 +143,7 @@ Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\these
 \newenvironment{numberlist}[1][]{%
  \begin{enumext}[
   label=\arabic*,
-%  fotn=\bfseries,
+%  font=\bfseries,
   wrap-label*={##1.},
   topsep=12pt,
   partopsep=0pt,
@@ -157,21 +157,64 @@ Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\these
  \end{enumext}%
 }
 
-\newenvironment{Alist}{\begin{list}{\bf (\Alph{lcal})}
-{\topsep 0pt\partopsep 0pt\labelwidth 14pt
-\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-\usecounter{lcal}}}{\end{list}}
+%\newenvironment{Alist}{\begin{list}{\bf (\Alph{lcal})}
+%{\topsep 0pt\partopsep 0pt\labelwidth 14pt
+%\labelsep 8pt\leftmargin 22pt\itemsep 0pt
+%\usecounter{lcal}}}{\end{list}}
+\newenvironment{Alist}[1][]{%
+ \begin{enumext}[
+  label=\Alph*,
+%  font=\bfseries,
+  wrap-label*={(##1)},
+  topsep=0pt,
+  partopsep=0pt,
+  labelwidth=14pt,
+  labelsep=8pt,
+%  leftmargin=22pt,
+  itemsep=0pt,
+  #1
+ ]%
+}{%
+ \end{enumext}%
+}
 
-\newcounter{rm}
-\newenvironment{rmlist}{\begin{list}{\bf (\roman{rm})}
-{\topsep 0pt\partopsep 0pt\labelwidth 24pt
-\labelsep 8pt\leftmargin 32pt\itemsep 0pt
-\usecounter{rm}}}{\end{list}}
+%\newcounter{rm}
+%\newenvironment{rmlist}{\begin{list}{\bf (\roman{rm})}
+%{\topsep 0pt\partopsep 0pt\labelwidth 24pt
+%\labelsep 8pt\leftmargin 32pt\itemsep 0pt
+%\usecounter{rm}}}{\end{list}}
+\newenvironment{rmlist}[1][]{%
+ \begin{enumext}[
+  label=\Roman*,
+%  font=\bfseries,
+  wrap-label*={(##1)},
+  topsep=0pt,
+  partopsep=0pt,
+  labelwidth=24pt,
+  labelsep=8pt,
+%  leftmargin=32pt,
+  itemsep=0pt,
+  #1
+ ]%
+}{%
+ \end{enumext}%
+}
 
 \newenvironment{definition}[1]{
 \begin{trivlist}\item[]{\sc\bf Definition}\space
 \refstepcounter{theorem}{\bf\thetheorem}\
  #1}{\end{trivlist}}
+ 
+\ExplSyntaxOn
+\IfDocumentMetadataT {
+%  \bool_if:NT \l_pdfannot_tagging_enabled_bool {
+%    \if@partsw\else
+%  %  \msg_term:n { PDF~Tagging~is~ON. }
+%    \fi
+%  }
+}
+\ExplSyntaxOff
+
 
 \newenvironment{tindex}
                {\if@twocolumn
