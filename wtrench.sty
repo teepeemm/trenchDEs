@@ -1,3 +1,6 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = TRENCH_DIFFEQ.tex
+
 \textwidth 5in
 \textheight 45pc
 \evensidemargin 0in
@@ -62,7 +65,7 @@
 \newcommand{\solution}{\vskip10pt\noindent{\scshape Solution }\  }
 
 \newcommand{\exercisetext}[1]{%
- \end{exerciselist}\emph{#1}\begin{exerciselist}[resume]}
+ \end{exerciselist}{\itshape #1}\begin{exerciselist}[resume]}
 
 \newcommand{\arraytext}[1]{\noalign{\hspace*{-1.75em}
 \mbox{#1}\vspace*{-9\jot}}\nonumber\\}
@@ -70,21 +73,25 @@
 
 \usepackage{enumext}
 
+% TODO FORMATTING
 \newcommand{\exercises}{%
-\bigskip{\centerline{\color{red}\large\bfseries\thesection\
-Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\thesection}\vskip6pt\noindent}
+{\color{red}\subsection*{\thesection\ Exercises}}%
+\noindent
+}
+%\bigskip{\centerline{\color{red}\large\bfseries\thesection\
+%Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\thesection}\vskip6pt\noindent}
 
 \ExplSyntaxOn
 \keys_define:nn { enumext / enumext* }
   {
-    item_columns .int_set:N = \l__enumext_item_columns_int,
-    item_columns .default:n = { 1 }
+    item_join .int_set:N = \l__enumext_item_join_int,
+    item_join .default:n = { 1 }
   }
 \cs_set_protected:Nn \__enumext_item_peek_args_vii:
   {
     \peek_meaning:NTF (
       { \__enumext_joined_item_vii:w }
-      { \__enumext_joined_item_vii:w ( \l__enumext_item_columns_int ) } 
+      { \__enumext_joined_item_vii:w ( \l__enumext_item_join_int ) } 
   }
 \ExplSyntaxOff
 
@@ -106,7 +113,7 @@ Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\these
   labelsep=12pt,
 %  leftmargin=28pt,
   columns=2,
-  item_columns=2,
+  item_join=2,
 %  leftmargin=22pt,
   #1
  ]%
@@ -185,7 +192,7 @@ Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\these
 %\usecounter{rm}}}{\end{list}}
 \newenvironment{rmlist}[1][]{%
  \begin{enumext}[
-  label=\Roman*,
+  label=\roman*,
 %  font=\bfseries,
   wrap-label*={(##1)},
   topsep=0pt,
@@ -207,11 +214,16 @@ Exercises}}\noindent{\color{red}\mbox{}\hrulefill\mbox{}}\label{exerstart:\these
  
 \ExplSyntaxOn
 \IfDocumentMetadataT {
-%  \bool_if:NT \l_pdfannot_tagging_enabled_bool {
-%    \if@partsw\else
-%  %  \msg_term:n { PDF~Tagging~is~ON. }
-%    \fi
-%  }
+  \tl_if_eq:enF { \GetDocumentProperties{document/tagging} } { inactive } {
+    \if@partsw\else  % \includeonly has not been seen
+      \directlua{ if ~ status.list().hash_extra ~ < ~ 600001 ~ then ~
+        error('TOO~FEW~HASHES:~try~--cnf-line="hash_extra=1000000"') ~
+        end }
+      \directlua{ if ~ status.list().max_strings ~ < ~ 500001 ~ then ~
+        error('TOO~FEW~STRINGS:~try~--cnf-line="max_strings=1000000"') ~
+        end }
+    \fi
+  }
 }
 \ExplSyntaxOff
 
