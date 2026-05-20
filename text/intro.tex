@@ -1,29 +1,29 @@
 % !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
-\chapter{Introduction}
+\chapter{Introduction}\label{ch:intro}
 
 \noindent
 IN THIS CHAPTER we begin our study of differential equations.
 
 \medskip\noindent
- SECTION~1.1 presents
+\zcref[S,CAP]{sec:apps_leading_DEs} presents
 examples of applications that lead to differential equations.
 
 \medskip\noindent
-SECTION~1.2 introduces   basic concepts and
+\zcref[S,CAP]{sec:basic_concepts} introduces basic concepts and
 definitions concerning differential equations.
 
 \medskip\noindent
- SECTION~1.3
-presents a geometric method for dealing with differential equations
-that has been known for a very long time, but has become particularly
-useful and important with the proliferation of readily available
-differential equations software.
+\zcref[S,CAP]{sec:dir_fields} presents a geometric method for dealing with
+differential equations that has been known for a very long time,
+but has become particularly useful and important with the proliferation of
+readily available differential equations software.
 
 \newpage
 
 \section{Applications Leading to Differential Equations}
+\label{sec:apps_leading_DEs}
 
 In order to apply mathematical methods to a physical or ``real life''
 problem, we must  formulate the problem in mathematical
@@ -95,7 +95,7 @@ usually rest on the simplifying assumption that the number of members of
 the population can be regarded as a differentiable function $P=P(t)$.
 In most models it is assumed that the differential equation takes the
 form
-\begin{equation} \label{eq:1.1.1}
+\begin{equation}\label{eq:1.1.1}
 P'=a(P)P,
 \end{equation}
 where $a$ is a continuous function of $P$ that represents the rate of
@@ -130,8 +130,11 @@ P(t)=P_0e^{at}.
 \]
 This implies that
 \[
-\lim_{t\to\infty}P(t)=\left\{\begin{array}{cl}\infty&\mbox{ if
-}a>0,\\ 0&\mbox{ if }a<0;    \end{array}\right.
+\lim_{t\to\infty}P(t)=
+\begin{cases}
+\infty&\text{ if }a>0,\\
+0&\text{ if }a<0;
+\end{cases}
 \]
 that is, the population approaches infinity if the birth rate exceeds
 the death rate, or zero if the death rate exceeds the birth rate.
@@ -154,7 +157,7 @@ the rate of population growth as the population increases.
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Verhulst.html}
 {\color{blue}\itshape Verhulst model}, where \eqref{eq:1.1.2} is
 replaced by
-\begin{equation} \label{eq:1.1.4}
+\begin{equation}\label{eq:1.1.4}
 P'=aP(1-\alpha P),
 \end{equation}
 where $\alpha$ is a positive constant.
@@ -166,19 +169,19 @@ become significant.
 
 Equation~\eqref{eq:1.1.4} is  the \emph{\color{blue}logistic equation}. You
 will learn how to solve it in Section~1.2. (See
-Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.28}.) The solution is
+{Exercise~2.2.\ref{exer:2.2.28}}.) The solution is
 \[
 P=\frac{P_0}{\alpha P_0+(1-\alpha P_0)e^{-at}},
 \]
 where $P_0=P(0)>0$. Therefore
 $\lim_{t\to\infty}P(t)=1/\alpha$, independent of $P_0$.
 
-Figure~\ref{figure:1.1.1} shows typical graphs of $P$ versus $t$ for
+\zcref[S]{figure:1.1.1} shows typical graphs of $P$ versus $t$ for
 various values of  $P_0$.
 
-\begin{figure}[h]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={Nine curves converging to a limiting value of P=1/𝛼 as t increases.  The curves above the limiting value decay, while the curves below increase to that value.  There is a tenth curve along the horizontal axis.},
   width=5.67in,height=3.66in,keepaspectratio]{fig010101}
 \color{blue}
   \caption{Solutions of the logistic equation}
@@ -188,7 +191,6 @@ various values of  $P_0$.
 
 \boxit{Newton's Law of Cooling}
 
-\noindent
 According to
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Newton.html}
 {\color{blue}\itshape Newton's law of cooling},  the temperature of a
@@ -212,15 +214,29 @@ where $T_0$ is the temperature of the body when $t=0$.
 Therefore $\lim_{t\to\infty}T(t)=T_m$, independent of $T_0$.
 (Common sense suggests this. Why?)
 
-Figure~\ref{figure:1.1.2} shows typical graphs of $T$ versus $t$ for
+\zcref[S]{figure:1.1.2} shows typical graphs of $T$ versus $t$ for
 various values of  $T_0$.
 
-\begin{figure}[htp]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig010102}
+%  \includegraphics[alt={The same curves },
+%  width=5.67in,height=3.66in,keepaspectratio]{fig010102}
+\begin{tikzpicture}[alt={Ten curves converging to a limiting value of T naught as t increases.  The curves above the limiting value decay, while the curves below increase to that value.}]
+\begin{axis}[width=\textwidth, height=3in,
+axis y line=middle,axis x line=middle, tick label style={font=\footnotesize},
+ymin=0,ymax=10,xmin=0,xmax=2,xtick=\empty,ytick={5},yticklabels={$T_0$},
+name=myplot] %
+\addplot[dashed,domain=0:2,draw=blue,thin]{5};
+\pgfplotsinvokeforeach{1,2,...,5}{
+\addplot[draw=blue, domain=0:2, smooth] {5+#1*exp(-x)};
+\addplot[draw=blue, domain=0:2, smooth] {5-#1*exp(-x)};
+}
+\end{axis}
+\node [right] at (myplot.right of origin) {\scriptsize $t$};
+\node [above] at (myplot.above origin) {\scriptsize $T$};
+\end{tikzpicture}
 \color{blue}
-  \caption{ Temperature according to Newton's Law of Cooling}
+  \caption{Temperature according to Newton's Law of Cooling}
   \label{figure:1.1.2}
 \end{figure}
 
@@ -254,14 +270,13 @@ T'=-k\left(1+\frac{a}{a_m}\right)T
 \]
 for the temperature of the object.  After learning to solve linear
 first order  equations, you'll be able to show
-(Exercise~4.2.~\hspace*{-3pt}\ref{exer:4.2.17}) that
+({Exercise~4.2.\ref{exer:4.2.17}}) that
 \[
 T=\frac{aT_0+a_mT_{m0}}{a+a_m}+\frac{a_m(T_0-T_{m0})}{a+a_m}e^{-k(1+a/a_m)t}.
 \]
 
 \boxit{Glucose Absorption by the Body}
 
-\noindent
 Glucose is absorbed by
 the body at a rate proportional to the amount of glucose present in
 the bloodstream. Let $\lambda$ denote the (positive) constant of
@@ -294,19 +309,18 @@ G'=-\lambda G+r,
 where the first term on the right is due to the absorption of the
 glucose by the body and the second term is due to the injection.
  After you've studied Section~2.1,
-you'll be able to show (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.43}) that the solution
+you'll be able to show ({Exercise~2.1.\ref{exer:2.1.43}}) that the solution
 of
 \eqref{eq:1.1.9} that satisfies $G(0)=G_0$ is
 \[
 G=\frac{r}{\lambda}+\left(G_0-\frac{r}{\lambda}\right)e^{-\lambda t}.
 \]
 Graphs of  this function are similar to those in
-Figure~\ref{figure:1.1.2}.
+\zcref{figure:1.1.2}.
 (Why?)
 
 \boxit{Spread of Epidemics}
 
-\noindent
 One model for the spread of epidemics assumes that the number of
 people infected changes at a rate proportional to the product of the
 number of people already infected and the number of people who are
@@ -323,16 +337,14 @@ the solution of this equation is
 \[
 I=\frac{SI_0}{I_0+(S-I_0)e^{-rSt}}
 \]
-(Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.29}).
+({Exercise~2.2.\ref{exer:2.2.29}}).
  Graphs of this function are similar to those in
-Figure~\ref{figure:1.1.1}.
+\zcref{figure:1.1.1}.
 (Why?)
 Since $\lim_{t\to\infty}I(t)=S$, this model predicts that all the
 susceptible people eventually become infected.
 
 \boxit{Newton's Second Law of Motion}
-
-\noindent
 
 According to
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Newton.html}
@@ -376,7 +388,6 @@ equation}.
 
 \boxit{Interacting Species: Competition}
 
-\noindent
 Let $P=P(t)$ and $Q=Q(t)$ be the populations of two species at time
 $t$, and assume that each population would grow exponentially if the
 other didn't exist; that is, in the absence of competition we would
@@ -388,34 +399,34 @@ where $a$ and $b$ are positive constants. One way to model the effect
 of competition is to assume that the growth rate per individual of
 each population is reduced by an amount proportional to the other
 population, so \eqref{eq:1.1.10} is replaced by
-\begin{eqnarray*}
-P'&=&\phantom{-}aP-\alpha Q\\
-Q'&=&-\beta P+bQ,
-\end{eqnarray*}
+\begin{align*}
+P'&=\phantom{-}aP-\alpha Q\\
+Q'&=-\beta P+bQ,
+\end{align*}
 where $\alpha$ and $\beta$ are positive constants. (Since negative
 population doesn't make sense, this system works only while $P$ and
 $Q$ are both positive.) Now suppose   $P(0)=P_0>0$ and
-$Q(0)=Q_0>0$. It can be shown (Exercise~10.4.~\hspace*{-3pt}\ref{exer:10.4.42})
+$Q(0)=Q_0>0$. It can be shown ({Exercise~10.4.\ref{exer:10.4.42}})
 that there's a  positive constant $\rho$ such that if
 $(P_0,Q_0)$ is above the line $L$ through the origin with slope $\rho$,
 then the species with population $P$ becomes extinct in finite time,
 but if $(P_0,Q_0)$ is below $L$,   the species with population
-$Q$ becomes extinct in finite time. Figure~\ref{figure:1.1.3} illustrates
+$Q$ becomes extinct in finite time. \zcref[S]{figure:1.1.3} illustrates
 this. The curves shown there are given parametrically by $P=P(t),
 Q=Q(t),\ t>0$.
  The arrows indicate direction along the curves with
 increasing $t$.
 
-\begin{figure}[h]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={A field of arrows in the first quadrant, moving away from the origin as well as the diagonal P=Q.},
   width=5.67in,height=3.66in,keepaspectratio]{fig010103}
 \color{blue}
-  \caption{ Populations of competing species}
+  \caption{Populations of competing species}
   \label{figure:1.1.3}
 \end{figure}
 
-\section{Basic Concepts}
+\section{Basic Concepts}\label{sec:basic_concepts}
 
 A \emph{\color{blue}differential equation} is an equation that contains one or more
 derivatives of an unknown function. The \emph{\color{blue}order} of a
@@ -434,7 +445,7 @@ unless the independent variable is time; then we'll use $t$.
 The simplest differential equations are first order equations of the
 form
 \[
-\frac{dy}{dx}=f(x) \mbox{\quad or, equivalently, \quad}y'=f(x),
+\frac{dy}{dx}=f(x) \quad\text{or, equivalently,}\quad y'=f(x),
 \]
 where $f$  is a known function of $x$. We already know from calculus
 how to find functions that satisfy this kind of equation. For example,
@@ -455,10 +466,10 @@ y^{(n)}=f(x)
 by repeated integration. Again, this is a calculus problem.
 
 Except for illustrative purposes in this section, there's no need to
-consider differential equations like \eqref{eq:1.2.1}.We'll
+consider differential equations like \eqref{eq:1.2.1}. We'll
 usually consider differential equations that can be written as
 \begin{equation} \label{eq:1.2.2}
-y^{(n)}=f(x,y,y', \dots,y^{(n-1)}),
+y^{(n)}=f(x,y,y',\dots,y^{(n-1)}),
 \end{equation}
 where at least one of the functions $y$, $y'$, \dots, $y^{(n-1)}$ actually
 appears on the right. Here are some examples:
@@ -481,7 +492,6 @@ y^{(n)}&=x-xy'-3y.
 
 \boxit{Solutions of Differential Equations}
 
-\noindent
 A \emph{\color{blue}solution} of a differential equation is a function that
 satisfies the differential equation on some open interval;   thus, $y$
 is a solution of \eqref{eq:1.2.2} if $y$ is $n$ times differentiable and
@@ -499,16 +509,17 @@ if and only if $x=0$ or $x=1$, but it's not a solution of this
 differential equation because it does not satisfy the equation on an
 open interval.
 
-The graph of a solution of a differential equation is  a {\color{blue}\it
-solution curve\/}. More generally, a curve $C$ is said to be an {\color{blue}\it
-integral curve\/} of a differential equation if every function
+The graph of a solution of a differential equation is  a
+{\color{blue}\itshape solution curve\/}.
+More generally, a curve $C$ is said to be an
+{\color{blue}\itshape integral curve\/} of a differential equation
+if every function
 $y=y(x)$ whose graph is a segment of $C$ is a solution of the
 differential equation. Thus, any solution curve of a differential
 equation is an integral curve, but an integral curve need not be a
 solution curve.
 
-\begin{example}
-\label{example:1.2.1} \rm
+\begin{example}\label{example:1.2.1}
 If $a$ is any positive constant,  the circle
 \begin{equation} \label{eq:1.2.3}
 x^2+y^2=a^2
@@ -528,7 +539,7 @@ not a solution
 curve of \eqref{eq:1.2.4}, since it's not the graph of a function.
 \end{example}
 
-\begin{example}\label{example:1.2.2} \rm
+\begin{example}\label{example:1.2.2}
 Verify that
 \begin{equation} \label{eq:1.2.5}
 y=\frac{x^2}{3}+\frac{1}{x}
@@ -556,23 +567,11 @@ on $(-\infty,0)$ and $(0,\infty)$.
 equation on any open interval that contains $x=0$, since  $y$ is
 not defined at  $x=0$.
 
-Figure~\ref{figure:1.2.1} shows the graph
+\zcref[S]{figure:1.2.1} shows the graph
 of \eqref{eq:1.2.5}. The
 part
 of the graph of \eqref{eq:1.2.5} on $(0,\infty)$ is a solution curve of
 \eqref{eq:1.2.6}, as is the part of the graph on $(-\infty,0)$.
-
-\begin{example}\label{example:1.2.3} \rm
- Show that if $c_1$ and $c_2$ are constants then
-\begin{equation} \label{eq:1.2.7}
-y=(c_1+c_2x)e^{-x}+2x-4
-\end{equation}
- is a solution of
-\begin{equation} \label{eq:1.2.8}
-y''+2y'+y=2x
-\end{equation}
- on $(-\infty,\infty)$.
-\end{example}
 
 \begin{figure}
   \centering
@@ -598,25 +597,35 @@ name=myplot] % ticks=none,
   \label{figure:1.2.1}
 \end{figure}
 
+\begin{example}\label{example:1.2.3}
+ Show that if $c_1$ and $c_2$ are constants then
+\begin{equation} \label{eq:1.2.7}
+y=(c_1+c_2x)e^{-x}+2x-4
+\end{equation}
+ is a solution of
+\begin{equation} \label{eq:1.2.8}
+y''+2y'+y=2x
+\end{equation}
+ on $(-\infty,\infty)$.
+\end{example}
+
 \solution Differentiating \eqref{eq:1.2.7} twice yields
-\[
-y'=-(c_1+c_2x)e^{-x}+c_2e^{-x}+2
-\]
- and
-\[
-y''=(c_1+c_2x)e^{-x}-2c_2e^{-x},
-\]
+\begin{align*}
+y'&=-(c_1+c_2x)e^{-x}+c_2e^{-x}+2\qquad\text{and}\\
+y''&=(c_1+c_2x)e^{-x}-2c_2e^{-x},
+\end{align*}
 so
-\begin{eqnarray*}
-y''+2y'+y&=&(c_1+c_2x)e^{-x}-2c_2e^{-x}\\
-&&+2\left[-(c_1+c_2x)e^{-x}+c_2e^{-x}+2\right]\\
-&&+(c_1+c_2x)e^{-x}+2x-4\\
-&=&(1-2+1)(c_1+c_2x)e^{-x}+(-2+2)c_2e^{-x}\\ &&+4+2x-4=2x
-\end{eqnarray*}
+\begin{align*}
+y''+2y'+y&=(c_1+c_2x)e^{-x}-2c_2e^{-x}\\
+&\qquad{}+2\left[-(c_1+c_2x)e^{-x}+c_2e^{-x}+2\right]\\
+&\qquad{}+(c_1+c_2x)e^{-x}+2x-4\\
+&=(1-2+1)(c_1+c_2x)e^{-x}+(-2+2)c_2e^{-x}\\
+&\qquad{}+4+2x-4=2x
+\end{align*}
 for all values of $x$.
 Therefore $y$ is a solution of \eqref{eq:1.2.8} on $(-\infty,\infty)$.
 
-\begin{example}\label{example:1.2.4} \rm
+\begin{example}\label{example:1.2.4}
 Find all solutions of
 \begin{equation} \label{eq:1.2.9}
 y^{(n)}=e^{2x}.
@@ -634,7 +643,7 @@ y^{(n-2)}=\frac{e^{2x}}{4}+k_1x+k_2.
 \]
 If $n\ge3$, repeatedly integrating yields
 \begin{equation} \label{eq:1.2.10}
-y=\frac{e^{2x}}{2^n}+k_1\frac{x^{n-1}}{(n-1)!}+k_2\frac{x^{n-2}}{(n-2)!}+\cdots+k_n,
+y=\frac{e^{2x}}{2^n}+k_1\frac{x^{n-1}}{(n-1)!}+k_2\frac{x^{n-2}}{(n-2)!}+\dots+k_n,
 \end{equation}
  where $k_1$, $k_2$, \dots, $k_n$ are constants.
 This shows that every solution of \eqref{eq:1.2.9} has the form
@@ -648,11 +657,11 @@ in
 
 Since the constants $k_1$, $k_2$, \dots, $k_n$  in \eqref{eq:1.2.10}
 are arbitrary, so are the constants
-\[\frac{k_1}{(n-1)!},\, \frac{k_2}{(n-2)!},\, \cdots, \, k_n.\]
- Therefore Example~\ref{example:1.2.4} actually shows that all
+\[\frac{k_1}{(n-1)!},\, \frac{k_2}{(n-2)!},\, \dots, \, k_n.\]
+ Therefore \zcref{example:1.2.4} actually shows that all
 solutions of \eqref{eq:1.2.9}  can be written as
 \[
-y=\frac{e^{2x}}{2^n}+c_1+c_2x+\cdots+c_nx^{n-1},
+y=\frac{e^{2x}}{2^n}+c_1+c_2x+\dots+c_nx^{n-1},
 \]
  where we  renamed the arbitrary constants in
 \eqref{eq:1.2.10} to obtain a simpler formula. As a
@@ -662,8 +671,7 @@ of this throughout the text.
 
 \boxit{Initial Value Problems}
 
-\noindent
-In Example~\ref{example:1.2.4} we saw that the differential equation
+In \zcref{example:1.2.4} we saw that the differential equation
 $y^{(n)}=e^{2x}$ has an infinite family of solutions that depend upon
 the $n$ arbitrary constants $c_1$, $c_2$, \dots, $c_n$. In the absence of
 additional conditions, there's no reason to prefer one solution of a
@@ -672,7 +680,7 @@ interested in finding a solution of a differential equation that
 satisfies one or more specific conditions. The next example
 illustrates this.
 
-\begin{example}\label{example:1.2.5} \rm
+\begin{example}\label{example:1.2.5}
  Find a solution of
 \[
 y'=x^3
@@ -695,12 +703,21 @@ we set $x=1$ and $y=2$ here to obtain
 y=\frac{x^4+7}{4}.
 \]
 
-Figure~\ref{figure:1.2.2} shows
+\zcref[S]{figure:1.2.2} shows
 the graph  of this solution.
 Note that imposing the  condition $y(1)=2$ is equivalent to requiring
  the graph of $y$ to pass through the point $(1,2)$.
 
- We can rewrite the problem considered in Example~\ref{example:1.2.5}
+\begin{figure}
+  \centering
+  \includegraphics[alt={A curve beginning near (-2,5) going down to flatten out as it crosses the y axis at y=1.75, and increasing in a mirror image to pass through (1,2) before finishing near (2,5).},
+  width=5.67in,height=3.5in,keepaspectratio]{fig010202}
+\color{blue}
+  \caption{$y=\dfrac{x^{4}+7}{4}$}
+  \label{figure:1.2.2}
+\end{figure}
+
+ We can rewrite the problem considered in \zcref{example:1.2.5}
 more briefly as
 \[
 y'=x^3,\quad y(1)=2.
@@ -718,15 +735,6 @@ equation where $y$ and $y'$ are required to have specified values at
 problem for an $n$-th order differential equation requires $y$ and its
 first $n-1$ derivatives to have specified values at some point $x_0$.
 These requirements are the \emph{\color{blue}initial conditions}.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig010202}
-\color{blue}
-  \caption{$y=\dst{\frac{x^{2}+7}{4}}$ }
-  \label{figure:1.2.2}
-\end{figure}
 
 We'll denote an initial value problem for a differential equation by
 writing the initial conditions after the equation, as in
@@ -750,7 +758,7 @@ satisfies the differential equation is  the \emph{\color{blue}interval of
 validity} of $y$.
 
 \begin{example}\label{example:1.2.6} \rm
-In Example~\ref{example:1.2.5} we saw that
+In \zcref{example:1.2.5} we saw that
 \begin{equation} \label{eq:1.2.13}
 y=\frac{x^4+7}{4}
 \end{equation}
@@ -763,7 +771,7 @@ interval of validity of this solution is $(-\infty,\infty)$.
 \end{example}
 
 \begin{example}\label{example:1.2.7} \rm
-In Example~\ref{example:1.2.2} we verified that
+In \zcref{example:1.2.2} we verified that
 \begin{equation} \label{eq:1.2.14}
 y=\frac{x^2}{3}+\frac{1}{x}
 \end{equation}
@@ -791,14 +799,13 @@ $x_0=-1$ on which \eqref{eq:1.2.14} is defined.
 
 \boxit{Free Fall Under Constant Gravity}
 
-\noindent
 The term \emph{\color{blue}initial value problem}  originated in problems
 of motion where the independent variable is $t$
 (representing elapsed time), and the initial conditions
 are the position and velocity of an object at the initial
 (starting) time of an experiment.
 
-\begin{example}\label{example:1.2.8} \rm
+\begin{example}\label{example:1.2.8}
 An object falls under the influence of gravity near Earth's
 surface, where it can be assumed that the magnitude of the
 acceleration due to gravity is a constant $g$.
@@ -815,7 +822,8 @@ altitude as a function of time.
 \end{alist}
 \end{example}
 
-\solutionpart{a} Let $y(t)$ be the altitude of the object at time $t$.
+\begin{alistSolution}
+\item Let $y(t)$ be the altitude of the object at time $t$.
  Since the acceleration of the object has
 constant magnitude $g$ and is in the downward (negative) direction,
 $y$ satisfies the second order equation
@@ -829,29 +837,30 @@ $t=0$, then $y$ is a solution of the initial value problem
 y''=-g,\quad  y(0)=y_0,\quad y'(0)=v_0.
 \end{equation}
 
-\solutionpart{b}
+\item
 Integrating \eqref{eq:1.2.17} twice yields
-\begin{eqnarray*}
-y'&=&-gt+c_1, \\
-y&=&-\frac{gt^2}{2}+c_1t+c_2.
-\end{eqnarray*}
+\begin{align*}
+y'&=-gt+c_1, \\
+y&=-\frac{gt^2}{2}+c_1t+c_2.
+\end{align*}
 Imposing the initial conditions $y(0)=y_0$ and $y'(0)=v_0$ in these
 two equations shows that $c_1=v_0$ and $c_2=y_0$. Therefore the
 solution of the initial value problem \eqref{eq:1.2.17} is
 \[y=-\frac{gt^2}{2}+v_0t+y_0.\]
+\end{alistSolution}
 
 \exercises
 \begin{exerciselist}
-\item\label{exer:1.2.1}Find the order of the   equation.
+\item\label{exer:1.2.1}Find the order of the equation.
 % TODO these were ordered horizontally
 \begin{alist}[columns=2]
-\item $\dst\frac{d^2y}{dx^2}+2\frac{dy}{dx}\ \frac{d^3y}{dx^3}+x=0$
+\item $\dfrac{d^2y}{dx^2}+2\dfrac{dy}{dx}\ \dfrac{d^3y}{dx^3}+x=0$
 \item $y''-3y'+2y=x^7$
 \item $y'-y^7=0$
 \item $y''y-(y')^2=2$
 \end{alist}
 
-\item\label{exer:1.2.2}Verify that the  function is a solution of the
+\item\label{exer:1.2.2}Verify that the function is a solution of the
 differential equation on some interval, for any choice of
 the arbitrary constants appearing in the function.
 
@@ -859,18 +868,17 @@ the arbitrary constants appearing in the function.
 \item % (a)
  $y=ce^{2x};     \quad y'=2y$
 \item % (b)
- $y=\dst\frac{x^2}{3}
-+\frac{c}{x};   \quad xy'+y=x^2$
+ $y=\dfrac{x^2}{3} +\dfrac{c}{x};   \quad xy'+y=x^2$
 
 \item %(c)
-$y=\dst\frac{1}{2}+ce^{-x^2};    \quad y'+2xy=x$
+$y=\dfrac{1}{2}+ce^{-x^2};    \quad y'+2xy=x$
 
 \item %(d)
 $y=(1+ce^{-x^2/2});   (1-ce^{-x^2/2})^{-1}   \quad
 2y'+x(y^2-1)=0$
 
 \item %(e)
-$y=\dst{\tan\left( \frac{x^3}{3}+c\right)};     \quad
+$y=\tan\left( \dfrac{x^3}{3}+c\right);     \quad
 y'=x^2(1+y^2)$
 
 \item %(f)
@@ -878,19 +886,19 @@ $y=(c_1+c_2x)e^x+\sin x+x^2;    \quad
 y''-2y'+y=-2 \cos x+x^2-4x+2$
 
 \item %(g)
-$y=c_1e^x+c_2x+\dst\frac{2}{x};     \quad
+$y=c_1e^x+c_2x+\dfrac{2}{x};     \quad
 (1-x)y''+xy'- y=4(1-x-x^2)x^{-3}$
 
 \item %(h)
 $y=x^{-1/2}(c_1\sin x+c_2 \cos x)+4x+8$;     \newline
-$x^2y''+xy'+\dst{\left(x^2-\frac{1}{4}\right)}y=4x^3+8x^2+3x-2$
+$x^2y''+xy'+\left(x^2-\dfrac{1}{4}\right)y=4x^3+8x^2+3x-2$
 \end{alist}
 
 \item\label{exer:1.2.3}Find all solutions of the  equation.
 
 \begin{alist}[columns=2]
 % TODO horizontal
-\item  $y'=-x$
+\item $y'=-x$
 \item $y'=-x \sin x$
 \item $y'=x \ln x$
 \item $y''=x \cos x$
@@ -907,7 +915,7 @@ $x^2y''+xy'+\dst{\left(x^2-\frac{1}{4}\right)}y=4x^3+8x^2+3x-2$
 \item % (a)
  $y'=-xe^x, \quad y(0)=1$
 \item % (b)
- $\dst{y'=x \sin x^2, \quad y\left({\sqrt\frac{\pi}{2}}\right)=1}$
+ $y'=x \sin x^2, \quad y\left({\sqrt\dfrac{\pi}{2}}\right)=1$
 
 \item %(c)
 $y'=\tan x, \quad y(\pi/4)=3$
@@ -940,18 +948,18 @@ the initial value problem.
 \begin{alist}
 \item %(a)
 $y=x\cos x;     \quad y'=\cos x-y\tan x, \quad
-y(\pi/4)=\dst\frac{\pi}{4\sqrt{2}}$
+y(\pi/4)=\dfrac{\pi}{4\sqrt{2}}$
 
 \item %(b)
-$\dst{y=\frac{1+2\ln x}{x^2}+\frac{1}{2};     \quad
-y'=\frac{x^2-2x^2y+2}{x^3},   \quad y(1)=\frac{3}{2}}$
+$y=\dfrac{1+2\ln x}{x^2}+\dfrac{1}{2};     \quad
+y'=\dfrac{x^2-2x^2y+2}{x^3},   \quad y(1)=\dfrac{3}{2}$
 
 \item %(c)
-$y=\dst{\tan\left(\frac{x^2}{2}\right)};
+$y=\tan\left(\dfrac{x^2}{2}\right);
 \quad y'=x(1+y^2),   \quad y(0)=0$
 
 \item %(d)
-$\dst{y=\frac{2}{x-2};     \quad y'=\frac{-y(y+1)}{x}}, \quad
+$y=\dfrac{2}{x-2};     \quad y'=\dfrac{-y(y+1)}{x}, \quad
 y(1)=-2$
 \end{alist}
 
@@ -960,20 +968,20 @@ the initial value problem.
 
 \begin{alist}
 \item %(a)
-$y=x^2(1+\ln x);     \quad y''=\dst\frac{3xy'-4y}{x^2}, \quad
+$y=x^2(1+\ln x);     \quad y''=\dfrac{3xy'-4y}{x^2}, \quad
 y(e)=2e^2, \quad y'(e)=5e$
 
 \item %(b)
-$y=\dst\frac{x^2}{3}+x-1;     \quad y''=\dst\frac{x^2-xy'+y+1}{x^2}, \quad y(1)=\dst\frac{1}{3}, \quad y'(1)=\dst\frac{5}{3}$
+$y=\dfrac{x^2}{3}+x-1;     \quad y''=\dfrac{x^2-xy'+y+1}{x^2}, \quad y(1)=\dfrac{1}{3}, \quad y'(1)=\dfrac{5}{3}$
 
 \item %(c)
 $y=(1+x^2)^{-1/2};     \quad
-y''=\dst\frac{(x^2-1)y-x(x^2+1)y'}{(x^2+1)^2}, \quad y(0)=1,$
+y''=\dfrac{(x^2-1)y-x(x^2+1)y'}{(x^2+1)^2}, \quad y(0)=1,$
 
 $y'(0)=0$
 
 \item %(d)
-$y=\dst\frac{x^2}{1-x};    \quad y''=\dst\frac{2(x+y)(xy'-y)}{x^3},
+$y=\dfrac{x^2}{1-x};    \quad y''=\dfrac{2(x+y)(xy'-y)}{x^3},
 \quad y(1/2)=1/2, \quad y'(1/2)=3$
 \end{alist}
 
@@ -997,13 +1005,11 @@ Let $a$ be a nonzero real number.
 \item % (a)
 Verify that if $c$ is an arbitrary constant then
 \[
-y=(x-c)^a
-\eqno{\rm (A)}
+y=(x-c)^a\tag{A}
 \]
 is a solution of
 \[
-y'=ay^{(a-1)/a}
-\eqno{\rm (B)}
+y'=ay^{(a-1)/a}\tag{B}
 \]
 on $(c,\infty)$.
 \item % (b)
@@ -1014,9 +1020,10 @@ Suppose $a<0$ or $a>1$. Can you think of a solution of
 \item\label{exer:1.2.9}Verify that
 \[
 y=
-\left\{ \begin{array}{cl}
-e^x-1,& x \ge 0, \\[6pt]
-1-e^{-x},& x < 0, \end{array}\right.
+\begin{cases}
+e^x-1,& x \ge 0, \\
+1-e^{-x},& x < 0,
+\end{cases}
 \]
 is a solution of
 \[
@@ -1029,13 +1036,11 @@ at $x=0$.}
 \item %(a)
 Verify that if $c$ is any real number then
 \[
-y=c^2+cx+2c+1
-\eqno{\rm (A)}
+y=c^2+cx+2c+1\tag{A}
 \]
 satisfies
 \[
- y'=\frac{-(x+2)+\sqrt{x^2+4x+4y}}{2}
-\eqno{\rm (B)}
+ y'=\frac{-(x+2)+\sqrt{x^2+4x+4y}}{2}\tag{B}
 \]
 on some open interval. Identify the open interval.
 
@@ -1051,7 +1056,7 @@ by selecting a value of $c$ in (A).)
 
 \end{exerciselist}
 
-\section{Direction Fields for First Order Equations}
+\section{Direction Fields for First Order Equations}\label{sec:dir_fields}
 
 It's impossible to find explicit formulas for solutions of some
 differential equations. Even if there are such  formulas, they may be
@@ -1098,18 +1103,18 @@ R:\{a\le x\le b, c\le y\le d\}.
 \]
 Let
 \[
-a= x_0< x_1< \cdots< x_m=b
+a= x_0< x_1< \dots< x_m=b
 \]
 be  equally spaced points in $[a,b]$ and
 \[
-c=y_0<y_1<\cdots<y_n=d
+c=y_0<y_1<\dots<y_n=d
 \]
 be  equally spaced points in $[c,d]$.
  We say that the points
 \[
  (x_i,y_j),\quad 0\le i\le m,\quad 0\le j\le n,
 \]
-form a \emph{\color{blue}rectangular grid} (Figure~\ref{figure:1.3.1}). Through each
+form a \emph{\color{blue}rectangular grid} (\zcref{figure:1.3.1}). Through each
 point in the grid we draw a short line segment with slope
 $f(x_i,y_j)$. The result is an approximation to a direction field  for
 \eqref{eq:1.3.1} in $R$. If the grid points are sufficiently numerous and
@@ -1117,9 +1122,10 @@ close together, we can draw approximate integral curves of \eqref{eq:1.3.1}
 by drawing curves through points in the grid tangent to the line
 segments associated with the points in the grid.
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[width = 0.7\textwidth]{fig010301}
+  \includegraphics[alt={A rectangle in the plane where a<x<b and c<y<d.},
+  width = 0.7\textwidth]{fig010301}
 \color{blue}
   \caption{\quad  A rectangular grid}
   \label{figure:1.3.1}
@@ -1149,26 +1155,28 @@ which are all of the form \eqref{eq:1.3.1} with $f$
  continuous for all $(x,y)$.
 
 \noindent
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}%
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010302}
+\includegraphics[alt={A rectangular field of arrows going generally left to right for -4<x,y<4. The arrows generally go up and right for -4<x<-2 and 2<x<4, and down and right for -2<x<2. Several curves follow the traces of the arrows.},
+ width=\linewidth,height=2.44in,keepaspectratio]{fig010302}
 \captionof{figure}{A direction field and integral curves for
 $y =\dst{\frac{x^{2}-y^{2}}{1+x^{2}+y^{2}}}$}
 \label{figure:1.3.2}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}%
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010303}
+\includegraphics[alt={A rectangular field of arrows for -2<x,y<2.  The arrows generally go down and right for -2<x<-0.5 and abs(y)>1, and up and right otherwise. Several curves follow the traces of the arrows.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig010303}
 \captionof{figure}{A direction field and integral curves for $y'=1+xy^2$}
 \label{figure:1.3.3}
 \tagstructend
 \end{minipage}
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={A rectangular field of arrows for -1<x,y<1, flowing from left to right.  Several curves follow the traces of the arrows, and appear to bunch toward y=0.4 as x increases.},
   width=5.67in,height=3.66in,keepaspectratio]{fig010304}
 \color{blue}
   \caption{A direction and integral curves for
@@ -1201,7 +1209,7 @@ numerically solving pairs of equations of the form
 where $x$ and $y$ are regarded as functions of a parameter $t$.
 If $x=x(t)$ and $y=y(t)$  satisfy these equations, then
 \[
-y'=\frac{dy}{dx}=\frac{dy}{dt}\left/\frac{dx}{dt}\right.=\frac{A(x,y)}{B(x,y)},
+y'=\frac{dy}{dx}=\frac{dy}{dt}\Big/\frac{dx}{dt}=\frac{A(x,y)}{B(x,y)},
 \]
 so $y=y(x)$ satisfies \eqref{eq:1.3.4}.
 
@@ -1225,17 +1233,17 @@ reformulate the equation $y'=f(x,y)$ as
 which is of the form \eqref{eq:1.3.5} with $A(x,y)=f(x,y)$ and
 $B(x,y)=1$.
 
-Figure~\ref{figure:1.3.5} shows a direction field and some integral curves
+\zcref[S]{figure:1.3.5} shows a direction field and some integral curves
 for \eqref{eq:1.3.2}. As we saw in
-Example~\ref{example:1.2.1} and will verify
+\zcref{example:1.2.1} and will verify
 again in Section~2.2, the integral curves of \eqref{eq:1.3.2}
 are circles centered at the origin.
 
 
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={A field of arrows circling counterclockwise around the origin.  Several circles centered at the origin follow the arrows.},
   width=5.67in,height=3.66in,keepaspectratio]{fig010305}
 \color{blue}
 \caption{A direction field and integral curves for
@@ -1243,10 +1251,10 @@ $y'=-\dst\frac{x}{y}$}
   \label{figure:1.3.5}
 \end{figure}
 
-Figure~\ref{figure:1.3.6} shows a direction field and some integral curves
+\zcref[S]{figure:1.3.6} shows a direction field and some integral curves
 for \eqref{eq:1.3.3}. The integral curves near the top and bottom are
 solution curves. However, the integral curves near the middle are more
-complicated. For example, Figure~\ref{figure:1.3.7} shows the integral
+complicated. For example, \zcref{figure:1.3.7} shows the integral
 curve through the origin. The vertices of the dashed rectangle are on
 the circle $x^2+y^2=1$ ($a\approx.846$, $b\approx.533$), where all
 integral curves of \eqref{eq:1.3.3} have infinite slope. There are
@@ -1272,9 +1280,11 @@ you use the technology as a supplement to thought rather than a
 substitute for it.
 
 \noindent
+%\begin{figure}
 \begin{minipage}[t]{0.49\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010306}
+\includegraphics[alt={Arrows moving through the plain up and left, but circling clockwise around the origin.  Lines follow the arrows, creating a denser line that starts and ends along y=-x, but also circles clockwise around the origin.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig010306}
 \captionof{figure}{A direction field and integral curves for
 $y'=\dst\frac{x^2}{-x^2-y^2}$}
 \label{figure:1.3.6}
@@ -1283,149 +1293,84 @@ $y'=\dst\frac{x^2}{-x^2-y^2}$}
 \hfill
 \begin{minipage}[t]{0.49\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010307}
+\includegraphics[alt={A single curve from the previous figure, starting near (2,-2), crossing the y axis near y=-1.2, curving up to cross from left to right through the origin, and then finishing in a mirror image near (-2,2).  A dashed rectangle has corners (±a,±b), intersecting the curve at its vertical tangents.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig010307}
 \captionof{figure}{}
 \label{figure:1.3.7}
 \tagstructend
 \end{minipage}
+%\end{figure}
 
-\clearpage
+%\clearpage
 
 \exercises
-\noindent
-\emph{In Exercises~{\color{red}\rm\bf 1--11} a  direction
+
+\emph{In Exercises~{\color{red} 1--11} a  direction
 field is drawn for the given equation. Sketch some integral curves.}
 
+\begin{exerciselist}
 
+\item $y'=\dst{\frac{x}{y}}$:\\
+  \includegraphics[alt={A field for -1<x,y<1.  Along y=x, arrows point away from the origin.  Along y=-x, arrows point toward the origin.},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010301}\bigskip
 
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010301}
-  \caption*{{\color{red}\bf 1}\; A direction field for
-$y'=\dst{\frac{x}{y}}$}
-\end{figure}
+\item $y'=\dfrac{2xy^2}{1+x^2}$:\\
+  \includegraphics[alt={A field for 0<x<4 and -2<y<2 with arrows pointing to the right.  The arrows furthest from y=0 are steepest.},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010302}\bigskip
 
+\item  $y'=x^2(1+y^2)$:\\
+  \includegraphics[alt={A field for 0<x<2 and -1<y<1 with arrows pointing up and right.  The arrows being mostly horizontal for x near 0, and end mostly vertical for x near 2.},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010303}\bigskip
 
+\item $y'=\dfrac{1}{1+x^2+y^2}$:\\
+\begin{tikzpicture}[alt={A field for -1.5<x<1.5 and -1<y<1 with arrows pointing right and up.  Arrows near the origin are steepest.}]
+\begin{axis}[width=5.4in, height=3.6in,
+axis y line=left,axis x line=bottom,
+%axis lines=middle,
+hide obscured x ticks=false,
+tick label style={font=\footnotesize},
+ymin=-1,ymax=1,xmin=-1.5,xmax=1.5,
+domain=-1.5:1.5,
+view={0}{90},
+name=myplot] %
+\addplot3[quiver={u=.5,v=.5/(1+(x)*(x)+(y)*(y)),scale arrows=0.1},draw=blue,samples=40,->]{x};
+\end{axis}
+\node [right] at (myplot.south east) {\scriptsize $x$};
+\node [above] at (myplot.north west) {\scriptsize $y$};
+\end{tikzpicture}\bigskip
 
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010302}
-  \caption*{{\color{red}\bf 2}\; A direction field for
- $\dst{y'=\dst\frac{2xy^2}{1+x^2}}$\quad}
-\end{figure}
+\item $y'=-(2xy^2+y^3)$:\\
+  \includegraphics[alt={A field for 0<x<3 and -1<y<1 with arrows pointing right and mostly downward.  The field is horizontal along y=0 and steepest downward for large x when abs(y) is big.  The arrows point upward near (0,-1).},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010305}
 
+\item $y'=(x^2+y^2)^{1/2}$:\\
+  \includegraphics[alt={A field for -1<x,y<1 with arrows pointing up and right.  The arrows are horizontal near the origin.},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010306}
 
+\item $y'=\sin xy$:\\
+  \includegraphics[alt={A field for 0<x<7 and -π<y<π with arrows pointing to the right. Near the coordinate axes the arrows are horizontal.  Away from the axes, the arrows are less organized.},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010307}
 
+\item $y'=e^{xy}$:\\
+  \includegraphics[alt={A field for 0<x,y<1 with arrows pointing to the right and up.  The arrows are slightly steeper near (1,1).},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010308}
 
+\item $y'=(x-y^2)(x^2-y)$:\\
+  \includegraphics[alt={A field for 0<x<2 and -1<y<1.  Near the origin, the arrows point to the right.  Near x=2 the arrows are nearly vertically upward.  Near (0,±1) the arrows point slightly downward and to the right.},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010309}
 
+\item $y'=x^3y^2+xy^3$:\\
+  \includegraphics[alt={A field for 1<x<3 and -1<y<1.  Along y=0 and near (1,-1), the arrows point to the right.  Elsewhere, the arrows point up and to the right, getting steepest near x=3.},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010310}
 
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010303}
-  \caption*{{\color{red}\bf 3}\; A direction field for
- $y'=x^2(1+y^2)$}
-\end{figure}
+\item $y'=\sin(x-2y)$:\\
+  \includegraphics[alt={A field for 0<x,y<4 with arrows pointing to the right.  Regions along the lines y=c+x/2 have arrows that point in the same direction.},
+  width=5.4in,height=3.66in,keepaspectratio]{exer010311}
 
-
-
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010304}
-  \caption*{{\color{red}\bf 4}\; A direction field for
-$y'=\dst\frac{1}{1+x^2+y^2}$}
-\end{figure}
-
-
-
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010305}
-  \caption*{{\color{red}\bf 5}\; A direction field for
-$y'=-(2xy^2+y^3)$}
-\end{figure}
-
-
-
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010306}
-  \caption*{{\color{red}\bf 6}\; A direction field for
-$y'=(x^2+y^2)^{1/2}$}
-\end{figure}
-
-
-
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010307}
-  \caption*{{\color{red}\bf 7}\; A direction field for
-$y'=\sin xy$}
-\end{figure}
-
-
-
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010308}
-  \caption*{{\color{red}\bf 8}\; A direction field for
- $y'=e^{xy}$}
-\end{figure}
-
-
-
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010309}
-  \caption*{{\color{red}\bf 9}\; A direction field for
-$y'=(x-y^2)(x^2-y)$}
-\end{figure}
-
-
-
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010310}
-  \caption*{{\color{red}\bf 10}\; A direction field for
-$y'=x^3y^2+xy^3$}
-\end{figure}
-
-
-
-\begin{figure}[H]
-  \color{blue}
-  \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{exer010311}
-  \caption*{{\color{red}\bf 11}\; A direction field for
-$y'=\sin(x-2y)$}
-\end{figure}
-
-\emph{In Exercises~\ref{exer:1.3.12}-\ref{exer:1.3.22} construct a
+\exercisetext{In Exercises~\ref{exer:1.3.12}--\ref{exer:1.3.22} construct a
 direction
 field and plot some integral curves in the indicated rectangular region.}
 
-
-\begin{exerciselist}[resume]
 %\setcounter{exercise}{11}
 \item\label{exer:1.3.12}\CGex
 $y'=y(y-1);    \quad  \{-1\le x\le 2,\ -2\le y\le2\}$
@@ -1465,20 +1410,17 @@ $y'=-\dst\frac{x^2+y^2}{1-x^2-y^2};    \quad  \{-2\le x\le2,\ -2\le y\le 2\}$
 By suitably renaming the constants and  dependent variables
 in the equations
 \[
-T' = -k(T-T_m)
-\eqno{\rm(A)}
+T' = -k(T-T_m)\tag{A}
 \]
 and
 \[
-G'=-\lambda G+r
-\eqno{\rm(B)}
+G'=-\lambda G+r\tag{B}
 \]
 discussed in Section~1.2 in connection with Newton's
 law of cooling and absorption of glucose in the body, we can
 write both as
 \[
-y'=- ay+b,
-\eqno{\rm(C)}
+y'=- ay+b,\tag{C}
 \]
 where $a$ is a positive constant and $b$ is an arbitrary
 constant. Thus, (A) is of the form (C) with $y=T$, $a=k$, and
@@ -1504,20 +1446,17 @@ this property precisely in terms of $a$ and $b$.
 By suitably renaming the constants and  dependent variables
 in the equations
 \[
-P'=aP(1-\alpha P)
-\eqno{\rm(A)}
+P'=aP(1-\alpha P)\tag{A}
 \]
 and
 \[
-I'=rI(S-I)
-\eqno{\rm(B)}
+I'=rI(S-I)\tag{B}
 \]
 discussed in Section~1.1 in connection with Verhulst's
 population
 model and the spread of an epidemic, we can write both in the form
 \[
-y'=ay-by^2,
-\eqno{\rm(C)}
+y'=ay-by^2,\tag{C}
 \]
 where $a$ and $b$ are positive constants. Thus, (A) is of the form (C)
 with $y=P$, $a=a$, and $b=a\alpha$, and (B) is of the form (C) with
