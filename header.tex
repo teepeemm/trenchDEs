@@ -27,6 +27,16 @@ filecolor = blue,
 \zcRefTypeSetup{chapter}{cap}
 \zcRefTypeSetup{section}{cap}
 \zcRefTypeSetup{table}{cap}
+\zcRefTypeSetup{figure}{cap}
+\zcRefTypeSetup{example}{cap}
+\ExplSyntaxOn
+% TODO
+\keys_define:nn { zref-clever/reference }
+  {
+    CAP .bool_set:N = \l_tmpa_bool,
+    CAP .default:n = false
+  }
+\ExplSyntaxOff
 
 %\colorlet{blue}{DarkBlue}
 \colorlet{red}{DarkRed}
