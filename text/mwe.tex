@@ -1,38 +1,49 @@
 % !TEX TS-program = LuaLaTeX-dev
+% Source - https://tex.stackexchange.com/q/762941
+% Posted by developedrough, modified by community. See post 'Timeline' for change history
+% Retrieved 2026-05-20, License - CC BY-SA 4.0
+
 \DocumentMetadata{
+  lang        = en-US,
+  pdfstandard = ua-2,
+  pdfstandard = a-4f,
   tagging=on,
-  lang=en-US,
-  pdfstandard=UA-2,
-  tagging-setup={
-    math/alt/use,
-    math/setup=mathml-SE
-  }
+  tagging-setup={math/setup=mathml-SE} 
 }
 \documentclass{article}
-\includeonly{}
-\usepackage{../wtrench}
-\input{../header}
+\usepackage[margin=.5in]{geometry}
+\usepackage{fontspec}       
+\usepackage{unicode-math}  
+\usepackage{graphicx}       
+\usepackage{booktabs}       
+\usepackage{xcolor}         
+\usepackage[normalem]{ulem} 
+\usepackage{parskip}
+\usepackage{adjustbox}
+
+\usepackage{url,hyperref}
+\urlstyle{same}
+
+\title{Minimum Example}
+\author{Smart Author}
+\date{\today}
+%\setmainfont{Noto Sans}
+%\setmathfont{Noto Sans Math}
 \begin{document}
-
-\section{Section}
-\exercises
-Text
-
-%\begin{exerciselist}
-%\item exercise
-%\end{exerciselist}
-
-{\itshape If $a$, $b$, $c$, and $\alpha$ are constants, then
-\[
-a(e^{\alpha x})''+b(e^{\alpha x})'+ce^{\alpha x}=(a\alpha^2+b\alpha+c)e^{\alpha
-x}.
-\]
-Use this in Exercises~16--21 to find a
-particular solution. Then find the general solution
-and, where indicated, solve the initial value problem
-and graph the solution.}
-
-%\begin{exerciselist}[resume]
-%\item exercise
-%\end{exerciselist}
+\section{A silly document}
+\begin{table}
+\hfill
+\begin{tabular}{c|p{2in}}
+Rank & Item \\
+\hline
+%1 & Item 1\\
+%2 & Item 2\\
+%3 & Item 3\\
+%4 & Item 4\\
+%5 & Item 5\\
+6 & Item 6
+\end{tabular}
+\hfill\null
+\caption{The author's item preference list}
+\end{table}
 \end{document}
