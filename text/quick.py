@@ -16,6 +16,10 @@ def replace_over(content: str) -> str:
                     r'\\frac{\1}{\2}', content, flags=re.VERBOSE)
   return content
 
+def use_eqref(content: str) -> str:
+  content = re.sub(r'\(\\(ref{eq:\d+\.\d+\.\d+})\)', r'\\eq\1', content)
+  return content
+
 def trim_trailing_space(content: str) -> str:
   content = re.sub(r'(?<=\\item\\label{exer:)(\d+.\d+.\d+})\s*$', r'\1%', content)
   content = re.sub(r'(?<=\\item\\label{exer:)(\d+.\d+.\d+})\s+(?=\S)', r'\1', content)
@@ -25,6 +29,6 @@ for texfile in glob('*.tex'):
   with open(texfile) as tex:
     mathopen = False
     content = tex.read()
-  content = trim_trailing_space(content)
+  content = use_eqref(content)
   with open(texfile,'w') as tex:
     tex.write(content)
