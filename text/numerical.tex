@@ -3,8 +3,7 @@
 
 \chapter{Numerical Methods}\label{ch:numerical}
 
-\noindent
-In this chapter we study numerical methods for solving a first order
+\textsc{In this chapter} we study numerical methods for solving a first order
 differential equation
 \[
 y'=f(x,y).
@@ -12,20 +11,19 @@ y'=f(x,y).
 
 
 \medskip\noindent
-SECTION~3.1 deals with
+\zcref[S,CAP,font=\scshape]{sec:euler_method} deals with
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Euler.html}
-{\color{blue}\itshape Euler's
-  method}, which is
+{\color{blue}\itshape Euler's method}, which is
 really too crude to be of much use in practical applications. However,
 its simplicity allows for an introduction to the ideas required to
 understand the better methods discussed in the other two sections.
 
 \medskip\noindent
-SECTION~3.2 discusses improvements on Euler's method.
+\zcref[S,CAP,font=\scshape]{sec:improved_euler} discusses improvements on Euler's method.
 
 
 \medskip\noindent
-SECTION~3.3 deals with the
+\zcref[S,CAP,font=\scshape]{sec:runge_kutta} deals with the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Runge.html}
 {\color{blue}\itshape Runge}-\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Kutta.html}
 {\color{blue}\itshape Kutta}
@@ -35,7 +33,7 @@ for numerical solution of differential equations.
 
 \newpage
 
-\section{Euler's Method}
+\section{Euler's Method}\label{sec:euler_method}
 
 If an initial value problem
 \begin{equation} \label{eq:3.1.1}
@@ -84,14 +82,12 @@ Errors due to the computer's inability to do exact arithmetic are
 called \emph{\color{blue}roundoff errors}.
 \end{itemize}
 
-
 Since a careful analysis of roundoff error is beyond the scope of this
 book, we'll consider only truncation errors.
 
+
 \boxit{Euler's Method}
 
-
-\noindent
 The simplest numerical method for solving \eqref{eq:3.1.1} is
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Euler.html}
 {\color{blue}\it
@@ -143,7 +139,7 @@ y_{i+1}=y_i+hf(x_i,y_i),\quad 0\le i\le n-1.
 The next example illustrates the computational procedure
 indicated in Euler's method.
 
-\begin{example}\label{example:3.1.1} \rm
+\begin{example}\label{example:3.1.1}
 Use Euler's method with $h=0.1$ to find approximate values for the
 solution of the initial value problem
 \begin{equation}\label{eq:3.1.5}
@@ -159,19 +155,19 @@ y'=-2y+x^3e^{-2x},\quad y(0)=1,
 \]
 which is of the form \eqref{eq:3.1.1}, with
 \[
-f(x,y)=-2y+x^3e^{-2x},\ x_0=0,\mbox{\ and}\ y_0=1.
+f(x,y)=-2y+x^3e^{-2x},\ x_0=0,\text{ and }y_0=1.
 \]
 Euler's method yields
-\begin{eqnarray*}
-y_1 & = & y_0+hf(x_0,y_0)\\
- & = & 1+(.1)f(0,1)=1+(.1)(-2)=.8,\\[4\jot]
-y_2 & = & y_1+hf(x_1,y_1)\\
- & = & .8+(.1)f(.1,.8)=.8+(.1)\left(-2(.8)+(.1)^3e^{-.2}\right)=
-.640081873,\\[4\jot]
-y_3 & = & y_2+hf(x_2,y_2)\\
- & = & .640081873+(.1)\left(-2(.640081873)+(.2)^3e^{-.4}\right)=
+\begin{align*}
+y_1 & = y_0+hf(x_0,y_0)\\
+ & = 1+(.1)f(0,1)=1+(.1)(-2)=.8,\\
+y_2 & = y_1+hf(x_1,y_1)\\
+ & = .8+(.1)f(.1,.8)=.8+(.1)\left(-2(.8)+(.1)^3e^{-.2}\right)=
+.640081873,\\
+y_3 & = y_2+hf(x_2,y_2)\\
+ & = .640081873+(.1)\left(-2(.640081873)+(.2)^3e^{-.4}\right)=
 .512601754.\bbox
-\end{eqnarray*}
+\end{align*}
 
 We've written the details of these computations to ensure that you
 understand the procedure. However,  in the rest of the examples as
@@ -184,7 +180,7 @@ to carry out the necessary computations.
 \boxit{Examples Illustrating The Error in Euler's Method}
 
 
-\begin{example}\label{example:3.1.2} \rm
+\begin{example}\label{example:3.1.2}
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of the initial value problem
 \[
@@ -200,7 +196,7 @@ which can be obtained by the method of Section~2.1. (Verify.)
 \end{example}
 
 
-\solution Table~\ref{table:3.1.1} shows the values of the exact solution
+\solution \zcref{table:3.1.1} shows the values of the exact solution
 \eqref{eq:3.1.6} at the specified points, and the approximate values of
 the solution at these points obtained by Euler's method with step
 sizes $h=0.1$, $h=0.05$, and $h=0.025$. In examining this table, keep
@@ -253,22 +249,22 @@ in the row corresponding to $h=0.025$ are actually the results of
 \]
 \end{table}
 
-You can see from Table~\ref{table:3.1.1} that decreasing the step size
+You can see from \zcref{table:3.1.1} that decreasing the step size
 improves the accuracy of Euler's method. For example,
 \[
 y_{\text{\tiny exact}}(1)-y_{\text{\tiny approx}}(1)\approx
 \begin{cases}
-.0293\text{ with }h=0.1,\\
-.0144\text{ with }h=0.05,\\
-.0071\text{ with }h=0.025.
+.0293&\text{ with }h=0.1,\\
+.0144&\text{ with }h=0.05,\\
+.0071&\text{ with }h=0.025.
 \end{cases}
 \]
 Based on this scanty evidence, you might guess that the error in
 approximating the exact solution at a \emph{\color{blue}fixed value of} $x$ by
 Euler's method is roughly halved when the step size is halved. You can
 find more evidence to support this conjecture by examining
-Table~\ref{table:3.1.2}, which lists the approximate values of
-$y_{\mbox{\tiny exact}}-y_{\mbox{\tiny approx}}$ at
+\zcref{table:3.1.2}, which lists the approximate values of
+$y_{\text{exact}}-y_{\text{approx}}$ at
 $x=0.1$, $0.2$, \dots, $1.0$.
 
 \begin{table}
@@ -307,8 +303,8 @@ y(0)=1$, obtained by Euler's method.}
 \]
 \end{table}
 
-\begin{example}\label{example:3.1.3} \rm
-Tables~\ref{table:3.1.3} and \ref{table:3.1.4} show analogous results
+\begin{example}\label{example:3.1.3}
+\zcref[S]{table:3.1.3,table:3.1.4} show analogous results
 for the nonlinear initial value problem
 \begin{equation} \label{eq:3.1.7}
 y'=-2y^2+xy+x^2,\ y(0)=1,
@@ -419,10 +415,8 @@ h&\multicolumn{10}{c}{x}\\\cmidrule(l){2-11}
 
 \boxit{Truncation Error in Euler's Method}
 
-
-\noindent
 Consistent with the results indicated in
-Tables~\ref{table:3.1.1}--\ref{table:3.1.4}, we'll now show that under
+\zcref[range]{table:3.1.1,table:3.1.4}, we'll now show that under
 reasonable assumptions on $f$ there's a constant $K$ such that
 the error in approximating the solution of the initial value problem
 \[
@@ -520,7 +514,7 @@ approximate the solution at a given point. To analyze the overall
 effect of truncation error in Euler's method, it's useful to  derive
 an equation relating the errors
 \[
-e_{i+1}=y(x_{i+1})-y_{i+1}\mbox{\quad and \quad} e_i=y(x_i)-y_i.
+e_{i+1}=y(x_{i+1})-y_{i+1}\quad\text{and}\quad e_i=y(x_i)-y_i.
 \]
 To this end, recall that
 \begin{equation} \label{eq:3.1.11}
@@ -579,7 +573,7 @@ Since Taylor's theorem implies that
 \]
 (verify),
 \[
-(1+Rh)^n<e^{nRh}=e^{R(b-x_0)}\quad (\mbox{since }nh=b-x_0).
+(1+Rh)^n<e^{nRh}=e^{R(b-x_0)}\quad (\text{since }nh=b-x_0).
 \]
 This and \eqref{eq:3.1.17} imply that
 \begin{equation} \label{eq:3.1.18}
@@ -596,8 +590,6 @@ error of Euler's method is of order} $h$, which we write as $O(h)$.
 
 \boxit{Semilinear Equations and Variation of Parameters}
 
-
-\noindent
 An equation that can be written in the form
 \begin{equation} \label{eq:3.1.19}
 y'+p(x)y=h(x,y)
@@ -638,8 +630,8 @@ We'll call this procedure the
 The next two examples show that the Euler and Euler semilinear
 methods may yield drastically different results.
 
-\begin{example}\label{example:3.1.4} \rm
-In Example~\ref{example:2.1.7} we had to leave the solution of the initial
+\begin{example}\label{example:3.1.4}
+In \zcref{example:2.1.7} we had to leave the solution of the initial
 value
 problem
 \begin{equation} \label{eq:3.1.22}
@@ -655,17 +647,17 @@ Use step sizes $h=0.2$, $h=0.1$, and $h=0.05$ to find approximate
 values
 of the solution of \eqref{eq:3.1.22} at $x=0$, $0.2$, $0.4$, $0.6$,
 \dots, $2.0$ by
-{\bf (a)} Euler's method;   {\bf (b)} the Euler semilinear method.
+(a) Euler's method; (b) the Euler semilinear method.
 \end{example}
 
-
-\solutionpart{a}
+\begin{alistSolution}
+\item
 Rewriting \eqref{eq:3.1.22} as
 \begin{equation} \label{eq:3.1.24}
 y'=1+2xy,\quad y(0)=3
 \end{equation}
 and applying Euler's method with $f(x,y)=1+2xy$ yields the results
-shown in Table~\ref{table:3.1.5}. Because of the large differences
+shown in \zcref{table:3.1.5}. Because of the large differences
 between the estimates obtained for the three values of $h$, it
 would be clear that these results are useless even if the ``exact''
 values were not included in the table.
@@ -713,11 +705,10 @@ h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
 \]
 \end{table}
 
-
 It's easy to see why Euler's method yields such poor results.
 Recall that the constant $M$ in
-\eqref{eq:3.1.10} -- which plays an important role in determining the
-local truncation error in Euler's method -- must be an upper bound for
+\eqref{eq:3.1.10} --- which plays an important role in determining the
+local truncation error in Euler's method --- must be an upper bound for
 the values of the second derivative $y''$ of the solution of the
 initial
 value problem \eqref{eq:3.1.22} on $(0,2)$. The problem is that $y''$
@@ -733,15 +724,15 @@ y''(x)>6(1+2x^2)e^{x^2}+2x,\quad x>0.
 \]
 For example, letting $x=2$ shows that $y''(2)>2952$.
 
-\solutionpart{b}
+\item
 Since $y_1=e^{x^2}$ is a solution of the complementary equation
 $y'-2xy=0$, we can  apply the Euler semilinear method to
 \eqref{eq:3.1.22}, with
 \[
-y=ue^{x^2}\mbox{\quad and \quad}
+y=ue^{x^2}\quad\text{and}\quad
 u'=e^{-x^2},\quad u(0)=3.
 \]
-The results listed in Table~\ref{table:3.1.6} are clearly better than
+The results listed in \zcref{table:3.1.6} are clearly better than
 those obtained by Euler's method.
 
 \begin{table}
@@ -786,6 +777,7 @@ h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
 \end{array}
 \]
 \end{table}
+\end{alistSolution}
 
 
 We can't give a general procedure for determining in advance
@@ -799,24 +791,24 @@ is large on $[x_0,b]$.
  In many cases the results obtained by the two methods don't
  differ appreciably. However, we propose the an intuitive
 way to decide which is the better method: Try both methods with
-multiple step sizes, as we did in Example~\ref{example:3.1.4},
+multiple step sizes, as we did in \zcref{example:3.1.4},
  and accept the results obtained by the method for
 which the approximations change less as the step size decreases.
 
-\begin{example}\label{example:3.1.5} \rm
+\begin{example}\label{example:3.1.5}
 Applying Euler's method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to the initial value problem
 \begin{equation}\label{eq:3.1.25}
 y'-2y=\frac{x}{1+y^2},\quad y(1)=7
 \end{equation}
 on $[1,2]$ yields the results in
-Table~\ref{table:3.1.7}. Applying the Euler semilinear method
+\zcref{table:3.1.7}. Applying the Euler semilinear method
 with
 \[
-y=ue^{2x}\mbox{\quad and \quad}u'=\frac{xe^{-2x}}{1+u^2e^{4x}},\quad
+y=ue^{2x}\quad\text{and}\quad u'=\frac{xe^{-2x}}{1+u^2e^{4x}},\quad
 u(1)=7e^{-2}
 \]
- yields the results in Table~\ref{table:3.1.8}.
+ yields the results in \zcref{table:3.1.8}.
 Since the latter are clearly less dependent on step size
 than the former, we conclude that the Euler semilinear method
 is better than Euler's method for \eqref{eq:3.1.25}. This conclusion
@@ -908,22 +900,22 @@ h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
 \]
 \end{table}
 
-\begin{example}{\color{blue}}\label{example:3.1.6} \rm
+\begin{example}\label{example:3.1.6}
 Applying Euler's method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to  the initial value problem
 \begin{equation}\label{eq:3.1.26}
 y'+3x^2y=1+y^2,\quad y(2)=2
 \end{equation}
 on  $[2,3]$ yields the results in
-Table~\ref{table:3.1.9}. Applying the Euler semilinear method with
+\zcref{table:3.1.9}. Applying the Euler semilinear method with
 \[
-y=ue^{-x^3}\mbox{\quad and \quad}u'=e^{x^3}(1+u^2e^{-2x^3}),\quad
+y=ue^{-x^3}\quad\text{and}\quad u'=e^{x^3}(1+u^2e^{-2x^3}),\quad
 u(2)=2e^8
 \]
-yields the results in Table~\ref{table:3.1.10}. Noting the close
-agreement among the  three rowss of Table~\ref{table:3.1.9} (at
+yields the results in \zcref{table:3.1.10}. Noting the close
+agreement among the  three rowss of \zcref{table:3.1.9} (at
 least for larger values of $x$) and the lack of any such agreement
-among the rowss of Table~\ref{table:3.1.10}, we conclude that
+among the rows of \zcref{table:3.1.10}, we conclude that
 Euler's method is better than the Euler semilinear method for
 \eqref{eq:3.1.26}. Comparing the results with the exact values
 supports this conclusion.
@@ -1046,7 +1038,7 @@ the case may be.
  You may want to save the results of these
 exercises, since we'll revisit in the next two
 sections.
-In Exercises~\ref{exer:3.1.1}--\ref{exer:3.1.5} use Euler's method to find
+In \zcref[range]{exer:3.1.1,exer:3.1.5} use Euler's method to find
 approximate values of the solution of the given initial value problem
 at the points $x_i=x_0+ih$, where $x_0$ is the point wher the
 initial condition is imposed and $i=1$, $2$, $3$. The purpose of these
@@ -1070,7 +1062,7 @@ at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with
 the values of the exact solution $y=e^{4x}+e^{-3x}$, which can be
 obtained by the method of Section~2.1. Present your results
-in a table like Table~\ref{table:3.1.1}.
+in a table like \zcref{table:3.1.1}.
 
 
 \item\label{exer:3.1.7}\Cex
@@ -1086,7 +1078,7 @@ with the values of the exact solution
 y=\frac{1}{3x^2}(9\ln x+x^3+2),
 \]
 which can be obtained by the method of Section~2.1. Present
-your results in a table like Table~\ref{table:3.1.1}.
+your results in a table like \zcref{table:3.1.1}.
 
 \item\label{exer:3.1.8}\Cex
 Use Euler's method with step sizes $h=0.05$, $h=0.025$, and $h=0.0125$ to
@@ -1100,19 +1092,18 @@ with the values of the exact solution
 \[
 y=\frac{x(1+x^2/3)}{1-x^2/3}
 \]
-obtained in Example~\ref{example:2.4.3}. Present your results in a table
-like Table~\ref{table:3.1.1}.
+obtained in \zcref{example:2.4.3}. Present your results in a table
+like \zcref{table:3.1.1}.
 
 
 \item\label{exer:3.1.9}\Cex
-In Example~\ref{example:2.2.3} it was shown that
+In \zcref{example:2.2.3} it was shown that
 \[
 y^5+y=x^2+x-4
 \]
 is an implicit solution of  the initial value problem
 \[
-y'=\frac{2x+1}{5y^4+1},\quad y(2)=1.
-\eqno{\rm(A)}
+y'=\frac{2x+1}{5y^4+1},\quad y(2)=1.\tag{A}
 \]
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of (A) at
@@ -1128,14 +1119,13 @@ for each value of $(x,y)$ appearing in the first table.
 
 
 \item\label{exer:3.1.10}\Cex
-You can see from Example~\ref{example:2.5.1} that
+You can see from \zcref{example:2.5.1} that
 \[
 x^4y^3+x^2y^5+2xy=4
 \]
 is an implicit solution of  the initial value problem
 \[
-y'=-\frac{4x^3y^3+2xy^5+2y}{3x^4y^2+5x^2y^4+2x},\quad y(1)=1.
-\eqno{\rm(A)}
+y'=-\frac{4x^3y^3+2xy^5+2y}{3x^4y^2+5x^2y^4+2x},\quad y(1)=1.\tag{A}
 \]
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of (A) at
@@ -1152,8 +1142,8 @@ for each value of $(x,y)$ appearing in the first table.
 Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of the initial value problem
 \[
-(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1; \mbox{\;
-(Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.13})}
+(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1;
+\text{ (Exercise~2.2.\ref{exer:2.2.13})}
 \]
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$.
 
@@ -1163,7 +1153,7 @@ Use Euler's method with step sizes $h=0.1$, $h=0.05$, and $h=0.025$ to
 find approximate values of the solution of the initial value problem
 \[
 y'+\frac{(y+1)(y-1)(y-2)}{x+1}=0, \quad y(1)=0
-\mbox{\; (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.14})}
+\\text{ (Exercise~2.2.\ref{exer:2.2.14})}
 \]
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$.
 
@@ -1183,7 +1173,7 @@ special about the results? Explain.
 
 \exercisetext{
 The linear initial value problems in
-Exercises~\ref{exer:3.1.14}--\ref{exer:3.1.19} can't be solved exactly in
+\zcref[range]{exer:3.1.14,exer:3.1.19} can't be solved exactly in
 terms of known elementary functions. In each exercise, use
 Euler's method and the Euler semilinear methods
 with the indicated step sizes to find approximate values of the
@@ -1198,37 +1188,37 @@ $h=0.1,0.05,0.025$ on $[2,3]$
 
 \item\label{exer:3.1.15}\Cex
 $y'+2xy=x^2,\quad y(0)=3$\;
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38});  \;
+({Exercise~2.1.\ref{exer:2.1.38}});  \;
 $h=0.2,0.1,0.05$ on $[0,2]$
 
 
 \item\label{exer:3.1.16}\Cex
 $\dst{y'+\frac{1}{x}y=\frac{\sin x}{x^2},\quad y(1)=2}$;\;
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.39});  \;
+({Exercise~2.1.\ref{exer:2.1.39}});  \;
 $h=0.2,0.1,0.05$ on $[1,3]$
 
 
 \item\label{exer:3.1.17}\Cex
 $\dst{y'+y=\frac{e^{-x}\tan x}{x},\quad y(1)=0}$;\;
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40});  \;
+({Exercise~2.1.\ref{exer:2.1.40}});  \;
 $h=0.05,0.025,0.0125$ on $[1,1.5]$
 
 
 
 \item\label{exer:3.1.18}\Cex
 $\dst{y'+\frac{2x}{1+x^2}y=\frac{e^x}{(1+x^2)^2}, \quad y(0)=1}$;
-\; (Exercise~2.1.~\hspace*{-3pt}~\hspace*{-3pt}\ref{exer:2.1.41});  \;
+\; ({Exercise~2.1.\ref{exer:2.1.41}});  \;
 $h=0.2,0.1,0.05$ on $[0,2]$
 
 
 \item\label{exer:3.1.19}\Cex
 $xy'+(x+1)y=e^{x^2},\quad y(1)=2$;\;
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.42});  \;
+({Exercise~2.1.\ref{exer:2.1.42}});  \;
 $h=0.05,0.025,0.0125$ on $[1,1.5]$
 
 
 \exercisetext{
-In Exercises~\ref{exer:3.1.20}--\ref{exer:3.1.22},
+In \zcref[range]{exer:3.1.20,exer:3.1.22},
 use Euler's method and
 the Euler semilinear method
 with the indicated  step sizes to find approximate values
@@ -1252,8 +1242,7 @@ The fundamental theorem of  calculus says that if $f$
 is continuous on a closed interval $[a,b]$ then it has an
 antiderivative $F$ such that $F'(x)=f(x)$ on $[a,b]$  and
 \[
-\int_a^bf(x)\,dx=F(b)-F(a).
-\eqno{\rm(A)}
+\int_a^bf(x)\,dx=F(b)-F(a).\tag{A}
 \]
 This solves the problem of evaluating a definite integral if
 the integrand $f$ has an antiderivative that can be found and
@@ -1264,8 +1253,7 @@ approximate methods. There's a class of such methods called
 \emph{\color{blue}numerical quadrature}, where the approximation takes the
 form
 \[
-\int_a^bf(x)\,dx\approx \sum_{i=0}^n c_if(x_i),
-\eqno{\rm(B)}
+\int_a^bf(x)\,dx\approx \sum_{i=0}^n c_if(x_i),\tag{B}
 \]
 where $a=x_0<x_1<\cdots<x_n=b$ are suitably chosen points and
 $c_0$, $c_1$, \dots, $c_n$
@@ -1276,8 +1264,7 @@ formula}.
 Derive the quadrature formula
 \[
 \int_a^bf(x)\,dx\approx
-h\sum_{i=0}^{n-1}f(a+ih)\mbox{\quad(where $h=(b-a)/n)$}
-\eqno{\rm(C)}
+h\sum_{i=0}^{n-1}f(a+ih)\quad\text{(where $h=(b-a)/n$)}\tag{C}
 \]
 by applying Euler's method to the initial value problem
 \[
@@ -1302,11 +1289,8 @@ and explain what you find.
 \end{exerciselist}
 
 
-
-
-
-\setcounter{table}{0}
 \section{The Improved Euler Method and Related Methods}
+\label{sec:improved_euler}
 
  In Section~3.1 we saw that the global truncation error of
 Euler's method is $O(h)$, which would seem to imply that we can
@@ -1330,7 +1314,7 @@ methods better than Euler's.
 To clarify this point, suppose  we want to approximate the value of $e$
 by applying Euler's method to the initial value problem
 \[
-y'=y,\quad y(0)=1,\quad\mbox{(with solution $y=e^x$)}
+y'=y,\quad y(0)=1,\quad\text{(with solution $y=e^x$)}
 \]
 on $[0,1]$, with $h=1/12$, $1/24$, and $1/48$, respectively. Since
 each step in Euler's method requires one evaluation of $f$, the number
@@ -1392,13 +1376,11 @@ improved Euler method with 48 evaluations.
 
 \boxit{The Improved Euler Method}
 
-
-\noindent
 The
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Euler.html}
 {\color{blue}\itshape improved Euler method\/} for solving the initial value
-problem (\ref{eq:3.2.1}) is based on approximating the integral curve of
-(\ref{eq:3.2.1}) at $(x_i,y(x_i))$ by the line through $(x_i,y(x_i))$ with
+problem \eqref{eq:3.2.1} is based on approximating the integral curve of
+\eqref{eq:3.2.1} at $(x_i,y(x_i))$ by the line through $(x_i,y(x_i))$ with
 slope
 \[
 m_i=\frac{f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))}{2};
@@ -1409,13 +1391,13 @@ the approximating line is therefore
 \begin{equation} \label{eq:3.2.2}
 y=y(x_i)+\frac{f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))}{2}(x-x_i).
 \end{equation}
-Setting $x=x_{i+1}=x_i+h$ in (\ref{eq:3.2.2}) yields
+Setting $x=x_{i+1}=x_i+h$ in \eqref{eq:3.2.2} yields
 \begin{equation} \label{eq:3.2.3}
 y_{i+1}=y(x_i)+\frac{h}{2}\left(f(x_i,y(x_i))+f(x_{i+1},y(x_{i+1}))\right)
 \end{equation}
 as an approximation to $y(x_{i+1})$. As in our derivation of Euler's
 method, we replace $y(x_i)$ (unknown if $i>0$) by its
-approximate value $y_i$; then (\ref{eq:3.2.3}) becomes
+approximate value $y_i$; then \eqref{eq:3.2.3} becomes
 \[
 y_{i+1}=y_i+\frac{h}{2}\left(f(x_i,y_i)+f(x_{i+1},y(x_{i+1})\right).
 \]
@@ -1430,11 +1412,11 @@ y_{i+1}=y_i+\frac{h}{2}\left(f(x_i,y_i)+f(x_{i+1},y_i+hf(x_i,y_i))\right).
 \end{equation}
 The computation indicated here can be conveniently organized as
 follows: given $y_i$, compute
-\begin{eqnarray*}
-k_{1,i}&=&f(x_i,y_i),\\
-k_{2,i}&=&f\left(x_i+h,y_i+hk_{1,i}\right),\\
-y_{i+1}&=&y_i+\frac{h}{2}(k_{1,i}+k_{2,i}).
-\end{eqnarray*}
+\begin{align*}
+k_{1,i}&=f(x_i,y_i),\\
+k_{2,i}&=f\left(x_i+h,y_i+hk_{1,i}\right),\\
+y_{i+1}&=y_i+\frac{h}{2}(k_{1,i}+k_{2,i}).
+\end{align*}
 
 The improved Euler method requires two evaluations of $f(x,y)$ per
 step, while Euler's method requires only one. However, we'll see at
@@ -1451,10 +1433,10 @@ initial value problem. Therefore the local truncation error will be
 larger where $|y'''|$ is large, or smaller where $|y'''|$ is small.
 
 The next example, which deals with the initial value problem
-considered in Example~\ref{example:3.1.1}, illustrates
+considered in \zcref{example:3.1.1}, illustrates
 the computational procedure indicated in the improved Euler method.
 
-\begin{example}\label{example:3.2.1} \rm
+\begin{example}\label{example:3.2.1}
 Use the improved Euler method with $h=0.1$ to find approximate values
 of the solution of the initial value problem
 \begin{equation}\label{eq:3.2.5}
@@ -1464,13 +1446,13 @@ at $x=0.1,0.2,0.3$.
 \end{example}
 
 \solution
-As in Example~\ref{example:3.1.1}, we rewrite (\ref{eq:3.2.5})  as
+As in \zcref{example:3.1.1}, we rewrite \eqref{eq:3.2.5} as
 \[
 y'=-2y+x^3e^{-2x},\quad y(0)=1,
 \]
-which is of the form (\ref{eq:3.2.1}), with
+which is of the form \eqref{eq:3.2.1}, with
 \[
-f(x,y)=-2y+x^3e^{-2x},\; x_0=0,\mbox{\; and}\; y_0=1.
+f(x,y)=-2y+x^3e^{-2x},\; x_0=0,\text{ and } y_0=1.
 \]
 The improved Euler method yields
 {\allowdisplaybreaks
@@ -1493,8 +1475,8 @@ y_3&=y_2+\frac{h}{2}(k_{1,2}+k_{2,2})
 =.672734445+(.05)(-1.340106330-1.062629710)=.552597643.
 \end{align*}}
 
-\begin{example}\label{example:3.2.2} \rm
-Table~\ref{table:3.2.2} shows results of using the improved Euler method
+\begin{example}\label{example:3.2.2}
+\zcref[S]{table:3.2.2} shows results of using the improved Euler method
 with step sizes $h=0.1$ and $h=0.05$ to find approximate values of the
 solution of the initial value problem
 \[
@@ -1504,7 +1486,7 @@ y'+2y=x^3e^{-2x},\quad y(0)=1
 at $x=0.2$, $0.4$, \dots, $1.0$.
 For comparison, it also shows the
 corresponding approximate values obtained with Euler's method in
-Example~\ref{example:3.1.2}, and the values of the exact solution
+\zcref{example:3.1.2}, and the values of the exact solution
 \[
 y=\frac{e^{-2x}}{4}(x^4+4).
 \]
@@ -1559,14 +1541,14 @@ those obtained by Euler's method with $h=0.05$.
 \]
 \end{table}
 
-\begin{example}\label{example:3.2.3} \rm
-Table~\ref{table:3.2.3} shows analogous results for the nonlinear
+\begin{example}\label{example:3.2.3}
+\zcref[S]{table:3.2.3} shows analogous results for the nonlinear
 initial value problem
 \[
 y'=-2y^2+xy+x^2,\ y(0)=1.
 \]
 We applied Euler's  method to this problem in
-Example~\ref{example:3.1.3}.
+\zcref{example:3.1.3}.
 \end{example}
 
 \begin{table}
@@ -1616,7 +1598,7 @@ by Euler's method and the improved Euler method.}
 \]
 \end{table}
 
-\begin{example}\label{example:3.2.4} \rm
+\begin{example}\label{example:3.2.4}
 Use step sizes $h=0.2$, $h=0.1$, and $h=0.05$ to find approximate
 values of the solution of
 \begin{equation} \label{eq:3.2.6}
@@ -1625,27 +1607,27 @@ y'-2xy=1,\quad y(0)=3
 at $x=0$, $0.2$, $0.4$, $0.6$, \dots, $2.0$ by
 {\bf (a)} the improved Euler method;   {\bf (b)} the improved Euler
 semilinear method. (We used Euler's method and the Euler semilinear
-method on this problem in Example~\ref{example:3.1.4}.)
+method on this problem in \zcref{example:3.1.4}.)
 \end{example}
 
-\solutionpart{a}
-Rewriting (\ref{eq:3.2.6}) as
+\begin{alistSolution}
+\item
+Rewriting \eqref{eq:3.2.6} as
 \[
 y'=1+2xy,\quad y(0)=3
 \]
 and applying the improved Euler method with $f(x,y)=1+2xy$ yields
-the results shown in Table~\ref{table:3.2.4}.
+the results shown in \zcref{table:3.2.4}.
 
 
-\solutionpart{b}
+\item
 Since $y_1=e^{x^2}$ is a solution of the complementary equation
 $y'-2xy=0$, we can  apply the improved Euler semilinear method to
-(\ref{eq:3.2.6}), with
+\eqref{eq:3.2.6}, with
 \[
-y=ue^{x^2}\mbox{\quad and \quad}
-u'=e^{-x^2},\quad u(0)=3.
+y=ue^{x^2}\quad\text{and}\quad u'=e^{-x^2},\quad u(0)=3.
 \]
-The results listed in Table~\ref{table:3.2.5} are clearly better than
+The results listed in \zcref{table:3.2.5} are clearly better than
 those obtained by the improved Euler method.
 
 \noindent
@@ -1744,16 +1726,16 @@ those obtained by the improved Euler method.
 %\end{table}
 \end{minipage}
 \end{minipage}
+\end{alistSolution}
 
 \boxit{A Family of Methods with $O(h^3)$ Local Truncation Error}
 
-\noindent
 We'll now derive a class of methods with $O(h^3)$ local truncation
 error for solving \eqref{eq:3.2.1}. For simplicity, we
 assume that $f$, $f_x$, $f_y$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are
 continuous and bounded for all $(x,y)$. This implies that if $y$ is
 the solution of \eqref{eq:3.2.1} then $y''$ and $y'''$ are bounded
-(Exercise~\ref{exer:3.2.31}).
+(\zcref{exer:3.2.31}).
 
 We begin by approximating the integral curve of \eqref{eq:3.2.1} at
 $(x_i,y(x_i))$ by the line through $(x_i,y(x_i))$ with slope
@@ -1773,7 +1755,7 @@ y&=y(x_i)+m_i(x-x_i)\\
 &=y(x_i)+\left[\sigma y'(x_i)+\rho y'(x_i+\theta h)\right](x-x_i).
 \end{aligned}
 \end{equation}
-Setting $x=x_{i+1}=x_i+h$ in (\ref{eq:3.2.7}) yields
+Setting $x=x_{i+1}=x_i+h$ in \eqref{eq:3.2.7} yields
 \[
 \hat y_{i+1}=y(x_i)+h\left[\sigma y'(x_i)+\rho y'(x_i+\theta h)\right]
 \]
@@ -1798,7 +1780,7 @@ implies that
 \[
  y(x_{i+1})-y(x_i)-hy'(x_i)-\frac{h^2}{2}y''(x_i)=O(h^3).
 \]
-Comparing this with (\ref{eq:3.2.8}) shows that $E_i=O(h^3)$ if
+Comparing this with \eqref{eq:3.2.8} shows that $E_i=O(h^3)$ if
 \begin{equation} \label{eq:3.2.9}
 \sigma y'(x_i)+\rho y'(x_i+\theta h)=y'(x_i)+\frac{h}{2}y''(x_i)
 +O(h^2).
@@ -1813,7 +1795,7 @@ bounded, this implies that
 \[
 y'(x_i+\theta h)=y'(x_i)+\theta h y''(x_i)+O(h^2).
 \]
-Substituting this into (\ref{eq:3.2.9}) and noting that the sum of
+Substituting this into \eqref{eq:3.2.9} and noting that the sum of
 two $O(h^2)$ terms is again $O(h^2)$ shows that
 $E_i=O(h^3)$ if
 \[
@@ -1822,15 +1804,15 @@ y'(x_i)+\frac{h}{2}y''(x_i),
 \]
 which is true if
 \begin{equation} \label{eq:3.2.10}
-\sigma+\rho=1 \mbox{\quad and \quad} \rho\theta=\frac{1}{2}.
+\sigma+\rho=1 \quad\text{and}\quad\rho\theta=\frac{1}{2}.
 \end{equation}
 
-Since $y'=f(x,y)$, we can now conclude from (\ref{eq:3.2.8}) that
+Since $y'=f(x,y)$, we can now conclude from \eqref{eq:3.2.8} that
 \begin{equation} \label{eq:3.2.11}
 y(x_{i+1})=y(x_i)+h\left[\sigma f(x_i,y_i)+\rho f(x_i+\theta
 h,y(x_i+\theta h))\right]+O(h^3)
 \end{equation}
-if $\sigma$, $\rho$, and $\theta$ satisfy (\ref{eq:3.2.10}). However,
+if $\sigma$, $\rho$, and $\theta$ satisfy \eqref{eq:3.2.10}. However,
 this formula would not be useful even if we knew $y(x_i)$ exactly (as
 we would for $i=0$), since we still wouldn't know $y(x_i+\theta h)$
 exactly. To overcome this difficulty, we again use Taylor's theorem to
@@ -1850,15 +1832,14 @@ implies that
 \]
 for some constant $M$. Letting
 \[
-u=y(x_i+\theta h)\mbox{\quad and \quad}
-v=y(x_i)+\theta h f(x_i,y(x_i))
+u=y(x_i+\theta h)\quad\text{and}\quad v=y(x_i)+\theta h f(x_i,y(x_i))
 \]
-and recalling (\ref{eq:3.2.12}) shows that
+and recalling \eqref{eq:3.2.12} shows that
 \[
 f(x_i+\theta h,y(x_i+\theta h))=f(x_i+\theta h,y(x_i)+\theta h
 f(x_i,y(x_i)))+O(h^2).
 \]
-Substituting this into (\ref{eq:3.2.11})   yields
+Substituting this into \eqref{eq:3.2.11}   yields
 \begin{align*}
 y(x_{i+1})&=y(x_i)+h[\sigma f(x_i,y(x_i))\\
 &\qquad+\rho f(x_i+\theta h,y(x_i)+\theta hf(x_i,y(x_i)))]+O(h^3).
@@ -1869,7 +1850,7 @@ y_{i+1}=y_i+h\left[\sigma f(x_i,y_i)+\rho f(x_i+\theta
 h,y_i+\theta hf(x_i,y_i))\right]
 \]
 has $O(h^3)$ local truncation error if $\sigma$, $\rho$, and $\theta$
-satisfy (\ref{eq:3.2.10}). Substituting $\sigma=1-\rho$ and
+satisfy \eqref{eq:3.2.10}. Substituting $\sigma=1-\rho$ and
 $\theta=1/2\rho$ here yields
 \begin{equation} \label{eq:3.2.13}
 y_{i+1}=y_i+h\left[(1-\rho)f(x_i,y_i)+\rho
@@ -1886,8 +1867,8 @@ y_{i+1}&=y_i+h[(1-\rho)k_{1,i}+\rho k_{2,i}].
 \end{align*}
 
 Consistent with our requirement that $0<\theta<1$, we require that
-$\rho\ge1/2$. Letting $\rho=1/2$ in (\ref{eq:3.2.13}) yields the improved
-Euler method (\ref{eq:3.2.4}). Letting $\rho=3/4$ yields
+$\rho\ge1/2$. Letting $\rho=1/2$ in \eqref{eq:3.2.13} yields the improved
+Euler method \eqref{eq:3.2.4}. Letting $\rho=3/4$ yields
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Heun.html}
 {\color{blue}\itshape Heun's method},
 \[
@@ -1913,7 +1894,7 @@ y_{i+1}&=y_i+hk_{2,i}.
 \end{align*}
 
 Examples involving the midpoint method and Heun's method are given in
-Exercises~\ref{exer:3.2.23}--\ref{exer:3.2.30}.
+\zcref[range]{exer:3.2.23,exer:3.2.30}.
 
 \exercises
 Most of the following numerical exercises involve initial value
@@ -1921,7 +1902,7 @@ problems considered in the exercises in Section~3.1. You'll
 find it instructive to compare the results that you obtain here with
 the corresponding results that you obtained in Section~3.1.
 
-\emph{In Exercises~\ref{exer:3.2.1}--\ref{exer:3.2.5} use the improved
+\emph{In \zcref[range]{exer:3.2.1,exer:3.2.5} use the improved
 Euler method
 to find approximate values of the solution of the given initial value
 problem at the points $x_i=x_0+ih$, where $x_0$ is the point where
@@ -1950,7 +1931,7 @@ at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
 values of the exact solution $y=e^{4x}+e^{-3x}$, which can be obtained
 by the method of Section~2.1. Present your results in a table
-like Table~\ref{table:3.2.2}.
+like \zcref{table:3.2.2}.
 
 
 \item\label{exer:3.2.7}\Cex
@@ -1967,7 +1948,7 @@ the values of the exact solution
 y=\frac{1}{3x^2}(9\ln x+x^3+2)
 \]
 which can be obtained by the method of Section~2.1. Present
-your results in a table like Table~\ref{table:3.2.2}.
+your results in a table like \zcref{table:3.2.2}.
 
 \item\label{exer:3.2.8}\Cex
 Use the improved Euler method with step sizes $h=0.05$, $h=0.025$, and
@@ -1982,18 +1963,17 @@ with the values of the exact solution
 \[
 y=\frac{x(1+x^2/3)}{1-x^2/3}
 \]
-obtained in Example~\ref{example:2.4.3}. Present your results in a table
-like Table~\ref{table:3.2.2}.
+obtained in \zcref{example:2.4.3}. Present your results in a table
+like \zcref{table:3.2.2}.
 
 \item\label{exer:3.2.9}\Cex
-In Example~\ref{example:3.2.2} it was shown that
+In \zcref{example:3.2.2} it was shown that
 \[
 y^5+y=x^2+x-4
 \]
 is an implicit solution of  the initial value problem
 \[
-y'=\frac{2x+1}{5y^4+1},\quad y(2)=1.
-\eqno{\rm(A)}
+y'=\frac{2x+1}{5y^4+1},\quad y(2)=1.\tag{A}
 \]
 Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of (A) at
@@ -2007,14 +1987,13 @@ R(x,y)=y^5+y-x^2-x+4
 for each value of $(x,y)$ appearing in the first table.
 
 \item\label{exer:3.2.10}\Cex
-You can see from Example~\ref{example:2.5.1} that
+You can see from \zcref{example:2.5.1} that
 \[
 x^4y^3+x^2y^5+2xy=4
 \]
 is an implicit solution of  the initial value problem
 \[
-y'=-\frac{4x^3y^3+2xy^5+2y}{3x^4y^2+5x^2y^4+2x},\quad y(1)=1.
-\eqno{\rm(A)}
+y'=-\frac{4x^3y^3+2xy^5+2y}{3x^4y^2+5x^2y^4+2x},\quad y(1)=1.\tag{A}
 \]
 Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of (A) at
@@ -2033,8 +2012,7 @@ Use the improved Euler method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of the initial
 value problem
 \[
-(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1 \mbox{\
-(Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.13})}
+(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1\text{ (Exercise~2.2.\ref{exer:2.2.13})}
 \]
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$.
 
@@ -2044,7 +2022,7 @@ $h=0.025$ to find approximate values of the solution of the initial
 value problem
 \[
 y'+\frac{(y+1)(y-1)(y-2)}{x+1}=0, \quad y(1)=0
-\mbox{\  (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.14})}
+\text{  (Exercise~2.2.\ref{exer:2.2.14})}
 \]
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$.
 
@@ -2062,7 +2040,7 @@ obtained by the method of Section~2.1. Do you notice
 anything special about the results? Explain.
 
 \exercisetext{The linear initial value problems in
-Exercises~\ref{exer:3.2.14}--\ref{exer:3.2.19} can't be solved exactly in
+\zcref[range]{exer:3.2.14,exer:3.2.19} can't be solved exactly in
 terms of known elementary functions. In each exercise use the improved
 Euler and improved Euler semilinear methods with the indicated step
 sizes to find approximate values of the solution of the given initial
@@ -2076,29 +2054,29 @@ $h=0.1,0.05,0.025$ on $[2,3]$
 \item\label{exer:3.2.15}\Cex
 $y'+2xy=x^2,\quad y(0)=3$;\quad
 $h=0.2,0.1,0.05$ on $[0,2]$
-\quad (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38})
+\quad ({Exercise~2.1.\ref{exer:2.1.38}})
 
 \item\label{exer:3.2.16}\Cex
 $\dst{y'+\frac{1}{x}y=\frac{\sin x}{x^2},\quad y(1)=2}$, \quad
 $h=0.2,0.1,0.05$ on $[1,3]$
-\quad (Exercise~2.1.\hspace*{-3pt}\ref{exer:2.1.39})
+\quad ({Exercise~2.1.\ref{exer:2.1.39}})
 
 \item\label{exer:3.2.17}\Cex
 $\dst{y'+y=\frac{e^{-x}\tan x}{x},\quad y(1)=0}$;\quad
 $h=0.05,0.025,0.0125$ on $[1,1.5]$\;
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40}),
+({Exercise~2.1.\ref{exer:2.1.40}})
 
 \item\label{exer:3.2.18}\Cex
 $\dst{y'+\frac{2x}{1+x^2}y=\frac{e^x}{(1+x^2)^2}, \quad y(0)=1}$;\;
 $h=0.2,0.1,0.05$ on $[0,2]$\quad
- (Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.41})
+({Exercise~2.1.\ref{exer:2.1.41}})
 
 \item\label{exer:3.2.19}\Cex
 $xy'+(x+1)y=e^{x^2},\quad y(1)=2$;\;
 $h=0.05,0.025,0.0125$ on $[1,1.5]$\;
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.42})
+({Exercise~2.1.\ref{exer:2.1.42}})
 
-\exercisetext{In Exercises~\ref{exer:3.2.20}--\ref{exer:3.2.22} use the
+\exercisetext{In \zcref[range]{exer:3.2.20,exer:3.2.22} use the
 improved Euler method and the improved Euler semilinear method with
 the indicated step sizes to find approximate values of the solution of
 the given initial value problem at 11 equally spaced points
@@ -2118,35 +2096,35 @@ $\dst{y'+2y=\frac{x^2}{1+y^2},\quad y(2)=1}$;\quad
 
 
 \item\label{exer:3.2.23}\Cex
-Do Exercise~\ref{exer:3.2.7} with ``improved Euler method''
+Do \zcref{exer:3.2.7} with ``improved Euler method''
 replaced by ``midpoint method.''
 
 \item\label{exer:3.2.24}\Cex
-Do Exercise~\ref{exer:3.2.7} with ``improved Euler method''
+Do \zcref{exer:3.2.7} with ``improved Euler method''
 replaced by ``Heun's method.''
 
 \item\label{exer:3.2.25}\Cex
-Do Exercise~\ref{exer:3.2.8} with ``improved Euler method''
+Do \zcref{exer:3.2.8} with ``improved Euler method''
 replaced by ``midpoint method.''
 
 \item\label{exer:3.2.26}\Cex
-Do Exercise~\ref{exer:3.2.8} with ``improved Euler method''
+Do \zcref{exer:3.2.8} with ``improved Euler method''
 replaced by ``Heun's method.''
 
 \item\label{exer:3.2.27}\Cex
-Do Exercise~\ref{exer:3.2.11} with ``improved Euler method''
+Do \zcref{exer:3.2.11} with ``improved Euler method''
 replaced by ``midpoint method.''
 
 \item\label{exer:3.2.28}\Cex
-Do Exercise~\ref{exer:3.2.11} with ``improved Euler method''
+Do \zcref{exer:3.2.11} with ``improved Euler method''
 replaced by ``Heun's method.''
 
 \item\label{exer:3.2.29}\Cex
-Do Exercise~\ref{exer:3.2.12} with ``improved Euler method''
+Do \zcref{exer:3.2.12} with ``improved Euler method''
 replaced by ``midpoint method.''
 
 \item\label{exer:3.2.30}\Cex
-Do Exercise~\ref{exer:3.2.12} with ``improved Euler method''
+Do \zcref{exer:3.2.12} with ``improved Euler method''
 replaced by ``Heun's method.''
 
 \item\label{exer:3.2.31}Show that if $f$, $f_x$, $f_y$, $f_{xx}$, $f_{yy}$, and $f_{xy}$ are
@@ -2157,14 +2135,13 @@ y'=f(x,y),\quad y(x_0)=y_0,
 \]
 then $y''$ and $y'''$ are bounded.
 
-\item\label{exer:3.2.32}{\sc Numerical Quadrature} (see Exercise~3.1.~\hspace*{-3pt}\ref{exer:3.1.23}).
+\item\label{exer:3.2.32}{\sc Numerical Quadrature} (see {Exercise~3.1.\ref{exer:3.1.23}}).
 \begin{alist}
 \item % (a)
 Derive the quadrature formula
 \[
 \int_a^bf(x)\,dx\approx .5h(f(a)+f(b))+
-h\sum_{i=1}^{n-1}f(a+ih)\mbox{\quad(where $h=(b-a)/n)$}
-\eqno{\rm(A)}
+h\sum_{i=1}^{n-1}f(a+ih)\quad\text{(where $h=(b-a)/n$)}\tag{A}
 \]
 by applying the improved Euler method to the initial value problem
 \[
@@ -2225,11 +2202,11 @@ y_{i+1}&=y_i+\frac{h}{6}(k_{1,i}+2k_{2,i}+2k_{3,i}+k_{4,i}).
 \end{align*}
 
 The next example, which deals with the initial value problem
-considered in Examples~\ref{example:3.1.1} and \ref{example:3.2.1},
+considered in \zcref{example:3.1.1,example:3.2.1},
 illustrates
 the computational procedure indicated in the Runge-Kutta method.
 
-\begin{example}\label{example:3.3.1} \rm
+\begin{example}\label{example:3.3.1}
 Use the Runge-Kutta method with $h=0.1$ to find approximate values for
 the solution of the initial value problem
 \begin{equation}\label{eq:3.3.2}
@@ -2245,7 +2222,7 @@ y'=-2y+x^3e^{-2x},\quad y(0)=1,
 \]
 which is of the form \eqref{eq:3.3.1}, with
 \[
-f(x,y)=-2y+x^3e^{-2x},\ x_0=0,\mbox{\ and}\ y_0=1.
+f(x,y)=-2y+x^3e^{-2x},\ x_0=0,\\text{ and } y_0=1.
 \]
 
 {\allowdisplaybreaks
@@ -2277,8 +2254,8 @@ y_2&=y_1+\frac{h}{6}(k_{1,1}+2k_{2,1}+2k_{3,1}+k_{4,1}),\\
 The Runge-Kutta method is sufficiently accurate for most
 applications.
 
-\begin{example}\label{example:3.3.2} \rm
-Table~\ref{table:3.3.1} shows results of using the Runge-Kutta method
+\begin{example}\label{example:3.3.2}
+\zcref[S]{table:3.3.1} shows results of using the Runge-Kutta method
 with step sizes $h=0.1$ and $h=0.05$ to find approximate values of
 the solution of the initial value problem
 \[
@@ -2287,7 +2264,7 @@ y'+2y=x^3e^{-2x},\quad y(0)=1
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. For comparison, it also shows
 the
 corresponding approximate values obtained with the improved Euler
-method in Example~\ref{example:3.2.2}, and the values of the exact
+method in \zcref{example:3.2.2}, and the values of the exact
 solution
 \[
 y=\frac{e^{-2x}}{4}(x^4+4).
@@ -2348,14 +2325,14 @@ h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
 \]
 \end{table}
 
-\begin{example}\label{example:3.3.3} \rm
-Table~\ref{table:3.3.2}   shows analogous results
+\begin{example}\label{example:3.3.3}
+\zcref[S]{table:3.3.2}   shows analogous results
 for the nonlinear initial value problem
 \[
 y'=-2y^2+xy+x^2,\ y(0)=1.
 \]
 We applied the improved Euler  method to this problem in
-Example~\ref{exer:3.2.3}.
+\zcref{exer:3.2.3}.
 \end{example}
 
 \begin{table}
@@ -2408,15 +2385,14 @@ Example~\ref{exer:3.2.3}.
 \end{table}
 
 
-\begin{example}\label{example:3.3.4} \rm
-Tables~\ref{table:3.3.3} and \ref{table:3.3.4} show results obtained by
+\begin{example}\label{example:3.3.4}
+\zcref[S]{table:3.3.3,table:3.3.4} show results obtained by
 applying the Runge-Kutta and Runge-Kutta semilinear methods to
 to the initial value problem
 \[
 y'-2xy=1,\ y(0)=3,
 \]
-which we considered in Examples~\ref{example:3.1.4}  and
-\ref{example:3.2.4}.
+which we considered in \zcref{example:3.1.4,example:3.2.4}.
 \end{example}
 
 \noindent
@@ -2520,8 +2496,6 @@ which we considered in Examples~\ref{example:3.1.4}  and
 
 \boxit{The Case Where $x_0$ Isn't  The Left Endpoint}
 
-
-\noindent
 So far in this chapter we've considered numerical methods
  for solving an initial value problem
 \begin{equation} \label{eq:3.3.3}
@@ -2553,13 +2527,13 @@ $x_0-h$, $x_0-2h$, \dots, $x_0-nh=a$.
 \medskip
 
 The justification for this answer is sketched in
-Exercise~\ref{exer:3.3.23}. Note how easy it is to make the change
+\zcref{exer:3.3.23}. Note how easy it is to make the change
 the given problem \eqref{eq:3.3.3} to the modified problem
 \eqref{eq:3.3.4}: first replace $f$ by $-f$ and then replace $x$,
 $x_0$, and $y$ by $-x$, $-x_0$, and $z$, respectively.
 
 
-\begin{example}\label{example:3.3.5} \rm
+\begin{example}\label{example:3.3.5}
 Use the Runge-Kutta  method with step size $h=0.1$
  to find approximate values of the solution of
 \begin{equation} \label{eq:3.3.5}
@@ -2582,12 +2556,12 @@ z'=\frac{2x-3}{(z-1)^2},\quad z(-1)=4
 on the interval $[-1,0]$.
 (You should verify that \eqref{eq:3.3.7} is related to \eqref{eq:3.3.6} as
 \eqref{eq:3.3.4} is related to \eqref{eq:3.3.3}.)
-Table~\ref{table:3.3.5} shows the results.
-%Reversing the order of the columns in Table~\ref{table:3.3.5} and
+\zcref[S]{table:3.3.5} shows the results.
+%Reversing the order of the columns in \zcref{table:3.3.5} and
 Changing the signs of the values of $x$
-yields the two rows of Table~\ref{table:3.3.6}
+yields the two rows of \zcref{table:3.3.6}
 (note that the $x$ values are now decreasing).   The
-%last column of Table~\ref{table:3.3.6} shows the
+%last column of \zcref{table:3.3.6} shows the
 exact values of $y$
 %, which
 are given by
@@ -2688,17 +2662,17 @@ y & 4.000000000 & 3.944536474 & 3.889298649 & 3.834355648 & 3.779786399 & 3.7256
 
 We leave it to you to develop a procedure for handling the
 numerical solution of \eqref{eq:3.3.3} on an interval $[a,b]$
-such that $a<x_0<b$ (Exercises~\ref{exer:3.3.26} and \ref{exer:3.3.27}).
+such that $a<x_0<b$ (\zcref{exer:3.3.26,exer:3.3.27}).
 
 \exercises
 Most of the following numerical exercises involve initial value
-problems considered in the exercises in Sections~3.2.
+problems considered in the exercises in \zcref{sec:improved_euler}.
  You'll find it instructive to compare the results that you
 obtain here with the corresponding results that you obtained in those
 sections.
 
 \noindent
-\emph{In Exercises~\ref{exer:3.3.1}--\ref{exer:3.3.5} use the Runge-Kutta
+\emph{In \zcref[range]{exer:3.3.1,exer:3.3.5} use the Runge-Kutta
 method to
 find approximate values of the solution of the given initial value
 problem at the points $x_i=x_0+ih,$ where $x_0$ is the point where
@@ -2728,7 +2702,7 @@ at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
 values of the exact solution $y=e^{4x}+e^{-3x}$, which can be obtained
 by the method of Section~2.1. Present your results in a table
-like Table~\ref{table:3.3.1}.
+like \zcref{table:3.3.1}.
 
 
 \item\label{exer:3.3.7}\Cex
@@ -2745,7 +2719,7 @@ with the values of the exact solution
 y=\frac{1}{3x^2}(9\ln x+x^3+2),
 \]
 which can be obtained by the method of Section~2.1. Present
-your results in a table like Table~\ref{table:3.3.1}.
+your results in a table like \zcref{table:3.3.1}.
 
 \item\label{exer:3.3.8}\Cex
 Use the Runge-Kutta method with step sizes $h=0.05$, $h=0.025$, and
@@ -2760,18 +2734,17 @@ with the values of the exact solution
 \[
 y=\frac{x(1+x^2/3)}{1-x^2/3},
 \]
-which was obtained in Example~\ref{example:2.2.3}. Present your results in
-a table like Table~\ref{table:3.3.1}.
+which was obtained in \zcref{example:2.2.3}. Present your results in
+a table like \zcref{table:3.3.1}.
 
 \item\label{exer:3.3.9}\Cex
-In Example~\ref{example:2.2.3} it was shown that
+In \zcref{example:2.2.3} it was shown that
 \[
 y^5+y=x^2+x-4
 \]
 is an implicit solution of  the initial value problem
 \[
-y'=\frac{2x+1}{5y^4+1},\quad y(2)=1.
-\eqno{\rm(A)}
+y'=\frac{2x+1}{5y^4+1},\quad y(2)=1.\tag{A}
 \]
 Use the Runge-Kutta method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of (A) at
@@ -2785,14 +2758,13 @@ table of values of the residual
 for each value of $(x,y)$ appearing in the first table.
 
 \item\label{exer:3.3.10}\Cex
-You can see from Example~\ref{example:2.5.1} that
+You can see from \zcref{example:2.5.1} that
 \[
 x^4y^3+x^2y^5+2xy=4
 \]
 is an implicit solution of  the initial value problem
 \[
-y'=-\frac{4x^3y^3+2xy^5+2y}{3x^4y^2+5x^2y^4+2x},\quad y(1)=1.
-\eqno{\rm(A)}
+y'=-\frac{4x^3y^3+2xy^5+2y}{3x^4y^2+5x^2y^4+2x},\quad y(1)=1.\tag{A}
 \]
 Use the Runge-Kutta method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of (A) at
@@ -2810,8 +2782,8 @@ Use the Runge-Kutta method with step sizes $h=0.1$, $h=0.05$, and
 $h=0.025$ to find approximate values of the solution of the initial
 value problem
 \[
-(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1 \mbox{\
-(Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.13})},
+(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1
+\text{ (Exercise~2.2.\ref{exer:2.2.13})},
 \]
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$.
 
@@ -2821,7 +2793,7 @@ $h=0.025$ to find approximate values of the solution of the initial
 value problem
 \[
 y'+\frac{(y+1)(y-1)(y-2)}{x+1}=0, \quad y(1)=0
-\mbox{\ (Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.14})},
+\text{ (Exercise~2.2.\ref{exer:2.2.14})},
 \]
 at $x=1.0$, $1.1$, $1.2$, $1.3$, \dots, $2.0$.
 
@@ -2841,7 +2813,7 @@ you notice anything special about the results? Explain.
 
 \exercisetext{
 The linear initial value problems in
-Exercises~\ref{exer:3.3.14}--\ref{exer:3.3.19} can't be solved exactly in
+\zcref[range]{exer:3.3.14,exer:3.3.19} can't be solved exactly in
 terms of known elementary functions. In each exercise use the
 Runge-Kutta and the Runge-Kutta semilinear methods with the
 indicated step sizes to find approximate values of the solution of the
@@ -2855,30 +2827,30 @@ $h=0.1,0.05,0.025$ on $[2,3]$
 \item\label{exer:3.3.15}\Cex
 $y'+2xy=x^2,\quad y(0)=3$;\quad
 $h=0.2,0.1,0.05$ on $[0,2]$
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.38})
+({Exercise~2.1.\ref{exer:2.1.38}})
 
 \item\label{exer:3.3.16}\Cex
 $\dst{y'+\frac{1}{x}y=\frac{\sin x}{x^2},\quad y(1)=2;}$\quad
 $h=0.2,0.1,0.05$ on $[1,3]$
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.39})
+({Exercise~2.1.\ref{exer:2.1.39}})
 
 \item\label{exer:3.3.17}\Cex
 $\dst{y'+y=\frac{e^{-x}\tan x}{x},\quad y(1)=0;}$\quad
 $h=0.05,0.025,0.0125$ on $[1,1.5]$
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.40})
+({Exercise~2.1.\ref{exer:2.1.40}})
 
 \item\label{exer:3.3.18}\Cex
 $\dst{y'+\frac{2x}{1+x^2}y=\frac{e^x}{(1+x^2)^2}, \quad y(0)=1};$ \quad
 $h=0.2,0.1,0.05$ on $[0,2]$
- (Exercise~2.1,~\hspace*{-3pt}\ref{exer:2.1.41})
+ ({Exercise~2.1.\ref{exer:2.1.41}})
 
 \item\label{exer:3.3.19}\Cex
 $xy'+(x+1)y=e^{x^2},\quad y(1)=2$;\quad
 $h=0.05,0.025,0.0125$ on $[1,1.5]$
-(Exercise~2.1.~\hspace*{-3pt}\ref{exer:2.1.42})
+({Exercise~2.1.\ref{exer:2.1.42}})
 
 \exercisetext{
-In Exercises~\ref{exer:3.3.20}--\ref{exer:3.3.22} use the Runge-Kutta method
+In \zcref[range]{exer:3.3.20,exer:3.3.22} use the Runge-Kutta method
 and the Runge-Kutta semilinear method with the indicated step sizes
 to find approximate values of the solution of the given initial value
 problem at $11$ equally spaced points (including the endpoints) in
@@ -2921,7 +2893,7 @@ with the values of the exact solution
 \[
 y=\frac{x(4-3x^2)}{4+3x^2},
 \]
-which can be obtained by referring to Example~\ref{example:2.4.3}.
+which can be obtained by referring to \zcref{example:2.4.3}.
 
 \item\label{exer:3.3.25}\Cex
 Use the Runge-Kutta  method with step sizes $h=0.1$,  $h=0.05$,
@@ -2965,15 +2937,14 @@ which can be obtained by the method discussed in Section~2.1.
 
 
 \item\label{exer:3.3.28}{\sc Numerical Quadrature} (see
-Exercise~3.1.~\hspace*{-3pt}\ref{exer:3.1.23}).
+{Exercise~3.1.\ref{exer:3.1.23}}).
 \begin{alist}
 \item % (a)
 Derive the quadrature formula
 \[
 \int_a^bf(x)\,dx\approx \frac{h}{6}(f(a)+f(b))+
 \frac{h}{3}\sum_{i=1}^{n-1}f(a+ih)+\frac{2h}{3}\sum_{i=1}^n
-f\left(a+(2i-1)h/2\right)
-\eqno{\rm(A)}
+f\left(a+(2i-1)h/2\right)\tag{A}
 \]
 (where $h=(b-a)/n)$
 by applying the Runge-Kutta  method to the initial value problem
