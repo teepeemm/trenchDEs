@@ -3,19 +3,18 @@
 
 \chapter{Applications of First Order Equations}\label{ch:apps_first}
 
-\noindent
-IN THIS CHAPTER we consider applications of first order differential
+\textsc{In this chapter} we consider applications of first order differential
 equations.
 
 \medskip\noindent
-SECTION~4.1 begins with a discussion of
+\zcref[S,CAP,font=\scshape]{sec:growth_decay} begins with a discussion of
 exponential growth and decay, which you have probably already seen in
 calculus. We consider applications to radioactive decay, carbon
 dating, and compound interest.
 We also consider more complicated problems
 where the rate of change of a quantity is in part proportional to
 the magnitude of the quantity, but is also influenced by other
-other factors   for example, a radioactive susbstance is manufactured
+other factors   for example, a radioactive substance is manufactured
 at a certain
 rate, but decays at a rate proportional to its mass, or a saver
 makes regular deposits in a savings account that draws compound
@@ -23,12 +22,12 @@ interest.
 
 
 \medskip\noindent
-SECTION~4.2 deals with applications of Newton's law of
-cooling and with mixing problems.
+\zcref[S,CAP,font=\scshape]{sec:cooling_mixing} deals with applications of
+Newton's law of cooling and with mixing problems.
 
 
 \medskip\noindent
-SECTION~4.3  discusses
+\zcref[S,CAP,font=\scshape]{sec:elementary_mechanics} discusses
 applications to elementary mechanics involving Newton's second law
 of motion. The problems considered include motion under the influence
 of gravity in a resistive medium, and
@@ -36,7 +35,7 @@ determining the initial velocity required to launch a satellite.
 
 
 \medskip\noindent
-SECTION~4.4 deals with methods for
+\zcref[S,CAP,font=\scshape]{sec:auto_second_order} deals with methods for
 dealing  with a  type  of second order equation
 that often arises in applications of Newton's second law of motion,
 by reformulating
@@ -46,12 +45,13 @@ solution of the given equation, it does provide valuable insights into
 the behavior of the solutions.
 
 \medskip\noindent
-SECTION~4.5 deals with applications of differential
-equations to curves.
+\zcref[S,CAP,font=\scshape]{sec:app_curves} deals with applications of
+differential equations to curves.
 
 \newpage
 
-\section{Growth and Decay}
+
+\section{Growth and Decay}\label{sec:growth_decay}
 
 Since the applications in this section deal with functions of time, we'll
  denote the independent variable by $t$. If $Q$ is a function of
@@ -61,10 +61,9 @@ thus,
 Q'=\frac{dQ}{dt}.
 \]
 
+
 \boxit{Exponential Growth and Decay}
 
-
-\noindent
 One of the most common mathematical models for a physical process is
 the \emph{\color{blue}exponential model}, where it's assumed that the rate
 of change of a quantity $Q$ is proportional to $Q$; thus
@@ -73,7 +72,7 @@ Q'=aQ,
 \end{equation}
  where $a$ is the constant of proportionality.
 
-From Example \ref{exer:2.1.3}, the general solution of
+From \zcref{exer:2.1.3}, the general solution of
 \eqref{eq:4.1.1} is
 \[
 Q=ce^{at}
@@ -90,7 +89,7 @@ Since the solutions of $Q'=aQ$ are exponential functions, we say that
 a
 quantity $Q$ that satisfies this equation \emph{\color{blue}grows exponentially} if
 $a > 0$, or \emph{\color{blue}decays exponentially} if $a < 0$
- (Figure~\ref{figure:4.1.1}).
+ (\zcref{figure:4.1.1}).
 
 \begin{figure}[tbp]
   \centering
@@ -103,8 +102,6 @@ $a > 0$, or \emph{\color{blue}decays exponentially} if $a < 0$
 
 \boxit{Radioactive Decay}
 
-
-\noindent
 Experimental evidence shows that radioactive material decays at a rate
 proportional to the mass of the material present. According to this
 model the mass $Q(t)$ of a radioactive material present at time $t$
@@ -149,7 +146,7 @@ e^{-k\tau}=\frac{1}{2}.
 \begin{equation} \label{eq:4.1.5}
 \tau=\frac{1}{k}\ln2.
 \end{equation}
-(Figure \ref{figure:4.1.2}). The half-life is independent of $t_0$ and
+(\zcref{figure:4.1.2}). The half-life is independent of $t_0$ and
 $Q_0$, since it's determined by the properties of material, not by
 the amount of the material present at any particular time.
 
@@ -163,8 +160,8 @@ the amount of the material present at any particular time.
   \label{figure:4.1.2}
 \end{figure}
 
-\begin{example}\label{example:4.1.1} \rm
-A  radioactive substance has a half-life of 1620 years.
+\begin{example}\label{example:4.1.1}
+A radioactive substance has a half-life of 1620 years.
 \begin{alist}
 \item %(a)
 If its mass is now 4 g (grams), how much will be left 810 years
@@ -209,10 +206,9 @@ Since $\ln\frac38=-\ln\frac83$,
 t_1=1620{\frac{\ln\frac83}{\ln2}}\approx  2292.4\;\mbox{ years}.
 \]
 
+
 \boxit{Interest Compounded Continuously}
 
-
-\noindent
 Suppose we deposit an amount of money $Q_0$  in an
 interest-bearing account and make no further deposits or withdrawals
 for $t$ years, during which the account bears interest at a constant
@@ -240,7 +236,7 @@ after $t$ years is
 Q(t)=Q_0\left(1+\frac{r}{n}\right)^{nt}.
 \end{equation}
 Thus, increasing the  frequency of  compounding increases the value of the
-account after a fixed period of time. Table~\ref{table:4.1.1} shows the
+account after a fixed period of time. \zcref[S]{table:4.1.1} shows the
 effect
 of increasing the number of compoundings over $t=5$ years on an initial
 deposit of $Q_0=100$ (dollars), at an annual interest rate of 6\%.
@@ -269,7 +265,7 @@ $n$ & $\$100 \left(1+\dfrac{.06}{n}\right)^{5n}$\\
 \end{table}
 
 \medskip
-You can see from Table~\ref{table:4.1.1}  that the value of the account after 5
+You can see from \zcref{table:4.1.1}  that the value of the account after 5
 years is an increasing function of $n$. Now suppose  the maximum
 allowable rate of interest on savings accounts is restricted by law,
 but the time intervals between successive compoundings isn't ; then
@@ -293,7 +289,7 @@ Q'=rQ, \quad Q(0)=Q_0;
  that is, with continuous compounding the value of the account
 grows exponentially.
 
-\begin{example}\label{example:4.1.2} \rm
+\begin{example}\label{example:4.1.2}
 If \$150 is deposited in a bank that pays
 $5\frac{1}{2}$\% annual
 interest compounded continuously,  the value of the account after
@@ -309,7 +305,7 @@ Q(10)=150e^{.55} \approx \$259.99.
 \]
 \end{example}
 
-\begin{example}\label{example:4.1.3} \rm
+\begin{example}\label{example:4.1.3}
 We wish to accumulate \$10,000 in 10 years by making a single deposit
 in a savings account bearing $5\frac{1}{2}$\% annual interest
 compounded continuously. How much must we deposit in the account?
@@ -332,7 +328,7 @@ Q_0=10000e^{-.55} \approx \$5769.50.
 
 \boxit{Mixed Growth and Decay}
 
-\begin{example}\label{example:4.1.4} \rm
+\begin{example}\label{example:4.1.4}
 A radioactive substance with decay constant $k$ is produced at a
 constant rate of $a$ units of mass per unit time.
 \begin{alist}
@@ -391,7 +387,7 @@ This limit depends only on $a$ and $k$, and not on $Q_0$.
 We say that $a/k$ is the \emph{\color{blue}steady state} value of $Q$. From
 \eqref{eq:4.1.12} we also see that $Q$ approaches its steady state value
 from above if $Q_0 > a/k$, or from below if $Q_0 < a/k$. If $Q_0=a/k$,
-then $Q$ remains constant (Figure \ref{figure:4.1.3}).
+then $Q$ remains constant (\zcref{figure:4.1.3}).
 
 
 \begin{figure}[tbp]
@@ -404,12 +400,8 @@ $\dst\frac{a}{k}$ as $t\to\infty$}
 \end{figure}
 
 
-
-
 \boxit{Carbon Dating}
 
-
-\noindent
 The fact that $Q$ approaches a steady state value in the
 situation discussed in Example 4 underlies the method of \emph{\color{blue}carbon
 dating}, devised by  the American chemist  and Nobel Prize Winner
@@ -436,7 +428,7 @@ to carbon-12 decreases exponentially as the radioactive carbon-14
 decays. This is the basis for the method of carbon dating, as
 illustrated in the next example.
 
-\begin{example}\label{example:4.1.5} \rm
+\begin{example}\label{example:4.1.5}
 An archaeologist investigating the site of an ancient village finds a
 burial ground where the amount of carbon-14 present in individual
 remains is between 42 and 44\% of the amount present in live
@@ -477,11 +469,10 @@ t_2=-5570 \frac{\ln .44}{\ln2} \approx 6597
 that the village was founded about 7000 years ago,
 and lasted for about 400 years.
 
+
 \boxit{A Savings Program}
 
-\vspace*{-.2in}
-\noindent
-\begin{example}\label{example:4.1.6} \rm
+\begin{example}\label{example:4.1.6}
 A person opens a savings account with an initial deposit of \$1000 and
 subsequently deposits \$50 per week. Find the value $Q(t)$ of the
 account at time $t > 0$, assuming that the bank pays 6\%
@@ -530,8 +521,8 @@ Mathematical models must be tested for validity by comparing
 predictions based on them with the actual outcome of experiments.
 Example 6 is unusual in that we can compute the exact value of the
 account at any specified time and compare it with the approximate
-value predicted by \eqref{eq:4.1.15} (See Exercise \ref{exer:4.1.21}.). The
-follwing table
+value predicted by \eqref{eq:4.1.15} (See \zcref{exer:4.1.21}.). The
+following table
  gives a comparison for a ten year period. Each exact answer
 corresponds to the time of the year-end deposit, and each year is
 assumed to have exactly 52 weeks.
@@ -543,12 +534,11 @@ assumed to have exactly 52 weeks.
 %  &\qquad\hfill#\hfill&\qquad#\hfill\cr
 %%\noalign{\centerline{\bf Table \label{table:4.1.2}}}
 %\noalign{\vskip12pt}
-%%\noalign{\centerline{Value of the Saver's Account (Example
-%%\ref{example:4.1.6})}}
+%%\noalign{\centerline{Value of the Saver's Account (\zcref{example:4.1.6})}}
 %\noalign{\vskip22pt}
 %Year & Approximate Value of $Q$ & Exact Value of  $P$ & Error & Percentage
 %Error
-%\cr & (Example~\ref{example:4.1.6}) & (Exercise~\ref{exer:4.1.21}) & $Q-P$ &\ \;
+%\cr & (\zcref{example:4.1.6}) & (\zcref{exer:4.1.21}) & $Q-P$ &\ \;
 %$(Q-P)/P$ \cr \noalign{\vskip16pt}
 %\  1 & \$ 3741.42 & \$ 3739.87 & \$ 1.55 &\ \; $.0413 $\% \cr
 %\noalign{\vskip7pt}
@@ -583,7 +573,7 @@ assumed to have exactly 52 weeks.
 \begin{tabular}{ S[table-format=2] *2{S[table-format=5.2]} S[table-format=2.2] S[table-format=1.4] }\toprule
 {Year} & {Approximate Value $Q$} & {Exact Value $P$} & {Error} & {Percentage
 Error} \\
-& {(Example~\ref{example:4.1.6}, \$)} & {(Exercise~\ref{exer:4.1.21}, \$)} & {$Q-P$} & {$(Q-P)/P$} \\\midrule
+& {(\zcref{example:4.1.6}, \$)} & {(\zcref{exer:4.1.21}, \$)} & {$Q-P$} & {$(Q-P)/P$} \\\midrule
  1 & 3741.42 & 3739.87 & 1.55 & .0413\\
  2 & 6652.36 & 6649.17 & 3.19 & .0479\\
  3 & 9743.30 & 9738.37 & 4.93 & .0506\\
@@ -720,7 +710,7 @@ $p(0)=100$.
 
 \item\label{exer:4.1.21}\begin{alist}
 \item % (a)
- In the situation of Example~\ref{example:4.1.6}
+ In the situation of \zcref{example:4.1.6}
 find the exact value $P(t)$ of the person's account after $t$
 years, where $t$ is an integer.  Assume that each year has
 exactly 52 weeks, and include the year-end
@@ -759,7 +749,7 @@ Derive a
 differential equation for the loan principal (amount that the
 homebuyer owes) $P(t)$ at time $t>0$, making the simplifying
 assumption that the homebuyer repays the loan continuously rather than
-in discrete steps. (See Example~\ref{example:4.1.6} .)
+in discrete steps. (See \zcref{example:4.1.6}.)
 
 \item %(b)
 Solve the equation derived in \part{a}.
@@ -780,7 +770,7 @@ exact value  if
  (ii) $P_0=\$150,000$, $r=9.0$\%, $N=30$.
 \end{alist}
 
-\item\label{exer:4.1.23}Assume that the homebuyer of Exercise \ref{exer:4.1.22} elects to repay the
+\item\label{exer:4.1.23}Assume that the homebuyer of \zcref{exer:4.1.22} elects to repay the
 loan continuously at the rate of $\alpha M$ dollars per month,
 where $\alpha$ is a constant greater than 1. (This is called {\color{blue}\it
 accelerated payment\/}.)
@@ -830,13 +820,13 @@ $a$, $b$, $k$. However,  no proof is required.)
 
 
 \item\label{exer:4.1.26}\Lex
-Follow the instructions of Exercise~\ref{exer:4.1.25}, assuming that
+Follow the instructions of \zcref{exer:4.1.25}, assuming that
 the substance is produced at the rate of   $at/(1+bt(Q(t))^2)$
 units of mass per unit of time.
 
 
 \item\label{exer:4.1.27}\Lex
-Follow the instructions of Exercise~\ref{exer:4.1.25}, assuming that
+Follow the instructions of \zcref{exer:4.1.25}, assuming that
 the substance is produced at the rate of   $at/(1+bt)$
 units of mass per unit of time.
 
@@ -844,13 +834,10 @@ units of mass per unit of time.
 \end{exerciselist}
 
 
-\section{Cooling and Mixing}
-
+\section{Cooling and Mixing}\label{sec:cooling_mixing}
 
 \boxit{Newton's Law of Cooling}
 
-
-\noindent
 Newton's law of cooling states that if an object with temperature
 $T(t)$ at time $t$ is in a medium with temperature $T_m(t)$,  the
 rate of change of $T$ at time $t$ is proportional to $T(t)-T_m(t)$;
@@ -870,7 +857,7 @@ phenomenon. Like most mathematical models it has its limitations. For
 example, it's reasonable to assume that the temperature of a room
 remains approximately constant if the cooling object is a cup of
 coffee, but perhaps not if it's a huge cauldron of molten metal. (For
-more on this see Exercise~\ref{exer:4.2.17}.)
+more on this see \zcref{exer:4.2.17}.)
 
 
 To solve  \eqref{eq:4.2.1}, we rewrite it as
@@ -894,7 +881,7 @@ T=T_m+(T_0-T_m)e^{-kt}.
 Note that $T-T_m$ decays exponentially, with decay constant $k$.
 
 
-\begin{example}\label{example:4.2.1}\rm
+\begin{example}\label{example:4.2.1}
 A ceramic insulator is baked at $400^\circ$C and cooled in a room in
 which the temperature is $25^\circ$C. After 4 minutes the
 temperature of the insulator is $200^\circ$C. What is its temperature
@@ -922,7 +909,7 @@ k=-\frac{1}{4} \ln \frac{7}{15}=\frac{1}{4}\ln \frac{15}{7}.
 \[
 T=25+375 e^{-\frac{t}{4} \ln \frac{15}{7}}
 \]
-(Figure~\ref{figure:4.2.1}).
+(\zcref{figure:4.2.1}).
 Therefore the temperature of the insulator after
 8 minutes is
 \[\begin{array}{rl}
@@ -944,7 +931,7 @@ T(8) & \dst = 25+375 e^{-2 \ln \frac{15}{7}} \\[9pt]
   \label{figure:4.2.1}
 \end{figure}
 
-\begin{example}\label{example:4.2.2}\rm
+\begin{example}\label{example:4.2.2}
 An object with temperature $72^\circ$F is placed outside, where the
 temperature is $-20^\circ$F. At 11:05 the temperature of the object
 is $60^\circ$F and at 11:07 its temperature is $50^\circ$F. At what
@@ -970,7 +957,7 @@ scale, we can determine $k$ by substituting $T=50$ and $t=2$ into
 \[
 50 = -20+80e^{-2k}
 \]
-(Figure~\ref{figure:4.2.2});
+(\zcref{figure:4.2.2});
  hence,
 \[
 e^{-2k}=\frac{70}{80}=\frac{7}{8}.
@@ -1011,12 +998,8 @@ at 11:02:55.
 \end{figure}
 
 
-
-
 \boxit{Mixing Problems}
 
-
-\noindent
 In the next two examples a saltwater solution with a given
 concentration (weight of salt per unit volume of solution) is added at
 a specified rate to a tank that initially contains saltwater with a
@@ -1025,17 +1008,17 @@ salt in the tank as a function of time. This is an example of a {\color{blue}\it
 mixing problem\/}. To construct a tractable mathematical model for
 mixing problems we assume in our examples (and most exercises) that
 the mixture is stirred instantly so that the salt is always uniformly
-distributed throughout the mixture. Exercises~\ref{exer:4.2.22}
-and \ref{exer:4.2.23} deal with situations where this isn't  so, but
+distributed throughout the mixture. \zcref{exer:4.2.22,exer:4.2.23} deal with
+situations where this isn't  so, but
 the distribution of salt becomes approximately uniform as
 $t\to\infty$.
 
-\begin{example}\label{example:4.2.3}  \rm
+\begin{example}\label{example:4.2.3}
 A tank initially contains 40 pounds of salt dissolved in 600 gallons
 of water. Starting at $t_0 = 0$, water that contains 1/2 pound of salt
 per gallon is poured into the tank at the rate of 4 gal/min and the
 mixture is drained from the tank at the same rate
-(Figure~\ref{figure:4.2.3}).
+(\zcref{figure:4.2.3}).
 \begin{alist}
 \item % (a)
 Find a differential equation for the quantity $Q(t)$ of salt in the
@@ -1104,7 +1087,7 @@ so
 \begin{equation} \label{eq:4.2.6}
 Q=ue^{-t/150}=300+ce^{-t/150}
 \end{equation}
-(Figure~\ref{figure:4.2.4}).
+(\zcref{figure:4.2.4}).
  Since $Q(0)=40$,  $c=-260$;  therefore,
 \[
 Q=300-260e^{-t/150}.
@@ -1117,12 +1100,12 @@ intuitively reasonable, since the incoming solution contains 1/2
 pound of salt per gallon and there are always 600 gallons of water in
 the tank. \quad
 
-\begin{example}\label{example:4.2.4} \rm
+\begin{example}\label{example:4.2.4}
 A 500-liter tank initially contains 10 g of salt dissolved in 200
 liters of water. Starting at $t_0=0$, water that contains 1/4 g of salt
 per liter is poured into the tank at the rate of 4 liters/min and the
 mixture is drained from the tank at the rate of 2 liters/min
-(Figure~\ref{figure:4.2.5}). Find a
+(\zcref{figure:4.2.5}). Find a
 differential equation for the quantity $Q(t)$ of salt in the tank at
 time $t$ prior to the time when the tank overflows and find the
 concentration $K(t)$ (g/liter ) of salt in the tank at any such time.
@@ -1163,7 +1146,7 @@ W(t) = 2t+200.
 tank), this formula is valid for $0 \le t \le 150$.
 
 Now let $Q(t)$ be the number of grams of salt in the tank
-at time $t$, where  $0 \le t \le 150$.  As in Example~\ref{example:4.2.3},
+at time $t$, where  $0 \le t \le 150$.  As in \zcref{example:4.2.3},
 \begin{equation} \label{eq:4.2.7}
 Q' = \mbox{rate in}-\mbox{rate out}.
 \end{equation}
@@ -1199,7 +1182,7 @@ flow out})
  Substituting \eqref{eq:4.2.8} and \eqref{eq:4.2.9} into \eqref{eq:4.2.7}
 yields
 \begin{equation} \label{eq:4.2.10}
-Q'=1-\frac{Q}{t+100},\quad\text{ \rm so }\quad
+Q'=1-\frac{Q}{t+100},\quad\text{ so }\quad
 Q'+\frac{1}{t+100} Q=1.
 \end{equation}
 By separation of variables, $1/(t+100)$ is a solution of the
@@ -1234,7 +1217,7 @@ time $t$.  Then
 \[
 K(t) = \frac{1}{4}-\frac{2000}{(t+100)^2}
 \]
-(Figure~\ref{figure:4.2.6}).
+(\zcref{figure:4.2.6}).
           \begin{figure}[H]
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040206}
@@ -1427,8 +1410,7 @@ their
 initial values.  Again, we assume that $T$  and $T_m$ are related by
 Newton's law of cooling,
 \[
-T'=-k(T-T_m).
-\eqno{\rm (A)}
+T'=-k(T-T_m).\tag{A}
 \]
 We also assume that the change in heat of the object as its
 temperature changes from $T_0$ to $T$  is $a(T-T_0)$
@@ -1441,8 +1423,7 @@ object and medium, respectively.  If we assume that the total heat of
 the system consisting of the object and the medium remains constant
 (that is, energy is conserved), then
 \[
-a(T-T_0)+a_m(T_m-T_{m0})=0.
-\eqno{\rm (B)}
+a(T-T_0)+a_m(T_m-T_{m0})=0.\tag{B}
 \]
 
 \begin{alist}
@@ -1513,7 +1494,7 @@ Find $\lim_{t\to\infty}c_1(t)$  and $\lim_{t\to\infty}c_2(t)$.
 \end{alist}
 
 \item\label{exer:4.2.22}\Lex
-Consider the mixing problem of Example~\ref{example:4.2.3}, but without
+Consider the mixing problem of \zcref{example:4.2.3}, but without
 the assumption that the mixture is stirred instantly so that the salt
 is always uniformly distributed throughout the mixture. Assume instead
 that the distribution approaches uniformity as $t\to\infty$.
@@ -1537,7 +1518,7 @@ a(t)=1-e^{-t^2}  \mbox{\quad    \part{iii}\;  }
 \end{alist}
 
 \item\label{exer:4.2.23}\Lex
-Consider the mixing problem of Example~\ref{example:4.2.4} in a tank with
+Consider the mixing problem of \zcref{example:4.2.4} in a tank with
 infinite capacity, but without the assumption that the mixture is
 stirred instantly so that the salt is always uniformly distributed
 throughout the mixture. Assume instead that the distribution
@@ -1562,12 +1543,11 @@ a(t)=1-e^{-t^2}  \mbox{\;   \part{iii}\;   }
 
 \end{exerciselist}
 
-\section{Elementary Mechanics}
+
+\section{Elementary Mechanics}\label{sec:elementary_mechanics}
 
 \boxit{Newton's Second Law of Motion}
 
-
-\noindent
 In this section we consider an object with constant mass $m$ moving
 along a line under a force $F$. Let $y=y(t)$ be the displacement of
 the object from a reference point on the line at time $t$, and let
@@ -1580,21 +1560,21 @@ equation
 F=ma.
 \end{equation}
 
+
 \boxit{Units}
 
-
-\noindent
 In applications there are three main sets of units in use for length,
 mass, force, and time: the cgs, mks, and British systems. All three
-use the second as the unit of time. Table~1 shows the other units.
- Consistent with (\ref{eq:4.3.1}), the unit of
+use the second as the unit of time. \zcref[S]{table:units} shows the other
+units.
+ Consistent with \eqref{eq:4.3.1}, the unit of
 force in each system is defined to be the force required to impart an
 acceleration of (one unit of length)$/s^2$ to one unit of
 mass.
 
 \begin{table}
 \centering
-\caption{}
+\caption{Units of measurement in various systems}\label{table:units}
 \tagpdfsetup{table/header-rows={1}}
 \begin{tabular}{cccc}\toprule
 & Length & Force & Mass \\\midrule
@@ -1624,8 +1604,8 @@ g &=9.8\ \mbox{m/s}^2 \hskip48pt \mbox{(mks)}   \\
 g &=32\ \mbox{ft/s}^2 \hskip52pt \mbox{(British)}.
 \end{array}\]
 
-In general, the force $F$ in (\ref{eq:4.3.1}) may depend upon $t$, $y$, and
-$y'$. Since $a=y''$,  (\ref{eq:4.3.1}) can be written in the
+In general, the force $F$ in \eqref{eq:4.3.1} may depend upon $t$, $y$, and
+$y'$. Since $a=y''$,  \eqref{eq:4.3.1} can be written in the
 form
 \begin{equation} \label{eq:4.3.2}
 my''=F(t,y,y'),
@@ -1633,8 +1613,8 @@ my''=F(t,y,y'),
 which is a second order equation. We'll consider this equation with
 restrictions on $F$ later;     however, since Chapter~2
 dealt only with first order equations, we consider here only problems in
-which (\ref{eq:4.3.2}) can be recast as a first order equation. This is
-possible if $F$ does not depend on $y$, so (\ref{eq:4.3.2}) is of the form
+which \eqref{eq:4.3.2} can be recast as a first order equation. This is
+possible if $F$ does not depend on $y$, so \eqref{eq:4.3.2} is of the form
 \[
 my''=F(t,y').
 \]
@@ -1647,16 +1627,13 @@ Solving this equation yields $v$ as a function of $t$. If we know
 $y(t_0)$ for some time $t_0$, we can  integrate $v$ to obtain $y$
 as a function of $t$.
 
-Equations of the form (\ref{eq:4.3.3}) occur in problems involving motion
+Equations of the form \eqref{eq:4.3.3} occur in problems involving motion
 through a resisting medium.
-
 
 
 \boxit{Motion Through a Resisting Medium Under Constant
 Gravitational Force}
 
-
-\noindent
 Now we consider an object moving vertically in some medium. We assume
 that the only forces acting on the object are gravity and resistance
 from the medium. We also assume that the motion takes place close to
@@ -1666,7 +1643,7 @@ Earth's surface and take the upward direction to be positive, so
 resisting force, the velocity approaches a limit as $t\to\infty$.
 We call this limit the \emph{\color{blue}terminal velocity}.
 
-\begin{example}\label{example:4.3.1} \rm
+\begin{example}\label{example:4.3.1}
 An object with mass $m$ moves under constant gravitational force
 through a medium that exerts a resistance with magnitude proportional
 to the speed of the object. (Recall that the speed of an object is
@@ -1684,16 +1661,16 @@ where $-mg$ is  the force due to  gravity and $F_1$ is the
 resisting force of the medium, which has magnitude $k|v|$, where $k$ is a
 positive constant. If the
 object is moving downward ($v\le 0$),  the resisting force is
-upward (Figure~\ref{figure:4.3.1}\part{a}), so
+upward (\zcref{figure:4.3.1}(a)), so
 \[
 F_1=k|v|=k(-v)=-kv.
 \]
 On the other hand, if the object is moving upward ($v\ge 0$),
-the resisting force is downward (Figure~\ref{figure:4.3.1}\part{b}), so
+the resisting force is downward (\zcref{figure:4.3.1}(b)), so
 \[
 F_1=-k|v|=-kv.
 \]
-Thus, (\ref{eq:4.3.4}) can be written as
+Thus, \eqref{eq:4.3.4} can be written as
 \begin{equation} \label{eq:4.3.5}
 F=-mg-kv,
 \end{equation}
@@ -1715,7 +1692,7 @@ From Newton's second law of motion,
 \[
 F=ma=mv',
 \]
- so (\ref{eq:4.3.5}) yields
+ so \eqref{eq:4.3.5} yields
 \[
 mv'=-mg-kv,
 \]
@@ -1724,7 +1701,7 @@ mv'=-mg-kv,
 v'+\frac{k}{m}v=-g.
 \end{equation}
 Since $e^{-kt/m}$ is a solution of the  complementary
-equation, the solutions of (\ref{eq:4.3.6}) are of the form
+equation, the solutions of \eqref{eq:4.3.6} are of the form
 $v=ue^{-kt/m}$, where $u'e^{-kt/m}=-g$, so $u'=-ge^{kt/m}$.
 Hence,
 \[
@@ -1743,7 +1720,7 @@ v_0=-\frac{mg}{k}+c,
 \[
 c=v_0+\frac{mg}{k}
 \]
- and (\ref{eq:4.3.7}) becomes
+ and \eqref{eq:4.3.7} becomes
 \[
 v=-\frac{mg}{k}+\left(v_0+\frac{mg}{k}\right) e^{-kt/m}.
 \]
@@ -1752,7 +1729,7 @@ Letting $t\to\infty$ here shows that the terminal velocity is
 \lim_{t\to\infty} v(t)=-\frac{mg}{k},
 \]
 which  is independent of the
-initial velocity $v_0$ (Figure~\ref{figure:4.3.2}).
+initial velocity $v_0$ (\zcref{figure:4.3.2}).
 
 
 \begin{figure}[tbp]
@@ -1764,7 +1741,7 @@ initial velocity $v_0$ (Figure~\ref{figure:4.3.2}).
 \end{figure}
 
 
-\begin{example}\label{example:4.3.2} \rm
+\begin{example}\label{example:4.3.2}
 A 960-lb object is given an initial upward velocity of 60 ft/s near
 the surface of Earth. The atmosphere resists the motion with a force
 of 3 lb for each ft/s of speed. Assuming that the only other force
@@ -1794,12 +1771,12 @@ so
 v=ue^{-t/10}=-320+ce^{-t/10}.
 \end{equation}
 The initial velocity is 60 ft/s in the upward (positive) direction;
-hence, $v_0=60$. Substituting $t=0$ and $v=60$ in (\ref{eq:4.3.8})
+hence, $v_0=60$. Substituting $t=0$ and $v=60$ in \eqref{eq:4.3.8}
 yields
 \[
 60=-320+c,
 \]
- so $c=380$, and (\ref{eq:4.3.8}) becomes
+ so $c=380$, and \eqref{eq:4.3.8} becomes
 \[
 v=-320+380e^{-t/10}\ \mbox{ft/s}
 \]
@@ -1809,7 +1786,7 @@ The terminal velocity is
 \]
 
 
-\begin{example}\label{example:4.3.3} \rm
+\begin{example}\label{example:4.3.3}
 A 10 kg mass is given an initial velocity $v_0\le0$
  near Earth's surface. The only forces acting on it are
 gravity and atmospheric resistance proportional to the square of the
@@ -1829,7 +1806,7 @@ when $v=2$ m/s,
 k(2^2)=8,
 \]
  so $k=2\  \mbox{N-s}^2/\mbox{m}^2$.  Since
-$m=10$ and $g=9.8$, (\ref{eq:4.3.9}) becomes
+$m=10$ and $g=9.8$, \eqref{eq:4.3.9} becomes
 \begin{equation} \label{eq:4.3.10}
 10v'=-98+2v^2=2(v^2-49).
 \end{equation}
@@ -1844,7 +1821,7 @@ which is convenient for the required partial fraction expansion
 =\frac{1}{14}\left[\frac{1}{v-7}
 -\frac{1}{v+7}\right].
 \end{equation}
- Substituting (\ref{eq:4.3.12})  into (\ref{eq:4.3.11}) yields
+ Substituting \eqref{eq:4.3.12} into \eqref{eq:4.3.11} yields
 \[
 \frac{1}{14}\left[\frac{1}{v-7}-\frac{1}{v+7}\right]v'=\frac{1}{5},
 \]
@@ -1860,22 +1837,22 @@ Therefore
 \[
 \left|\frac{v-7}{v+7}\right|=e^ke^{14t/5}.
 \]
-Since  Theorem~\ref{thmtype:2.3.1}  implies  that  $(v-7)/(v+7)$   can't
+Since  \zcref{thmtype:2.3.1}  implies  that  $(v-7)/(v+7)$   can't
 change sign (why?), we can rewrite the last equation as
  \begin{equation} \label{eq:4.3.13}
  \frac{v-7}{v+7}=ce^{14t/5},
 \end{equation}
-which is an implicit solution of (\ref{eq:4.3.10}).
+which is an implicit solution of \eqref{eq:4.3.10}.
 Solving this for $v$ yields
 \begin{equation} \label{eq:4.3.14}
 v=-7\frac{c+e^{-14t/5}}{c-e^{-14t/5}}.
 \end{equation}
  Since $v(0)=v_0$, it
- (\ref{eq:4.3.13}) implies that
+ \eqref{eq:4.3.13} implies that
 \[
 c=\frac{v_0-7}{v_0+7}.
 \]
- Substituting this into (\ref{eq:4.3.14}) and simplifying yields
+ Substituting this into \eqref{eq:4.3.14} and simplifying yields
 \[
 v=-7\frac{v_0(1+e^{-14t/5})-7(1-e^{-14t/5})}{v_0(1-e^{-14t/5})-7(1+e^{-14t/5}}.
 \]
@@ -1885,12 +1862,12 @@ $t>0$. The terminal velocity is
 \lim_{t\to\infty} v(t)=-7\  \mbox{m/s},
 \]
 independent of $v_0$. More generally, it
-can be shown (Exercise~\ref{exer:4.3.11}) that if $v$ is any solution
-of (\ref{eq:4.3.9}) such that $v_0\le0$ then
+can be shown (\zcref{exer:4.3.11}) that if $v$ is any solution
+of \eqref{eq:4.3.9} such that $v_0\le0$ then
 \[
 \lim_{t\to\infty}v(t)=-\sqrt\frac{mg}{k}
 \]
-(Figure~\ref{figure:4.3.3}).
+(\zcref{figure:4.3.3}).
 
 
 
@@ -1906,7 +1883,7 @@ of (\ref{eq:4.3.9}) such that $v_0\le0$ then
 
 
 
-\begin{example}\label{example:4.3.4} \rm
+\begin{example}\label{example:4.3.4}
 A 10-kg mass is launched vertically upward from Earth's surface with
 an initial velocity of $v_0$ m/s. The only forces acting on the mass
 are gravity and atmospheric resistance proportional to the square of
@@ -1919,9 +1896,9 @@ maximum altitude.
 climb while $v>0 $ and reach its maximum altitude when $v=0$.
 Therefore $v>0$ for $0\le t<T$ and $v(T)=0$. Although the mass of
 the object and our assumptions concerning the forces acting on it are
-the same as those in Example 3,  (\ref{eq:4.3.10}) does
+the same as those in Example 3, \eqref{eq:4.3.10} does
 not apply here, since the resisting force is negative if $v>0$;
-therefore, we replace (\ref{eq:4.3.10}) by
+therefore, we replace \eqref{eq:4.3.10} by
 \begin{equation} \label{eq:4.3.15}
 10v'=-98-2v^2.
 \end{equation}
@@ -1955,12 +1932,12 @@ Using the identity
 \]
 with $A=\tan^{-1}(v_0/7)$ and $B=7t/5$, and noting that
 $\tan(\tan^{-1}\theta)=\theta$,
-we can simplify (\ref{eq:4.3.17}) to
+we can simplify \eqref{eq:4.3.17} to
 \[
 v=7\frac{v_0-7\tan(7t/5)}{7+v_0\tan(7t/5)}.
 \]
 
- Since $v(T)=0$ and $\tan^{-1}(0)=0$, (\ref{eq:4.3.16}) implies that
+ Since $v(T)=0$ and $\tan^{-1}(0)=0$, \eqref{eq:4.3.16} implies that
 \[
 -T+\frac{5}{7} \tan^{-1}\frac{v_0}{7}=0.
 \]
@@ -1974,7 +1951,7 @@ altitude is less than
 \[
 \frac{5\pi}{14} \approx 1.122\  \mbox{s}
 \]
-regardless of the initial velocity.  Figure~\ref{figure:4.3.4}
+regardless of the initial velocity.  \zcref[S]{figure:4.3.4}
 shows graphs of $v$ over $[0,T]$ for various values of $v_0$.
 
 
@@ -1982,18 +1959,14 @@ shows graphs of $v$ over $[0,T]$ for various values of $v_0$.
   \centering
   \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040304}
 \color{blue}
-\caption{Solutions of (\ref{eq:4.3.15}) for various
+\caption{Solutions of \eqref{eq:4.3.15} for various
 $v_0>0$}
   \label{figure:4.3.4}
 \end{figure}
 
 
-
-
 \boxit{Escape Velocity}
 
-
-\noindent
 Suppose a space vehicle is launched vertically and its fuel is
 exhausted when the vehicle reaches an altitude $h$ above Earth, where
 $h$ is sufficiently large so that resistance due to Earth's atmosphere
@@ -2008,7 +1981,7 @@ gravitational force on the vehicle at an altitude $y$ above Earth is
 \begin{equation} \label{eq:4.3.18}
 F=-\frac{K}{(y+R)^2},
 \end{equation}
-where $R$ is  Earth's radius (Figure~\ref{figure:4.3.5}).
+where $R$ is  Earth's radius (\zcref{figure:4.3.5}).
 
 
 
@@ -2021,11 +1994,11 @@ where $R$ is  Earth's radius (Figure~\ref{figure:4.3.5}).
 \end{figure}
 
  Since $F=-mg$ when $y=0$, setting $y=0$ in
-(\ref{eq:4.3.18}) yields
+\eqref{eq:4.3.18} yields
 \[
 -mg=-\frac{K}{R^2};
 \]
- therefore $K=mgR^2$ and (\ref{eq:4.3.18}) can be written more
+ therefore $K=mgR^2$ and \eqref{eq:4.3.18} can be written more
 specifically as
 \begin{equation} \label{eq:4.3.19}
 F=-\frac{mgR^2}{(y+R)^2}.
@@ -2035,7 +2008,7 @@ From Newton's second law of motion,
 \[
 F=m\frac{d^2y}{dt^2},
 \]
-so (\ref{eq:4.3.19}) implies that
+so \eqref{eq:4.3.19} implies that
 \begin{equation} \label{eq:4.3.20}
 \frac{d^2y}{dt^2}=-\frac{gR^2}{(y+R)^2}.
 \end{equation}
@@ -2048,7 +2021,7 @@ velocity\/}, with these properties:
 \item If $v_0\ge v_e$ then $v(t)>0$ for all $t>0$, and the vehicle
 continues to climb for all $t>0$; that is, it ``escapes'' Earth.
 (Is it really so obvious that $\lim_{t\to\infty}y(t)=\infty$
-in this case? For a proof, see Exercise~\ref{exer:4.3.20}.)
+in this case? For a proof, see \zcref{exer:4.3.20}.)
 \item  If $v_0<v_e$  then  $v(t)$   decreases to zero and becomes negative.
 Therefore
  the vehicle attains a  maximum
@@ -2057,13 +2030,13 @@ falls back to Earth.
  \end{enumerate}
 
 Since
-(\ref{eq:4.3.20}) is second order, we can't solve it by methods discussed
+\eqref{eq:4.3.20} is second order, we can't solve it by methods discussed
 so far. However, we're concerned with $v$ rather than $y$, and $v$ is
 easier to find. Since $v=y'$ the chain rule implies that
 \[
 \frac{d^2y}{dt^2}=\frac{dv}{dt}=\frac{dv}{dy}\frac{dy}{dt}=v\frac{dv}{dy}.
 \]
- Substituting this into (\ref{eq:4.3.20}) yields the first order
+ Substituting this into \eqref{eq:4.3.20} yields the first order
 separable equation
 \begin{equation} \label{eq:4.3.21}
 v\frac{dv}{dy}=-\frac{gR^2}{(y+R)^2}.
@@ -2075,7 +2048,7 @@ obtain $v$ as a function of $y$ by solving the initial value problem
 v\frac{dv}{dy}=-\frac{gR^2}{(y+R)^2},\quad  v(h)=v_0.
 \]
 
-Integrating (\ref{eq:4.3.21}) with respect to $y$ yields
+Integrating \eqref{eq:4.3.21} with respect to $y$ yields
 \begin{equation} \label{eq:4.3.22}
 \frac{v^2}{2}=\frac{gR^2}{y+R}+c.
 \end{equation}
@@ -2083,7 +2056,7 @@ Integrating (\ref{eq:4.3.21}) with respect to $y$ yields
 \[
 c=\frac{v_0^2}{2}-\frac{gR^2}{h+R},
 \]
- so (\ref{eq:4.3.22}) becomes
+ so \eqref{eq:4.3.22} becomes
 \begin{equation} \label{eq:4.3.23}
 \frac{v^2}{2}=\frac{gR^2}{y+R}+\left(\frac{v_0^2}{2}-
 \frac{gR^2}{h+R}\right).
@@ -2338,9 +2311,8 @@ all $t>0$.}
 \end{exerciselist}
 
 
-\section{Autonomous Second Order Equations}
+\section{Autonomous Second Order Equations}\label{sec:auto_second_order}
 
-\noindent
 A second order differential equation that can be written as
 \begin{equation} \label{eq:4.4.1}
 y''=F(y,y')
@@ -2474,8 +2446,6 @@ the following examples.
 
 \boxit{The Undamped Case}
 
-
-\noindent
 We'll begin with the case where $q\equiv0$, so  \eqref{eq:4.4.5}
 reduces to
  \begin{equation} \label{eq:4.4.7}
@@ -2509,8 +2479,7 @@ c=\frac{v_0^2}{2}+P(y_0).
 
 
 
-\begin{example}$[$The Undamped Spring - Mass
-System$]\,$\label{example:4.4.1}\rm
+\begin{example}[The Undamped Spring-Mass System]\label{example:4.4.1}
  Consider an object with mass $m$ suspended from a
 spring and moving vertically. Let $y$ be the displacement of the
 object from the position it occupies when suspended at rest from the
@@ -2626,9 +2595,8 @@ as \emph{\color{blue}simple harmonic motion}.)
 \end{figure}
 
 
-\begin{example}$[$The Undamped Pendulum$]$\label{example:4.4.2}\rm
-\, Now we
-consider the motion of a pendulum with mass $m$, attached to the end
+\begin{example}[The Undamped Pendulum]\label{example:4.4.2}
+Now we consider the motion of a pendulum with mass $m$, attached to the end
 of a weightless rod with length $L$ that rotates on a frictionless
 axle (Figure~\ref{figure:4.4.5}). We assume that there's no air
 resistance.
@@ -2797,12 +2765,8 @@ defines a separatrix passing through $(\overline y,0)$.
 \end{minipage}
 
 
-
-
 \boxit{Stability  and Instability Conditions for $y''+p(y)=0$}
 
-
-\noindent
 It can be shown (Exercise~\ref{exer:4.4.23}) that an equilibrium
 $\overline y$ of an undamped equation
 \begin{equation} \label{eq:4.4.18}
@@ -2865,7 +2829,7 @@ so \eqref{eq:4.4.20} holds with $b=(2m+2)\pi$, and
 so \eqref{eq:4.4.21} holds with $a=2m\pi$.
 
 
-\begin{example} \label{example:4.4.3}\rm
+\begin{example} \label{example:4.4.3}
 The equation
 \begin{equation} \label{eq:4.4.22}
 y''+y(y-1)=0
@@ -2945,8 +2909,6 @@ behavior:
 
 \boxit{The Damped Case}
 
-
-\noindent
 The phase plane equivalent of the damped autonomous equation
 \begin{equation} \label{eq:4.4.24}
 y''+q(y,y')y'+p(y)=0
@@ -2997,9 +2959,9 @@ $c$ is called the \emph{\color{blue}damping constant}. In situations where
 \eqref{eq:4.4.26} is the equation of motion of an object, $c$ is positive;
 however, there are situations where  $c$ may be negative.
 
+
 \boxit{The Damped Spring-Mass System}
 
-\noindent
 Earlier we considered
 the spring - mass system under the assumption that the only forces
 acting on the object were gravity and the spring's resistance to
@@ -3086,7 +3048,7 @@ some integral curves for \eqref{eq:4.4.28} in this case.
 
 
 
-\begin{example}[The Damped Pendulum]\label{example:4.4.5} \rm
+\begin{example}[The Damped Pendulum]\label{example:4.4.5}
 Now we
 return to the pendulum. If we assume that
 some mechanism (for example, friction in the axle or atmospheric
@@ -3229,8 +3191,7 @@ damping.}
 The \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Van_der_Pol.html}
 {\color{blue}\itshape van der Pol equation}
 \[
-y''-\mu(1-y^2)y'+y=0,
-\eqno{\rm(A)}
+y''-\mu(1-y^2)y'+y=0,\tag{A}
 \]
 where $\mu$ is a positive constant and $y$ is electrical current
 (Section~6.3), arises in the study of an electrical circuit
@@ -3272,20 +3233,17 @@ Let  $T_1$ be the time
 required for  $y$ to increase from zero to
 $y_{\max}=2\sin^{-1}(v_0/v_c)$. Show that
 \[
-\frac{dy}{dt}=\sqrt{v_0^2-v_c^2\sin^2y/2},\quad 0\le t<T_1.
-\eqno{\rm(A)}
+\frac{dy}{dt}=\sqrt{v_0^2-v_c^2\sin^2y/2},\quad 0\le t<T_1.\tag{A}
 \]
 \item % (b)
 Separate variables in (A) and show that
 \[
-T_1=\int_0^{y_{\max}}\frac{du}{\sqrt{v_0^2-v_c^2\sin^2u/2}}
-\eqno{\rm(B)}
+T_1=\int_0^{y_{\max}}\frac{du}{\sqrt{v_0^2-v_c^2\sin^2u/2}}\tag{B}
 \]
 \item % (c)
 Substitute $\sin u/2=(v_0/v_c)\sin\theta$ in (B) to obtain
 \[
-T_1=2\int_0^{\pi/2}\frac{d\theta}{\sqrt{v_c^2-v_0^2\sin^2\theta}}.
-\eqno{\rm(C)}
+T_1=2\int_0^{\pi/2}\frac{d\theta}{\sqrt{v_c^2-v_0^2\sin^2\theta}}.\tag{C}
 \]
 \item % (d)
 Conclude from  symmetry
@@ -3386,17 +3344,14 @@ y$, then $\overline y$ is an unstable equilibrium of $y''+p(y)=0$.
 \end{exerciselist}
 
 
-\section{Applications to Curves}
+\section{Applications to Curves}\label{sec:app_curves}
 
-\noindent
 \boxit{One-Parameter Families of Curves}
 
-
-\noindent
 We begin with two examples of families of curves generated by varying
 a parameter over a set of real numbers.
 
-\begin{example}\label{example:4.5.1} \rm
+\begin{example}\label{example:4.5.1}
 For each value of the parameter $c$, the equation
 \begin{equation} \label{eq:4.5.1}
 y-cx^2=0
@@ -3414,7 +3369,7 @@ $c<0$.   If $c=0$, the curve is the $x$ axis (Figure~\ref{figure:4.5.1}).
   \label{figure:4.5.1}
 \end{figure}
 
-\begin{example} \label{example:4.5.2} \rm
+\begin{example} \label{example:4.5.2}
 For each value of the parameter $c$ the equation
 \begin{equation} \label{eq:4.5.2}
 y=x+c
@@ -3440,14 +3395,14 @@ y=x+c
 \tagstructend
 \end{minipage}
 
-\begin{definition}\color{blue} \label{thmtype:4.5.1}
-\rm An equation that can be written in the form
- \begin{equation} \label{eq:4.5.3}
+\begin{definition}\label{thmtype:4.5.1}
+An equation that can be written in the form
+\begin{equation} \label{eq:4.5.3}
 H(x,y,c)=0
 \end{equation}
-is said to define a \emph{\color{blue}one-parameter family of curves} if$,$ for
-each value of $c$ in in some nonempty set of real numbers$,$ the set of
-points $(x,y)$ that satisfy  \eqref{eq:4.5.3} forms a curve in the
+is said to define a \emph{\color{blue}one-parameter family of curves} if, for
+each value of $c$ in in some nonempty set of real numbers, the set of
+points $(x,y)$ that satisfy \eqref{eq:4.5.3} forms a curve in the
 $xy$-plane.
 \end{definition}
 
@@ -3457,7 +3412,7 @@ can be written in this form as $y-x-c=0$.)
 
 
 
-\begin{example}\label{example:4.5.3} \rm
+\begin{example}\label{example:4.5.3}
 If $c>0$,  the graph of the equation
 \begin{equation} \label{eq:4.5.4}
 x^2+y^2-c=0
@@ -3473,7 +3428,7 @@ This family consists of all circles centered at $(0,0)$
 
 
 
-\begin{example}\label{example:4.5.4} \rm
+\begin{example}\label{example:4.5.4}
  The equation
 \[
 x^2+y^2+c^2=0
@@ -3494,8 +3449,8 @@ differential equation for which every  member of the family is an integral
 curve.
 This suggests the next definition.
 
-\begin{definition}\color{blue} \label{thmtype:4.5.2}
-\rm If every curve in a one-parameter family defined by the equation
+\begin{definition}\label{thmtype:4.5.2}
+If every curve in a one-parameter family defined by the equation
 \begin{equation} \label{eq:4.5.5}
 H(x,y,c)=0
 \end{equation}
@@ -3518,7 +3473,7 @@ equation for the family. If it does contain $c$, it may be
 possible to obtain a differential equation for the family by
 eliminating $c$ between \eqref{eq:4.5.5} and \eqref{eq:4.5.7}.
 
-\begin{example}\label{example:4.5.5}  \rm
+\begin{example}\label{example:4.5.5}
 Find a differential equation for the family of curves defined by
 \begin{equation}  \label{eq:4.5.8}
 y=cx^2.
@@ -3543,8 +3498,7 @@ The next example shows that members of a given family of curves
 may be obtained by joining  integral curves for more than one
 differential equation.
 
-\begin{example}\label{example:4.5.6} \rm
-\mbox{}
+\begin{example}\label{example:4.5.6}
 \begin{alist}
 \item %(a)
 Try to find a differential equation for the family of lines tangent
@@ -3661,14 +3615,12 @@ Figure~\ref{figure:4.5.5}.
 \end{figure}
 
 
-
 \boxit{Geometric Problems}
 
-\noindent
 We now consider some geometric problems that can be solved by means of
 differential equations.
 
-\begin{example}\label{example:4.5.7}   \rm
+\begin{example}\label{example:4.5.7}
 Find curves $y=y(x)$ such that every point $(x_0,y(x_0))$ on the curve
 is the midpoint of the line segment with endpoints on the coordinate
 axes and tangent to the curve at $(x_0,y(x_0))$
@@ -3736,7 +3688,7 @@ solutions define a family of hyperbolas (Figure~\ref{figure:4.5.7}).
 \end{minipage}
 
 
-\begin{example}\label{example:4.5.8}\rm
+\begin{example}\label{example:4.5.8}
 Find curves $y=y(x)$ such that the tangent line to the curve at any
 point $(x_0,y(x_0))$ intersects the $x$-axis at $(x^2_0,0)$.
 Figure~\ref{figure:4.5.8} illustrates the situation in the case where
@@ -3792,10 +3744,8 @@ a hyperbola with vertical asymptote $x=1$ and horizontal asymptote
 $y=c$. Figure~\ref{figure:4.5.9} shows the graphs for $c\ne0$.
 
 
-
 \boxit{Orthogonal Trajectories}
 
-\noindent
 Two curves $C_1$ and $C_2$ are said to be \emph{orthogonal} at a
 point of intersection $(x_0,y_0)$ if they have perpendicular tangents
 at $(x_0,y_0)$. (Figure~\ref{figure:4.5.10}). A curve is said to be an
@@ -3875,7 +3825,7 @@ y'=-\frac{1}{f(x,y)}
 to find the orthogonal trajectories.
 
 
-\begin{example}\label{example:4.5.9} \rm
+\begin{example}\label{example:4.5.9}
 Find the orthogonal trajectories of the family of circles
 \begin{equation} \label{eq:4.5.17}
 x^2+y^2=c^2 \quad (c>0).
@@ -3909,7 +3859,7 @@ origin is an orthogonal trajectory of the given family \eqref{eq:4.5.17}
 geometry which states that a diameter of a circle and a tangent line
 to the circle at the end of the diameter are perpendicular.
 
-\begin{example}\label{example:4.5.10} \rm
+\begin{example}\label{example:4.5.10}
 Find the orthogonal trajectories of the family of hyperbolas
 \begin{equation}  \label{eq:4.5.18}
 xy=c \quad (c\ne0)
@@ -3952,7 +3902,7 @@ $y=x$ and $y=-x$ if $k=0$ (Figure~\ref{figure:4.5.12}).
   \label{figure:4.5.12}
 \end{figure}
 
-\begin{example}\rm
+\begin{example}
 Find the orthogonal trajectories of the family of circles defined by
 \begin{equation} \label{eq:4.5.19}
 (x-c)^2+y^2=c^2 \quad (c\ne0).
@@ -4131,37 +4081,32 @@ Also, find the points of tangency.
 \item % (a)
 Show that the equation of the line tangent to the circle
 \[
-x^2+y^2=1
-\eqno{\rm (A)}
+x^2+y^2=1\tag{A}
 \]
 at a point $(x_0,y_0)$  on the circle is
 \[
-y=\dst\frac{1-x_0x}{y_0}\mbox{\quad if \quad} x_0\ne\pm1.
-\eqno{\rm (B)}
+y=\dst\frac{1-x_0x}{y_0}\mbox{\quad if \quad} x_0\ne\pm1.\tag{B}
 \]
 \item % (b)
 Show that if $y'$ is the slope of a nonvertical tangent line to the
 circle (A) and $(x,y)$ is a point on the tangent line then
 \[
-(y')^2(x^2-1)-2xyy'+y^2-1=0.
-\eqno{\rm (C)}
+(y')^2(x^2-1)-2xyy'+y^2-1=0.\tag{C}
 \]
 \item % (c)
 Show that the segment of the tangent line (B) on which $(x-x_0)/y_0>0$
 is an integral curve of the differential equation
 \[
-y'=\frac{xy-\sqrt{x^2+y^2-1}}{x^2-1},
-\eqno{\rm (D)}
+y'=\frac{xy-\sqrt{x^2+y^2-1}}{x^2-1},\tag{D}
 \]
 while the segment on which $(x-x_0)/y_0<0$ is an integral curve of the
 differential equation
 \[
-y'=\frac{xy+\sqrt{x^2+y^2-1}}{x^2-1}.
-\eqno{\rm (E)}
+y'=\frac{xy+\sqrt{x^2+y^2-1}}{x^2-1}.\tag{E}
 \]
 
-\hint{Use the quadratic formula to solve ${\rm (C)}$ for
-$y'$. Then substitute {\rm (B)} for $y$ and
+\hint{Use the quadratic formula to solve (C) for
+$y'$. Then substitute (B) for $y$ and
  choose the $\pm$ sign in the quadratic formula so that the
 resulting expression for $y'$ reduces to the known slope
 $y'=-x_0/y_0$.}
@@ -4179,38 +4124,33 @@ Find the equations of two lines through (5,5) tangent to the circle
 \item % (a)
 Show that the equation of the line tangent to the  parabola
 \[
-x=y^2
-\eqno{\rm (A)}
+x=y^2\tag{A}
 \]
 at a point $(x_0,y_0)\ne(0,0)$  on the parabola is
 \[
-y=\dst\frac{y_0}{2}+\dst\frac{x}{2y_0}.
-\eqno{\rm (B)}
+y=\dst\frac{y_0}{2}+\dst\frac{x}{2y_0}.\tag{B}
 \]
 \item % (b)
 Show that if $y'$ is the slope of a nonvertical tangent line
 to the parabola (A) and $(x,y)$ is a point on the tangent
 line then
 \[
-4x^2(y')^2-4xyy'+x=0.
-\eqno{\rm (C)}
+4x^2(y')^2-4xyy'+x=0.\tag{C}
 \]
 \item % (c)
 Show that the segment of the tangent line defined in \part{a} on which
 $x>x_0$ is an integral curve of the differential equation
 \[
-y'=\frac{y+\sqrt{y^2-x}}{2x},
-\eqno{\rm (D)}
+y'=\frac{y+\sqrt{y^2-x}}{2x},\tag{D}
 \]
 while the segment on which $x<x_0$ is an integral curve of the
 differential equation
 \[
-y'=\frac{y-\sqrt{y^2-x}}{2x},
-\eqno{\rm (E)}
+y'=\frac{y-\sqrt{y^2-x}}{2x},\tag{E}
 \]
 
-\hint{Use the quadratic formula to solve ${\rm (C)}$ for $y'$. Then
-substitute {\rm (B)} for $y$ and choose the $\pm$ sign in the
+\hint{Use the quadratic formula to solve (C) for $y'$. Then
+substitute (B) for $y$ and choose the $\pm$ sign in the
 quadratic formula so that the resulting expression for $y'$ reduces to
 the known slope $y'=\dst\frac{1}{2y_0}$.}
 
@@ -4224,12 +4164,12 @@ $y=\sqrt x$ and $y=-\sqrt x$ for $x>0$, are also integral curves of
 lines tangent to the parabola $x=y^2$ and passing through the given
 point. Also find the points of tangency.
 
-\begin{tabular}[t]{@{}p{78pt}@{}p{78pt}p{78pt}p{78pt}}
-{\bf (a)}\; $(-5,2)$
-&{\bf (b)}\; $(-4,0)$
-&{\bf (c)}\; $(7,4)$
-&{\bf (d)}\; $(5,-3)$
-\end{tabular}
+\begin{alist}[columns=4]
+\item $(-5,2)$
+\item $(-4,0)$
+\item $(7,4)$
+\item $(5,-3)$
+\end{alist}
 
 \item\label{exer:4.5.18}Find a curve $y=y(x)$ through (1,2) such that the tangent to the curve
 at any point $(x_0,y(x_0))$ intersects the $x$ axis at
