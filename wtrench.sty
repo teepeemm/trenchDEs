@@ -24,6 +24,8 @@
 \theoremstyle{theorem}
 \newtheorem{theorem}{Theorem}[section]
 \AddToHook{env/theorem/begin}{\color{blue}}
+\newtheorem{definition}[theorem]{Definition}[section]
+\AddToHook{env/definition/begin}{\color{blue}}
 
 \newtheoremstyle{example}
  {\topsep}
@@ -254,25 +256,24 @@
  \end{enumext}%
 }
 
-\newenvironment{definition}[1]{
-\begin{trivlist}\item[]{\sc\bf Definition}\space
-\refstepcounter{theorem}{\bf\thetheorem}\
- #1}{\end{trivlist}}
- 
-\ExplSyntaxOn
+%\newenvironment{definition}[1]{
+%\begin{trivlist}\item[]{\sc\bf Definition}\space
+%\refstepcounter{theorem}{\bf\thetheorem}\
+% #1}{\end{trivlist}}
+
+
 \IfDocumentMetadataT {
-  \tag_if_active:T {
+  \UseName{tag_if_active:T} {
     \if@partsw\else  % \includeonly has not been seen
-      \directlua{ if ~ status.list().hash_extra ~ < ~ 600001 ~ then ~
-        error('TOO~FEW~HASHES:~try~--cnf-line="hash_extra=1000000"') ~
+      \directlua{ if status.list().hash_extra < 600001 then
+        error('TOO FEW HASHES: try --cnf-line="hash_extra=1000000"')
         end }
-      \directlua{ if ~ status.list().max_strings ~ < ~ 500001 ~ then ~
-        error('TOO~FEW~STRINGS:~try~--cnf-line="max_strings=1000000"') ~
+      \directlua{ if status.list().max_strings < 500001 then
+        error('TOO FEW STRINGS: try --cnf-line="max_strings=1000000"')
         end }
     \fi
   }
 }
-\ExplSyntaxOff
 
 
 \newenvironment{tindex}
