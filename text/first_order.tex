@@ -1,56 +1,57 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{First Order Equations}\label{ch:first_order}
 
 
 \noindent
-IN THIS CHAPTER we study
+\textsc{In this chapter} we study
 first order equations for which there are general methods of
 solution.
 
 
 \medskip\noindent
-SECTION~2.1 deals with linear equations, the simplest kind
+\zcref[S,CAP,font=\scshape]{sec:linar_first_order} deals with linear equations,
+the simplest kind
 of first order equations. In this section we introduce the method of
 variation of parameters. The idea underlying this method will be a
 unifying theme for our approach to solving many different kinds of
 differential equations throughout the book.
 
 \medskip\noindent
-SECTION~2.2 deals with separable equations, the simplest
+\zcref[S,CAP,font=\scshape]{sec:separable} deals with separable equations, the simplest
 nonlinear equations. In this section we introduce the idea of implicit
 and constant solutions of differential equations, and we point out
 some differences between the properties of linear and nonlinear
 equations.
 
 \medskip\noindent
-SECTION~2.3 discusses existence and
+\zcref[S,CAP,font=\scshape]{sec:exist_unique} discusses existence and
 uniqueness of solutions of nonlinear equations. Although it may seem
-logical to place this section before Section~2.2, we
+logical to place this section before \zcref*{sec:separable}, we
 presented
-Section~2.2 first so we could have illustrative examples in
-Section~2.3.
+\zcref*{sec:separable} first so we could have illustrative examples in
+\zcref*{sec:exist_unique}.
 
 \medskip\noindent
-SECTION~2.4 deals with nonlinear equations that are not
-separable, but can be transformed into separable equations by a
+\zcref[S,CAP,font=\scshape]{sec:transform_separable} deals with nonlinear equations that
+are not separable, but can be transformed into separable equations by a
 procedure similar to variation of parameters.
 
 
 \medskip\noindent
-SECTION~2.5 covers exact differential equations, which are
+\zcref[S,CAP,font=\scshape]{sec:exact} covers exact differential equations, which are
 given this name because the method for solving them uses the idea of
 an exact differential from calculus.
 
 
 \medskip\noindent
-SECTION~2.6 deals with
+\zcref[S,CAP,font=\scshape]{sec:integrating_factors} deals with
 equations that are not exact, but can made exact by multiplying them
 by a function known called \emph{\color{blue}integrating factor}.
 
-
-
-
 \newpage
+
 
 \section{Linear First Order Equations}\label{sec:linar_first_order}
 
@@ -71,41 +72,36 @@ we call it the \emph{\color{blue}trivial solution}. Any  other solution
 is \emph{\color{blue}nontrivial}.
 
 
-\begin{example}\label{example:2.1.1}\rm
+\begin{example}\label{example:2.1.1}
  The first order equations
-\begin{eqnarray*}
-x^2y'+3y&=&x^2,\\[2\jot]
-xy'-8x^2y&=&\sin x,\\
-xy'+(\ln x)y&=&0,\\
-y'&=&x^2y - 2,
-\end{eqnarray*}
+\begin{align*}
+x^2y'+3y&=x^2,\\
+xy'-8x^2y&=\sin x,\\
+xy'+(\ln x)y&=0,\\
+y'&=x^2y - 2,
+\end{align*}
 are not in the form \eqref{eq:2.1.1}, but they are linear, since they can
 be rewritten as
-\begin{eqnarray*}
-y'+\frac{3}{x^2}y&=&1,\\
-y'-8xy&=&\frac{\sin x}{x},\\
-y'+\frac{\ln x}{x}y&=&0,\\
-y'-x^2y&=&-2.
-\end{eqnarray*}
+\begin{align*}
+y'+\frac{3}{x^2}y&=1,\\
+y'-8xy&=\frac{\sin x}{x},\\
+y'+\frac{\ln x}{x}y&=0,\\
+y'-x^2y&=-2.
+\end{align*}
 \end{example}
 
-
-\begin{example}\label{example:2.1.2}\rm
+\begin{example}\label{example:2.1.2}
 Here are some
 nonlinear first order equations:
-\[
-\begin{array}{rcrc}
-xy'+3y^2 & =& 2x&\qquad\mbox{(because $y$ is squared)},\\[2\jot]
-yy'& =&3&\qquad\mbox{(because of the product $yy'$)},\\[2\jot]
-y'+xe^y &=&12&\qquad\mbox{(because of $e^y$)}.
-\end{array}
-\]
+\begin{align*}
+xy'+3y^2 & = 2x&&\text{(because $y$ is squared)},\\
+yy'& =3&&\text{(because of the product $yy'$)},\\
+y'+xe^y &=12&&\text{(because of $e^y$)}.
+\end{align*}
 \end{example}
 
 \boxit{General Solution of a Linear First Order Equation}
 
-
-\noindent
 To motivate a definition that we'll need, consider the
 simple linear first order equation
 \begin{equation}\label{eq:2.1.2}
@@ -118,7 +114,9 @@ y=-\frac{1}{x}+c,
 \end{equation}
 where $c$ is an arbitrary constant.
 We call $c$ a
-\emph{\color{blue}parameter} and say that \eqref{eq:2.1.3} defines a \emph{\color{blue}one-parameter family} of functions. For each real number $c$, the
+\emph{\color{blue}parameter} and say that \eqref{eq:2.1.3} defines a
+\emph{\color{blue}one-parameter family} of functions.
+For each real number $c$, the
 function defined by \eqref{eq:2.1.3} is a solution of \eqref{eq:2.1.2}
 on $(-\infty,0)$ and $(0,\infty)$;     moreover, every solution of
 \eqref{eq:2.1.2} on either of these intervals is of the form
@@ -171,18 +169,16 @@ continuous on an open interval $(a,b)$, but $P_0$ \emph{\color{blue}does} have a
 zero in $(a,b)$, then \eqref{eq:2.1.5} may fail to have a general
 solution on $(a,b)$ in the sense just defined. Since this isn't  a
 major point that needs to be developed in depth, we won't discuss it
-further;     however, see Exercise~\ref{exer:2.1.44} for
-an example.
+further; however, see \zcref{exer:2.1.44} for an example.
 
 \boxit{Homogeneous Linear First Order Equations}
 
-\noindent
 We begin with the problem of finding the general solution of
 a homogeneous linear first order equation.
 The next example recalls a familiar result from calculus.
 
 
-\begin{example}\label{example:2.1.3} \rm
+\begin{example}\label{example:2.1.3}
    Let $a$ be a constant.
 \begin{alist}
 \item %(a)
@@ -199,8 +195,8 @@ y'-ay=0,\quad y(x_0)=y_0.
 \end{alist}
 \end{example}
 
-
-\solutionpart{a}
+\begin{alistSolution}
+\item
 You already know from calculus that if $c$ is any constant, then
 $y=ce^{ax}$ satisfies \eqref{eq:2.1.6}. However, let's pretend  you've
 forgotten this, and use this problem to illustrate a general method
@@ -237,30 +233,29 @@ yields the trivial solution,  \emph{\color{blue}all} solutions of
 \eqref{eq:2.1.7} is a solution of \eqref{eq:2.1.6} for every choice of $c$,
 since differentiating \eqref{eq:2.1.7} yields $y'=ace^{ax}=ay$.
 
-\solutionpart{b}   Imposing  the initial condition $y(x_0)=y_0$
+\item   Imposing  the initial condition $y(x_0)=y_0$
 yields $y_0=ce^{ax_0}$, so $c=y_0e^{-ax_0}$ and
 \[
 y=y_0e^{-ax_0}e^{ax}=y_0e^{a(x-x_0)}.
 \]
-Figure~\ref{figure:2.1.1} show the
+\zcref[S]{figure:2.1.1} show the
 graphs of this function with $x_{0}=0$, $y_{0}=1$, and various values of
 $a$.
+\end{alistSolution}
 
 
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig020101}
+  \includegraphics[alt={Six solution curves corresponding to the values -4, -2.5, -1, 1, 1.5, and 2 for a.  The more negative values of a decrease more quickly.  The more positive values of a increase more quickly.},
+  width=5.4in,height=3.66in,keepaspectratio]{fig020101}
 \color{blue}
   \caption{Solutions of $y'-ay=0$, $y(0)=1$}
   \label{figure:2.1.1}
 \end{figure}
 
 
-\begin{example} \label{example:2.1.4}\rm
-
+\begin{example} \label{example:2.1.4}
 \begin{alist}
 \item % (a)
 Find the general solution of
@@ -277,7 +272,8 @@ Solve the initial value problem
 \end{example}
 
 
-\solutionpart{a}
+\begin{alistSolution}
+\item
 We rewrite \eqref{eq:2.1.8} as
 \begin{equation}\label{eq:2.1.10}
 y'+\frac{1}{x}y=0,
@@ -291,7 +287,7 @@ open interval I on which $y$ has no zeros. We can rewrite
 \]
 for $x$ in $I$. Integrating shows that
 \[
-\ln|y|=-\ln|x|+k,\mbox{\quad so\quad}|y|=\frac{e^k}{|x|}.
+\ln|y|=-\ln|x|+k,\quad\text{so}\quad|y|=\frac{e^k}{|x|}.
 \]
 Since a function that satisfies the last equation can't change sign on
 either $(-\infty,0)$ or $(0,\infty)$, we can rewrite this result more
@@ -303,8 +299,8 @@ where
 \[
 c=
 \begin{cases}
-\phantom{-}e^k&\mbox{if } y>0,\\
--e^k&\mbox{if } y<0.
+\phantom{-}e^k&\text{if } y>0,\\
+-e^k&\text{if } y<0.
 \end{cases}
 \]
 We've now shown that every solution of \eqref{eq:2.1.10} is given by
@@ -317,39 +313,36 @@ differentiating \eqref{eq:2.1.11} yields
 y'=-\frac{c}{x^2},
 \]
 and substituting this and \eqref{eq:2.1.11} into  \eqref{eq:2.1.10} yields
-\begin{eqnarray*}
-y'+\frac{1}{x}y&=&-\frac{c}{x^2}+\frac{1}{x}\frac{c}{x}\\[2\jot]
-&=&-\frac{c}{x^2}+\frac{c}{x^2}=0.
-\end{eqnarray*}
+\begin{align*}
+y'+\frac{1}{x}y&=-\frac{c}{x^2}+\frac{1}{x}\frac{c}{x}\\
+&=-\frac{c}{x^2}+\frac{c}{x^2}=0.
+\end{align*}
 
-Figure~\ref{figure:2.1.2} shows the graphs of some solutions corresponding
+\zcref[S]{figure:2.1.2} shows the graphs of some solutions corresponding
 to various values of $c$
 
 
-\solutionpart{b} Imposing the initial condition $y(1)=3$ in
+\item Imposing the initial condition $y(1)=3$ in
 \eqref{eq:2.1.11} yields $c=3$. Therefore the solution of \eqref{eq:2.1.9} is
 \[
 y=\frac{3}{x}.
 \]
 The interval of validity of this solution is  $(0,\infty)$.
+\end{alistSolution}
 
-
-   \begin{figure}[tbp]
+   \begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
-  width=5.67in,height=3.66in,keepaspectratio]{fig020102}
+  \includegraphics[alt={Several hyperbolas y=c/x.  When c>0 the hyperbolas are in the first and third quadrants.  When c<0 the hyperbolas are in the second and fourth quadrants.},
+  width=5.4in,height=3.66in,keepaspectratio]{fig020102}
 \color{blue}
   \caption{Solutions of $xy'+y=0$ on $(0,\infty)$ and $(-\infty,0)$}
   \label{figure:2.1.2}
 \end{figure}
 
-
-
-The results in Examples~\ref{example:2.1.3}\part{a}  and
-\ref{example:2.1.4}\part{b}
+The results in Examples~\ref{example:2.1.3}(a) and \ref{example:2.1.4}(b)
 are special cases of the next theorem.
 
-\begin{theorem}\color{blue}\label{thmtype:2.1.1}
+\begin{theorem}\label{thmtype:2.1.1}
 If $p$ is continuous on $(a,b),$ then the general solution
 of the homogeneous equation
 \begin{equation}\label{eq:2.1.12}
@@ -404,7 +397,7 @@ $(a,b)$, so we can rewrite the last equation as $y=ce^{-P(x)}$, where
 c=\begin{cases}
 \phantom{-}e^k&\mbox{if } y>0\mbox{ on }(a,b),\\
 -e^k&\mbox{if } y<0\mbox{ on }(a,b).
-\end{cases}
+\end{cases}\qedhere
 \]
 \end{proof}
 
@@ -413,15 +406,13 @@ c=\begin{cases}
 \remark{Rewriting a first order differential equation so that one
 side depends only on $y$ and $y'$ and the other depends only on $x$
 is called \emph{\color{blue}separation of variables}. We did this in
-Examples~ \ref{example:2.1.3} and  \ref{example:2.1.4}, and in rewriting
-\eqref{eq:2.1.12} as \eqref{eq:2.1.15}.We'llapply this method to nonlinear
-equations in Section~2.2.}
+\zcref{example:2.1.3,example:2.1.4}, and in rewriting
+\eqref{eq:2.1.12} as \eqref{eq:2.1.15}. We'll apply this method to nonlinear
+equations in \zcref{sec:separable}.}
 }
 
 \boxit{Linear Nonhomogeneous First Order Equations}
 
-
-\noindent
 We'll now solve the nonhomogeneous equation
 \begin{equation}\label{eq:2.1.16}
 y'+p(x)y=f(x).
@@ -445,7 +436,7 @@ this method viewed $u$ as a ``parameter'' that varies; hence, the name
 
 If
 \[
-y=uy_1,\mbox{\quad then\quad} y'=u'y_1+uy_1'.
+y=uy_1,\quad\text{then}\quad y'=u'y_1+uy_1'.
 \]
 Substituting these expressions for $y$ and $y'$ into \eqref{eq:2.1.16}
 yields
@@ -460,7 +451,7 @@ since $y_1$ is a solution of the complementary equation; that is,
 \[
 y_1'+p(x)y_1=0.
 \]
-In the proof of Theorem~\ref{thmtype:2.2.1} we saw that $y_1$
+In the proof of \zcref{thmtype:2.2.1} we saw that $y_1$
 has no zeros on an interval where $p$ is continuous. Therefore
 we can divide \eqref{eq:2.1.17} through by $y_1$ to obtain
 \[
@@ -472,7 +463,7 @@ multiply  the result by $y_1$ to get the general solution of
 Before turning to the formal proof of this claim, let's consider
 some examples.
 
-\begin{example}\label{example:2.1.5}\rm
+\begin{example}\label{example:2.1.5}
 Find the general solution of
 \begin{equation}\label{eq:2.1.18}
 y'+2y=x^3e^{-2x}.
@@ -480,17 +471,17 @@ y'+2y=x^3e^{-2x}.
 \end{example}
 
 
-By applying \part{a} of Example~ \ref{example:2.1.3} with $a=-2$, we see
+By applying (a) of \zcref{example:2.1.3} with $a=-2$, we see
 that $y_1=e^{-2x}$ is a solution of the  complementary equation
 $y'+2y=0$. Therefore we seek solutions of \eqref{eq:2.1.18} in the form
  $y=ue^{-2x}$,  so that
 \begin{equation} \label{eq:2.1.19}
- y'=u'e^{-2x}-2ue^{-2x}\mbox{\quad  and \quad }
+ y'=u'e^{-2x}-2ue^{-2x}\quad\text{and}\quad
 y'+2y=u'e^{-2x}-2ue^{-2x}+2ue^{-2x}=u'e^{-2x}.
 \end{equation}
 Therefore $y$ is a solution of \eqref{eq:2.1.18} if and only if
 \[
-u'e^{-2x}=x^3e^{-2x}\mbox{\quad or, equivalently,\quad} u'=x^3.
+u'e^{-2x}=x^3e^{-2x}\quad\text{or, equivalently,}\quad u'=x^3.
 \]
 Therefore
 \[
@@ -502,12 +493,12 @@ y=ue^{-2x}=e^{-2x}\left(\frac{x^4}{4}+c\right)
 \]
 is the general  solution of \eqref{eq:2.1.18}.
 
-Figure~\ref{figure:2.1.3} shows a direction field and some integral curves
+\zcref[S]{figure:2.1.3} shows a direction field and some integral curves
 for \eqref{eq:2.1.18}.
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={A field for -1<x<1 and -2<y<2.  For x near -1, the arrows point down and to the right.  As x increases, the arrows turn to point to the right and toward y=0.  Several solution curves follow the arrows.},
   width=5.67in,height=3.66in,keepaspectratio]{fig020103}
 \color{blue}
   \caption{A direction field and integral curves for $y'+2y=x^{2}e^{-2x}$}
@@ -515,7 +506,7 @@ for \eqref{eq:2.1.18}.
 \end{figure}
 
 
-\begin{example}\label{example:2.1.6}%\rm\mbox{}%\newline
+\begin{example}\label{example:2.1.6}
 \begin{alist}
 \item %(a)
 Find the general solution
@@ -530,7 +521,8 @@ y'+(\cot x)y=x\csc x,\quad y(\pi/2)=1.
 \end{alist}
 \end{example}
 
-\solutionpart{a} Here $p(x)=\cot x$ and $f(x)= x\csc x$ are both
+\begin{alistSolution}
+\item Here $p(x)=\cot x$ and $f(x)= x\csc x$ are both
 continuous except at the points $x=r\pi$, where $r$ is an integer.
 Therefore we seek solutions of \eqref{eq:2.1.20} on the intervals
 $\left(r\pi, (r+1)\pi \right)$.
@@ -558,11 +550,10 @@ so that
 and
 \begin{align}
 y'+(\cot x)y
-&=\dst\frac{u'}{\sin x}-\dst\frac{u\cos x}{\sin^2x}+\dst\frac{u\cot x}{\sin
-x}\notag\\
-&=\dst\frac{u'}{\sin x}-\dst\frac{u\cos x}{\sin^2x}+\dst\frac{u\cos
-x}{\sin^2 x}\\\label{eq:2.1.24}
-&=\dst\frac{u'}{\sin x}.\notag
+&=\dfrac{u'}{\sin x}-\dfrac{u\cos x}{\sin^2x}+\dfrac{u\cot x}{\sin x}\notag\\
+&=\dfrac{u'}{\sin x}-\dfrac{u\cos x}{\sin^2x}+\dfrac{u\cos x}{\sin^2 x}
+\label{eq:2.1.24}\\
+&=\dfrac{u'}{\sin x}.\notag
 \end{align}
 Therefore $y$ is a solution of \eqref{eq:2.1.20} if and only if
 \[
@@ -576,8 +567,7 @@ y=\frac{u}{\sin x}=\frac{x^2}{2\sin x}+\frac{c}{\sin x}.
 is the general solution of \eqref{eq:2.1.20} on every interval
 $\left(r\pi,(r+1)\pi\right)$ ($r=$integer).
 
-
-\solutionpart{b}
+\item
 Imposing the initial condition $y(\pi/2)=1$ in \eqref{eq:2.1.25} yields
 \[
 1=\frac{\pi^2}{8}+c\mbox{\quad or\quad} c=1-\frac{\pi^2}{8}.
@@ -588,46 +578,44 @@ y=\frac{x^2}{2\sin x}+\frac{(1-\pi^2/8)}{\sin x}
 \]
 is a solution of \eqref{eq:2.1.21}.
 The interval of validity of this solution is $(0,\pi)$;
-Figure~\ref{figure:2.1.4} shows its graph.
+\zcref{figure:2.1.4} shows its graph.
+\end{alistSolution}
 
-
-   \begin{figure}[H]
-  \centering
-\scalebox{.8} { \includegraphics[bb=-78 148 689
-643,width=5.67in,height=3.66in,keepaspectratio]{fig020104}}
+\begin{figure}
+\centering
+\includegraphics[alt={An increasing blue curve beginning near negative infinity as x approaches 0, crossing the x axis near (0.7,0), and finishing near positive infinity as x approaches π.},
+width=5.4in,height=3in,keepaspectratio]{fig020104}
 \color{blue}
 \caption{Solution of
 $y'+(\cot x)y=x\csc x, y(\pi/2)=1$}
   \label{figure:2.1.4}
 \end{figure}
 
-
+{
 \color{blue}
 \remark{It wasn't necessary to do the computations
 \eqref{eq:2.1.23} and \eqref{eq:2.1.24} in
-Example~\ref{example:2.1.6}, since we showed in the discussion preceding
-Example~\ref{example:2.1.5} that if $y=uy_1$ where $y_1'+p(x)y_1=0$,
+\zcref{example:2.1.6}, since we showed in the discussion preceding
+\zcref{example:2.1.5} that if $y=uy_1$ where $y_1'+p(x)y_1=0$,
 then
 $y'+p(x)y=u'y_1$. We did these computations so you would see this
 happen in this specific example. We recommend that you include these
-``unnecesary'' computations in doing exercises, until you're confident
+``unnecessary'' computations in doing exercises, until you're confident
 that you really understand the method. After that, omit them.}
-\color{black}
+}
 
 \medskip
 
 
 We summarize the method  of variation of parameters for
 solving
-
 \begin{equation} \label{eq:2.1.26}
 y'+p(x)y=f(x)
 \end{equation}
 as follows:
 
 \medskip
-\color{blue}
-\begin{alist}
+\begin{alist}[before={\color{blue}}]
 \item % (a)
 Find a function $y_1$  such that
 \[
@@ -648,7 +636,6 @@ integration.
 \item % (e)
 Substitute $u$ into \eqref{eq:2.1.27}  to obtain $y$.
 \end{alist}
-\color{black}
 
 \medskip
 To solve an equation written as
@@ -661,13 +648,11 @@ and then follow this   procedure.
 
 \boxit{Solutions in Integral Form}
 
-
-\noindent
 Sometimes the integrals that arise in solving a linear first order
 equation can't be evaluated in terms of elementary functions. In this
 case the solution must be left in terms of an integral.
 
-\begin{example}\label{example:2.1.7}\rm  \mbox{}\newline
+\begin{example}\label{example:2.1.7}
 \begin{alist}
 \item % (a)
 Find the general solution of
@@ -682,7 +667,8 @@ y'-2xy=1,\quad y(0)=y_0.
 \end{alist}
 \end{example}
 
-\solutionpart{a}
+\begin{alistSolution}
+\item
 To apply variation of parameters, we need a nontrivial solution $y_1$
 of  the complementary equation;   thus,
 $y_1'-2xy_1=0$, which we rewrite as
@@ -710,7 +696,7 @@ Therefore the best available form for the  general solution of
 \begin{equation}\label{eq:2.1.29} y=ue^{x^2}= e^{x^2}\left(c+\int
 e^{-x^2}dx\right). \end{equation}
 
-\solutionpart{b}
+\item
   Since the initial condition in \eqref{eq:2.1.28}
 is imposed at $x_0=0$, it is convenient to rewrite \eqref{eq:2.1.29} as
 \[
@@ -727,15 +713,15 @@ right can be evaluated by numerical methods. An alternate procedure is
 to apply the numerical integration procedures discussed in
 Chapter~3 directly to the initial value problem
 \eqref{eq:2.1.28}.
-Figure~\ref{figure:2.1.5} shows graphs of
+\zcref[S]{figure:2.1.5} shows graphs of
  of \eqref{eq:2.1.30} for several values of $y_0$.
+\end{alistSolution}
 
 
-
-\begin{figure}[H]
+\begin{figure}
   \centering
-\scalebox{.9}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020105} }
+  \includegraphics[alt={Ten solution curves that begin at x=0 and go to the right, turning upward as x increases.},
+  width=5.4in,height=3.3in,keepaspectratio]{fig020105}
 \color{blue}
   \caption{Solutions of $y'-2xy=1$, $y(0)=y_{0}$}
   \label{figure:2.1.5}
@@ -743,18 +729,15 @@ Figure~\ref{figure:2.1.5} shows graphs of
 
 \boxit{An Existence and Uniqueness Theorem}
 
-\noindent
 The method of variation of parameters leads to this theorem.
 
-\begin{theorem}\color{blue}\label{thmtype:2.1.2}
- Suppose  $p$ and
-$f$ are continuous on an open interval $(a,b),$  and let $y_1$ be any
-nontrivial solution of the complementary equation
+\begin{theorem}\label{thmtype:2.1.2}
+Suppose $p$ and $f$ are continuous on an open interval $(a,b),$  and let $y_1$
+be any nontrivial solution of the complementary equation
 \[
 y'+p(x)y=0
 \]
-on $(a,b)$.
-Then$:$
+on $(a,b)$. Then:
 \begin{alist}
 \item % (a)
 The general solution of the nonhomogeneous equation
@@ -780,7 +763,8 @@ on $(a,b).$
 \end{theorem}
 
 \begin{proof}
-\part{a} To show that \eqref{eq:2.1.32} is the general solution of
+\begin{alist}
+\item To show that \eqref{eq:2.1.32} is the general solution of
 \eqref{eq:2.1.31} on $(a,b)$, we must prove that:
 
 \begin{rmlist}
@@ -792,7 +776,7 @@ If $c$ is any constant,   the function $y$ in
 is of the form  \eqref{eq:2.1.32} for some constant~$c$.
 \end{rmlist}
 
-To prove \part{i}, we first observe that any function of the form
+To prove (i), we first observe that any function of the form
 \eqref{eq:2.1.32} is defined on $(a,b)$, since $p$ and $f$ are continuous
 on $(a,b)$. Differentiating \eqref{eq:2.1.32} yields
 \[
@@ -800,30 +784,31 @@ y'=y_1'(x)\left(c +\int f(x)/y_1(x)\,
 dx\right)+f(x).
 \]
 Since $y_1'=-p(x)y_1$, this and \eqref{eq:2.1.32} imply that
-\begin{eqnarray*}
-y'&=&-p(x)y_1(x)\left(c +\int f(x)/y_1(x)\, dx\right)+f(x)\\
-&=&-p(x)y(x)+f(x),
-\end{eqnarray*}
+\begin{align*}
+y'&=-p(x)y_1(x)\left(c +\int f(x)/y_1(x)\, dx\right)+f(x)\\
+&=-p(x)y(x)+f(x),
+\end{align*}
 which implies that $y$ is a solution of \eqref{eq:2.1.31}.
 
-To prove \part{ii}, suppose   $y$ is a solution of \eqref{eq:2.1.31}
-on $(a,b)$. From the proof of Theorem~\ref{thmtype:2.1.1}, we know that
+To prove (ii), suppose $y$ is a solution of \eqref{eq:2.1.31}
+on $(a,b)$. From the proof of \zcref{thmtype:2.1.1}, we know that
 $y_1$ has no zeros on $(a,b)$, so the function $u=y/y_1$ is defined
 on $(a,b)$. Moreover, since
 \[
 y'=-py+f\mbox{\quad and\quad}y_1'=-py_1,
 \]
-\begin{eqnarray*}
-u'&=&\frac{y_1y'-y_1'y}{y_1^2}\\[2\jot]
-&=&\frac{y_1(-py+f)-(-py_1)y}{y_1^2}=\frac{f}{y_1}.
-\end{eqnarray*}
+we have
+\begin{align*}
+u'&=\frac{y_1y'-y_1'y}{y_1^2}\\
+&=\frac{y_1(-py+f)-(-py_1)y}{y_1^2}=\frac{f}{y_1}.
+\end{align*}
 Integrating $u'=f/y_1$ yields
 \[
 u=\left(c +\int f(x)/y_1(x)\, dx\right),
 \]
 which implies \eqref{eq:2.1.32}, since $y=uy_1$.
 
-\part{b} We've proved \part{a}, where $\int f(x)/y_1(x)\,dx$ in
+\item We've proved (a), where $\int f(x)/y_1(x)\,dx$ in
 \eqref{eq:2.1.32}
 is an arbitrary antiderivative of $f/y_1$. Now it's convenient to
 choose the antiderivative that equals zero when $x=x_0$, and write the
@@ -835,15 +820,13 @@ Since
 \[
 y(x_0)= y_1(x_0)\left(c +\int^{x_0}_{x_0} \frac{f(t)}{y_1(t)}\, dt\right)=cy_1(x_0),
 \]
-we see that
- $y(x_0)=y_0$ if and only if $c=y_0/y_1(x_0)$.
+we see that $y(x_0)=y_0$ if and only if $c=y_0/y_1(x_0)$.\qedhere
+\end{alist}
 \end{proof}
 
 \exercises
 
-\emph{In Exercises~\ref{exer:2.1.1}--\ref{exer:2.1.5} find
-the general solution.}
-
+\emph{In \zcref[range]{exer:2.1.1,exer:2.1.5} find the general solution.}
 
 \begin{exerciselist}
 
@@ -854,74 +837,69 @@ the general solution.}
 
 \item\label{exer:2.1.5}$x^2y'+y=0$
 
-\exercisetext{In Exercises~\ref{exer:2.1.6}--\ref{exer:2.1.11} solve
+\exercisetext{In \zcref[range]{exer:2.1.6,exer:2.1.11} solve
 the initial value problem.}
 
-\item\label{exer:2.1.6}$\dst{y'+\left(\frac{1+x}{x}\right)y=0,\quad y(1)=1}$
+\item\label{exer:2.1.6}$y'+\left(\dfrac{1+x}{x}\right)y=0,\quad y(1)=1$
 
-\item\label{exer:2.1.7}$\dst{xy'+\left(1+\frac{1}{\ln x}\right)y=0,\quad y(e)=1}$
+\item\label{exer:2.1.7}$xy'+\left(1+\dfrac{1}{\ln x}\right)y=0,\quad y(e)=1$
 
-\item\label{exer:2.1.8}$\dst{xy'+(1+ x\cot x)y=0,\quad y\left(\frac{\pi}{2}
-\right)=2}$
+\item\label{exer:2.1.8}$xy'+(1+ x\cot x)y=0,\quad y\left(\dfrac{\pi}{2}
+\right)=2$
 
-\item\label{exer:2.1.9}$\dst{y'-\left(\frac{2x}{1+x^2}\right)y=0,\quad y(0)=2}$
+\item\label{exer:2.1.9}$y'-\left(\dfrac{2x}{1+x^2}\right)y=0,\quad y(0)=2$
 
-\item\label{exer:2.1.10}$\dst{y'+\frac{k}{x}y=0,\quad y(1)=3 \quad\mbox{($k$=
-constant)}}$
+\item\label{exer:2.1.10}$y'+\dfrac{k}{x}y=0,\quad y(1)=3$, where $k$ is
+constant
 
+\item\label{exer:2.1.11}$y'+(\tan kx)y=0,\quad y(0)=2$, where $k$ is
+constant
 
-\item\label{exer:2.1.11}$\dst y'+(\tan kx)y=0,\quad y(0)=2 \quad\mbox{($k=$ constant)}$
-
-\exercisetext{In Exercises~\ref{exer:2.1.12} --\ref{exer:2.1.15} find
+\exercisetext{In \zcref[range]{exer:2.1.12,exer:2.1.15} find
 the general solution. Also, plot a direction field and some integral
 curves on the rectangular region $\{-2\le x\le2,\ -2\le y\le2$\}.}
 
 \item(1)\label{exer:2.1.12}\CGex $y'+3y=1$
-\item(1)\label{exer:2.1.13}\CGex $\dst{y'+\left(\frac{1}{x}-1\right)y=-\frac{2}{x}}$
+\item(1)\label{exer:2.1.13}\CGex $y'+\left(\dfrac{1}{x}-1\right)y=-\dfrac{2}{x}$
 \item(1)\label{exer:2.1.14}\CGex $y'+2xy=xe^{-x^2}$
-\item(1)\label{exer:2.1.15}\CGex $\dst{y'+\frac{2x}{1+x^2}y=\frac{e^{-x}}{1+x^2}}$
+\item(1)\label{exer:2.1.15}\CGex $y'+\dfrac{2x}{1+x^2}y=\dfrac{e^{-x}}{1+x^2}$
 
-\exercisetext{In Exercises~\ref{exer:2.1.16} --\ref{exer:2.1.24} find
+\exercisetext{In \zcref[range]{exer:2.1.16,exer:2.1.24} find
 the general solution.}
 
 
-\item(1)\label{exer:2.1.16}$\dst{y'+\frac{1}{x}y=\frac{7}{x^2}+3}$
-\item(1)\label{exer:2.1.17}\vspace*{8pt} $\dst{y'+\frac{4}{x-1}y
-= \frac{1}{(x-1)^5}+\frac{\sin x}{(x-1)^4}}$
+\item(1)\label{exer:2.1.16}$y'+\dfrac{1}{x}y=\dfrac{7}{x^2}+3$
+\item(1)\label{exer:2.1.17}$y'+\dfrac{4}{x-1}y
+= \dfrac{1}{(x-1)^5}+\dfrac{\sin x}{(x-1)^4}$
 \item(1)\label{exer:2.1.18}$xy'+(1+2x^2)y=x^3e^{-x^2}$
-\item(1)\label{exer:2.1.19}\vspace*{-8pt} $\dst{xy'+2y=\frac{2}{x^2}+1}$
+\item(1)\label{exer:2.1.19}$xy'+2y=\dfrac{2}{x^2}+1$
 \item(1)\label{exer:2.1.20}$y'+(\tan x)y=\cos x$
-\item(1)\label{exer:2.1.21}\vspace*{-5pt} $\dst{(1+x)y'+2y=\frac{\sin x}{ 1 + x}}$
+\item(1)\label{exer:2.1.21}$(1+x)y'+2y=\dfrac{\sin x}{ 1 + x}$
 \item(1)\label{exer:2.1.22}$(x-2)(x-1)y'-(4x-3)y=(x-2)^3$
 \item(1)\label{exer:2.1.23}$y'+(2\sin x\cos x) y=e^{-\sin^2x}$
 \item(1)\label{exer:2.1.24}$x^2y'+3xy=e^x$
 
-\exercisetext{In Exercises~\ref{exer:2.1.25}--\ref{exer:2.1.29} solve the
+\exercisetext{In \zcref[range]{exer:2.1.25,exer:2.1.29} solve the
 initial value problem and sketch the graph of the solution.}
 
 \item\label{exer:2.1.25}\CGex $y'+7y=e^{3x},\quad y(0)=0$
 
-\item\label{exer:2.1.26}\CGex
-$\dst{(1+x^2)y'+4xy=\frac{2}{1+x^2},\quad y(0)=1}$
+\item\label{exer:2.1.26}\CGex $(1+x^2)y'+4xy=\dfrac{2}{1+x^2},\quad y(0)=1$
 
-\item\label{exer:2.1.27}\CGex
-$\dst{xy'+3y=\frac{2}{x(1+x^2)},\quad y(-1)=0}$
+\item\label{exer:2.1.27}\CGex $xy'+3y=\dfrac{2}{x(1+x^2)},\quad y(-1)=0$
 
 
 \item\label{exer:2.1.28}\CGex
-$\dst{y'+ (\cot x)y=\cos x,\quad
-y\left(\frac{\pi}{2}\right)=1}$
+$y'+ (\cot x)y=\cos x,\quad y\left(\dfrac{\pi}{2}\right)=1$
 
-\item\label{exer:2.1.29}\CGex
-$\dst{y'+\frac{1}{x}y=\frac{2}{x^2}+1,\quad y(-1)=0}$
+\item\label{exer:2.1.29}\CGex $y'+\dfrac{1}{x}y=\dfrac{2}{x^2}+1,\quad y(-1)=0$
 
 
-\exercisetext{In Exercises~\ref{exer:2.1.30}--\ref{exer:2.1.37} solve
-the initial value
-problem.}
+\exercisetext{In \zcref[range]{exer:2.1.30,exer:2.1.37} solve
+the initial value problem.}
 
-\item\label{exer:2.1.30}$\dst{(x-1)y'+3y=\frac{1}{(x-1)^3} +
-\frac{\sin x}{(x-1)^2},\quad y(0)=1}$
+\item\label{exer:2.1.30}$(x-1)y'+3y=\dfrac{1}{(x-1)^3} +
+\dfrac{\sin x}{(x-1)^2},\quad y(0)=1$
 
 \item\label{exer:2.1.31}$xy'+2y=8x^2,\quad y(1)=3$
 
@@ -929,26 +907,26 @@ problem.}
 
 \item\label{exer:2.1.33}$y'+2xy=x,\quad y(0)=3$
 
-\item\label{exer:2.1.34}$\dst{(x-1)y'+3y=\frac{1+(x-1)\sec^2x}{(x-1)^3},\quad y(0)=-1}$
+\item\label{exer:2.1.34}$(x-1)y'+3y=\dfrac{1+(x-1)\sec^2x}{(x-1)^3},\quad y(0)=-1$
 
-\item\label{exer:2.1.35}$\dst{(x+2)y'+4y=\frac{1+2x^2}{x(x+2)^3},\quad y(-1)=2}$
+\item\label{exer:2.1.35}$(x+2)y'+4y=\dfrac{1+2x^2}{x(x+2)^3},\quad y(-1)=2$
 
 \item\label{exer:2.1.36}$(x^2-1)y'-2xy=x(x^2-1),\quad y(0)=4$
 
 \item\label{exer:2.1.37}$(x^2-5)y'-2xy=-2x(x^2-5),\quad y(2)=7$
 
-\exercisetext{In Exercises~\ref{exer:2.1.38}--\ref{exer:2.1.42} solve
+\exercisetext{In \zcref[range]{exer:2.1.38,exer:2.1.42} solve
 the initial value problem and leave the answer in a form involving a
 definite integral. $($You can solve these problems numerically by
 methods discussed in Chapter~3.$)$}
 
 \item\label{exer:2.1.38}$y'+2xy=x^2,\quad y(0)=3$
 
-\item\label{exer:2.1.39}$\dst{y'+\frac{1}{x}y=\frac{\sin x}{x^2},\quad y(1)=2}$
+\item\label{exer:2.1.39}$y'+\dfrac{1}{x}y=\dfrac{\sin x}{x^2},\quad y(1)=2$
 
-\item\label{exer:2.1.40}$\dst{y'+y=\frac{e^{-x}\tan x}{x},\quad y(1)=0}$
+\item\label{exer:2.1.40}$y'+y=\dfrac{e^{-x}\tan x}{x},\quad y(1)=0$
 
-\item\label{exer:2.1.41}$\dst{y'+\frac{2x}{1+x^2}y=\frac{e^x}{(1+x^2)^2}, \quad y(0)=1}$
+\item\label{exer:2.1.41}$y'+\dfrac{2x}{1+x^2}y=\dfrac{e^x}{(1+x^2)^2}, \quad y(0)=1$
 
 \item\label{exer:2.1.42}$xy'+(x+1)y=e^{x^2},\quad y(1)=2$
 
@@ -967,12 +945,12 @@ injection. Determine $G$ for $t>0$, given that $G(0)=G_0$. Also,
 find $\lim_{t\to\infty}G(t)$.
 
 
-\item\label{exer:2.1.44}\begin{alist}
+\item\label{exer:2.1.44}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 \Lex Plot a direction field and some integral curves for
 \[
-xy'-2y=-1
-\eqno{\rm (A)}
+xy'-2y=-1\tag{A}
 \]
 on the rectangular region  $\{-1\le x\le 1, -.5\le y\le 1.5\}$.
 What do all the integral curves have in common?
@@ -986,9 +964,10 @@ y=\frac{1}{2}+cx^2.
 Show that $y$ is a solution of (A) on
 $(-\infty,\infty)$ if and only if
 \[
-y=\left\{\begin{array}{ll}\dst{\frac{1}{2}+c_1x^2}, &x
-\ge 0,\\[2\jot]
-\dst{\frac{1}{2}+c_2x^2}, &x < 0,\end{array}\right.
+y=\begin{cases}
+\dfrac{1}{2}+c_1x^2, &x \ge 0,\\
+\dfrac{1}{2}+c_2x^2, &x < 0,
+\end{cases}
 \]
  where $c_1$ and $c_2$ are arbitrary constants.
 \item % (c)
@@ -1004,7 +983,7 @@ Use \part{b} to show that if  $x_0\ne0$ and $y_0$  is arbitrary, then
 xy'-2y=-1,\quad y(x_0)=y_0
 \]
 has infinitely many solutions on ($-\infty,\infty$). Explain why this
-does'nt contradict  Theorem~\ref{thmtype:2.1.1}\part{b}.
+doesn't contradict \zcref{thmtype:2.1.1}\part{b}.
 \end{alist}
 
 
@@ -1016,8 +995,7 @@ Derive a formula for the solution of the initial value
 problem
 \renewcommand{\theequation}{\Alph{equation}}
 \[
-y'+\alpha y=f(x),\quad y(x_0)=y_0,
-\eqno{\rm (A)}
+y'+\alpha y=f(x),\quad y(x_0)=y_0,\tag{A}
 \]
 where $x_0$ is in $(a,b)$ and $y_0$ is an arbitrary real number.
 
@@ -1051,13 +1029,11 @@ y'+p(x)y=c_1f_1(x)+c_2f_2(x).
 Use \part{a} to show that if $y_1$ and $y_2$ are solutions
 of the nonhomogeneous equation
 \[
-y'+p(x)y=f(x),
-\eqno{\rm (A)}
+y'+p(x)y=f(x),\tag{A}
 \]
 then $y_1-y_2$ is a solution of the homogeneous equation
 \[
-y'+p(x)y=0.
-\eqno{\rm (B)}
+y'+p(x)y=0.\tag{B}
 \]
 
 \item %(c)
@@ -1079,21 +1055,20 @@ linear equation
 z'+p(x)z=f(x).
 \]
 
-\item\label{exer:2.1.48}Solve by the method discussed in Exercise~\ref{exer:2.1.47}.
+\item\label{exer:2.1.48}Solve by the method discussed in \zcref{exer:2.1.47}.
 
 \begin{alist}[columns=2]
 % TODO horizontal
 \item $(\sec^2y)y'- 3\tan y=-1$
-\item $\dst{e^{y^2}\left(2yy'+\frac{2}{x}\right) =\frac{1}{x^2}}$
-\item $\dst{\frac{xy'}{y} + 2\ln y=4x^2}$
-\item $\dst{\frac{y'}{(1+y)^2} -\frac{1}{x(1+y)}=-\frac{3}{x^2}}$
+\item $e^{y^2}\left(2yy'+\dfrac{2}{x}\right) =\dfrac{1}{x^2}$
+\item $\dfrac{xy'}{y} + 2\ln y=4x^2$
+\item $\dfrac{y'}{(1+y)^2} -\dfrac{1}{x(1+y)}=-\dfrac{3}{x^2}$
 \end{alist}
 
 \item\label{exer:2.1.49}We've shown that if $p$ and $f$ are continuous on $(a,b)$
 then every solution of
 \[
-y'+p(x)y=f(x)
-\eqno{\rm(A)}
+y'+p(x)y=f(x)\tag{A}
 \]
 on $(a,b)$ can be written as $y=uy_1$, where
 $y_1$ is a nontrivial solution of the complementary equation for (A)
@@ -1111,9 +1086,9 @@ u^{(j+1)}=\frac{f_j}{y_1},\quad 0\le j\le m.
 \end{exerciselist}
 
 
-\section{Separable Equations}
+\section{Separable Equations}\label{sec:separable}
 
-A first order differential equation  is  {\color{blue}\it
+A first order differential equation  is  {\color{blue}\itshape
 separable} if it can be written as
 \begin{equation} \label{eq:2.2.1}
 h(y)y'=g(x),
@@ -1121,7 +1096,7 @@ h(y)y'=g(x),
 where the left side is a product of $y'$ and a function of $y$ and
 the right side is a function of $x$. Rewriting a separable
 differential equation in this form is called \emph{\color{blue}separation of
-variables}. In Section~2.1 we used separation of variables
+variables}. In \zcref{sec:linar_first_order} we used separation of variables
 to solve homogeneous linear equations. In this section we'll apply
 this method to nonlinear equations.
 
@@ -1129,8 +1104,8 @@ To see how to solve \eqref{eq:2.2.1}, let's first assume that $y$
 is a solution.
 Let  $G(x)$ and $H(y)$ be antiderivatives of $g(x)$
 and $h(y)$; that is,
-\begin{equation} \label{eq:2.2.2}
-H'(y)=h(y)\mbox{\quad and \quad}G'(x)=g(x).
+\begin{equation}\label{eq:2.2.2}
+H'(y)=h(y)\quad\text{and}\quad G'(x)=g(x).
 \end{equation}
 Then, from the chain rule,
 \[
@@ -1165,7 +1140,7 @@ functions $G=G(x)$ and $H=H(y)$ that satisfy \eqref{eq:2.2.2}.
 Then any differentiable function  $y=y(x)$  that satisfies
 \eqref{eq:2.2.3} is a solution of \eqref{eq:2.2.1}.
 
-\begin{example}\label{example:2.2.1}\rm
+\begin{example}\label{example:2.2.1}
 Solve the equation
 \[
 y'=x(1+y^2).
@@ -1187,7 +1162,7 @@ Therefore
 y=\tan\left(\frac{x^2}{2}+c\right).
 \]
 
-\begin{example}\label{example:2.2.2} \rm  \mbox{}\newline
+\begin{example}\label{example:2.2.2}
 \begin{alist}
 \item %(a)
 Solve the equation
@@ -1209,7 +1184,8 @@ y'=-\frac{x}{y}, \quad y(1)=-2.
 \end{alist}
 \end{example}
 
-\solutionpart{a} Separating variables
+\begin{alistSolution}
+\item Separating variables
 in \eqref{eq:2.2.4}  yields
 \[
 yy'=-x.
@@ -1237,13 +1213,9 @@ y= - \sqrt{a^2-x^2}, \quad -a < x < a.
 The solution curves defined by \eqref{eq:2.2.8}  are semicircles
 above the
 $x$-axis and  those defined by \eqref{eq:2.2.9}  are semicircles below the
-$x$-axis (Figure~\ref{figure:2.2.1}).
+$x$-axis (\zcref{figure:2.2.1}).
 
-
-
-
-
-\solutionpart{b}  The solution of  \eqref{eq:2.2.5}
+\item The solution of  \eqref{eq:2.2.5}
 is positive when $x=1$; hence, it  is of the form \eqref{eq:2.2.8}.
  Substituting $x=1$ and $y=1$ into \eqref{eq:2.2.7} to satisfy the
 initial condition yields $a^2=2$; hence, the solution of
@@ -1253,7 +1225,7 @@ is
 y=\sqrt{2-x^2}, \quad - \sqrt{2}< x < \sqrt{2}.
 \]
 
-\solutionpart{c}  The solution of  \eqref{eq:2.2.6}
+\item The solution of  \eqref{eq:2.2.6}
 is negative when $x=1$ and   is therefore of the form \eqref{eq:2.2.9}.
  Substituting $x=1$ and $y=-2$ into \eqref{eq:2.2.7} to satisfy the
 initial condition yields $a^2=5$. Hence, the solution of \eqref{eq:2.2.6}
@@ -1261,24 +1233,22 @@ is
 \[
 y=- \sqrt{5-x^2}, \quad -\sqrt{5} < x < \sqrt{5}.
 \]
+\end{alistSolution}
 
-
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020201}
+  \includegraphics[alt={Two semicircles centered at the origin.  One has radius √2 in the upper half; the other has radius √5 in the lower half plane.},
+  width=5.67in,height=3.66in,keepaspectratio]{fig020201}
 \color{blue}
-  \caption{
-{\bf (a)} $y=\sqrt{2-x^{2}}$,\, $-\sqrt{2}<x<\sqrt{2}$; \,
-{\bf (b)} $y=-\sqrt{5-x^{2}}$,\, $-\sqrt{5}<x<\sqrt{5}$}
+  \caption{(a) $y=\sqrt{2-x^{2}}$,\, $-\sqrt{2}<x<\sqrt{2}$; \,
+(b) $y=-\sqrt{5-x^{2}}$,\, $-\sqrt{5}<x<\sqrt{5}$}
   \label{figure:2.2.1}
 \end{figure}
 
 
 \boxit{Implicit Solutions of Separable Equations}
 
-
-\noindent
-In Examples~\ref{example:2.2.1} and \ref{example:2.2.2} we were able to
+In \zcref{example:2.2.1,example:2.2.2} we were able to
 solve the equation $H(y)=G(x)+c$ to obtain explicit formulas for
 solutions of the given separable differential equations. As we'll
 see in the next example, this isn't  always possible.
@@ -1288,8 +1258,8 @@ modification.  We omit the proof, which requires a result from
 advanced calculus called as the \emph{\color{blue}implicit function
 theorem}.
 
-\begin{theorem}\color{blue}~\label{thmtype:2.2.1}
-Suppose $g=g(x)$ is continous on $(a,b)$ and $h=h(y)$
+\begin{theorem}\label{thmtype:2.2.1}
+Suppose $g=g(x)$ is continuous on $(a,b)$ and $h=h(y)$
 are continuous on $(c,d).$ Let $G$ be an antiderivative of
 $g$ on $(a,b)$ and let $H$ be an antiderivative of $h$ on $(c,d).$
 Let $x_0$ be an arbitrary point in $(a,b),$ let $y_0$
@@ -1314,9 +1284,9 @@ h(y)y'=g(x),\quad y(x_0)=x_0.
 It's convenient to say that \eqref{eq:2.2.11} with $c$ arbitrary is an
 \emph{\color{blue}implicit solution} of $h(y)y'=g(x)$. Curves defined by
 \eqref{eq:2.2.11} are integral curves of $h(y)y'=g(x)$. If $c$ satisfies
-\eqref{eq:2.2.10}, we'll say that \eqref{eq:2.2.11} is an {\color{blue}\it
+\eqref{eq:2.2.10}, we'll say that \eqref{eq:2.2.11} is an {\color{blue}\itshape
 implicit
-solution of the initial value problem\/} \eqref{eq:2.2.12}. However, keep
+solution of the initial value problem} \eqref{eq:2.2.12}. However, keep
 these  points in mind:
 \begin{itemize}
 \item  For some choices of $c$ there may not be any differentiable
@@ -1325,7 +1295,7 @@ functions $y$ that satisfy \eqref{eq:2.2.11}.
 is a solution of $h(y)y'=g(x)$.
 \end{itemize}
 
-\begin{example}\label{example:2.2.3} \rm \mbox{}\newline
+\begin{example}\label{example:2.2.3}
 \begin{alist}
 \item % (a)
 Find implicit solutions of
@@ -1340,7 +1310,8 @@ y'=\frac{2x+1}{5y^4+1},\quad y(2)=1.
 \end{alist}
 \end{example}
 
-\solutionpart{a}
+\begin{alistSolution}
+\item
  Separating variables yields
 \[
 (5y^4+1)y'=2x+1.
@@ -1351,31 +1322,32 @@ y^5+y=x^2+x+ c.
 \end{equation}
 of \eqref{eq:2.2.13}.
 
-\solutionpart{b} Imposing the initial condition $y(2)=1$ in
+\item Imposing the initial condition $y(2)=1$ in
 \eqref{eq:2.2.15} yields $1+1=4+2+c$, so $c=-4$. Therefore
 \[
 y^5+y=x^2+x-4
 \]
 is an implicit solution of the initial value problem \eqref{eq:2.2.14}.
 Although more than one differentiable function $y=y(x)$ satisfies
-\ref{eq:2.2.13}) near $x=1$, it can be shown that there's only
-one such function that satisfies the initial condition $y(1)=2$.
+\eqref{eq:2.2.13}) near $x=2$, it can be shown that there's only
+one such function that satisfies the initial condition $y(2)=1$.
 
-Figure~\ref{figure:2.2.2} shows a direction field and some integral curves
+\zcref[S]{figure:2.2.2} shows a direction field and some integral curves
 for \eqref{eq:2.2.13}.
+\end{alistSolution}
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020202}
+  \includegraphics[alt={A vector field for 1<x<4 and -1<y<2 with arrows pointing up and right.  The arrows are steepest along y=0, and flatten out as they approach y=2.  Several solution curves follow the arrows.},
+  width=5.4in,height=3.66in,keepaspectratio]{fig020202}
 \color{blue}
   \caption{A direction field and integral curves for
-$y'=\dst{\frac{2x+1}{5y^{4}+1}}$}
+$y'=\dfrac{2x+1}{5y^{4}+1}$}
   \label{figure:2.2.2}
 \end{figure}
 
 \boxit{Constant Solutions of Separable Equations}
 
-\noindent
 An equation of the form
 \[
 y'=g(x)p(y)
@@ -1389,7 +1361,7 @@ is not legitimate  if $p(y)=0$ for some values of $y$.  The
 next two examples show how to deal with this problem.
 
 \begin{example}\label{example:2.2.4}
-\rm  Find all solutions of
+Find all solutions of
 \begin{equation} \label{eq:2.2.16}
 y'=2xy^2.
 \end{equation}
@@ -1414,7 +1386,6 @@ which is equivalent to
 y=-\frac{1}{x^2+c}.
 \end{equation}
 
-
 We've now shown that if $y$ is a solution of \eqref{eq:2.2.16} that is
 not identically zero, then $y$ must be of the form \eqref{eq:2.2.17}. By
 substituting \eqref{eq:2.2.17} into \eqref{eq:2.2.16}, you can verify that
@@ -1423,20 +1394,20 @@ substituting \eqref{eq:2.2.17} into \eqref{eq:2.2.16}, you can verify that
 of the form \eqref{eq:2.2.17}. Note that the solution $y\equiv0$ isn't  of
 the form \eqref{eq:2.2.17} for any value of $c$.
 
-Figure~\ref{figure:2.2.3} shows a direction field and some integral
+\zcref[S]{figure:2.2.3} shows a direction field and some integral
 curves for \eqref{eq:2.2.16}
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020203}
+  \includegraphics[alt={A vector field for -2<x,y<2, with arrows pointing to the right and downward when x<0 and right and upward when x>0.  For y<0, solution curves start along y=0, curve downward to bottom out when x=0, and then increase back to finish along y=0.  For y>0, solution curves start at vertical asymptotes, bottom out when x=0, and then increase to finish at other vertical asymptotes.},
+  width=5.4in,height=3.66in,keepaspectratio]{fig020203}
 \color{blue}
   \caption{A direction field and  integral curves for $y'=2xy^{2}$}
   \label{figure:2.2.3}
 \end{figure}
 
 \begin{example}\label{example:2.2.5}
-\rm  Find all solutions of
+Find all solutions of
 \begin{equation} \label{eq:2.2.18}
 y'=\frac{1}{2}x(1-y^2).
 \end{equation}
@@ -1490,24 +1461,23 @@ are $y\equiv1$, $y\equiv-1$ and the functions of the form
 obtained from this formula by taking $c=0$;     however, the other
 constant solution, $y \equiv -1$, can't be obtained in this way.
 
-Figure~\ref{figure:2.2.4} shows a direction field and some integrals for
+\zcref[S]{figure:2.2.4} shows a direction field and some integral curves for
 \eqref{eq:2.2.18}.
 
-
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020204}
+  \includegraphics[alt={A vector field for -2<x<2 and -3<y<3 with trivial solutions y=±1.  When y>1, the curves increase to a peak at x=0 before decreasing to y=1.  When -1<y<1, the curves decrease and are flat near x=0 before increasing to y=1.  When y<-1, the curves begin at a vertical asymptote, increase to a maximum at x=0, and then go to another vertical asymptote.},
+  width=5.67in,height=3.66in,keepaspectratio]{fig020204}
 \color{blue}
 \caption{
 A direction field and integral curves for
-$y'=\dst{\frac{x(1-y^2)}{2}}$}
+$y'=\dfrac{x(1-y^2)}{2}$}
   \label{figure:2.2.4}
 \end{figure}
 
 \boxit{Differences Between Linear and Nonlinear Equations}
 
-\noindent
-Theorem~\ref{thmtype:2.1.2} states that if $p$ and $f$ are continuous on
+\zcref[S]{thmtype:2.1.2} states that if $p$ and $f$ are continuous on
 $(a,b)$ then every solution of
 \[
 y'+p(x)y=f(x)
@@ -1522,7 +1492,7 @@ y'+p(x)y=f(x),\quad y(x_0)=y_0
  has a solution on  $(a,b)$.
 
 The not true for nonlinear equations. First, we
-saw in Examples~\ref{example:2.2.4} and \ref{example:2.2.5} that a
+saw in \zcref{example:2.2.4,example:2.2.5} that a
 nonlinear
 equation may have solutions that can't be obtained by choosing a
 specific value of a constant appearing in a one-parameter family of
@@ -1530,14 +1500,14 @@ solutions. Second, it is in general impossible to determine the
 interval of validity of a solution to an initial value problem for a
 nonlinear equation by simply examining the equation, since the
 interval of validity may depend on the initial condition. For
-instance, in Example~\ref{example:2.2.2} we saw that the solution of
+instance, in \zcref{example:2.2.2} we saw that the solution of
 \[
 \frac{dy}{dx}=-\frac{x}{y},\quad y(x_0)=y_0
 \]
 is valid on $(-a,a)$, where $a=\sqrt{x_0^2+y_0^2}$.
 
 \begin{example}\label{example:2.2.6}
-\rm  Solve the initial value problem
+Solve the initial value problem
 \[
 y'=2xy^2, \quad y(0)=y_0
 \]
@@ -1546,7 +1516,7 @@ y'=2xy^2, \quad y(0)=y_0
 
 
 \solution  First suppose   $y_0\ne0$. From
-Example~\ref{example:2.2.4}, we know that $y$ must be of the form
+\zcref{example:2.2.4}, we know that $y$ must be of the form
 \begin{equation} \label{eq:2.2.20}
 y=-\frac{1}{x^2+c}.
 \end{equation}
@@ -1562,27 +1532,26 @@ the solution is valid on $(-\infty,\infty)$. If $y_0>0$, the solution
  is  valid only on $(-1/\sqrt{y_0},1/\sqrt{y_0})$.
 
 \exercises
- In Exercises \ref{exer:2.2.1}--\ref{exer:2.2.6} find all solutions.
 
-
+\emph{In \zcref[range]{exer:2.2.1,exer:2.2.6} find all solutions.}
 
 \begin{exerciselist}
-\item(1)\label{exer:2.2.1}$\dst{y'=\frac{3x^2+2x+1}{y-2}}$
-\item(1)\label{exer:2.2.2}\vspace*{18pt} $(\sin x)(\sin y)+(\cos y)y'=0$
+\item(1)\label{exer:2.2.1}$y'=\dfrac{3x^2+2x+1}{y-2}$
+\item(1)\label{exer:2.2.2}$(\sin x)(\sin y)+(\cos y)y'=0$
 \item(1)\label{exer:2.2.3}$xy'+y^2+y=0$
 \item(1)\label{exer:2.2.4}$y' \ln |y|+x^2y= 0$
 
-\item\label{exer:2.2.5}$\dst{(3y^3+3y \cos y+1)y'+\frac{(2x+1)y}{1+x^2}=0}$
+\item\label{exer:2.2.5}$(3y^3+3y \cos y+1)y'+\dfrac{(2x+1)y}{1+x^2}=0$
 
 
 \item\label{exer:2.2.6}$x^2yy'=(y^2-1)^{3/2}$
 
-\exercisetext{In Exercises \ref{exer:2.2.7}--\ref{exer:2.2.10} find all
+\exercisetext{In \zcref[range]{exer:2.2.7,exer:2.2.10} find all
 solutions. Also, plot a direction field and some integral curves on
 the indicated rectangular region.}
 
 
-\item\label{exer:2.2.7}\CGex $\dst{y'=x^2(1+y^2)};   \; \{-1\le x\le1,\
+\item\label{exer:2.2.7}\CGex $y'=x^2(1+y^2);   \; \{-1\le x\le1,\
 -1\le y\le1\}$
 
 
@@ -1596,38 +1565,35 @@ y\le1\}$
  \item\label{exer:2.2.10}\CGex $(y-1)^2y'=2x+3;   \; \{-2\le x\le2,\ -2\le
 y\le5\}$
 
-\exercisetext{In Exercises \ref{exer:2.2.11} and \ref{exer:2.2.12} solve
-the initial value problem.}
+\exercisetext{In \zcref{exer:2.2.11,exer:2.2.12} solve the initial value problem.}
 
-\item\label{exer:2.2.11}$\dst{y'=\frac{x^2+3x+2}{y-2}, \quad y(1)=4}$
+\item\label{exer:2.2.11}$y'=\dfrac{x^2+3x+2}{y-2}, \quad y(1)=4$
 
 \item\label{exer:2.2.12}$y'+x(y^2+y)=0, \quad y(2)=1$
 
-\exercisetext{In Exercises \ref{exer:2.2.13}-\ref{exer:2.2.16} solve
+\exercisetext{In \zcref[range]{exer:2.2.13,exer:2.2.16} solve
 the initial value problem and graph the solution.}
 
-\item\label{exer:2.2.13}\CGex
-$(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1$
+\item\label{exer:2.2.13}\CGex $(3y^2+4y)y'+2x+\cos x=0, \quad y(0)=1$
 
 
 
 \item\label{exer:2.2.14}\CGex
-$\dst{y'+\frac{(y+1)(y-1)(y-2)}{x+1}=0, \quad y(1)=0}$
+$y'+\dfrac{(y+1)(y-1)(y-2)}{x+1}=0, \quad y(1)=0$
 
 \item\label{exer:2.2.15}\CGex $y'+2x(y+1)=0, \quad y(0)=2$
 
 
-\item\label{exer:2.2.16}\CGex
-$y'=2xy(1+y^2),\quad y(0)=1$
+\item\label{exer:2.2.16}\CGex $y'=2xy(1+y^2),\quad y(0)=1$
 
-\exercisetext{In Exercises \ref{exer:2.2.17}--\ref{exer:2.2.23} solve the initial
+\exercisetext{In \zcref[range]{exer:2.2.17,exer:2.2.23} solve the initial
 value problem and find the interval of validity of the solution.}
 
 \item\label{exer:2.2.17}$y'(x^2+2)+ 4x(y^2+2y+1)=0, \quad y(1)=-1$
 
 \item\label{exer:2.2.18}$y'=-2x(y^2-3y+2), \quad y(0)=3$
 
-\item(1)\label{exer:2.2.19}$\dst{y'=\frac{2x}{1+2y},\quad y(2)=0}$
+\item(1)\label{exer:2.2.19}$y'=\dfrac{2x}{1+2y},\quad y(2)=0$
 \item(1)\label{exer:2.2.20}$y'=2y-y^2,\quad y(0)=1$
 
 \item\label{exer:2.2.21}$x+yy'=0, \quad y(3) =-4$
@@ -1636,16 +1602,15 @@ value problem and find the interval of validity of the solution.}
 
 \item\label{exer:2.2.23}$(x+1)(x-2)y'+y=0, \quad y(1)=-3$
 
-\item\label{exer:2.2.24}Solve $\dst{y'=\frac{(1+y^2)}{(1+x^2)}}$ explicitly.
+\item\label{exer:2.2.24}Solve $y'=\dfrac{(1+y^2)}{(1+x^2)}$ explicitly.
 \hint{Use the identity
-$\dst{\tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B}}$.}
+$\tan(A+B)=\dfrac{\tan A+\tan B}{1-\tan A\tan B}$.}
 
-\item\label{exer:2.2.25}Solve $\dst
-{y'\sqrt{1-x^2}+\sqrt{1-y^2}=0}$ explicitly.
+\item\label{exer:2.2.25}Solve $y'\sqrt{1-x^2}+\sqrt{1-y^2}=0$ explicitly.
 \hint{Use the identity
 $\sin(A-B)=\sin A\cos B-\cos A\sin B$.}
 
-\item\label{exer:2.2.26}Solve $\dst{y'=\frac{\cos x}{\sin y},\quad y (\pi)=\frac{\pi}{2}}$
+\item\label{exer:2.2.26}Solve $y'=\dfrac{\cos x}{\sin y},\quad y (\pi)=\dfrac{\pi}{2}$
 explicitly. \hint{Use the identity $\cos(x+\pi/2)=-\sin x$ and the
 periodicity of the cosine.}
 
@@ -1679,18 +1644,17 @@ find $I(t)$ for $t>0$, and show that
 $\lim_{t\to\infty}I(t)=S$.
 
 \item\label{exer:2.2.30}\Lex
-The result of Exercise~\ref{exer:2.2.29} is discouraging: if any
+The result of \zcref{exer:2.2.29} is discouraging: if any
 susceptible member of the group is
 initially infected, then in the long run all susceptible members are
 infected!
  On a more hopeful note, suppose   the disease spreads
-according to the model of Exercise~\ref{exer:2.2.29}, but there's a
+according to the model of \zcref{exer:2.2.29}, but there's a
 medication that cures the infected population at a rate proportional
 to the number of infected individuals. Now the equation for the number
 of infected individuals becomes
 \[
-I'=rI(S-I)-qI
-\eqno{\rm(A)}
+I'=rI(S-I)-qI\tag{A}
 \]
 where $q$ is a positive constant.
 \begin{alist}
@@ -1714,8 +1678,7 @@ $\lim_{t\to\infty}I(t)$. \hint{There are three cases to consider:
 \item\label{exer:2.2.31}\Lex
 Consider the differential equation
 \[
-y'=ay-by^2-q,
-\eqno{\rm(A)}
+y'=ay-by^2-q,\tag{A}
 \]
 where $a$, $b$ are positive constants, and $q$ is an arbitrary
 constant. Suppose  $y$ denotes a solution of this equation
@@ -1727,8 +1690,7 @@ Choose  $a$ and $b$ positive and  $q<a^2/4b$.
 By plotting  direction fields and solutions of (A) on
 suitable rectangular grids
 \[
-R=\{0\le t \le T,\ c\le y \le d\}
-\eqno{\rm(B)}
+R=\{0\le t \le T,\ c\le y \le d\}\tag{B}
 \]
 in the $(t,y)$-plane,  discover that there are numbers $y_1$ and
 $y_2$ with $y_1<y_2$ such that if $y_0>y_1$ then
@@ -1781,7 +1743,7 @@ convince yourself that $q_0=0$ is a bifurcation value of $q$
 for this equation. Explain what makes you draw this conclusion.
 
 \item\label{exer:2.2.33}Suppose a disease spreads according to the model of
-Exercise~\ref{exer:2.2.29}, but
+\zcref[S]{exer:2.2.29}, but
 there's a medication that cures the infected population at a constant
 rate of $q$ individuals per unit  time, where $q>0$.
 Then
@@ -1790,7 +1752,7 @@ the equation for the number of infected individuals becomes
 I'=rI(S-I)-q.
 \]
 Assuming that $I(0)=I_0>0$, use the results of
-Exercise~\ref{exer:2.2.31} to describe what happens as $t\to\infty$.
+\zcref{exer:2.2.31} to describe what happens as $t\to\infty$.
 
 \item\label{exer:2.2.34}Assuming that $p \not\equiv 0$, state conditions under which the linear
 equation
@@ -1799,16 +1761,16 @@ y'+p(x)y=f(x)
 \]
 is separable.  If the equation satisfies these conditions, solve it by
 separation of variables and by the method developed in
-Section~2.1.
+\zcref{sec:linar_first_order}.
 
 \exercisetext{Solve the equations in
-Exercises~\ref{exer:2.2.35}--\ref{exer:2.2.38} using variation of
+\zcref[range]{exer:2.2.35,exer:2.2.38} using variation of
 parameters followed by separation of variables.}
 
-\item(1)\label{exer:2.2.35}$\dst{y'+y=\frac{2xe^{-x}}{1+ye^x}}$
-\item(1)\label{exer:2.2.36}\vspace*{7pt}  $\dst{xy'-2y=\frac{x^6}{y+x^2}}$
-\item(1)\label{exer:2.2.37}$\dst{y'-y}=\frac{(x+1)e^{4x}}{(y+e^x)^2}$
-\item(1)\label{exer:2.2.38}$y'-2y=\dst\frac{xe^{2x}}{1-ye^{-2x}}$
+\item(1)\label{exer:2.2.35}$y'+y=\dfrac{2xe^{-x}}{1+ye^x}$
+\item(1)\label{exer:2.2.36}$xy'-2y=\dfrac{x^6}{y+x^2}$
+\item(1)\label{exer:2.2.37}$y'-y=\dfrac{(x+1)e^{4x}}{(y+e^x)^2}$
+\item(1)\label{exer:2.2.38}$y'-2y=\dfrac{xe^{2x}}{1-ye^{-2x}}$
 
 
 \item\label{exer:2.2.39}Use variation of parameters to show that the solutions of the
@@ -1819,15 +1781,16 @@ equation.
 \begin{alist}[columns=2]
 % TODO horizontal
 \item $xy'+y=h(x)p(xy)$
-\item $\dst{xy'-y=h(x) p\left(\frac{y}{x}\right)}$
+\item $xy'-y=h(x) p\left(\dfrac{y}{x}\right)$
 \item $y'+y=h(x) p(e^xy)$
 \item $xy'+ry=h(x) p(x^ry)$
-\item $\dst{y'+\frac{v'(x)}{v(x)}y= h(x)p\left(v(x)y\right)}$
+\item $y'+\dfrac{v'(x)}{v(x)}y= h(x)p\left(v(x)y\right)$
 \end{alist}
 \end{exerciselist}
 
 
 \section{Existence and Uniqueness of Solutions of Nonlinear Equations}
+\label{sec:exist_unique}
 
 Although  there are  methods for
  solving some nonlinear equations, it's
@@ -1838,15 +1801,11 @@ existence and uniqueness of solutions of initial value problems for
 nonlinear equations. In this section we state  such a condition and
 illustrate it with examples.
 
-
-
-\vspace*{-15pt}
-\begin{figure}[H]
+\begin{figure}
   \centering
-\scalebox{.9}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020301}}
+  \includegraphics[alt={The rectangle a<x<b and c<y<d with dots insides and a dashed boundary.},
+  trim=0 50 0 60,clip,width=5.67in,height=3.66in,keepaspectratio]{fig020301}
 \color{blue}
-\vspace*{-35pt}
   \caption{An open rectangle}
   \label{figure:2.3.1}
 \end{figure}
@@ -1858,19 +1817,18 @@ Some terminology:
 \[
 a<x<b\mbox{\quad  and \quad}c<y<d
 \]
- (Figure~\ref{figure:2.3.1}).  We'll denote this set by
+ (\zcref{figure:2.3.1}).  We'll denote this set by
 $R:  \{ a < x < b, c < y < d \}$.
  ``Open'' means that the
 boundary rectangle (indicated by the dashed lines in
-Figure~\ref{figure:2.3.1}) isn't  included in  $R$ .
+\zcref{figure:2.3.1}) isn't  included in  $R$ .
 
 The next theorem gives sufficient conditions for existence and
 uniqueness of solutions of initial value problems for first order
 nonlinear differential equations. We omit the proof, which is beyond
 the scope of this book.
 
-\begin{theorem}\color{blue} \label{thmtype:2.3.1} \mbox{}\newline
-\vspace*{-5pt}
+\begin{theorem}\label{thmtype:2.3.1}
 \begin{alist}
 \item %(a)
  If  $f$ is continuous
@@ -1894,20 +1852,20 @@ solution on some open subinterval  of $(a,b)$ that contains $x_0$.
 \end{theorem}
 
 
-It's important to understand exactly what Theorem~\ref{thmtype:2.3.1}
+It's important to understand exactly what \zcref{thmtype:2.3.1}
 says.
 
 \begin{itemize}
-\item \part{a} is an \emph{\color{blue}existence theorem}. It guarantees that a
+\item (a) is an \emph{\color{blue}existence theorem}. It guarantees that a
 solution exists on some open interval that contains $x_0$, but provides
 no information on how to find the solution, or to determine the open
 interval on which it exists. Moreover, \part{a} provides no
 information on the number of solutions that \eqref{eq:2.3.1} may have. It
 leaves open the possibility that \eqref{eq:2.3.1} may have two or more
 solutions that differ for values of $x$ arbitrarily close to $x_0$. We
-will see in Example~\ref{example:2.3.6} that this can happen.
+will see in \zcref{example:2.3.6} that this can happen.
 
-\item \part{b} is a \emph{\color{blue}uniqueness theorem}. It guarantees that
+\item (b) is a \emph{\color{blue}uniqueness theorem}. It guarantees that
 \eqref{eq:2.3.1} has a unique solution on some open interval (a,b) that
 contains $x_0$. However, if $(a,b)\ne(-\infty,\infty)$,
 \eqref{eq:2.3.1} may have more than one solution on a larger interval
@@ -1916,7 +1874,7 @@ solutions have the same values on $(a,b)$, but two solutions $y_1$ and
 $y_2$ are defined on some interval $(a,b_1)$ with $b_1>b$, and have
 different values for $b<x<b_1$;   thus, the graphs of the $y_1$ and
 $y_2$ ``branch off'' in different directions at $x=b$. (See
-Example~\ref{example:2.3.7} and Figure~\ref{figure:2.3.3}). In this case,
+\zcref{example:2.3.7} and \zcref{figure:2.3.3}). In this case,
 continuity implies that $y_1(b)=y_2(b)$ (call their common value
 $\overline y$), and  $y_1$ and $y_2$ are both solutions of the initial
 value problem
@@ -1932,7 +1890,7 @@ case where $a>-\infty$.
  \end{itemize}
 
 \begin{example}\label{example:2.3.1}
-\rm   Consider  the initial value problem
+Consider  the initial value problem
 \begin{equation} \label{eq:2.3.3}
 y'=\frac{x^2-y^2 }{1+x^2+y^2}, \quad y(x_0)=y_0.
 \end{equation}
@@ -1941,7 +1899,7 @@ Since
 f(x,y)  = \frac{x^2-y^2 }{1+x^2+y^2}\mbox{\quad and \quad}
 f_y(x,y)  =  -\frac{2y(1+2x^2)}{(1+x^2+y^2)^2}
 \]
-are continuous for all $(x,y)$, Theorem~\ref{thmtype:2.3.1} implies that
+are continuous for all $(x,y)$, \zcref{thmtype:2.3.1} implies that
 if $(x_0,y_0)$ is arbitrary, then
 \eqref{eq:2.3.3} has a unique solution on some open interval that contains
 $x_0$.
@@ -1949,44 +1907,44 @@ $x_0$.
 
 
 \begin{example}\label{example:2.3.2}
-\rm  Consider  the initial value problem
+Consider  the initial value problem
 \begin{equation} \label{eq:2.3.4}
 y'=\frac{x^2-y^2 }{x^2+y^2}, \quad y(x_0)=y_0.
 \end{equation}
 Here
 \[
 f(x,y)  =  \frac{x^2-y^2 }{x^2+y^2}\mbox{\quad and \quad}
-f_y(x,y)  =  \dst -\frac{4x^2y }{(x^2+y^2)^2}
+f_y(x,y)  =   -\frac{4x^2y }{(x^2+y^2)^2}
 \]
 are continuous everywhere except at $(0,0)$. If $(x_0,y_0)
 \ne(0,0)$, there's an open rectangle $R$ that contains
 $(x_0,y_0)$ that does not contain $(0,0)$. Since $f$ and $f_y$ are
-continuous on $R$, Theorem~\ref{thmtype:2.3.1} implies that if
+continuous on $R$, \zcref{thmtype:2.3.1} implies that if
 $(x_0,y_0)\ne(0,0)$ then
 \eqref{eq:2.3.4}
 has a unique solution on some open interval that contains $x_0$.
 \end{example}
 
 \begin{example}\label{example:2.3.3}
-\rm  Consider the initial value problem
+Consider the initial value problem
 \begin{equation} \label{eq:2.3.5}
 y'=\frac{x+y}{x-y},\quad y(x_0)=y_0.
 \end{equation}
 Here
 \[
-f(x,y)  =  \frac{x+y}{x-y}\mbox{\quad and \quad}
+f(x,y)  =  \frac{x+y}{x-y}\quad\text{and}\quad
 f_y(x,y)  =  \frac{2x}{(x-y)^2}
 \]
 are continuous everywhere except on the line $y=x$. If $y_0\ne x_0$,
 there's an open rectangle $R$ that contains $(x_0,y_0)$ that
 does not intersect the line $y=x$. Since $f$ and $f_y$ are continuous
-on $R$, Theorem~\ref{thmtype:2.3.1} implies that if $y_0\ne x_0$,
+on $R$, \zcref{thmtype:2.3.1} implies that if $y_0\ne x_0$,
 \eqref{eq:2.3.5} has a unique solution on some open interval that contains
 $x_0$.
 \end{example}
 
 \begin{example}\label{example:2.3.4}
-\rm In Example~\ref{example:2.2.4} we saw that the
+In \zcref{example:2.2.4} we saw that the
 solutions of
 \begin{equation} \label{eq:2.3.6}
 y'=2xy^2
@@ -1997,7 +1955,7 @@ y\equiv0\mbox{\quad and \quad} y=-\frac{1 }{x^2+c},
 \]
 where $c$ is an arbitrary constant. In particular, this implies that
 no solution of \eqref{eq:2.3.6} other than $y\equiv0$ can equal zero for
-any value of $x$. Show that Theorem~\ref{thmtype:2.3.1}\part{b} implies
+any value of $x$. Show that \zcref{thmtype:2.3.1}\part{b} implies
 this.
 \end{example}
 
@@ -2013,7 +1971,7 @@ y'=2xy^2,\quad y(x_0)=0
 \end{equation}
 has two solutions $y\equiv0$ and $y=y_1$ that differ for some value of
 $x$ on every open interval that contains $x_0$. This contradicts
-Theorem~\ref{thmtype:2.3.1}(b), since in \eqref{eq:2.3.6} the functions
+\zcref{thmtype:2.3.1}(b), since in \eqref{eq:2.3.6} the functions
 \[
 f(x,y)=2xy^2 \mbox{\quad and \quad} f_y(x,y)= 4xy.
 \]
@@ -2022,46 +1980,48 @@ for all $(x,y)$, which implies that \eqref{eq:2.3.7} has a unique
 solution on some open interval that contains $x_0$.
 
 \begin{example}\label{example:2.3.5}
-\rm  Consider the initial value problem
+Consider the initial value problem
 \begin{equation} \label{eq:2.3.8}
 y' = \frac{10}{3}xy^{2/5}, \quad y(x_0) = y_0.
 \end{equation}
 \begin{alist}
 \item %(a)
-For what points $(x_0,y_0)$ does Theorem~\ref{thmtype:2.3.1}\part{a}
+For what points $(x_0,y_0)$ does \zcref{thmtype:2.3.1}\part{a}
 imply that
 \eqref{eq:2.3.8} has a solution?
 
 \item %(b)
-For what points $(x_0,y_0)$ does Theorem~\ref{thmtype:2.3.1}\part{b}
+For what points $(x_0,y_0)$ does \zcref{thmtype:2.3.1}\part{b}
 imply that
 \eqref{eq:2.3.8} has a  unique solution on some open interval that contains
 $x_0$?
 \end{alist}
 \end{example}
 
-\solutionpart{a} Since
+\begin{alistSolution}
+\item Since
 \[
 f(x,y) = \frac{10}{3}xy^{2/5}
 \]
-is continuous for all $(x,y)$,  Theorem~\ref{thmtype:2.3.1}
+is continuous for all $(x,y)$,  \zcref{thmtype:2.3.1}
 implies that \eqref{eq:2.3.8} has a solution for every $(x_0,y_0)$.
 
-\solutionpart{b} Here
+\item Here
 \[
 f_y(x,y) = \frac{4 }{3}xy^{-3/5}
 \]
 is continuous for all $(x,y)$ with $y\ne 0$. Therefore, if $y_0\ne0$
 there's an open rectangle on which both $f$ and $f_y$ are
-continuous, and Theorem~\ref{thmtype:2.3.1} implies that \eqref{eq:2.3.8} has
+continuous, and \zcref{thmtype:2.3.1} implies that \eqref{eq:2.3.8} has
 a unique solution on some open interval that contains $x_0$.
 
 If $y=0$ then $f_y(x,y)$ is undefined, and therefore discontinuous;
-hence, Theorem~\ref{thmtype:2.3.1} does not apply to \eqref{eq:2.3.8} if
+hence, \zcref{thmtype:2.3.1} does not apply to \eqref{eq:2.3.8} if
 $y_0=0$.
+\end{alistSolution}
 
 \begin{example}\label{example:2.3.6}
-\rm  Example~\ref{example:2.3.5} leaves open the possibility  that the
+\zcref[S]{example:2.3.5} leaves open the possibility  that the
 initial value problem
 \begin{equation} \label{eq:2.3.9}
 y'=\frac{10 }{3}xy^{2/5}, \quad y(0)=0
@@ -2100,7 +2060,7 @@ derivation of \eqref{eq:2.3.11} is legitimate only on open intervals where $y$
 has no zeros. However, \eqref{eq:2.3.11} actually defines $y$ for all $x$,
 and differentiating \eqref{eq:2.3.11} shows that
 \[
-y'=\frac{10 }{3}x(x^2+c)^{2/3}=\frac{10 }{3}xy^{2/5},\,-\infty<x<\infty.
+y'=\frac{10 }{3}x(x^2+c)^{2/3}=\frac{10 }{3}xy^{2/5},\quad-\infty<x<\infty.
 \]
 Therefore \eqref{eq:2.3.11} satisfies \eqref{eq:2.3.10} on
 $(-\infty,\infty)$
@@ -2112,24 +2072,41 @@ y=x^{10/3}
 as a second solution of \eqref{eq:2.3.9}.
  Both solutions are defined on
 $(-\infty,\infty)$, and they differ on every
-open interval that contains $x_0=0$ (see Figure~\ref{figure:2.3.2}.)
+open interval that contains $x_0=0$ (see \zcref{figure:2.3.2}.)
 In fact, there are \emph{\color{blue}four} distinct solutions of
 \eqref{eq:2.3.9}  defined on $(-\infty,\infty)$ that differ
 from each other on every open interval that contains $x_0=0$.
   Can you identify the other two?
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020302}
+%  \includegraphics[%bb=-78 148 689 643,
+%  width=5.67in,height=3.66in,keepaspectratio]{fig020302}
+\begin{tikzpicture}[alt={A curve that begins near (-2,-10), crosses horizontally through the origin, and finishes in a mirror image near (2,10).  A second line follows the x axis.}]
+\begin{axis}[width=\textwidth, height=3.3in,
+axis y line=middle,axis x line=middle, tick label style={font=\footnotesize},
+ymin=-10,ymax=10,xmin=-2,xmax=2,
+%xtick=\empty,ytick={5},yticklabels={$T_0$},
+name=myplot] %
+\addplot[domain=-2:0,draw=blue]{-(-x)^(10/3)};
+\addplot[domain=0:2,draw=blue]{x^(10/3)};
+\addplot[domain=-2:2,draw=blue]{0};
+%\pgfplotsinvokeforeach{1,2,...,5}{
+%\addplot[draw=blue, domain=0:2, smooth] {5+#1*exp(-x)};
+%\addplot[draw=blue, domain=0:2, smooth] {5-#1*exp(-x)};
+%}
+\end{axis}
+\node [right] at (myplot.right of origin) {\scriptsize $x$};
+\node [above] at (myplot.above origin) {\scriptsize $y$};
+\end{tikzpicture}
 \color{blue}
-\caption{Two solutions ($y=0$ and $y=x^{1/2}$) of \eqref{eq:2.3.9}  that
+\caption{Two solutions ($y=0$ and $y=x^{10/3}$) of \eqref{eq:2.3.9}  that
 differ on every interval  containing $x_{0}=0$}
   \label{figure:2.3.2}
 \end{figure}
 
 \begin{example} \label{example:2.3.7}
-\rm  From Example~\ref{example:2.3.5}, the initial value
+From \zcref{example:2.3.5}, the initial value
 problem
 \begin{equation} \label{eq:2.3.12}
 y'=\frac{10 }{3}xy^{2/5}, \quad y(0)=-1
@@ -2156,31 +2133,34 @@ $(-1,1)$.
  This is the largest open interval on which
 \eqref{eq:2.3.12} has a unique solution. To see this, note that
 \eqref{eq:2.3.13} is a solution of \eqref{eq:2.3.12} on $(-\infty,\infty)$.
-From Exercise~2.2.~\hspace*{-3pt}\ref{exer:2.2.15}, there are infinitely many
+From {Exercise~2.2.\ref{exer:2.2.15}}, there are infinitely many
 other solutions
 of \eqref{eq:2.3.12} that differ from \eqref{eq:2.3.13} on every open interval
 larger than
 $(-1,1)$. One such solution is
 \[
-y = \left\{ \begin{array}{cl}
-(x^2-1)^{5/3}, & -1 \le x \le 1, \\[6pt]
-0,             & |x|>1. \end{array} \right.
+y =
+\begin{cases}
+(x^2-1)^{5/3}, & -1 \le x \le 1, \\
+0,             & |x|>1.
+\end{cases}
 \]
-(Figure \ref{figure:2.3.3}).
-
+(see \zcref{figure:2.3.3}).
 
 \noindent
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig020303}
+\includegraphics[alt={A blue curve beginning near (-2,6), decreasing to horizontally cross the x axis at x=1, bottoming out at (0,-1), and finishing in a mirror image near (2,6).  A second blue curve goes from (-2,0) to (-1,0) and from (1,0) to (2,0).},
+width=\linewidth,height=2.44in,keepaspectratio]{fig020303}
 \captionof{figure}{Two solutions of \eqref{eq:2.3.12} on $(-\infty,\infty)$
 that coincide on $(-1,1)$, but on no larger open interval}
 \label{figure:2.3.3}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.5\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig020304}
+\begin{minipage}[t]{0.48\linewidth}
+\tagstructbegin{tag=Sect}\includegraphics[alt={A blue curve beginning near (-2,6), decreasing to bottom out at (0,1), and finishing in a mirror image near (2,6).},
+width=\linewidth,height=2.44in,keepaspectratio]{fig020304}
 \captionof{figure}{The unique solution of \eqref{eq:2.3.14}}
 \label{figure:2.3.4}
 \tagstructend
@@ -2188,7 +2168,7 @@ that coincide on $(-1,1)$, but on no larger open interval}
 
 
 \begin{example}\label{example:2.3.8}
-\rm  From Example~\ref{example:2.3.5}, the initial value
+From \zcref{example:2.3.5}, the initial value
 problem
 \begin{equation} \label{eq:2.3.14}
 y'=\frac{10 }{3}xy^{2/5}, \quad y(0)=1
@@ -2211,77 +2191,83 @@ for $x$ in $I$. Therefore every solution of \eqref{eq:2.3.14}
 differs from zero and is given by \eqref{eq:2.3.15} on $(-\infty,\infty)$;
 that is, \eqref{eq:2.3.15} is the unique solution of \eqref{eq:2.3.14} on
 $(-\infty,\infty)$.
-Figure~\ref{figure:2.3.4} shows the graph of this solution.
+\zcref[S]{figure:2.3.4} shows the graph of this solution.
 
 \exercises
- In Exercises \ref{exer:2.3.1}-\ref{exer:2.3.13} find all $(x_0,y_0)$ for
-which Theorem~\ref{thmtype:2.3.1}
+
+\noindent
+\emph{In \zcref[range]{exer:2.3.1,exer:2.3.13} find all $(x_0,y_0)$ for
+which \zcref{thmtype:2.3.1}
 implies that the initial value problem $y'=f(x,y),\  y(x_0)=y_0$ has
-\part{a}
-a solution   \part{b} a  unique solution on some open interval that
-contains
-$x_0$.
-
-
+(a) a solution and (b) a  unique solution on some open interval that
+contains $x_0$.}
 
 \begin{exerciselist}
 
-\item(1)\label{exer:2.3.1}$\dst {y'=\frac{x^2+y^2}{\sin x}}$
-\item(1)\label{exer:2.3.2}$\dst{y'=\frac{e^x+y }{x^2+y^2}}$
+\item(1)\label{exer:2.3.1}$y'=\dfrac{x^2+y^2}{\sin x}$
+\item(1)\label{exer:2.3.2}$y'=\dfrac{e^x+y }{x^2+y^2}$
 \item(1)\label{exer:2.3.3}$y'= \tan xy$
-\item(1)\label{exer:2.3.4}$\dst {y'=\frac{x^2+y^2}{\ln xy}}$
+\item(1)\label{exer:2.3.4}$y'=\dfrac{x^2+y^2}{\ln xy}$
 \item(1)\label{exer:2.3.5}$y'=(x^2+y^2)y^{1/3}$
 \item(1)\label{exer:2.3.6}\ $y'=2xy$
-\item(1)\label{exer:2.3.7}$\dst{y'=\ln(1+x^2+y^2)}$
-\item(1)\label{exer:2.3.8}$\dst {y'=\frac{2x+3y}{x-4y}}$ 
-\item(1)\label{exer:2.3.9}$\dst{y'=(x^2+y^2)^{1/2}}$
+\item(1)\label{exer:2.3.7}$y'=\ln(1+x^2+y^2)$
+\item(1)\label{exer:2.3.8}$y'=\dfrac{2x+3y}{x-4y}$
+\item(1)\label{exer:2.3.9}$y'=(x^2+y^2)^{1/2}$
 \item(1)\label{exer:2.3.10}$y'=x(y^2-1)^{2/3}$
 \item(1)\label{exer:2.3.11}$y'=(x^2+y^2)^2$
 \item(1)\label{exer:2.3.12}$y'=(x+y)^{1/2}$
 
 
-\item\label{exer:2.3.13}$\dst {y'=\frac{\tan y }{x-1}}$
+\item\label{exer:2.3.13}$y'=\dfrac{\tan y }{x-1}$
 
-\item\label{exer:2.3.14}Apply Theorem~\ref{thmtype:2.3.1} to the initial value problem
+\item\label{exer:2.3.14}Apply \zcref{thmtype:2.3.1} to the initial value problem
 \[
 y'+p(x)y = q(x), \quad y(x_0)=y_0
 \]
 for a linear equation, and compare the conclusions that can be drawn
 from it to those that follow from Theorem 2.1.2.
 
-\item\label{exer:2.3.15}\begin{alist}
+\item\label{exer:2.3.15}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item %(a)
 Verify that the function
 \[
-y = \left\{ \begin{array}{cl}
-(x^2-1)^{5/3}, & -1 < x < 1, \\[6pt]
-0, & |x| \ge 1, \end{array} \right.
+y =
+\begin{cases}
+(x^2-1)^{5/3}, & -1 < x < 1, \\
+0, & |x| \ge 1,
+\end{cases}
 \]
 is a solution of the initial value problem
 \[
 y'=\frac{10}{3}xy^{2/5}, \quad y(0)=-1
 \]
-on $(-\infty,\infty)$. \hint{You'll need the definition \[
-y'(\overline{x}) = \lim_\frac{x \to }{line{x}}\frac{y(x)-y(\overline{x})
-}{x-\overline{x}} \] to verify that $y$ satisfies the differential
+on $(-\infty,\infty)$. \hint{You'll need the definition
+\[
+y'(\overline{x})
+= \lim_{x \to\overline{x}}\frac{y(x)-y(\overline{x})}{x-\overline{x}}
+\]
+to verify that $y$ satisfies the differential
 equation at $\overline{x} = \pm 1$.}
 
 \item %(b)
 Verify that if $\epsilon_i=0$ or $1$ for $i=1$, $2$ and $a$, $b>1$, then
 the function
 \[
-y = \left\{ \begin{array}{cl}
-\epsilon_1(x^2-a^2)^{5/3}, & - \infty < x < -a, \\[6pt]
-0, & -a \le x \le -1, \\[6pt]
-(x^2-1)^{5/3}, &  -1 < x < 1, \\[6pt]
-0, & 1 \le x \le b, \\[6pt]
-\epsilon_2(x^2-b^2)^{5/3}, & b < x < \infty, \end{array} \right.
+y =
+\begin{cases}
+\epsilon_1(x^2-a^2)^{5/3}, & - \infty < x < -a, \\
+0, & -a \le x \le -1, \\
+(x^2-1)^{5/3}, &  -1 < x < 1, \\
+0, & 1 \le x \le b, \\
+\epsilon_2(x^2-b^2)^{5/3}, & b < x < \infty,
+\end{cases}
 \]
 is a solution of the initial value problem of \part{a} on
 $(-\infty,\infty)$.
 \end{alist}
 
-\item\label{exer:2.3.16}Use the ideas developed in Exercise~\ref{exer:2.3.15} to find
+\item\label{exer:2.3.16}Use the ideas developed in \zcref{exer:2.3.15} to find
 infinitely
 many solutions  of the initial value problem
 \[
@@ -2293,16 +2279,15 @@ on $(-\infty,\infty)$.
 \item\label{exer:2.3.17}Consider the initial value
 problem
 \[
- y' = 3x(y-1)^{1/3}, \quad y(x_0) = y_0.
-\eqno{\rm (A)}
+ y' = 3x(y-1)^{1/3}, \quad y(x_0) = y_0.\tag{A}
 \]
 
 \begin{alist}
 \item %(a)
-For what points $(x_0,y_0)$ does Theorem~\ref{thmtype:2.3.1} imply that
+For what points $(x_0,y_0)$ does \zcref{thmtype:2.3.1} imply that
 (A) has a solution?
 \item %(b)
- For what points $(x_0,y_0)$ does Theorem~\ref{thmtype:2.3.1} imply that
+ For what points $(x_0,y_0)$ does \zcref{thmtype:2.3.1} imply that
 (A) has a  unique solution on some open interval
 that contains  $x_0$?
 \end{alist}
@@ -2314,7 +2299,7 @@ y'=3x(y-1)^{1/3}, \quad y(0)=1
 that are all defined on $(-\infty,\infty)$ and differ from each other
 for values of  $x$ in every open interval that contains $x_0=0$.
 
-\item\label{exer:2.3.19}From Theorem~\ref{thmtype:2.3.1}, the initial
+\item\label{exer:2.3.19}From \zcref{thmtype:2.3.1}, the initial
 value
 problem
  \[
@@ -2323,13 +2308,13 @@ y'=3x(y-1)^{1/3}, \quad y(0)=9
 has a unique solution on an open interval that contains  $x_0=0$. Find the
 solution and determine the largest open interval on which it's unique.
 
-\item\label{exer:2.3.20}\begin{alist}
+\item\label{exer:2.3.20}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item %(a)
- From Theorem~\ref{thmtype:2.3.1},
+ From \zcref{thmtype:2.3.1},
 the initial value problem
 \[
- y'=3x(y-1)^{1/3}, \quad y(3)=-7
-\eqno{\rm (A)}
+ y'=3x(y-1)^{1/3}, \quad y(3)=-7\tag{A}
 \]
  has a unique solution on some open interval that contains $x_0=3$.
 Determine
@@ -2346,8 +2331,7 @@ $(-\infty,\infty)$.
 \item % ()
 If
 \[
-f(x,y_0) = 0,\quad a<x<b,
-\eqno{\rm (A)}
+f(x,y_0) = 0,\quad a<x<b,\tag{A}
 \]
 and  $x_0$ is in  $(a,b)$,
 then $y\equiv y_0$ is a solution of
@@ -2366,8 +2350,9 @@ any point in $(a,b)$.
 
 \section{Transformation of Nonlinear Equations into Separable Equations}
 \label{sec:transform_separable}
+\markright{\thesection. \MakeUppercase{Transformation of Nonlinear Equations}}
 
-In Section~2.1 we found that the solutions of a linear
+In \zcref{sec:linar_first_order} we found that the solutions of a linear
 nonhomogeneous equation
 \[
 y'+p(x)y=f(x)
@@ -2395,8 +2380,6 @@ transformed\/} the given equation into a separable equation.
 
 \boxit{Bernoulli Equations}
 
-
-\noindent
 A \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Bernoulli_Jacob.html}
 {\color{blue}\itshape Bernoulli
  equation} is an equation  of
@@ -2421,7 +2404,7 @@ u'y_1(x)=f(x)\left(y_1(x)\right)^ru^r\mbox{\quad or \quad}
 \]
 since $y_1'+p(x)y_1=0$.
 
-\begin{example}\label{example:2.4.1} \rm
+\begin{example}\label{example:2.4.1}
 Solve the Bernoulli equation
 \begin{equation} \label{eq:2.4.3}
 y'-y=xy^2.
@@ -2435,30 +2418,21 @@ Since $y_1=e^x$ is a solution of $y'-y=0$, we look for solutions of
 u'e^x=xu^2e^{2x}\mbox{\quad or, equivalently, \quad}
 u'=xu^2e^x.
 \]
-Separating variables yields
-\[
-\frac{u'}{u^2}=xe^x,
-\]
-and integrating yields
-\[
--\frac{1}{u}=(x-1)e^x+c.
-\]
-Hence,
-\[
-u=-\frac{1}{(x-1)e^x+c}
-\]
-and
-\[
-y=-\frac{1}{x-1+ce^{-x}}.
-\]
+Separating variables and integrating yields
+\begin{align*}
+\frac{u'}{u^2}&=xe^x\\
+-\frac{1}{u}&=(x-1)e^x+c\\
+u&=-\frac{1}{(x-1)e^x+c}\\
+y&=-\frac{1}{x-1+ce^{-x}}.
+\end{align*}
+%
+\zcref[S]{figure:2.4.1}  shows
+direction field and some integral curves of \eqref{eq:2.4.3}.
 
-Figure~\ref{eq:2.4.1}  shows
- direction field and some integral curves of \eqref{eq:2.4.3}.
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020401}
+  \includegraphics[alt={A vector field for -2<x,y<2 with arrows pointing right and downward for negative x and right and upward for positive x.  Curves below a horizontal asymptote y=0 decrease to bottom out near x=0.5 and then tend towards (2,-0.5).  Curves above y=0 bottom out near x=-1 and then increase toward vertical asymptotes.},
+  width=5.67in,height=3.66in,keepaspectratio]{fig020401}
 \color{blue}
 \caption{A direction field and integral curves for $y'-y=xy^{2}$}
   \label{figure:2.4.1}
@@ -2468,7 +2442,6 @@ Figure~\ref{eq:2.4.1}  shows
 \boxit{Other Nonlinear Equations That Can be  Transformed Into
 Separable Equations}
 
-\noindent
 We've seen that the nonlinear Bernoulli equation can be transformed
 into a separable equation by  the substitution $y=uy_1$ if
 $y_1$ is suitably chosen. Now let's discover a sufficient condition
@@ -2503,12 +2476,10 @@ variables to obtain
 
 \boxit{Homogeneous Nonlinear Equations}
 
-
-\noindent
 In the text  we'll consider only the most widely studied class of
 equations for which the method of the preceding paragraph works.
 Other types of equations appear in
-Exercises~\ref{exer:2.4.44}--\ref{exer:2.4.51}.
+\zcref[range]{exer:2.4.44,exer:2.4.51}.
 
 The differential equation \eqref{eq:2.4.4}
 is said to be \emph{\color{blue}homogeneous} if  $x$ and $y$
@@ -2547,7 +2518,7 @@ solutions $u\equiv u_0$ such that $q(u_0)=u_0$) yields
 Before turning to examples, we point out something that you may've have
 already noticed:
  the definition of \emph{\color{blue}homogeneous equation} given
-here isn't  the same as the definition given in Section~2.1,
+here isn't  the same as the definition given in \zcref{sec:linar_first_order},
 where we said that a linear equation of the form
 \[
 y'+p(x)y=0
@@ -2563,7 +2534,7 @@ Since $y/x$ is in general undefined if $x=0$, we'll consider
 solutions of nonhomogeneous equations only on open intervals that do
 not contain the point $x=0$.
 
-\begin{example}\label{example:2.4.2}\rm
+\begin{example}\label{example:2.4.2}
 Solve
 \begin{equation} \label{eq:2.4.8}
 y'=\frac{y+xe^{-y/x}}{x}.
@@ -2585,21 +2556,21 @@ Therefore
 $u=\ln(\ln|x|+c)$ and
 $y=ux=x \ln (\ln |x|+c)$.
 
-Figure~\ref{figure:2.4.2} shows
+\zcref[S]{figure:2.4.2} shows
 a direction field and integral curves for \eqref{eq:2.4.8}.
 
-
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020402}
+  \includegraphics[alt={A vector field for 0.5<x<5 and -2<y<2 with arrows pointing up and right.  The arrows are more vertical for small x values, and point more northeast as x increases.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig020402}
 \color{blue}
 \caption
 {A direction field and some integral curves for
-$y'=\dst{\frac{y+xe^{-y/x}}{x}}$}
+$y'=\dfrac{y+xe^{-y/x}}{x}$}
   \label{figure:2.4.2}
 \end{figure}
 
-\begin{example}\label{example:2.4.3}\rm \mbox{}\newline
+\begin{example}\label{example:2.4.3}
 \begin{alist}
 \item %(a)
 Solve
@@ -2615,7 +2586,8 @@ x^2y'=y^2+xy-x^2, \quad y(1)=2.
 \end{alist}
 \end{example}
 
-\solutionpart{a}
+\begin{alistSolution}
+\item
 We first find solutions of \eqref{eq:2.4.9} on open intervals that don't
 contain $x=0$. We can rewrite \eqref{eq:2.4.9} as
 \[
@@ -2661,22 +2633,24 @@ where $c$ is an arbitrary constant.
 u =\frac{1+cx^2}{1-cx^2}.
 \]
 %
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig020403}
+\includegraphics[alt={A vector field for -2<x,y<2 with straight line solutions x=0 going upward, and y=±x going to the right. Elsewhere, the arrows smoothly interpolate the straight line solutions.  Several solution curves follow the arrows.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig020403}
 \captionof{figure}{A direction field and integral curves for
 $x^{2}y'=y^{2}+xy-x^{2}$}
 \label{figure:2.4.3}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig020404}
+\includegraphics[alt={Several solution curves from the previous vector field for x<0.  For x>0, the solution curves have all coalesced.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig020404}
 \captionof{figure}{Solutions of $x^{2}y'=y^{2}+xy-x^{2}$,\; $y(1)=2$}
 \label{figure:2.4.4}
 \tagstructend
-\end{minipage}
+\end{minipage}\bigskip\\
 %
 Therefore
 \begin{equation} \label{eq:2.4.13}
@@ -2688,34 +2662,36 @@ solution $y=-x$ can't be obtained from \eqref{eq:2.4.13}. Thus, the
 solutions of \eqref{eq:2.4.9} on intervals that don't contain $x=0$ are
 $y=-x$ and functions of the form \eqref{eq:2.4.13}.
 
-The situation is more complicated if $x=0$ is the open interval.
+The situation is more complicated if $x=0$ is in the open interval.
  First, note that $y=-x$ satisfies \eqref{eq:2.4.9}
 on $(-\infty,\infty)$. If $c_1$ and $c_2$ are arbitrary constants,
  the function
 \begin{equation} \label{eq:2.4.14}
-y=\left\{\begin{array}{ll} \dst\frac{x(1+c_1x^2)}{1-c_1x^2},&a<x<0,\\
-[2\jot]\dst\frac{x(1+c_2x^2)}{1-c_2x^2},&0\le x<b,
- \end{array}\right.
+y=\begin{cases}
+\dfrac{x(1+c_1x^2)}{1-c_1x^2},&a<x<0,\\
+\dfrac{x(1+c_2x^2)}{1-c_2x^2},&0\le x<b,
+\end{cases}
 \end{equation}
 is a solution of \eqref{eq:2.4.9} on $(a,b)$, where
 \[
-a=\left\{\begin{array}{cl}-\dst\frac{1}{\sqrt{c_1}}&\mbox{ if }c_1>0,\\
--\infty&\mbox{ if }c_1\le 0,
-\end{array}\right. \mbox{\quad and \quad}
-b=\left\{\begin{array}{cl}\dst\frac{1}{\sqrt{c_2}}&\mbox{ if }c_2>0,\\
-\infty&\mbox{ if }c_2\le 0.
-\end{array}\right.
+a=\begin{cases}
+-\dfrac{1}{\sqrt{c_1}}&\text{ if }c_1>0,\\
+-\infty&\text{ if }c_1\le 0,
+\end{cases}
+\quad\text{and}\quad
+b=\begin{cases}
+\dfrac{1}{\sqrt{c_2}}&\text{ if }c_2>0,\\
+\infty&\text{ if }c_2\le 0.
+\end{cases}
 \]
 We leave it to you to verify this. To do so, note that if $y$ is
 any function of the form \eqref{eq:2.4.13} then $y(0)=0$ and $y'(0)=1$.
 
 
-Figure~\ref{figure:2.4.3} shows a direction field and some integral curves
+\zcref[S]{figure:2.4.3} shows a direction field and some integral curves
 for \eqref{eq:2.4.9}.
 
-
-
-\solutionpart{b}  We could obtain $c$ by imposing
+\item  We could obtain $c$ by imposing
 the initial condition $y(1)=2$ in \eqref{eq:2.4.13}, and then solving for
 $c$. However, it's easier to use \eqref{eq:2.4.12}. Since $u=y/x$, the
 initial
@@ -2730,41 +2706,39 @@ However, the largest interval on which \eqref{eq:2.4.10} has a unique
 solution is $(0,\sqrt3)$. To see this, note from \eqref{eq:2.4.14}
 that any function of the form
 \begin{equation} \label{eq:2.4.15}
-y=\left\{\begin{array}{ll} \dst\frac{x(1+cx^2)}{1-cx^2},&a<x\le0,\\[2\jot]
-\dst\frac{x(1+x^2/3)}{1-x^2/3},&0\le x<\sqrt3,
-\end{array}\right.
+y=
+\begin{cases}
+\dfrac{x(1+cx^2)}{1-cx^2},&a<x\le0,\\
+\dfrac{x(1+x^2/3)}{1-x^2/3},&0\le x<\sqrt3,
+\end{cases}
 \end{equation}
 is a solution of \eqref{eq:2.4.10} on $(a,\sqrt3)$, where $a=-1/\sqrt c$
 if $c>0$ or $a=-\infty$ if $c\le0$. (Why doesn't this contradict
-Theorem~\ref{thmtype:2.3.1}?)
+\zcref{thmtype:2.3.1}?)
 
 
- Figure~\ref{figure:2.4.4} shows several solutions of the
+\zcref[S]{figure:2.4.4} shows several solutions of the
 initial value problem~\eqref{eq:2.4.10}. Note that these solutions coincide
 on $(0,\sqrt{3})$.
+\end{alistSolution}
 
 In the last two examples we were able to solve the given equations
 explicitly.   However, this isn't  always possible, as you'll
 see in the exercises.
 
 
-
-
-
-
 \exercises
-In Exercises~\ref{exer:2.4.1}--\ref{exer:2.4.4} solve the given Bernoulli
-equation.
+\emph{In \zcref[range]{exer:2.4.1,exer:2.4.4} solve the given Bernoulli
+equation.}
 
 \begin{exerciselist}
 
 \item(1)\label{exer:2.4.1}$y'+y=y^2$
-\item(1)\label{exer:2.4.2}$\dst {7xy'-2y=-\frac{x^2 }{y^6}}$
+\item(1)\label{exer:2.4.2}$7xy'-2y=-\dfrac{x^2 }{y^6}$
 \item(1)\label{exer:2.4.3}$x^2y'+2y=2e^{1/x}y^{1/2}$
-\item(1)\label{exer:2.4.4}\vspace*{-5pt}$\dst {(1+x^2)y'+2xy
-=\frac{1}{(1+x^2)y}}$
+\item(1)\label{exer:2.4.4}$(1+x^2)y'+2xy=\frac{1}{(1+x^2)y}$
 
-\exercisetext{In Exercises~\ref{exer:2.4.5} and \ref{exer:2.4.6} find all
+\exercisetext{In \zcref[range]{exer:2.4.5,exer:2.4.6} find all
 solutions. Also, plot a direction field and some integral curves on
 the indicated rectangular region.}
 
@@ -2772,9 +2746,9 @@ the indicated rectangular region.}
 $y'-xy=x^3y^3;    \quad \{-3\le x\le 3,\-2\le y\ge 2\}$
 
 \item\label{exer:2.4.6}\CGex
-$\dst {y'-\frac{1+x}{3x}y=y^4};   \quad \{-2\le x\le2,-2\le y \le2\}$
+$y'-\dfrac{1+x}{3x}y=y^4;   \quad \{-2\le x\le2,-2\le y \le2\}$
 
-\exercisetext{In Exercises~\ref{exer:2.4.7}--\ref{exer:2.4.11} solve the
+\exercisetext{In \zcref[range]{exer:2.4.7,exer:2.4.11} solve the
 initial value problem.}
 
 \item\label{exer:2.4.7}$y'-2y=xy^3,\quad y(0)=2\sqrt2$
@@ -2782,11 +2756,11 @@ initial value problem.}
 \item\label{exer:2.4.8}$y'-xy=xy^{3/2},\quad y(1)=4$
 \item\label{exer:2.4.9}$xy'+y=x^4y^4,\quad y(1)=1/2$
 \item\label{exer:2.4.10}$y'-2y=2y^{1/2},\quad y(0)=1$
-\item\label{exer:2.4.11}$\dst{y'-4y=\frac{48x}{y^2},\quad y(0)=1}$
+\item\label{exer:2.4.11}$y'-4y=\dfrac{48x}{y^2},\quad y(0)=1$
 
 
 
-\exercisetext{In Exercises~\ref{exer:2.4.12} and \ref{exer:2.4.13} solve the
+\exercisetext{In \zcref[range]{exer:2.4.12,exer:2.4.13} solve the
 initial value problem and graph the solution.}
 
 \item\label{exer:2.4.12}\CGex $x^2y'+2xy=y^3,\quad y(1)=1/\sqrt2$
@@ -2804,7 +2778,7 @@ P'-aP=-a\alpha P^2.
 \]
 This isn't particularly interesting, since the logistic equation is
 separable, and therefore solvable by the method studied in
-Section~2.2. So let's consider a more complicated model,
+\zcref{sec:separable}. So let's consider a more complicated model,
 where
 $a$ is a positive constant and $\alpha$ is a positive continuous
 function of $t$ on $[0,\infty)$. The equation for this model is
@@ -2829,16 +2803,16 @@ Assuming that
 exists (finite or infinite), find $\lim_{t\to\infty}P(t)$.
 \end{alist}
 
-\exercisetext{In Exercises~\ref{exer:2.4.15}--\ref{exer:2.4.18} solve
+\exercisetext{In \zcref[range]{exer:2.4.15,exer:2.4.18} solve
 the equation explicitly.}
 
-\item(1)\label{exer:2.4.15}$y'=\dst\frac{y+x}{x}$
-\item(1)\label{exer:2.4.16}$y'=\dst\frac{y^2+2xy }{x^2}$
+\item(1)\label{exer:2.4.15}$y'=\dfrac{y+x}{x}$
+\item(1)\label{exer:2.4.16}$y'=\dfrac{y^2+2xy }{x^2}$
 \item(1)\label{exer:2.4.17}$xy^3y'=y^4+x^4$
-\item(1)\label{exer:2.4.18}$y'=\dst\frac{y}{x}+\sec\frac{y}{x}$
+\item(1)\label{exer:2.4.18}$y'=\dfrac{y}{x}+\sec\dfrac{y}{x}$
 
 
-\exercisetext{In Exercises~\ref{exer:2.4.19}-\ref{exer:2.4.21} solve the
+\exercisetext{In \zcref[range]{exer:2.4.19,exer:2.4.21} solve the
 equation explicitly.
  Also, plot a direction field and some integral curves on
 the indicated rectangular region.}
@@ -2851,37 +2825,35 @@ $xyy'=x^2+2y^2;  \quad \{-4\le x\le 4,-4\le y\le 4\}$
 
 
 \item\label{exer:2.4.21}\CGex
-$y'=\dst\frac{2y^2+x^2e^{-(y/x)^2}}{2xy};
-\quad  \{-8\le x\le 8,-8\le y\le 8\}$
+$y'=\dfrac{2y^2+x^2e^{-(y/x)^2}}{2xy};\quad  \{-8\le x\le 8,-8\le y\le 8\}$
 
 
-\exercisetext{In Exercises~\ref{exer:2.4.22}--\ref{exer:2.4.27} solve
+\exercisetext{In \zcref[range]{exer:2.4.22,exer:2.4.27} solve
 the initial value problem.}
 
-\item\label{exer:2.4.22}$y'=\dst\frac{xy+y^2}{x^2},
-\quad y(-1)=2$
+\item\label{exer:2.4.22}$y'=\dfrac{xy+y^2}{x^2},\quad y(-1)=2$
 
- \item\label{exer:2.4.23}$y'=\dst\frac{x^3+y^3}{xy^2}, \quad y(1)=3$
+ \item\label{exer:2.4.23}$y'=\dfrac{x^3+y^3}{xy^2}, \quad y(1)=3$
 
  \item\label{exer:2.4.24}$xyy'+x^2+y^2=0, \quad y(1)=2$
 
-\item\label{exer:2.4.25}$y'=\dst\frac{y^2-3xy-5x^2 }{x^2}, \quad y(1)=-1$
+\item\label{exer:2.4.25}$y'=\dfrac{y^2-3xy-5x^2 }{x^2}, \quad y(1)=-1$
 
 \item\label{exer:2.4.26}$x^2y'=2x^2+y^2+4xy, \quad y(1)=1$
 
 \item\label{exer:2.4.27}$xyy'=3x^2+4y^2, \quad y(1)=\sqrt{3}$
 
-\exercisetext{In Exercises~\ref{exer:2.4.28}--\ref{exer:2.4.34} solve the
+\exercisetext{In \zcref[range]{exer:2.4.28,exer:2.4.34} solve the
 given homogeneous equation implicitly.}
 
-\item(1)\label{exer:2.4.28}$y'=\dst\frac{x+y }{x-y}$
-\item(1)\label{exer:2.4.29}\vspace*{13pt} $(y'x-y)(\ln |y|-\ln |x|)=x$
-\item(1)\label{exer:2.4.30}$y'=\dst\frac{y^3+2xy^2+x^2y+x^3}{x(y+x)^2}$ 
-\item(1)\label{exer:2.4.31}$y'=\dst\frac{x+2y }{2x+y}$
-\item(1)\label{exer:2.4.32}$y'=\dst\frac{y }{y-2x}$
-\item(1)\label{exer:2.4.33}$y'=\dst\frac{xy^2+2y^3}{x^3+x^2y+xy^2}$
+\item(1)\label{exer:2.4.28}$y'=\dfrac{x+y }{x-y}$
+\item(1)\label{exer:2.4.29}$(y'x-y)(\ln |y|-\ln |x|)=x$
+\item(1)\label{exer:2.4.30}$y'=\dfrac{y^3+2xy^2+x^2y+x^3}{x(y+x)^2}$ 
+\item(1)\label{exer:2.4.31}$y'=\dfrac{x+2y }{2x+y}$
+\item(1)\label{exer:2.4.32}$y'=\dfrac{y }{y-2x}$
+\item(1)\label{exer:2.4.33}$y'=\dfrac{xy^2+2y^3}{x^3+x^2y+xy^2}$
 
-\item\label{exer:2.4.34}$y'=\dst\frac{x^3+x^2y+3y^3 }{x^3+3xy^2}$
+\item\label{exer:2.4.34}$y'=\dfrac{x^3+x^2y+3y^3 }{x^3+3xy^2}$
 
 
 \item\label{exer:2.4.35}\Lex
@@ -2889,13 +2861,12 @@ given homogeneous equation implicitly.}
 \item % (a)
 Find a solution of the initial value problem
 \[
-x^2y'=y^2+xy-4x^2, \quad y(-1)=0
-\eqno{\rm(A)}
+x^2y'=y^2+xy-4x^2, \quad y(-1)=0\tag{A}
 \]
 on the interval $(-\infty,0)$. Verify that this solution is actually
 valid on $(-\infty,\infty)$.
 \item % (b)
-Use Theorem~\ref{thmtype:2.3.1} to show that (A) has a
+Use \zcref{thmtype:2.3.1} to show that (A) has a
 unique solution on $(-\infty,0)$.
 \item % (c)
 Plot a direction field for the differential equation in
@@ -2920,8 +2891,7 @@ the form $(-\infty,a)$, where is a finite positive number.
 \item % (a)
 Solve the equation
 \[
-xyy'=x^2-xy+y^2
-\eqno{\rm(A)}
+xyy'=x^2-xy+y^2\tag{A}
 \]
 implicitly.
 \item % (b)
@@ -2941,8 +2911,7 @@ for $k=1$, $2$, \dots, $K$. Based on your observations, find
  conditions on the positive numbers $x_0$
 and $y_0$ such that the initial value problem
 \[
-xyy'=x^2-xy+y^2,\quad y(x_0)=y_0,
-\eqno{\rm(B)}
+xyy'=x^2-xy+y^2,\quad y(x_0)=y_0,\tag{B}
 \]
 has  a unique solution (i) on $(0,\infty)$   or (ii) only
 on an interval  $(a,\infty)$, where $a>0$?
@@ -2957,8 +2926,7 @@ as $x\to\infty$? (Again, assume that $x_0>0$ and $y_0>0$.)
 \item % (a)
 Solve the equation
 \[
-y'=\frac{2y^2-xy+2x^2 }{xy+2x^2}
-\eqno{\rm(A)}
+y'=\frac{2y^2-xy+2x^2 }{xy+2x^2}\tag{A}
 \]
 implicitly.
 \item % (b)
@@ -2973,7 +2941,7 @@ $y(x_0)=y_0$.
 \end{alist}
 
 \item\label{exer:2.4.38}\Lex
-Follow the instructions of Exercise~\ref{exer:2.4.37} for the equation
+Follow the instructions of \zcref{exer:2.4.37} for the equation
 \[
 y'=\frac{xy+x^2+y^2 }{xy}.
 \]
@@ -2996,16 +2964,16 @@ can be transformed into the homogeneous nonlinear equation
 by the substitution $x=X-X_0,\  y=Y-Y_0$,
 where $X_0$ and $Y_0$ are suitably chosen constants.
 
-\exercisetext{In Exercises~\ref{exer:2.4.41}-\ref{exer:2.4.43} use a
-method suggested by Exercise~\ref{exer:2.4.40} to solve the
+\exercisetext{In \zcref[range]{exer:2.4.41,exer:2.4.43} use a
+method suggested by \zcref{exer:2.4.40} to solve the
 given equation implicitly.}
 
-\item(1)\label{exer:2.4.41}$y'=\dst\frac{-6x+y-3 }{2x-y-1}$
-\item(1)\label{exer:2.4.42}\vspace*{10pt} $y'=\dst\frac{2x+y+1 }{x+2y-4}$
+\item(1)\label{exer:2.4.41}$y'=\dfrac{-6x+y-3 }{2x-y-1}$
+\item(1)\label{exer:2.4.42}$y'=\dfrac{2x+y+1 }{x+2y-4}$
 
-\item\label{exer:2.4.43}$y'=\dst\frac{-x+3y-14 }{x+y-2}$
+\item\label{exer:2.4.43}$y'=\dfrac{-x+3y-14 }{x+y-2}$
 
-\exercisetext{In Exercises~\ref{exer:2.4.44}--\ref{exer:2.4.51} find
+\exercisetext{In \zcref[range]{exer:2.4.44,exer:2.4.51} find
 a function $y_1$ such that the substitution $y=uy_1$ transforms
 the given equation  into a separable
 equation of the form \eqref{eq:2.4.6}. Then solve the given equation
@@ -3015,7 +2983,7 @@ explicitly.}
 \item(1)\label{exer:2.4.45}$xyy'=3x^6+6y^2$
 \item(1)\label{exer:2.4.46}$x^3y'=2(y^2+x^2y-x^4)$
 \item(1)\label{exer:2.4.47}$y'=y^2e^{-x}+4y+2e^x$
-\item(1)\label{exer:2.4.48}$y'=\dst\frac{y^2+y\tan x+\tan^2 x}{\sin^2x}$ 
+\item(1)\label{exer:2.4.48}$y'=\dfrac{y^2+y\tan x+\tan^2 x}{\sin^2x}$ 
 \item(1)\label{exer:2.4.49}$x(\ln x)^2y'=-4(\ln x)^2+y\ln x+y^2$
 \item(1)\label{exer:2.4.50}$2x(y+2\sqrt x)y'=(y+\sqrt x)^2$
 \item(1)\label{exer:2.4.51}$(y+e^{x^2})y'=2x(y^2+ye^{x^2}+e^{2x^2})$
@@ -3040,8 +3008,7 @@ constant.
 \href{http://http://www-history.mcs.st-and.ac.uk/Indexes/Riccati.html}
 {\color{blue}\itshape Riccati equation} is of the form
 \[
-y'=P(x)+Q(x)y+R(x)y^2.
-\eqno{\rm (A)}
+y'=P(x)+Q(x)y+R(x)y^2.\tag{A}
 \]
 (If $R\equiv-1$,  (A) is a
 \href{http://http://www-history.mcs.st-and.ac.uk/Indexes/Riccati.html}
@@ -3051,9 +3018,9 @@ solution of (A). Let $z=y-y_1$. Show that $z$ is a
 solution of a Bernoulli equation with $n=2$.
 
 
-\exercisetext{In Exercises~\ref{exer:2.4.56}--\ref{exer:2.4.59},
+\exercisetext{In \zcref[range]{exer:2.4.56,exer:2.4.59},
 given that $y_1$ is a solution of the given equation, use the
-method suggested by Exercise \ref{exer:2.4.55} to find other solutions.}
+method suggested by \zcref{exer:2.4.55} to find other solutions.}
 
 \item\label{exer:2.4.56}$y'=1+x - (1+2x)y+xy^2$;  \quad    $y_1=1$
 
@@ -3066,7 +3033,7 @@ method suggested by Exercise \ref{exer:2.4.55} to find other solutions.}
 \end{exerciselist}
 
 
-\section{Exact Equations}
+\section{Exact Equations}\label{sec:exact}
 
 In this  section it's convenient to write first order
 differential equations in the form
@@ -3093,23 +3060,19 @@ solution of \eqref{eq:2.5.3}.
 
 Here are  some examples:
 
-\begin{center}\stepcounter{table}%\label{table:2.5.1}\vspace*{6pt}
-\tagpdfsetup{table/header-rows={1}}
-\begin{tabular}{ccc} \toprule
-Equation \eqref{eq:2.5.1}&Equation \eqref{eq:2.5.2}&Equation \eqref{eq:2.5.3}
+\begin{flalign*}\toprule
+\text{\zcref{eq:2.5.1}}&&
+\text{\zcref{eq:2.5.2}}&&
+\text{\zcref{eq:2.5.3}}
 \\\midrule
-$3x^2y^2\,dx+2x^3y\,dy =0$ &$3x^2y^2+2x^3y\,\dst\frac{dy}{dx} =0$  &$3x^2y^2\,\dst\frac{dx}{dy}+2x^3y=0$
-\\
-$(x^2+y^2)\,dx +2xy\,dy=0$ &
-$(x^2+y^2)+2xy\,\dst\frac{dy}{dx}=0$&
-$(x^2+y^2)\,\dst\frac{dx}{dy} +2xy=0$
-\\
-$3y\sin x\,dx-2xy\cos x\,dy =0$
-&$3y\sin x-2xy\cos x\,\dst\frac{dy}{dx} =0$
-& $3y\sin x\,\dst\frac{dx}{dy}-2xy\cos x  =0$
-\\\bottomrule
-\end{tabular}
-\end{center}
+3x^2y^2\,dx+2x^3y\,dy &=0 & 3x^2y^2+2x^3y\,\dfrac{dy}{dx} &=0 & 3x^2y^2\,\dfrac{dx}{dy}+2x^3y &=0 \\
+(x^2+y^2)\,dx +2xy\,dy&=0 &
+(x^2+y^2)+2xy\,\dfrac{dy}{dx}&=0&
+(x^2+y^2)\,\dfrac{dx}{dy} +2xy&=0\\
+3y\sin x\,dx-2xy\cos x\,dy &=0 &
+3y\sin x-2xy\cos x\,\dfrac{dy}{dx} &=0 &
+3y\sin x\,\dfrac{dx}{dy}-2xy\cos x  &=0\\\bottomrule
+\end{flalign*}\stepcounter{table}
 
 Note that a separable equation can be written as
 \eqref{eq:2.5.1} as
@@ -3121,10 +3084,10 @@ M(x)\,dx+N(y)\,dy=0.
 We'll  develop a method for solving \eqref{eq:2.5.1} under appropriate
 assumptions on $M$ and $N$. This method is an extension
 of the method of separation of variables
-(Exercise~\ref{exer:2.5.41}).  Before stating it we
+(\zcref{exer:2.5.41}).  Before stating it we
 consider an  example.
 
-\begin{example}\label{example:2.5.1} \rm
+\begin{example}\label{example:2.5.1}
 Show that
 \begin{equation} \label{eq:2.5.4}
 x^4y^3+x^2y^5+2xy=c
@@ -3155,15 +3118,15 @@ You may think this example is pointless, since
 concocting a differential equation that has a given implicit solution
 isn't particularly interesting. However, it illustrates the
 next important theorem, which  we'll prove by using implicit
-differentiation,  as  in  Example~\ref{example:2.5.1}.
+differentiation,  as  in  \zcref{example:2.5.1}.
 
-\begin{theorem}\color{blue} \label{thmtype:2.5.1}
+\begin{theorem}\label{thmtype:2.5.1}
 If $F=F(x,y)$ has continuous partial derivatives
 $F_x$ and $F_y$, then
 \begin{equation} \label{eq:2.5.6}
-F(x,y)=c\qquad \mbox{{\rm(}$c$=constant\mbox{)}},
+F(x,y)=c
 \end{equation}
-is an implicit solution of the differential equation
+(where $c$ is a constant) is an implicit solution of the differential equation
 \begin{equation} \label{eq:2.5.7}
 F_x(x,y)\,dx+F_y(x,y)\,dy=0.
 \end{equation}
@@ -3205,16 +3168,20 @@ F_x(x,y)\,dx+F_y(x,y)\,dy
 (obtained by substituting \eqref{eq:2.5.9} into the left side of
 \eqref{eq:2.5.8}) is the  \emph{\color{blue}exact differential of} $F$.
 
-Example~\ref{example:2.5.1} shows that it's easy to solve
+\zcref[S]{example:2.5.1} shows that it's easy to solve
 \eqref{eq:2.5.8}
 if it's exact \emph{\color{blue}and}  we know a function $F$ that satisfies
 \eqref{eq:2.5.9}. The important questions are:
-
- {\sc Question 1.}  Given an equation
-\eqref{eq:2.5.8}, how can we determine whether it's  exact?
-
- {\sc Question 2.} If \eqref{eq:2.5.8} is exact, how do we find
+\begin{enumext}[
+ label=\arabic*,
+ font=\scshape,
+ wrap-label={Question #1.},
+ labelwidth=6em,
+ ]
+ \item Given an equation \eqref{eq:2.5.8}, how can we determine whether it's  exact?
+\item If \eqref{eq:2.5.8} is exact, how do we find
 a function $F$ satisfying \eqref{eq:2.5.9}?
+\end{enumext}
 
 To discover the answer to Question~1,
  assume that  there's a function $F$  that satisfies \eqref{eq:2.5.9} on
@@ -3234,9 +3201,8 @@ From  \eqref{eq:2.5.10}  and \eqref{eq:2.5.11}, we conclude that
  a necessary condition for exactness is that $M_y=N_x$.
 This motivates the next theorem, which we state without proof.
 
-\begin{theorem}\color{blue} $[$The Exactness
-Condition$]$\label{thmtype:2.5.2}
- \space  Suppose  $M$ and
+\begin{theorem}[The Exactness Condition]\label{thmtype:2.5.2}
+Suppose  $M$ and
 $N$ are continuous and have continuous partial derivatives
 $M_y$ and $N_x$ on an open rectangle $R.$ Then
 \[
@@ -3255,7 +3221,7 @@ that the coefficients of $dx$ and $dy$ are differentiated in
 the coefficient of $dx$ is differentiated with respect to $y$, while the
 coefficient of $dy$ is differentiated with respect to $x$.
 
-\begin{example}\label{example:2.5.2} \rm
+\begin{example}\label{example:2.5.2}
  Show that the equation
 \[
 3x^2y\,dx+4x^3\,dy=0
@@ -3282,7 +3248,7 @@ The next example illustrates two possible methods for finding a
 function $F$ that satisfies the condition $F_x=M$ and $F_y=N$ if
 $M\,dx+N\,dy=0 $ is exact.
 
-\begin{example}\label{example:2.5.3}\rmfamily
+\begin{example}\label{example:2.5.3}
 Solve
 \begin{equation}\label{eq:2.5.13}
 (4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0.
@@ -3290,7 +3256,7 @@ Solve
 \end{example}
 
 
-\solution (Method 1)
+\solution
 Here
 \[
 M(x,y)=4x^3y^3+3x^2,\quad N(x,y)=3x^4y^2+6y^2,
@@ -3301,7 +3267,7 @@ M_y(x,y)=N_x(x,y)=12 x^3y^2
 \]
 for all $(x,y)$.
 Therefore
-Theorem~\ref{thmtype:2.5.2} implies that there's a function $F$ such that
+\zcref{thmtype:2.5.2} implies that there's a function $F$ such that
 \begin{equation} \label{eq:2.5.14}
 F_x(x,y)=M(x,y)=4x^3y^3+3x^2
 \end{equation}
@@ -3309,7 +3275,9 @@ F_x(x,y)=M(x,y)=4x^3y^3+3x^2
 \begin{equation} \label{eq:2.5.15}
 F_y(x,y)=N(x,y)=3x^4y^2+6y^2
 \end{equation}
- for all $(x,y)$.  To find $F$, we integrate \eqref{eq:2.5.14} with
+ for all $(x,y)$.
+
+(Method 1)  To find $F$, we integrate \eqref{eq:2.5.14} with
 respect to $x$ to obtain
 \begin{equation} \label{eq:2.5.16}
 F(x,y)=x^4y^3+x^3+\phi(y),
@@ -3340,7 +3308,7 @@ Substituting this into \eqref{eq:2.5.16} yields
 \begin{equation} \label{eq:2.5.17}
 F(x,y)=x^4y^3+x^3+2y^3.
 \end{equation}
-Now Theorem~\ref{thmtype:2.5.1} implies that
+Now \zcref{thmtype:2.5.1} implies that
 \[
 x^4y^3+x^3+2y^3=c
 \]
@@ -3350,7 +3318,7 @@ yields the explicit solution
 y=\left(\frac{c-x^3}{2+x^4}\right)^{1/3}.
 \]
 
-\solution (Method 2) Instead of first integrating
+(Method 2) Instead of first integrating
 \eqref{eq:2.5.14}
 with respect to $x$, we could begin by integrating \eqref{eq:2.5.15} with
 respect to $y$ to obtain
@@ -3375,12 +3343,12 @@ integration to be zero yields
 \]
  Substituting this into \eqref{eq:2.5.18} yields \eqref{eq:2.5.17}.
 
-Figure~\ref{figure:2.5.1} shows a direction field and  some
+\zcref[S]{figure:2.5.1} shows a direction field and  some
 integral curves of \eqref{eq:2.5.13}.
 
-              \begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={A vector field for -1<x,y<1 with arrows flowing down and to the right. Several solution curves follow the arrows, coalescing as they approach ±(1,0.7).  Along y=x, the curves bump away from the origin.},
   width=5.67in,height=3.66in,keepaspectratio]{fig020501}
 \color{blue}
 \caption{A direction field and  integral curves for
@@ -3394,18 +3362,22 @@ Here's a summary of the procedure used in Method 1 of this
 example. You should summarize procedure used in Method~2.
 
 \smallskip
-\color{blue}
+{\color{blue}
 {\centerline{\bfseries Procedure For Solving An Exact Equation}}
 
-
-\begin{description}
-\item{\bf Step 1.} Check that the equation
+\begin{enumext}[
+label=\arabic*,
+wrap-label={Step #1.},
+labelwidth={4em},
+list-indent=0pt,
+]
+\item Check that the equation
 \begin{equation} \label{eq:2.5.19}
  M(x,y)\,dx+N(x,y)\,dy=0
 \end{equation}
 satisfies the exactness condition  $M_y=N_x$. If not,
 don't go further with this procedure.
-\item{\bf Step 2.} Integrate
+\item Integrate
 \[
 \frac{\partial F(x,y)}{\partial x}=M(x,y)
 \]
@@ -3415,26 +3387,26 @@ F(x,y)=G(x,y)+\phi(y),
 \end{equation}
 where $G$ is an antiderivative of $M$ with respect to $x$, and $\phi$
 is an unknown function of $y$.
-\item{\bf Step 3.} Differentiate \eqref{eq:2.5.20} with respect to
+\item Differentiate \eqref{eq:2.5.20} with respect to
 $y$  to obtain
 \[
 \frac{\partial F(x,y)}{\partial y}=\frac{\partial G(x,y)}{\partial
 y}+\phi'(y).
 \]
-\item{\bf Step 4.} Equate the right side of this equation to $N$ and solve
+\item Equate the right side of this equation to $N$ and solve
 for $\phi'$;    thus,
 \[
 \frac{\partial G(x,y)}{\partial y}+\phi'(y)=N(x,y),\mbox{\quad  so \quad }
 \phi'(y)=N(x,y)-\frac{\partial G(x,y)}{\partial y}.
 \]
-\item{\bf Step 5.} Integrate $\phi'$ with respect to $y$, taking the
+\item Integrate $\phi'$ with respect to $y$, taking the
 constant of integration to be zero, and substitute the result in
 \eqref{eq:2.5.20} to obtain $F(x,y)$.
-\item{\bf Step 6.} Set $F(x,y)=c$ to obtain an implicit solution of
+\item Set $F(x,y)=c$ to obtain an implicit solution of
 \eqref{eq:2.5.19}. If possible, solve for $y$ explicitly as a
 function of $x$.
-\end{description}
-\color{black}
+\end{enumext}
+}
 
 
 It's a common mistake to omit Step 6. However, it's important to
@@ -3442,12 +3414,12 @@ include this step, since $F$ isn't  itself a solution of
 \eqref{eq:2.5.19}.
 
 Many equations can be conveniently solved by either of the two methods
-used in Example~\ref{example:2.5.3}. However, sometimes the integration
+used in \zcref{example:2.5.3}. However, sometimes the integration
 required in one approach is  more difficult than in the
 other. In such cases we choose the approach that requires the easier
 integration.
 
-\begin{example}\label{example:2.5.4} \rm
+\begin{example}\label{example:2.5.4}
  Solve the equation
 \begin{equation}  \label{eq:2.5.21}
 (ye^{xy} \tan x+e^{xy} \sec^2x)\,dx+xe^{xy} \tan x\,dy=0.
@@ -3487,11 +3459,11 @@ will lead to failure in  Step 4, since the function
  N-\frac{\partial G}{\partial y}
 \]
 won't be independent of $x$ if $M_y\ne N_x$
-(Exercise~\ref{exer:2.5.31}), and therefore
+(\zcref{exer:2.5.31}), and therefore
 can't be the derivative of a function of $y$ alone. Here's an example that
 illustrates this.
 
-\begin{example}\label{example:2.5.5}  \rm
+\begin{example}\label{example:2.5.5}
  Verify that the equation
 \begin{equation} \label{eq:2.5.25}
 3x^2y^2\,dx+6x^3y\,dy=0
@@ -3533,8 +3505,8 @@ This is a contradiction, since $\phi'$  must be independent
 of $x$. Therefore the procedure fails.
 
 \exercises
-In Exercises~\ref{exer:2.5.1}--\ref{exer:2.5.17} determine which equations
-are exact and solve them.
+\emph{In \zcref[range]{exer:2.5.1,exer:2.5.17} determine which equations
+are exact and solve them.}
 
 \begin{exerciselist}
 \item\label{exer:2.5.1}$6x^2y^2\,dx+4x^3y\,dy=0$
@@ -3545,8 +3517,9 @@ are exact and solve them.
 
 \item\label{exer:2.5.4}$(2x-2y^2)\,dx+(12y^2-4xy)\,dy=0$
 
-\item(1)\label{exer:2.5.5}$(x+y)^2\,dx+(x+y)^2\,dy=0$%&
-\item(1)\label{exer:2.5.6}$(4x+7y)\,dx+(3x+4y)\,dy=0$
+% these were two columns
+\item\label{exer:2.5.5}$(x+y)^2\,dx+(x+y)^2\,dy=0$%&
+\item\label{exer:2.5.6}$(4x+7y)\,dx+(3x+4y)\,dy=0$
 
 \item\label{exer:2.5.7}$(-2y^2\sin x+3y^3-2x)\,dx+(4y\cos x+9xy^2)\,dy=0$
 
@@ -3556,12 +3529,12 @@ are exact and solve them.
 
 \item\label{exer:2.5.10}$(2x^2+8xy+y^2)\,dx+(2x^2+xy^3/3)\,dy=0$
 
-\item\label{exer:2.5.11}$\dst{\left(\frac{1}{x}+2x\right)\,dx+
-\left(\frac{1}{y}+2y\right)\,dy=0}$
+\item\label{exer:2.5.11}$\left(\dfrac{1}{x}+2x\right)\,dx+
+\left(\dfrac{1}{y}+2y\right)\,dy=0$
 
 \item\label{exer:2.5.12}$(y\sin xy+xy^2\cos xy)\,dx+(x\sin xy+xy^2\cos xy)\,dy=0$
 
-\item\label{exer:2.5.13}$\dst{\frac{x\,dx}{(x^2+y^2)^{3/2}}+\frac{y\,dy}{(x^2+y^2)^{3/2}}=0}$
+\item\label{exer:2.5.13}$\dfrac{x\,dx}{(x^2+y^2)^{3/2}}+\dfrac{y\,dy}{(x^2+y^2)^{3/2}}=0$
 
 \item\label{exer:2.5.14}$\left(e^x(x^2y^2+2xy^2)+6x\right)\,dx+(2x^2ye^x+2)\,dy=0$
 
@@ -3571,7 +3544,7 @@ are exact and solve them.
 
 \item\label{exer:2.5.17}$(3x^2\cos xy-x^3y\sin xy+4x)\,dx+(8y-x^4\sin xy)\,dy=0$
 
-\exercisetext{In Exercises~\ref{exer:2.5.18}--\ref{exer:2.5.22} solve
+\exercisetext{In \zcref[range]{exer:2.5.18,exer:2.5.22} solve
 the initial value problem.}
 
 \item\label{exer:2.5.18}$(4x^3y^2-6x^2y-2x-3)\,dx+(2x^4y-2x^3)\,dy=0,\quad y(1)=3$
@@ -3613,7 +3586,7 @@ Plot a direction field and some integral curves for the exact equation
 (x^3y^4+x)\,dx+(x^4y^3+y)\,dy=0
 \]
 on the rectangle $\{-1\le x\le 1,-1\le y\le1\}$. (See
-Exercise~\ref{exer:2.5.37}\part{a}).
+\zcref{exer:2.5.37}(a)).
 
 \item\label{exer:2.5.26}\CGex
 Plot a direction field and some integral curves for the exact equation
@@ -3621,23 +3594,21 @@ Plot a direction field and some integral curves for the exact equation
 (3x^2+2y)\,dx+(2y+2x)\,dy=0
 \]
 on the rectangle $\{-2\le x\le 2,-2\le y\le2\}$. (See
-Exercise~\ref{exer:2.5.37}(b)).
+\zcref{exer:2.5.37}(b)).
 
 \item\label{exer:2.5.27}\Lex
 \begin{alist}
 \item % (a)
 Solve the exact equation
 \[
-(x^3y^4+2x)\,dx+(x^4y^3+3y)\,dy=0
-\eqno{\rm(A)}
+(x^3y^4+2x)\,dx+(x^4y^3+3y)\,dy=0\tag{A}
 \]
 implicitly.
 \item % (b)
 For what choices of $(x_0,y_0)$ does
-Theorem~\ref{thmtype:2.3.1} imply that the initial value problem
+\zcref{thmtype:2.3.1} imply that the initial value problem
 \[
-(x^3y^4+2x)\,dx+(x^4y^3+3y)\,dy=0,\quad y(x_0)=y_0,
-\eqno{\rm(B)}
+(x^3y^4+2x)\,dx+(x^4y^3+3y)\,dy=0,\quad y(x_0)=y_0,\tag{B}
 \]
 has a unique solution on an open interval $(a,b)$  that contains $x_0$?
 \item % (b)
@@ -3651,16 +3622,14 @@ on a rectangular region centered at the origin. What is the
 \item % (a)
 Solve the exact equation
 \[
-(x^2+y^2)\,dx+2xy\,dy=0
-\eqno{\rm(A)}
+(x^2+y^2)\,dx+2xy\,dy=0\tag{A}
 \]
 implicitly.
 \item % (b)
 For what choices of $(x_0,y_0)$ does
-Theorem~\ref{thmtype:2.3.1} imply that the initial value problem
+\zcref{thmtype:2.3.1} imply that the initial value problem
 \[
-(x^2+y^2)\,dx+2xy\,dy=0,\quad y(x_0)=y_0,
-\eqno{\rm(B)}
+(x^2+y^2)\,dx+2xy\,dy=0,\quad y(x_0)=y_0,\tag{B}
 \]
 has a unique solution $y=y(x)$ on some open interval $(a,b)$
 that contains $x_0$?
@@ -3732,12 +3701,12 @@ F(x,y)=\int^x_{x_0}M(s,y_0)\,ds+\int^y_{y_0}N(x,t)\,dt,
 \]
 then $F_x=M$ and $F_y=N$.
 
-\item\label{exer:2.5.36}Under the assumptions of Exercise~\ref{exer:2.5.35}, show that
+\item\label{exer:2.5.36}Under the assumptions of \zcref{exer:2.5.35}, show that
 \[
 F(x,y)=\int^y_{y_0}N(x_0,s)\,ds+\int^x_{x_0}M(t,y)\,dt.
 \]
 
-\item\label{exer:2.5.37}Use the method suggested by Exercise~\ref{exer:2.5.35}, with
+\item\label{exer:2.5.37}Use the method suggested by \zcref{exer:2.5.35}, with
 $(x_0,y_0)=(0,0)$, to solve the these exact equations:
 \begin{alist}
 \item %(a)
@@ -3766,13 +3735,11 @@ y(0)=-1.
 
 \item\label{exer:2.5.41}Rewrite the separable equation
 \[
-h(y)y'=g(x)
-\eqno{\rm (A)}
+h(y)y'=g(x)\tag{A}
 \]
 as an exact equation
 \[
-M(x,y)\,dx+N(x,y)\,dy=0.
-\eqno{\rm (B)}
+M(x,y)\,dx+N(x,y)\,dy=0.\tag{B}
 \]
 Show that applying the method of this section  to
 (B) yields the same solutions that would be
@@ -3788,14 +3755,14 @@ $R$.
 \item\label{exer:2.5.43}Suppose all second partial derivatives of
 $F=F(x,y)$ are continuous and $F_{xx}+F_{yy}=0$ on an open rectangle
 $R$. (A function with these properties is said to be \emph{\color{blue}harmonic};
-see also Exercise~\ref{exer:2.5.42}.) Show that $-F_y\,dx+F_x\,dy=0$ is
+see also \zcref{exer:2.5.42}.) Show that $-F_y\,dx+F_x\,dy=0$ is
 exact on $R$, and
 therefore there's a function $G$ such that
 $G_x=-F_y$ and $G_y=F_x$ in $R$. (A function $G$ with this property is
 said to be a \emph{\color{blue}harmonic conjugate} of $F$.)
 
 \item\label{exer:2.5.44}Verify that the following functions are harmonic, and find all their
-harmonic conjugates.  (See Exercise~\ref{exer:2.5.43}.)
+harmonic conjugates.  (See \zcref{exer:2.5.43}.)
 
 \begin{alist}[columns=3]
 % TODO horizontal
@@ -3808,9 +3775,10 @@ harmonic conjugates.  (See Exercise~\ref{exer:2.5.43}.)
 
 \end{exerciselist}
 
-\section{Integrating Factors}
 
-In  Section~2.5 we saw that if $M$, $N$, $M_y$ and $N_x$ are
+\section{Integrating Factors}\label{sec:integrating_factors}
+
+In \zcref{sec:exact} we saw that if $M$, $N$, $M_y$ and $N_x$ are
 continuous and $M_y=N_x$ on an open rectangle $R$ then
 \begin{equation} \label{eq:2.6.1}
 M(x,y)\,dx+N(x,y)\,dy=0
@@ -3828,8 +3796,8 @@ $M_y(x,y)=4y\ne  N_x(x,y)=2y$ in \eqref{eq:2.6.2}.
 \end{equation}
 which is exact, since
 $M_y(x,y)=N_x(x,y)=4xy$ in \eqref{eq:2.6.3}.
-Solving \eqref{eq:2.6.3} by the procedure given in  Section~2.5
- yields the implicit solution
+Solving \eqref{eq:2.6.3} by the procedure given in \zcref{sec:exact}
+yields the implicit solution
 \[
 x^3+x^2y^2=c.
 \]
@@ -3841,15 +3809,15 @@ A function $\mu=\mu(x,y)$ is  an \emph{\color{blue}integrating factor} for
  \end{equation}
  is exact. If we know an integrating
 factor $\mu$ for \eqref{eq:2.6.1}, we can solve the exact equation
-\eqref{eq:2.6.4} by the method of Section~2.5. It would be
+\eqref{eq:2.6.4} by the method of \zcref{sec:exact}. It would be
 nice
 if we could say that \eqref{eq:2.6.1} and \eqref{eq:2.6.4} always have the
 same solutions, but this isn't so. For example, a solution
 $y=y(x)$ of \eqref{eq:2.6.4} such that $\mu(x,y(x))=0$ on some interval
 $a<x<b$ could fail to be a solution of \eqref{eq:2.6.1}
-(Exercise~\ref{exer:2.6.1}), while
+(\zcref{exer:2.6.1}), while
 \eqref{eq:2.6.1} may have a solution $y=y(x)$ such that $\mu(x,y(x)) $
-isn't even defined (Exercise~\ref{exer:2.6.2}). Similar comments
+isn't even defined (\zcref{exer:2.6.2}). Similar comments
 apply if $y$ is the independent variable and $x$ is the dependent
 variable  in \eqref{eq:2.6.1} and \eqref{eq:2.6.4}.  However, if $\mu(x,y)$
 is defined and nonzero for all $(x,y)$,  \eqref{eq:2.6.1}  and
@@ -3857,9 +3825,7 @@ is defined and nonzero for all $(x,y)$,  \eqref{eq:2.6.1}  and
 
 \boxit{Finding Integrating Factors}
 
-
-\noindent
-By applying Theorem~\ref{thmtype:2.5.2} (with $M$ and $N$ replaced by $\mu M$
+By applying \zcref{thmtype:2.5.2} (with $M$ and $N$ replaced by $\mu M$
 and $\mu N$), we see that \eqref{eq:2.6.4} is exact on an open rectangle
 $R$ if $\mu M$, $\mu N$, $(\mu M)_y$, and $(\mu N)_x$ are continuous
 and
@@ -3931,7 +3897,7 @@ conditions for the given equation to have an integrating factor that
 depends on only one of the independent variables $x$ and $y$, and for
 finding an integrating factor in this case.
 
-\begin{theorem}\color{blue}\label{thmtype:2.6.1}
+\begin{theorem}\label{thmtype:2.6.1}
 Let $M,$ $N,$ $M_y,$ and $N_x$ be continuous on an open rectangle $R.$
 Then$:$
 \begin{alist}
@@ -3982,10 +3948,10 @@ with $p\equiv0$ and $q=(N_x-M_y)/M$, and a similar argument shows that
 \end{proof}
 
 The next two examples show how to apply
-Theorem~\ref{thmtype:2.6.1}.
+\zcref{thmtype:2.6.1}.
 
 \begin{example}\label{example:2.6.1}
-\rm  Find an integrating factor for the equation
+Find an integrating factor for the equation
 \begin{equation}\label{eq:2.6.13}
 (2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0
 \end{equation}
@@ -4004,7 +3970,7 @@ so \eqref{eq:2.6.13}  isn't  exact. However,
 \[
 \frac{M_y-N_x}{N}=-\frac{6x^3y^2+8xy}{3x^2y^2+4y}=-2x
 \]
-is independent of $y$, so Theorem~\ref{thmtype:2.6.1}\part{a} applies
+is independent of $y$, so \zcref{thmtype:2.6.1}\part{a} applies
 with
 $p(x)=-2x$. Since
 \[
@@ -4044,12 +4010,14 @@ e^{-x^2}\left(y^2(x^2y+2)-1\right)=c
 is an implicit solution of \eqref{eq:2.6.14}. It is also an implicit solution
 of \eqref{eq:2.6.13}.
 
-Figure~\ref{figure:2.6.1}  shows a  direction field and some integal curves
+\zcref[S]{figure:2.6.1}  shows a  direction field and some integral curves
 for \eqref{eq:2.6.13}
 
-  \begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020601}
+  \includegraphics[alt={A vector field for -2<x<2 and -4<y<4 that is symmetric along x=0.  Near the origin, solution curves circle clockwise.  For y>0.5, solution curves decrease and are horizontal near x=0.  For x=-2 and y<-1.3, solution curves increase until x=-1.5 and then decrease toward an asymptote along y=1/x.  For x=-2 and -1.3<y<1, solution curves increase slowly and then around x=-1.5 they turn upward and then track close to y=1.  For y=-4 and 0<x<2, solution curves move upward and then turn left to cross x=0 horizontally.},
+  %%% TODO.  WE HAVEN'T SAID HOW A DIRECTION FIELD CAN GO LEFT
+  width=5.67in,height=3.3in,keepaspectratio]{fig020601}
 \color{blue}
 \caption{A direction field and  integral curves for
 $(2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0$}
@@ -4059,7 +4027,7 @@ $(2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0$}
 
 
 \begin{example}\label{example:2.6.2}
-\rm  Find an integrating factor for
+Find an integrating factor for
 \begin{equation}\label{eq:2.6.18}
 2xy^3\,dx+(3x^2y^2+x^2y^3+1)\,dy=0
 \end{equation}
@@ -4078,8 +4046,8 @@ so \eqref{eq:2.6.18} isn't  exact.  Moreover,
 \[
 \frac{M_y-N_x}{N}=-\frac{2xy^3}{3x^2y^2+x^2y^2+1}
 \]
-is not independent of $y$, so Theorem~\ref{thmtype:2.6.1}(a) does not
-apply. However,   Theorem~\ref{thmtype:2.6.1}(b) does apply, since
+is not independent of $y$, so \zcref[S]{thmtype:2.6.1}(a) does not
+apply. However,   \zcref[S]{thmtype:2.6.1}(b) does apply, since
 \[
 \frac{N_x-M_y}{M}=\frac{2xy^3}{2xy^3}=1
 \]
@@ -4119,29 +4087,26 @@ that
 \]
 is an implicit solution of \eqref{eq:2.6.19}.
 It is also an implicit solution
- of \eqref{eq:2.6.18}. Figure~\ref{figure:2.6.2} shows a direction
+ of \eqref{eq:2.6.18}. \zcref[S]{figure:2.6.2} shows a direction
 field and some integral curves for \eqref{eq:2.6.18}.\bbox
 
-
-
-
-
-           \begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020602}
+  \includegraphics[alt={A vector field for -4<x,y<4 symmetric about x=0 with trivial solution y=0. For y>0, solution curves increase from a horizontal asymptote along y=0 and peak horizontally when x=0.  For negative y close to 0, solution curves start near the horizontal asymptote and decrease to a minimum when x=0.  For negative y further from 0, solution curves turn away from x=0 and move downward to the left.},
+  width=5.67in,height=3.66in,keepaspectratio]{fig020602}
 \color{blue}
-\caption{
-A direction field and integral curves for
+\caption{A direction field and integral curves for
 $2xy^3e^y\,dx+(3x^2y^2+x^2y^3+1)e^y\,dy=0$}
   \label{figure:2.6.2}
 \end{figure}
 
 
-Theorem~\ref{thmtype:2.6.1} does not apply in the next example,
-but the more general argument that led to Theorem~\ref{thmtype:2.6.1}
+\zcref[S]{thmtype:2.6.1} does not apply in the next example,
+but the more general argument that led to \zcref{thmtype:2.6.1}
 provides an integrating factor.
 
-\begin{example}\label{example:2.6.3} \rm Find an integrating factor for
+\begin{example}\label{example:2.6.3}
+Find an integrating factor for
 \begin{equation}\label{eq:2.6.23}
 (3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0
 \end{equation} and solve the equation.
@@ -4158,13 +4123,14 @@ M_y-N_x=(3x+12y)-(4x+9y)=-x+3y.
  Therefore
  \[ \frac{M_y-N_x}{M}=\frac{-x+3y}{3xy+6y^2} \mbox{\quad and \quad} \frac{N_x-M_y}{N}=\frac{x-3y}{2x^2+9xy},
  \]
-so Theorem~\ref{thmtype:2.6.1} does not apply.
+so \zcref{thmtype:2.6.1} does not apply.
 Following the more general argument that led to
-Theorem~\ref{thmtype:2.6.1}, we look for functions $p=p(x)$ and $q=q(y)$
+\zcref{thmtype:2.6.1}, we look for functions $p=p(x)$ and $q=q(y)$
 such that
 \[
 M_y-N_x=p(x)N-q(y)M;
- \] that is,
+ \]
+ that is,
 \[
 -x+3y=p(x)(2x^2+9xy)-q(y)(3xy+6y^2).
 \]
@@ -4187,16 +4153,19 @@ xp(x)(2x+9y)-yq(y)(3x+6y)=-x+3y.
 \]
 Equating the coefficients of $x$ and $y$
 on both sides shows that the last equation holds for all $(x,y)$ if
-\begin{eqnarray*} 2A-3B &=&-1 \\ 9A-6B &=&\phantom{-}3,
-\end{eqnarray*}
+\begin{align*}
+2A-3B &=-1 \\
+9A-6B &=\phantom{-}3,
+\end{align*}
  which has the solution $A=1$, $B=1$. Therefore
 \eqref{eq:2.6.24} implies that
- \[ p(x)=\frac{1}{x}\mbox{\quad and \quad}
+ \[
+ p(x)=\frac{1}{x}\quad\text{and}\quad
 q(y)=\frac{1}{y}.
 \]
 Since
- \[ \int p(x)\,dx=\ln|x|\mbox{\quad
-and\quad}\int q(y)\,dy=\ln|y|,
+\[
+\int p(x)\,dx=\ln|x|\quad\text{and}\quad\int q(y)\,dy=\ln|y|,
 \]
  we can let $P(x)=x$ and $Q(y)=y$;
 hence, $\mu(x,y)=xy$ is an integrating factor. Multiplying
@@ -4205,7 +4174,7 @@ hence, $\mu(x,y)=xy$ is an integrating factor. Multiplying
 (3x^2y^2+6xy^3)\,dx+(2x^3y+9x^2y^2)\,dy=0.
  \]
  We leave it to you to
-use the method of Section~2.5 to show that this equation has the
+use the method of \zcref{sec:exact} to show that this equation has the
 implicit solution
 \begin{equation}
  \label{eq:2.6.25} x^3y^2+3x^2y^3=c.
@@ -4213,34 +4182,29 @@ implicit solution
 This is also an implicit solution of \eqref{eq:2.6.23}.
 Since $x\equiv0$ and $y\equiv0$ satisfy \eqref{eq:2.6.25}, you should
 check to see that $x\equiv0$ and $y\equiv0$ are also solutions of
-\eqref{eq:2.6.23}. (Why is it necesary to check this?)
+\eqref{eq:2.6.23}. (Why is it necessary to check this?)
 
-Figure~\ref{figure:2.6.3} shows a direction field and integral curves for
+\zcref[S]{figure:2.6.3} shows a direction field and integral curves for
 \eqref{eq:2.6.23}.
 
 
-See Exercise~\ref{exer:2.6.28} for a general discussion of equations like
+See \zcref{exer:2.6.28} for a general discussion of equations like
 \eqref{eq:2.6.23}.
 
-        \begin{figure}[tbp]
+
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020603}
+  \includegraphics[alt={A vector field for -4<x<4 and -2<y<2 with straight line solutions x,y=0 and slant asymptote y=-x/3.  Solutions approach the origin along those lines in the fourth quadrant and alternating with each half line.},
+  width=5.67in,height=3.66in,keepaspectratio]{fig020603}
 \color{blue}
-\caption{
-A direction field and integral curves for
+\caption{A direction field and integral curves for
 $(3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0$}
   \label{figure:2.6.3}
 \end{figure}
 
 
-
-
-
-
-
-
 \begin{example}\label{example:2.6.4}
-\rm  The separable  equation
+The separable  equation
 \begin{equation}\label{eq:2.6.26}
 -y\,dx+(x+x^6)\,dy=0
 \end{equation}
@@ -4253,7 +4217,7 @@ by the  integrating factor
 \[
 \mu(x,y)=\frac{1}{y(x+x^6)}.
 \]
-However, to solve \eqref{eq:2.6.27} by the method of Section~2.5
+However, to solve \eqref{eq:2.6.27} by the method of \zcref{sec:exact}
 we would have to evaluate the nasty integral
 \[
 \int \frac{dx}{x+x^6}.
@@ -4263,10 +4227,10 @@ integrating factor of the form
 $\mu(x,y)=x^ay^b$.
 \end{example}
 
-
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig020604}
+  \includegraphics[alt={A vector field for -1<x,y<1 symmetric about y=0 with arrows radiating from the origin.  For x near -1 and y>0, the vectors turn upward.  For x near 1 and y>0, the vectors turn more horizontal.},
+  width=5.67in,height=3.66in,keepaspectratio]{fig020604}
 \color{blue}
 \caption{A direction field and integral curves for $-y\,dx+(x+x^6)\,dy=0$}
   \label{figure:2.6.4}
@@ -4296,14 +4260,11 @@ The right side will contain the term $-6x^5$ if $p(x)=-6/x$.   Then
 -2-6x^5=-6-6x^5+q(y)y,
 \]
 so  $q(y)=4/y$.  Since
-\[
-\int p(x)\,dx=-\int\frac{6}{x}\,dx=-6\ln|x|=\ln\frac{1}{x^6},
-\]
- and
-\[
-\int q(y)\,dy=\int\frac{4}{y}\,dy=4\ln
-|y|=\ln{y^4},
-\]
+\begin{align*}
+\int p(x)\,dx&=-\int\frac{6}{x}\,dx=-6\ln|x|=\ln\frac{1}{x^6},
+\qquad\text{and}\\
+\int q(y)\,dy&=\phantom-\int\frac{4}{y}\,dy=\phantom-4\ln|y|=\ln{y^4},
+\end{align*}
 we can take $P(x)=x^{-6}$ and $Q(y)=y^4$,
 which yields the integrating factor $\mu(x,y)=x^{-6}y^4$.
 Multiplying \eqref{eq:2.6.26} by  $\mu$ yields the exact equation
@@ -4311,7 +4272,7 @@ Multiplying \eqref{eq:2.6.26} by  $\mu$ yields the exact equation
 -\frac{y^5}{x^6}\,dx+\left(\frac{y^4}{x^5}+y^4\right)
 \,dy=0.
 \]
- We leave it to you to use the method of the Section~2.5
+ We leave it to you to use the method of the \zcref{sec:exact}
 to show that this equation has the implicit solution \[
 \left(\frac{y}{x}\right)^5+y^5=k.
 \]
@@ -4326,30 +4287,24 @@ y=cx(1+x^5)^{-1/5}
 by renaming the arbitrary constant.
  This is also a solution of \eqref{eq:2.6.26}.
 
-Figure~\ref{figure:2.6.4} shows a direction field and some integral curves
+\zcref[S]{figure:2.6.4} shows a direction field and some integral curves
  for \eqref{eq:2.6.26}.
-
-
-
-
 
 
  \exercises
 \begin{exerciselist}
 
-
-\item\label{exer:2.6.1}\begin{alist}
+\item\label{exer:2.6.1}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify that $\mu(x,y)=y$ is an integrating factor for
 \[
-y\,dx+\left(2x+\frac{1}{y}\right)\,dy=0
-\eqno{\rm (A)}
+y\,dx+\left(2x+\frac{1}{y}\right)\,dy=0\tag{A}
 \]
 on any open rectangle that does not intersect  the $x$ axis
 or, equivalently,  that
 \[
-y^2\,dx+(2xy+1)\,dy=0
-\eqno{\rm (B)}
+y^2\,dx+(2xy+1)\,dy=0\tag{B}
 \]
 is exact on any such rectangle.
 \item % (b)
@@ -4358,8 +4313,7 @@ but not of  (A).
 \item % (b)
 Show that
 \[
-y(xy+1)=c
-\eqno{\rm (C)}
+y(xy+1)=c\tag{C}
 \]
 is an implicit solution of (B), and explain why
 every differentiable function $y=y(x)$ other than $y\equiv0$
@@ -4367,25 +4321,23 @@ that satisfies  (C)
  is also a solution of~(A).
 \end{alist}
 
-\item\label{exer:2.6.2}\begin{alist}
+\item\label{exer:2.6.2}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify that $\mu(x,y)=1/(x-y)^2$ is an integrating factor for
 \[
--y^2\,dx+x^2\,dy=0
-\eqno{\rm (A)}
+-y^2\,dx+x^2\,dy=0\tag{A}
 \]
 on any open rectangle  that does not intersect the line $y=x$
 or, equivalently, that
 \[
--\frac{y^2}{(x-y)^2}\,dx+\frac{x^2}{(x-y)^2}\,dy=0
-\eqno{\rm (B)}
+-\frac{y^2}{(x-y)^2}\,dx+\frac{x^2}{(x-y)^2}\,dy=0\tag{B}
 \]
 is exact on any such rectangle.
 \item % (b)
-Use Theorem~\ref{thmtype:2.2.1} to show that
+Use \zcref[S]{thmtype:2.2.1} to show that
 \[
-\frac{xy}{(x-y)}=c
-\eqno{\rm (C)}
+\frac{xy}{(x-y)}=c\tag{C}
 \]
 is an implicit solution of (B), and explain why
 it's also an implicit solution of (A)
@@ -4394,7 +4346,7 @@ Verify that $y=x$  is a solution of  (A),
 even though it can't be obtained from  (C).
 \end{alist}
 
-\exercisetext{In Exercises~\ref{exer:2.6.3}--\ref{exer:2.6.16} find an
+\exercisetext{In \zcref[range]{exer:2.6.3,exer:2.6.16} find an
 integrating factor;
 that is a function of only one variable, and solve the given equation.}
 
@@ -4409,7 +4361,7 @@ that is a function of only one variable, and solve the given equation.}
 
 \item\label{exer:2.6.9}$(6xy^2+2y)\,dx+(12x^2y+6x+3)\,dy=0$
 
-\item\label{exer:2.6.10}$y^2\,dx+\dst{\left(xy^2+3xy+\frac{1}{y}\right)\,dy=0}$
+\item\label{exer:2.6.10}$y^2\,dx+\left(xy^2+3xy+\dfrac{1}{y}\right)\,dy=0$
 
 
 \item\label{exer:2.6.11}$(12x^3y+24x^2y^2)\,dx+(9x^4+32x^3y+4y)\,dy=0$
@@ -4426,7 +4378,7 @@ that is a function of only one variable, and solve the given equation.}
 
 \item\label{exer:2.6.16}$y\sin y\,dx+x(\sin y-y\cos y)\,dy=0$
 
-\exercisetext{In Exercises~\ref{exer:2.6.17}--\ref{exer:2.6.23} find an
+\exercisetext{In \zcref[range]{exer:2.6.17,exer:2.6.23} find an
 integrating
 factor of the form $\mu(x,y)=P(x)Q(y)$ and solve the given equation.}
 
@@ -4447,7 +4399,7 @@ dy=0$
 \item\label{exer:2.6.23}$y(x\cos x+2\sin x)\,dx+x(y+1)\sin x\,dy=0$
 
 
-\exercisetext{In Exercises~\ref{exer:2.6.24}--\ref{exer:2.6.27} find an
+\exercisetext{In \zcref[range]{exer:2.6.24,exer:2.6.27} find an
 integrating factor
 and solve the  equation. Plot a direction field and some
 integral curves for the equation in the indicated rectangular region.}
@@ -4481,36 +4433,32 @@ has an integrating factor $\mu(x,y)=x^\alpha y^\beta$.
 \item\label{exer:2.6.29}Suppose $M$, $N$, $M_x$, and $N_y$  are continuous for all
 $(x,y)$, and $\mu=\mu(x,y)$  is an integrating factor for
 \[
-M(x,y)\,dx+N(x,y)\,dy=0.
-\eqno{\rm (A)}
+M(x,y)\,dx+N(x,y)\,dy=0.\tag{A}
 \]
 Assume that $\mu_x$ and $\mu_y$ are continuous for all $(x,y)$, and
 suppose   $y=y(x)$ is a differentiable function such that
 $\mu(x,y(x))=0$ and $\mu_x(x,y(x))\ne0$ for all $x$ in some interval
 $I$. Show that $y$ is a solution of (A) on $I$.
 
-\item\label{exer:2.6.30}According to Theorem~\ref{thmtype:2.1.2}, the general solution of the
+\item\label{exer:2.6.30}According to \zcref{thmtype:2.1.2}, the general solution of the
 linear nonhomogeneous equation
 \[
-y'+p(x)y=f(x)
-\eqno{\rm(A)}
+y'+p(x)y=f(x)\tag{A}
 \]
 is
 \[
-y=y_1(x)\left(c+\int f(x)/y_1(x)\,dx\right),
-\eqno{\rm(B)}
+y=y_1(x)\left(c+\int f(x)/y_1(x)\,dx\right),\tag{B}
 \]
 where $y_1$ is any nontrivial solution of the
 complementary equation $y'+p(x)y=0$. In this exercise we obtain this
 conclusion in a different way.
 You may find it instructive to apply the method suggested here
-to solve some of the exercises in Section~2.1.
+to solve some of the exercises in \zcref{sec:linar_first_order}.
 \begin{alist}
 \item % (a)
 Rewrite (A) as
 \[
-[p(x)y-f(x)]\,dx+\,dy=0,
-\eqno{\rm(C)}
+[p(x)y-f(x)]\,dx+\,dy=0,\tag{C}
 \]
 and show that $\mu=\pm e^{\int p(x)\,dx}$ is an integrating factor
 for (C).
