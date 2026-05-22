@@ -12,7 +12,18 @@
 
 \usepackage{amsthm}
 
-\newtheorem{theorem}{\scshape Theorem}[section]
+\newtheoremstyle{theorem}
+ {\topsep}
+ {\topsep}
+ {}
+ {}
+ {\scshape}
+ {.}
+ { }
+ {\thmname{\color{blue}#1}\thmnumber{ \color{blue}#2}\thmnote{ \color{blue}[#3]}}
+\theoremstyle{theorem}
+\newtheorem{theorem}{Theorem}[section]
+\AddToHook{env/theorem/begin}{\color{blue}}
 
 \newtheoremstyle{example}
  {\topsep}
@@ -133,6 +144,7 @@
   columns=2,
   item_join=2,
 %  leftmargin=22pt,
+%  first={},
   #1
  ]%
 }{%
@@ -249,7 +261,7 @@
  
 \ExplSyntaxOn
 \IfDocumentMetadataT {
-  \tl_if_eq:enF { \GetDocumentProperties{document/tagging} } { inactive } {
+  \tag_if_active:T {
     \if@partsw\else  % \includeonly has not been seen
       \directlua{ if ~ status.list().hash_extra ~ < ~ 600001 ~ then ~
         error('TOO~FEW~HASHES:~try~--cnf-line="hash_extra=1000000"') ~
