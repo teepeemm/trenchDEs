@@ -1,3 +1,5 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = TRENCH_DIFFEQ.tex
 
 \usepackage{unicode-math}
 \usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
@@ -25,10 +27,21 @@ filecolor = blue,
 {hyperref}
 
 \zcRefTypeSetup{chapter}{cap}
+\zcRefTypeSetup{equation}{cap}
+\zcRefTypeSetup{example}{cap}
+\zcRefTypeSetup{figure}{cap}
 \zcRefTypeSetup{section}{cap}
 \zcRefTypeSetup{table}{cap}
-\zcRefTypeSetup{figure}{cap}
-\zcRefTypeSetup{example}{cap}
+\zcRefTypeSetup{theorem}{cap}
+\zcRefTypeSetup{enumXvii}{
+  Name-sg=Exercise,
+  Name-pl=Exercises,
+  name-sg=exercise,
+  name-pl=exercises,
+  rangesep={\textendash},
+  cap
+}
+
 \ExplSyntaxOn
 % TODO
 \keys_define:nn { zref-clever/reference }
