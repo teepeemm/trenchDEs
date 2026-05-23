@@ -25,14 +25,21 @@ def trim_trailing_space(content: str) -> str:
   content = re.sub(r'(?<=\\item\\label{exer:)(\d+.\d+.\d+})\s+(?=\S)', r'\1', content)
   return content
 
+def change_graphics_height(content: str) -> str:
+  content = content.replace('height=3.66in', 'height=3.3in')
+  return content
+
 for texfile in glob('*.tex'):
   with open(texfile) as tex:
     mathopen = False
     content = tex.read()
-  content = use_eqref(content)
+  content = change_graphics_height(content)
   with open(texfile,'w') as tex:
     tex.write(content)
 
 '''
-mbox, ref, eqnarray, rm, circ, cases, part
+mbox, ref, eqnarray, rm, cases, part, solutionpart
+Section, Chapter, Figure, Table, Exercise, Example, Equation, Eqn
+units
+3.66
 '''
