@@ -72,7 +72,7 @@ Q'=aQ,
 \end{equation}
  where $a$ is the constant of proportionality.
 
-From \zcref{exer:2.1.3}, the general solution of
+From {Exercise 2.1.\ref{exer:2.1.3}}, the general solution of
 \eqref{eq:4.1.1} is
 \[
 Q=ce^{at}
@@ -91,11 +91,12 @@ quantity $Q$ that satisfies this equation \emph{\color{blue}grows exponentially}
 $a > 0$, or \emph{\color{blue}decays exponentially} if $a < 0$
  (\zcref{figure:4.1.1}).
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040101}
+  \includegraphics[alt={Eight solution curves for t>0 starting from the same a naught.  When a is negative, the solutions decrease; when a is positive, the solutions increase.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040101}
 \color{blue}
-\caption{\label{figure:4.1.1} Exponential growth  and decay}
+\caption{\label{figure:4.1.1}Exponential growth and decay}
   \label{figure4.1.1}
 \end{figure}
 
@@ -150,11 +151,10 @@ e^{-k\tau}=\frac{1}{2}.
 $Q_0$, since it's determined by the properties of material, not by
 the amount of the material present at any particular time.
 
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040102}
+  \includegraphics[alt={An exponential decay for t>0 starting at Q naught.  By time 𝜏, the amount has decreased to 0.5 times Q naught.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040102}
 \color{blue}
 \caption{Half-life of a radioactive substance}
   \label{figure:4.1.2}
@@ -171,7 +171,8 @@ Find the time $t_1$ when 1.5 g of the substance remain.
 \end{alist}
 \end{example}
 
-\solutionpart{a}  From \eqref{eq:4.1.3} with $t_0=0$ and
+\begin{alistSolution}
+\item From \eqref{eq:4.1.3} with $t_0=0$ and
 $Q_0=4$,
 \begin{equation} \label{eq:4.1.6}
 Q=4e^{-kt},
@@ -186,12 +187,12 @@ k=\frac{\ln2}{\tau}=\frac{\ln2}{1620}.
 Q=4e^{-(t\ln2)/1620}.
 \end{equation}
  Therefore the mass left after 810 years will be
-\[\begin{array}{rl}
+\begin{align*}
 Q(810) &=4e^{-(810\ln2)/1620}=4e^{-(\ln2)/2} \\
-&=2\sqrt{2} \mbox{ g}.
-\end{array}\]
+&=2\sqrt{2} \text{ g}.
+\end{align*}
 
-\solutionpart{b}
+\item
  Setting $t=t_1$  in \eqref{eq:4.1.7} and requiring that
 $Q(t_1)=1.5$ yields
 \[
@@ -203,9 +204,9 @@ Dividing by 4 and taking logarithms yields
 \]
 Since $\ln\frac38=-\ln\frac83$,
 \[
-t_1=1620{\frac{\ln\frac83}{\ln2}}\approx  2292.4\;\mbox{ years}.
+t_1=1620{\frac{\ln\frac83}{\ln2}}\approx  2292.4\text{ years}.
 \]
-
+\end{alistSolution}
 
 \boxit{Interest Compounded Continuously}
 
@@ -235,24 +236,20 @@ after $t$ years is
 \begin{equation} \label{eq:4.1.8}
 Q(t)=Q_0\left(1+\frac{r}{n}\right)^{nt}.
 \end{equation}
-Thus, increasing the  frequency of  compounding increases the value of the
+Thus, increasing the frequency of compounding increases the value of the
 account after a fixed period of time. \zcref[S]{table:4.1.1} shows the
 effect
 of increasing the number of compoundings over $t=5$ years on an initial
 deposit of $Q_0=100$ (dollars), at an annual interest rate of 6\%.
 
-\medskip
-
 \begin{table}
-\caption{The effect of compound interest}
+\caption{The value of a \$100 initial deposit at 6\% interest compounded $n$ times per year after 5 years.}
 \label{table:4.1.1}
 \centering
-\tagpdfsetup{table/header-rows={1,2,3}}
+\tagpdfsetup{table/header-rows={1}}
 \begin{tabular}{S[table-format=3]c}\toprule
 %\[\begin{array}{|c|c|}\hline
-$n$ & $\$100 \left(1+\dfrac{.06}{n}\right)^{5n}$\\
-{(compoundings} &  (value after\\
-{per year)} & 5 years)\\\midrule
+$n$ & Value (\$)\\\midrule
 %\hline
 1 & \$133.82 \\
 2 & \$134.39 \\
@@ -264,11 +261,10 @@ $n$ & $\$100 \left(1+\dfrac{.06}{n}\right)^{5n}$\\
 %\end{center}
 \end{table}
 
-\medskip
-You can see from \zcref{table:4.1.1}  that the value of the account after 5
+You can see from \zcref{table:4.1.1} that the value of the account after 5
 years is an increasing function of $n$. Now suppose  the maximum
 allowable rate of interest on savings accounts is restricted by law,
-but the time intervals between successive compoundings isn't ; then
+but the time intervals between successive compoundings isn't; then
 competing banks can attract savers by compounding often. The ultimate
 step in this direction is to \emph{\color{blue}compound continuously}, by which we
 mean that $n\to\infty$ in \eqref{eq:4.1.8}. Since we know from calculus
@@ -326,6 +322,7 @@ satisfy the equation
 Q_0=10000e^{-.55} \approx \$5769.50.
 \]
 
+
 \boxit{Mixed Growth and Decay}
 
 \begin{example}\label{example:4.1.4}
@@ -341,10 +338,10 @@ Find $\lim_{t\to\infty} Q(t)$.
 \end{alist}
 \end{example}
 
-\solutionpart{a}  Here
+\begin{alistSolution}
+\item Here
 \[
-Q'=\mbox{ rate of increase of } Q - \mbox{ rate of decrease
-of } Q.
+Q'=\text{ rate of increase of } Q - \text{ rate of decrease of } Q.
 \]
 The rate of increase is the constant $a$. Since $Q$ is radioactive
 with decay constant $k$, the rate of decrease is $kQ$. Therefore
@@ -370,14 +367,14 @@ Q=ue^{-kt}=\frac{a}{k}+ce^{-kt}.
 \]
  Since $Q(0)=Q_0$, setting $t=0$ here yields
 \[
-Q_0=\frac{a}{k}+c  \mbox{\quad or \quad} c=Q_0-\frac{a}{k}.
+Q_0=\frac{a}{k}+c  \quad\text{or}\quad c=Q_0-\frac{a}{k}.
 \]
  Therefore
 \begin{equation} \label{eq:4.1.12}
 Q=\frac{a}{k}+\left(Q_0-\frac{a}{k}\right)e^{-kt}.
 \end{equation}
 
-\solutionpart{b}
+\item
 Since $k > 0$,  $\lim_{t\to\infty} e^{-kt}=0$, so
 from \eqref{eq:4.1.12}
 \[
@@ -389,26 +386,43 @@ We say that $a/k$ is the \emph{\color{blue}steady state} value of $Q$. From
 from above if $Q_0 > a/k$, or from below if $Q_0 < a/k$. If $Q_0=a/k$,
 then $Q$ remains constant (\zcref{figure:4.1.3}).
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040103}
+  % incorrect figure
+%  \includegraphics[alt={Several solution curves for Q(t) with both positive.
+%  width=5.67in,height=3.3in,keepaspectratio]{fig040103}
+\begin{tikzpicture}[alt={Ten curves converging to a limiting value of a/k as t increases.  The curves above the limiting value decay, while the curves below increase to that value.}]
+\begin{axis}[width=\textwidth, height=3in,
+axis y line=middle,axis x line=middle, tick label style={font=\footnotesize},
+ymin=0,ymax=10,xmin=0,xmax=2,xtick=\empty,ytick={5},yticklabels={$a/k$},
+name=myplot] %
+\addplot[dashed,domain=0:2,draw=blue,thin]{5};
+\pgfplotsinvokeforeach{1,2,...,5}{
+\addplot[draw=blue, domain=0:2, smooth] {5+#1*exp(-x)};
+\addplot[draw=blue, domain=0:2, smooth] {5-#1*exp(-x)};
+}
+\end{axis}
+\node [right] at (myplot.right of origin) {\scriptsize $t$};
+\node [above] at (myplot.above origin) {\scriptsize $Q$};
+\end{tikzpicture}
 \color{blue}
 \caption{$Q(t)$ approaches the steady state value
-$\dst\frac{a}{k}$ as $t\to\infty$}
+$\dfrac{a}{k}$ as $t\to\infty$}
   \label{figure:4.1.3}
 \end{figure}
+
+\end{alistSolution}
 
 
 \boxit{Carbon Dating}
 
 The fact that $Q$ approaches a steady state value in the
-situation discussed in Example 4 underlies the method of \emph{\color{blue}carbon
+situation discussed in \zcref{example:4.1.4} underlies the method of \emph{\color{blue}carbon
 dating}, devised by  the American chemist  and Nobel Prize Winner
 \href{http://www.nobelprize.org/nobel_prizes/chemistry/laureates/1960/libby-lecture.pdf}
 {\color{blue}\itshape W.S. Libby}.
 
-Carbon 12 is stable, but carbon-14, which is produced by cosmic
+Carbon-12 is stable, but carbon-14, which is produced by cosmic
 bombardment of nitrogen in the upper atmosphere, is radioactive with a
 half-life of about 5570 years. Libby assumed that the
 quantity
@@ -620,7 +634,7 @@ and $Q_2$ at time $t_2$.
 \item\label{exer:4.1.7}A process creates a radioactive substance at the rate of 2
 g/hr and the substance decays at a rate proportional to
 its mass, with constant of proportionality
-$k=.1 (\mbox{hr})^{-1}$.  If $Q(t)$ is the mass of the
+$k=\qty{.1}{\per\hour}$.  If $Q(t)$ is the mass of the
 substance at time $t$, find $\lim_{t\to\infty}Q(t)$.
 
 \item\label{exer:4.1.8}A bank pays interest continuously at the rate of 6\%.
@@ -708,7 +722,8 @@ and it's consumed continuously at a rate proportional to
 $p^2$, with proportionality constant 1/8.  Find $p(t)$ if
 $p(0)=100$.
 
-\item\label{exer:4.1.21}\begin{alist}
+\item\label{exer:4.1.21}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
  In the situation of \zcref{example:4.1.6}
 find the exact value $P(t)$ of the person's account after $t$
@@ -752,10 +767,10 @@ assumption that the homebuyer repays the loan continuously rather than
 in discrete steps. (See \zcref{example:4.1.6}.)
 
 \item %(b)
-Solve the equation derived in \part{a}.
+Solve the equation derived in (a).
 
 \item % (c)
- Use the result of \part{b} to determine an approximate
+ Use the result of (b) to determine an approximate
 value for $M$  assuming that each year has exactly 12 months of
 equal length.
 
@@ -764,7 +779,7 @@ equal length.
 \[
 M=\frac{rP_0}{12}\left(1-(1+r/12)^{-12N}\right)^{-1}.
 \]
-Compare    the value of $M$ obtained from the answer in \part{c} to the
+Compare    the value of $M$ obtained from the answer in (c) to the
 exact value  if
  (i) $P_0=\$50,000$, $r=7\frac{1}{2}$\%, $N=20$
  (ii) $P_0=\$150,000$, $r=9.0$\%, $N=30$.
@@ -882,9 +897,9 @@ Note that $T-T_m$ decays exponentially, with decay constant $k$.
 
 
 \begin{example}\label{example:4.2.1}
-A ceramic insulator is baked at $400^\circ$C and cooled in a room in
-which the temperature is $25^\circ$C. After 4 minutes the
-temperature of the insulator is $200^\circ$C. What is its temperature
+A ceramic insulator is baked at \qty{400}{\degreeCelsius} and cooled in a room in
+which the temperature is \qty{25}{\degreeCelsius}. After 4 minutes the
+temperature of the insulator is \qty{200}{\degreeCelsius}. What is its temperature
 after 8 minutes?
 \end{example}
 
@@ -912,29 +927,25 @@ T=25+375 e^{-\frac{t}{4} \ln \frac{15}{7}}
 (\zcref{figure:4.2.1}).
 Therefore the temperature of the insulator after
 8 minutes is
-\[\begin{array}{rl}
-T(8) & \dst = 25+375 e^{-2 \ln \frac{15}{7}} \\[9pt]
-& \dst = 25+375 \left(\frac{7}{15}\right)^2 \approx
-107^\circ \mbox{C}.
-\end{array}\]
+\begin{align*}
+T(8) & = 25+375 e^{-2 \ln \dfrac{15}{7}} \\
+& = 25+375 \left(\dfrac{7}{15}\right)^2 \approx
+\qty{107}{\degreeCelsius}.
+\end{align*}
 
-
-
-
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040201}
+  \includegraphics[alt={A curve for 0<t<30 and 0<T<400 that begins at (0,400) and decreases toward a horizontal asymptote of T=25.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040201}
 \color{blue}
 \caption{$T=25+375e^{-(t/4)\ln 15/7}$}
   \label{figure:4.2.1}
 \end{figure}
 
 \begin{example}\label{example:4.2.2}
-An object with temperature $72^\circ$F is placed outside, where the
-temperature is $-20^\circ$F. At 11:05 the temperature of the object
-is $60^\circ$F and at 11:07 its temperature is $50^\circ$F. At what
+An object with temperature \qty{72}{\degreeFahrenheit} is placed outside, where the
+temperature is \qty{-20}{\degreeFahrenheit}. At 11:05 the temperature of the object
+is \qty{60}{\degreeFahrenheit} and at 11:07 its temperature is \qty{50}{\degreeFahrenheit}. At what
 time was the object placed outside?
 \end{example}
 
@@ -951,7 +962,7 @@ T  = -20+\bigl(60-(-20)\bigr)e^{-kt}
 T = -20+80e^{-kt}.
 \end{equation}
 We obtain $k$ from the stated condition that the temperature of the
-object is 50$^\circ$F at 11:07. Since 11:07 is $t=2$ on our time
+object is \qty{50}{\degreeFahrenheit} at 11:07. Since 11:07 is $t=2$ on our time
 scale, we can determine $k$ by substituting $T=50$ and $t=2$ into
 \eqref{eq:4.2.4} to obtain
 \[
@@ -981,17 +992,16 @@ e^{-\frac{\tau}{2} \ln \frac{8}{7}} =\frac{92}{80} =
 \]
 Taking logarithms and solving for $\tau$ yields
 \[
-\tau = -\frac{2 \ln \frac{23}{20}}{\ln \frac{8}{7}} \approx-2.09\
-\mbox{min}.
+\tau = -\frac{2 \ln \frac{23}{20}}{\ln \frac{8}{7}} \approx\qty{-2.09}{\minute}.
 \]
 Therefore the object was placed outside
 about 2 minutes and 5 seconds before 11:05; that is,
 at 11:02:55.
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040202}
+  \includegraphics[alt={A curve for -5<t<40 and -20<T<110 passing through (0,60) and decreasing to a horizontal asymptote of T=-20.  A dashed line shows that when t≈-2, then T≈72.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040202}
 \color{blue}
   \caption{$T = -20+80 e^{-\frac{t}{2}\ln \frac{8}{7}}$}
   \label{figure:4.2.2}
@@ -1004,8 +1014,8 @@ In the next two examples a saltwater solution with a given
 concentration (weight of salt per unit volume of solution) is added at
 a specified rate to a tank that initially contains saltwater with a
 different concentration. The problem is to determine the quantity of
-salt in the tank as a function of time. This is an example of a {\color{blue}\it
-mixing problem\/}. To construct a tractable mathematical model for
+salt in the tank as a function of time. This is an example of a
+{\color{blue}\itshape mixing problem}. To construct a tractable mathematical model for
 mixing problems we assume in our examples (and most exercises) that
 the mixture is stirred instantly so that the salt is always uniformly
 distributed throughout the mixture. \zcref{exer:4.2.22,exer:4.2.23} deal with
@@ -1028,19 +1038,18 @@ tank at time $t > 0$, and solve the equation to determine $Q(t)$.
 \end{alist}
 \end{example}
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040203}
+  \includegraphics[alt={A container holding 600 gallons with an input of 4 gallons per minutes and 0.5 pounds per gallon, and an output of 4 gallons per minute.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040203}
 \color{blue}
   \caption{A mixing problem}
   \label{figure:4.2.3}
 \end{figure}
 
 
-
-
-
-\solutionpart{a} To find a differential equation for $Q$, we must use
+\begin{alistSolution}
+\item To find a differential equation for $Q$, we must use
 the given information to derive an expression for $Q'$. But $Q'$
 is the rate of change of the quantity of salt in the tank changes with
 respect to time;
@@ -1049,12 +1058,12 @@ salt enters
 the tank and \emph{\color{blue}rate out} denotes the rate by which it
 leaves, then
 \begin{equation} \label{eq:4.2.5}
-Q' = \mbox{rate in}-\mbox{rate out}.
+Q' = \text{rate in}-\text{rate out}.
 \end{equation}
 The rate in is
 \[
-\left(\frac{1}{2}\  \mbox{lb/gal}\right) \times (4\  \mbox{gal/min}) = 2\
-\mbox{lb/min}.
+\left(\frac{1}{2}\unit{\pound\per\gallon}\right) \times (\qty{4}{\gallon\per\minute})
+= \qty{2}{\pound\per\minute}.
 \]
 Determining the rate out requires a little more thought. We're
 removing 4 gallons of the mixture per minute, and there are always 600
@@ -1066,8 +1075,8 @@ at any time $t$ is $Q(t)/150$. Alternatively, we can arrive at this
 conclusion by arguing that
 \begin{align*}
 \text{rate out} & = (\text{concentration})\times(\text{rate of flow out})\\
-&=(\text{lb/gal})\times(\text{gal/min})\\
-&=\dst\frac{Q(t)}{600}\times 4=\dst\frac{Q(t)}{150}.
+&=(\unit{\pound\per\gallon})\times(\unit{\gallon\per\minute})\\
+&=\dfrac{Q(t)}{600}\times 4=\dfrac{Q(t)}{150}.
 \end{align*}
 We can now write \eqref{eq:4.2.5} as
 \[
@@ -1088,17 +1097,27 @@ so
 Q=ue^{-t/150}=300+ce^{-t/150}
 \end{equation}
 (\zcref{figure:4.2.4}).
+%
+\begin{figure}
+  \centering
+  \includegraphics[alt={A plot for 0<t<900 and 0<Q<300 with the curve beginning at (0,40) and increasing to a horizontal asymptote of Q=300.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040204}
+\color{blue}
+  \caption{$Q=300-260e^{-t/150}$}
+  \label{figure:4.2.4}
+\end{figure}
+%
  Since $Q(0)=40$,  $c=-260$;  therefore,
 \[
 Q=300-260e^{-t/150}.
 \]
 
-
-\solutionpart{b} From \eqref{eq:4.2.6}, we see that that $\lim_{t \to
+\item From \eqref{eq:4.2.6}, we see that that $\lim_{t \to
 \infty}Q(t)=300$ for any value of  $Q(0)$. This is
 intuitively reasonable, since the incoming solution contains 1/2
 pound of salt per gallon and there are always 600 gallons of water in
-the tank. \quad
+the tank.
+\end{alistSolution}
 
 \begin{example}\label{example:4.2.4}
 A 500-liter tank initially contains 10 g of salt dissolved in 200
@@ -1111,20 +1130,10 @@ time $t$ prior to the time when the tank overflows and find the
 concentration $K(t)$ (g/liter ) of salt in the tank at any such time.
 \end{example}
 
-
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040204}
-\color{blue}
-  \caption{$Q=300-260e^{-t/150}$}
-  \label{figure:4.2.4}
-\end{figure}
-
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040205}
+  \includegraphics[alt={A mixing tank with an input of 4 liters per minute and 0.25 grams per liter, so that the total volume is 2t+200 liters.  An unlabeled amount exits the tank.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040205}
 \color{blue}
   \caption{Another mixing problem}
   \label{figure:4.2.5}
@@ -1148,12 +1157,11 @@ tank), this formula is valid for $0 \le t \le 150$.
 Now let $Q(t)$ be the number of grams of salt in the tank
 at time $t$, where  $0 \le t \le 150$.  As in \zcref{example:4.2.3},
 \begin{equation} \label{eq:4.2.7}
-Q' = \mbox{rate in}-\mbox{rate out}.
+Q' = \text{rate in}-\text{rate out}.
 \end{equation}
  The rate in is
-\begin{equation} \label{eq:4.2.8}
-\left(\frac{1}{4}\  \mbox{g/liter}\,\right) \times (4\
-\mbox{liters/min}\,) = 1\  \mbox{g/min}.
+\begin{equation}\label{eq:4.2.8}
+\left(\frac{1}{4}\unit{\gram\per\liter}\right) \times (\qty{4}{\liter\per\minute}) = \qty{1}{\gram\per\minute}.
 \end{equation}
  To determine the rate out, we observe that since
 the mixture is being removed from the tank at the constant
@@ -1167,18 +1175,15 @@ We're removing this same fraction of the salt per
 minute.  Therefore, since there are $Q(t)$ grams of salt in
 the tank at time $t$,
 \begin{equation} \label{eq:4.2.9}
-\mbox{rate out} = \frac{Q(t)}{t+100}.
+\text{rate out} = \frac{Q(t)}{t+100}.
 \end{equation}
 Alternatively, we can arrive at this conclusion by arguing that
-\[
-\begin{array}{lcl}
-\mbox{rate out} & = & (\mbox{concentration})\times(\mbox{rate of
-flow out})
-=(\mbox{g/liter})\times(\mbox{liters/min})\\[10pt]
-&=&\dst\frac{Q(t)}{2t+200}\times
-2=\dst\frac{Q(t)}{t+100}.
-\end{array}
-\]
+\begin{align*}
+\text{rate out} & = (\text{concentration})\times(\text{rate of flow out})
+=(\unit{\gram\per\liter})\times(\unit{\liter\per\minute})\\
+&=\dfrac{Q(t)}{2t+200}\times
+2=\dfrac{Q(t)}{t+100}.
+\end{align*}
  Substituting \eqref{eq:4.2.8} and \eqref{eq:4.2.9} into \eqref{eq:4.2.7}
 yields
 \begin{equation} \label{eq:4.2.10}
@@ -1189,8 +1194,7 @@ By separation of variables, $1/(t+100)$ is a solution of the
 complementary equation, so the solutions of \eqref{eq:4.2.10}
 are of the form
 \[
-Q=\frac{u}{t+100},\mbox{\quad where \quad}\frac{u'}{t+100}=1,\mbox{\quad
-so \quad} u'=t+100.
+Q=\frac{u}{t+100},\quad\text{where}\quad\frac{u'}{t+100}=1,\quad\text{so}\quad u'=t+100.
 \]
 Hence,
 \begin{equation} \label{eq:4.2.11}
@@ -1208,8 +1212,8 @@ and therefore
 \[
 u = \frac{(t+100)^2}{2} -4000.
 \]
- Hence,
- \[
+Hence,
+\[
 Q = \frac{u}{t+200}= \frac{t+100}{2}-\frac{4000}{t+100}.
 \]
 Now let $K(t)$ be the concentration of salt at
@@ -1218,73 +1222,70 @@ time $t$.  Then
 K(t) = \frac{1}{4}-\frac{2000}{(t+100)^2}
 \]
 (\zcref{figure:4.2.6}).
-          \begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040206}
+  \includegraphics[alt={A graph for 0<t<1100 and 0<K<0.3 that begins at (0,0.05) and quickly increases toward a horizontal asymptote of y=0.25.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040206}
 \color{blue}
-  \caption{$K(t) = \dst{\frac{1}{4}-\frac{2000}{(t+100)^2}}$}
+  \caption{$K(t) = \dfrac{1}{4}-\dfrac{2000}{(t+100)^2}$}
   \label{figure:4.2.6}
 \end{figure}
 
 
-
-
 \exercises
-
 
 \begin{exerciselist}
 \item\label{exer:4.2.1}A thermometer is moved from a room where the temperature is
-$70^\circ$F to a freezer where the temperature is $12^\circ
-F$.  After 30 seconds the thermometer reads
-$40^\circ$F.  What does it read after 2 minutes?
+\qty{70}{\degreeFahrenheit} to a freezer where the temperature is \qty{12}{\degreeFahrenheit}.  After 30 seconds the thermometer reads
+\qty{40}{\degreeFahrenheit}.  What does it read after 2 minutes?
 
-\item\label{exer:4.2.2}A fluid initially at $100^\circ$C is placed outside on a
-day when the temperature is $-10^\circ$C, and the
-temperature of the fluid drops $20^\circ$C in one minute.
+\item\label{exer:4.2.2}A fluid initially at \qty{100}{\degreeCelsius} is placed outside on a
+day when the temperature is \qty{-10}{\degreeCelsius}, and the
+temperature of the fluid drops \qty{20}{\degreeCelsius} in one minute.
 Find the temperature $T(t)$ of the fluid for $t > 0$.
 
-\item\label{exer:4.2.3}At 12:00 {\sc pm} a thermometer reading $10^\circ$F is placed in
-a room where the temperature is $70^\circ$F.  It reads
-$56^\circ$ when it's placed outside, where the temperature
-is $5^\circ$F, at 12:03.  What does it read at 12:05 {\sc pm}?
+\item\label{exer:4.2.3}At 12:00 {\sc pm} a thermometer reading \qty{10}{\degreeFahrenheit} is placed in
+a room where the temperature is \qty{70}{\degreeFahrenheit}.  It reads
+\qty{56}{\degreeFahrenheit} when it's placed outside, where the temperature
+is \qty{5}{\degreeFahrenheit}, at 12:03.  What does it read at 12:05 {\sc pm}?
 
-\item\label{exer:4.2.4}A thermometer initially reading $212^\circ$F is placed in a
-room where the temperature is $70^\circ$F.  After 2
-minutes the thermometer reads $125^\circ$F.
+\item\label{exer:4.2.4}A thermometer initially reading \qty{212}{\degreeFahrenheit} is placed in a
+room where the temperature is \qty{70}{\degreeFahrenheit}.  After 2
+minutes the thermometer reads \qty{125}{\degreeFahrenheit}.
 
 \begin{alist}
 \item %(a)
 What does the thermometer read after 4 minutes?
 
 \item %(b)
-When will the thermometer read $72^\circ$F?
+When will the thermometer read \qty{72}{\degreeFahrenheit}?
 
 \item %(c)
-When will the thermometer read $69^\circ$F?
+When will the thermometer read \qty{69}{\degreeFahrenheit}?
 \end{alist}
 
-\item\label{exer:4.2.5}An object with initial temperature $150^\circ$C is placed
-outside, where the temperature is $35^\circ$C.  Its
-temperatures at 12:15 and 12:20 are $120^\circ$C and
-$90^\circ$C, respectively.
+\item\label{exer:4.2.5}An object with initial temperature \qty{150}{\degreeCelsius} is placed
+outside, where the temperature is \qty{35}{\degreeCelsius}.  Its
+temperatures at 12:15 and 12:20 are \qty{120}{\degreeCelsius} and
+\qty{90}{\degreeCelsius}, respectively.
 
 \begin{alist}
 \item %(a)
 At what time was the object placed outside?
 
 \item %(b)
-When will its temperature be $40^\circ$C?
+When will its temperature be \qty{40}{\degreeCelsius}?
 \end{alist}
 
 \item\label{exer:4.2.6}An object is placed in a room where the temperature is
-$20^\circ$C.  The temperature of the object drops by
-$5^\circ$C in 4 minutes and by $7^\circ$C in 8 minutes.
+\qty{20}{\degreeCelsius}.  The temperature of the object drops by
+\qty{5}{\degreeCelsius} in 4 minutes and by \qty{7}{\degreeCelsius} in 8 minutes.
 What was the temperature of the object when it was initially
 placed in the room?
 
 \item\label{exer:4.2.7}A cup of boiling water is placed outside at 1:00 {\sc pm}.  One
-minute later the temperature of the water is $152^\circ$F.
-After another minute its temperature is $112^\circ$F.  What
+minute later the temperature of the water is \qty{152}{\degreeFahrenheit}.
+After another minute its temperature is \qty{112}{\degreeFahrenheit}.  What
 is the outside temperature?
 
 \item\label{exer:4.2.8}A tank initially contains 40 gallons of pure water.  A
@@ -1363,7 +1364,7 @@ from $T_2$ at the rate of 4 gal/min.
  Find a differential
 equation for the quantity $Q(t)$ of salt in  tank $T_2$ at time $t > 0$.
 \item % (b)
-Solve the equation derived  in \part{a} to determine $Q(t)$.
+Solve the equation derived  in (a) to determine $Q(t)$.
 \item % (c)
  Find $\lim_{t\to\infty}Q(t)$.
 \end{alist}
@@ -1510,11 +1511,11 @@ $Q(0)=Q_0$, can you guess the value of
 $\lim_{t\to\infty}Q(t)$?.
 \item % (b)
 Use numerical methods to  confirm  your guess in the these cases:
-\[
-\mbox{\part{i}\;   }  a(t)=t/(1+t)  \mbox{\quad    \part{ii}\;  }
-a(t)=1-e^{-t^2}  \mbox{\quad    \part{iii}\;  }
- a(t)=1-\sin(e^{-t}).
-\]
+\begin{rmlist}[columns=3]
+\item $a(t)=t/(1+t)$
+\item $a(t)=1-e^{-t^2}$
+\item $a(t)=1-\sin(e^{-t})$.
+\end{rmlist}
 \end{alist}
 
 \item\label{exer:4.2.23}\Lex
@@ -1534,11 +1535,11 @@ Let $K(t)$ be the concentration of salt at time $t$. Assuming that
 $Q(0)=Q_0$, can you guess the value of $\lim_{t\to\infty}K(t)$?
 \item % (b)
 Use numerical methods to  confirm  your guess in the these cases:
-\[
-\mbox{\part{i}\;  }  a(t)=t/(1+t)\; \mbox{\;   \part{ii}\;   }
-a(t)=1-e^{-t^2}  \mbox{\;   \part{iii}\;   }
- a(t)=1+\sin(e^{-t}).
-\]
+\begin{rmlist}[columns=3]
+\item $a(t)=t/(1+t)$
+\item $a(t)=1-e^{-t^2}$
+\item $a(t)=1+\sin(e^{-t})$.
+\end{rmlist}
 \end{alist}
 
 \end{exerciselist}
@@ -1556,7 +1557,7 @@ at time $t$. Thus, $v=y'$ and $a=v'=y''$, where the prime denotes
 differentiation with respect to $t$. Newton's second law of motion
 asserts that the force $F$ and the acceleration $a$ are related by the
 equation
-\begin{equation} \label{eq:4.3.1}
+\begin{equation}\label{eq:4.3.1}
 F=ma.
 \end{equation}
 
@@ -1578,9 +1579,9 @@ mass.
 \tagpdfsetup{table/header-rows={1}}
 \begin{tabular}{cccc}\toprule
 & Length & Force & Mass \\\midrule
-  cgs & centimeter (cm) & dyne (d) & gram (g)\\
- mks & meter (m) & newton (N) & kilogram (kg) \\
-British & foot (ft) & pound (lb) & slug (sl)\\
+  cgs & centimeter (\unit{\centi\meter}) & dyne (d) & gram (\unit{\gram})\\
+ mks & meter (\unit{\meter}) & newton (\unit{\newton}) & kilogram (\unit{\kilo\gram}) \\
+British & foot (\unit{\feet}) & pound (\unit{\pound}) & slug (sl)\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1598,11 +1599,11 @@ gravity}. (To be completely accurate, $g$ should be called the {\color{blue}\it
 magnitude of the acceleration due to gravity at Earth's surface}.)\
 This quantity has been determined experimentally. Approximate
 values of $g$  are
-\[\begin{array}{rl}
-g &=980\ \mbox{cm/s}^2 \hskip40pt \mbox{(cgs)}   \\
-g &=9.8\ \mbox{m/s}^2 \hskip48pt \mbox{(mks)}   \\
-g &=32\ \mbox{ft/s}^2 \hskip52pt \mbox{(British)}.
-\end{array}\]
+\begin{alignat*}{2}
+g &=\qty{980}{\centi\meter\per\second\squared}&&\text{(cgs)}   \\
+g &=\qty{9.8}{\meter\per\second\squared}&\qquad&\text{(mks)}   \\
+g &=\qty{32}{\feet\per\second\squared}&&\text{(British)}.
+\end{alignat*}
 
 In general, the force $F$ in \eqref{eq:4.3.1} may depend upon $t$, $y$, and
 $y'$. Since $a=y''$,  \eqref{eq:4.3.1} can be written in the
@@ -1611,7 +1612,7 @@ form
 my''=F(t,y,y'),
 \end{equation}
 which is a second order equation. We'll consider this equation with
-restrictions on $F$ later;     however, since Chapter~2
+restrictions on $F$ later; however, since \zcref{ch:first_order}
 dealt only with first order equations, we consider here only problems in
 which \eqref{eq:4.3.2} can be recast as a first order equation. This is
 possible if $F$ does not depend on $y$, so \eqref{eq:4.3.2} is of the form
@@ -1676,16 +1677,14 @@ F=-mg-kv,
 \end{equation}
 regardless of the sign of the velocity.
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040301}
+  \includegraphics[alt={Whether an object has velocity v downward (in (a)) or upward (in (b)), the force F1=-kv points in the opposite direction.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040301}
 \color{blue}
   \caption{Resistive forces}
   \label{figure:4.3.1}
 \end{figure}
-
-
 
 
 From Newton's second law of motion,
@@ -1732,9 +1731,10 @@ which  is independent of the
 initial velocity $v_0$ (\zcref{figure:4.3.2}).
 
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040302}
+  \includegraphics[alt={Solution curves for t,v>0.  All curves approach the horizontal asymptote v=-mg/k, whether the curves begin above or below the asymptote.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040302}
 \color{blue}
   \caption{Solutions of $mv'=-mg-kv$}
   \label{figure:4.3.2}
@@ -1742,16 +1742,16 @@ initial velocity $v_0$ (\zcref{figure:4.3.2}).
 
 
 \begin{example}\label{example:4.3.2}
-A 960-lb object is given an initial upward velocity of 60 ft/s near
+A \qty{960}{\pound} object is given an initial upward velocity of \qty{60}{\feet\per\second} near
 the surface of Earth. The atmosphere resists the motion with a force
-of 3 lb for each ft/s of speed. Assuming that the only other force
+of \qty{3}{\pound} for each \unit{\feet\per\second} of speed. Assuming that the only other force
 acting on the object is constant gravity, find its velocity $v$ as a
 function of $t$, and find its  terminal velocity.
 \end{example}
 
 \solution
 Since $mg=960$ and $g=32$,   $m=960/32=30$.  The atmospheric
-resistance is $-3v$  lb if $v$ is expressed in feet
+resistance is $-3v$ \unit{\pound} if $v$ is expressed in feet
 per second.  Therefore
 \[
 30v'=-960-3v,
@@ -1770,7 +1770,7 @@ so
 \begin{equation} \label{eq:4.3.8}
 v=ue^{-t/10}=-320+ce^{-t/10}.
 \end{equation}
-The initial velocity is 60 ft/s in the upward (positive) direction;
+The initial velocity is \qty{60}{\feet\per\second} in the upward (positive) direction;
 hence, $v_0=60$. Substituting $t=0$ and $v=60$ in \eqref{eq:4.3.8}
 yields
 \[
@@ -1778,19 +1778,19 @@ yields
 \]
  so $c=380$, and \eqref{eq:4.3.8} becomes
 \[
-v=-320+380e^{-t/10}\ \mbox{ft/s}
+v=-320+380e^{-t/10}\unit{\feet\per\second}
 \]
 The terminal velocity is
 \[
-\lim_{t\to\infty}v(t)=-320\mbox{ ft/s.}
+\lim_{t\to\infty}v(t)=\qty{-320}{\feet\per\second}.
 \]
 
 
 \begin{example}\label{example:4.3.3}
-A 10 kg mass is given an initial velocity $v_0\le0$
+A \qty{10}{\kilo\gram} mass is given an initial velocity $v_0\le0$
  near Earth's surface. The only forces acting on it are
 gravity and atmospheric resistance proportional to the square of the
-speed. Assuming that the resistance is 8 N if the speed is 2 m/s,
+speed. Assuming that the resistance is \qty{8}{\newton} if the speed is \qty{2}{\meter\per\second},
 find the velocity of the object as a function of $t$, and
 find the terminal velocity.
 \end{example}
@@ -1800,12 +1800,12 @@ find the terminal velocity.
 \begin{equation} \label{eq:4.3.9}
 mv'=-mg+kv^2,
 \end{equation}
-where $k$ is a constant. Since the magnitude of the resistance is 8 N
-when $v=2$ m/s,
+where $k$ is a constant. Since the magnitude of the resistance is \qty{8}{\newton}
+when $v=2$ \unit{\meter\per\second},
 \[
 k(2^2)=8,
 \]
- so $k=2\  \mbox{N-s}^2/\mbox{m}^2$.  Since
+ so $k=\qty{2}{\newton\second\squared\per\meter\squared}$.  Since
 $m=10$ and $g=9.8$, \eqref{eq:4.3.9} becomes
 \begin{equation} \label{eq:4.3.10}
 10v'=-98+2v^2=2(v^2-49).
@@ -1859,7 +1859,7 @@ v=-7\frac{v_0(1+e^{-14t/5})-7(1-e^{-14t/5})}{v_0(1-e^{-14t/5})-7(1+e^{-14t/5}}.
 Since $v_0\le0$, $v$ is defined and negative for all
 $t>0$. The terminal velocity is
 \[
-\lim_{t\to\infty} v(t)=-7\  \mbox{m/s},
+\lim_{t\to\infty} v(t)=\qty{-7}{\meter\per\second},
 \]
 independent of $v_0$. More generally, it
 can be shown (\zcref{exer:4.3.11}) that if $v$ is any solution
@@ -1870,25 +1870,22 @@ of \eqref{eq:4.3.9} such that $v_0\le0$ then
 (\zcref{figure:4.3.3}).
 
 
-
-
-
-      \begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040303}
+  \includegraphics[alt={Several solution curves for t>0>v.  All curves converge to the horizontal asymptote v=-(mg/k)^(1/2).},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040303}
 \color{blue}
   \caption{Solutions of $mv'=-mg+kv^2,\ v(0)=v_0\le0$}
   \label{figure:4.3.3}
 \end{figure}
 
 
-
 \begin{example}\label{example:4.3.4}
-A 10-kg mass is launched vertically upward from Earth's surface with
-an initial velocity of $v_0$ m/s. The only forces acting on the mass
+A \qty{10}{\kilo\gram} mass is launched vertically upward from Earth's surface with
+an initial velocity of $v_0$ \unit{\meter\per\second}. The only forces acting on the mass
 are gravity and atmospheric resistance proportional to the square of
-the speed. Assuming that the atmospheric resistance is 8 N if the
-speed is 2 m/s, find the time $T$ required for the mass to reach
+the speed. Assuming that the atmospheric resistance is \qty{8}{\newton} if the
+speed is \qty{2}{\meter\per\second}, find the time $T$ required for the mass to reach
 maximum altitude.
 \end{example}
 
@@ -1896,7 +1893,7 @@ maximum altitude.
 climb while $v>0 $ and reach its maximum altitude when $v=0$.
 Therefore $v>0$ for $0\le t<T$ and $v(T)=0$. Although the mass of
 the object and our assumptions concerning the forces acting on it are
-the same as those in Example 3, \eqref{eq:4.3.10} does
+the same as those in \zcref{example:4.3.3}, \eqref{eq:4.3.10} does
 not apply here, since the resisting force is negative if $v>0$;
 therefore, we replace \eqref{eq:4.3.10} by
 \begin{equation} \label{eq:4.3.15}
@@ -1949,15 +1946,15 @@ Since $\tan^{-1}(v_0/7)<\pi/2$ for all $v_0$,
 the  time required for the mass to reach its maximum
 altitude is less than
 \[
-\frac{5\pi}{14} \approx 1.122\  \mbox{s}
+\frac{5\pi}{14} \approx\qty{1.122}{\second}
 \]
 regardless of the initial velocity.  \zcref[S]{figure:4.3.4}
 shows graphs of $v$ over $[0,T]$ for various values of $v_0$.
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040304}
+  \includegraphics[alt={Solution curves for 0<t<1 and 0<v<50 starting from (0,10k) for various values of k.  The curve starting from (0,10) ends near (0.7,0).  The curve starting from (0,20) ends near (0.9,0).  The other curves end near (1,0).},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040304}
 \color{blue}
 \caption{Solutions of \eqref{eq:4.3.15} for various
 $v_0>0$}
@@ -1983,11 +1980,10 @@ F=-\frac{K}{(y+R)^2},
 \end{equation}
 where $R$ is  Earth's radius (\zcref{figure:4.3.5}).
 
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040305}
+  \includegraphics[alt={A circle of radius R centered at (0,-R).  y=0 is at the top of the circle and y=h is above the circle.},
+  trim=0 30 0 0,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040305}
 \color{blue}
   \caption{Escape velocity}
   \label{figure:4.3.5}
@@ -2096,53 +2092,51 @@ direction to be positive.
 
 \begin{exerciselist}
 
-\item\label{exer:4.3.1}A firefighter  who weighs 192 lb slides down an infinitely long
+\item\label{exer:4.3.1}A firefighter  who weighs \qty{192}{\pound} slides down an infinitely long
 fire pole
 that exerts a frictional resistive force with magnitude proportional
-to his speed, with $k=2.5$ lb-s/ft. Assuming that he starts from
+to his speed, with $k=\qty{2.5}{\pound\second\per\feet}$. Assuming that he starts from
 rest, find his velocity as a function of time and find his terminal
 velocity.
 
-\item\label{exer:4.3.2}A firefighter who weighs 192 lb slides down an infinitely long
+\item\label{exer:4.3.2}A firefighter who weighs \qty{192}{\pound} slides down an infinitely long
 fire pole
 that exerts a frictional resistive force with magnitude proportional
 to her speed, with constant of proportionality $k$. Find $k$, given
-that her terminal velocity is -16 ft/s, and then find her velocity
+that her terminal velocity is \qty{-16}{\feet\per\second}, and then find her velocity
 $v$ as a function of $t$. Assume that she starts from rest.
 
-\item\label{exer:4.3.3}A boat weighs 64,000 lb. Its propellor produces a constant thrust of
-50,000 lb and the water exerts a resistive force with magnitude
-proportional to the speed, with $k=2000$ lb-s/ft. Assuming that the
+\item\label{exer:4.3.3}A boat weighs \qty{64000}{\pound}. Its propellor produces a constant thrust of
+\qty{50000}{\pound} and the water exerts a resistive force with magnitude
+proportional to the speed, with $k=\qty{2000}{\pound\second\per\feet}$. Assuming that the
 boat starts from rest, find its velocity as a function of time, and
 find its terminal velocity.
 
-\item\label{exer:4.3.4}A constant horizontal force of 10 N pushes a 20 kg-mass through a
-medium that resists its motion with .5 N for every m/s of speed. The
-initial velocity of the mass is 7 m/s in the direction opposite to
+\item\label{exer:4.3.4}A constant horizontal force of \qty{10}{\newton} pushes a \qty{20}{\kilo\gram} mass through a
+medium that resists its motion with \qty{.5}{\newton} for every \unit{\meter\per\second} of speed. The
+initial velocity of the mass is \qty{7}{\meter\per\second} in the direction opposite to
 the direction of the applied force. Find the velocity of the mass for
 $t > 0$.
 
-\item\label{exer:4.3.5}A stone weighing 1/2 lb is thrown upward from an initial height of 5
-ft with an initial speed of 32 ft/s. Air resistance is
-proportional to speed, with $k=1/128$ lb-s/ft. Find the
+\item\label{exer:4.3.5}A stone weighing 1/2 \unit{\pound} is thrown upward from an initial height of \qty{5}{\feet} with an initial speed of \qty{32}{\feet\per\second}. Air resistance is
+proportional to speed, with $k=1/128$ \unit{\pound\second\per\feet}. Find the
 maximum height attained by the stone.
 
-\item\label{exer:4.3.6}A 3200-lb car is moving at 64 ft/s down a 30-degree grade when it
+\item\label{exer:4.3.6}A \qty{3200}{\pound} car is moving at \qty{64}{\feet\per\second} down a 30-degree grade when it
 runs out of fuel. Find its velocity after that if friction exerts a
 resistive force with magnitude proportional to the square of the
-speed, with $k=1\ \mbox{lb-s}^2/{\mbox ft}^2$. Also find its
+speed, with $k=\qty{1}{\pound\second\squared\per\feet\squared}$. Also find its
 terminal velocity.
 
-\item\label{exer:4.3.7}A 96 lb weight is dropped from rest in a medium that exerts a
+\item\label{exer:4.3.7}A \qty{96}{\pound} weight is dropped from rest in a medium that exerts a
 resistive force with magnitude proportional to the speed. Find its
-velocity as a function of time if its terminal velocity is -128
-ft/s.
+velocity as a function of time if its terminal velocity is \qty{-128}{\feet\per\second}.
 
 \item\label{exer:4.3.8}An object with mass $m$ moves vertically through a medium that exerts
 a resistive force with magnitude proportional to the  speed. Let
 $y=y(t)$ be the
 altitude of the object at time $t$, with $y(0)=y_0$. Use the results
-of Example~\ref{example:4.3.1} to show that
+of \zcref{example:4.3.1} to show that
 \[
  y(t)=y_0+\frac{m}{k}(v_0-v-gt).
 \]
@@ -2151,12 +2145,11 @@ of Example~\ref{example:4.3.1} to show that
 velocity $v_0$ from Earth's surface ($y_0=0$) in a medium that exerts
 a resistive force with magnitude proportional to the speed. Find the
 time $T$ when the object attains its maximum altitude $y_m$. Then use
-the result of Exercise~\ref{exer:4.3.8} to find $y_m$.
+the result of \zcref{exer:4.3.8} to find $y_m$.
 
-\item\label{exer:4.3.10}An object weighing 256 lb is dropped from rest in a medium that
+\item\label{exer:4.3.10}An object weighing \qty{256}{\pound} is dropped from rest in a medium that
 exerts a resistive force with magnitude proportional to the square of
-the speed. The magnitude of the resisting force is 1 lb when $|v|=4\
-\mbox{ft/s}$. Find $v$ for $t > 0$, and find its terminal
+the speed. The magnitude of the resisting force is \qty{1}{\pound} when $|v|=\qty{4}{\feet\per\second}$. Find $v$ for $t > 0$, and find its terminal
 velocity.
 
 \item\label{exer:4.3.11}An object with mass $m$ is given an initial velocity $v_0\le0$ in
@@ -2176,7 +2169,7 @@ with magnitude  proportional to the square of the  speed.
 Find the time $T$ when the object reaches its maximum
 altitude.
 \item %(b)
-Use the result of Exercise~\ref{exer:4.3.11} to find the velocity of the
+Use the result of \zcref{exer:4.3.11} to find the velocity of the
 object for $t > T$.
 \end{alist}
 
@@ -2190,12 +2183,12 @@ in a medium that exerts a resistive force of the form
 Set up a differential equation for the speed of the object.
 \item % (b)
 Use your favorite numerical method to solve the equation you found in
-\part{a}, to convince yourself that there's  a unique number $a_0$ such
+(a), to convince yourself that there's  a unique number $a_0$ such
 that $\lim_{t\to\infty}s(t)=\infty$ if $a\le a_0$ and
 $\lim_{t\to\infty}s(t)$ exists (finite) if $a>a_0$. (We say that $a_0$
 is the \emph{\color{blue}bifurcation value} of $a$.) Try to find $a_0$ and
 $\lim_{t\to\infty}s(t)$ in the case where $a>a_0$.
-\hint{See Exercise~$\ref{exer:4.3.14}$.}
+\hint{See \zcref{exer:4.3.14}.}
 \end{alist}
 
 \item\label{exer:4.3.14}An object of mass $m$ falls in a medium that exerts a resistive force
@@ -2214,51 +2207,51 @@ $\lim_{t\to\infty}s(t)=\infty$.
 \item % (c)
 Show that if $\lim_{s\to\infty}f(s)>mg$ then
 $\lim_{t\to\infty}s(t)=s_T$ (terminal speed), where $f(s_T)=mg$.
-\hint{Use Theorem~\ref{thmtype:2.3.1}}.
+\hint{Use \zcref{thmtype:2.3.1}}.
 \end{alist}
 
 \item\label{exer:4.3.15}A 100-g mass with initial velocity $v_0\le0$ falls in a medium that
 exerts a resistive force proportional to the fourth power of the
-speed. The resistance is $.1$ N if the speed is 3 m/s.
+speed. The resistance is \qty{.1}{\newton} if the speed is \qty{3}{\meter\per\second}.
 
 \begin{alist}
 \item % (a)
 Set up the initial value problem for the velocity $v$ of the mass for
 $t>0$.
 \item % (b)
-Use Exercise~\ref{exer:4.3.14}(c) to determine the terminal velocity of
+Use \zcref{exer:4.3.14}(c) to determine the terminal velocity of
 the object.
 \item % (c)
 \Cex
-To confirm your answer to \part{b},  use one of the numerical methods  studied
-in Chapter~3 to compute  approximate solutions on $[0,1]$
-(seconds) of the initial value problem of \part{a}, with initial values
+To confirm your answer to (b),  use one of the numerical methods  studied
+in \zcref{ch:numerical} to compute  approximate solutions on $[0,1]$
+(seconds) of the initial value problem of (a), with initial values
 $v_0=0$, $-2$, $-4$, \dots, $-12$. Present your results in graphical form
-similar to Figure~\ref{figure:4.3.3}.
+similar to \zcref{figure:4.3.3}.
 \end{alist}
 
-\item\label{exer:4.3.16}A 64-lb object with initial velocity $v_0\le0$ falls through a dense
+\item\label{exer:4.3.16}A \qty{64}{\pound} object with initial velocity $v_0\le0$ falls through a dense
 fluid that exerts a resistive force proportional to the square root of
-the speed. The resistance is $64$ lb if the speed is 16 ft/s.
+the speed. The resistance is \qty{64}{\pound} if the speed is \qty{16}{\feet\per\second}.
 
 \begin{alist}
 \item % (a)
 Set up the initial value problem for the velocity $v$ of the mass for
 $t>0$.
 \item % (b)
-Use Exercise~\ref{exer:4.3.14}(c) to determine the terminal velocity of
+Use \zcref{exer:4.3.14}(c) to determine the terminal velocity of
 the object.
 \item % (c)
 \Cex
-To confirm your answer to \part{b}, use one of the numerical methods
-studied in Chapter~3 to compute approximate
+To confirm your answer to (b), use one of the numerical methods
+studied in \zcref{ch:numerical} to compute approximate
 solutions on
-$[0,4]$ (seconds) of the initial value problem of \part{a}, with
+$[0,4]$ (seconds) of the initial value problem of (a), with
 initial values $v_0=0$, $-5$, $-10$, \dots, $-30$. Present your results in
-graphical form similar to Figure~\ref{figure:4.3.3}.
+graphical form similar to \zcref{figure:4.3.3}.
 \end{alist}
 
-\exercisetext{In Exercises \ref{exer:4.3.17}-\ref{exer:4.3.20}, assume
+\exercisetext{In \zcref[range]{exer:4.3.17,exer:4.3.20}, assume
 that the
 force due to gravity is given by Newton's law of gravitation. Take the
 upward direction to be positive.}
@@ -2272,9 +2265,10 @@ radius of about 1080 miles.  The acceleration due to
 gravity at the surface of the moon is about $5.31$
 ft/s$^2$.  Find the escape velocity in miles/s.
 
-\item\label{exer:4.3.19}\begin{alist}
+\item\label{exer:4.3.19}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item %(a)
-Show that Eqn.~\eqref{eq:4.3.23}  can be rewritten as
+Show that \zcref{eq:4.3.23}  can be rewritten as
 \[
 v^2=\frac{h-y}{y+R} v^2_e+v_0^2.
 \]
@@ -2286,15 +2280,15 @@ vehicle is
 y_m=\frac{h+R\rho^2}{1-\rho^2}.
 \]
 \item %(c)
-By requiring that $v(y_m)=0$, use Eqn.~\eqref{eq:4.3.22} to
+By requiring that $v(y_m)=0$, use \zcref{eq:4.3.22} to
 deduce that if $v_0 < v_e$ then
 \[
 |v|=v_e\left[\frac{(1-\rho^2)(y_m-y)}{y+R}\right]^{1/2},
 \]
-where $y_m$ and $\rho$ are as defined in \part{b} and
+where $y_m$ and $\rho$ are as defined in (b) and
 $y \ge h$.
 \item %(d)
-Deduce from \part{c} that if $v < v_e$,  the vehicle takes
+Deduce from (c) that if $v < v_e$,  the vehicle takes
 equal times to climb from $y=h$ to $y=y_m$ and to
 fall back from $y=y_m$ to $y=h$.
 \end{alist}
@@ -2335,7 +2329,7 @@ v\frac{dv}{dy}=F(y,v).
 The integral curves of \eqref{eq:4.4.4} can be plotted in the $(y,v)$
 plane, which is called the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Poincare.html}
-{\color{blue}\itshape Poincar\'e
+{\color{blue}\itshape Poincaré
  phase plane} of \eqref{eq:4.4.1}. If $y$ is a solution of
 \eqref{eq:4.4.1}
 then $y=y(t), v=y'(t)$ is a parametric equation for an integral curve
@@ -2351,15 +2345,15 @@ y''+q(y,y')y'+p(y)=0.
 Equations of this form often arise in applications of Newton's second
 law of motion. For example, suppose  $y$ is the displacement of a
 moving object with mass $m$. It's  reasonable to think of two
-types of time-independent forces acting on the object. One type - such
-as gravity - depends only on position. We could write such a force as
-$-mp(y)$. The second type - such as atmospheric resistance or friction
-- may depend on position and velocity. (Forces that depend on velocity
+types of time-independent forces acting on the object. One type --- such
+as gravity --- depends only on position. We could write such a force as
+$-mp(y)$. The second type --- such as atmospheric resistance or friction
+--- may depend on position and velocity. (Forces that depend on velocity
 are called \emph{\color{blue}damping} forces.) We  write this force as
 $-mq(y,y')y'$, where $q(y,y')$ is usually a positive function and
 we've put the factor $y'$ outside  to make it
 explicit that the force
-is in the direction opposing the motion. In this case Newton's, second
+is in the direction opposing the motion. In this case Newton's second
 law of motion leads to \eqref{eq:4.4.5}.
 
 The phase plane equivalent of \eqref{eq:4.4.5} is
@@ -2375,31 +2369,34 @@ $p=p(y)$ is continuously differentiable for all $y$ and $q=q(y,v)$ is
 continuously differentiable for all $(y,v)$.
  We begin with the following statements:
 
-\begin{itemize}
-\item{\bf Statement 1.} If $y_0$ and $v_0$ are arbitrary real numbers then
+\begin{enumext}[
+  label=\arabic*,
+  wrap-label={Statement #1.},
+  labelwidth=6em,
+  list-indent=0pt]
+\item If $y_0$ and $v_0$ are arbitrary real numbers then
 $\eqref{eq:4.4.5}$ has a unique solution on $(-\infty,\infty)$ such that
 $y(0)=y_0$ and $y'(0)=v_0$.
 
-\item{\bf Statement 2.)} If $y=y(t)$ is a solution of $\eqref{eq:4.4.5}$
+\item If $y=y(t)$ is a solution of $\eqref{eq:4.4.5}$
 and
 $\tau$ is any constant then $y_1=y(t-\tau)$ is also a solution of
 $\eqref{eq:4.4.5}$, and $y$ and $y_1$ have the same trajectory.
 
-\item{\bf Statement 3.}   If two solutions $y$ and $y_1$ of
+\item If two solutions $y$ and $y_1$ of
 $\eqref{eq:4.4.5}$ have the same trajectory then  $y_1(t)=y(t-\tau)$
 for some constant $\tau$.
 
-\item{\bf Statement 4.} Distinct trajectories of $\eqref{eq:4.4.5}$ can't
+\item Distinct trajectories of $\eqref{eq:4.4.5}$ can't
 intersect; that is, if two trajectories of $\eqref{eq:4.4.5}$
 intersect,  they are identical.
 
-
-\item{\bf Statement 5.} If the trajectory of a solution of
+\item If the trajectory of a solution of
 \eqref{eq:4.4.5}
 is a closed curve then  $(y(t),v(t))$ traverses the
 trajectory in a finite time $T$, and the solution is periodic with
 period $T$; that is, $y(t+T)=y(t)$ for all $t$ in $(-\infty,\infty)$.
-\end{itemize}
+\end{enumext}
 
 
 If $\overline y$ is a constant such that $p(\overline y)=0$ then
@@ -2421,15 +2418,16 @@ satisfies the inequality
 \[
 \sqrt{(y(t)-\overline y)^2+(v(t))^2}<\epsilon
 \]
-for all $t>0$. Figure~\ref{figure:4.4.1} illustrates the geometrical
-interpretation of this definition in the Poincar\'e phase plane: if
+for all $t>0$. \zcref[S]{figure:4.4.1} illustrates the geometrical
+interpretation of this definition in the Poincaré phase plane: if
 $(y_0,v_0)$ is in the smaller shaded circle (with radius~$\delta$), then
 $(y(t),v(t))$ must be in in the larger circle (with
-radius~$\epsilon$) for all $t>0$.
+radius $\epsilon$) for all $t>0$.
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040401}
+  \includegraphics[alt={Two circles centered at (y bar,0) on the horizontal y axis (the vertical axis is v).  The larger circle has radius 𝜖; the smaller circle has radius 𝛿.},
+  trim=0 40 0 0,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040401}
 \color{blue}
 \caption{Stability: if $(y_0,v_0)$ is in the smaller
 circle  then $(y(t),v(t))$ is in the larger circle for all $t>0$}
@@ -2440,7 +2438,7 @@ circle  then $(y(t),v(t))$ is in the larger circle for all $t>0$}
 If an equilibrium and the associated critical point are not stable, we
 say they are \emph{\color{blue}unstable}. To see if you really understand what
 \emph{\color{blue}stable} means, try to give a direct definition of \emph{\color{blue}unstable}
-(Exercise~\ref{exer:4.4.22}). We'll illustrate both definitions in
+(\zcref{exer:4.4.22}). We'll illustrate both definitions in
 the following examples.
 
 
@@ -2478,18 +2476,18 @@ c=\frac{v_0^2}{2}+P(y_0).
 \]
 
 
-
 \begin{example}[The Undamped Spring-Mass System]\label{example:4.4.1}
  Consider an object with mass $m$ suspended from a
 spring and moving vertically. Let $y$ be the displacement of the
 object from the position it occupies when suspended at rest from the
-spring (Figure~\ref{figure:4.4.2}).
+spring (\zcref{figure:4.4.2}).
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040402}
+  \includegraphics[alt={Three springs labeled a, b, and c.  Spring a is above y=0, spring b aligns with y=0, and spring c is below y=0.},
+  trim=0 20 0 20,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040402}
 \color{blue}
-  \caption{\,\part{a}  $y>0$   \, \part{b}  $y=0$   \, \part{c}  $y<0$}
+  \caption{(a) $y>0$, (b) $y=0$, (c) $y<0$}
   \label{figure:4.4.2}
 \end{figure}
 
@@ -2524,16 +2522,15 @@ which implies that
 \begin{equation} \label{eq:4.4.10}
 mv^2+ky^2=\rho
 \end{equation}
-($\rho=2c$). This defines an ellipse in the Poincar\'e phase plane
-(Figure~\ref{figure:4.4.3}).
+($\rho=2c$). This defines an ellipse in the Poincaré phase plane
+(\zcref{figure:4.4.3}).
 
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040403}
+  \includegraphics[alt={Several ellipses centered at the origin of the y v plane.},
+  trim=0 20 0 0,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040403}
 \color{blue}
-\caption{Trajectories of  $my''+ky=0$}
+\caption{Trajectories of $my''+ky=0$}
   \label{figure:4.4.3}
 \end{figure}
 
@@ -2543,8 +2540,8 @@ $\rho=mv_0^2+ky_0^2$, where $y_0=y(0)$ and $v_0=v(0)$. To determine
 the maximum and minimum values of $y$ we set $v=0$ in \eqref{eq:4.4.10};
 thus,
 \begin{equation} \label{eq:4.4.11}
-y_{\max}=R\mbox{\quad and \quad}
-y_{\min}=-R,\mbox{\quad with } R=\sqrt\frac{\rho}{k}.
+y_{\max}=R\quad\text{and}\quad
+y_{\min}=-R,\quad\text{with } R=\sqrt\frac{\rho}{k}.
 \end{equation}
 Equation~\eqref{eq:4.4.9} has exactly one equilibrium, $\overline y=0$,
 and
@@ -2560,8 +2557,8 @@ interval $I$,  \eqref{eq:4.4.10} implies that
 \]
 on $I$. This is equivalent to
 \begin{equation} \label{eq:4.4.12}
-\frac{\sqrt k}{\sqrt{\rho-ky^2}}\frac{dy}{dt}=\omega_0,\mbox{\quad where
-\quad}
+\frac{\sqrt k}{\sqrt{\rho-ky^2}}\frac{dy}{dt}=\omega_0,
+\quad\text{where}\quad
 \omega_0=\sqrt\frac{k}{m}.
 \end{equation}
 Since
@@ -2581,14 +2578,15 @@ y=R\sin(\omega_0 t+\phi)
 for all $t$ in $I$. Although we obtained this function by assuming that
 $v>0$, you can easily verify that $y$ satisfies \eqref{eq:4.4.9} for all
 values of $t$. Thus, the displacement varies periodically between $-R$
-and $R$, with period $T=2\pi/\omega_0$ (Figure~\ref{figure:4.4.4}). (If
+and $R$, with period $T=2\pi/\omega_0$ (\zcref{figure:4.4.4}). (If
 you've taken a course in elementary mechanics you may recognize this
 as \emph{\color{blue}simple harmonic motion}.)
 \end{example}
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040404}
+  \includegraphics[alt={A sinusoidal wave on the t y plane reaching max and min at y=±R.},
+  trim=0 20 0 0,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040404}
 \color{blue}
 \caption{$y=R\sin(\omega_0 t+\phi)$}
   \label{figure:4.4.4}
@@ -2598,15 +2596,15 @@ as \emph{\color{blue}simple harmonic motion}.)
 \begin{example}[The Undamped Pendulum]\label{example:4.4.2}
 Now we consider the motion of a pendulum with mass $m$, attached to the end
 of a weightless rod with length $L$ that rotates on a frictionless
-axle (Figure~\ref{figure:4.4.5}). We assume that there's no air
+axle (\zcref{figure:4.4.5}). We assume that there's no air
 resistance.
 
 Let $y$ be the angle measured from the rest position
 (vertically downward) of the pendulum, as shown in
-Figure~\ref{figure:4.4.5}. Newton's second law of motion says that the
+\zcref{figure:4.4.5}. Newton's second law of motion says that the
 product of $m$ and the tangential acceleration equals the tangential
 component of the gravitational force;  therefore, from
-Figure~\ref{figure:4.4.5},
+\zcref{figure:4.4.5},
 \[
 mLy''=-mg\sin y,
 \]
@@ -2615,12 +2613,12 @@ or
 y''=-\frac{g}{L} \sin y.
 \end{equation}
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-\scalebox{.5}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040405} }
+  \includegraphics[alt={A pendulum of length L and mass m making an angle of y to the right of vertical.},
+  width=2.83in,height=1.83in,keepaspectratio]{fig040405}
 \color{blue}
-\caption{ The undamped pendulum}
+\caption{The undamped pendulum}
   \label{figure:4.4.5}
 \end{figure}
 
@@ -2630,21 +2628,20 @@ y''=-\frac{g}{L} \sin y.
 Since $\sin n\pi=0$ if $n$ is any integer,  \eqref{eq:4.4.13} has
 infinitely many equilibria $\overline y_n=n\pi$. If $n$ is
 even, the mass is directly below the axle
-(Figure~\ref{figure:4.4.6}~\part{a}) and gravity opposes any deviation
+(\zcref{figure:4.4.6}(a)) and gravity opposes any deviation
 from the equilibrium. However, if $n$ is odd, the mass is directly
-above the axle (Figure~\ref{figure:4.4.6}~\part{b}) and gravity
+above the axle (\zcref{figure:4.4.6}(b)) and gravity
 increases any deviation from the equilibrium. Therefore we conclude
 on physical grounds that $\overline y_{2m}=2m\pi$ is stable and
 $\overline y_{2m+1}=(2m+1)\pi$ is unstable.
 
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-\scalebox{.5}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040406} }
+  \includegraphics[alt={Pendulum a hangs vertically down.  Pendulum b points upward.} 
+  width=2.83in,height=1.83in,keepaspectratio]{fig040406}
 \color{blue}
-\caption{ \part{a}\, Stable equilibrium  \, \part{b}\, Unstable
-equilibrium}
+\caption{(a) Stable equilibrium, (b) Unstable equilibrium}
   \label{figure:4.4.6}
 \end{figure}
 
@@ -2678,23 +2675,23 @@ v_c=2\sqrt\frac{g}{L}.
 The curves defined by \eqref{eq:4.4.15} are the trajectories of
 \eqref{eq:4.4.13}. They are periodic with period $2\pi$ in $y$, which isn't
  surprising, since if $y=y(t)$ is a solution of \eqref{eq:4.4.13} then
-so is $y_n=y(t)+2n\pi$ for any integer $n$. Figure~\ref{figure:4.4.7}
+so is $y_n=y(t)+2n\pi$ for any integer $n$. \zcref[S]{figure:4.4.7}
 shows trajectories over the interval $[-\pi,\pi]$. From \eqref{eq:4.4.15},
 you can see that if $|v_0|>v_c$ then $v$ is nonzero for all $t$, which
 means that the object whirls in the same direction forever, as in
-Figure~\ref{figure:4.4.8}. The trajectories associated with this
+\zcref{figure:4.4.8}. The trajectories associated with this
 whirling motion are above the upper dashed curve and below the lower
-dashed curve in Figure~\ref{figure:4.4.7}. You can also see from
+dashed curve in \zcref{figure:4.4.7}. You can also see from
 \eqref{eq:4.4.15} that if $0<|v_0|<v_c$,then $v=0$ when $y=\pm y_{\max}$,
 where
 \[
 y_{\max}=2\sin^{-1}(|v_0|/v_c).
 \]
 In this case the pendulum oscillates periodically between $-y_{\max}$
-and $y_{\max}$, as shown in Figure~\ref{figure:4.4.9}. The
+and $y_{\max}$, as shown in \zcref{figure:4.4.9}. The
 trajectories associated with this kind of motion are the ovals between
-the dashed curves in Figure~\ref{figure:4.4.7}. It can be shown (see
-Exercise~\ref{exer:4.4.21} for a partial proof) that the period of the
+the dashed curves in \zcref{figure:4.4.7}. It can be shown (see
+\zcref{exer:4.4.21} for a partial proof) that the period of the
 oscillation is
 \begin{equation} \label{eq:4.4.16}
 T=8\int_0^{\pi/2}\frac{d\theta}{\sqrt{v_c^2-v_0^2\sin^2\theta}}.
@@ -2702,7 +2699,7 @@ T=8\int_0^{\pi/2}\frac{d\theta}{\sqrt{v_c^2-v_0^2\sin^2\theta}}.
 Although this integral can't be evaluated in terms of familiar
 elementary functions, you can see that it's finite if $|v_0|<v_c$.
 
-The dashed curves in Figure~\ref{figure:4.4.7} contain four
+The dashed curves in \zcref{figure:4.4.7} contain four
 trajectories. The critical points $(\pi,0)$ and $(-\pi,0)$ are the
 trajectories of the unstable equilibrium solutions $\overline
 y=\pm\pi$.
@@ -2710,16 +2707,16 @@ The upper dashed curve connecting (but not including) them is obtained
 from initial conditions of the form $y(t_0)=0,\ v(t_0)=v_c$. If $y$ is
 any solution with this trajectory then
 \[
-\lim_{t\to\infty}y(t)=\pi\mbox{\quad and \quad}\lim_{t\to-\infty}y(t)=-\pi.
+\lim_{t\to\infty}y(t)=\pi\quad\text{and}\quad\lim_{t\to-\infty}y(t)=-\pi.
 \]
 The lower dashed curve connecting (but not including) them is obtained
 from initial conditions of the form $y(t_0)=0,\ v(t_0)=-v_c$. If $y$
 is any solution with this trajectory then
 \[
-\lim_{t\to\infty}y(t)=-\pi\mbox{\quad and \quad}\lim_{t\to-\infty}y(t)=\pi.
+\lim_{t\to\infty}y(t)=-\pi\quad\text{and}\quad\lim_{t\to-\infty}y(t)=\pi.
 \]
 Consistent with this, the integral \eqref{eq:4.4.16} diverges to $\infty$
-if $v_0=\pm v_c$. (Exercise~\ref{exer:4.4.21}) .
+if $v_0=\pm v_c$. (\zcref{exer:4.4.21}) .
 
 Since the dashed curves separate trajectories of whirling solutions
 from trajectories of oscillating solutions, each of these curves is
@@ -2736,11 +2733,10 @@ unstable critical point, then
 defines a separatrix passing through $(\overline y,0)$.
 \end{example}
 
-\vspace*{-.2in}
-\begin{figure}[H]
+\begin{figure}
   \centering
-\scalebox{.5}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040407} }
+  \includegraphics[alt={The y v plane with several solution curves that are symmetric about both axes.  Dashed lines connect (-π,0) to (π,0) by going through (0,±1).  Inside the dashed lines, several ellipses are centered at the origin.  Outside the dashed lines, solution curves move horizontally through the plane.},
+  width=2.83in,height=1.83in,keepaspectratio]{fig040407}
 \color{blue}
 \caption{ Trajectories of the undamped pendulum}
   \label{figure:4.4.7}
@@ -2748,26 +2744,28 @@ defines a separatrix passing through $(\overline y,0)$.
 
 
 \noindent
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040408}
+\includegraphics[alt={A pendulum spinning counterclockwise and not turning back.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040408}
 \captionof{figure}{The whirling undamped pendulum}
 \label{figure:4.4.8}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040409}
+\includegraphics[alt={A pendulum moving back and forth with a maximum angle of ±y max.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040409}
 \captionof{figure}{The oscillating undamped pendulum}
 \label{figure:4.4.9}
 \tagstructend
 \end{minipage}
 
 
-\boxit{Stability  and Instability Conditions for $y''+p(y)=0$}
+\boxit{Stability and Instability Conditions for $y''+p(y)=0$}
 
-It can be shown (Exercise~\ref{exer:4.4.23}) that an equilibrium
+It can be shown (\zcref{exer:4.4.23}) that an equilibrium
 $\overline y$ of an undamped equation
 \begin{equation} \label{eq:4.4.18}
 y''+p(y)=0
@@ -2775,9 +2773,9 @@ y''+p(y)=0
 is stable if there's an open interval $(a,b)$ containing $\overline
 y$ such that
 \begin{equation} \label{eq:4.4.19}
-p(y)<0 \mbox{\; if \;}a<y<\overline y\mbox{\; and \;} p(y)>0 \mbox{\; if
-\;}
-\overline y<y<b.
+p(y)<0 \text{ if }a<y<\overline y
+\quad\text{and}\quad
+p(y)>0 \text{ if }\overline y<y<b.
 \end{equation}
 If we regard $p(y)$ as a force acting on a unit mass,
 \eqref{eq:4.4.19} means that the force resists all sufficiently small
@@ -2794,21 +2792,21 @@ $\overline y=2m\pi$ is a stable equilibrium if $m$ is an integer. In
 this case
 \[
 p(y)=\sin y<0
-\mbox{\; if \;}(2m-1)\pi<y<2m\pi
+\text{ if }(2m-1)\pi<y<2m\pi
 \]
 and
 \[
-p(y)>0 \mbox{\; if \;}2m\pi<y<(2m+1)\pi.
+p(y)>0 \text{ if }2m\pi<y<(2m+1)\pi.
 \]
 
-It can also be shown (Exercise~\ref{exer:4.4.24}) that $\overline y$ is
+It can also be shown (\zcref{exer:4.4.24}) that $\overline y$ is
 unstable if there's a $b>\overline y$ such that
 \begin{equation} \label{eq:4.4.20}
-p(y)<0\mbox{\; if \;}\overline y<y<b
+p(y)<0\text{ if }\overline y<y<b
 \end{equation}
 or an $a<\overline y$ such that
 \begin{equation} \label{eq:4.4.21}
-p(y)>0\mbox{\; if \;}a<y<\overline y.
+p(y)>0\text{ if }a<y<\overline y.
 \end{equation}
 If we regard $p(y)$ as a force acting on a unit mass,
 \eqref{eq:4.4.20} means that the force tends to increase all sufficiently
@@ -2820,11 +2818,11 @@ The undamped pendulum also illustrates this principle. We've seen that
 $\overline y=(2m+1)\pi$ is an unstable equilibrium if $m$ is an
 integer. In this case
 \[
-\sin y<0\mbox{\; if \;}(2m+1)\pi<y<(2m+2)\pi,
+\sin y<0\text{ if }(2m+1)\pi<y<(2m+2)\pi,
 \]
 so \eqref{eq:4.4.20} holds with $b=(2m+2)\pi$, and
 \[
-\sin y>0\mbox{\; if \;}2m\pi<y<(2m+1)\pi,
+\sin y>0\text{ if }2m\pi<y<(2m+1)\pi,
 \]
 so \eqref{eq:4.4.21} holds with $a=2m\pi$.
 
@@ -2836,10 +2834,10 @@ y''+y(y-1)=0
 \end{equation}
 is of the form \eqref{eq:4.4.18} with $p(y)=y(y-1)$. Therefore $\overline
 y=0$ and $\overline y=1$ are the equilibria of \eqref{eq:4.4.22}. Since
-\begin{eqnarray*}
-y(y-1)>0 &\text{\, if \,} y<0\mbox{\, or \,}y>1,\\
-<0&\hspace*{-22pt}\text{\, if \,} 0<y<1,
-\end{eqnarray*}
+\begin{align*}
+y(y-1)>0 &\quad\text{\, if \,} y<0\text{ or }y>1,\\
+<0&\quad\text{\, if \,} 0<y<1,
+\end{align*}
 $\overline y=0$ is unstable and $\overline y=1$ is
 stable.
 
@@ -2861,26 +2859,27 @@ point $(y(t),v(t))$ moves along the trajectory of $y$ in the direction
 of increasing $y$ in the upper half plane ($v=y'>0$), or in the
 direction of decreasing $y$ in the lower half plane ($v=y'<0$).
 
-Figure~\ref{figure:4.4.10}  shows
+\zcref[S]{figure:4.4.10}  shows
 typical trajectories. The
 dashed curve through the critical point $(0,0)$, obtained by setting
 $c=0$ in \eqref{eq:4.4.23}, separates the $y$-$v$ plane into regions
 that contain different kinds of trajectories; again,
  we call this curve a \emph{\color{blue}separatrix}.
-Trajectories in the region bounded by the closed loop \part{b} are closed
+Trajectories in the region bounded by the closed loop (b) are closed
 curves,
 so solutions associated with them are periodic. Solutions associated
 with other trajectories are not periodic. If $y$ is any such solution
 with trajectory not  on the separatrix, then
 \begin{align*}
-\dst\lim_{t\to\infty}y(t)&=-\infty, &\dst\lim_{t\to-\infty}y(t)&=-\infty,\\
-\dst\lim_{t\to\infty}v(t)&=-\infty, &\dst\lim_{t\to-\infty}v(t)&=\infty.
+\lim_{t\to\infty}y(t)&=-\infty, &\lim_{t\to-\infty}y(t)&=-\infty,\\
+\lim_{t\to\infty}v(t)&=-\infty, &\lim_{t\to-\infty}v(t)&=\infty.
 \end{align*}
 
- \begin{figure}[H]
+ \begin{figure}
   \centering
   \color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040410}
+  \includegraphics[alt={The y v plane with several solution curves symmetric about the horizontal y axis.  The dashed separatrix labeled (a) goes from the origin up and left, exiting the image; (c) is its mirror image going down and left.  The dashed separatrix labeled (b) goes from the origin up and right, loops around (1,0), and returns to the origin.  Within the (b) separatrix are several loops around (1,0).  Left of (a) and (c) are hyperbola looking curves.  Other curves trace the region to the right of the separatrices.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040410}
 \caption{ Trajectories of $y''+y(y-1)=0$}
   \label{figure:4.4.10}
 \end{figure}
@@ -2889,21 +2888,19 @@ with trajectory not  on the separatrix, then
 The separatrix contains four trajectories of \eqref{eq:4.4.22}. One is the
 point $(0,0)$, the trajectory of the equilibrium $\overline y=0$.
 Since distinct trajectories can't intersect, the segments of the
-separatrix marked \part{a}, \part{b}, and \part{c} -- which don't include $(0,0)$ --
+separatrix marked (a), (b), and (c) --- which don't include $(0,0)$ ---
 are distinct trajectories, none of which can be traversed in finite
 time. Solutions with these trajectories have the following asymptotic
 behavior:
-\begin{align*}
+\begin{alignat*}{2}
+\text{(a):}\quad
 \lim_{t\to\infty}y(t)&=0, &\lim_{t\to-\infty}y(t)&=-\infty,\\
-\lim_{t\to\infty}v(t)&=0, &\lim_{t\to-\infty}v(t)&=\infty\qquad
-\text{(on \part{a})}  \\
-\lim_{t\to\infty}y(t)&=0, &\lim_{t\to-\infty}y(t)&=0,\\
-\lim_{t\to\infty}v(t)&=0, &\lim_{t\to-\infty}v(t)&=0\qquad
-\text{(on \part{b})}  \\
-\lim_{t\to\infty}y(t)&=-\infty, &\lim_{t\to-\infty}y(t)&=0,\\
-\lim_{t\to\infty}v(t)&=-\infty, &\lim_{t\to-\infty}v(t)&=0\qquad
-\text{ (on \part{c})}.
-\end{align*}
+\lim_{t\to\infty}v(t)&=0, &\lim_{t\to-\infty}v(t)&=\infty \\
+\text{(b):}\quad\lim_{t\to\infty}y(t)&=0, &\lim_{t\to-\infty}y(t)&=0,\\
+\lim_{t\to\infty}v(t)&=0, &\lim_{t\to-\infty}v(t)&=0\\
+\text{(c):}\quad\lim_{t\to\infty}y(t)&=-\infty, &\lim_{t\to-\infty}y(t)&=0,\\
+\lim_{t\to\infty}v(t)&=-\infty, \qquad\qquad&\lim_{t\to-\infty}v(t)&=0
+\end{alignat*}
 \end{example}
 
 
@@ -2931,16 +2928,16 @@ and considering the direction fields for this equation. In the
 following examples we'll also be showing computer generated
 trajectories of this equation, obtained by numerical methods. The
 exercises call for similar computations. The methods discussed in
-Chapter~3
+\zcref{ch:numerical}
  are not suitable for this
 task, since  $p(y)/v$ in \eqref{eq:4.4.25} is undefined on the $y$ axis
-of the Poincar\'e phase plane. Therefore we're forced to apply
+of the Poincaré phase plane. Therefore we're forced to apply
 numerical methods briefly discussed in Section~10.1 to the
 system
-\begin{eqnarray*}
-y'&=&v\\
-v'&=&-q(y,v)v-p(y),
-\end{eqnarray*}
+\begin{align*}
+y'&=v\\
+v'&=-q(y,v)v-p(y),
+\end{align*}
 which is equivalent to \eqref{eq:4.4.24} in the sense defined in
 Section~10.1. Fortunately, most differential equation software
 packages  enable you to do this painlessly.
@@ -2963,7 +2960,7 @@ however, there are situations where  $c$ may be negative.
 \boxit{The Damped Spring-Mass System}
 
 Earlier we considered
-the spring - mass system under the assumption that the only forces
+the spring-mass system under the assumption that the only forces
 acting on the object were gravity and the spring's resistance to
 changes in its length. Now we'll assume that some mechanism (for
 example, friction in the spring or atmospheric resistance) opposes the
@@ -2983,13 +2980,13 @@ as
 \frac{dv}{dy}=-\frac{c}{m}-\frac{ky}{mv}.
 \end{equation}
 (A minor note: the $c$ in \eqref{eq:4.4.26} actually corresponds to
-$c/m$ in this equation.) Figure~\ref{figure:4.4.11} shows a
+$c/m$ in this equation.) \zcref[S]{figure:4.4.11} shows a
 typical direction field for an equation of this form. Recalling that
 motion along a trajectory must be in the direction of increasing $y$
 in the upper half plane ($v>0$) and in the direction of decreasing $y$
 in the lower half plane ($v<0$), you can infer that all trajectories
 approach the origin in clockwise fashion. To confirm this,
-Figure~\ref{figure:4.4.12} shows the same direction field with some
+\zcref{figure:4.4.12} shows the same direction field with some
 trajectories filled in. All the trajectories shown there correspond to
 solutions of the initial value problem
 \[
@@ -2997,49 +2994,52 @@ my''+cy'+ky=0,\quad y(0)=y_0,\quad y'(0)=v_0,
 \]
 where
 \[
-mv_0^2+ky_0^2=\rho\quad (\mbox{a positive constant});
+mv_0^2+ky_0^2=\rho\quad\text{(a positive constant)};
 \]
 thus, if there were no damping ($c=0$),  all the solutions would
 have the same dashed elliptic trajectory, shown in
-Figure~\ref{figure:4.4.14}.
+\zcref{figure:4.4.14}.
+% TODO I'm confused by this statement
 
-
-\begin{minipage}{0.49\linewidth}
+\noindent
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040411}
+\includegraphics[alt={A vector field with -1<y,v<1 that spirals counter clockwise around the origin with arrows angled inward.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040411}
 \captionof{figure}{A typical direction field for $my''+cy'+ky=0$ with $0<c<c_1$}
 \label{figure:4.4.11}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040412}
-\captionof{figure}{Figure~\ref{figure:4.4.11} with some trajectories added}
+\includegraphics[alt={Each solution curve is able to go around the origin 1.5 times before converging to the origin.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040412}
+\captionof{figure}{\zcref[S]{figure:4.4.11} with some trajectories added}
 \label{figure:4.4.12}
 \tagstructend
-\end{minipage}
+\end{minipage}\smallskip
 
 
 
 
 Solutions corresponding to the trajectories in
-Figure~\ref{figure:4.4.12} cross the $y$-axis infinitely many times.
+\zcref{figure:4.4.12} cross the $y$-axis infinitely many times.
 The corresponding solutions are said to be {\color{blue}\it
-oscillatory\/} (Figure~\ref{figure:4.4.13}) It is shown in
+oscillatory} (\zcref{figure:4.4.13}) It is shown in
 Section~6.2 that there's a number $c_1$ such that if $0\le
 c<c_1$ then  all solutions of \eqref{eq:4.4.27} are oscillatory, while if
 $c\ge c_1$,  no solutions of \eqref{eq:4.4.27} have this property. (In
 fact, no solution not identically zero can have more than two zeros in
-this case.) Figure~\ref{figure:4.4.14} shows a direction field and
+this case.) \zcref[S]{figure:4.4.14} shows a direction field and
 some integral curves for \eqref{eq:4.4.28} in this case.
 
-\begin{figure}[H]
+\begin{figure}[bhp]
   \centering
-\scalebox{.7}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040413}}
+  \includegraphics[alt={A curve in the t y plane that begins at t=0 with a positive y value.  The curve keeps changing the sign of y, but each change stays closer to the horizontal asymptote y=0.},
+  width=3.9in,height=2.5in,keepaspectratio]{fig040413}
 \color{blue}
-\caption{ An oscillatory solution of $my''+cy'+ky=0$}
+\caption{An oscillatory solution of $my''+cy'+ky=0$}
   \label{figure:4.4.13}
 \end{figure}
 
@@ -3065,7 +3065,7 @@ equivalent as
 \[
 \frac{dv}{dy}=-\frac{c}{mL}-\frac{g}{Lv}\sin y.
 \]
-Figure~\ref{figure:4.4.15} shows
+\zcref[S]{figure:4.4.15} shows
 trajectories of four solutions of \eqref{eq:4.4.29}, all satisfying
 $y(0)=0$. For each $m=0$, $1$, $2$, $3$, imparting the initial velocity
 $v(0)=v_m$ causes the pendulum to make $m$ complete revolutions and
@@ -3073,74 +3073,55 @@ then settle into decaying oscillation about the stable equilibrium
 $\overline y=2m\pi$.
 \end{example}
 
-
-\begin{figure}[H]
+\begin{figure}
   \centering
-\scalebox{.8}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040414}}
+  \includegraphics[alt={A vector field for -1<y,v<1 with arrows pointing counter clockwise.  The arrows curve inward so much that they coalesce along y=-v/2 as they converge to the origin.},
+  width=4.5in,height=2.9in,keepaspectratio]{fig040414}
 \color{blue}
-\caption{ A typical direction field for
-$my''+cy'+ky=0$ with $c>c_1$}
+\caption{A typical direction field for $my''+cy'+ky=0$ with $c>c_1$}
   \label{figure:4.4.14}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
   \centering
   \scalebox{.8}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040415}}
+  \includegraphics[alt={Four trajectories beginning at y=0 with initial positive velocities.  The first trajectory spirals into the origin.  The second trajectory slows and then speeds back up before spiraling into (2π,0).  The third trajectory slows, speeds, slows, and speeds before spiraling into (4π,0).  The fourth trajectory slows, speeds, slows, speeds, slows, and speeds before spiraling into (6π,0).},
+  ,width=4.5in,height=2.9in,keepaspectratio]{fig040415}}
 \color{blue}
-\caption{ Four  trajectories of the damped pendulum}
+\caption{Four trajectories of the damped pendulum}
   \label{figure:4.4.15}
 \end{figure}
 
 
 \exercises
-In Exercises~\ref{exer:4.4.1}--\ref{exer:4.4.4} find the equations of the
+In \zcref[range]{exer:4.4.1,exer:4.4.4} find the equations of the
 trajectories of the given undamped equation. Identify the equilibrium
 solutions, determine whether they are stable or unstable, and
-plot some trajectories. \hint{Use Eqn.~$\eqref{eq:4.4.8}$ to
+plot some trajectories. \hint{Use \zcref{eq:4.4.8} to
 obtain the equations of the trajectories.}
 
 \begin{exerciselist}
-% TODO 1--4 are two columns
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.4.1}\CGex $y''+y^3=0$
-% &\vspace*{10pt}
-\item\label{exer:4.4.2}\CGex $y''+y^2=0$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.4.3}\CGex$ y''+y|y|=0$ 
-%&
-\item\label{exer:4.4.4}\CGex $y''+ye^{-y}=0$
-%\end{tabular}
+\item(1)\label{exer:4.4.1}\CGex $y''+y^3=0$
+\item(1)\label{exer:4.4.2}\CGex $y''+y^2=0$
+\item(1)\label{exer:4.4.3}\CGex$ y''+y|y|=0$ 
+\item(1)\label{exer:4.4.4}\CGex $y''+ye^{-y}=0$
 
 \exercisetext{
-In Exercises~\ref{exer:4.4.5}--\ref{exer:4.4.8} find the equations of the
+In \zcref[range]{exer:4.4.5,exer:4.4.8} find the equations of the
 trajectories of the given undamped equation. Identify the equilibrium
 solutions,
 determine whether they are stable or unstable, and find the equations
 of the separatrices (that is, the curves through the unstable
 equilibria). Plot the separatrices and some
-trajectories in each of the regions of Poincar\'e plane determined by
-them. \hint{Use Eqn.~$\eqref{eq:4.4.17}$ to determine the separatrices.}}
+trajectories in each of the regions of Poincaré plane determined by
+them. \hint{Use \zcref{eq:4.4.17} to determine the separatrices.}}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 5--8 are two columns
-\item\label{exer:4.4.5}\CGex $y''-y^3+4y=0$ 
-%&\vspace*{10pt}
-\item\label{exer:4.4.6}\CGex $y''+y^3-4y=0$
-%\end{tabular}
+\item(1)\label{exer:4.4.5}\CGex $y''-y^3+4y=0$ 
+\item(1)\label{exer:4.4.6}\CGex $y''+y^3-4y=0$
+\item(1)\label{exer:4.4.7}\CGex $y''+y(y^2-1)(y^2-4)=0$
+\item(1)\label{exer:4.4.8}\CGex $y''+y(y-2)(y-1)(y+2)=0$
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-%\begin{tabular}[t]{@{}p{178pt}@{}p{168pt}}
-\item\label{exer:4.4.7}\CGex $y''+y(y^2-1)(y^2-4)=0$
-%&
-\item\label{exer:4.4.8}\CGex $y''+y(y-2)(y-1)(y+2)=0$
-%\end{tabular}
-
-
-\exercisetext{In Exercises~\ref{exer:4.4.9}--\ref{exer:4.4.12}
+\exercisetext{In \zcref[range]{exer:4.4.9,exer:4.4.12}
 plot some trajectories of the given equation for various values
 (positive, negative, zero) of the parameter $a$. Find the equilibria
 of the equation and classify them as stable or unstable. Explain why
@@ -3148,44 +3129,22 @@ the phase plane plots corresponding to positive and negative values of
 $a$ differ so markedly. Can you think of a reason why zero deserves to
 be called the \emph{\color{blue}critical value} of $a$?}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 9--12 are two columns
-\item\label{exer:4.4.9}\Lex $y''+y^2-a=0$
-%&\vspace*{10pt}
-\item\label{exer:4.4.10}\Lex $y''+y^3-ay=0$
-%\end{tabular}
+\item(1)\label{exer:4.4.9}\Lex $y''+y^2-a=0$
+\item(1)\label{exer:4.4.10}\Lex $y''+y^3-ay=0$
+\item(1)\label{exer:4.4.11}\Lex $y''-y^3+ay=0$
+\item(1)\label{exer:4.4.12}\Lex $y''+y-ay^3=0$
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.4.11}\Lex $y''-y^3+ay=0$
-%&
-\item\label{exer:4.4.12}\Lex $y''+y-ay^3=0$
-%\end{tabular}
-
-\exercisetext{In Exercises~\ref{exer:4.4.13}-\ref{exer:4.4.18}
+\exercisetext{In \zcref[range]{exer:4.4.13,exer:4.4.18}
 plot trajectories of the given equation for $c=0$ and small nonzero
 (positive and negative) values of $c$ to observe the effects of
 damping.}
 
-% TODO 13--18 are two columns
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.4.13}\Lex $y''+cy'+y^3=0$
-%&\vspace*{10pt}
-\item\label{exer:4.4.14}\Lex $y''+cy'-y=0$
-%\end{tabular}
-
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.4.15}\Lex $y''+cy'+y^3=0$
-%&
-\item\label{exer:4.4.16}\Lex $y''+cy'+y^2=0$
-%\end{tabular}
-
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.4.17}\Lex $y''+cy'+y|y|=0$
-%&
-\item\label{exer:4.4.18}\Lex $y''+y(y-1)+cy=0$
-%\end{tabular}
+\item(1)\label{exer:4.4.13}\Lex $y''+cy'+y^3=0$
+\item(1)\label{exer:4.4.14}\Lex $y''+cy'-y=0$
+\item(1)\label{exer:4.4.15}\Lex $y''+cy'+y^3=0$
+\item(1)\label{exer:4.4.16}\Lex $y''+cy'+y^2=0$
+\item(1)\label{exer:4.4.17}\Lex $y''+cy'+y|y|=0$
+\item(1)\label{exer:4.4.18}\Lex $y''+y(y-1)+cy=0$
 
 \item\label{exer:4.4.19}\Lex
 The \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Van_der_Pol.html}
@@ -3202,18 +3161,20 @@ $|y|>1$. It can be shown that van der
 Pol's equation has exactly one closed trajectory, which is called a
 \emph{\color{blue}limit cycle}. Trajectories inside the limit cycle spiral
 outward to it, while trajectories outside the limit cycle spiral
-inward to it (Figure~\ref{figure:4.4.16}). Use your favorite
+inward to it (\zcref{figure:4.4.16}). Use your favorite
 differential equations software  to verify this for
 $\mu=.5,1.1.5,2$. Use a grid with $-4<y<4$ and $-4<v<4$.
 
-
-
-\begin{figure}[H]
+% escape enumext's minipage
+% TODO
+\exercisetext{%
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040416}
+  \includegraphics[alt={Solution curves in the y v plane exhibiting the phenomena described in \zcref{exer:4.4.19}.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040416}
   \caption{Trajectories of van der Pol's equation}
   \label{figure:4.4.16}
-\end{figure}
+\end{figure}}
 
 
 \item\label{exer:4.4.20}\Lex
@@ -3223,7 +3184,7 @@ $\mu=.5,1.1.5,2$. Use a grid with $-4<y<4$ and $-4<v<4$.
 y''-\mu(1-(y')^2/3)y'+y=0
 \]
 also has a limit cycle. Follow the directions of
-Exercise~\ref{exer:4.4.19} for this equation.
+\zcref{exer:4.4.19} for this equation.
 
 \item\label{exer:4.4.21}In connection with Eqn~\eqref{eq:4.4.15},
 suppose   $y(0)=0$ and $y'(0)=v_0$, where $0<v_0<v_c$.
@@ -3269,7 +3230,7 @@ $p(y)<0$ if $-\rho\le y<0$. For $0<r\le\rho$ let
 \[
 \alpha(r)=\min\left\{\int_0^r p(x)\,dx,\ \int_{-r}^0
 |p(x)|\,dx\right\}
-\mbox{\quad and \quad}
+\quad\text{and}\quad
 \beta(r)=\max\left\{\int_0^r p(x)\,dx,\ \int_{-r}^0
 |p(x)|\,dx\right\}.
 \]
@@ -3283,7 +3244,7 @@ $c(y_0,v_0)=v_0^2+2\int_0^{y_0}p(x)\,dx$.
 \item % (a)
 Show that
 \[
-0<c(y_0,v_0) <v_0^2+2\beta(|y_0|)\mbox{\quad if \quad} 0<|y_0|\le\rho.
+0<c(y_0,v_0) <v_0^2+2\beta(|y_0|)\quad\text{if}\quad0<|y_0|\le\rho.
 \]
 \item % (b)
 Show that
@@ -3291,7 +3252,7 @@ Show that
 v^2+2\int_0^y p(x)\,dx=c(y_0,v_0),\quad t>0.
 \]
 \item % (c)
-Conclude from \part{b} that if $c(y_0,v_0)<2\alpha(r)$ then $|y|<r,\
+Conclude from (b) that if $c(y_0,v_0)<2\alpha(r)$ then $|y|<r,\
 t>0$.
 \item % (d)
 Given $\epsilon>0$, let  $\delta>0$ be chosen so that
@@ -3335,7 +3296,7 @@ zero. Suppose there's a positive number $\rho$ such that
 $p(y)<0$ if $\overline y<y\le \overline y+\rho$. Show that $\overline
 y$ is an unstable equilibrium of $y''+p(y)=0$.
 \item % (c)
-Modify your proofs of \part{a} and \part{b} to show that if there's a
+Modify your proofs of (a) and (b) to show that if there's a
 positive
 number $\rho$ such that $p(y)>0$ if $\overline y-\rho\le y<\overline
 y$, then $\overline y$ is an unstable equilibrium of $y''+p(y)=0$.
@@ -3358,14 +3319,15 @@ y-cx^2=0
 \end{equation}
 defines a curve in the $xy$-plane. If $c \ne0$, the curve is a
 parabola through the origin, opening upward if $c>0$ or downward if
-$c<0$.   If $c=0$, the curve is the $x$ axis (Figure~\ref{figure:4.5.1}).
+$c<0$.   If $c=0$, the curve is the $x$ axis (\zcref{figure:4.5.1}).
 \end{example}
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040501}
+  \includegraphics[alt={Several parabolas symmetric about x=0 with their vertices at the origin.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040501}
 \color{blue}
-  \caption{ A family of curves defined by $y-cx^2=0$}
+  \caption{A family of curves defined by $y-cx^2=0$}
   \label{figure:4.5.1}
 \end{figure}
 
@@ -3374,23 +3336,25 @@ For each value of the parameter $c$ the equation
 \begin{equation} \label{eq:4.5.2}
 y=x+c
 \end{equation}
- defines a line with slope 1(Figure~\ref{figure:4.5.2}).
+ defines a line with slope 1 (\zcref{figure:4.5.2}).
 \end{example}
 
 
 \noindent
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040502}
-\captionof{figure}{A family of lines defined by $y=x+c$}
+\includegraphics[alt={Several lines with slope 1.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040502}
+\captionof{figure}{A family of lines defined by\\ $y=x+c$}
 \label{figure:4.5.2}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040503}
-\captionof{figure}{A family of circles defined by $x^2+y^2-c^{2}=0$}
+\includegraphics[alt={Several circles centered at the origin.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040503}
+\captionof{figure}{A family of circles defined by\\ $x^2+y^2-c^{2}=0$}
 \label{figure:4.5.3}
 \tagstructend
 \end{minipage}
@@ -3422,7 +3386,7 @@ graph is the single point $(0,0)$. (We don't regard a single point as
 a curve.) If $c<0$, the equation has no graph. Hence, \eqref{eq:4.5.4}
 defines a one--parameter family of curves for positive values of $c$.
 This family consists of all circles centered at $(0,0)$
-(Figure~\ref{figure:4.5.3}).
+(\zcref{figure:4.5.3}).
 \end{example}
 
 
@@ -3510,13 +3474,14 @@ through $(2,3)$, and find the points of tangency.
 \end{alist}
 \end{example}
 
-\solutionpart{a} The equation of the line through a given point
+\begin{alistSolution}
+\item The equation of the line through a given point
 $(x_0,y_0)$ with slope $m$ is
 \begin{equation}  \label{eq:4.5.9}
 y=y_0+m(x-x_0).
 \end{equation}
 If $(x_0,y_0)$ is on the parabola, then $y_0=x_0^2$ and the slope of
-the tangent line through ($x_0,x_0^2)$ is $m=2x_0$; hence,
+the tangent line through $(x_0,x_0^2)$ is $m=2x_0$; hence,
 \eqref{eq:4.5.9} becomes
 \[
 y=x_0^2+2x_0(x-x_0),
@@ -3526,38 +3491,37 @@ y=x_0^2+2x_0(x-x_0),
 y=-x_0^2+2x_0x.
 \end{equation}
 Here $x_0$ plays the role of the constant $c$ in
-Definition~\ref{thmtype:4.5.1}; that is, varying $x_0$ over
+\zcref{thmtype:4.5.1}; that is, varying $x_0$ over
 $(-\infty,\infty)$ produces the family of tangent lines to the
 parabola $y=x^2$.
 
-
 Differentiating \eqref{eq:4.5.10} with respect to $x$ yields
-$y'=2x_0$..
+$y'=2x_0$.
 We can express $x_0$ in terms of $x$ and $y$ by rewriting
 \eqref{eq:4.5.10} as
 \[
 x_0^2-2x_0x+y=0
 \]
 and using the quadratic formula to obtain
- \begin{equation}\label{eq:4.5.11}
+\begin{equation}\label{eq:4.5.11}
  x_0=x\pm\sqrt{x^2-y}.
 \end{equation}
 We must choose the plus sign in \eqref{eq:4.5.11} if $x<x_0$
 and the minus sign if $x>x_0$;   thus,
 \[
-x_0=\left(x+\sqrt{x^2-y}\right)\mbox{\, if \,} x<x_0
+x_0=\left(x+\sqrt{x^2-y}\right)\text{ if } x<x_0
 \]
  and
 \[
-x_0=\left(x-\sqrt{x^2-y}\right)\mbox{\, if \,} x>x_0.
+x_0=\left(x-\sqrt{x^2-y}\right)\text{ if } x>x_0.
 \]
 Since $y'=2x_0$, this implies that
 \begin{equation} \label{eq:4.5.12}
-y'=2\left(x+\sqrt{x^2-y}\right),\mbox{\quad if \quad} x<x_0
+y'=2\left(x+\sqrt{x^2-y}\right),\quad\text{if}\quad x<x_0
 \end{equation}
  and
 \begin{equation} \label{eq:4.5.13}
-y'=2\left(x-\sqrt{x^2-y}\right),\mbox{\quad if \quad}x>x_0.
+y'=2\left(x-\sqrt{x^2-y}\right),\quad\text{if}\quad x>x_0.
 \end{equation}
 Neither \eqref{eq:4.5.12} nor \eqref{eq:4.5.13} is a differential equation for
 the family of tangent lines to the parabola $y=x^2$. However, if each
@@ -3565,23 +3529,24 @@ tangent line is regarded as consisting of two \emph{\color{blue}tangent half
 lines} joined at the point of tangency,   \eqref{eq:4.5.12} is a
 differential equation for the family of tangent half lines on which
 $x$ is less than the abscissa of the point of tangency
-(Figure~\ref{figure:4.5.4}\part{a}), while \eqref{eq:4.5.13} is a
+(\zcref{figure:4.5.4}(a)), while \eqref{eq:4.5.13} is a
 differential
 equation for the family of tangent half lines on which $x$ is greater
-than this abscissa (Figure~\ref{figure:4.5.4}(b)). The
+than this abscissa (\zcref{figure:4.5.4}(b)). The
 parabola $y=x^2$ is also an integral curve of both \eqref{eq:4.5.12} and
 \eqref{eq:4.5.13}.
 
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040504}
+  \includegraphics[alt={Two figures with parabolas y=x^2 and several tangent half lines.  In the left (right) figure, the tangent half lines go to the left (right) from the point of tangency.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040504}
 \color{blue}
   \caption{}
   \label{figure:4.5.4}
 \end{figure}
 
 
-\solutionpart{b}
+\item
 From \eqref{eq:4.5.10} the point $(x,y)=(2,3)$ is on the tangent line
 through $(x_0,x_0^2)$ if and only if
 \[
@@ -3596,7 +3561,7 @@ Letting $x_0=3$ in \eqref{eq:4.5.10} shows that $(2,3)$ is on the line
 y=-9+6x,
 \]
 which is tangent to the parabola at $(x_0,x_0^2)=(3,9)$, as shown in
-Figure~\ref{figure:4.5.5}
+\zcref{figure:4.5.5}
 
 
 Letting $x_0=1$ in \eqref{eq:4.5.10} shows that $(2,3)$ is on the line
@@ -3604,15 +3569,17 @@ Letting $x_0=1$ in \eqref{eq:4.5.10} shows that $(2,3)$ is on the line
 y=-1+2x,
 \]
 which is tangent to the parabola at $(x_0,x_0^2)=(1,1)$, as shown in
-Figure~\ref{figure:4.5.5}.
+\zcref{figure:4.5.5}.
 
- \vspace*{-15pt}
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{fig040505}
+  \includegraphics[alt={The parabola y=x^2 for 0<x<4.  The tangent lines from x=1 and x=3 go through the point (2,3).},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040505}
   \caption{}
   \label{figure:4.5.5}
 \end{figure}
+
+\end{alistSolution}
 
 
 \boxit{Geometric Problems}
@@ -3624,7 +3591,7 @@ differential equations.
 Find curves $y=y(x)$ such that every point $(x_0,y(x_0))$ on the curve
 is the midpoint of the line segment with endpoints on the coordinate
 axes and tangent to the curve at $(x_0,y(x_0))$
-(Figure~\ref{figure:4.5.6}).
+(\zcref{figure:4.5.6}).
 \end{example}
 
 
@@ -3637,7 +3604,7 @@ axes and tangent to the curve at $(x_0,y(x_0))$
 y=y(x_0)+y'(x_0)(x-x_0).
 \]
 If we denote the $x$ and $y$ intercepts of the tangent line by $x_I$
-and $y_I$ (Figure~\ref{figure:4.5.6}), then
+and $y_I$ (\zcref{figure:4.5.6}), then
 \begin{equation} \label{eq:4.5.14}
 0=y(x_0)+y'(x_0)(x_I-x_0)
 \end{equation}
@@ -3645,7 +3612,7 @@ and $y_I$ (Figure~\ref{figure:4.5.6}), then
 \begin{equation} \label{eq:4.5.15}
 y_I=y(x_0)-y'(x_0)x_0.
 \end{equation}
-From Figure~\ref{figure:4.5.6}, $P$ is the midpoint of the line segment
+From \zcref{figure:4.5.6}, $P$ is the midpoint of the line segment
 connecting $(x_I,0)$ and $(0,y_I)$ if and only if $x_I=2x_0$ and
 $y_I=2y(x_0)$. Substituting the first of these conditions into
 \eqref{eq:4.5.14} or the second into \eqref{eq:4.5.15} yields
@@ -3667,11 +3634,11 @@ y=\frac{c}{x}.
 \]
 If $c=0$ this curve is the line $y=0$, which does not satisfy the
 geometric requirements imposed by the problem;   thus, $c\ne0$, and the
-solutions define a family of hyperbolas (Figure~\ref{figure:4.5.7}).
+solutions define a family of hyperbolas (\zcref{figure:4.5.7}).
 
 
 \noindent
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
 \includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040506}
 \captionof{figure}{}
@@ -3679,7 +3646,7 @@ solutions define a family of hyperbolas (Figure~\ref{figure:4.5.7}).
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
 \includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040507}
 \captionof{figure}{}
@@ -3691,7 +3658,7 @@ solutions define a family of hyperbolas (Figure~\ref{figure:4.5.7}).
 \begin{example}\label{example:4.5.8}
 Find curves $y=y(x)$ such that the tangent line to the curve at any
 point $(x_0,y(x_0))$ intersects the $x$-axis at $(x^2_0,0)$.
-Figure~\ref{figure:4.5.8} illustrates the situation in the case where
+\zcref[S]{figure:4.5.8} illustrates the situation in the case where
 the curve is in the first quadrant and $0<x<1$.
 \end{example}
 
@@ -3741,20 +3708,20 @@ y=\frac{cx}{x-1}.
 \]
 If $c=0$, the graph of this function is the $x$-axis.   If $c\ne0$, it's
 a hyperbola with vertical asymptote $x=1$ and horizontal asymptote
-$y=c$. Figure~\ref{figure:4.5.9} shows the graphs for $c\ne0$.
+$y=c$. \zcref[S]{figure:4.5.9} shows the graphs for $c\ne0$.
 
 
 \boxit{Orthogonal Trajectories}
 
 Two curves $C_1$ and $C_2$ are said to be \emph{orthogonal} at a
 point of intersection $(x_0,y_0)$ if they have perpendicular tangents
-at $(x_0,y_0)$. (Figure~\ref{figure:4.5.10}). A curve is said to be an
+at $(x_0,y_0)$ (\zcref{figure:4.5.10}). A curve is said to be an
 \emph{\color{blue}orthogonal trajectory} of a given family of curves if it's
 orthogonal to every curve in the family. For example, every line
 through the origin is an orthogonal trajectory of the family of
 circles centered at the origin.  Conversely,
 any such circle is an orthogonal trajectory of the family of lines
-through the origin (Figure~\ref{figure:4.5.11}).
+through the origin (\zcref{figure:4.5.11}).
 
 \noindent
 \begin{minipage}{0.49\linewidth}
@@ -3802,7 +3769,7 @@ y'=f(x,y),
 because at any point $(x_0,y_0)$ where curves from the two families
 intersect the slopes of the respective tangent lines are
 \[
-m_1=f(x_0,y_0)\mbox{\quad and \quad} m_2=-\frac{1}{f(x_0,y_0)}.
+m_1=f(x_0,y_0)\quad\text{and}\quad m_2=-\frac{1}{f(x_0,y_0)}.
 \]
 
 This suggests a  method for finding orthogonal trajectories
@@ -3855,7 +3822,7 @@ where $k$ is an arbitrary constant. This is the equation of a
 nonvertical line through $(0,0)$. The $y$ axis is also an orthogonal
 trajectory of the given family. Therefore every line through the
 origin is an orthogonal trajectory of the given family \eqref{eq:4.5.17}
-(Figure~\ref{figure:4.5.11}). This is consistent with the theorem of plane
+(\zcref{figure:4.5.11}). This is consistent with the theorem of plane
 geometry which states that a diameter of a circle and a tangent line
 to the circle at the end of the diameter are perpendicular.
 
@@ -3864,7 +3831,7 @@ Find the orthogonal trajectories of the family of hyperbolas
 \begin{equation}  \label{eq:4.5.18}
 xy=c \quad (c\ne0)
 \end{equation}
-(Figure~\ref{figure:4.5.7}).
+(\zcref{figure:4.5.7}).
 \end{example}
 
 \solution
@@ -3890,7 +3857,7 @@ and integrating yields
 y^2-x^2=k,
 \]
 which is the equation of a hyperbola if $k \ne0$, or of the lines
-$y=x$ and $y=-x$ if $k=0$ (Figure~\ref{figure:4.5.12}).
+$y=x$ and $y=-x$ if $k=0$ (\zcref{figure:4.5.12}).
 
 
 
@@ -3908,7 +3875,7 @@ Find the orthogonal trajectories of the family of circles defined by
 (x-c)^2+y^2=c^2 \quad (c\ne0).
 \end{equation}
  These circles are centered on the $x$-axis and tangent to the
-$y$-axis (Figure~\ref{figure:4.5.13}\part{a}).
+$y$-axis (\zcref{figure:4.5.13}(a)).
 \end{example}
 
 
@@ -3987,11 +3954,14 @@ x^2+(y-h)^2=h^2,
 \]
 where
 \[
-h=\left\{\begin{array}{rl} \dst\frac{e^{-k}}{2}&\mbox{ if } y\ge
-0,\\[\jot]-\dst\frac{e^{-k}}{2}&\mbox{ if } y\le0. \end{array}\right.
+h=
+\begin{cases}
+\phantom-\dfrac{e^{-k}}{2}&\\text{ if } y\ge0,\\
+-\dfrac{e^{-k}}{2}&\text{ if } y\le0.
+\end{cases}
 \]
 Thus, the orthogonal trajectories are circles centered on the $y$ axis
-and tangent to the $x$ axis (Figure~\ref{figure:4.5.13}(b)). The circles
+and tangent to the $x$ axis (\zcref{figure:4.5.13}(b)). The circles
 for which $h>0$ are above the $x$-axis, while those for which $h<0$
 are below.
 
@@ -4009,7 +3979,7 @@ $x^2+(y-h)^2=h^2$}
 \clearpage
 
 \exercises
-In  Exercises \ref{exer:4.5.1}--\ref{exer:4.5.8} find a first order
+In  \zcref[range]{exer:4.5.1,exer:4.5.8} find a first order
 differential equation for the given family of curves.
 
 \begin{exerciselist}
@@ -4030,7 +4000,7 @@ differential equation for the given family of curves.
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
 \item\label{exer:4.5.5}$y=e^{x^2}+ce^{-x^2}$
 %&
- \item\label{exer:4.5.6}$\dst{y=x^3+\frac{c}{x}}$
+ \item\label{exer:4.5.6}$y=x^3+\dfrac{c}{x}$
 %\end{tabular}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -4057,7 +4027,7 @@ for the families of semicircles
 differential equation for the family of functions $y=f+cg$
 ($c$=constant).
 
-\exercisetext{In Exercises \ref{exer:4.5.11}--\ref{exer:4.5.13} find a
+\exercisetext{In \zcref[range]{exer:4.5.11,exer:4.5.13} find a
 first order differential equation for the given family of curves.}
 
 \item\label{exer:4.5.11}Lines through a given point $(x_0,y_0)$.
@@ -4066,7 +4036,7 @@ first order differential equation for the given family of curves.}
 
 \item\label{exer:4.5.13}Circles through $(0,0)$ and $(0,2)$.
 
-\item\label{exer:4.5.14}Use the method Example~\ref{example:4.5.6}{\bf (a)} to find the equations
+\item\label{exer:4.5.14}Use the method \zcref{example:4.5.6}(a) to find the equations
 of lines through the given points tangent to the parabola $y=x^2$.
 Also, find the points of tangency.
 
@@ -4085,7 +4055,7 @@ x^2+y^2=1\tag{A}
 \]
 at a point $(x_0,y_0)$  on the circle is
 \[
-y=\dst\frac{1-x_0x}{y_0}\mbox{\quad if \quad} x_0\ne\pm1.\tag{B}
+y=\dfrac{1-x_0x}{y_0}\quad\text{if}\quad x_0\ne\pm1.\tag{B}
 \]
 \item % (b)
 Show that if $y'$ is the slope of a nonvertical tangent line to the
@@ -4128,7 +4098,7 @@ x=y^2\tag{A}
 \]
 at a point $(x_0,y_0)\ne(0,0)$  on the parabola is
 \[
-y=\dst\frac{y_0}{2}+\dst\frac{x}{2y_0}.\tag{B}
+y=\dfrac{y_0}{2}+\dfrac{x}{2y_0}.\tag{B}
 \]
 \item % (b)
 Show that if $y'$ is the slope of a nonvertical tangent line
@@ -4138,7 +4108,7 @@ line then
 4x^2(y')^2-4xyy'+x=0.\tag{C}
 \]
 \item % (c)
-Show that the segment of the tangent line defined in \part{a} on which
+Show that the segment of the tangent line defined in (a) on which
 $x>x_0$ is an integral curve of the differential equation
 \[
 y'=\frac{y+\sqrt{y^2-x}}{2x},\tag{D}
@@ -4152,7 +4122,7 @@ y'=\frac{y-\sqrt{y^2-x}}{2x},\tag{E}
 \hint{Use the quadratic formula to solve (C) for $y'$. Then
 substitute (B) for $y$ and choose the $\pm$ sign in the
 quadratic formula so that the resulting expression for $y'$ reduces to
-the known slope $y'=\dst\frac{1}{2y_0}$.}
+the known slope $y'=\dfrac{1}{2y_0}$.}
 
 \item % (d)
 Show that the upper and lower halves of the parabola (A), given by
@@ -4160,7 +4130,7 @@ $y=\sqrt x$ and $y=-\sqrt x$ for $x>0$, are also integral curves of
 (D) and (E).
 \end{alist}
 
-\item\label{exer:4.5.17}Use the results of Exercise \ref{exer:4.5.16} to find the equations of two
+\item\label{exer:4.5.17}Use the results of \zcref{exer:4.5.16} to find the equations of two
 lines tangent to the parabola $x=y^2$ and passing through the given
 point. Also find the points of tangency.
 
@@ -4173,7 +4143,7 @@ point. Also find the points of tangency.
 
 \item\label{exer:4.5.18}Find a curve $y=y(x)$ through (1,2) such that the tangent to the curve
 at any point $(x_0,y(x_0))$ intersects the $x$ axis at
-$\dst{x_I=x_0/2}$.
+$x_I=x_0/2$.
 
 \item\label{exer:4.5.19}Find all curves $y=y(x)$ such that the tangent to the curve at any
 point $(x_0,y(x_0))$ intersects the $x$ axis at $x_I=x^3_0$.
@@ -4196,7 +4166,7 @@ $x_I=x_0+1$.
 curve at any point $(x_0,y(x_0))$ intersects the $y$ axis at
 $y_I=2y(x_0)$.
 
-\exercisetext{In Exercises \ref{exer:4.5.25}--\ref{exer:4.5.29} find the
+\exercisetext{In \zcref[range]{exer:4.5.25,exer:4.5.29} find the
 orthogonal trajectories of the given family of curves.}
 
 %\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -4212,7 +4182,7 @@ orthogonal trajectories of the given family of curves.}
 \item\label{exer:4.5.28}$xye^{x^2}=c$
 %\end{tabular}
 
-\item\label{exer:4.5.29}$\dst{y=\frac{ce^x}{x}}$
+\item\label{exer:4.5.29}$y=\dfrac{ce^x}{x}$
 
 \item\label{exer:4.5.30}Find a curve through $(-1,3)$ orthogonal to every parabola of the form
 \[
@@ -4242,15 +4212,15 @@ intersects $C$ at the angle $\alpha$. Use the identity
 \]
 to show that if $C$ and $C_1$ are intersecting integral curves of
 \[
-y'=f(x,y)  \mbox{\quad and \quad} y'=\frac{f(x,y)+\tan\alpha}{1-f(x,y)\tan\alpha} \quad\left( \alpha \ne \frac{\pi}{2}\right),
+y'=f(x,y)  \quad\text{and}\quad y'=\frac{f(x,y)+\tan\alpha}{1-f(x,y)\tan\alpha} \quad\left( \alpha \ne \frac{\pi}{2}\right),
 \]
 respectively, then $C_1$ intersects $C$ at the angle $\alpha$.
 
-\item\label{exer:4.5.33}Use the result of Exercise~\ref{exer:4.5.32} to find a family of curves
+\item\label{exer:4.5.33}Use the result of \zcref{exer:4.5.32} to find a family of curves
 that intersect every nonvertical line through the origin at the angle
 $\alpha=\pi/4$.
 
-\item\label{exer:4.5.34}Use the result of Exercise~\ref{exer:4.5.32} to find a family of curves
+\item\label{exer:4.5.34}Use the result of \zcref{exer:4.5.32} to find a family of curves
 that intersect every circle centered at the origin at a given angle
 $\alpha \ne \pi/2$.
 
