@@ -32,3 +32,7 @@ for texfile in glob('*.tex'):
   content = use_eqref(content)
   with open(texfile,'w') as tex:
     tex.write(content)
+
+'''
+mbox, ref, eqnarray, rm, circ, cases, part
+'''
