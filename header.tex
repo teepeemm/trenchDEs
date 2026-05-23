@@ -11,7 +11,7 @@
 \usepackage{amsmath, amsbsy}
 \usepackage{calc}
 \usepackage{booktabs}
-\usepackage{siunitx}
+\usepackage[per-mode = symbol]{siunitx}
 \usepackage{capt-of}
 \usepackage{zref-clever}
 \usepackage{pgfplots}
@@ -27,6 +27,7 @@ filecolor = blue,
 {hyperref}
 
 \zcRefTypeSetup{chapter}{cap}
+\zcRefTypeSetup{definition}{cap}
 \zcRefTypeSetup{equation}{cap}
 \zcRefTypeSetup{example}{cap}
 \zcRefTypeSetup{figure}{cap}
@@ -42,8 +43,14 @@ filecolor = blue,
   cap
 }
 
+\DeclareSIUnit[quantity-product = {}]\degreeFahrenheit{\text{\textdegree F}}
+\DeclareSIUnit\feet{\text{ft}}
+\DeclareSIUnit\foot{\text{ft}}
+\DeclareSIUnit\gallon{\text{gal}}
+\DeclareSIUnit\pound{\text{lb}}
+
 \ExplSyntaxOn
-% TODO
+% TODO?
 \keys_define:nn { zref-clever/reference }
   {
     CAP .bool_set:N = \l_tmpa_bool,
