@@ -208,7 +208,7 @@ Solving these equations yields  $c_1=2$  and $c_2=-1$.
 Therefore $y=2e^x-e^{-x}$ is the unique solution of
 \eqref{eq:5.1.5} on $(-\infty,\infty)$.
 
-\begin{example}\label{example:5.1.2} \rm  %\newcommand{\exampletrig}
+\begin{example}\label{example:5.1.2}
 Let $\omega$ be a positive constant. The coefficients of $y'$
 and $y$  in
 \begin{equation}\label{eq:5.1.8}
@@ -879,8 +879,7 @@ and Theorem~\ref{thmtype:5.1.6} implies the stated conclusion.
 \item % (a)
 Verify that $y_1=e^{2x}$ and $y_2=e^{5x}$ are solutions of
 \[
-y''-7y'+10y=0
-\eqno{\rm (A)}
+y''-7y'+10y=0\tag{A}
 \]
 on  $(-\infty,\infty)$.
 \item % (b)
@@ -903,8 +902,7 @@ y''-7y'+10y=0,\quad  y(0)=k_0,\quad y'(0)=k_1.
 \item % (a)
 Verify that $y_1=e^x\cos x$ and $y_2=e^x\sin x$ are solutions of
 \[
-y''-2y'+2y=0
-\eqno{\rm (A)}
+y''-2y'+2y=0\tag{A}
 \]
 on  $(-\infty,\infty)$.
 \item % (b)
@@ -928,8 +926,7 @@ y''-2y'+2y=0,\quad  y(0)=k_0,\quad y'(0)=k_1.
 \item % (a)
 Verify that $y_1=e^x$ and $y_2=xe^x$ are solutions of
 \[
-y''-2y'+y=0
-\eqno{\rm (A)}
+y''-2y'+y=0\tag{A}
 \]
 on  $(-\infty,\infty)$.
 \item % (b)
@@ -953,8 +950,7 @@ y''-2y'+y=0,\quad  y(0)=k_0,\quad y'(0)=k_1.
 \item % (a)
 Verify that $y_1=1/(x-1)$ and $y_2=1/(x+1)$ are solutions of
 \[
-(x^2-1)y''+4xy'+2y=0
-\eqno{\rm (A)}
+(x^2-1)y''+4xy'+2y=0\tag{A}
 \]
 on  $(-\infty,-1)$, $(-1,1)$, and $(1,\infty)$.
 What is the general solution of (A) on each of
@@ -973,22 +969,16 @@ Verify Abel's formula for $y_1$ and $y_2$, with $x_0=0$.
 
 \item\label{exer:5.1.5}Compute the Wronskians of the given sets of functions.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (a)} $\{1, e^x\}$
-& {\bf (b)} $\{e^x, e^x \sin x\}$
-\end{tabular}
-
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (c)} $\{x+1,  x^2+2\}$
-& {\bf (d)} $\{ x^{1/2},  x^{-1/3}\}$
-\end{tabular}
-
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (e)} $\{\dst \frac{\sin x}{x},  \frac{\cos x}{x}\}$
-& {\bf (f)} $\{ x \ln|x|, x^2\ln|x|\}$ \\
-{\bf (g)}
- $\{e^x\cos\sqrt x, e^x\sin\sqrt x\}$ &
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO horizontal
+\item $\{1, e^x\}$
+\item $\{e^x, e^x \sin x\}$
+\item $\{x+1,  x^2+2\}$
+\item $\{ x^{1/2},  x^{-1/3}\}$
+\item $\{\dst \frac{\sin x}{x},  \frac{\cos x}{x}\}$
+\item $\{ x \ln|x|, x^2\ln|x|\}$ \\
+\item $\{e^x\cos\sqrt x, e^x\sin\sqrt x\}$
+\end{alist}
 
 \item\label{exer:5.1.6}Find the Wronskian  of a given set $\{y_1,y_2\}$ of solutions of
 \[
@@ -1020,8 +1010,7 @@ formula to find another.)
 Suppose $p$ and $q$ are continuous and $y_1$ is a solution
 of
 \[
-y''+p(x)y'+q(x)y=0
-\eqno{\rm (A)}
+y''+p(x)y'+q(x)y=0\tag{A}
 \]
 that has no zeros  on  $(a,b)$.
 Let $P(x)=\int p(x)\,dx$ be any
@@ -1031,8 +1020,7 @@ antiderivative of $p$ on  $(a,b)$.
 Show that if $K$ is an arbitrary nonzero constant and
 $y_2$  satisfies
 \[
-y_1y_2'-y_1'y_2=Ke^{-P(x)}
-\eqno{\rm (B)}
+y_1y_2'-y_1'y_2=Ke^{-P(x)}\tag{B}
 \]
 on $(a,b)$, then $y_2$ also satisfies (A)
 on $(a,b)$, and $\{y_1,y_2\}$ is a fundamental set of solutions on
@@ -1114,8 +1102,7 @@ has a nontrivial solution on  $(a,b)$.
 \item\label{exer:5.1.26}Suppose  $p$ and $q$ are continuous  on  $(a,b)$ and
  $y_1$ and $y_2$ are solutions of
 \[
-y''+p(x)y'+q(x)y=0
-\eqno{\rm (A)}
+y''+p(x)y'+q(x)y=0\tag{A}
 \]
 on  $(a,b)$. Let
 \[
@@ -1130,8 +1117,7 @@ is a fundamental set of solutions of
 \item\label{exer:5.1.27}Suppose $p$ and $q$ are continuous on  $(a,b)$ and
 $\{y_1,y_2\}$ is a fundamental set of solutions of
 \[
-y''+p(x)y'+q(x)y=0
-\eqno{\rm (A)}
+y''+p(x)y'+q(x)y=0\tag{A}
 \]
 on $(a,b)$. Let
 \[
@@ -1241,20 +1227,15 @@ fundamental set of solutions of (A) on $(a,b)$.
 homogeneous equation for which the given functions form a fundamental
 set of solutions on some interval.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (a)} $e^x \cos 2x, \quad e^x \sin 2x$
-& {\bf (b)} $x, \quad e^{2x}$
-\end{tabular}
-
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (c)} $x, \quad x \ln x$
-& {\bf (d)} $\cos (\ln x), \quad \sin (\ln x)$
-\end{tabular}
-
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\bf (e)} $\cosh x, \quad \sinh x$
-& {\bf (f)} $ x^2-1, \quad x^2+1$
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO horizontal
+\item $e^x \cos 2x, \quad e^x \sin 2x$
+\item $x, \quad e^{2x}$
+\item $x, \quad x \ln x$
+\item $\cos (\ln x), \quad \sin (\ln x)$
+\item $\cosh x, \quad \sinh x$
+\item $ x^2-1, \quad x^2+1$
+\end{alist}
 
 \item\label{exer:5.1.36}Suppose  $p$ and $q$ are continuous  on  $(a,b)$ and
   $\{y_1,y_2\}$ is
@@ -1302,7 +1283,7 @@ initial conditions
 y_1(x_0)=1, \quad y'_1(x_0)=0 \quad\text{and}\quad y_2(x_0)=0,
 \quad y'_2(x_0)=1.
 \]
-Then use  Exercise~\ref{exer:5.1.37}~{\bf (c)} to write
+Then use  Exercise~\ref{exer:5.1.37}(c) to write
 the solution of  the initial value problem
 \[
 y''=0,\quad y(0)=k_0,\quad y'(0)=k_1
@@ -1317,7 +1298,7 @@ $y_1$ and $y_2$ of $y''-y=0$ such that
 y_1(x_0)=1, \quad y'_1(x_0)=0\quad\text{and}\quad
 y_2(x_0)=0,\;  y'_2(x_0)=1.
 \]
-Then use  Exercise~\ref{exer:5.1.37}~{\bf (c)} to write
+Then use  Exercise~\ref{exer:5.1.37}(c) to write
 the solution of the initial value problem
 \[
 y''-y=0,\quad y(x_0)=k_0,\quad y'(x_0)=k_1
@@ -1332,7 +1313,7 @@ $y''+\omega^2y=0$, find solutions of
 y_1(x_0)=1, \quad y'_1(x_0)=0\quad\text{and}\quad
 y_2(x_0)=0,\;  y'_2(x_0)=1.
 \]
-Then use Exercise~\ref{exer:5.1.37}~{\bf (c)} to write
+Then use Exercise~\ref{exer:5.1.37}(c) to write
 the solution of the initial value problem
 \[
 y''+\omega^2y=0,\quad y(x_0)=k_0,\quad y'(x_0)=k_1
@@ -1358,7 +1339,7 @@ Find solutions of (A)
 y_1(0)=1, \quad y'_1(0)=0\quad\text{and}\quad
 y_2(0)=0,\;  y'_2(0)=1.
 \]
-Then use  Exercise~\ref{exer:5.1.37}~{\bf (c)} to write
+Then use  Exercise~\ref{exer:5.1.37}(c) to write
 the solution of  initial value problem
 \[
 (x^2-1)y''+4xy'+2y=0,\quad  y(0)=k_0,\quad y'(0)=k_1
@@ -2714,7 +2695,7 @@ on $(-\infty,\infty)$.
 \solution   The right side $F(x)=2x^4+4x^2$ in \eqref{eq:5.3.17}
 is the sum of the right sides
 \[
-F_1(x)=2x^4\quad\mbox{ and }\quad F_2(x)=4x^2.
+F_1(x)=2x^4\quad\text{and}\quad F_2(x)=4x^2.
 \]
 in  \eqref{eq:5.3.15}  and \eqref{eq:5.3.16}.
 Therefore the principle of superposition implies that
@@ -3159,7 +3140,7 @@ y''-3y'+2y=e^{3x}(-1+2x+x^2).
 \solution
 Substituting
 \[
-y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox{\quad and }
+y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\quad\text{and}\quad
 y''=u''e^{3x}+6u'e^{3x}+9ue^{3x}
 \]
 into \eqref{eq:5.4.10} and  canceling $e^{3x}$  yields
@@ -3177,7 +3158,7 @@ $u_p=A+Bx+Cx^2$ for $u$ in the left side of \eqref{eq:5.4.11} produces
 another second degree polynomial with coefficients that depend upon
 $A$, $B$, and $C$;   thus,
 \[
-\mbox{ if \quad}u_p=A+Bx+Cx^2\mbox{\quad then \quad}
+\text{if}\quad u_p=A+Bx+Cx^2\quad\text{then}\quad
 u_p'=B+2Cx\quad\text{and}\quad  u_p''=2C.
 \]
 If $u_p$ is to satisfy \eqref{eq:5.4.11},  we must have
@@ -3214,7 +3195,7 @@ y''-4y'+3y=e^{3x}(6+8x+12x^2).
 \solution
 Substituting
 \[
-y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\mbox{\quad and }
+y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\quad\text{and}\quad
 y''=u''e^{3x}+6u'e^{3x}+9ue^{3x}
 \]
 into \eqref{eq:5.4.12} and  canceling $e^{3x}$  yields
@@ -3277,8 +3258,8 @@ Find a particular solution of
 
 \solution  Substituting
 \[
-y=ue^{-x/2},\quad  y'=u'e^{-x/2}-\frac{1}{2}ue^{-x/2},\mbox{\quad and
-\quad} y''=u''e^{-x/2}-u'e^{-x/2}+\frac{1}{4}ue^{-x/2}
+y=ue^{-x/2},\quad  y'=u'e^{-x/2}-\frac{1}{2}ue^{-x/2},\quad\text{and}\quad
+y''=u''e^{-x/2}-u'e^{-x/2}+\frac{1}{4}ue^{-x/2}
 \]
 into \eqref{eq:5.4.14} and  canceling $e^{-x/2}$  yields
 \[
@@ -3589,7 +3570,7 @@ y=\int e^{\alpha x}P(x)\,dx
 \]
 with
 \[
-P(x)=p_0+p_1x+\cdots+p_kx^k, \mbox{\quad (where $p_k\ne0$)}.
+P(x)=p_0+p_1x+\cdots+p_kx^k, \quad\text{(where $p_k\ne0$)}.
 \]
 \begin{alist}
 \item %  (a)
@@ -3781,7 +3762,7 @@ Then
 \begin{align*}
 y_p'&=A\cos2x+B\sin2x+2x(-A\sin2x+B\cos2x)\qquad\text{and}\\
 y_p''&=-4A\sin2x+4B\cos2x-4x(A\cos2x+B\sin2x)\\
-&=-4A\sin2x+4B\cos2x-4y_p \mbox{ (see \eqref{eq:5.5.6})},
+&=-4A\sin2x+4B\cos2x-4y_p \text{ (see \eqref{eq:5.5.6})},
 \end{align*}
 so
 \[
@@ -4227,7 +4208,7 @@ y_p=A(x)\cos\omega x+B(x)\sin\omega x
 \]
 where $A$ and $B$ are twice differentiable, then
 \begin{align*}
- y_p'&=(A'+\omega B)\cos\omega x+(B'-\omega A)\sin\omega x\mbox{ and}\\
+ y_p'&=(A'+\omega B)\cos\omega x+(B'-\omega A)\sin\omega x\text{ and}\\
  y_p''&=(A''+2\omega B'-\omega^2A)\cos\omega x
 +(B''-2\omega A'-\omega^2B)\sin\omega x.
 \end{align*}
@@ -4472,7 +4453,7 @@ solve it for $u'$ by variation of parameters as in
 Section~1.2, integrate the solution to obtain $u$, and then
 obtain $y$ from \eqref{eq:5.6.3}.
 
-\begin{example}\label{example:5.6.1} \rm  \mbox{} \newline
+\begin{example}\label{example:5.6.1}
 \begin{alist}
 \item % (a)
  Find the general solution of
@@ -4520,8 +4501,8 @@ for \eqref{eq:5.6.9}. By applying variation of parameters as in
 Section~1.2, we can now see that every solution of
 \eqref{eq:5.6.9} is of the form
 \[
-z=vx\mbox{\quad where \quad}
-v'x=xe^{-x}, \mbox{\quad so \quad} v'=e^{-x} \quad\text{and}\quad 
+z=vx\quad\text{where}\quad
+v'x=xe^{-x}, \quad\text{so}\quad v'=e^{-x} \quad\text{and}\quad 
 v=-e^{-x}+C_1.
 \]
 Since $u'=z=vx$,   $u$ is a solution of \eqref{eq:5.6.8} if and only if
@@ -4558,7 +4539,7 @@ y=x+1+c_1e^x+c_2x^2e^x \] by simply renaming the arbitrary constants.
 We'll also do this in the next two examples, and in the answers to
 the exercises.
 
-\begin{example}\label{example:5.6.2}\rm  \mbox{} \newline
+\begin{example}\label{example:5.6.2}
 \begin{alist}
 \item %(a)
 Find the general solution of
@@ -4608,10 +4589,10 @@ z'+\frac{3}{x}z=0
 for \eqref{eq:5.6.14}. By variation of parameters, every solution of
 \eqref{eq:5.6.14} is of the form
 \[
-z=\frac{v}{x^3}\mbox{\quad where \quad}
-\frac{v'}{x^3}=\frac{1}{x}+\frac{1}{x^3}, \mbox{\quad so \quad}
- v'=x^2+1 \mbox{\quad
-and \quad} v=\frac{x^3}{3}+x+C_1.
+z=\frac{v}{x^3}\quad\text{where}\quad
+\frac{v'}{x^3}=\frac{1}{x}+\frac{1}{x^3}, \quad\text{so}\quad
+ v'=x^2+1 \quad\text{and}\quad
+ v=\frac{x^3}{3}+x+C_1.
 \]
 Since $u'=z=v/x^3$,   $u$ is a solution of \eqref{eq:5.6.14} if and only
 if
@@ -4683,7 +4664,7 @@ Separating the variables $u'$ and $x$ yields
 \]
 so
 \[
-\ln|u'|=\ln|x|+k,\mbox{\quad or, equivalently, \quad} u'=C_1x.
+\ln|u'|=\ln|x|+k,\quad\text{or, equivalently,}\quad u'=C_1x.
 \]
 Therefore
 \[
@@ -5219,7 +5200,7 @@ where
 \end{align*}
 Adding these two equations yields
 \[
--u_2'e^{-2x}=\frac{1}{1+e^x},\mbox{\quad so \quad}
+-u_2'e^{-2x}=\frac{1}{1+e^x},\quad\text{so}\quad
 u_2'=-\frac{e^{2x}}{1+e^x}.
  \]
 From the first equation,
@@ -5266,7 +5247,7 @@ Solve the initial value problem
 \end{equation}
  given that
 \[
-y_1=\frac{1}{x-1}\quad\mbox{ and }\quad y_2=\frac{1}{x+1}
+y_1=\frac{1}{x-1}\quad\text{and}\quad y_2=\frac{1}{x+1}
 \]
 are  solutions of the complementary
 equation
