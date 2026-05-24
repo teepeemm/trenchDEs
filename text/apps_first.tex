@@ -584,7 +584,7 @@ assumed to have exactly 52 weeks.
 %\]
 \begin{center}
 \tagpdfsetup{table/header-rows={1,2}}
-\begin{tabular}{ S[table-format=2] *2{S[table-format=5.2]} S[table-format=2.2] S[table-format=1.4] }\toprule
+\begin{tabular}{ S[table-format=2] *2{S[table-format=6.2]} S[table-format=3.2] S[table-format=1.4] }\toprule
 {Year} & {Approximate Value $Q$} & {Exact Value $P$} & {Error} & {Percentage
 Error} \\
 & {(\zcref{example:4.1.6}, \$)} & {(\zcref{exer:4.1.21}, \$)} & {$Q-P$} & {$(Q-P)/P$} \\\midrule
@@ -3228,10 +3228,10 @@ for all $t$ and $\lim_{t\to\infty}y(t)=\pi$.
 a positive number $\rho$ such that $p(y)>0$ if $0<y\le \rho$ and
 $p(y)<0$ if $-\rho\le y<0$. For $0<r\le\rho$ let
 \[
-\alpha(r)=\min\left\{\int_0^r p(x)\,dx,\ \int_{-r}^0
+\alpha(r)=\min\left\{\int_0^r p(x)\,dx,\,\int_{-r}^0
 |p(x)|\,dx\right\}
 \quad\text{and}\quad
-\beta(r)=\max\left\{\int_0^r p(x)\,dx,\ \int_{-r}^0
+\beta(r)=\max\left\{\int_0^r p(x)\,dx,\,\int_{-r}^0
 |p(x)|\,dx\right\}.
 \]
 Let $y$ be the solution of the initial value problem
@@ -3594,10 +3594,6 @@ axes and tangent to the curve at $(x_0,y(x_0))$
 (\zcref{figure:4.5.6}).
 \end{example}
 
-
-
-
-
 \solution
  The equation of the  line tangent to the curve at $P=(x_0,y(x_0)$ is
 \[
@@ -3640,7 +3636,8 @@ solutions define a family of hyperbolas (\zcref{figure:4.5.7}).
 \noindent
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040506}
+\includegraphics[alt={A hyperbola y=1/x for 0<x,y. The line segment connecting (0,y naught) and (x naught,0) is tangent to the curve at its midpoint.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040506}
 \captionof{figure}{}
 \label{figure:4.5.6}
 \tagstructend
@@ -3648,7 +3645,8 @@ solutions define a family of hyperbolas (\zcref{figure:4.5.7}).
 \hfill
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040507}
+\includegraphics[alt={The hyperbolas y=c/x, for many values of c.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040507}
 \captionof{figure}{}
 \label{figure:4.5.7}
 \tagstructend
@@ -3663,17 +3661,19 @@ the curve is in the first quadrant and $0<x<1$.
 \end{example}
 
 \noindent
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040508}
+\includegraphics[alt={A curve with 0<x,y curving up.  The tangent line at x naught intersects the x axis at (x naught)^2 to the left of x naught.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040508}
 \captionof{figure}{}
 \label{figure:4.5.8}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040509}
+\includegraphics[alt={The hyperbolas y=cx/(x-1).},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040509}
 \captionof{figure}{}
 \label{figure:4.5.9}
 \tagstructend
@@ -3693,7 +3693,7 @@ $y=y(x)$ satisfies
 \[
 y+y'(x^2-x)=0.
 \]
-Therefor
+Therefore
 \[
 \frac{y'}{y}=-\frac{1}{x^2-x}=-\frac{1}{x(x-1)}=\frac{1}{x}-\frac{1}{x-1},
 \]
@@ -3724,21 +3724,23 @@ any such circle is an orthogonal trajectory of the family of lines
 through the origin (\zcref{figure:4.5.11}).
 
 \noindent
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040510}
+\includegraphics[alt={Two curves in the x y plane whose dashed tangent lines are perpendicular when the curves intersect.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040510}
 \captionof{figure}{Curves orthogonal at a point of intersection}
 \label{figure:4.5.10}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig040511}
+\includegraphics[alt={Several circles centered at the origin and several lines through the origin.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig040511}
 \captionof{figure}{Orthogonal families of circles and lines}
 \label{figure:4.5.11}
 \tagstructend
-\end{minipage}
+\end{minipage}\smallskip
 
 Orthogonal trajectories occur in many physical applications.
 For example, if $u=u(x,y)$ is the temperature at a point $(x,y)$,  the
@@ -3775,22 +3777,25 @@ m_1=f(x_0,y_0)\quad\text{and}\quad m_2=-\frac{1}{f(x_0,y_0)}.
 This suggests a  method for finding orthogonal trajectories
 of a family of integral curves of a first order equation.
 
-\begin{center}{\bf Finding Orthogonal Trajectories}\end{center}
+\begin{center}{\bfseries Finding Orthogonal Trajectories}\end{center}
 
-{\bf Step 1.} Find a differential equation
+\begin{enumext}[
+  label=\arabic*,
+  wrap-label={Step #1.},
+  list-indent=0pt,
+  labelwidth=4em]
+\item Find a differential equation
 \[
 y'=f(x,y)
 \]
  for the given family.
 
-\medskip
-
-{\bf Step 2.} Solve the differential equation
+\item Solve the differential equation
 \[
 y'=-\frac{1}{f(x,y)}
 \]
 to find the orthogonal trajectories.
-
+\end{enumext}
 
 \begin{example}\label{example:4.5.9}
 Find the orthogonal trajectories of the family of circles
@@ -3859,13 +3864,12 @@ y^2-x^2=k,
 which is the equation of a hyperbola if $k \ne0$, or of the lines
 $y=x$ and $y=-x$ if $k=0$ (\zcref{figure:4.5.12}).
 
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig040512}
+  \includegraphics[alt={The hyperbolas y^2-x^2=c for various values of c.  Also, the lines y=±x.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig040512}
 \color{blue}
-\caption{ Orthogonal trajectories of the hyperbolas $xy=c$}
+\caption{Orthogonal trajectories of the hyperbolas $xy=c$}
   \label{figure:4.5.12}
 \end{figure}
 
@@ -3956,7 +3960,7 @@ where
 \[
 h=
 \begin{cases}
-\phantom-\dfrac{e^{-k}}{2}&\\text{ if } y\ge0,\\
+\phantom-\dfrac{e^{-k}}{2}&\text{ if } y\ge0,\\
 -\dfrac{e^{-k}}{2}&\text{ if } y\le0.
 \end{cases}
 \]
@@ -3968,11 +3972,10 @@ are below.
 
 \begin{figure}
   \centering
-\scalebox{.9}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig040513}}
+  \includegraphics[alt={Two figures.  In the left (right) figure, circles are tangent to the origin and have centers on the x (y) axis.},
+  trim=0 20 0 20,clip,width=5in,height=3.3in,keepaspectratio]{fig040513}
 \color{blue}
-\caption{{\bf (a)} The circles $(x-c)^2+y^2=c^2$ \, {\bf (b)} The circles
-$x^2+(y-h)^2=h^2$}
+\caption{(a) The circles $(x-c)^2+y^2=c^2$, (b) The circles $x^2+(y-h)^2=h^2$}
   \label{figure:4.5.13}
 \end{figure}
 
@@ -3984,30 +3987,14 @@ differential equation for the given family of curves.
 
 \begin{exerciselist}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 1--8 are two columns
-\item\label{exer:4.5.1}$y(x^2+y^2)=c$
-%&\vspace*{10pt}
-\item\label{exer:4.5.2}$e^{xy}=cy$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \item\label{exer:4.5.3}$\ln |xy|=c(x^2+y^2)$
-% &
- \item\label{exer:4.5.4}$y=x^{1/2}+cx$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.5.5}$y=e^{x^2}+ce^{-x^2}$
-%&
- \item\label{exer:4.5.6}$y=x^3+\dfrac{c}{x}$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.5.7}$y=\sin x+ce^x$
-%&
-\item\label{exer:4.5.8}$y=e^x+c(1+x^2)$
-%\end{tabular}
+\item(1)\label{exer:4.5.1}$y(x^2+y^2)=c$
+\item(1)\label{exer:4.5.2}$e^{xy}=cy$
+\item(1)\label{exer:4.5.3}$\ln |xy|=c(x^2+y^2)$
+\item(1)\label{exer:4.5.4}$y=x^{1/2}+cx$
+\item(1)\label{exer:4.5.5}$y=e^{x^2}+ce^{-x^2}$
+\item(1)\label{exer:4.5.6}$y=x^3+\dfrac{c}{x}$
+\item(1)\label{exer:4.5.7}$y=\sin x+ce^x$
+\item(1)\label{exer:4.5.8}$y=e^x+c(1+x^2)$
 
 \item\label{exer:4.5.9}Show that the family of circles
 \[
@@ -4040,14 +4027,16 @@ first order differential equation for the given family of curves.}
 of lines through the given points tangent to the parabola $y=x^2$.
 Also, find the points of tangency.
 
-\begin{tabular}[t]{@{}p{78pt}@{}p{78pt}p{78pt}p{78pt}}
-{\bf (a)}\; $(5,9)$
-&{\bf (b)}\; $(6,11)$
-&{\bf (c)}\; $(-6,20)$
-&{\bf (d)}\; $(-3,5)$
-\end{tabular}
+\begin{alist}[columns=4]
+% TODO horizontal
+\item $(5,9)$
+\item $(6,11)$
+\item $(-6,20)$
+\item $(-3,5)$
+\end{alist}
 
-\item\label{exer:4.5.15}\begin{alist}
+\item\label{exer:4.5.15}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Show that the equation of the line tangent to the circle
 \[
@@ -4090,7 +4079,8 @@ Find the equations of two lines through (5,5) tangent to the circle
 (A), and find the points of tangency.
 \end{alist}
 
-\item\label{exer:4.5.16}\begin{alist}
+\item\label{exer:4.5.16}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Show that the equation of the line tangent to the  parabola
 \[
@@ -4169,18 +4159,10 @@ $y_I=2y(x_0)$.
 \exercisetext{In \zcref[range]{exer:4.5.25,exer:4.5.29} find the
 orthogonal trajectories of the given family of curves.}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 25--28 are two columns
-\item\label{exer:4.5.25}$x^2+2y^2=c^2$
-%&\vspace*{10pt}
-\item\label{exer:4.5.26}$x^2+4xy+y^2=c$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:4.5.27}$y=ce^{2x}$
-%&
-\item\label{exer:4.5.28}$xye^{x^2}=c$
-%\end{tabular}
+\item(1)\label{exer:4.5.25}$x^2+2y^2=c^2$
+\item(1)\label{exer:4.5.26}$x^2+4xy+y^2=c$
+\item(1)\label{exer:4.5.27}$y=ce^{2x}$
+\item(1)\label{exer:4.5.28}$xye^{x^2}=c$
 
 \item\label{exer:4.5.29}$y=\dfrac{ce^x}{x}$
 
