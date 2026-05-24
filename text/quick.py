@@ -33,11 +33,15 @@ def respace(content: str) -> str:
   content = content.replace(r'\mbox{\quad and \quad}', r'\quad\text{and}\quad ')
   return content
 
+def addtag(content: str) -> str:
+  content = re.sub(r'\\eqno\{\\rm \((\w)\)\}', r'\\tag{\1}', content)
+  return content
+
 for texfile in glob('*.tex'):
   with open(texfile) as tex:
     mathopen = False
     content = tex.read()
-  content = respace(content)
+  content = addtag(content)
   with open(texfile,'w') as tex:
     tex.write(content)
 
