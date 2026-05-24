@@ -1,3 +1,5 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Linear Second Order Equations}\label{ch:second_order}
 
@@ -19,12 +21,12 @@ order linear equations, (A) is said to be \emph{\color{blue}homogeneous}
 if $F\equiv0$, or \emph{\color{blue}nonhomogeneous} if $F\not\equiv0$.
 
 \medskip\noindent
-SECTION~5.1 is devoted to the theory of homogeneous linear
+\zcref[S,CAP,font=\scshape]{sec:homog_linear} is devoted to the theory of homogeneous linear
 equations.
 
 
 \medskip\noindent
- SECTION~5.2 deals with homogeneous equations of the
+\zcref[S,CAP,font=\scshape]{sec:const_coeff_homog} deals with homogeneous equations of the
 special form
 \[
 ay''+by'+cy=0,
@@ -35,12 +37,12 @@ solving such equations.
 
 
 \medskip\noindent
-SECTION~5.3 presents the  theory of nonhomogeneous linear
+\zcref[S,CAP,font=\scshape]{sec:nonhomog_linear} presents the theory of nonhomogeneous linear
 equations.
 
 
 \medskip\noindent
-SECTIONS~5.4 AND 5.5
+\zcref[S,CAP,font=\scshape]{sec:undetermined_coeffs_i,sec:undetermined_coeffs_ii}
 present  the \emph{\color{blue}method of
 undetermined coefficients}, which can be used to solve
 nonhomogeneous equations of the form
@@ -55,7 +57,7 @@ introduced in Chapter~2.
 
 
 \medskip\noindent
-SECTION~5.6  deals with \emph{\color{blue}reduction of order}, a
+\zcref[S,CAP,font=\scshape]{sec:reduction_order} deals with \emph{\color{blue}reduction of order}, a
 technique based on the idea of variation of parameters,  which
 enables us to find the general solution of a nonhomogeneous
 linear second order equation provided that we know one nontrivial
@@ -65,7 +67,7 @@ equation.
 
 
 \medskip\noindent
-SECTION~5.6
+\zcref[S,CAP,font=\scshape]{sec:variation_param}
 deals with the method traditionally called
 \emph{\color{blue}variation of parameters},
 which enables us to find the general solution of a nonhomogeneous
@@ -75,7 +77,8 @@ equation.
 
 \newpage
 
-\section{Homogeneous Linear Equations}
+
+\section{Homogeneous Linear Equations}\label{sec:homog_linear}
 
 A second order differential equation is said to be \emph{\color{blue}linear} if
 it can be written as
@@ -85,8 +88,8 @@ y''+p(x)y'+q(x)y=f(x).
 We call the function $f$ on the right a \emph{\color{blue}forcing function},
 since in physical applications it's often related to a force acting
 on some system modeled by the differential equation. We say that
-\eqref{eq:5.1.1} is \emph{\color{blue}homogeneous} if $f\equiv0$ or {\color{blue}\it
-nonhomogeneous\/} if $f\not\equiv0$. Since these definitions are like
+\eqref{eq:5.1.1} is \emph{\color{blue}homogeneous} if $f\equiv0$ or {\color{blue}\itshape
+nonhomogeneous} if $f\not\equiv0$. Since these definitions are like
 the corresponding definitions in Section~2.1 for the linear
 first order equation
 \begin{equation}\label{eq:5.1.2}
@@ -433,7 +436,7 @@ y=c_1y_1+c_2y_2
 \]
  then
 \[
-y'=c_1y_1'+c_2y_2'\mbox{\quad and \quad} y''=c_1y_1''+c_2y_2''.
+y'=c_1y_1'+c_2y_2'\quad\text{and}\quad y''=c_1y_1''+c_2y_2''.
 \]
 Therefore
 \begin{align*}
@@ -486,7 +489,7 @@ regarding as theorems in their own right. However, let's first
 interpret Theorem~\ref{thmtype:5.1.3} in terms of
 Examples~\ref{example:5.1.1}, \ref{example:5.1.2}, and \ref{example:5.1.3}.
 
-\begin{example}\label{example:5.1.4} \rm \mbox{}\newline
+\begin{example}\label{example:5.1.4}
 \begin{alist}
 \item % (a)
 Since $e^x/e^{-x}=e^{2x}$ is nonconstant, Theorem~\ref{thmtype:5.1.3}
@@ -616,7 +619,7 @@ y_1y''_2-y''_1y_2.
 \end{equation}
  Since $y_1$ and $y_2$ both satisfy \eqref{eq:5.1.27},
 \[
-y''_1 =-py'_1-qy_1\mbox{\quad and \quad}
+y''_1 =-py'_1-qy_1\quad\text{and}\quad
 y''_2 =-py'_2-qy_2.
 \]
 Substituting these into \eqref{eq:5.1.30} yields
@@ -661,7 +664,7 @@ c_1=\frac{1}{W(x_0)}
 k_0 & y_2(x_0) \\[2\jot]
 k_1 & y'_2(x_0)
 \end{vmatrix}
-\mbox{\quad and \quad}
+\quad\text{and}\quad
 c_2=\frac{1}{W(x_0)}
 \begin{vmatrix}
 y_1(x_0) & k_0 \\[2\jot]
@@ -733,7 +736,7 @@ $(-\infty,0)$ or both in $(0,\infty)$ then
 so Abel's formula becomes
 \begin{align*}
 W(x)&=W(x_0)e^{-\ln(x/x_0)}=W(x_0)\frac{x_0}{x}\\
-&=-\left(\frac{4}{x_0}\right)\left(\frac{x_0}{x}\right)\mbox{\quad from
+&=-\left(\frac{4}{x_0}\right)\left(\frac{x_0}{x}\right)\quad\text{from
 \eqref{eq:5.1.31}}\\
 &=-\frac{4}{x},
 \end{align*}
@@ -1116,7 +1119,7 @@ y''+p(x)y'+q(x)y=0
 \]
 on  $(a,b)$. Let
 \[
-z_1=\alpha y_1+\beta y_2\mbox{\quad  and \quad} z_2=\gamma y_1+\delta
+z_1=\alpha y_1+\beta y_2\quad\text{and}\quad z_2=\gamma y_1+\delta
 y_2,
 \]
 where $\alpha$, $\beta$, $\gamma$, and $\delta$ are constants.
@@ -1132,7 +1135,7 @@ y''+p(x)y'+q(x)y=0
 \]
 on $(a,b)$. Let
 \[
-z_1=\alpha y_1+\beta y_2\mbox{\quad  and \quad} z_2=\gamma y_1+\delta
+z_1=\alpha y_1+\beta y_2\quad\text{and}\quad z_2=\gamma y_1+\delta
 y_2,
 \]
 where $\alpha,\beta,\gamma$, and $\delta$ are constants.
@@ -1146,8 +1149,11 @@ $\{y_1,y_2\}$ is identically zero on  $(a,b)$.
 
 \item\label{exer:5.1.29}Let
 \[
-y_1=x^3\quad\mbox{ and }\quad y_2=\begin{cases}
-x^3,&x\ge 0,\\ -x^3,&x<0.\end{cases}
+y_1=x^3\quad\text{and}\quad y_2=
+\begin{cases}
+x^3,&x\ge 0,\\
+-x^3,&x<0.
+\end{cases}
 \]
 \begin{alist}
 \item % (a)
@@ -1203,7 +1209,7 @@ $(a,b)$.
 \item\label{exer:5.1.33}Suppose  $p_1$, $p_2$, $q_1$, and $q_2$ are continuous on
 $(a,b)$  and the equations
 \[
-y''+p_1(x)y'+q_1(x)y=0 \mbox{\quad and \quad}
+y''+p_1(x)y'+q_1(x)y=0 \quad\text{and}\quad
 y''+p_2(x)y'+q_2(x)y=0
 \]
 have the same solutions on $(a,b)$. Show that $p_1=p_2$ and $q_1=q_2$
@@ -1269,7 +1275,7 @@ y''+p(x)y'+q(x)y=0
 \]
  such that
 \[
-y_1(x_0)=1, \quad y'_1(x_0)=0\mbox{\quad  and  \quad}
+y_1(x_0)=1, \quad y'_1(x_0)=0\quad\text{and}\quad
 y_2(x_0)=0,\;  y'_2(x_0)=1.
 \]
 (Theorem~\ref{thmtype:5.1.1} implies that each of these initial value
@@ -1293,7 +1299,7 @@ as a linear combination of $y_1$ and $y_2$.
 \item\label{exer:5.1.38}Find solutions $y_1$ and $y_2$ of the equation $y''=0$ that satisfy the
 initial conditions
 \[
-y_1(x_0)=1, \quad y'_1(x_0)=0 \mbox{\quad and \quad} y_2(x_0)=0,
+y_1(x_0)=1, \quad y'_1(x_0)=0 \quad\text{and}\quad y_2(x_0)=0,
 \quad y'_2(x_0)=1.
 \]
 Then use  Exercise~\ref{exer:5.1.37}~{\bf (c)} to write
@@ -1308,7 +1314,7 @@ that $e^x$ and $e^{-x}$ are solutions of $y''-y=0$, find
 solutions
 $y_1$ and $y_2$ of $y''-y=0$ such that
 \[
-y_1(x_0)=1, \quad y'_1(x_0)=0\mbox{\quad  and  \quad}
+y_1(x_0)=1, \quad y'_1(x_0)=0\quad\text{and}\quad
 y_2(x_0)=0,\;  y'_2(x_0)=1.
 \]
 Then use  Exercise~\ref{exer:5.1.37}~{\bf (c)} to write
@@ -1323,7 +1329,7 @@ that $\cos\omega x$ and $\sin\omega x$ are solutions of
 $y''+\omega^2y=0$, find solutions of
  $y''+\omega^2y=0$ such that
 \[
-y_1(x_0)=1, \quad y'_1(x_0)=0\mbox{\quad  and  \quad}
+y_1(x_0)=1, \quad y'_1(x_0)=0\quad\text{and}\quad
 y_2(x_0)=0,\;  y'_2(x_0)=1.
 \]
 Then use Exercise~\ref{exer:5.1.37}~{\bf (c)} to write
@@ -1349,7 +1355,7 @@ on $(-1,1)$.
 Find solutions of (A)
  such that
 \[
-y_1(0)=1, \quad y'_1(0)=0\mbox{\quad  and  \quad}
+y_1(0)=1, \quad y'_1(0)=0\quad\text{and}\quad
 y_2(0)=0,\;  y'_2(0)=1.
 \]
 Then use  Exercise~\ref{exer:5.1.37}~{\bf (c)} to write
@@ -1550,8 +1556,7 @@ In each case we'll start with an example.
 
 \boxit{Case 1: Distinct Real Roots}
 
-\noindent
-\begin{example}\label{example:5.2.1}\rm  \mbox{} \newline
+\begin{example}\label{example:5.2.1}
 \begin{alist}
 \item %(a)
 Find the general solution of
@@ -1620,8 +1625,7 @@ set of solutions of $ay''+by'+cy=0$.
 
 \boxit{Case 2: A Repeated Real Root}
 
-\noindent
-\begin{example}\label{example:5.2.2}\rm \mbox{}\newline
+\begin{example}\label{example:5.2.2}
 \begin{alist}
 \item %(a)
 Find the general solution of
@@ -1663,7 +1667,7 @@ Exercises~5.1.~\hspace*{-3pt}\ref{exer:5.1.9},
 
 If $y=ue^{-3x}$, then
 \[
-y'=u'e^{-3x}-3ue^{-3x}\mbox{\quad and \quad}
+y'=u'e^{-3x}-3ue^{-3x}\quad\text{and}\quad
 y''=u''e^{-3x}-6u'e^{-3x}+9ue^{-3x},
 \]
 so
@@ -1733,7 +1737,7 @@ $ay''+by'+cy=0$, and therefore of \eqref{eq:5.2.12}. Proceeding as in
 Example~\ref{example:5.2.2}, we look for other solutions of \eqref{eq:5.2.12}
 of the form $y=ue^{r_1x}$; then
 \[
-y'=u'e^{r_1x}+rue^{r_1x}\mbox{\quad and \quad}
+y'=u'e^{r_1x}+rue^{r_1x}\quad\text{and}\quad
 y''=u''e^{r_1x}+2r_1u'e^{r_1x}+r_1^2ue^{r_1x},
 \]
 so
@@ -1760,9 +1764,7 @@ is the general solution.
 
 \boxit{Case 3: Complex Conjugate Roots}
 
-\vspace*{-20pt}
-\noindent
-\begin{example}\label{example:5.2.3}\rm \mbox{}\newline
+\begin{example}\label{example:5.2.3}
 \begin{alist}
 \item %(a)
 Find the general solution of
@@ -1794,7 +1796,7 @@ exponential functions with complex arguments, and even if you are, it's
  take a simpler approach, which we motivate as follows: the
 exponential notation suggests that
 \[
-e^{(-2+3i)x}=e^{-2x}e^{3ix}\mbox{\quad and \quad}
+e^{(-2+3i)x}=e^{-2x}e^{3ix}\quad\text{and}\quad
 e^{(-2-3i)x}=e^{-2x}e^{-3ix},
 \]
 so even though we haven't defined $e^{3ix}$ and $e^{-3ix}$, it's
@@ -1803,7 +1805,7 @@ combination of $e^{(-2+3i)x}$ and $e^{(-2-3i)x}$ can be written as
 $y=ue^{-2x}$, where $u$ depends upon $x$. To determine $u$, we note
 that if $y=ue^{-2x}$ then
 \[
-y'=u'e^{-2x}-2ue^{-2x}\mbox{\quad and \quad}
+y'=u'e^{-2x}-2ue^{-2x}\quad\text{and}\quad
 y''=u''e^{-2x}-4u'e^{-2x}+4ue^{-2x},
 \]
 so
@@ -1891,8 +1893,9 @@ combinations of
 $e^{(\lambda+i\omega)x}$ and $e^{(\lambda-i\omega)x}$.
 Again,  the exponential notation suggests that
 \[
-e^{(\lambda+i\omega)x}=e^{\lambda x}e^{i\omega x}\mbox{\quad and
-\quad} e^{(\lambda-i\omega)x}=e^{\lambda x}e^{-i\omega x},
+e^{(\lambda+i\omega)x}=e^{\lambda x}e^{i\omega x}
+\quad\text{and}\quad
+e^{(\lambda-i\omega)x}=e^{\lambda x}e^{-i\omega x},
 \]
 so even though we haven't defined $e^{i\omega x}$ and
 $e^{-i\omega x}$, it's reasonable to expect that every linear
@@ -1921,7 +1924,7 @@ y''-2\lambda y'+(\lambda^2+\omega^2)y=0.
  To determine $u$ we note
 that if $y=ue^{\lambda x}$ then
 \[
-y'=u'e^{\lambda x}+\lambda ue^{\lambda x}\mbox{\quad and \quad}
+y'=u'e^{\lambda x}+\lambda ue^{\lambda x}\quad\text{and}\quad
 y''=u''e^{\lambda x}+2\lambda u'e^{\lambda x}+\lambda^2ue^{\lambda x}.
 \]
 Substituting these expressions  into
@@ -2098,7 +2101,7 @@ ay''+by'+cy=0, \quad  y(x_0)=k_0,\quad y'(x_0)=k_1,
 \]
 where $x_0\ne0$, then  determining  the constants in
 \[
-y=c_1e^{r_1x}+c_2e^{r_2x}, \quad  y=e^{r_1x}(c_1+c_2x),\mbox{ or }
+y=c_1e^{r_1x}+c_2e^{r_2x}, \quad  y=e^{r_1x}(c_1+c_2x),\text{ or }
 y=e^{\lambda x}(c_1\cos\omega x+c_2\sin\omega x)
 \]
 (whichever is applicable) is more complicated. Use \part{b} to restate
@@ -2299,7 +2302,7 @@ are both solutions of (G).
 
 
 
-\section{Nonhomogeneous Linear Equations}
+\section{Nonhomogeneous Linear Equations}\label{sec:nonhomog_linear}
 
 We'll now consider the nonhomogeneous linear second order equation
 \begin{equation} \label{eq:5.3.1}
@@ -2361,7 +2364,7 @@ We first show that $y$ in \eqref{eq:5.3.5} is a solution of
 \eqref{eq:5.3.3} for any choice of the constants $c_1$ and $c_2$.
 Differentiating \eqref{eq:5.3.5} twice yields
 \[
-y'=y_p'+c_1y_1'+c_2y_2'\mbox{\quad and \quad}
+y'=y_p'+c_1y_1'+c_2y_2'\quad\text{and}\quad
 y''=y_p''+ c_1y_1''+c_2y_2'',
 \]
 so
@@ -2441,7 +2444,7 @@ In this section we to limit ourselves to applications of
 Theorem~\ref{thmtype:5.3.2} where we can guess at the form of the
 particular solution.
 
-\begin{example}\label{example:5.3.1} \rm \mbox{}\newline
+\begin{example}\label{example:5.3.1}
 \begin{alist}
 \item % (a)
 Find the general solution of
@@ -2493,7 +2496,7 @@ Figure~\ref{figure:5.3.1} is a graph of this function.
 
 
 
-\begin{example}\label{example:5.3.2} \rm \mbox{}\newline %\examplepoly
+\begin{example}\label{example:5.3.2}
 \begin{alist}
 \item % (a)
 Find the general solution of
@@ -2524,7 +2527,7 @@ $C$ so the polynomials on the two sides of \eqref{eq:5.3.10} have the
 same coefficients;   thus,
 if
 \[
-y_p=A+Bx+Cx^2\mbox{\quad then \quad}
+y_p=A+Bx+Cx^2\quad\text{then}\quad
 y_p'=B+2Cx\mbox{\quad and \quad} y_p''=2C,
 \]
 so
@@ -2945,7 +2948,7 @@ the complementary equation on $(a,b)$.
 
 \end{exerciselist}
 
-\section{The Method of Undetermined Coefficients I}
+\section{The Method of Undetermined Coefficients I}\label{sec:undetermined_coeffs_i}
 
 In this section we consider the constant coefficient equation
 \begin{equation} \label{eq:5.4.1}
@@ -3633,7 +3636,7 @@ positive integer and $\alpha\ne0$.
 \end{exerciselist}
 
 
-\section{The Method of Undetermined Coefficients II}
+\section{The Method of Undetermined Coefficients II}\label{sec:undetermined_coeffs_ii}
 
 In this section we consider the constant coefficient equation
 \begin{equation} \label{eq:5.5.1}
@@ -4417,7 +4420,7 @@ Use the method of Exercise~\ref{exer:5.5.39} to evaluate the integral.
 
 \end{exerciselist}
 
-\section{Reduction of Order}
+\section{Reduction of Order}\label{sec:reduction_order}
 
 In this section we give a method for finding the general
 solution of
@@ -4925,7 +4928,7 @@ where $\{z_1,z_2\}$ is a fundamental set of solutions of
 
 \end{exerciselist}
 
-\section{Variation of Parameters}
+\section{Variation of Parameters}\label{sec:variation_param}
 
 In this section we give a method called \emph{\color{blue}variation of
 parameters} for finding a particular solution of
