@@ -29,17 +29,21 @@ def change_graphics_height(content: str) -> str:
   content = content.replace('height=3.66in', 'height=3.3in')
   return content
 
+def respace(content: str) -> str:
+  content = content.replace(r'\mbox{\quad and \quad}', r'\quad\text{and}\quad ')
+  return content
+
 for texfile in glob('*.tex'):
   with open(texfile) as tex:
     mathopen = False
     content = tex.read()
-  content = change_graphics_height(content)
+  content = respace(content)
   with open(texfile,'w') as tex:
     tex.write(content)
 
 '''
-mbox, ref, eqnarray, rm, cases, part, solutionpart
+mbox, ref, eqnarray, cases, part, solutionpart, scalebox
+bf, it, rm
 Section, Chapter, Figure, Table, Exercise, Example, Equation, Eqn
 units
-3.66
 '''
