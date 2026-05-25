@@ -9,6 +9,7 @@
 %\usepackage[scaled=0.92]{helvet}
 \usepackage[psamsfonts]{amsfonts}
 \usepackage{amsmath, amsbsy}
+\usepackage{mathtools}
 \usepackage{calc}
 \usepackage{booktabs}
 \usepackage[per-mode = symbol]{siunitx}
@@ -49,6 +50,10 @@ filecolor = blue,
 \DeclareSIUnit\gallon{\text{gal}}
 \DeclareSIUnit\pound{\text{lb}}
 
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\ivect}{\vect{i}}
+\newcommand{\jvect}{\vect{j}}
+
 \ExplSyntaxOn
 % TODO?
 \keys_define:nn { zref-clever/reference }
@@ -86,21 +91,30 @@ filecolor = blue,
 \numberwithin{figure}{section}
 
 \newcommand{\place}{\bigskip\hrule\bigskip\noindent}
-\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
-\newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\[1\jot]#2\\[1\jot]#3\end{array}\right]}
+%\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
+\newcommand{\threecol}[3]{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
+%\newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\[1\jot]#2\\[1\jot]#3\end{array}\right]}
+\newcommand{\threecolj}{\threecol}
 \newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}}
-\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
-\newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]}
-\newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]}
+%\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
+\newcommand{\twocol}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+%\newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]}
+\newcommand{\ctwocol}{\twocol}
+%\newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]}
+\newcommand{\cthreecol}{\threecol}
 \newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}}
-\newcommand{\twochar}[4]{\left|\begin{array}{cc}
-#1-\lambda&#2\\#3&#4-\lambda\end{array}\right|}
-\newcommand{\twobytwo}[4]{\left[\begin{array}{rr}
-#1&#2\\#3&#4\end{array}\right]}
-\newcommand{\threechar}[9]{\left[\begin{array}{ccc}
-#1-\lambda&#2&#3\\#4&#5-\lambda&#6\\#7&#8&#9-\lambda\end{array}\right]}
-\newcommand{\threebythree}[9]{\left[\begin{array}{rrr}
-#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
+%\newcommand{\twochar}[4]{\left|\begin{array}{cc}
+%#1-\lambda&#2\\#3&#4-\lambda\end{array}\right|}
+\newcommand{\twochar}[4]{\begin{vmatrix}#1-\lambda&#2\\#3&#4-\lambda\end{vmatrix}}
+%\newcommand{\twobytwo}[4]{\left[\begin{array}{rr}
+%#1&#2\\#3&#4\end{array}\right]}
+\newcommand{\twobytwo}[4]{\begin{bmatrix}#1&#2\\#3&#4\end{bmatrix}}
+%\newcommand{\threechar}[9]{\left[\begin{array}{ccc}
+%#1-\lambda&#2&#3\\#4&#5-\lambda&#6\\#7&#8&#9-\lambda\end{array}\right]}
+\newcommand{\threechar}[9]{\begin{bmatrix}#1-\lambda&#2&#3\\#4&#5-\lambda&#6\\#7&#8&#9-\lambda\end{bmatrix}}
+%\newcommand{\threebythree}[9]{\left[\begin{array}{rrr}
+%#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
+\newcommand{\threebythree}[9]{\begin{bmatrix}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{bmatrix}}
 % TODO
 \newcommand{\solutionpart}[1]{\vskip10pt\noindent{%\underbar
 \color{blue}\scshape Solution({\bfseries #1})\ }
@@ -108,16 +122,23 @@ filecolor = blue,
 \newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
 \newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
 \newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, }
-\newcommand{\matfunc}[3]{\left[\begin{array}{cccc}#1_{11}(t)&#1_{12}(t)&\cdots
+%\newcommand{\matfunc}[3]{\left[\begin{array}{cccc}#1_{11}(t)&#1_{12}(t)&\cdots
+%&#1_{1#3}(t)\\#1_{21}(t)&#1_{22}(t)&\cdots&#1_{2#3}(t)\\\vdots&
+%\vdots&\ddots&\vdots\\#1_{#21}(t)&#1_{#22}(t)&\cdots&#1_{#2#3}(t)
+%\end{array}\right]}
+\newcommand{\matfunc}[3]{\begin{bmatrix}#1_{11}(t)&#1_{12}(t)&\cdots
 &#1_{1#3}(t)\\#1_{21}(t)&#1_{22}(t)&\cdots&#1_{2#3}(t)\\\vdots&
 \vdots&\ddots&\vdots\\#1_{#21}(t)&#1_{#22}(t)&\cdots&#1_{#2#3}(t)
-\end{array}\right]}
+\end{bmatrix}}
 
-\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
-\newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]}
+%\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
+\newcommand{\col}[2]{\begin{bmatrix}#1_1\\#1_2\\\vdots\\#1_#2\end{bmatrix}}
+%\newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]}
+\newcommand{\colfunc}[2]{\begin{bmatrix}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{bmatrix}}
 
-\newcommand{\cthreebythree}[9]{\left[\begin{array}{ccc}
-#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
+%\newcommand{\cthreebythree}[9]{\left[\begin{array}{ccc}
+%#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
+\newcommand{\cthreebythree}[9]{\begin{bmatrix}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{bmatrix}}
 
 \newcommand{\technology}{\bigskip\noindent\fbox{\color{red}USING
 TECHNOLOGY}\par}
