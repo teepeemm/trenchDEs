@@ -5,7 +5,7 @@
 
 
 \noindent
-IN THIS CHAPTER we study a particularly important class of
+\textsc{In this chapter} we study a particularly important class of
 second order equations.
 Because of their many applications in science and engineering, second
 order differential equation have historically been the most thoroughly
@@ -53,7 +53,7 @@ where $a$, $b$, and $c$ are constants and $F$ has a special form that
 is still sufficiently general to occur in many applications. In this
 section  we make extensive use of the idea of variation of
 parameters
-introduced in Chapter~2.
+introduced in \zcref{ch:first_order}.
 
 
 \medskip\noindent
@@ -90,7 +90,7 @@ since in physical applications it's often related to a force acting
 on some system modeled by the differential equation. We say that
 \eqref{eq:5.1.1} is \emph{\color{blue}homogeneous} if $f\equiv0$ or {\color{blue}\itshape
 nonhomogeneous} if $f\not\equiv0$. Since these definitions are like
-the corresponding definitions in Section~2.1 for the linear
+the corresponding definitions in \zcref{sec:linar_first_order} for the linear
 first order equation
 \begin{equation}\label{eq:5.1.2}
 y'+p(x)y=f(x),
@@ -98,14 +98,14 @@ y'+p(x)y=f(x),
 it's natural to expect similarities between methods of solving
 \eqref{eq:5.1.1} and \eqref{eq:5.1.2}. However, solving \eqref{eq:5.1.1} is more
 difficult than solving \eqref{eq:5.1.2}. For example, while
-Theorem~\ref{thmtype:2.1.1} gives a formula for the general solution of
+\zcref{thmtype:2.1.1} gives a formula for the general solution of
 \eqref{eq:5.1.2} in the case where $f\equiv0$ and
-Theorem~\ref{thmtype:2.1.2} gives
+\zcref{thmtype:2.1.2} gives
 a formula for the case where $f\not\equiv0$, there are no formulas for
 the general solution of \eqref{eq:5.1.1} in either case. Therefore we must
 be content to solve linear second order equations of special forms.
 
-In Section~2.1 we considered the homogeneous equation
+In \zcref{sec:linar_first_order} we considered the homogeneous equation
 $y'+p(x)y=0$ first, and then used a nontrivial solution of this
 equation to find the general solution of the nonhomogeneous equation
 $y'+p(x)y=f(x)$. Although the progression from the homogeneous to the
@@ -133,26 +133,26 @@ y''+p(x)y'+q(x)y=0,\ y(x_0)=k_0,\ y'(x_0)=k_1
 
 Since $y\equiv0$ is obviously a solution of \eqref{eq:5.1.3} we call it
 the \emph{\color{blue}trivial} solution. Any other solution is \emph{\color{blue}nontrivial}.
-Under the assumptions of Theorem~\ref{thmtype:5.1.1}, the only solution of
+Under the assumptions of \zcref{thmtype:5.1.1}, the only solution of
 the initial value problem
 \[
 y''+p(x)y'+q(x)y=0,\ y(x_0)=0,\ y'(x_0)=0
 \]
 on  $(a,b)$ is the trivial solution
-(Exercise~\ref{exer:5.1.24}).
+(\zcref{exer:5.1.24}).
 
 The next three examples illustrate concepts that we'll develop later
 in this section. You shouldn't be concerned with how to \emph{\color{blue}find}
 the given solutions of the equations in these examples. This will be
 explained in later sections.
 
-\begin{example}\label{example:5.1.1} \rm
+\begin{example}\label{example:5.1.1}
 The coefficients of $y'$ and $y$ in
 \begin{equation}\label{eq:5.1.4}
 y''-y=0
 \end{equation}
 are the constant functions $p\equiv0$ and $q\equiv-1$, which are
-continuous on $(-\infty,\infty)$. Therefore Theorem~\ref{thmtype:5.1.1}
+continuous on $(-\infty,\infty)$. Therefore \zcref{thmtype:5.1.1}
 implies that every initial value problem for \eqref{eq:5.1.4}  has a
 unique solution on $(-\infty,\infty)$.
 \begin{alist}
@@ -171,12 +171,13 @@ y''-y=0,\quad y(0)=1,\quad y'(0)=3.
 \end{alist}
 \end{example}
 
-\solutionpart{a} If $y_1=e^x$ then $y_1'=e^x$ and $y_1''=e^x=y_1$,
+\begin{alistSolution}
+\item If $y_1=e^x$ then $y_1'=e^x$ and $y_1''=e^x=y_1$,
 so  $y_1''-y_1=0$.
 If $y_2=e^{-x}$, then $y_2'=-e^{-x}$ and $y_2''=e^{-x}=y_2$,
 so  $y_2''-y_2=0$.
 
-\solutionpart{b} If
+\item If
 \begin{equation}\label{eq:5.1.6}
 y=c_1e^x+c_2e^{-x}
 \end{equation}
@@ -196,7 +197,7 @@ y''-y&=(c_1e^x+c_2e^{-x})-(c_1e^x+c_2e^{-x})\\
 for all $x$. Therefore $y=c_1e^x+c_2e^{-x}$ is a solution of
 \eqref{eq:5.1.4} on $(-\infty,\infty)$.
 
-\solutionpart{c}
+\item
 We can solve \eqref{eq:5.1.5} by choosing $c_1$ and $c_2$ in \eqref{eq:5.1.6}
 so that $y(0)=1$ and $y'(0)=3$. Setting $x=0$ in \eqref{eq:5.1.6} and
 \eqref{eq:5.1.7} shows that this is equivalent to
@@ -207,6 +208,7 @@ c_1-c_2&=3.
 Solving these equations yields  $c_1=2$  and $c_2=-1$.
 Therefore $y=2e^x-e^{-x}$ is the unique solution of
 \eqref{eq:5.1.5} on $(-\infty,\infty)$.
+\end{alistSolution}
 
 \begin{example}\label{example:5.1.2}
 Let $\omega$ be a positive constant. The coefficients of $y'$
@@ -216,7 +218,7 @@ y''+\omega^2y=0
 \end{equation}
 are the constant functions $p\equiv0$ and $q\equiv\omega^2$,
 which are continuous on $(-\infty,\infty)$. Therefore
-Theorem~\ref{thmtype:5.1.1}
+\zcref{thmtype:5.1.1}
 implies that every initial value problem for \eqref{eq:5.1.8}  has a
 unique solution on $(-\infty,\infty)$.
 \begin{alist}
@@ -235,13 +237,14 @@ y''+\omega^2y=0,\quad y(0)=1,\quad y'(0)=3.
 \end{alist}
 \end{example}
 
-\solutionpart{a} If $y_1=\cos\omega x$ then $y_1'=-\omega\sin\omega x$
+\begin{alistSolution}
+\item If $y_1=\cos\omega x$ then $y_1'=-\omega\sin\omega x$
 and
 $y_1''=-\omega^2\cos\omega x=-\omega^2y_1$, so  $y_1''+\omega^2y_1=0$.
 If $y_2=\sin\omega x$ then, $y_2'=\omega\cos\omega x$ and
 $y_2''=-\omega^2\sin\omega x=-\omega^2y_2$, so  $y_2''+\omega^2y_2=0$.
 
-\solutionpart{b} If
+\item If
 \begin{equation}\label{eq:5.1.10}
 y=c_1\cos\omega x+c_2\sin\omega x
 \end{equation}
@@ -263,7 +266,7 @@ c_2\omega^2(-\sin\omega x+\sin\omega x)=0
 for all $x$. Therefore $y=c_1\cos\omega x+c_2\sin\omega x$ is a
 solution of \eqref{eq:5.1.8} on $(-\infty,\infty)$.
 
-\solutionpart{c}
+\item
 To solve
 \eqref{eq:5.1.9}, we must choosing $c_1$ and $c_2$ in \eqref{eq:5.1.10}
 so that $y(0)=1$ and $y'(0)=3$. Setting $x=0$ in \eqref{eq:5.1.10}
@@ -275,8 +278,9 @@ y=\cos\omega x+\frac{3}{\omega}\sin\omega x
  is the unique solution of \eqref{eq:5.1.9} on
 $(-\infty,\infty)$.
 \bbox
+\end{alistSolution}
 
-Theorem~\ref{thmtype:5.1.1} implies that if $k_0$ and $k_1$ are
+\zcref[S]{thmtype:5.1.1} implies that if $k_0$ and $k_1$ are
 arbitrary real numbers then the initial value problem
 \begin{equation}\label{eq:5.1.12}
 P_0(x)y''+P_1(x)y'+P_2(x)y=0,\quad y(x_0)=k_0,\quad y'(x_0)=k_1
@@ -288,9 +292,9 @@ equation in  \eqref{eq:5.1.12} as
 \[
 y''+\frac{P_1(x)}{P_0(x)}y'+\frac{P_2(x)}{P_0(x)}y=0
 \]
-and apply Theorem~\ref{thmtype:5.1.1} with $p=P_1/P_0$ and $q=P_2/P_0$.
+and apply \zcref{thmtype:5.1.1} with $p=P_1/P_0$ and $q=P_2/P_0$.
 
-\begin{example}\label{example:5.1.3} \rm
+\begin{example}\label{example:5.1.3}
 The equation
 \begin{equation}\label{eq:5.1.13}
 x^2y''+xy'-4y=0
@@ -299,7 +303,7 @@ has the form of the differential equation in \eqref{eq:5.1.12}, with
 $P_0(x)=x^2$, $P_1(x)=x$, and $P_2(x)=-4$, which are are all
 continuous on $(-\infty,\infty)$. However, since $P(0)=0$ we must
 consider solutions of \eqref{eq:5.1.13} on $(-\infty,0)$ and $(0,\infty)$.
-Since $P_0$ has no zeros on these intervals, Theorem~\ref{thmtype:5.1.1}
+Since $P_0$ has no zeros on these intervals, \zcref{thmtype:5.1.1}
 implies that the initial value problem
 \[
 x^2y''+xy'-4y=0,\quad y(x_0)=k_0,\quad y'(x_0)=k_1
@@ -328,7 +332,8 @@ x^2y''+xy'-4y=0,\quad y(-1)=2,\quad y'(-1)=0.
 \end{alist}
 \end{example}
 
-\solutionpart{a} If $y_1=x^2$ then $y_1'=2x$ and $y_1''=2$, so
+\begin{alistSolution}
+\item If $y_1=x^2$ then $y_1'=2x$ and $y_1''=2$, so
 \[
 x^2y_1''+xy_1'-4y_1=x^2(2)+x(2x)-4x^2=0
 \]
@@ -339,30 +344,24 @@ x^2y_2''+xy_2'-4y_2=x^2\left(\frac{6}{x^4}\right)-x\left(\frac{2}{x^3}\right)-\f
 \]
 for $x$ in $(-\infty,0)$ or $(0,\infty)$.
 
-\solutionpart{b} If
-\begin{equation}\label{eq:5.1.16}
-y=c_1x^2+\frac{c_2}{x^2}
-\end{equation}
- then
-\begin{equation}\label{eq:5.1.17}
-y'=2c_1x-\frac{2c_2}{x^3}
-\end{equation}
-and
-\[
-y''=2c_1+\frac{6c_2}{x^4},
-\]
+\item If
+\begin{align}
+y&=c_1x^2+\frac{c_2}{x^2},\label{eq:5.1.16}\shortintertext{then}
+y'&=2c_1x-\frac{2c_2}{x^3}\label{eq:5.1.17}\shortintertext{and}
+y''&=2c_1+\frac{6c_2}{x^4},\notag
+\end{align}
 so
 \begin{align*}
-x^2y''+xy'-4y&=x^2\dst{\left(2c_1+\frac{6c_2}{x^4}\right)}
-+x\dst{\left(2c_1x-\frac{2c_2}{x^3}\right)}
--4\dst{\left(c_1x^2+\frac{c_2}{x^2}\right)}\\[2\jot]
+x^2y''+xy'-4y&=x^2\left(2c_1+\frac{6c_2}{x^4}\right)
++x\left(2c_1x-\frac{2c_2}{x^3}\right)
+-4\left(c_1x^2+\frac{c_2}{x^2}\right)\\
 &=c_1(2x^2+2x^2-4x^2)
-+c_2\dst{\left(\frac{6}{x^2}-\frac{2}{x^2}-\frac{4}{x^2}\right)}\\[2\jot]
++c_2\left(\frac{6}{x^2}-\frac{2}{x^2}-\frac{4}{x^2}\right)
 &=c_1\cdot0+c_2\cdot0=0
 \end{align*}
 for $x$ in $(-\infty,0)$ or $(0,\infty)$.
 
-\solutionpart{c}
+\item
 To solve
 \eqref{eq:5.1.14}, we choose $c_1$ and $c_2$ in \eqref{eq:5.1.16}
 so that $y(1)=2$ and $y'(1)=0$. Setting $x=1$ in \eqref{eq:5.1.16}
@@ -375,7 +374,7 @@ Solving these equations yields  $c_1=1$  and $c_2=1$.
 Therefore $y=x^2+1/x^2$ is the unique  solution of \eqref{eq:5.1.14}
 on $(0,\infty)$.
 
-\solutionpart{d}
+\item
 We can solve
 \eqref{eq:5.1.15} by choosing $c_1$ and $c_2$ in \eqref{eq:5.1.16}
 so that $y(-1)=2$ and $y'(-1)=0$. Setting $x=-1$ in \eqref{eq:5.1.16}
@@ -388,6 +387,7 @@ Solving these equations yields  $c_1=1$  and $c_2=1$.
 Therefore $y=x^2+1/x^2$ is the unique solution of \eqref{eq:5.1.15}
 on $(-\infty,0)$.
 \bbox
+\end{alistSolution}
 
 Although the \emph{\color{blue}formulas} for the solutions of \eqref{eq:5.1.14} and
 \eqref{eq:5.1.15} are both $y=x^2+1/x^2$, you should not conclude that
@@ -399,11 +399,10 @@ which contains the initial point $x_0=1$, while the solution of
 \eqref{eq:5.1.15} is $y=x^2+1/x^2$ \emph{\color{blue}on the interval} $(-\infty,0)$,
 which contains the initial point $x_0=-1$.
 
+
 \boxit{The General Solution of a Homogeneous Linear Second Order
 Equation}
 
-
-\noindent
 If $y_1$ and $y_2$ are defined on an interval
 $(a,b)$ and $c_1$ and $c_2$ are constants, then
 \[
@@ -415,7 +414,7 @@ example, $y=2\cos x+7 \sin x$ is a linear combination of $y_1=
 
 
 The next theorem states a fact that we've already verified in
-Examples~\ref{example:5.1.1}, \ref{example:5.1.2}, and \ref{example:5.1.3}.
+\zcref{example:5.1.1,example:5.1.2,example:5.1.3}.
 
 \begin{theorem}\color{blue}\label{thmtype:5.1.2}
 If $y_1$ and $y_2$ are solutions of the homogeneous equation
@@ -441,9 +440,9 @@ y'=c_1y_1'+c_2y_2'\quad\text{and}\quad y''=c_1y_1''+c_2y_2''.
 Therefore
 \begin{align*}
 y''+p(x)y'+q(x)y&=(c_1y_1''+c_2y_2'')+p(x)(c_1y_1'+c_2y_2')
-+q(x)(c_1y_1+c_2y_2)\\[2\jot]
++q(x)(c_1y_1+c_2y_2)\\
 &=c_1\left(y_1''+p(x)y_1'+q(x)y_1\right)
-+c_2\left(y_2''+p(x)y_2'+q(x)y_2\right)\\[2\jot]
++c_2\left(y_2''+p(x)y_2'+q(x)y_2\right)\\
 &=c_1\cdot0+c_2\cdot0=0,
 \end{align*}
 since $y_1$ and $y_2$ are solutions of \eqref{eq:5.1.18}.% \bbox
@@ -456,10 +455,9 @@ combination of $y_1$ and $y_2$ as in \eqref{eq:5.1.19}.
 In this case we say that \eqref{eq:5.1.19} is
 \emph{\color{blue}general solution of $\eqref{eq:5.1.18}$ on}  $(a,b)$.
 
+
 \boxit{Linear Independence}
 
-
-\noindent
 We need a way to determine whether a given set $\{y_1,y_2\}$
 of solutions of \eqref{eq:5.1.18}  is a fundamental set.
 The next definition will enable us to state necessary and
@@ -484,25 +482,25 @@ on $(a,b)$ is a fundamental set if and only if $\{y_1,y_2\}$ is
 linearly independent on $(a,b).$
 \end{theorem}
 
-We'll present the proof of Theorem~\ref{thmtype:5.1.3} in steps worth
+We'll present the proof of \zcref{thmtype:5.1.3} in steps worth
 regarding as theorems in their own right. However, let's first
-interpret Theorem~\ref{thmtype:5.1.3} in terms of
-Examples~\ref{example:5.1.1}, \ref{example:5.1.2}, and \ref{example:5.1.3}.
+interpret \zcref{thmtype:5.1.3} in terms of
+\zcref{example:5.1.1,example:5.1.2,example:5.1.3}.
 
 \begin{example}\label{example:5.1.4}
 \begin{alist}
 \item % (a)
-Since $e^x/e^{-x}=e^{2x}$ is nonconstant, Theorem~\ref{thmtype:5.1.3}
+Since $e^x/e^{-x}=e^{2x}$ is nonconstant, \zcref{thmtype:5.1.3}
 implies that $y=c_1e^x+c_2e^{-x}$ is the general solution of $y''-y=0$
 on $(-\infty,\infty)$.
 \item % (b)
 Since $\cos\omega x/\sin\omega x=\cot\omega x$ is nonconstant,
-Theorem~\ref{thmtype:5.1.3} implies that
+\zcref{thmtype:5.1.3} implies that
  $y=c_1\cos\omega x+c_2\sin\omega x$ is the general solution
 of $y''+\omega^2y=0$ on $(-\infty,\infty)$.
 \item % (c)
 Since $x^2/x^{-2}=x^4$ is nonconstant,
-Theorem~\ref{thmtype:5.1.3} implies that
+\zcref{thmtype:5.1.3} implies that
  $y=c_1x^2+c_2/x^2$ is the general
 solution of $x^2y''+xy'-4y=0$ on $(-\infty,0)$ and $(0,\infty)$.
 \end{alist}
@@ -511,10 +509,8 @@ solution of $x^2y''+xy'-4y=0$ on $(-\infty,0)$ and $(0,\infty)$.
 
 \boxit{The Wronskian and Abel's Formula}
 
-
-\noindent
 To motivate a result that we need in order to prove
-Theorem~\ref{thmtype:5.1.3},
+\zcref{thmtype:5.1.3},
  let's see what is required to prove that  $\{y_1,y_2\}$
 is a  fundamental set of solutions of \eqref{eq:5.1.20} on  $(a,b)$.
 Let $x_0$ be an arbitrary point in  $(a,b)$, and
@@ -526,7 +522,7 @@ y''+p(x)y'+q(x)y=0,\quad y(x_0)=k_0,\quad y'(x_0)=k_1;
 \end{equation}
 that is, $k_0$ and $k_1$ are the numbers obtained by evaluating $y$
 and $y'$ at $x_0$. Moreover, $k_0$ and $k_1$ can be any real numbers,
-since Theorem~\ref{thmtype:5.1.1} implies that \eqref{eq:5.1.21} has a
+since \zcref{thmtype:5.1.1} implies that \eqref{eq:5.1.21} has a
 solution no matter how $k_0$ and $k_1$ are chosen.
 Therefore  $\{y_1,y_2\}$ is a fundamental set of solutions of
 \eqref{eq:5.1.20} on $(a,b)$ if and only if it's possible to write the
@@ -583,7 +579,7 @@ y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)\ne0
 quantity on the left  to obtain
 \begin{equation}\label{eq:5.1.26}
 \begin{aligned}
-c_1&=\frac{y_2'(x_0)k_0-y_2(x_0)k_1}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)}\\[4\jot]
+c_1&=\frac{y_2'(x_0)k_0-y_2(x_0)k_1}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)}\\
 c_2&=\frac{y_1(x_0)k_1-y_1'(x_0)k_0}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)},
 \end{aligned}
 \end{equation}
@@ -652,7 +648,7 @@ The function $W$ defined in \eqref{eq:5.1.28} is  the
 The Wronskian of  $\{y_1,y_2\}$ is usually written as the determinant
 \[
 W=\begin{vmatrix}
-y_1 & y_2 \\[2\jot]
+y_1 & y_2 \\
 y'_1 & y'_2
 \end{vmatrix}.
 \]
@@ -661,13 +657,13 @@ be written in terms of determinants as
 \[
 c_1=\frac{1}{W(x_0)}
 \begin{vmatrix}
-k_0 & y_2(x_0) \\[2\jot]
+k_0 & y_2(x_0) \\
 k_1 & y'_2(x_0)
 \end{vmatrix}
 \quad\text{and}\quad
 c_2=\frac{1}{W(x_0)}
 \begin{vmatrix}
-y_1(x_0) & k_0 \\[2\jot]
+y_1(x_0) & k_0 \\
 y'_1(x_0) &k_1
 \end{vmatrix}.
 \]
@@ -675,10 +671,10 @@ If you've taken linear algebra you may recognize this as
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Cramer.html}
 {\color{blue}\itshape Cramer's rule}.
 
-\begin{example}\label{example:5.1.5} \rm
+\begin{example}\label{example:5.1.5}
 Verify Abel's formula for the following differential equations and the
-corresponding solutions, from  Examples~\ref{example:5.1.1},
-\ref{example:5.1.2}, and \ref{example:5.1.3}:
+corresponding solutions, from
+\zcref{example:5.1.1,example:5.1.2,example:5.1.3}:
 \begin{alist}
 \item % (a)
 $y''-y=0;\quad  y_1=e^x,\;  y_2=e^{-x}$
@@ -689,36 +685,37 @@ $x^2y''+xy'-4y=0;\quad  y_1=x^2,\;  y_2=1/x^2$
 \end{alist}
 \end{example}
 
-\solutionpart{a} Since $p\equiv0$, we can verify Abel's formula
+\begin{alistSolution}
+\item Since $p\equiv0$, we can verify Abel's formula
 by showing that $W$ is constant, which is true, since
 \[
 W(x)=\begin{vmatrix}
-e^x & e^{-x} \\[2\jot]
+e^x & e^{-x} \\
 e^x & -e^{-x}
 \end{vmatrix}
 =e^x(-e^{-x})-e^xe^{-x}=-2
 \]
 for all $x$.
 
-\solutionpart{b} Again, since $p\equiv0$, we can verify Abel's
+\item Again, since $p\equiv0$, we can verify Abel's
 formula
 by showing that $W$ is constant, which is true, since
 \begin{align*}
-W(x)&=\dst{\begin{vmatrix}
-\cos\omega x & \sin\omega x \\[2\jot]
+W(x)&=\begin{vmatrix}
+\cos\omega x & \sin\omega x \\
 -\omega\sin\omega x &\omega\cos\omega x
-\end{vmatrix}}\\[2\jot]
+\end{vmatrix}
 &=\cos\omega x (\omega\cos\omega x)-(-\omega\sin\omega x)\sin\omega x\\
 &=\omega(\cos^2\omega x+\sin^2\omega x)=\omega
 \end{align*}
 for all $x$.
 
-\solutionpart{c}
+\item
 Computing the Wronskian of $y_1=x^2$ and
 $y_2=1/x^2$ directly yields
 \begin{equation}\label{eq:5.1.31}
 W=\begin{vmatrix}
-x^2 & 1/x^2 \\[2\jot]
+x^2 & 1/x^2 \\
 2x & -2/x^3
 \end{vmatrix}
 =x^2\left(-\frac{2}{x^3}\right)-2x\left(\frac{1}{x^2}\right)=-\frac{4}{x}.
@@ -741,9 +738,10 @@ W(x)&=W(x_0)e^{-\ln(x/x_0)}=W(x_0)\frac{x_0}{x}\\
 &=-\frac{4}{x},
 \end{align*}
 which is consistent with \eqref{eq:5.1.31}.\bbox
+\end{alistSolution}
 
 The next theorem will enable us to complete the proof of
-Theorem~\ref{thmtype:5.1.3}.
+\zcref{thmtype:5.1.3}.
 
 \begin{theorem}\color{blue} \label{thmtype:5.1.5}
  Suppose  $p$ and $q$ are continuous on an open interval $(a,b),$
@@ -768,7 +766,7 @@ proof.) Then $y_2/y_1$ is defined on $I$, and
 \left(\frac{y_2}{y_1}\right)'=\frac{y_1y_2'-y_1'y_2}{y_1^2}=\frac{W}{y_1^2}.
 \end{equation}
 However, if $W(x_0)=0$,
- Theorem~\ref{thmtype:5.1.4} implies that $W\equiv0$ on  $(a,b)$.
+\zcref{thmtype:5.1.4} implies that $W\equiv0$ on  $(a,b)$.
 Therefore \eqref{eq:5.1.33} implies that  $(y_2/y_1)'\equiv0$, so
 $y_2/y_1=c$ (constant) on $I$. This shows that $y_2(x)=cy_1(x)$
 for all $x$ in $I$. However, we want to show that $y_2=cy_1(x)$
@@ -782,7 +780,7 @@ y''+p(x)y'+q(x)y=0,\quad y(x_0)=0,\quad y'(x_0)=0,
 \]
 which implies that $Y\equiv0$ on  $(a,b)$,
 by the paragraph following
-Theorem~\ref{thmtype:5.1.1}. (See also Exercise~\ref{exer:5.1.24}).
+\zcref{thmtype:5.1.1}. (See also \zcref{exer:5.1.24}).
  Hence, $y_2-cy_1\equiv0$
 on  $(a,b)$, which implies that $y_1$ and $y_2$ are not linearly
 independent on  $(a,b)$.
@@ -800,16 +798,16 @@ $y_2$ on  $(a,b)$, since
 on any subinterval of  $(a,b)$ where $y_2$ has no zeros.% \bbox
 \end{proof}
 
-We can now complete the proof of Theorem~\ref{thmtype:5.1.3}.
-From Theorem~\ref{thmtype:5.1.5}, two solutions $y_1$ and $y_2$ of
+We can now complete the proof of \zcref{thmtype:5.1.3}.
+From \zcref{thmtype:5.1.5}, two solutions $y_1$ and $y_2$ of
 \eqref{eq:5.1.32} are linearly
 independent on  $(a,b)$ if and only if $W$ has no zeros on  $(a,b)$.
-From Theorem~\ref{thmtype:5.1.4} and the motivating comments preceding
+From \zcref{thmtype:5.1.4} and the motivating comments preceding
 it,  $\{y_1,y_2\}$ is  a fundamental set of solutions of
 \eqref{eq:5.1.32}  if and only if $W$ has no zeros on  $(a,b)$.
 Therefore  $\{y_1,y_2\}$ is   a fundamental set
 for \eqref{eq:5.1.32} on  $(a,b)$ if and only if  $\{y_1,y_2\}$
-is linearly independent on $(a,b)$. \bbox
+is linearly independent on $(a,b)$. \hfill\qedsymbol
 
 The next theorem summarizes the relationships among the
 concepts discussed in this section.
@@ -849,7 +847,7 @@ are continuous and $P_0$ has no zeros.
 \begin{theorem}\color{blue} \label{thmtype:5.1.7}
 Suppose  $c$ is in $(a,b)$ and $\alpha$ and $\beta$  are real numbers,
 not both zero.
-Under the assumptions of Theorem~\ref{thmtype:5.1.7}, suppose
+Under the assumptions of \zcref{thmtype:5.1.7}, suppose
 $y_{1}$ and $y_{2}$ are  solutions  of \eqref{eq:5.1.34}   such that
 \begin{equation} \label{eq:5.1.35}
 \alpha y_{1}(c)+\beta y_{1}'(c)=0\text{\;    and\; \;  }
@@ -870,12 +868,15 @@ y_{1}(c)&y_{1}'(c)\\y_{2}(c)& y_{2}'(c)
 y_{1}(c)&y_{2}(c)\\ y_{1}'(c)&y_{2}'(c)
 \end{vmatrix}=0
 \]
-and Theorem~\ref{thmtype:5.1.6} implies the stated conclusion.
+and \zcref{thmtype:5.1.6} implies the stated conclusion.
 \end{proof}
 
 \exercises
+
 \begin{exerciselist}
-\item\label{exer:5.1.1}\begin{alist}
+
+\item\label{exer:5.1.1}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify that $y_1=e^{2x}$ and $y_2=e^{5x}$ are solutions of
 \[
@@ -898,7 +899,8 @@ y''-7y'+10y=0,\quad  y(0)=k_0,\quad y'(0)=k_1.
 \]
 \end{alist}
 
-\item\label{exer:5.1.2}\begin{alist}
+\item\label{exer:5.1.2}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify that $y_1=e^x\cos x$ and $y_2=e^x\sin x$ are solutions of
 \[
@@ -922,7 +924,8 @@ y''-2y'+2y=0,\quad  y(0)=k_0,\quad y'(0)=k_1.
 \]
 \end{alist}
 
-\item\label{exer:5.1.3}\begin{alist}
+\item\label{exer:5.1.3}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify that $y_1=e^x$ and $y_2=xe^x$ are solutions of
 \[
@@ -946,7 +949,8 @@ y''-2y'+y=0,\quad  y(0)=k_0,\quad y'(0)=k_1.
 \end{alist}
 
 
-\item\label{exer:5.1.4}\begin{alist}
+\item\label{exer:5.1.4}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify that $y_1=1/(x-1)$ and $y_2=1/(x+1)$ are solutions of
 \[
@@ -975,8 +979,8 @@ Verify Abel's formula for $y_1$ and $y_2$, with $x_0=0$.
 \item $\{e^x, e^x \sin x\}$
 \item $\{x+1,  x^2+2\}$
 \item $\{ x^{1/2},  x^{-1/3}\}$
-\item $\{\dst \frac{\sin x}{x},  \frac{\cos x}{x}\}$
-\item $\{ x \ln|x|, x^2\ln|x|\}$ \\
+\item $\{\dfrac{\sin x}{x},  \dfrac{\cos x}{x}\}$
+\item $\{ x \ln|x|, x^2\ln|x|\}$
 \item $\{e^x\cos\sqrt x, e^x\sin\sqrt x\}$
 \end{alist}
 
@@ -1027,14 +1031,14 @@ on $(a,b)$, and $\{y_1,y_2\}$ is a fundamental set of solutions on
 (A) on $(a,b)$.
 
 \item % (b)
-Conclude from \part{a} that if $y_2=uy_1$ where
-$u'=K\dst\frac{e^{-P(x)}}{y_1^2(x)}$, then  $\{y_1,y_2\}$
+Conclude from (a) that if $y_2=uy_1$ where
+$u'=K\dfrac{e^{-P(x)}}{y_1^2(x)}$, then  $\{y_1,y_2\}$
 is a fundamental set of solutions of (A)
 on  $(a,b)$.
 \end{alist}
 
-\exercisetext{In Exercises~\ref{exer:5.1.10}--\ref{exer:5.1.23} use the
-method suggested by Exercise~\ref{exer:5.1.9} to find a second solution
+\exercisetext{In \zcref[range]{exer:5.1.10,exer:5.1.23} use the
+method suggested by \zcref{exer:5.1.9} to find a second solution
 $y_2$  that isn't  a constant multiple of the  solution $y_1$.
 Choose $K$ conveniently  to simplify $y_2$.}
 
@@ -1065,15 +1069,15 @@ $y_1=x^{1/2}$
 
 \item\label{exer:5.1.20}$(3x-1)y''-(3x+2)y'-(6x-8)y=0$;  \quad  $y_1=e^{2x}$
 
-\item\label{exer:5.1.21}$(x^2-4)y''+4xy'+2y=0$;  \quad  $y_1=\dst\frac{1}{x-2}$
+\item\label{exer:5.1.21}$(x^2-4)y''+4xy'+2y=0$;  \quad  $y_1=\dfrac{1}{x-2}$
 
-\item\label{exer:5.1.22}$(2x+1)xy''-2(2x^2-1)y'-4(x+1)y=0$;\quad  $y_1=\dst\frac{1}{x}$
+\item\label{exer:5.1.22}$(2x+1)xy''-2(2x^2-1)y'-4(x+1)y=0$;\quad  $y_1=\dfrac{1}{x}$
 
 \item\label{exer:5.1.23}$(x^2-2x)y''+(2-x^2)y'+(2x-2)y=0$;\quad  $y_1=e^x$
 
 \item\label{exer:5.1.24}Suppose  $p$ and $q$ are continuous on an open interval $(a,b)$
 and let $x_0$ be in $(a,b)$.
-Use   Theorem~\ref{thmtype:5.1.1} to show that
+Use   \zcref{thmtype:5.1.1} to show that
  the only solution of the initial value problem
 \[
 y''+p(x)y'+q(x)y=0,\quad  y(x_0)=0,\quad y'(x_0)=0
@@ -1150,8 +1154,8 @@ $(-\infty,\infty)$.
 Suppose $a<0<b$.
 Show that $\{y_1,y_2\}$ is linearly independent on  $(a,b)$.
 \item % (b)
-Use Exercise~\ref{exer:5.1.25}\part{b} to show that these results don't
-contradict Theorem~\ref{thmtype:5.1.5}, because neither $y_1$ nor $y_2$
+Use \zcref{exer:5.1.25}(b) to show that these results don't
+contradict \zcref{thmtype:5.1.5}, because neither $y_1$ nor $y_2$
 can be a solution of an equation
 \[
 y''+p(x)y'+q(x)y=0
@@ -1188,7 +1192,7 @@ y''+p(x)y'+q(x)y=0
 \]
 on $(a,b)$ can be
 written as a linear combination of the twice differentiable
-functions $\{y_1,y_2\}$. Use Theorem~\ref{thmtype:5.1.1} to show that
+functions $\{y_1,y_2\}$. Use \zcref{thmtype:5.1.1} to show that
 $y_1$ and $y_2$ are themselves solutions of  (A) on
 $(a,b)$.
 
@@ -1209,8 +1213,8 @@ $(a,b)$ and the Wronskian $W$ of $\{y_1,y_2\}$ has no zeros in
 $(a,b)$ then the equation
 \[
 \frac{1}{W} \begin{vmatrix}
-y & y_1 & y_2 \\[2\jot]
-y' & y'_1 & y'_2 \\[2\jot]
+y & y_1 & y_2 \\
+y' & y'_1 & y'_2 \\
 y'' & y_1'' & y_2''
 \end{vmatrix}=0
 \]
@@ -1223,7 +1227,7 @@ where $p$ and $q$ are continuous on $(a,b)$ and $\{y_1,y_2\}$ is a
 fundamental set of solutions of (A) on $(a,b)$.
 \hint{Expand the determinant by cofactors of its first column.}
 
-\item\label{exer:5.1.35}Use the method suggested by Exercise~\ref{exer:5.1.34} to find a linear
+\item\label{exer:5.1.35}Use the method suggested by \zcref{exer:5.1.34} to find a linear
 homogeneous equation for which the given functions form a fundamental
 set of solutions on some interval.
 
@@ -1259,7 +1263,7 @@ y''+p(x)y'+q(x)y=0
 y_1(x_0)=1, \quad y'_1(x_0)=0\quad\text{and}\quad
 y_2(x_0)=0,\;  y'_2(x_0)=1.
 \]
-(Theorem~\ref{thmtype:5.1.1} implies that each of these initial value
+(\zcref{thmtype:5.1.1} implies that each of these initial value
 problems
 has a unique solution on $(a,b)$.)
 \begin{alist}
@@ -1283,14 +1287,14 @@ initial conditions
 y_1(x_0)=1, \quad y'_1(x_0)=0 \quad\text{and}\quad y_2(x_0)=0,
 \quad y'_2(x_0)=1.
 \]
-Then use  Exercise~\ref{exer:5.1.37}(c) to write
+Then use  \zcref{exer:5.1.37}(c) to write
 the solution of  the initial value problem
 \[
 y''=0,\quad y(0)=k_0,\quad y'(0)=k_1
 \]
 as a linear combination of $y_1$ and $y_2$.
 
-\item\label{exer:5.1.39}Let $x_0$ be an arbitrary real number. Given (Example~\ref{example:5.1.1})
+\item\label{exer:5.1.39}Let $x_0$ be an arbitrary real number. Given (\zcref{example:5.1.1})
 that $e^x$ and $e^{-x}$ are solutions of $y''-y=0$, find
 solutions
 $y_1$ and $y_2$ of $y''-y=0$ such that
@@ -1298,14 +1302,14 @@ $y_1$ and $y_2$ of $y''-y=0$ such that
 y_1(x_0)=1, \quad y'_1(x_0)=0\quad\text{and}\quad
 y_2(x_0)=0,\;  y'_2(x_0)=1.
 \]
-Then use  Exercise~\ref{exer:5.1.37}(c) to write
+Then use  \zcref{exer:5.1.37}(c) to write
 the solution of the initial value problem
 \[
 y''-y=0,\quad y(x_0)=k_0,\quad y'(x_0)=k_1
 \]
 as a linear combination of $y_1$ and $y_2$.
 
-\item\label{exer:5.1.40}Let $x_0$ be an arbitrary real number. Given (Example~\ref{example:5.1.2})
+\item\label{exer:5.1.40}Let $x_0$ be an arbitrary real number. Given (\zcref{example:5.1.2})
 that $\cos\omega x$ and $\sin\omega x$ are solutions of
 $y''+\omega^2y=0$, find solutions of
  $y''+\omega^2y=0$ such that
@@ -1313,7 +1317,7 @@ $y''+\omega^2y=0$, find solutions of
 y_1(x_0)=1, \quad y'_1(x_0)=0\quad\text{and}\quad
 y_2(x_0)=0,\;  y'_2(x_0)=1.
 \]
-Then use Exercise~\ref{exer:5.1.37}(c) to write
+Then use \zcref{exer:5.1.37}(c) to write
 the solution of the initial value problem
 \[
 y''+\omega^2y=0,\quad y(x_0)=k_0,\quad y'(x_0)=k_1
@@ -1326,7 +1330,7 @@ Use the identities
 \end{align*}
 to  simplify your expressions for $y_1$, $y_2$, and $y$.
 
-\item\label{exer:5.1.41}Recall from Exercise~\ref{exer:5.1.4} that
+\item\label{exer:5.1.41}Recall from \zcref{exer:5.1.4} that
  $1/(x-1)$ and $1/(x+1)$ are solutions of
 \[
 (x^2-1)y''+4xy'+2y=0
@@ -1339,14 +1343,15 @@ Find solutions of (A)
 y_1(0)=1, \quad y'_1(0)=0\quad\text{and}\quad
 y_2(0)=0,\;  y'_2(0)=1.
 \]
-Then use  Exercise~\ref{exer:5.1.37}(c) to write
+Then use  \zcref{exer:5.1.37}(c) to write
 the solution of  initial value problem
 \[
 (x^2-1)y''+4xy'+2y=0,\quad  y(0)=k_0,\quad y'(0)=k_1
 \]
 as a linear combination of $y_1$ and $y_2$.
 
-\item\label{exer:5.1.42}\begin{alist}
+\item\label{exer:5.1.42}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify  that $y_1=x^2$ and $y_2=x^3$ satisfy
 \[
@@ -1395,7 +1400,7 @@ has infinitely many solutions on $(-\infty,\infty)$.  On what interval does
 (B) have a unique solution?
 \end{alist}
 
-\item\label{exer:5.1.43}%\exercisec
+\item\label{exer:5.1.43}\leavevmode\vspace{-\baselineskip}
 \begin{alist}
 \item % (a)
 Verify  that $y_1=x$ and $y_2=x^2$ satisfy
@@ -1438,7 +1443,8 @@ x^2y''-2xy'+2y=0,\quad  y(x_0)=k_0,\quad y'(x_0)=k_1
 has a unique  solution on $(-\infty,\infty)$.
 \end{alist}
 
-\item\label{exer:5.1.44}\begin{alist}
+\item\label{exer:5.1.44}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify  that $y_1=x^3$ and $y_2=x^4$ satisfy
 \[
@@ -1525,15 +1531,16 @@ formula
 r=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
 \end{equation}
 We consider three cases:
-\begin{description}
-\item{\sc Case 1.} $b^2-4ac>0$, so the characteristic equation has two
+\begin{enumext}[label=\arabic*,wrap-label={\textsc{Case} #1.},labelwidth=4em]
+\item $b^2-4ac>0$, so the characteristic equation has two
 distinct real roots.
-\item{\sc Case 2.} $b^2-4ac=0$, so the characteristic equation has a
+\item $b^2-4ac=0$, so the characteristic equation has a
 repeated real root.
-\item{\sc Case 3.} $b^2-4ac<0$, so the characteristic equation has
+\item $b^2-4ac<0$, so the characteristic equation has
 complex roots.
-\end{description}
+\end{enumext}
 In each case we'll start with an example.
+
 
 \boxit{Case 1: Distinct Real Roots}
 
@@ -1553,7 +1560,8 @@ y''+6y'+5y=0, \quad   y(0)=3,\;  y'(0)=-1.
 \end{alist}
 \end{example}
 
-\solutionpart{a}   The characteristic
+\begin{alistSolution}
+\item   The characteristic
 polynomial of
  \eqref{eq:5.2.4} is
 \[
@@ -1561,13 +1569,13 @@ p(r)=r^2+6r+5=(r+1)(r+5).
 \]
 Since $p(-1)=p(-5)=0$,  $y_1=e^{-x}$ and $y_2=e^{-5x}$
 are solutions of \eqref{eq:5.2.4}. Since $y_2/y_1=e^{-4x}$  is
-nonconstant, \ref{thmtype:5.1.6} implies that the general solution
+nonconstant, \zcref{thmtype:5.1.6} implies that the general solution
 of \eqref{eq:5.2.4} is
 \begin{equation} \label{eq:5.2.6}
 y=c_1e^{-x}+c_2e^{-5x}.
 \end{equation}
 
-\solutionpart{b} We  must determine $c_1$ and $c_2$
+\item We  must determine $c_1$ and $c_2$
 in  \eqref{eq:5.2.6} so that $y$ satisfies the initial conditions in
  \eqref{eq:5.2.5}. Differentiating  \eqref{eq:5.2.6} yields
 \begin{equation} \label{eq:5.2.7}
@@ -1584,24 +1592,25 @@ the solution of  \eqref{eq:5.2.5} is
 \[
 y=\frac{7}{2}e^{-x}-\frac{1}{2}e^{-5x}.
 \]
- Figure~\ref{figure:5.2.1} is a graph
+\zcref[S]{figure:5.2.1} is a graph
 of this solution.
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig050201}
+  \includegraphics[alt={A curve for 0<x<5 and 0<y<3 beginning at (0,3) and decreasing toward a horizontal asymptote y=0.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig050201}
 \color{blue}
-  \caption{$y=\dst{\frac{7}{2}e^{-x}-\frac{1}{2}e^{-5x}}$ }
+  \caption{$y=\dfrac{7}{2}e^{-x}-\dfrac{1}{2}e^{-5x}$}
   \label{figure:5.2.1}
 \end{figure}
+\end{alistSolution}
 
 If the characteristic equation has arbitrary distinct real roots
 $r_1$ and $r_2$, then
 $y_1=e^{r_1x}$ and $y_2=e^{r_2x}$  are  solutions of $ay''+by'+cy=0$.
-Since $y_2/y_1=e^{(r_2-r_1)x}$ is nonconstant, Theorem~\ref{thmtype:5.1.6}
+Since $y_2/y_1=e^{(r_2-r_1)x}$ is nonconstant, \zcref{thmtype:5.1.6}
  implies that  $\{y_1,y_2\}$ is a fundamental
 set of solutions of $ay''+by'+cy=0$.
-
 
 
 \boxit{Case 2: A Repeated Real Root}
@@ -1622,7 +1631,8 @@ y''+6y'+9y=0, \quad   y(0)=3,\;  y'(0)=-1.
 \end{alist}
 \end{example}
 
-\solutionpart{a}   The characteristic polynomial of
+\begin{alistSolution}
+\item The characteristic polynomial of
  \eqref{eq:5.2.8} is
 \[
 p(r)=r^2+6r+9=(r+3)^2,
@@ -1636,14 +1646,15 @@ $y=uy_1=ue^{-3x}$,
 where $u$ is a function that we'll now
 determine.
 (This should remind you of the method of variation of parameters
-used in Section~2.1 to solve the nonhomogeneous
+used in \zcref{sec:linar_first_order} to solve the nonhomogeneous
 equation $y'+p(x)y=f(x)$, given a solution $y_1$ of the complementary
 equation $y'+p(x)y=0$.  It's also a special case of a method called
-\emph{\color{blue}reduction of order} that we'll study in Section~5.6.
+\emph{\color{blue}reduction of order} that we'll study in \zcref{sec:reduction_order}.
 For other ways to obtain a second solution of \eqref{eq:5.2.8} that's
 not a multiple of $e^{-3x}$, see
-Exercises~5.1.~\hspace*{-3pt}\ref{exer:5.1.9},
-5.1.~\hspace*{-3pt}\ref{exer:5.1.12}, and \ref{exer:5.2.33}.
+{Exercises~5.1.\ref{exer:5.1.9}},
+{5.1.\ref{exer:5.1.12}}, and {5.2\ref{exer:5.2.33}}.
+% 5.2 wasn't present in the last one
 
 
 If $y=ue^{-3x}$, then
@@ -1667,11 +1678,11 @@ Letting $c_1=1$ and $c_2=0$  yields the solution
  $y_1=e^{-3x}$ that we already knew. Letting $c_1=0$ and $c_2=1$
 yields the second solution $y_2=xe^{-3x}$. Since
 $y_2/y_1=x$
-is nonconstant, \ref{thmtype:5.1.6} implies that   $\{y_1,y_2\}$ is
+is nonconstant, \zcref{thmtype:5.1.6} implies that   $\{y_1,y_2\}$ is
 fundamental set of solutions of \eqref{eq:5.2.8}, and \eqref{eq:5.2.10}
 is the general solution.
 
-\solutionpart{b}  Differentiating   \eqref{eq:5.2.10} yields
+\item Differentiating   \eqref{eq:5.2.10} yields
 \begin{equation} \label{eq:5.2.11}
 y'=-3e^{-3x}(c_1+c_2x)+c_2e^{-3x}.
 \end{equation}
@@ -1681,18 +1692,17 @@ $c_2=8$. Therefore the solution of \eqref{eq:5.2.9} is
 \[
 y=e^{-3x}(3+8x).
 \]
-Figure~\ref{figure:5.2.2} is a graph of this solution.
+\zcref[S]{figure:5.2.2} is a graph of this solution.
 
-\enlargethispage{2in}
-
-\begin{figure}[H]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig050202}
+  \includegraphics[alt={A curve for 0<x<5 and 0<y<3 beginning at (0,3) and decreasing toward a horizontal asymptote y=0.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig050202}
 \color{blue}
-\vspace*{-10pt}
   \caption{$y=e^{-3x}(3+8x)$}
   \label{figure:5.2.2}
 \end{figure}
+\end{alistSolution}
 
 If the characteristic equation of $ay''+by'+cy=0$
 has an arbitrary repeated root $r_1$,  the
@@ -1713,9 +1723,9 @@ solutions as
 y''-2r_1y'+r_1^2y=0.
 \end{equation}
 
-Since $p(r_1)=0$, t $y_1=e^{r_1x}$ is a solution of
+Since $p(r_1)=0$, $y_1=e^{r_1x}$ is a solution of
 $ay''+by'+cy=0$, and therefore of \eqref{eq:5.2.12}. Proceeding as in
-Example~\ref{example:5.2.2}, we look for other solutions of \eqref{eq:5.2.12}
+\zcref{example:5.2.2}, we look for other solutions of \eqref{eq:5.2.12}
 of the form $y=ue^{r_1x}$; then
 \[
 y'=u'e^{r_1x}+rue^{r_1x}\quad\text{and}\quad
@@ -1738,7 +1748,7 @@ Letting $c_1=1$ and $c_2=0$ here yields the solution
  $y_1=e^{r_1x}$ that we already knew. Letting $c_1=0$ and $c_2=1$
 yields the second solution $y_2=xe^{r_1x}$. Since
 $y_2/y_1=x$
-is nonconstant, \ref{thmtype:5.1.6} implies that   $\{y_1,y_2\}$ is
+is nonconstant, \zcref{thmtype:5.1.6} implies that   $\{y_1,y_2\}$ is
 a fundamental set of solutions of \eqref{eq:5.2.12}, and \eqref{eq:5.2.13}
 is the general solution.
 
@@ -1761,7 +1771,8 @@ y''+4y'+13y=0, \quad   y(0)=2,\;  y'(0)=-3.
 \end{alist}
 \end{example}
 
-\solutionpart{a}  The characteristic
+\begin{alistSolution}
+\item The characteristic
 polynomial of
  \eqref{eq:5.2.14} is
 \[
@@ -1770,7 +1781,7 @@ p(r)=r^2+4r+13=r^2+4r+4+9=(r+2)^2+9.
 The roots of the characteristic equation are $r_1=-2+3i$ and
 $r_2=-2-3i$. By analogy with Case~1, it's reasonable to expect that
 $e^{(-2+3i)x}$ and $e^{(-2-3i)x}$ are solutions of \eqref{eq:5.2.14}. This
-is true (see Exercise~\ref{exer:5.2.34});     however, there are
+is true (see \zcref{exer:5.2.34});     however, there are
 difficulties here, since you are probably not familiar with
 exponential functions with complex arguments, and even if you are, it's
  inconvenient to work with them, since they are complex--valued. We'll
@@ -1798,7 +1809,7 @@ Therefore $y=ue^{-2x}$ is a solution of \eqref{eq:5.2.14} if and only if
 \[
 u''+9u=0.
 \]
-From Example~\ref{example:5.1.2}, the  general solution of this equation is
+From \zcref{example:5.1.2}, the  general solution of this equation is
 \[
 u=c_1\cos 3x +c_2\sin 3x.
 \]
@@ -1811,11 +1822,11 @@ Letting $c_1=1$ and $c_2=0$  yields the solution
  $y_1=e^{-2x}\cos3x$. Letting $c_1=0$ and $c_2=1$
 yields the second solution $y_2=e^{-2x}\sin3x$. Since
 $y_2/y_1=\tan3x$
-is nonconstant, \ref{thmtype:5.1.6} implies that   $\{y_1,y_2\}$ is
+is nonconstant, \zcref{thmtype:5.1.6} implies that   $\{y_1,y_2\}$ is
 a fundamental set of solutions of \eqref{eq:5.2.14}, and \eqref{eq:5.2.16}
 is the general solution.
 
-\solutionpart{b}   Imposing the condition $y(0)=2$
+\item Imposing the condition $y(0)=2$
 in   \eqref{eq:5.2.16} shows that $c_1=2$.  Differentiating
 \eqref{eq:5.2.16} yields
 \[
@@ -1828,18 +1839,17 @@ $-3=-2c_1+3c_2=-4+3c_2$,
 \[
 y=e^{-2x}(2\cos 3x+ \frac{1}{3}\sin 3x).
 \]
-Figure~\ref{figure:5.2.3}  is a graph of this function. \bbox
+\zcref[S]{figure:5.2.3}  is a graph of this function. \bbox
 
-      \begin{figure}[tbp]
+\begin{figure}
   \centering
 \color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig050203}
-  \caption{$\dst{y=e^{-2x}(2\cos 3x+ \frac{1}{3}\sin 3x)}$}
+  \includegraphics[alt={A curve for 0<x,y<2 beginning at (0,2) and decreasing toward a horizontal asymptote y=0.  The curve crosses the x axis near x=0.5 and x=1.5.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig050203}
+  \caption{$y=e^{-2x}(2\cos 3x+ \dfrac{1}{3}\sin 3x)$}
   \label{figure:5.2.3}
 \end{figure}
-
-
-
+\end{alistSolution}
 
 Now suppose   the characteristic equation of $ay''+by'+cy=0$ has
 arbitrary complex roots;   thus, $b^2-4ac<0$ and, from \eqref{eq:5.2.3},
@@ -1868,7 +1878,7 @@ $r_2$. We say that $r_1$ and $r_2$ are \emph{\color{blue}complex conjugates},
 which means that they have the same real part and their imaginary
 parts have the same absolute values, but opposite signs.
 
-As in Example~\ref{example:5.2.3}, it's reasonable to
+As in \zcref{example:5.2.3}, it's reasonable to
 to expect that the solutions of $ay''+by'+cy=0$  are linear
 combinations of
 $e^{(\lambda+i\omega)x}$ and $e^{(\lambda-i\omega)x}$.
@@ -1918,7 +1928,7 @@ which simplifies to
 \[
 u''+\omega^2 u=0.
 \]
-From Example~\ref{example:5.1.2}, the  general solution of this
+From \zcref{example:5.1.2}, the  general solution of this
 equation is
 \[
 u=c_1\cos\omega x +c_2\sin\omega x.
@@ -1932,15 +1942,14 @@ Letting $c_1=1$ and $c_2=0$ here yields the solution
  $y_1=e^{\lambda x}\cos\omega x$. Letting $c_1=0$ and $c_2=1$
 yields a second solution $y_2=e^{\lambda x}\sin\omega x$. Since
 $y_2/y_1=\tan\omega x$
-is nonconstant, so  Theorem~\ref{thmtype:5.1.6} implies that
+is nonconstant, so  \zcref{thmtype:5.1.6} implies that
 $\{y_1,y_2\}$ is
 a fundamental set of solutions of \eqref{eq:5.2.18}, and \eqref{eq:5.2.19}
 is the general solution.
 
+
 \boxit{Summary}
 
-
-\noindent
 The next theorem summarizes the results of this section.
 
 \begin{theorem}\color{blue} \label{thmtype:5.2.1}
@@ -1973,47 +1982,23 @@ y=e^{\lambda x}(c_1\cos\omega x+c_2\sin\omega x).
 \end{theorem}
 
 \exercises
- In Exercises \ref{exer:5.2.1}--\ref{exer:5.2.12} find the general solution.
+In \zcref[range]{exer:5.2.1,exer:5.2.12} find the general solution.
 
 \begin{exerciselist}
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 1--12 in two columns
- \item\label{exer:5.2.1}$y''+5y'-6y=0$
-%& \vspace*{10pt} 
-\item\label{exer:5.2.2}$y''-4y'+5y=0$
-%\end{tabular}
+\item(1)\label{exer:5.2.1}$y''+5y'-6y=0$
+\item(1)\label{exer:5.2.2}$y''-4y'+5y=0$
+\item(1)\label{exer:5.2.3}$y''+8y'+7y=0$
+\item(1)\label{exer:5.2.4}$y''-4y'+4y=0$
+\item(1)\label{exer:5.2.5}$y''+2y'+10y=0$
+\item(1)\label{exer:5.2.6}$y''+6y'+10y=0$
+\item(1)\label{exer:5.2.7}$y''-8y'+16y=0$
+\item(1)\label{exer:5.2.8}$y''+y'=0$
+\item(1)\label{exer:5.2.9}$y''-2y'+3y=0$
+\item(1)\label{exer:5.2.10}$y''+6y'+13y=0 $
+\item(1)\label{exer:5.2.11}$4y''+4y'+10y=0$
+\item(1)\label{exer:5.2.12}$10y''-3y'-y=0$
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \item\label{exer:5.2.3}$y''+8y'+7y=0$
-%&  
-\item\label{exer:5.2.4}$y''-4y'+4y=0$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \item\label{exer:5.2.5}$y''+2y'+10y=0$
-%&  
-\item\label{exer:5.2.6}$y''+6y'+10y=0$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \item\label{exer:5.2.7}$y''-8y'+16y=0$
-%&  
-\item\label{exer:5.2.8}$y''+y'=0$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
- \item\label{exer:5.2.9}$y''-2y'+3y=0$
-%& 
-\item\label{exer:5.2.10}$y''+6y'+13y=0 $
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-  \item\label{exer:5.2.11}$4y''+4y'+10y=0$
-%  &
- \item\label{exer:5.2.12}$10y''-3y'-y=0$
-%\end{tabular}
-
-\exercisetext{In Exercises \ref{exer:5.2.13}--\ref{exer:5.2.17} solve
+\exercisetext{In \zcref[range]{exer:5.2.13,exer:5.2.17} solve
 the initial value problem.}
 
 
@@ -2026,11 +2011,11 @@ the initial value problem.}
 \item\label{exer:5.2.15}$6y''+y'-y=0, \quad  y(0)=-1,\quad y'(0)=3$
 
 
-\item\label{exer:5.2.16}$4y''-4y'-3y=0, \quad  y(0)=\dst\frac{13}{12},\quad y'(0)=\dst\frac{23}{24}$
+\item\label{exer:5.2.16}$4y''-4y'-3y=0, \quad  y(0)=\dfrac{13}{12},\quad y'(0)=\dfrac{23}{24}$
 
-\item\label{exer:5.2.17}$4y''-12y'+9y=0, \quad  y(0)=3,\quad y'(0)=\dst\frac{5}{2}$
+\item\label{exer:5.2.17}$4y''-12y'+9y=0, \quad  y(0)=3,\quad y'(0)=\dfrac{5}{2}$
 
-\exercisetext{In Exercises \ref{exer:5.2.18}--\ref{exer:5.2.21} solve
+\exercisetext{In \zcref[range]{exer:5.2.18,exer:5.2.21} solve
 the initial value problem and graph the solution.}
 
 \item\label{exer:5.2.18}\CGex
@@ -2042,13 +2027,14 @@ $y''-6y'+9y=0, \quad  y(0)=0,\quad y'(0)=2$
 
 
 \item\label{exer:5.2.20}\CGex
-$36y''-12y'+y=0, \quad  y(0)=3,\quad y'(0)=\dst\frac{5}{2}$
+$36y''-12y'+y=0, \quad  y(0)=3,\quad y'(0)=\dfrac{5}{2}$
 
 
 \item\label{exer:5.2.21}\CGex
 $y''+4y'+10y=0, \quad  y(0)=3,\quad y'(0)=-2$
 
-\item\label{exer:5.2.22}\begin{alist}
+\item\label{exer:5.2.22}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Suppose $y$  is a solution of the constant coefficient homogeneous
 equation
@@ -2069,7 +2055,7 @@ $\{z_1,z_2\}$ is also a fundamental set of solutions of
 
 \item % (c)
 The statement of
- Theorem~\ref{thmtype:5.2.1}  is convenient for solving an
+\zcref{thmtype:5.2.1}  is convenient for solving an
 initial value problem
 \[
 ay''+by'+cy=0, \quad  y(0)=k_0,\quad y'(0)=k_1,
@@ -2085,25 +2071,22 @@ where $x_0\ne0$, then  determining  the constants in
 y=c_1e^{r_1x}+c_2e^{r_2x}, \quad  y=e^{r_1x}(c_1+c_2x),\text{ or }
 y=e^{\lambda x}(c_1\cos\omega x+c_2\sin\omega x)
 \]
-(whichever is applicable) is more complicated. Use \part{b} to restate
-Theorem~\ref{thmtype:5.2.1} in a form more convenient for solving
+(whichever is applicable) is more complicated. Use (b) to restate
+\zcref{thmtype:5.2.1} in a form more convenient for solving
 (B).
 \end{alist}
 
-%\enlargethispage{1in}
-\exercisetext{In Exercises \ref{exer:5.2.23}--\ref{exer:5.2.28} use a method
-suggested by Exercise~\ref{exer:5.2.22} to solve the initial value
+\exercisetext{In \zcref[range]{exer:5.2.23,exer:5.2.28} use a method
+suggested by \zcref{exer:5.2.22} to solve the initial value
 problem.}
-
-
 
 \item\label{exer:5.2.23}$y''+3y'+2y=0, \quad  y(1)=-1,\quad y'(1)=4$
 
-\item\label{exer:5.2.24}$y''-6y'-7y=0, \quad  y(2)=-\dst\frac{1}{3},\quad y'(2)=-5$
+\item\label{exer:5.2.24}$y''-6y'-7y=0, \quad  y(2)=-\dfrac{1}{3},\quad y'(2)=-5$
 
 \item\label{exer:5.2.25}$y''-14y'+49y=0, \quad  y(1)=2,\quad y'(1)=11$
 
-\item\label{exer:5.2.26}$9y''+6y'+y=0, \quad  y(2)=2,\quad y'(2)=-\dst\frac{14}{3}$
+\item\label{exer:5.2.26}$9y''+6y'+y=0, \quad  y(2)=2,\quad y'(2)=-\dfrac{14}{3}$
 
 \item\label{exer:5.2.27}$9y''+4y=0, \quad  y(\pi/4)=2,\quad y'(\pi/4)=-2$
 
@@ -2117,9 +2100,9 @@ ay''+by'+cy=0
 has a repeated negative root or two roots with negative real parts, then
 every solution of  (A) approaches zero as $x\to\infty$.
 
-\item\label{exer:5.2.30}Suppose  the characteristic polynomial of $ay''+by'+cy=0$
+\item\label{exer:5.2.30}Suppose the characteristic polynomial of $ay''+by'+cy=0$
  has distinct real roots $r_1$ and $r_2$. Use a method suggested
-by Exercise~\ref{exer:5.2.22}  to find a formula for the solution
+by \zcref{exer:5.2.22}  to find a formula for the solution
 of
 \[
 ay''+by'+cy=0, \quad  y(x_0)=k_0,\quad y'(x_0)=k_1.
@@ -2127,14 +2110,14 @@ ay''+by'+cy=0, \quad  y(x_0)=k_0,\quad y'(x_0)=k_1.
 
 \item\label{exer:5.2.31}Suppose the characteristic polynomial of $ay''+by'+cy=0$ has a
 repeated real root $r_1$. Use a method suggested by
-Exercise~\ref{exer:5.2.22} to find a formula for the solution of
+\zcref{exer:5.2.22} to find a formula for the solution of
 \[
 ay''+by'+cy=0, \quad  y(x_0)=k_0,\quad y'(x_0)=k_1.
 \]
 
 \item\label{exer:5.2.32}Suppose the characteristic polynomial of $ay''+by'+cy=0$ has
 complex conjugate roots $\lambda\pm i\omega$. Use a method suggested
-by Exercise~\ref{exer:5.2.22} to find a formula for the solution of
+by \zcref{exer:5.2.22} to find a formula for the solution of
 \[
 ay''+by'+cy=0, \quad  y(x_0)=k_0,\quad y'(x_0)=k_1.
 \]
@@ -2177,6 +2160,7 @@ to see that $y_1=e^{r_1x}$ and $y_2=xe^{r_1x}$ are solutions
 of (A)
 \end{alist}
 
+% TODO This is too tall
 \item\label{exer:5.2.34}In calculus you learned that $e^u$, $\cos u$, and $\sin u$
 can be represented by the infinite series
 \[
@@ -2221,7 +2205,7 @@ Use this to group the terms in (D) as
 \begin{align*}
 e^{i\theta}
 &=\left(1-\frac{\theta^2}{2}+\frac{\theta^4}{4}+\cdots\right)
-+i\left(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}+\cdots\right)\\[2\jot]
++i\left(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}+\cdots\right)\\
 &=\sum_{n=0}^\infty (-1)^n\frac{\theta^{2n}}{(2n)!}
 +i\sum_{n=0}^\infty (-1)^n\frac{\theta^{2n+1}}{(2n+1)!}.
 \end{align*}
@@ -2273,14 +2257,13 @@ ay''+by'+cy=0
 \tag{G}
 \]
 if $u$ and $v$ are both solutions of (G).
-Use   Theorem~\ref{thmtype:5.2.1}\part{c} to verify that if the
+Use \zcref{thmtype:5.2.1}(c) to verify that if the
 characteristic equation of (G) has complex conjugate roots
 $\lambda\pm i\omega$ then
 $z_1=e^{(\lambda+i\omega)x}$ and $z_2=e^{(\lambda-i\omega)x}$
 are both solutions of (G).
 \end{alist}
 \end{exerciselist}
-
 
 
 \section{Nonhomogeneous Linear Equations}\label{sec:nonhomog_linear}
@@ -2290,7 +2273,7 @@ We'll now consider the nonhomogeneous linear second order equation
 y''+p(x)y'+q(x)y=f(x),
 \end{equation}
 where the forcing function $f$ isn't  identically zero. The next
-theorem, an extension of Theorem~\ref{thmtype:5.1.1}, gives sufficient
+theorem, an extension of \zcref{thmtype:5.1.1}, gives sufficient
 conditions for existence and uniqueness of solutions of initial value
 problems for \eqref{eq:5.3.1}. We omit the proof, which is beyond the
 scope of this book.
@@ -2352,9 +2335,9 @@ so
 \begin{align*}
 y''+p(x)y'+q(x)y&=(y_p''+c_1y_1''+c_2y_2'')
 +p(x)(y_p'+c_1y_1'+c_2y_2')\\
-&\; +q(x)(y_p+c_1y_1+c_2y_2)\\
+&\quad{}+q(x)(y_p+c_1y_1+c_2y_2)\\
 &=(y_p''+p(x)y_p'+q(x)y_p)+c_1(y_1''+p(x)y_1'+q(x)y_1)\\
-&\; +c_2(y_2''+p(x)y_2'+q(x)y_2)\\
+&\quad{}+c_2(y_2''+p(x)y_2'+q(x)y_2)\\
 &= f+c_1\cdot0+c_2\cdot0=f,
 \end{align*}
 since $y_p$ satisfies \eqref{eq:5.3.3} and $y_1$ and $y_2$ satisfy
@@ -2369,9 +2352,9 @@ compute
 \begin{align*}
 (y-y_p)''+p(x)(y-y_p)'+q(x)(y-y_p)
 &=(y''-y_p'')+p(x)(y'-y_p')\\
-&+q(x)(y-y_p)\\
+&\quad{}+q(x)(y-y_p)\\
 &=(y''+p(x)y'+q(x)y)\\
-& -(y_p''+p(x)y_p'+q(x)y_p)\\
+&\quad{}-(y_p''+p(x)y_p'+q(x)y_p)\\
 &=f(x)-f(x)=0,
 \end{align*}
 since $y$ and $y_p$ both satisfy \eqref{eq:5.3.3}.% \bbox
@@ -2382,7 +2365,7 @@ $\eqref{eq:5.3.3}$ on $(a,b)$}.
 
 
 If $P_0$, $P_1$, and $F$ are continuous and $P_0$ has no zeros on
-$(a,b)$, then  Theorem~\ref{thmtype:5.3.2} implies that the general
+$(a,b)$, then \zcref{thmtype:5.3.2} implies that the general
 solution of
 \begin{equation} \label{eq:5.3.6}
 P_0(x)y''+P_1(x)y'+P_2(x)y=F(x)
@@ -2397,7 +2380,7 @@ on $(a,b)$. To see this, we rewrite \eqref{eq:5.3.6} as
 \[
 y''+\frac{P_1(x)}{P_0(x)}y'+\frac{P_2(x)}{P_0(x)}y=\frac{F(x)}{P_0(x)}
 \]
-and apply Theorem~\ref{thmtype:5.3.2} with $p=P_1/P_0$, $q=P_2/P_0$, and
+and apply \zcref{thmtype:5.3.2} with $p=P_1/P_0$, $q=P_2/P_0$, and
 $f=F/P_0$.
 
 
@@ -2417,12 +2400,12 @@ For completeness, we point out that if $P_0$, $P_1$, $P_2$, and $F$ are
 all continuous on an open interval $(a,b)$, but $P_0$ \emph{\color{blue}does}
 have a zero in $(a,b)$, then \eqref{eq:5.3.6} may fail to have a general
 solution on $(a,b)$ in the sense just defined.
- Exercises~\ref{exer:5.1.42}--\ref{exer:5.1.44}
+\zcref[S,range]{exer:5.1.42,exer:5.1.44}
 illustrate this point for a homogeneous equation.
 
 
 In this section we to limit ourselves to applications of
-Theorem~\ref{thmtype:5.3.2} where we can guess at the form of the
+\zcref{thmtype:5.3.2} where we can guess at the form of the
 particular solution.
 
 \begin{example}\label{example:5.3.1}
@@ -2440,8 +2423,9 @@ y''+y=1, \quad  y(0)=2,\quad y'(0)=7.
 \end{alist}
 \end{example}
 
-\solutionpart{a}
-We can apply Theorem~\ref{thmtype:5.3.2} with $(a,b)= (-\infty,\infty)$,
+\begin{alistSolution}
+\item
+We can apply \zcref{thmtype:5.3.2} with $(a,b)= (-\infty,\infty)$,
 since the functions $p\equiv0$, $q\equiv1$, and $f\equiv1$ in
 \eqref{eq:5.3.7} are continuous on $(-\infty,\infty)$. By inspection we
 see that $y_p\equiv1$ is a particular solution of \eqref{eq:5.3.7}. Since
@@ -2452,7 +2436,7 @@ the complementary equation $y''+y=0$, the general solution of
 y=1+c_1\cos x+c_2\sin x.
 \end{equation}
 
-\solutionpart{b}
+\item
 Imposing the initial condition $y(0)=2$ in \eqref{eq:5.3.9} yields
 $2=1+c_1$, so $c_1=1$. Differentiating \eqref{eq:5.3.9} yields
 \[
@@ -2463,18 +2447,18 @@ so the solution of \eqref{eq:5.3.8} is
 \[
 y=1+\cos x+7\sin x.
 \]
-Figure~\ref{figure:5.3.1} is a graph of this function.
+\zcref[S]{figure:5.3.1} is a graph of this function.
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig050301}
+  \includegraphics[alt={A generic sinusoidal curve.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig050301}
 \color{blue}
-  \caption{ $y=1+\cos x+7\sin x$}
+  \caption{$y=1+\cos x+7\sin x$}
   \label{figure:5.3.1}
 \end{figure}
 
-
+\end{alistSolution}
 
 
 \begin{example}\label{example:5.3.2}
@@ -2492,7 +2476,8 @@ y''-2y'+y=-3-x+x^2, \quad  y(0)=-2,\quad y'(0)=1.
 \end{alist}
 \end{example}
 
-\solutionpart{a}
+\begin{alistSolution}
+\item
 The characteristic polynomial of the complementary equation
 \[
 y''-2y'+y=0
@@ -2526,13 +2511,13 @@ A-2B+2C&= -3,
 \end{align*}
 so $C=1$, $B=-1+4C=3$, and $A=-3-2C+2B=1$.
 Therefore $y_p=1+3x+x^2$ is a particular solution of
-\eqref{eq:5.3.10} and  Theorem~\ref{thmtype:5.3.2} implies that
+\eqref{eq:5.3.10} and  \zcref{thmtype:5.3.2} implies that
 \begin{equation} \label{eq:5.3.12}
 y=1+3x+x^2+e^x(c_1+c_2x)
 \end{equation}
 is the general solution of \eqref{eq:5.3.10}.
 
-\solutionpart{b} Imposing the initial condition $y(0)=-2$ in
+\item Imposing the initial condition $y(0)=-2$ in
 \eqref{eq:5.3.12} yields $-2=1+c_1$, so $c_1=-3$. Differentiating
 \eqref{eq:5.3.12} yields
 \[
@@ -2544,22 +2529,22 @@ is
 \[
 y=1+3x+x^2-e^x(3-x).
 \]
-Figure~\ref{figure:5.3.2}  is a graph of this solution.
+\zcref[S]{figure:5.3.2}  is a graph of this solution.
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig050302}
+  \includegraphics[alt={A curve for 0<x<2 and -2<y<16 beginning at (0,-2), crossing the x axis near x=0.6, and increasing from there.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig050302}
 \color{blue}
   \caption{ $y=1+3x+x^2-e^x(3-x)$}
   \label{figure:5.3.2}
 \end{figure}
 
+\end{alistSolution}
 
 
 
-
-\begin{example}\label{example:5.3.3} \rm
+\begin{example}\label{example:5.3.3}
 Find the general solution of
 \begin{equation} \label{eq:5.3.13}
 x^2y''+xy'-4y=2x^4
@@ -2568,7 +2553,7 @@ on $(-\infty,0)$ and $(0,\infty)$.
 \end{example}
 
 \solution
-In Example~\ref{example:5.1.3},  we verified that $y_1=x^2$ and $y_2=1/x^2$
+In \zcref{example:5.1.3},  we verified that $y_1=x^2$ and $y_2=1/x^2$
 form a fundamental set of solutions of the complementary equation
 \[
 x^2y''+xy'-4y=0
@@ -2584,22 +2569,21 @@ x^2y_p''+xy_p'-4y_p=x^2(12Ax^2)+x(4Ax^3)-4Ax^4=12Ax^4=2x^4
 \]
 if $A=1/6$;  therefore, $y_p=x^4/6$ is a particular solution of
 \eqref{eq:5.3.13} on  $(-\infty,\infty)$.
-Theorem~\ref{thmtype:5.3.2} implies that the general solution of
+\zcref[S]{thmtype:5.3.2} implies that the general solution of
 \eqref{eq:5.3.13} on  $(-\infty,0)$ and  $(0,\infty)$ is
 \[
 y=\frac{x^4}{6}+c_1x^2+\frac{c_2}{x^2}.
 \]
 
+
 \boxit{The Principle of Superposition}
 
-
-\noindent
-The next theorem enables us to break a nonhomogeous equation into
+The next theorem enables us to break a nonhomogeneous equation into
 simpler parts, find a particular solution for each part, and then
 combine their solutions to obtain a particular solution of the
 original problem.
 
-\begin{theorem}\color{blue}$[$The Principle of Superposition$]$
+\begin{theorem}[The Principle of Superposition]
 \label{thmtype:5.3.3} Suppose  $y_{p_1}$ is a particular solution of
 \[
 y''+p(x)y'+q(x)y=f_1(x)
@@ -2634,7 +2618,7 @@ y_p''+p(x)y_p'+q(x)y_p
 
 
 
-It's easy to generalize  Theorem~\ref{thmtype:5.3.3}
+It's easy to generalize  \zcref{thmtype:5.3.3}
 to the equation
 \begin{equation} \label{eq:5.3.14}
 y''+p(x)y'+q(x)y=f(x)
@@ -2650,13 +2634,13 @@ y''+p(x)y'+q(x)y=f_i(x)
 on $(a,b)$ for $i=1$, $2$, \dots, $k$, then
 $y_{p_1}+y_{p_2}+\cdots+y_{p_k}$
 is a particular solution of \eqref{eq:5.3.14} on $(a,b)$. Moreover, by a
-proof similar to the proof of Theorem~\ref{thmtype:5.3.3} we can formulate
+proof similar to the proof of \zcref{thmtype:5.3.3} we can formulate
 the principle of superposition in terms of a linear equation written
 in the form
 \[
 P_0(x)y''+P_1(x)y'+P_2(x)y=F(x)
 \]
-(Exercise~\ref{exer:5.3.39});
+(\zcref{exer:5.3.39});
    that is, if $y_{p_1}$
 is a particular solution of
 \[
@@ -2672,7 +2656,7 @@ P_0(x)y''+P_1(x)y'+P_2(x)y=F_1(x)+F_2(x)
 \]
 on $(a,b)$.
 
-\begin{example}\label{example:5.3.4} \rm
+\begin{example}\label{example:5.3.4}
 The function
  $y_{p_1}=x^4/15$ is a   particular solution of
 \begin{equation} \label{eq:5.3.15}
@@ -2706,10 +2690,9 @@ is a particular solution of \eqref{eq:5.3.17}.
 
 \exercises
 
-\noindent
-In Exercises~\ref{exer:5.3.1}--\ref{exer:5.3.6}  find a
+In \zcref[range]{exer:5.3.1,exer:5.3.6}  find a
 particular solution  by the method used in
-Example~\ref{example:5.3.2}. Then find the general
+\zcref{example:5.3.2}. Then find the general
 solution and, where indicated, solve the initial value problem
 and graph the solution.
 
@@ -2729,7 +2712,7 @@ and graph the solution.
 \item\label{exer:5.3.6}\CGex $y''+6y'+10y=22+20x, \quad  y(0)=2,\;
 y'(0)=-2$
 
-\item\label{exer:5.3.7}Show that the method used in Example~\ref{example:5.3.2}
+\item\label{exer:5.3.7}Show that the method used in \zcref{example:5.3.2}
 won't yield a particular solution of
 \[
 y''+y'=1+2x+x^2;
@@ -2739,30 +2722,18 @@ that is,  (A) doesn't have a particular
 solution of the form $y_p=A+Bx+Cx^2$, where $A$, $B$, and $C$ are
 constants.
 
-\exercisetext{In Exercises~\ref{exer:5.3.8}--\ref{exer:5.3.13} find a
-particular solution by the method used in Example~\ref{example:5.3.3}.}
+\exercisetext{In \zcref[range]{exer:5.3.8,exer:5.3.13} find a
+particular solution by the method used in \zcref{example:5.3.3}.}
 
-% \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 8--13 in two columns
-\item\label{exer:5.3.8}$x^2y''+7xy'+8y=\dst\frac{6}{x}$
-%& 
-\item\label{exer:5.3.9}$x^2y''-7xy'+7y=13x^{1/2}$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.3.10}$x^2y''-xy'+y=2x^3$
-%& 
-\item\label{exer:5.3.11}$x^2y''+5xy'+4y=\dst\frac{1}{x^3}$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.3.12}$x^2y''+xy'+y=10x^{1/3}$
-%& 
-\item\label{exer:5.3.13}$x^2y''-3xy'+13y=2x^4$
-%\end{tabular}
+\item(1)\label{exer:5.3.8}$x^2y''+7xy'+8y=\dfrac{6}{x}$
+\item(1)\label{exer:5.3.9}$x^2y''-7xy'+7y=13x^{1/2}$
+\item(1)\label{exer:5.3.10}$x^2y''-xy'+y=2x^3$
+\item(1)\label{exer:5.3.11}$x^2y''+5xy'+4y=\dfrac{1}{x^3}$
+\item(1)\label{exer:5.3.12}$x^2y''+xy'+y=10x^{1/3}$
+\item(1)\label{exer:5.3.13}$x^2y''-3xy'+13y=2x^4$
 
 \item\label{exer:5.3.14}Show that the method suggested for finding a particular
-solution in Exercises~\ref{exer:5.3.8}-\ref{exer:5.3.13}
+solution in \zcref[range]{exer:5.3.8,exer:5.3.13}
 won't yield a particular solution of
 \[
 x^2y''+3xy'-3y=\frac{1}{x^3};
@@ -2784,34 +2755,26 @@ has a particular solution $y_p=Ax^\alpha$ ($A=$ constant)
 a(e^{\alpha x})''+b(e^{\alpha x})'+ce^{\alpha x}=(a\alpha^2+b\alpha+c)e^{\alpha
 x}.
 \]
-Use this in Exercises~\ref{exer:5.3.16}--\ref{exer:5.3.21} to find a
+Use this in \zcref[range]{exer:5.3.16,exer:5.3.21} to find a
 particular solution. Then find the general solution
 and, where indicated, solve the initial value problem
 and graph the solution.}
-%Exercises~\ref{exer:5.3.16}--\ref{exer:5.3.21} are referenced later as
+%\zcref[range,S]{exer:5.3.16,exer:5.3.21} are referenced later as
 %\exercisec.
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 16--17 in two columns
- \item\label{exer:5.3.16}$y''+5y'-6y=6e^{3x}$
-%& \vspace*{10pt} 
-\item\label{exer:5.3.17}$y''-4y'+5y=e^{2x}$
-%\end{tabular}
+\item(1)\label{exer:5.3.16}$y''+5y'-6y=6e^{3x}$
+\item(1)\label{exer:5.3.17}$y''-4y'+5y=e^{2x}$
 
 \item\label{exer:5.3.18}\CGex $y''+8y'+7y=10e^{-2x}, \quad  y(0)=-2,\;
 y'(0)=10$
 
 \item\label{exer:5.3.19}\CGex $y''-4y'+4y=e^{x}, \quad  y(0)=2,\quad y'(0)=0$
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 20--21 in two columns
- \item\label{exer:5.3.20}$y''+2y'+10y=e^{x/2}$
-%&  
-\item\label{exer:5.3.21}$y''+6y'+10y=e^{-3x}$
-%\end{tabular}
+\item(1)\label{exer:5.3.20}$y''+2y'+10y=e^{x/2}$
+\item(1)\label{exer:5.3.21}$y''+6y'+10y=e^{-3x}$
 
 \item\label{exer:5.3.22}Show that the method suggested for finding a particular
-solution in Exercises~\ref{exer:5.3.16}-\ref{exer:5.3.21}
+solution in \zcref[range]{exer:5.3.16,exer:5.3.21}
 won't yield a particular solution of
 \[
 y''-7y'+12y=5e^{4x};
@@ -2832,7 +2795,7 @@ complementary equation.
 \exercisetext{If $\omega$ is a constant,  differentiating a linear
 combination of $\cos\omega x$ and $\sin\omega x$ with respect to $x$
 yields another linear combination of $\cos\omega x$ and $\sin\omega
-x$. In Exercises~\ref{exer:5.3.24}--\ref{exer:5.3.29} use this  to find a
+x$. In \zcref[range]{exer:5.3.24,exer:5.3.29} use this  to find a
 particular solution of the equation. Then find the general
 solution and, where indicated, solve the initial value problem
 and graph the solution.}
@@ -2859,7 +2822,7 @@ where $M$ and $N$ are constants and
  $\omega$ and $\omega_0$ are distinct  positive numbers.
 
 \item\label{exer:5.3.31}Show that the method suggested for finding a particular
-solution in Exercises~\ref{exer:5.3.24}-\ref{exer:5.3.29}
+solution in \zcref[range]{exer:5.3.24,exer:5.3.29}
 won't yield a particular solution of
 \[
 y''+y=\cos x+\sin x;
@@ -2880,27 +2843,27 @@ of $\cos\omega x$ and $\sin\omega x$
 is not of the form $a(y''+\omega^2y)$, so that $\cos\omega x$
 and $\sin\omega x$ are solutions of the complementary equation.
 
-\exercisetext{In Exercises~\ref{exer:5.3.33}--\ref{exer:5.3.38} refer
+\exercisetext{In \zcref[range]{exer:5.3.33,exer:5.3.38} refer
 to the cited exercises and use the principal of superposition to find
 a particular solution. Then find the general solution.}
 
 \item\label{exer:5.3.33}$y''+5y'-6y=22+18x-18x^2+6e^{3x}$
-(See Exercises~\ref{exer:5.3.1} and \ref{exer:5.3.16}.)
+(See \zcref{exer:5.3.1,exer:5.3.16}.)
 
 \item\label{exer:5.3.34}$y''-4y'+5y=1+5x+e^{2x}$
-(See Exercises~\ref{exer:5.3.2} and \ref{exer:5.3.17}.)
+(See \zcref{exer:5.3.2,exer:5.3.17}.)
 
 \item\label{exer:5.3.35}$y''+8y'+7y=-8-x+24x^2+7x^3+10e^{-2x}$
-(See Exercises~\ref{exer:5.3.3} and \ref{exer:5.3.18}.)
+(See \zcref{exer:5.3.3,exer:5.3.18}.)
 
 \item\label{exer:5.3.36}$y''-4y'+4y=2+8x-4x^2+e^{x}$
-(See Exercises~\ref{exer:5.3.4} and \ref{exer:5.3.19}.)
+(See \zcref{exer:5.3.4,exer:5.3.19}.)
 
 \item\label{exer:5.3.37}$y''+2y'+10y=4+26x+6x^2+10x^3+e^{x/2}$
-(See Exercises~\ref{exer:5.3.5} and \ref{exer:5.3.20}.)
+(See \zcref{exer:5.3.5,exer:5.3.20}.)
 
 \item\label{exer:5.3.38}$y''+6y'+10y=22+20x+e^{-3x}$
-(See Exercises~\ref{exer:5.3.6} and \ref{exer:5.3.21}.)
+(See \zcref{exer:5.3.6,exer:5.3.21}.)
 
 \item\label{exer:5.3.39}Prove: If $y_{p_1}$
 is a particular solution of
@@ -2938,7 +2901,7 @@ ay''+by'+cy=e^{\alpha x}G(x),
 where $\alpha$ is a constant and $G$ is a polynomial.
 
 
-From Theorem~\ref{thmtype:5.3.2}, the general solution of \eqref{eq:5.4.1}
+From \zcref{thmtype:5.3.2}, the general solution of \eqref{eq:5.4.1}
 is
 $y=y_p+c_1y_1+c_2y_2$, where $y_p$ is a particular solution of
 \eqref{eq:5.4.1} and $\{y_1,y_2\}$ is a fundamental set of
@@ -2946,14 +2909,14 @@ solutions of the complementary equation
 \[
 ay''+by'+cy=0.
 \]
-In Section~5.2 we showed how to find $\{y_1,y_2\}$. In this
+In \zcref{sec:const_coeff_homog} we showed how to find $\{y_1,y_2\}$. In this
 section we'll show how to find $y_p$. The procedure that we'll use
 is called \emph{\color{blue}the method of undetermined coefficients}.
 
 Our first example is similar to
-Exercises~\ref{exer:5.3.16}--\ref{exer:5.3.21}.
+\zcref[range]{exer:5.3.16,exer:5.3.21}.
 
-\begin{example}\label{example:5.4.1} \rm
+\begin{example}\label{example:5.4.1}
 Find a particular solution of
 \begin{equation} \label{eq:5.4.2}
 y''-7y'+12y=4e^{2x}.
@@ -2982,7 +2945,7 @@ solution of \eqref{eq:5.4.2} is
  y=2e^{2x}+c_1e^{3x}+c_2e^{4x}.
 \]
 
-\begin{example}\label{example:5.4.2} \rm
+\begin{example}\label{example:5.4.2}
 Find a particular solution of
 \begin{equation} \label{eq:5.4.4}
 y''-7y'+12y=5e^{4x}.
@@ -2997,11 +2960,11 @@ of
 \eqref{eq:5.4.2} is a constant multiple of $e^{2x}$ --- it may seem
 reasonable to try $y_p=Ae^{4x}$ as a particular solution of
 \eqref{eq:5.4.4}. However, this won't work, since we saw in
-Example~\ref{example:5.4.1} that $e^{4x}$ is a solution of the
+\zcref{example:5.4.1} that $e^{4x}$ is a solution of the
 complementary equation \eqref{eq:5.4.3}, so substituting $y_p=Ae^{4x}$
 into the left side of \eqref{eq:5.4.4} produces zero on the left, no
 matter how we choose$A$. To discover a suitable form for $y_p$,
-we use the same approach that we used in Section~5.2 to find a
+we use the same approach that we used in \zcref{sec:const_coeff_homog} to find a
 second solution of
 \[
 ay''+by'+cy=0
@@ -3030,7 +2993,7 @@ y=5xe^{4x}+c_1e^{3x}+c_2e^{4x}
 \]
 is the general solution.
 
-\begin{example}\label{example:5.4.3} \rm
+\begin{example}\label{example:5.4.3}
 Find a particular solution of
 \begin{equation} \label{eq:5.4.6}
 y''-8y'+16y=2e^{4x}.
@@ -3045,7 +3008,7 @@ y''-8y'+16y=0
 is $p(r)=r^2-8r+16=(r-4)^2$, both $y_1=e^{4x}$ and $y_2=xe^{4x}$ are
 solutions of \eqref{eq:5.4.7}. Therefore \eqref{eq:5.4.6} does not have a
 solution of the form $y_p=Ae^{4x}$ or $y_p=Axe^{4x}$. As in
-Example~\ref{example:5.4.2}, we look for solutions of \eqref{eq:5.4.6} in the
+\zcref{example:5.4.2}, we look for solutions of \eqref{eq:5.4.6} in the
 form $y=ue^{4x}$, where $u$ is a function to be determined.
 Substituting from \eqref{eq:5.4.5} into \eqref{eq:5.4.6} and canceling the
 common factor $e^{4x}$ yields
@@ -3082,17 +3045,17 @@ equation
 ay''+by'+cy=0,
 \end{equation}
 then  $y_p=Ae^{\alpha x}$, where $A$ is a constant. (See
-Example~\ref{example:5.4.1}).
+\zcref{example:5.4.1}).
 \item % (b)
 If $e^{\alpha x}$ is a solution of \eqref{eq:5.4.8} but $xe^{\alpha x}$
 is not, then  $y_p=Axe^{\alpha x}$,  where $A$ is a constant.
-(See Example~\ref{example:5.4.2}.)
+(See \zcref{example:5.4.2}.)
 \item % (c)
 If both $e^{\alpha x}$ and $xe^{\alpha x}$ are solutions of \eqref{eq:5.4.8},
 then  $y_p=Ax^2e^{\alpha x}$,  where $A$ is a constant.
-(See Example~\ref{example:5.4.3}.)
+(See \zcref{example:5.4.3}.)
 \end{alist}
-See Exercise~\ref{exer:5.4.30}  for the proofs of these facts.
+See \zcref{exer:5.4.30}  for the proofs of these facts.
 
 In all three cases you can just substitute the appropriate form for
 $y_p$ and its derivatives directly into
@@ -3100,21 +3063,21 @@ $y_p$ and its derivatives directly into
 ay_p''+by_p'+cy_p=ke^{\alpha x},
 \]
 and solve for the constant $A$, as we did in
-Example~\ref{example:5.4.1}.
- (See Exercises~\ref{exer:5.4.31}--\ref{exer:5.4.33}.)
+\zcref{example:5.4.1}.
+ (See \zcref[range]{exer:5.4.31,exer:5.4.33}.)
 However, if the equation is
 \[
 ay''+by'+cy=k e^{\alpha x}G(x),
 \]
 where $G$ is a polynomial of degree greater than zero, we recommend
 that you use the substitution $y=ue^{\alpha x}$ as we did in
-Examples~\ref{example:5.4.2} and \ref{example:5.4.3}. The equation for $u$
+\zcref{example:5.4.2,example:5.4.3}. The equation for $u$
 will turn out to be
 \begin{equation} \label{eq:5.4.9}
 au''+p'(\alpha)u'+p(\alpha)u=G(x),
 \end{equation}
 where $p(r)=ar^2+br+c$ is the characteristic polynomial of the
-complementary equation and $p'(r)=2ar+b$ (Exercise~\ref{exer:5.4.30});
+complementary equation and $p'(r)=2ar+b$ (\zcref{exer:5.4.30});
 however, you shouldn't memorize this since it's easy to derive the
 equation for $u$ in any particular case. Note, however, that if
 $e^{\alpha x}$ is a solution of the complementary equation then
@@ -3130,7 +3093,7 @@ reduces to
 au''=G(x).
 \]
 
-\begin{example}\label{example:5.4.4} \rm
+\begin{example}\label{example:5.4.4}
 Find a particular solution of
 \begin{equation} \label{eq:5.4.10}
 y''-3y'+2y=e^{3x}(-1+2x+x^2).
@@ -3151,7 +3114,7 @@ or
 \begin{equation} \label{eq:5.4.11}
 u''+3u'+2u=-1+2x+x^2.
 \end{equation}
-As in Example~\ref{exer:5.3.2}, in order to guess a form for a particular
+As in \zcref{exer:5.3.2}, in order to guess a form for a particular
 solution of
 \eqref{eq:5.4.11}, we note that substituting a second degree polynomial
 $u_p=A+Bx+Cx^2$ for $u$ in the left side of \eqref{eq:5.4.11} produces
@@ -3170,8 +3133,8 @@ u_p''+3u_p'+2u_p
 Equating  coefficients of like powers of $x$ on the two sides of the
 last equality yields
 \begin{align*}
-2C&=1\phantom{.}\\
-2B+6C&=2\phantom{.}\\
+2C&=\phantom{-}1\\
+2B+6C&=\phantom{-}2\\
 2A+3B+2C&= -1.
 \end{align*}
 Solving these equations for $C$, $B$, and $A$ (in that order) yields
@@ -3185,7 +3148,7 @@ y_p=u_pe^{3x}=-\frac{e^{3x}}{4}(1+2x-2x^2)
 \]
 is a particular solution of  \eqref{eq:5.4.10}.
 
-\begin{example}\label{example:5.4.5} \rm
+\begin{example}\label{example:5.4.5}
  Find a particular solution of
 \begin{equation} \label{eq:5.4.12}
 y''-4y'+3y=e^{3x}(6+8x+12x^2).
@@ -3208,9 +3171,9 @@ u''+2u'=6+8x+12x^2.
 \end{equation}
 There's no $u$ term in this equation, since $e^{3x}$ is a solution of
 the complementary equation for \eqref{eq:5.4.12}. (See
-Exercise~\ref{exer:5.4.30}.) Therefore \eqref{eq:5.4.13} does not have a
+\zcref{exer:5.4.30}.) Therefore \eqref{eq:5.4.13} does not have a
 particular solution of the form $u_p=A+Bx+Cx^2$ that we used
-successfully in Example~\ref{example:5.4.4}, since with this choice of
+successfully in \zcref{example:5.4.4}, since with this choice of
 $u_p$,
 \[
 u_p''+2u_p'=2C+(B+2Cx)
@@ -3233,9 +3196,9 @@ Substituting these expressions in place of $u'$ and $u''$  in
 Comparing coefficients of like powers of $x$ on the two sides of the
 last equality shows that $u_p$ satisfies \eqref{eq:5.4.13} if
 \begin{align*}
-6C&=12\phantom{.}\\
-4B+6C&=8\phantom{.}\\
-2A+2B\phantom{+6u_2}&=6.
+6C&=12\\
+4B+6C&=\phantom{1}8\\
+2A+2B\phantom{{}+6C}&=\phantom{1}6.
 \end{align*}
 Solving these equations successively yields $C=2$, $B=-1$, and $A=4$.
 Therefore
@@ -3249,7 +3212,7 @@ y_p=u_pe^{3x}=xe^{3x}(4-x+2x^2)
 \]
 is a particular solution of  \eqref{eq:5.4.12}.
 
-\begin{example}\label{example:5.4.6} \rm
+\begin{example}\label{example:5.4.6}
 Find a particular solution of
 \begin{equation} \label{eq:5.4.14}
 4y''+4y'+y=e^{-x/2}(-8+48x+144x^2).
@@ -3271,7 +3234,7 @@ u''=-2+12x+36x^2,
 \end{equation}
 which does not contain $u$ or $u'$ because $e^{-x/2}$ and $xe^{-x/2}$
 are both solutions of the complementary equation. (See
-Exercise~\ref{exer:5.4.30}.) To obtain a particular solution of
+\zcref{exer:5.4.30}.) To obtain a particular solution of
 \eqref{eq:5.4.15} we integrate twice, taking the constants of integration
 to be zero;   thus,
 \[
@@ -3284,16 +3247,15 @@ y_p=u_pe^{-x/2}=x^2e^{-x/2}(-1+2x+3x^2)
 \]
 is a particular solution of  \eqref{eq:5.4.14}.
 
+
 \boxit{Summary}
 
-
-\noindent
 The preceding examples illustrate the following facts concerning
  particular solutions of a constant coefficent equation of the form
 \[
 ay''+by'+cy=e^{\alpha x}G(x),
 \]
-where $G$ is a polynomial (see Exercise~\ref{exer:5.4.30}):
+where $G$ is a polynomial (see \zcref{exer:5.4.30}):
 \begin{alist}
 \item % (a)
 If $e^{\alpha x}$ isn't  a solution of the complementary
@@ -3303,17 +3265,17 @@ ay''+by'+cy=0,
 \end{equation}
 then  $y_p=e^{\alpha x}Q(x)$,
  where $Q$ is a polynomial of the same degree as $G$.
-(See Example~\ref{example:5.4.4}).
+(See \zcref{example:5.4.4}).
 \item % (b)
 If $e^{\alpha x}$ is a solution of \eqref{eq:5.4.16} but $xe^{\alpha x}$
 is not, then  $y_p=xe^{\alpha x}Q(x)$,
  where $Q$ is a polynomial of the same degree as $G$.
-(See Example~\ref{example:5.4.5}.)
+(See \zcref{example:5.4.5}.)
 \item % (c)
 If both $e^{\alpha x}$ and $xe^{\alpha x}$ are solutions of \eqref{eq:5.4.16},
 then  $y_p=x^2e^{\alpha x}Q(x)$,
  where $Q$ is a polynomial of the same degree as $G$.
-(See Example~\ref{example:5.4.6}.)
+(See \zcref{example:5.4.6}.)
 \end{alist}
 
 In all three cases, you can just substitute the appropriate form for
@@ -3325,14 +3287,14 @@ and solve for the coefficients of the polynomial $Q$. However, if you
 try this you will see that the computations are more tedious than
 those that you encounter by making the substitution $y=ue^{\alpha x}$
 and finding a particular solution of the resulting equation for $u$.
-(See Exercises~\ref{exer:5.4.34}-\ref{exer:5.4.36}.) In Case~\part{a}
+(See \zcref[range]{exer:5.4.34,exer:5.4.36}.) In Case~(a)
 the equation for $u$ will be of the form
 \[
 au''+p'(\alpha)u'+p(\alpha)u=G(x),
 \]
 with a particular solution of the form $u_p=Q(x)$, a polynomial of the
 same degree as $G$, whose coefficients can be found by the method used
-in Example~\ref{example:5.4.4}. In Case~\part{b}  the equation for
+in \zcref{example:5.4.4}. In Case~(b)  the equation for
 $u$ will be of the form
 \[
 au''+p'(\alpha)u'=G(x)
@@ -3340,23 +3302,23 @@ au''+p'(\alpha)u'=G(x)
 (no $u$ term on the left), with a particular solution of the form
 $u_p=xQ(x)$, where $Q$ is a polynomial of the same degree as $G$ whose
 coefficents can be found by the method used in
-Example~\ref{example:5.4.5}. In Case~\part{c}  the equation for $u$
+\zcref{example:5.4.5}. In Case~(c)  the equation for $u$
 will be of the form
 \[
 au''=G(x)
 \]
 with a particular solution of the form $u_p=x^2Q(x)$ that can be
 obtained by integrating $G(x)/a$ twice and taking the constants of
-integration to be zero, as in Example~\ref{example:5.4.6}.
+integration to be zero, as in \zcref{example:5.4.6}.
+
 
 \boxit{Using the Principle of Superposition}
 
-\noindent
 The next example shows how to combine the method of undetermined
-coefficients and Theorem~\ref{thmtype:5.3.3}, the principle of
+coefficients and \zcref{thmtype:5.3.3}, the principle of
 superposition.
 
-\begin{example}\label{example:5.4.7} \rm
+\begin{example}\label{example:5.4.7}
 Find a particular solution of
 \begin{equation} \label{eq:5.4.17}
 y''-7y'+12y=4e^{2x}+5e^{4x}.
@@ -3364,12 +3326,12 @@ y''-7y'+12y=4e^{2x}+5e^{4x}.
 \end{example}
 
 \solution
-In Example~\ref{example:5.4.1} we found that $y_{p_1}=2e^{2x}$
+In \zcref{example:5.4.1} we found that $y_{p_1}=2e^{2x}$
 is a particular solution of
 \[
 y''-7y'+12y=4e^{2x},
 \]
-and in Example~\ref{example:5.4.2} we found that $y_{p_2}=5xe^{4x}$
+and in \zcref{example:5.4.2} we found that $y_{p_2}=5xe^{4x}$
 is a particular solution of
 \[
 y''-7y'+12y=5e^{4x}.
@@ -3378,71 +3340,39 @@ Therefore the principle of superposition implies that
 $y_p=2e^{2x}+5xe^{4x}$ is a particular solution of \eqref{eq:5.4.17}.
 
 \exercises
-In Exercises \ref{exer:5.4.1}--\ref{exer:5.4.14} find a particular
+In \zcref[range]{exer:5.4.1,exer:5.4.14} find a particular
 solution.
 
 \begin{exerciselist}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 1--12 in two columns
-\item\label{exer:5.4.1}$y''-3y'+2y=e^{3x}(1+x)$
-%&\vspace*{10pt}  
-\item\label{exer:5.4.2}$y''-6y'+5y=e^{-3x}(35-8x)$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.3}$y''-2y'-3y=e^x(-8+3x)$
-%&  
-\item\label{exer:5.4.4}$y''+2y'+y=e^{2x}(-7-15x+9x^2)$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.5}$y''+4y=e^{-x}(7-4x+5x^2)$
-%&  
-\item\label{exer:5.4.6}$y''-y'-2y=e^x(9+2x-4x^2)$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.7}$y''-4y'-5y=-6xe^{-x}$
-%&  
-\item\label{exer:5.4.8}$y''-3y'+2y=e^x(3-4x)$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.9}$y''+y'-12y=e^{3x}(-6+7x)$
-%&  
-\item\label{exer:5.4.10}$2y''-3y'-2y=e^{2x}(-6+10x)$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.11}$y''+2y'+y=e^{-x}(2+3x)$ 
-%&
-\item\label{exer:5.4.12}$y''-2y'+y=e^x(1-6x)$
-%\end{tabular}
+\item(1)\label{exer:5.4.1}$y''-3y'+2y=e^{3x}(1+x)$
+\item(1)\label{exer:5.4.2}$y''-6y'+5y=e^{-3x}(35-8x)$
+\item(1)\label{exer:5.4.3}$y''-2y'-3y=e^x(-8+3x)$
+\item(1)\label{exer:5.4.4}$y''+2y'+y=e^{2x}(-7-15x+9x^2)$
+\item(1)\label{exer:5.4.5}$y''+4y=e^{-x}(7-4x+5x^2)$
+\item(1)\label{exer:5.4.6}$y''-y'-2y=e^x(9+2x-4x^2)$
+\item(1)\label{exer:5.4.7}$y''-4y'-5y=-6xe^{-x}$
+\item(1)\label{exer:5.4.8}$y''-3y'+2y=e^x(3-4x)$
+\item(1)\label{exer:5.4.9}$y''+y'-12y=e^{3x}(-6+7x)$
+\item(1)\label{exer:5.4.10}$2y''-3y'-2y=e^{2x}(-6+10x)$
+\item(1)\label{exer:5.4.11}$y''+2y'+y=e^{-x}(2+3x)$ 
+\item(1)\label{exer:5.4.12}$y''-2y'+y=e^x(1-6x)$
 
 \item\label{exer:5.4.13}$y''-4y'+4y=e^{2x}(1-3x+6x^2)$
 
 \item\label{exer:5.4.14}$9y''+6y'+y=e^{-x/3}(2-4x+4x^2)$
 
-\exercisetext{In Exercises \ref{exer:5.4.15}--\ref{exer:5.4.19} find the general
+\exercisetext{In \zcref[range]{exer:5.4.15,exer:5.4.19} find the general
 solution.}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 15--18 in two columns
-\item\label{exer:5.4.15}$y''-3y'+2y=e^{3x}(1+x)$ 
-%&\vspace*{10pt}
-\item\label{exer:5.4.16}$y''-6y'+8y=e^x(11-6x)$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.4.17}$ y''+6y'+9y=e^{2x}(3-5x)$ 
-%&
-\item\label{exer:5.4.18}$y''+2y'-3y=-16xe^x$
-%\end{tabular}
+\item(1)\label{exer:5.4.15}$y''-3y'+2y=e^{3x}(1+x)$ 
+\item(1)\label{exer:5.4.16}$y''-6y'+8y=e^x(11-6x)$
+\item(1)\label{exer:5.4.17}$ y''+6y'+9y=e^{2x}(3-5x)$ 
+\item(1)\label{exer:5.4.18}$y''+2y'-3y=-16xe^x$
 
 \item\label{exer:5.4.19}$y''-2y'+y=e^x(2-12x)$
 
-\exercisetext{In Exercises \ref{exer:5.4.20}--\ref{exer:5.4.23} solve the
+\exercisetext{In \zcref[range]{exer:5.4.20,exer:5.4.23} solve the
 initial value problem and plot the solution.}
 
 \item\label{exer:5.4.20}\CGex $y''-4y'-5y=9e^{2x}(1+x), \quad  y(0)=0,\quad y'(0)=-10$
@@ -3451,7 +3381,7 @@ initial value problem and plot the solution.}
 \item\label{exer:5.4.23}\CGex $y''-3y'-10y=7e^{-2x}, \quad  y(0)=1,\quad y'(0)=-17$
 
 
-\exercisetext{In Exercises~\ref{exer:5.4.24}--\ref{exer:5.4.29} use
+\exercisetext{In \zcref[range]{exer:5.4.24,exer:5.4.29} use
 the principle of superposition to find a particular solution.}
 
 \item\label{exer:5.4.24}$y''+y'+y=xe^x+e^{-x}(1+2x)$
@@ -3461,7 +3391,8 @@ the principle of superposition to find a particular solution.}
 \item\label{exer:5.4.28}$y''-2y'+2y=e^x(1+x)+e^{-x}(2-8x+5x^2)$
 \item\label{exer:5.4.29}$y''+y=e^{-x}(2-4x+2x^2)+e^{3x}(8-12x-10x^2)$
 
-\item\label{exer:5.4.30}\begin{alist}
+\item\label{exer:5.4.30}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
  \item % (a)
 Prove that  $y$ is a solution of the constant coefficient equation
 \[
@@ -3489,14 +3420,14 @@ G(x)=g_0+g_1x+g_2x^2+g_3x^3.
 Prove that if $e^{\alpha x}$ isn't  a solution of the complementary
 equation then (B) has a particular solution of the
 form $u_p=A(x)$, where $A$ is a polynomial of the same degree as $G$,
-as in Example~\ref{example:5.4.4}. Conclude that (A) has
+as in \zcref{example:5.4.4}. Conclude that (A) has
 a particular solution of the form $y_p=e^{\alpha x}A(x)$.
 
 \item % (c)
 Show that if $e^{\alpha x}$ is a solution of the complementary
 equation and $xe^{\alpha x}$ isn't , then (B) has a
 particular solution of the form $u_p=xA(x)$, where $A$ is a polynomial
-of the same degree as $G$, as in Example~\ref{example:5.4.5}. Conclude
+of the same degree as $G$, as in \zcref{example:5.4.5}. Conclude
 that (A) has a particular solution of the form
 $y_p=xe^{\alpha x}A(x)$.
 
@@ -3506,47 +3437,47 @@ the complementary equation then (B) has a
 particular solution of the form $u_p=x^2A(x)$, where $A$ is a
 polynomial of the same degree as $G$, and $x^2A(x)$ can be obtained by
 integrating $G/a$ twice, taking the constants of integration to be
-zero, as in Example~\ref{example:5.4.6}. Conclude that
+zero, as in \zcref{example:5.4.6}. Conclude that
 (A) has a particular solution of the form
 $y_p=x^2e^{\alpha x}A(x)$.
 \end{alist}
 
-\exercisetext{Exercises~\ref{exer:5.4.31}--\ref{exer:5.4.36}
+\exercisetext{\zcref[range,S]{exer:5.4.31,exer:5.4.36}
 treat the equations considered in
-Examples~\ref{example:5.4.1}--\ref{example:5.4.6}. Substitute the suggested
+\zcref[range]{example:5.4.1,example:5.4.6}. Substitute the suggested
 form of $y_p$ into the equation and equate the resulting coefficients
 of like functions on the two sides of the resulting equation to derive
 a set of simultaneous equations for the coefficients in $y_p$. Then
 solve for the coefficients to obtain $y_p$. Compare the work you've
 done with the work required to obtain the same results in
-Examples~\ref{example:5.4.1}--\ref{example:5.4.6}.}
+\zcref[range]{example:5.4.1,example:5.4.6}.}
 
-\item\label{exer:5.4.31}Compare with Example~\ref{example:5.4.1}:
+\item\label{exer:5.4.31}Compare with \zcref{example:5.4.1}:
 \[
 y''-7y'+12y=4e^{2x};\quad y_p=Ae^{2x}
 \]
 
-\item\label{exer:5.4.32}Compare with Example~\ref{example:5.4.2}:
+\item\label{exer:5.4.32}Compare with \zcref{example:5.4.2}:
 \[
 y''-7y'+12y=5e^{4x};\quad y_p=Axe^{4x}
 \]
 
-\item\label{exer:5.4.33}Compare with Example~\ref{example:5.4.3}.
+\item\label{exer:5.4.33}Compare with \zcref{example:5.4.3}.
 \[
 y''-8y'+16y=2e^{4x};\quad y_p=Ax^2e^{4x}
 \]
 
-\item\label{exer:5.4.34}Compare with Example~\ref{example:5.4.4}:
+\item\label{exer:5.4.34}Compare with \zcref{example:5.4.4}:
 \[
 y''-3y'+2y=e^{3x}(-1+2x+x^2),\quad y_p=e^{3x}(A+Bx+Cx^2)
 \]
 
-\item\label{exer:5.4.35}Compare with Example~\ref{example:5.4.5}:
+\item\label{exer:5.4.35}Compare with \zcref{example:5.4.5}:
 \[
 y''-4y'+3y=e^{3x}(6+8x+12x^2),\quad y_p=e^{3x}(Ax+Bx^2+Cx^3)
 \]
 
-\item\label{exer:5.4.36}Compare with Example~\ref{example:5.4.6}:
+\item\label{exer:5.4.36}Compare with \zcref{example:5.4.6}:
 \[
 4y''+4y'+y=e^{-x/2}(-8+48x+144x^2),\quad y_p=e^{-x/2}(Ax^2+Bx^3+Cx^4)
 \]
@@ -3554,12 +3485,13 @@ y''-4y'+3y=e^{3x}(6+8x+12x^2),\quad y_p=e^{3x}(Ax+Bx^2+Cx^3)
 \item\label{exer:5.4.37}Write $y=ue^{\alpha x}$ to find the general
 solution.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $y''+2y'+y=\dst\frac{e^{-x}}{\sqrt x}$ &
-\part{b} $y''+6y'+9y=e^{-3x}\ln x$\\
-\part{c} $y''-4y'+4y=\dst\frac{e^{2x}}{1+x}$ &
-\part{d} $4y''+4y'+y=\dst{4e^{-x/2}\left(\frac{1}{x}+x\right)}$
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO horizontal
+\item $y''+2y'+y=\dfrac{e^{-x}}{\sqrt x}$
+\item $y''+6y'+9y=e^{-3x}\ln x$
+\item $y''-4y'+4y=\dfrac{e^{2x}}{1+x}$
+\item $4y''+4y'+y=4e^{-x/2}\left(\dfrac{1}{x}+x\right)$
+\end{alist}
 
 \item\label{exer:5.4.38}Suppose $\alpha\ne0$ and $k$ is a positive integer. In most
 calculus books integrals like $\int x^k e^{\alpha x}\,dx$ are
@@ -3599,7 +3531,7 @@ Conclude that
 where $c$ is a constant of integration.
 \end{alist}
 
-\item\label{exer:5.4.39}Use the method of Exercise~\ref{exer:5.4.38} to evaluate the integral.
+\item\label{exer:5.4.39}Use the method of \zcref{exer:5.4.38} to evaluate the integral.
 
 \begin{alist}[columns=2]
 % TODO was horizontal
@@ -3611,7 +3543,7 @@ where $c$ is a constant of integration.
 \item $\int e^{-x}(1+6x^2-14x^3+3x^4)\,dx$
 \end{alist}
 
-\item\label{exer:5.4.40}Use the method suggested in Exercise~\ref{exer:5.4.38} to
+\item\label{exer:5.4.40}Use the method suggested in \zcref{exer:5.4.38} to
 evaluate $\int x^ke^{\alpha x}\,dx$, where $k$ is an arbitrary
 positive integer and $\alpha\ne0$.
 \end{exerciselist}
@@ -3625,13 +3557,12 @@ ay''+by'+cy=e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)
 \end{equation}
 where $\lambda$ and $\omega$ are real numbers, $\omega\ne0$, and $P$
 and $Q$ are polynomials. We want to find a particular solution of
-\eqref{eq:5.5.1}. As in Section~5.4, the procedure that we
+\eqref{eq:5.5.1}. As in \zcref{sec:undetermined_coeffs_i}, the procedure that we
 will use is called \emph{\color{blue}the method of undetermined coefficients}.
+
 
 \boxit{Forcing Functions Without Exponential Factors}
 
-
-\noindent
 We begin with the case where $\lambda=0$ in \eqref{eq:5.5.1};   thus, we
 we
 want to find a particular solution of
@@ -3642,9 +3573,9 @@ where $P$ and $Q$ are polynomials.
 
 Differentiating  $x^r\cos\omega x$ and $x^r\sin\omega x$ yields
 \begin{align*}
-\dst\frac{d}{dx}x^r\cos\omega x
-&=-\omega x^r\sin\omega x+rx^{r-1}\cos\omega x\qquad\text{and} \\[2\jot]
-\dst\frac{d}{dx}x^r\sin\omega x
+\dfrac{d}{dx}x^r\cos\omega x
+&=-\omega x^r\sin\omega x+rx^{r-1}\cos\omega x\qquad\text{and} \\
+\dfrac{d}{dx}x^r\sin\omega x
 &=\phantom{-}\omega x^r\cos\omega x+rx^{r-1}\sin\omega x.
 \end{align*}
 This implies  that if
@@ -3660,7 +3591,7 @@ expressed in terms of the coefficients of $A$ and $B$. This suggests
 that we try to choose $A$ and $B$ so that $F=P$ and $G=Q$,
 respectively. Then $y_p$ will be a particular solution of
 \eqref{eq:5.5.2}. The next theorem tells us how to choose the proper
-form for $y_p$. For the proof see Exercise~\ref{exer:5.5.37}.
+form for $y_p$. For the proof see \zcref{exer:5.5.37}.
 
 \begin{theorem}\color{blue} \label{thmtype:5.5.1}
 Suppose $\omega$ is a positive number and $P$ and $Q$ are
@@ -3694,13 +3625,10 @@ B(x)=B_0x+B_1x^2+\cdots+B_kx^{k+1}.
 
 
 For an analog of this theorem that's applicable to \eqref{eq:5.5.1},
-see Exercise~\ref{exer:5.5.38}.
+see \zcref{exer:5.5.38}.
 
 
-
-
-
-\begin{example}\label{example:5.5.1} \rm
+\begin{example}\label{example:5.5.1}
 Find a particular solution of
 \begin{equation} \label{eq:5.5.4}
 y''-2y'+y=5\cos2x+10\sin2x.
@@ -3709,7 +3637,7 @@ y''-2y'+y=5\cos2x+10\sin2x.
 
 \solution
 In \eqref{eq:5.5.4} the coefficients of $\cos2x$ and $\sin2x$ are both zero
-degree polynomials (constants). Therefore Theorem~\ref{thmtype:5.5.1}
+degree polynomials (constants). Therefore \zcref{thmtype:5.5.1}
 implies that \eqref{eq:5.5.4} has a particular solution
 \[
 y_p=A\cos2x+B\sin2x.
@@ -3738,7 +3666,7 @@ y_p=\cos2x-2\sin2x
 \]
 is a particular solution of \eqref{eq:5.5.4}.
 
-\begin{example}\label{example:5.5.2} \rm
+\begin{example}\label{example:5.5.2}
 Find a particular solution of
 \begin{equation} \label{eq:5.5.5}
 y''+4y=8\cos2x+12\sin2x.
@@ -3746,14 +3674,14 @@ y''+4y=8\cos2x+12\sin2x.
 \end{example}
 
 \solution
-The procedure used in  Example~\ref{example:5.5.1} doesn't work here;
+The procedure used in  \zcref{example:5.5.1} doesn't work here;
 substituting $y_p=A\cos2x+B\sin2x$ for $y$ in \eqref{eq:5.5.5} yields
 \[
 y_p''+4y_p=-4(A\cos2x+B\sin2x) +4(A\cos2x+B\sin2x)=0
 \]
 for any choice of $A$ and $B$, since $\cos2x$ and $\sin2x$ are both
 solutions of the complementary equation for \eqref{eq:5.5.5}. We're
-dealing with the second case mentioned in Theorem~\ref{thmtype:5.5.1}, and
+dealing with the second case mentioned in \zcref{thmtype:5.5.1}, and
 should therefore try a particular solution of the form
 \begin{equation} \label{eq:5.5.6}
 y_p=x(A\cos2x+B\sin2x).
@@ -3778,7 +3706,7 @@ y_p=-x(3\cos2x-2\sin2x)
 \]
 is a particular solution of \eqref{eq:5.5.5}.
 
-\begin{example}\label{example:5.5.3} \rm
+\begin{example}\label{example:5.5.3}
 Find a particular solution of
 \begin{equation} \label{eq:5.5.7}
 y''+3y'+2y=(16+20x)\cos x+10\sin x.
@@ -3788,7 +3716,7 @@ y''+3y'+2y=(16+20x)\cos x+10\sin x.
 \solution
 The coefficients of $\cos x$ and $\sin x$ in \eqref{eq:5.5.7} are
 polynomials of degree one and zero, respectively. Therefore
-Theorem~\ref{thmtype:5.5.1} tells us to look for a particular solution of
+\zcref{thmtype:5.5.1} tells us to look for a particular solution of
 \eqref{eq:5.5.7} of the form
 \begin{equation} \label{eq:5.5.8}
 y_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x.
@@ -3806,22 +3734,22 @@ so
 \begin{aligned}
 y_p''+3y_p'+2y_p
 &=\left[A_0+3 A_1+3 B_0+2 B_1+(A_1+3 B_1)x\right]\cos x\\
-&\;+ \left[B_0+3 B_1-3 A_0-2 A_1+(B_1-3 A_1)x\right]\sin x.
+&\quad{}+ \left[B_0+3 B_1-3 A_0-2 A_1+(B_1-3 A_1)x\right]\sin x.
 \end{aligned}
 \end{equation}
 Comparing the coefficients of $x\cos x$, $x\sin x$, $\cos x$, and
 $\sin x$ here with the corresponding coefficients in \eqref{eq:5.5.7}
 shows that $y_p$ is a solution of \eqref{eq:5.5.7} if
 \begin{align*}
-\phantom{-3}A_1+3B_1&=20\phantom{.}\\
--3A_1+\phantom{3}B_1&=0\phantom{.}\\
-\phantom{-3}A_0+3B_0+3A_1+2B_1&=16\phantom{.}\\
+\phantom{-3}A_1+3B_1&=20\\
+-3A_1+\phantom{3}B_1&=\phantom{1}0\\
+\phantom{-3}A_0+3B_0+3A_1+2B_1&=16\\
 -3A_0+\phantom{3}B_0-2A_1+3B_1&=10.
 \end{align*}
 Solving the first two equations yields $A_1=2$, $B_1=6$.
 Substituting these into the last two equations  yields
 \begin{align*}
-\phantom{-3}A_0+3B_0&=16-3A_1-2B_1=-2\phantom{.}\\
+\phantom{-3}A_0+3B_0&=16-3A_1-2B_1=-2\\
 -3A_0+\phantom{3}B_0&=10+2A_1-3B_1=-4.
 \end{align*}
 Solving these equations yields $A_0=1$, $B_0=-1$.
@@ -3833,16 +3761,13 @@ y_p=(1+2x)\cos x-(1-6x)\sin x
 is a particular solution of  \eqref{eq:5.5.7}.
 
 
-
 \boxit{A Useful Observation}
 
-
-\noindent
 In \eqref{eq:5.5.9}, \eqref{eq:5.5.10}, and \eqref{eq:5.5.11} the polynomials
 multiplying $\sin x$ can be obtained by replacing $A_0,A_1,B_0$,
 and $B_1$ by $B_0$, $B_1$, $-A_0$, and $-A_1$, respectively, in the
-polynomials mutiplying $\cos x$. An analogous result applies in
-general, as follows (Exercise~\ref{exer:5.5.36}).
+polynomials multiplying $\cos x$. An analogous result applies in
+general, as follows (\zcref{exer:5.5.36}).
 
 
 \begin{theorem}\color{blue}\label{thmtype:5.5.2}
@@ -3851,14 +3776,14 @@ If
 y_p=A(x)\cos\omega x+B(x)\sin\omega x,
 \]
 where $A(x)$ and $B(x)$ are polynomials with coefficients
-$A_0$ \dots, $A_k$ and $B_0$, \dots, $B_k,$ then the polynomials
+$A_0$, \dots, $A_k$ and $B_0$, \dots, $B_k,$ then the polynomials
 multiplying $\sin\omega x$ in
 \[
 y_p',\quad y_p'',\quad  ay_p''+by_p'+cy_p
 \quad\text{and}\quad  y_p''+\omega^2 y_p
 \]
-can be obtained by replacing $A_0$, \dots$,$ $A_k$ by $B_0,$ \dots$,$ $B_k$
-and $B_0,$ \dots$,$  $B_k$ by $-A_0,$ \dots$,$ $-A_k$ in the corresponding
+can be obtained by replacing $A_0$, \dots, $A_k$ by $B_0$, \dots, $B_k$
+and $B_0$, \dots,  $B_k$ by $-A_0,$ \dots, $-A_k$ in the corresponding
 polynomials multiplying $\cos\omega x$.
 \end{theorem}
 
@@ -3867,7 +3792,7 @@ you use it to check your manipulations when you work the  exercises.
 
 
 
-\begin{example}\label{example:5.5.4} \rm
+\begin{example}\label{example:5.5.4}
 Find a particular solution of
 \begin{equation} \label{eq:5.5.12}
 y''+y=(8-4x)\cos x-(8+8x)\sin x.
@@ -3875,7 +3800,7 @@ y''+y=(8-4x)\cos x-(8+8x)\sin x.
 \end{example}
 
 \solution
-According to  Theorem~\ref{thmtype:5.5.1}, we should look for a
+According to  \zcref{thmtype:5.5.1}, we should look for a
 particular solution of the form
 \begin{equation} \label{eq:5.5.13}
 y_p=(A_0x+A_1x^2)\cos x+(B_0x+B_1x^2)\sin x,
@@ -3899,10 +3824,12 @@ or $x\sin x$,  \eqref{eq:5.5.14} can't satisfy
 
 Now let $y_p$ be as in \eqref{eq:5.5.13}. Then
 \begin{align*}
-y_p'&=\left[A_0+(2A_1+B_0)x+B_1x^2\right]\cos x\\
-&\;+\left[B_0+(2B_1-A_0)x-A_1x^2\right]\sin x\qquad \text{and}\\
-y_p''&=\left[2A_1+2B_0-(A_0-4B_1)x-A_1x^2\right]\cos x\\
-&\;+\left[2B_1-2A_0-(B_0+4A_1)x-B_1x^2\right]\sin x,
+y_p'
+&=\left[A_0+(2A_1+B_0)x+B_1x^2\right]\cos x\\
+&\quad{}+\left[B_0+(2B_1-A_0)x-A_1x^2\right]\sin x\qquad \text{and}\\
+y_p''
+&=\left[2A_1+2B_0-(A_0-4B_1)x-A_1x^2\right]\cos x\\
+&\quad{}+\left[2B_1-2A_0-(B_0+4A_1)x-B_1x^2\right]\sin x,
 \end{align*}
 so
 \[
@@ -3913,9 +3840,9 @@ $\sin x$ here  with the corresponding coefficients  in \eqref{eq:5.5.12}
 shows that
 $y_p$ is a solution of \eqref{eq:5.5.12} if
 \begin{align*}
-\phantom{-}4B_1&=-4\phantom{.}\\
--4A_1&=-8\phantom{.}\\
-\phantom{-}2B_0+2A_1&=8\phantom{.}\\
+\phantom{-}4B_1&=-4\\
+-4A_1&=-8\\
+\phantom{-}2B_0+2A_1&=\phantom{-}8\\
 -2A_0+2B_1&=-8.
 \end{align*}
 The solution of this system is  $A_1=2$, $B_1=-1$, $A_0=3$, $B_0=2$.
@@ -3926,25 +3853,21 @@ y_p=x\left[(3+2x)\cos x+(2-x)\sin x\right]
 is a particular solution of \eqref{eq:5.5.12}.
 
 
-
-
 \boxit{Forcing Functions with Exponential Factors}
 
-
-\noindent
 To find a particular solution of
 \begin{equation} \label{eq:5.5.15}
 ay''+by'+cy=e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)
 \end{equation}
-when $\lambda\ne0$, we recall from Section~5.4 that
+when $\lambda\ne0$, we recall from \zcref{sec:undetermined_coeffs_i} that
 substituting $y=ue^{\lambda x}$ into \eqref{eq:5.5.15} will produce a
 constant coefficient equation for $u$  with  the forcing
 function  $P(x)\cos \omega x+Q(x)\sin \omega x$. We can find a
 particular solution $u_p$ of this equation by the procedure that we
-used in Examples~\ref{example:5.5.1}--\ref{example:5.5.4}. Then
+used in \zcref[range]{example:5.5.1,example:5.5.4}. Then
 $y_p=u_pe^{\lambda x}$ is a particular solution of \eqref{eq:5.5.15}.
 
-\begin{example}\label{example:5.5.5} \rm
+\begin{example}\label{example:5.5.5}
 Find a particular solution of
 \begin{equation} \label{eq:5.5.16}
 y''-3y'+2y=e^{-2x}\left[2\cos 3x-(34-150x)\sin 3x\right].
@@ -3967,7 +3890,7 @@ the complementary equation
 \[
 u''-7u'+12u=0,
 \]
- Theorem~\ref{thmtype:5.5.1} tells us to look for a particular solution
+\zcref{thmtype:5.5.1} tells us to look for a particular solution
 of \eqref{eq:5.5.17} of the form
 \begin{equation} \label{eq:5.5.18}
 u_p=(A_0+A_1x)\cos 3x +(B_0+B_1x)\sin 3x.
@@ -3981,16 +3904,16 @@ so
 \begin{align*}
 u_p''-7u_p'+12u_p
 &=\left[3A_0-21B_0-7A_1+6B_1+(3A_1-21B_1)x\right]\cos3x\\
-&\;+\left[21A_0+3B_0-6A_1-7B_1+(21A_1+3B_1)x\right]\sin 3x.
+&\quad{}+\left[21A_0+3B_0-6A_1-7B_1+(21A_1+3B_1)x\right]\sin 3x.
 \end{align*}
 Comparing the coefficients of $x\cos 3x$, $x\sin 3x$, $\cos 3x$, and
 $\sin 3x$ here with the corresponding coefficients on the right side
 of \eqref{eq:5.5.17} shows that $u_p$ is a solution of \eqref{eq:5.5.17} if
 \begin{equation} \label{eq:5.5.19}
 \begin{aligned}
-3A_1-21B_1&=0\phantom{.}\\
-21A_1+\phantom{2}3B_1&=150\phantom{.}\\
-3A_0-21B_0-7A_1+\phantom{2}6B_1&=\phantom{-3}2\phantom{.}\\
+3A_1-21B_1&=\phantom{15}0\\
+21A_1+\phantom{2}3B_1&=150\\
+3A_0-21B_0-7A_1+\phantom{2}6B_1&=\phantom{15}2\\
 21A_0+\phantom{2}3B_0-6A_1-\phantom{5}7B_1&=-34.
 \end{aligned}
 \end{equation}
@@ -3998,7 +3921,7 @@ Solving the first two equations yields $A_1=7$, $B_1=1$.
 Substituting these values into the last two equations of \eqref{eq:5.5.19}
 yields
 \begin{align*}
-\phantom{2}3A_0-21B_0&=\phantom{-3}2+7A_1-6B_1=45\phantom{.}\\
+3A_0-21B_0&=\phantom{-3}2+7A_1-6B_1=45\\
 21A_0+\phantom{2}3B_0&=-34+6A_1+7B_1=15.
 \end{align*}
 Solving this system  yields  $A_0=1$, $B_0=-2$.
@@ -4013,7 +3936,7 @@ y_p=e^{-2x}\left[(1+7x)\cos 3x-(2-x)\sin 3x\right]
 \]
 is a particular solution of   \eqref{eq:5.5.16}.
 
-\begin{example}\label{example:5.5.6} \rm
+\begin{example}\label{example:5.5.6}
 Find a particular solution of
 \begin{equation} \label{eq:5.5.20}
 y''+2y'+5y=e^{-x}\left[(6-16x)\cos2x-(8+8x)\sin2x\right].
@@ -4036,7 +3959,7 @@ the complementary equation
 \[
 u''+4u=0,
 \]
- Theorem~\ref{thmtype:5.5.1} tells us to look for a particular solution
+\zcref{thmtype:5.5.1} tells us to look for a particular solution
 of \eqref{eq:5.5.21} of the form
 \[
 u_p=(A_0x+A_1x^2)\cos2x+(B_0x+B_1x^2)\sin2x.
@@ -4045,10 +3968,10 @@ Then
 \begin{align*}
 u_p'
 &=\left[A_0+(2A_1+2B_0)x+2B_1x^2\right]\cos2x \\
-&\;+\left[B_0+(2B_1-2A_0)x-2A_1x^2\right]\sin2x\qquad\text{and}\\
+&\quad{}+\left[B_0+(2B_1-2A_0)x-2A_1x^2\right]\sin2x\qquad\text{and}\\
 u_p''
 &=\left[2A_1+4B_0-(4A_0-8B_1)x-4A_1x^2\right]\cos2x\\
-&\;+\left[2B_1-4A_0-(4B_0+8A_1)x-4B_1x^2\right]\sin2x,
+&\quad{}+\left[2B_1-4A_0-(4B_0+8A_1)x-4B_1x^2\right]\sin2x,
 \end{align*}
 so
 \[
@@ -4061,10 +3984,10 @@ coefficients on the right side of \eqref{eq:5.5.21} shows that $u_p$
 is a solution of \eqref{eq:5.5.21} if
 \begin{equation} \label{eq:5.5.22}
 \begin{aligned}
-8B_1&=-16\phantom{.}\\
--8A_1&=-\phantom{1}8\phantom{.}\\
-\phantom{-}4B_0+2A_1&=6\phantom{.}\\
--4A_0+2B_1&=-8.
+8B_1&=-16\\
+-8A_1&=-\phantom{1}8\\
+\phantom{-}4B_0+2A_1&=\phantom{-1}6\\
+-4A_0+2B_1&=-\phantom{1}8.
 \end{aligned}
 \end{equation}
 The solution of this system is  $A_1=1$, $B_1=-2$, $B_0=1$, $A_0=1$.
@@ -4091,14 +4014,14 @@ resulting expression for
 y_p''+2y_p'+5y_p
 \]
 with the corresponding coefficients on the right side of
-\eqref{eq:5.5.20}. (See Exercise~\ref{exer:5.5.38}). This leads to the
+\eqref{eq:5.5.20}. (See \zcref{exer:5.5.38}). This leads to the
 same system \eqref{eq:5.5.22} of equations for $A_0$, $A_1$, $B_0$, and
-$B_1$ that we obtained in Example~\ref{example:5.5.6}. However, if you try
+$B_1$ that we obtained in \zcref{example:5.5.6}. However, if you try
 this approach you'll see that deriving \eqref{eq:5.5.22} this way is
-much more tedious than the way we did it in Example~\ref{example:5.5.6}.
+much more tedious than the way we did it in \zcref{example:5.5.6}.
 
 \exercises
-In Exercises \ref{exer:5.5.1}--\ref{exer:5.5.17} find a particular solution.
+In \zcref[range]{exer:5.5.1,exer:5.5.17} find a particular solution.
 
 \begin{exerciselist}
 
@@ -4142,7 +4065,7 @@ In Exercises \ref{exer:5.5.1}--\ref{exer:5.5.17} find a particular solution.
 
 
 \exercisetext{
-In Exercises \ref{exer:5.5.1}--\ref{exer:5.5.17} find a particular solution and graph
+In \zcref[range]{exer:5.5.1,exer:5.5.17} find a particular solution and graph
 it.}
 
 \item\label{exer:5.5.18}\CGex $y''+2y'+y=e^{-x}\left[(5-2x)\cos
@@ -4155,7 +4078,7 @@ x-(3+3x)\sin x\right]$
 \item\label{exer:5.5.21}\CGex
 $y''+4y'+3y=e^{-x}\left[(2+x+x^2)\cos x+(5+4x+2x^2)\sin x\right]$
 
-\exercisetext{In Exercises \ref{exer:5.5.22}--\ref{exer:5.5.26} solve the
+\exercisetext{In \zcref[range]{exer:5.5.22,exer:5.5.26} solve the
 initial value problem.}
 
 \item\label{exer:5.5.22}$y''-7y'+6y=-e^x(17\cos x-7\sin x), \quad   y(0)=4,\;  y'(0)=2$
@@ -4171,7 +4094,7 @@ x), \quad  y(0)=2,\quad y'(0)=7$
 \item\label{exer:5.5.26}$y''-3y'+2y=e^{3x}\left[21\cos x-(11+10x)\sin x\right],
 \;  y(0)=0, \quad   y'(0)=6$
 
-\exercisetext{In Exercises \ref{exer:5.5.27}--\ref{exer:5.5.32} use the
+\exercisetext{In \zcref[range]{exer:5.5.27,exer:5.5.32} use the
 principle
 of superposition to find a particular solution. Where indicated,
 solve the initial value problem.}
@@ -4186,7 +4109,7 @@ x)+3e^{3x}+1+x$
 
 \item\label{exer:5.5.32}$y''-4y'+4y=6e^{2x}+25\sin x , \quad   y(0)=5,\;  y'(0)=3$
 
-\exercisetext{In Exercises \ref{exer:5.5.33}--\ref{exer:5.5.35}
+\exercisetext{In \zcref[range]{exer:5.5.33,exer:5.5.35}
 solve the initial value problem and graph the solution.}
 
 
@@ -4200,7 +4123,8 @@ $y''+4y'+4y=2\cos2x+3\sin2x+e^{-x} , \quad   y(0)=-1,\;  y'(0)=2$
 \item\label{exer:5.5.35}\CGex
 $y''+4y=e^x(11+15x)+8\cos2x-12\sin2x , \quad   y(0)=3,\;  y'(0)=5$
 
-\item\label{exer:5.5.36}\begin{alist}
+\item\label{exer:5.5.36}\leavevmode\vspace{-\baselineskip}
+\begin{alist}
 \item % (a)
 Verify that if
 \[
@@ -4213,22 +4137,23 @@ where $A$ and $B$ are twice differentiable, then
 +(B''-2\omega A'-\omega^2B)\sin\omega x.
 \end{align*}
 \item % (b)
-Use the results of \part{a}  to verify that
+Use the results of (a)  to verify that
 \begin{align*}
 ay_p''+by_p'+cy_p&=\left[(c-a\omega^2)A+b\omega B+2a\omega
-B'+bA'+aA''\right] \cos\omega x\\[2\jot]
+B'+bA'+aA''\right] \cos\omega x\\
 &\;+\left[-b\omega A+(c-a\omega^2)B-2a\omega A'+bB'+aB''\right]\sin\omega x.
 \end{align*}
 \item % (c)
-Use the results of \part{a}  to verify that
+Use the results of (a)  to verify that
 \[
 y_p''+\omega^2 y_p=(A''+2\omega B')\cos\omega x+
 (B''-2\omega A')\sin\omega x.
 \]
 \item % (d)
-Prove Theorem~\ref{thmtype:5.5.2}.
+Prove \zcref{thmtype:5.5.2}.
 \end{alist}
 
+% TODO this is too long for one page
 \item\label{exer:5.5.37}Let $a$, $b$, $c$, and $\omega$ be constants, with $a\ne0$ and
 $\omega>0$, and let
 \[
@@ -4252,23 +4177,23 @@ B(x)=B_0+B_1x+\cdots+B_kx^k
 \]
 such that
 \begin{align*}
-\quad (c-a\omega^2)A+b\omega B+2a\omega B'+bA'+aA''&=P\phantom{.}\\[2\jot]
+\quad (c-a\omega^2)A+b\omega B+2a\omega B'+bA'+aA''&=P\phantom{.}\\
 -b\omega A+(c-a\omega^2)B-2a\omega A'+bB'+aB''&=Q,
 \end{align*}
 where $(A_k,B_k)$, $(A_{k-1},B_{k-1})$, \dots,$(A_0,B_0)$ can be computed
 successively by solving the systems
 \begin{align*}
-\phantom{-}(c-a\omega^2)A_k+b\omega B_k&=p_k\phantom{.}\\[2\jot]
+\phantom{-}(c-a\omega^2)A_k+b\omega B_k&=p_k\phantom{.}\\
 -b\omega A_k+(c-a\omega^2)B_k&=q_k,
 \end{align*}
 and, if $1\le r\le k$,
 \begin{align*}
-\phantom{-}(c-a\omega^2)A_{k-r}+b\omega B_{k-r}&=p_{k-r}+\cdots\phantom{.}\\[2\jot]
+\phantom{-}(c-a\omega^2)A_{k-r}+b\omega B_{k-r}&=p_{k-r}+\cdots\phantom{.}\\
 -b\omega A_{k-r}+(c-a\omega^2)B_{k-r}&=q_{k-r}+\cdots,
 \end{align*}
 where the terms indicated by ``$\cdots$'' depend upon the previously
 computed coefficients with subscripts greater than $k-r$.
-Conclude from this and Exercise~\ref{exer:5.5.36}\part{b} that
+Conclude from this and \zcref{exer:5.5.36}(b) that
 \[
 y_p=A(x)\cos\omega x+B(x)\sin\omega x
 \tag{B}
@@ -4278,7 +4203,7 @@ y_p=A(x)\cos\omega x+B(x)\sin\omega x
 ay''+by'+cy=P(x)\cos\omega x+Q(x)\sin\omega x.
 \]
 \item % (b)
-Conclude from Exercise~\ref{exer:5.5.36}\part{c}
+Conclude from \zcref{exer:5.5.36}(c)
  that the equation
 \[
 a(y''+\omega^2 y)=P(x)\cos\omega x+Q(x)\sin\omega x
@@ -4293,19 +4218,19 @@ A(x)=A_0x+A_1x^2+\cdots+A_kx^{k+1}\quad\text{and}\quad
 \]
 such that
 \begin{align*}
-a(A''+2\omega B')&=P\\[2\jot]
+a(A''+2\omega B')&=P\\
 a(B''-2\omega A')&=Q,
 \end{align*}
 where the pairs $(A_k,B_k)$, $(A_{k-1},B_{k-1})$, \dots, $(A_0,B_0)$ can be
 computed successively as follows:
 \begin{align*}
-A_k&=-\frac{q_k}{2a\omega(k+1)}\\[2\jot]
+A_k&=-\frac{q_k}{2a\omega(k+1)}\\
 B_k&=\phantom{-}\frac{p_k}{2a\omega(k+1)},
 \end{align*}
 and, if $k\ge 1$,
 \begin{align*}
 A_{k-j}&=-\frac{1}{2\omega}
-\left[\frac{q_{k-j}}{a(k-j+1)}-(k-j+2)B_{k-j+1}\right]\\[2\jot]
+\left[\frac{q_{k-j}}{a(k-j+1)}-(k-j+2)B_{k-j+1}\right]\\
 B_{k-j}&=\phantom{-}\frac{1}{2\omega}
 \left[\frac{p_{k-j}}{a(k-j+1)}-(k-j+2)A_{k-j+1}\right]
 \end{align*}
@@ -4315,7 +4240,7 @@ polynomials $A$ and $B$ is a particular solution of
 (C).
 \end{alist}
 
-\item\label{exer:5.5.38}Show that  Theorem~\ref{thmtype:5.5.1} implies the next theorem:
+\item\label{exer:5.5.38}Show that  \zcref{thmtype:5.5.1} implies the next theorem:
 {\color{blue}\itshape Suppose $\omega$ is a positive  number and $P$ and $Q$
 are polynomials. Let $k$ be the larger of the degrees of $P$ and $Q$.
 Then the equation
@@ -4340,10 +4265,10 @@ a\left[y''-2\lambda
 y'+(\lambda^2+\omega^2)y\right]=
 e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)
 \]
-$($for which $e^{\lambda x}\cos\omega x$ and $e^{\lambda x}\sin\omega
+(for which $e^{\lambda x}\cos\omega x$ and $e^{\lambda x}\sin\omega
 x$ are
-solutions of the complementary equation$)$ has a particular solution
-of the form {\rm(A)}, where
+solutions of the complementary equation) has a particular solution
+of the form (A), where
 \[
 A(x)=A_0x+A_1x^2+\cdots+A_kx^{k+1} \quad\text{and}\quad 
 B(x)=B_0x+B_1x^2+\cdots+B_kx^{k+1}.
@@ -4387,9 +4312,10 @@ Conclude that
 where $c$ is a constant of integration.
 \end{alist}
 
-\item\label{exer:5.5.40}% TODO a--f are in two columns
-Use the method of Exercise~\ref{exer:5.5.39} to evaluate the integral.
-\begin{enumext}[label=\alph*,font=\bfseries,wrap-label={(#1)},labelsep=1em,columns=2]
+\item\label{exer:5.5.40}
+Use the method of \zcref{exer:5.5.39} to evaluate the integral.
+% TODO horizontal
+\begin{alist}[columns=2]
 \item $\int x^2\cos x\,dx$
 \item $\int x^2e^x\cos x\,dx$
 \item $\int xe^{-x}\sin2x\,dx$
@@ -4397,9 +4323,11 @@ Use the method of Exercise~\ref{exer:5.5.39} to evaluate the integral.
 \item $\int x^3e^x\sin x\,dx$
 \item $\int e^x\left[x\cos x-(1+3x)\sin x\right]\,dx$
 \item $\int e^{-x}\left[(1+x^2)\cos x+(1-x^2)\sin x\right]\,dx$
-\end{enumext}
+% TODO (2) columns for the last one
+\end{alist}
 
 \end{exerciselist}
+
 
 \section{Reduction of Order}\label{sec:reduction_order}
 
@@ -4450,7 +4378,7 @@ Q_0=P_0y_1 \quad\text{and}\quad Q_1=2P_0y_1'+P_1y_1.
 (It isn't worthwhile to memorize the formulas for $Q_0$ and $Q_1$!)
 Since \eqref{eq:5.6.5} is a linear first order equation in $u'$, we can
 solve it for $u'$ by variation of parameters as in
-Section~1.2, integrate the solution to obtain $u$, and then
+\zcref{sec:basic_concepts}, integrate the solution to obtain $u$, and then
 obtain $y$ from \eqref{eq:5.6.3}.
 
 \begin{example}\label{example:5.6.1}
@@ -4465,12 +4393,13 @@ given that $y_1=e^x$ is a solution of the complementary equation
 xy''-(2x+1)y'+(x+1)y=0.
 \end{equation}
 \item % (b)
-As a byproduct of \part{a}, find a fundamental set of solutions of
+As a byproduct of (a), find a fundamental set of solutions of
 \eqref{eq:5.6.7}.
 \end{alist}
 \end{example}
 
-\solutionpart{a}
+\begin{alistSolution}
+\item
 If
 $y=ue^x$, then $y'=u'e^x+ue^x$ and
 $y''=u''e^x+2u'e^x+ue^x$, so
@@ -4498,7 +4427,7 @@ is a solution of the complementary equation
 z'-\frac{z}{x}=0
 \]
 for \eqref{eq:5.6.9}. By applying variation of parameters as in
-Section~1.2, we can now see that every solution of
+\zcref{sec:basic_concepts}, we can now see that every solution of
 \eqref{eq:5.6.9} is of the form
 \[
 z=vx\quad\text{where}\quad
@@ -4518,16 +4447,17 @@ Therefore the general solution of  \eqref{eq:5.6.6} is
 y=ue^x=x+1+\frac{C_1}{2}x^2e^x+C_2e^x.
 \end{equation}
 
-\solutionpart{b} By letting $C_1=C_2=0$ in \eqref{eq:5.6.10}, we see that
+\item By letting $C_1=C_2=0$ in \eqref{eq:5.6.10}, we see that
 $y_{p_1}=x+1$ is a solution of \eqref{eq:5.6.6}. By letting $C_1=2$ and
 $C_2=0$, we see that $y_{p_2}=x+1+x^2e^x$ is also a solution of
 \eqref{eq:5.6.6}. Since the difference of two solutions of \eqref{eq:5.6.6} is
 a solution of \eqref{eq:5.6.7},
 $y_2=y_{p_1}-y_{p_2}=x^2e^x$ is a solution of \eqref{eq:5.6.7}. Since
 $y_2/y_1$ is nonconstant and we already know  that $y_1=e^x$ is a
-solution of \eqref{eq:5.6.6}, Theorem~\ref{thmtype:5.1.6} implies that
+solution of \eqref{eq:5.6.6}, \zcref{thmtype:5.1.6} implies that
 $\{e^x,x^2e^x\}$ is a fundamental set of solutions of
 \eqref{eq:5.6.7}.\bbox
+\end{alistSolution}
 
 Although \eqref{eq:5.6.10} is a correct form for the general solution of
 \eqref{eq:5.6.6}, it's silly to leave the arbitrary coefficient of
@@ -4562,7 +4492,8 @@ x^2y''+xy'-y=x^2+1, \quad   y(1)=2,\;  y'(1)=-3.
 \end{alist}
 \end{example}
 
-\solutionpart{a}  If $y=ux$, then $y'=u'x+u$ and $y''=u''x+2u'$, so
+\begin{alistSolution}
+\item If $y=ux$, then $y'=u'x+u$ and $y''=u''x+2u'$, so
 \begin{align*}
 x^2y''+xy'-y&=x^2(u''x+2u')+x(u'x+u)-ux\\
 &=x^3u''+3x^2u'.
@@ -4608,7 +4539,7 @@ Therefore the general solution of  \eqref{eq:5.6.12} is
 y=ux=\frac{x^2}{3}-1-\frac{C_1}{2x}+C_2x.
 \end{equation}
 Reasoning as in  the solution of
-Example~\ref{example:5.6.1}\part{a}, we  conclude that $y_1=x$ and $y_2=1/x$
+\zcref{example:5.6.1}(a), we  conclude that $y_1=x$ and $y_2=1/x$
 form a fundamental set of solutions for \eqref{eq:5.6.11}.
 
 As we explained above, we rename the constants in \eqref{eq:5.6.15} and
@@ -4617,7 +4548,7 @@ rewrite it as
 y=\frac{x^2}{3}-1+c_1x+\frac{c_2}{x}.
 \end{equation}
 
-\solutionpart{b}   Differentiating  \eqref{eq:5.6.16} yields
+\item Differentiating  \eqref{eq:5.6.16} yields
 \begin{equation} \label{eq:5.6.17}
 y'=\frac{2x}{3}+c_1-\frac{c_2}{x^2}.
 \end{equation}
@@ -4632,7 +4563,7 @@ Therefore the solution of \eqref{eq:5.6.12} is
 \[
 y=\frac{x^2}{3}-1-\frac{x}{2}+\frac{19}{6x}.
 \]
-
+\end{alistSolution}
 
 
 Using reduction of order to  find the general solution of
@@ -4640,7 +4571,7 @@ a homogeneous linear second order  equation leads to a
 homogeneous linear first  order  equation in $u'$ that can be solved
 by separation of variables. The next example illustrates this.
 
-\begin{example}\label{example:5.6.3} \rm
+\begin{example}\label{example:5.6.3}
  Find the general solution and a fundamental set  of solutions of
 \begin{equation}  \label{eq:5.6.18}
 x^2y''-3xy'+3y=0,
@@ -4682,7 +4613,7 @@ Therefore $\{x,x^3\}$ is  a fundamental set of solutions of
 \eqref{eq:5.6.18}.
 
 \exercises
-In Exercises \ref{exer:5.6.1}--\ref{exer:5.6.17} find the general solution,
+In \zcref[range]{exer:5.6.1,exer:5.6.17} find the general solution,
 given that $y_1$ satisfies the complementary equation. As a byproduct,
 find a fundamental set of solutions of the complementary equation.
 
@@ -4690,11 +4621,11 @@ find a fundamental set of solutions of the complementary equation.
 
 \item\label{exer:5.6.1}$(2x+1)y''-2y'-(2x+3)y=(2x+1)^2;  \quad y_1=e^{-x}$
 
-\item\label{exer:5.6.2}$x^2y''+xy'-y=\dst\frac{4}{x^2};   \quad y_1=x$
+\item\label{exer:5.6.2}$x^2y''+xy'-y=\dfrac{4}{x^2};   \quad y_1=x$
 
 \item\label{exer:5.6.3}$x^2y''-xy'+y=x;   \quad y_1=x$
 
-\item\label{exer:5.6.4}$y''-3y'+2y=\dst\frac{1}{1+e^{-x}};   \quad y_1=e^{2x}$
+\item\label{exer:5.6.4}$y''-3y'+2y=\dfrac{1}{1+e^{-x}};   \quad y_1=e^{2x}$
 
 \item\label{exer:5.6.5}$y''-2y'+y=7x^{3/2}e^x;   \quad y_1=e^x$
 
@@ -4723,7 +4654,7 @@ y_1=x^{1/2}e^x$
 
 \item\label{exer:5.6.17}$x^2y''-5xy'+8y=4x^2;  \quad y_1=x^2$
 
-\exercisetext{In Exercises \ref{exer:5.6.18}--\ref{exer:5.6.30} find a
+\exercisetext{In \zcref[range]{exer:5.6.18,exer:5.6.30} find a
 fundamental set of solutions, given that $y_1$ is a solution.}
 
 \item\label{exer:5.6.18}$xy''+(2-2x)y'+(x-2)y=0;    \quad y_1=e^x$
@@ -4753,7 +4684,7 @@ y_1=x^{1/2}$
 
 \item\label{exer:5.6.30}$xy''-(4x+1)y'+(4x+2)y=0;  \quad y_1=e^{2x}$
 
-\exercisetext{In Exercises~\ref{exer:5.6.31}--\ref{exer:5.6.33} solve the
+\exercisetext{In \zcref[range]{exer:5.6.31,exer:5.6.33} solve the
 initial value problem, given that $y_1$ satisfies the complementary
 equation.}
 
@@ -4769,19 +4700,19 @@ $y_1=(x+1)e^x$
 
 
 
-\exercisetext{In Exercises~\ref{exer:5.6.34} and \ref{exer:5.6.35} solve the
+\exercisetext{In \zcref{exer:5.6.34,exer:5.6.35} solve the
 initial value problem and graph the solution, given that $y_1$
 satisfies the complementary equation.}
 
 
 \item\label{exer:5.6.34}\CGex
-$x^2y''+2xy'-2y=x^2, \quad   y(1)=\dst\frac{5}{4},\;
-y'(1)=\dst\frac{3}{2};   \quad y_1=x$
+$x^2y''+2xy'-2y=x^2, \quad   y(1)=\dfrac{5}{4},\;
+y'(1)=\dfrac{3}{2};   \quad y_1=x$
 
 
 \item\label{exer:5.6.35}\CGex
-$(x^2-4)y''+4xy'+2y=x+2, \quad  y(0)=-\dst\frac{1}{3},\quad y'(0)=-1;
-\quad y_1=\dst\frac{1}{x-2}$
+$(x^2-4)y''+4xy'+2y=x+2, \quad  y(0)=-\dfrac{1}{3},\quad y'(0)=-1;
+\quad y_1=\dfrac{1}{x-2}$
 
 \item\label{exer:5.6.36}Suppose $p_1$ and $p_2$ are continuous on $(a,b)$. Let $y_1$
 be a solution of
@@ -4796,7 +4727,7 @@ Use reduction of order to show that $y_1$ and
 \left(-\int^t_{x_0}p_1(s)\, ds\right)\,dt
 \]
 form a fundamental set of solutions of (A) on
-$(a,b)$. \note{This exercise is related to Exercise~\ref{exer:5.1.9}.}
+$(a,b)$. \note{This exercise is related to \zcref{exer:5.1.9}.}
 
 \color{black}
 \item\label{exer:5.6.37}The nonlinear first order equation
@@ -4807,7 +4738,7 @@ $(a,b)$. \note{This exercise is related to Exercise~\ref{exer:5.1.9}.}
 is  a
 \href{http://http://www-history.mcs.st-and.ac.uk/Indexes/Riccati.html}
 {\color{blue}\itshape Riccati equation\/}.  (See
-Exercise~2.4.~\hspace*{-3pt}\ref{exer:2.4.55}.) Assume that $p$ and $q$ are continuous.
+{Exercise~2.4.\ref{exer:2.4.55}}.) Assume that $p$ and $q$ are continuous.
 \begin{alist}
 \item %(a)
 Show that $y$ is a solution of (A) if and only if $y={z'/z}$, where
@@ -4831,27 +4762,21 @@ Does the formula  (C) imply that the first order equation
 Explain your answer.
  \end{alist}
 
-\item\label{exer:5.6.38}Use a method suggested by Exercise~\ref{exer:5.6.37}  to find all
+\item\label{exer:5.6.38}Use a method suggested by \zcref{exer:5.6.37}  to find all
 solutions. of the  equation.
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{a} $y'+y^2+k^2=0$
-& \part{b} $y'+y^2-3y+2=0$
-\end{tabular}
+\begin{alist}[columns=2]
+% TODO horizontal
+\item $y'+y^2+k^2=0$
+\item $y'+y^2-3y+2=0$
+\item $y'+y^2+5y-6=0$
+\item $y'+y^2+8y+7=0$
+\item $y'+y^2+14y+50=0$
+\item $6y'+6y^2-y-1=0$
+\item $36y'+36y^2-12y+1=0$
+\end{alist}
 
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{c} $y'+y^2+5y-6=0$
-& \part{d} $y'+y^2+8y+7=0$
-\end{tabular}
-
-\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\part{e} $y'+y^2+14y+50=0$
-& \part{f} $6y'+6y^2-y-1=0$
-\end{tabular}
-
-\part{g} $36y'+36y^2-12y+1=0$
-
-\item\label{exer:5.6.39}Use a method suggested by Exercise~\ref{exer:5.6.37} and reduction of
+\item\label{exer:5.6.39}Use a method suggested by \zcref{exer:5.6.37} and reduction of
 order to find all solutions of the  equation, given that $y_1$ is
 a solution.
 
@@ -4869,11 +4794,10 @@ $(2x+1)(y'+y^2)-2y-(2x+3)=0;   \quad y_1=-1$
 $(3x-1)(y'+y^2)-(3x+2)y-6x+8=0;   \quad y_1=2$
 
 \item %(e)
-$\dst{x^2(y'+y^2)+xy+x^2- \frac{1}{4}=0;
-\quad y_1=-\tan x -\frac{1}{2x}}$
+$x^2(y'+y^2)+xy+x^2- \dfrac{1}{4}=0; \quad y_1=-\tan x -\dfrac{1}{2x}$
 
 \item %(f)
-$\dst{x^2(y'+y^2)-7xy+7=0;  \quad y_1=1/x}$
+$x^2(y'+y^2)-7xy+7=0;  \quad y_1=1/x$
 
 \end{alist}
 
@@ -4885,7 +4809,7 @@ $\dst{x^2(y'+y^2)-7xy+7=0;  \quad y_1=1/x}$
 is  the
 \href{http://http://www-history.mcs.st-and.ac.uk/Indexes/Riccati.html}
 {\color{blue}\itshape generalized Riccati equation\/}.
-(See Exercise~2.4.~\hspace*{-3pt}\ref{exer:2.4.55}.)
+(See {Exercise~2.4.\ref{exer:2.4.55}}.)
 Assume that $p$ and $q$ are continuous and $r$ is differentiable.
 
 \begin{alist}
@@ -4908,6 +4832,7 @@ where $\{z_1,z_2\}$ is a fundamental set of solutions of
 \end{alist}
 
 \end{exerciselist}
+
 
 \section{Variation of Parameters}\label{sec:variation_param}
 
@@ -4947,7 +4872,7 @@ equations
 \item Variation of parameters is a powerful theoretical tool
  used by researchers in differential equations. Although a detailed
 discussion of this is beyond the scope of this book, you can get an
-idea of what it means from Exercises~\ref{exer:5.7.37}--\ref{exer:5.7.39}.
+idea of what it means from \zcref[range]{exer:5.7.37,exer:5.7.39}.
  \end{itemize}
 
 We'll now derive the method. As usual, we consider solutions of
@@ -5002,7 +4927,7 @@ Therefore $y_p$ in \eqref{eq:5.7.3} satisfies \eqref{eq:5.7.1} if
 \begin{equation} \label{eq:5.7.9}
 \begin{aligned}
 u_1'y_1+u_2'y_2 &= 0  \\
-u_1'y_1'+u_2'y_2' &= \dst\frac{F}{P_0},
+u_1'y_1'+u_2'y_2' &= \dfrac{F}{P_0},
 \end{aligned}
 \end{equation}
 where the first equation is the same as \eqref{eq:5.7.5} and the second is
@@ -5022,7 +4947,7 @@ Subtracting the second equation from the first yields
 u_1'(y_1y_2'-y_1'y_2)=-\frac{Fy_2}{P_0}.
 \end{equation}
 Since $\{y_1,y_2\}$  is a fundamental set of solutions of \eqref{eq:5.7.2}
-on $(a,b)$, Theorem~\ref{thmtype:5.1.6}\; implies that the Wronskian
+on $(a,b)$, \zcref{thmtype:5.1.6}\; implies that the Wronskian
  $y_1y_2'-y_1'y_2$  has no zeros on $(a,b)$.  Therefore we can solve
 \eqref{eq:5.7.10} for $u_1'$, to obtain
 \begin{equation} \label{eq:5.7.11}
@@ -5040,7 +4965,7 @@ of $u_1$ and $u_2$ in \eqref{eq:5.7.3} will suffice.
 
 You should not memorize \eqref{eq:5.7.11} and \eqref{eq:5.7.12}. On the
 other hand, you don't want to rederive the whole procedure for every
-specific problem. We recommend the a compromise:
+specific problem. We recommend a compromise:
 \begin{alist}
 \item % (a)
 Write
@@ -5053,7 +4978,7 @@ Write the system
 \begin{equation} \label{eq:5.7.14}
 \begin{aligned}
 u_1'y_1+u_2'y_2 &= 0  \\
-u_1'y_1'+u_2'y_2' &= \dst\frac{F}{P_0}
+u_1'y_1'+u_2'y_2' &= \dfrac{F}{P_0}
 \end{aligned}
 \end{equation}
 for the specific problem  you're trying to solve.
@@ -5066,7 +4991,7 @@ taking the constants of integration to be zero.
 Substitute $u_1$ and $u_2$ into \eqref{eq:5.7.13}  to obtain $y_p$.
 \end{alist}
 
-\begin{example}\label{example:5.7.1} \rm
+\begin{example}\label{example:5.7.1}
  Find a particular
 solution $y_p$ of
 \begin{equation} \label{eq:5.7.15}
@@ -5107,7 +5032,7 @@ and the general solution of  \eqref{eq:5.7.15} is
 y=\frac{4}{35}x^{9/2}+c_1x+c_2x^2.
 \]
 
-\begin{example}\label{example:5.7.2} \rm
+\begin{example}\label{example:5.7.2}
  Find a particular
 solution $y_p$ of
 \begin{equation} \label{eq:5.7.16}
@@ -5166,13 +5091,13 @@ of the complementary equation; hence, $-x^2-1=(-x^2-x-1)+x$
 is also a solution of \eqref{eq:5.7.16}. In general, it's always
 legitimate to drop linear combinations of $\{y_1,y_2\}$ from
 particular solutions obtained by variation of parameters. (See
-Exercise~\ref{exer:5.7.36} for a general discussion of this question.)
+\zcref{exer:5.7.36} for a general discussion of this question.)
 We'll do this in the following  examples and in the answers to
 exercises that ask  for a particular solution. Therefore, don't be
 concerned if your answer to such an exercise differs from ours only by
 a solution of the complementary equation.
 
-\begin{example}\label{example:5.7.3} \rm
+\begin{example}\label{example:5.7.3}
  Find a particular solution of
 \begin{equation}  \label{eq:5.7.19}
 y''+3y'+2y=\frac{1}{1+e^x}.
@@ -5216,7 +5141,7 @@ u_1=\int\frac{e^x}{1+e^x}\,dx=\int \frac{dv}{1+v}
 and
 \begin{align*}
 u_2&=-\int\frac{e^{2x}}{1+e^x}\,dx=-\int \frac{v}{1+v}\,dv
-=\int\left[\frac{1}{1+v}-1\right]\,dv \\[2\jot]
+=\int\left[\frac{1}{1+v}-1\right]\,dv \\
 &=\ln(1+v)-v=\ln(1+e^x)-e^x.
 \end{align*}
 Therefore
@@ -5240,7 +5165,7 @@ y=y_p+c_1e^{-x}+c_2e^{-2x}=\left(e^{-x}+e^{-2x}\right)\ln(1+e^x)
 +c_1e^{-x}+c_2e^{-2x}.
 \]
 
-\begin{example}\label{example:5.7.4} \rm
+\begin{example}\label{example:5.7.4}
 Solve the initial value problem
 \begin{equation} \label{eq:5.7.21}
 (x^2-1)y''+4xy'+2y=\frac{2}{x+1}, \quad  y(0)=-1,\quad y'(0)=-5,
@@ -5332,23 +5257,21 @@ these into
 y&=\frac{2\ln(x+1)}{x-1}+\frac{2}{x-1}+\frac{1}{x+1}\\
 &=\frac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^2-1}
 \end{align*}
-as the solution of  \eqref{eq:5.7.21}. Figure~\ref{figure:5.7.1} is a graph
+as the solution of  \eqref{eq:5.7.21}. \zcref[S]{figure:5.7.1} is a graph
 of the solution.
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig050701}
+  \includegraphics[alt={A solution curve on -1<x<1 and -50<y<50 with vertical asymptotes at y=±1.  The curve begins near positive infinity when x=-1, crosses the x axis near 0.25, the y axis near y=-1, and goes to negative infinity as x approaches 1.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig050701}
 \color{blue}
-  \caption{ $y=\dst\frac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^2-1}$}
+  \caption{ $y=\dfrac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^2-1}$}
   \label{figure:5.7.1}
 \end{figure}
 
 
 \boxit{Comparison of Methods}
 
-
-\noindent
 We've now considered three methods
 for solving  nonhomogeneous linear equations: undetermined
 coefficients, reduction of order, and variation of parameters. It's
@@ -5372,40 +5295,27 @@ already know a fundamental set of solutions of the complementary
 equation.
 
 \exercises
- In Exercises~\ref{exer:5.7.1}--\ref{exer:5.7.6} use variation of
+ In \zcref[range]{exer:5.7.1,exer:5.7.6} use variation of
 parameters to find a particular solution.
 
 \begin{exerciselist}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 1--6 in two columns
-\item\label{exer:5.7.1}$y''+9y=\tan 3x$
-%&\vspace*{10pt}  
-\item\label{exer:5.7.2}$y''+4y=\sin 2x\sec^2 2x$
-%\end{tabular}
+\item(1)\label{exer:5.7.1}$y''+9y=\tan 3x$
+\item(1)\label{exer:5.7.2}$y''+4y=\sin 2x\sec^2 2x$
+\item(1)\label{exer:5.7.3}$y''-3y'+2y=\dfrac{4}{1+e^{-x}}$
+\item(1)\label{exer:5.7.4}$y''-2y'+2y=3e^x \sec x$
+\item(1)\label{exer:5.7.5}$y''-2y'+y=14x^{3/2}e^x$
+\item(1)\label{exer:5.7.6}$y''-y=\dfrac{4e^{-x}}{1-e^{-2x}}$
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.7.3}$y''-3y'+2y=\dst\frac{4}{1+e^{-x}}$
-%&  
-\item\label{exer:5.7.4}$y''-2y'+2y=3e^x \sec x$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:5.7.5}$y''-2y'+y=14x^{3/2}e^x$
-%&\vspace*{-5pt} 
-\item\label{exer:5.7.6}$y''-y=\dst\frac{4e^{-x}}{1-e^{-2x}}$
-%\end{tabular}
-
-
-\exercisetext{In Exercises \ref{exer:5.7.7}--\ref{exer:5.7.29} use variation
+\exercisetext{In \zcref[range]{exer:5.7.7,exer:5.7.29} use variation
 of parameters to find a particular solution, given the solutions
 $y_1$, $y_2$ of the complementary equation.}
 
 \item\label{exer:5.7.7}$x^2y''+xy'- y=2x^2+2;   \quad y_1=x,
-\quad y_2=\dst\frac{1}{x}$
+\quad y_2=\dfrac{1}{x}$
 
-\item\label{exer:5.7.8}$\dst{xy''+(2-2x)y'+(x-2)y=e^{2x};   \quad y_1=e^x,
-\quad y_2=\frac{e^x}{x}}$
+\item\label{exer:5.7.8}$xy''+(2-2x)y'+(x-2)y=e^{2x};   \quad y_1=e^x,
+\quad y_2=\dfrac{e^x}{x}$
 
 \item\label{exer:5.7.9}$4x^2y''+(4x-8x^2)y'+(4x^2-4x-1)y=4x^{1/2}e^x, \quad   x > 0$;
 \newline $y_1=x^{1/2} e^x,\;  y_2=x^{-1/2}e^x$
@@ -5459,7 +5369,7 @@ y_2=\sqrt x\cos x$
 \item\label{exer:5.7.29}$4x^2y''-4x(x+1)y'+(2x+3)y=x^{5/2}e^x;   \quad
 y_1=\sqrt x, \quad y_2=\sqrt xe^x$
 
-\exercisetext{In Exercises \ref{exer:5.7.30}--\ref{exer:5.7.32} use variation
+\exercisetext{In \zcref[range]{exer:5.7.30,exer:5.7.32} use variation
 of parameters to solve the initial value problem, given
 $y_1,y_2$ are solutions of the complementary equation.}
 
@@ -5479,23 +5389,23 @@ $y_2=x^2-1$
 $y_1=(x-1)e^x,\quad y_2=x-1$
 
 
-\exercisetext{In Exercises \ref{exer:5.7.33}--\ref{exer:5.7.35} use variation
+\exercisetext{In \zcref[range]{exer:5.7.33,exer:5.7.35} use variation
 of parameters to solve the initial value problem and graph the
 solution, given that $y_1,y_2$ are solutions of the complementary
 equation.}
 
 
 \item\label{exer:5.7.33}\CGex
-$\dst{(x^2-1)y''+4xy'+2y=2x, \quad   y(0)=0,\;  y'(0)
-=-2; \quad   y_1=\frac{1}{x-1},\;  y_2=\frac{1}{x+1}}$
+$(x^2-1)y''+4xy'+2y=2x, \quad   y(0)=0,\;  y'(0)
+=-2; \quad   y_1=\dfrac{1}{x-1},\;  y_2=\dfrac{1}{x+1}$
 
 \item\label{exer:5.7.34}\CGex
-$\dst{x^2y''+2xy'-2y=-2x^2, \quad   y(1)=1,\;  y'(1)=
--1; \quad  y_1=x,\;  y_2=\frac{1}{x^2}}$
+$x^2y''+2xy'-2y=-2x^2, \quad   y(1)=1,\;  y'(1)=
+-1; \quad  y_1=x,\;  y_2=\dfrac{1}{x^2}$
 
 \item\label{exer:5.7.35}\CGex
 $(x+1)(2x+3)y''+2(x+2)y'-2y=(2x+3)^2, \quad  y(0)=0,\quad y'(0)=0$;
-\newline $y_1=x+2,\quad y_2=\dst\frac{1}{x+1}$
+\newline $y_1=x+2,\quad y_2=\dfrac{1}{x+1}$
 
 \item\label{exer:5.7.36}Suppose
 \[
@@ -5537,7 +5447,7 @@ f(t)\exp\left(\int^t_{x_0}p(s)\,ds\right)\,dt.
 \hint{Use Abel's formula for the Wronskian of $\{y_1,y_2\}$, and
 integrate $u_1'$ and $u_2'$ from $x_0$ to $x$.} Show also that
 \begin{multline*}
-y'(x) = k_0y_1'(x)+k_1y_2'(x) \\[2\jot]
+y'(x) = k_0y_1'(x)+k_1y_2'(x) \\
 +\int^x_{x_0}\left(y_1(t)y_2'(x)-y_1'(x)y_2(t)\right)
 f(t)\exp\left(\int^t_{x_0}p(s)\,ds\right)\,dt.
 \end{multline*}
