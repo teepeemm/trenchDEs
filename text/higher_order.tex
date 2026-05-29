@@ -1,39 +1,40 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = ../TRENCH_DIFFEQ.tex
 
-\chapter{Linear Higher Order Equations}
-
-
+\chapter{Linear Higher Order Equations}\label{ch:higher_order}
 
 \noindent
-IN THIS CHAPTER
+\textsc{In this chapter}
  we  extend  the results obtained
-in Chapter~5  for linear second order  equations
+in \zcref{ch:second_order} for linear second order  equations
 to linear higher order equations.
 
 \medskip\noindent
-SECTION~9.1 presents a theoretical introduction to
+\zcref[S,CAP,font=\scshape]{sec:higher_theory} presents a theoretical introduction to
 linear higher order equations.
 
 
 \medskip\noindent
- SECTION~9.2 discusses higher order constant
+\zcref[S,CAP,font=\scshape]{sec:higher_const_coeff} discusses higher order constant
 coefficient
 homogeneous equations.
 
 
 \medskip\noindent
-SECTION~9.3  presents the method of
+\zcref[S,CAP,font=\scshape]{sec:higher_undetermined} presents the method of
 undetermined coefficients for
 higher order equations.
 
 
 \medskip\noindent
-SECTION~9.4  extends the
+\zcref[S,CAP,font=\scshape]{sec:higher_variation_param} extends the
 method of  variation of parameters to  higher order
 equations.
 
 \newpage
 
 \section{Introduction to Linear Higher Order Equations}
+\label{sec:higher_theory}
 
 An $n$th order differential equation is said to be \emph{\color{blue}linear} if it
 can be written in the form
@@ -41,13 +42,13 @@ can be written in the form
 y^{(n)}+p_1(x)y^{(n-1)}+\cdots+p_n(x)y=f(x).
 \end{equation}
 We considered equations of this form with $n=1$ in
-Section~2.1 and with $n=2$ in
-Chapter~5. In this chapter $n$ is an arbitrary
+\zcref{sec:linar_first_order} and with $n=2$ in
+\zcref{ch:second_order}. In this chapter $n$ is an arbitrary
 positive integer.
 
 In this section we sketch the general theory of linear $n$th order
 equations. Since this theory has already been discussed for $n=2$ in
-Sections~5.1\; and 5.3, we'll omit
+\zcref{sec:homog_linear,sec:nonhomog_linear}, we'll omit
 proofs.
 
 For convenience, we consider linear differential equations written
@@ -69,7 +70,7 @@ written as \eqref{eq:9.1.1} with $p_1$, \dots, $p_n$ and $f$ continuous on
 $(a,b)$.
 
 The next theorem is analogous to
-Theorem~\ref{thmtype:5.3.1}.
+\zcref{thmtype:5.3.1}.
 
 \begin{theorem}\color{blue}\label{thmtype:9.1.1}
 Suppose   $Ly=F$ is normal on $(a,b)$, let $x_0$ be a point in
@@ -102,7 +103,7 @@ is a \emph{\color{blue}linear combination} of $\{y_1,y_2,\dots,y_n\}$. It's
 easy
  to show that if $y_1$, $y_2$, \dots, $y_n$ are solutions of
 $Ly=0$ on $(a,b)$, then so is any linear combination of
-$\{y_1,y_2,\dots,y_n\}$. (See the proof of Theorem~\ref{thmtype:5.1.2}.) We
+$\{y_1,y_2,\dots,y_n\}$. (See the proof of \zcref{thmtype:5.1.2}.) We
 say that $\{y_1,y_2,\dots,y_n\}$ is a \emph{\color{blue}fundamental set of
 solutions of $Ly=0$ on} $(a,b)$ if every solution of $Ly=0$ on
 $(a,b)$ can be written as a linear combination of
@@ -111,7 +112,7 @@ $\{y_1,y_2,\dots,y_n\}$, as in \eqref{eq:9.1.3}. In this case we say that
 $(a,b)$}.
 
 
-It can be shown (Exercises~\ref{exer:9.1.14} and \ref{exer:9.1.15}) that if
+It can be shown (\zcref{exer:9.1.14,exer:9.1.15}) that if
 the equation $Ly=0$ is normal on $(a,b)$ then it has
 infinitely many fundamental  sets of solutions  on $(a,b)$.
 The next definition will help to identify fundamental sets of
@@ -129,7 +130,7 @@ constants $c_1$, $c_2$, \dots, $c_n$ that are not all zero, then
 $\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly dependent} on $(a,b)$
 
 The next theorem is analogous to
-Theorem~\ref{thmtype:5.1.3}.
+\zcref{thmtype:5.1.3}.
 
 \begin{theorem}\color{blue}\label{thmtype:9.1.2}
 If  $Ly=0$ is normal on $(a,b)$, then a set
@@ -184,7 +185,7 @@ determinant is nonzero. Since the determinant of \eqref{eq:9.1.8} is
 \]
 it follows that \eqref{eq:9.1.8} has only the trivial solution, so
 $\{y_1,y_2,y_3\}$ is linearly independent on $(0,\infty)$. Now
-Theorem~\ref{thmtype:9.1.2} implies that
+\zcref{thmtype:9.1.2} implies that
 \[
 y=c_1x^2+c_2x^3+\frac{c_3}{x}
 \]
@@ -257,7 +258,7 @@ The determinant of this system is
 \end{array}
 \end{equation}
 so the system has only the trivial solution $c_1=c_2=c_3=c_4=0$.
-Now Theorem~\ref{thmtype:9.1.2} implies that
+Now \zcref{thmtype:9.1.2} implies that
 \[
 y=c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x}
 \]
@@ -267,8 +268,7 @@ is the general solution of \eqref{eq:9.1.9}.
 
 
 \noindent
-We can use the method used in Examples~\ref{example:9.1.1} and
-\ref{example:9.1.2} to test $n$ solutions $\{y_1,y_2,\dots,y_n\}$ of any
+We can use the method used in \zcref{example:9.1.1,example:9.1.2} to test $n$ solutions $\{y_1,y_2,\dots,y_n\}$ of any
 $n$th order equation $Ly=0$ for linear independence on an interval
 $(a,b)$ on which the equation is normal. Thus, if $c_1$, $c_2$ ,\dots,
 $c_n$ are constants such that
@@ -302,17 +302,17 @@ We call this determinant the
 {\color{blue}\itshape Wronskian\/} of
 $\{y_1,y_2,\dots,y_n\}$. If $W(x)\ne0$ for some $x$ in $(a,b)$ then
  the system \eqref{eq:9.1.13} has only the trivial solution
-$c_1=c_2=\cdots=c_n=0$, and Theorem~\ref{thmtype:9.1.2} implies that
+$c_1=c_2=\cdots=c_n=0$, and \zcref{thmtype:9.1.2} implies that
 \[
 y=c_1y_1+c_2y_2+\cdots+c_ny_n
 \]
 is the general solution of $Ly=0$ on $(a,b)$.
 
 
-The next theorem generalizes Theorem~\ref{thmtype:5.1.4}.
-The proof is sketched in (Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.20}).
+The next theorem generalizes \zcref{thmtype:5.1.4}.
+The proof is sketched in (\zcref[range]{exer:9.1.17,exer:9.1.20}).
 
-\begin{theorem}\color{blue}\label{thmtype:9.1.3}
+\begin{theorem}\label{thmtype:9.1.3}
  Suppose the   homogeneous linear $n$th order equation
 \begin{equation}\label{eq:9.1.14}
 P_0(x)y^{(n)}+P_1(x)y^{n-1}+\cdots+P_n(x)y=0
@@ -334,7 +334,7 @@ Formula \eqref{eq:9.1.15} is
 {\color{blue}\itshape Abel's formula\/}.
 
 The next theorem is analogous to
-Theorem~\ref{thmtype:5.1.6}..
+\zcref{thmtype:5.1.6}.
 
 \begin{theorem}\color{blue}\label{thmtype:9.1.4}
 Suppose $Ly=0$ is normal on $(a,b)$ and let $y_1$, $y_2$, \dots, $y_n$
@@ -359,7 +359,7 @@ $(a,b).$
 \end{theorem}
 
 \begin{example}\label{example:9.1.3} \rm
-In Example~\ref{example:9.1.1} we saw that the solutions $y_1=x^2$,
+In \zcref{example:9.1.1} we saw that the solutions $y_1=x^2$,
 $y_2=x^3$, and $y_3=1/x$ of
 \[
 x^3y'''-x^2y''-2xy'+6y=0
@@ -394,7 +394,7 @@ W(x)=2x^3\left|\begin{array}{ccc}
 Therefore $W(x)\ne0$ on $(-\infty,0)$ and $(0,\infty)$.
 
 \begin{example}\label{example:9.1.4} \rm In
-Example~\ref{example:9.1.2} we saw that the solutions $y_1=e^x$,
+\zcref{example:9.1.2} we saw that the solutions $y_1=e^x$,
 $y_2=e^{-x}$,
 $y_3=e^{2x}$, and $y_4=e^{-3x}$ of
 \[
@@ -422,17 +422,17 @@ W(x)=e^{-x}\left|\begin{array}{rrrr}1&1&1&1\\1&-1&2&-3\\1&1&4&9\\
 from \eqref{eq:9.1.12}.
 
 \color{blue}
-\remark{Under the assumptions of Theorem~\ref{thmtype:9.1.4}, it isn't
+\remark{Under the assumptions of \zcref{thmtype:9.1.4}, it isn't
 necessary to obtain a formula for $W(x)$. Just evaluate $W(x)$
 at a convenient point in $(a,b)$, as we did in
-Examples~\ref{example:9.1.1} and \ref{example:9.1.2}.}
+\zcref{example:9.1.1,example:9.1.2}.}
 \color{black}
 
 
 \begin{theorem}\color{blue} \label{thmtype:9.1.5}
 Suppose $c$ is in $(a,b)$ and $\alpha_{1},$ $\alpha_{2},$ \dots$,$
 are real numbers, not all zero.
-Under the assumptions of Theorem~\ref{thmtype:10.3.3}, suppose
+Under the assumptions of \zcref{thmtype:10.3.3}, suppose
 $y_{1}$ and $y_{2}$ are  solutions  of \eqref{eq:5.1.35}   such that
 \begin{equation} \label{eq:9.1.16}
 \alpha y_{i}(c)+ y_{i}'(c)+\cdots +y_{i}^{(n-1)}(c)=0,\quad 1\le i\le n.
@@ -463,7 +463,7 @@ y_{1}^{(n-1)}(c)&y_{2}^{(n-1)}(c)(c)&\cdots& y_{n}^{(n-1)}(c)(c)\\
 \end{array}\right|=0
 \]
 \nopagebreak
-and Theorem~\ref{thmtype:9.1.4} implies the stated conclusion.
+and \zcref{thmtype:9.1.4} implies the stated conclusion.
 \end{proof}
 
 
@@ -474,7 +474,7 @@ and Theorem~\ref{thmtype:9.1.4} implies the stated conclusion.
 
 \noindent
 The next theorem is analogous to
-Theorem~\ref{thmtype:5.3.2}.
+\zcref{thmtype:5.3.2}.
 It shows how to find the general solution of $Ly=F$ if we know a particular
 solution of $Ly=F$ and a fundamental set of solutions of the {\color{blue}\it
 complementary equation\/} $Ly=0$.
@@ -490,7 +490,7 @@ y=y_p+c_1y_1+c_2y_2+\cdots+c_ny_n,
 where $c_1,c_2,\dots,c_n$  are constants.
 \end{theorem}
 
-The next theorem is analogous to Theorem~\ref{thmtype:5.3.2}.
+The next theorem is analogous to \zcref{thmtype:5.3.2}.
 
 \begin{theorem}\color{blue}$[$The Principle of
 Superposition$]$\label{thmtype:9.1.7}
@@ -506,7 +506,7 @@ Ly=F_1(x)+F_2(x)+\cdots+F_r(x)
 on $(a,b).$
 \end{theorem}
 
-We'll apply  Theorems~\ref{thmtype:9.1.6} and \ref{thmtype:9.1.7}
+We'll apply  \zcref{thmtype:9.1.6,thmtype:9.1.7}
 throughout the rest of this chapter.
 
 \exercises
@@ -553,7 +553,7 @@ $xy^{(4)}-y'''-4xy''+4y'=96x^2, \quad  y(1)=-5,\quad y'(1)=-24$
 x^3y'''-x^2 y''-2xy'+6y=0,
 \quad   y(-1)=-4, \quad   y'(-1)=-14,\quad   y''(-1)=-20.
 \]
-\hint{See Example~$\ref{example:9.1.1}$.}
+\hint{See \zcref{example:9.1.1}.}
 
 
 \item\label{exer:9.1.3}Solve the initial value problem
@@ -561,7 +561,7 @@ x^3y'''-x^2 y''-2xy'+6y=0,
 y^{(4)}+y'''-7y''-y'+6y=0,
 \quad   y(0)=5,\quad   y'(0)=-6,\quad   y''(0)=10,\quad   y'''(0)-36.
 \]
-\hint{See Example~$\ref{example:9.1.2}$.}
+\hint{See \zcref{example:9.1.2}.}
 
 
 \item\label{exer:9.1.4}Find solutions $y_1$, $y_2$, \dots, $y_n$ of the equation $y^{(n)}=0$
@@ -685,7 +685,7 @@ What is the general solution of  (A)?
 \part{k} $\{e^{2x},\,e^{-2x},\,1,\,x^2\}$
 
 \item\label{exer:9.1.11}Suppose $Ly=0$ is normal on $(a,b)$ and $x_0$ is in $(a,b)$. Use
-Theorem~\ref{thmtype:9.1.1} to show that $y\equiv0$ is the only solution
+\zcref{thmtype:9.1.1} to show that $y\equiv0$ is the only solution
 of the initial value problem
 \[
 Ly=0, \quad  y(x_0)=0,\quad y'(x_0)=0,\dots, y^{(n-1)}(x_0)=0,
@@ -756,7 +756,7 @@ and only if at least one of the functions $y_1$, $y_2$, \dots, $y_n$ can be
 written as a linear combination of the others on $(a,b)$.
 
 \exercisetext{Take the following as a hint in
-Exercises~\ref{exer:9.1.17}--\ref{exer:9.1.19}:\\
+\zcref[range]{exer:9.1.17,exer:9.1.19}:\\
 \color{blue}
  By the definition of determinant,
 \[
@@ -805,7 +805,7 @@ where $F_i$ is the determinant obtained by differentiating the
 $i$th row of $F$.
 
 
-\item\label{exer:9.1.19}Use Exercise~\ref{exer:9.1.18}  to show that if $W$ is the
+\item\label{exer:9.1.19}Use \zcref{exer:9.1.18}  to show that if $W$ is the
 Wronskian of the
 $n$-times differentiable functions $y_1$, $y_2$, \dots, $y_n$, then
 \[
@@ -819,7 +819,7 @@ y_1^{(n)}&y_2^{(n)}&\cdots&y_n^{(n)}
 \end{array}\right|.
 \]
 
-\item\label{exer:9.1.20}Use Exercises~\ref{exer:9.1.17} and \ref{exer:9.1.19} to show that if $W$ is
+\item\label{exer:9.1.20}Use \zcref{exer:9.1.17,exer:9.1.19} to show that if $W$ is
 the Wronskian
 of  solutions $\{y_1,y_2,\dots,y_n\}$ of the normal equation
 \[
@@ -831,9 +831,9 @@ Derive Abel's formula (Eqn.~\eqref{eq:9.1.15}) from this.
 \hint{Use (A) to write $y^{(n)}$ in terms of
 $y,y',\dots,y^{(n-1)}$.}
 
-\item\label{exer:9.1.21}Prove Theorem~\ref{thmtype:9.1.6}.
+\item\label{exer:9.1.21}Prove \zcref{thmtype:9.1.6}.
 
-\item\label{exer:9.1.22}Prove Theorem~\ref{thmtype:9.1.7}.
+\item\label{exer:9.1.22}Prove \zcref{thmtype:9.1.7}.
 
 
 
@@ -853,7 +853,7 @@ y^{(n)}&y_{1}^{(n)}&y_2^{(n)}&\cdots&y_n^{(n)}
 in cofactors of its first column is normal and has
 $\{y_1,y_2,\dots,y_n\}$ as a fundamental set of solutions on $(a,b)$.
 
-\item\label{exer:9.1.24}Use the method suggested by Exercise~\ref{exer:9.1.23}  to find a linear
+\item\label{exer:9.1.24}Use the method suggested by \zcref{exer:9.1.23}  to find a linear
 homogeneous equation such that the given set of functions
 is a fundamental set of solutions on intervals on which the Wronskian
 of the set has no zeros.
@@ -888,6 +888,7 @@ of the set has no zeros.
 
 
 \section{Higher Order Constant Coefficient Homogeneous Equations}
+\label{sec:higher_const_coeff}
 
 If $a_0$, $a_1$, \dots, $a_n$ are constants and $a_0\ne0$, then
 \[
@@ -900,18 +901,18 @@ equation
 a_0y^{(n)}+a_1y^{(n-1)}+\cdots+a_ny=0.
 \end{equation}
 Since \eqref{eq:9.2.1} is normal on $(-\infty,\infty)$, the theorems in
-Section~9.1 all apply with $(a,b)=(-\infty,\infty)$.
+\zcref{sec:higher_theory} all apply with $(a,b)=(-\infty,\infty)$.
 
-As in Section~5.2, we call
+As in \zcref{sec:const_coeff_homog}, we call
 \begin{equation} \label{eq:9.2.2}
 p(r)=a_0r^n+a_1r^{n-1}+\cdots+a_n
 \end{equation}
 the \emph{\color{blue}characteristic polynomial} of \eqref{eq:9.2.1}. We saw in
-Section~5.2 that when $n=2$ the solutions of \eqref{eq:9.2.1} are
+\zcref{sec:const_coeff_homog} that when $n=2$ the solutions of \eqref{eq:9.2.1} are
 determined by the zeros of the characteristic polynomial. This is also
 true when $n>2$, but the situation is more complicated in this case.
 Consequently, we take a different approach here than in
-Section~5.2.
+\zcref{sec:const_coeff_homog}.
 
 If $k$ is a positive integer, let $D^k$ stand
 for the $k$-th derivative operator;   that is
@@ -955,7 +956,7 @@ $r_1$, $r_2$,\dots, $r_n$, this argument yields $n$ solutions
 \[
 y_1=e^{r_1x},\quad y_2=e^{r_2x},\dots,\quad y_n=e^{r_nx}.
 \]
-It can be shown (Exercise~\ref{exer:9.2.39}) that the Wronskian of
+It can be shown (\zcref{exer:9.2.39}) that the Wronskian of
 $\{e^{r_1x},e^{r_2x},\dots,e^{r_nx}\}$ is nonzero if
 $r_1$, $r_2$, \dots, $r_n$ are distinct; hence,
 $\{e^{r_1x},e^{r_2x},\dots,e^{r_nx}\}$
@@ -1016,7 +1017,7 @@ solution of \eqref{eq:9.2.4} is
  \[
 y=4e^x-e^{2x}+e^{3x}
 \]
-(Figure~\ref{figure:9.2.1}).
+(\zcref{figure:9.2.1}).
 \bbox
 
 
@@ -1093,7 +1094,7 @@ which completes the justification of \eqref{eq:9.2.7}.
 \end{example}
 
 \begin{example}\label{example:9.2.3} \rm
-Use the result of Example~\ref{example:9.2.2} to find the general
+Use the result of \zcref{example:9.2.2} to find the general
 solution of
 \begin{equation} \label{eq:9.2.10}
 y'''-y''+y'-y=0.
@@ -1147,8 +1148,7 @@ y^{(4)}-16y=0.
 \[
 p(r)=r^4-16=(r^2-4)(r^2+4)=(r-2)(r+2)(r^2+4).
 \]
-By arguments similar to those used in Examples~\ref{example:9.2.2} and
-\ref{example:9.2.3}, it can be shown that \eqref{eq:9.2.11} can be written
+By arguments similar to those used in \zcref{example:9.2.2,example:9.2.3}, it can be shown that \eqref{eq:9.2.11} can be written
 as
 \[
 (D^2+4)(D+2)(D-2)y=0
@@ -1235,7 +1235,7 @@ quadratic. To find a fundamental set of solutions
 $\{y_1,y_2,\dots,y_n\}$ of $p(D)y=0$, we find fundamental set of
 solutions of each of the equations and take $\{y_1,y_2,\dots,y_n\}$ to
 be the set of all functions in these separate fundamental sets. In
-Exercise~\ref{exer:9.2.40} we sketch the proof that
+\zcref{exer:9.2.40} we sketch the proof that
 $\{y_1,y_2,\dots,y_n\}$ is linearly independent, and therefore a
 fundamental set of solutions of $p(D)y=0$.
 
@@ -1327,14 +1327,14 @@ Therefore \eqref{eq:9.2.18} can be written as
 \[
 (D+1)^3y=0,
 \]
-so Theorem~\ref{thmtype:9.2.1} implies that the general solution of
+so \zcref{thmtype:9.2.1} implies that the general solution of
 \eqref{eq:9.2.18} is
 \[
 y=e^{-x}(c_1+c_2x+c_3x^2). \bbox
 \]
 
 The proof of the next theorem is sketched in
-Exercise~\ref{exer:9.2.41}.
+\zcref{exer:9.2.41}.
 
 \begin{theorem}\color{blue} \label{thmtype:9.2.2}
 If $\omega \ne0$ and $m$ is a positive integer, then
@@ -1367,7 +1367,7 @@ Therefore \eqref{eq:9.2.19} can be be written as
 \[
 [(D+2)^2+9]^3y=0,
 \]
-so Theorem~\ref{thmtype:9.2.2} implies that the general solution of
+so \zcref{thmtype:9.2.2} implies that the general solution of
 \eqref{eq:9.2.19} is
 \[
 y=(a_1+a_2x+a_3x^2)e^{-2x}\cos3x
@@ -1432,7 +1432,7 @@ respectively. These ten functions form a fundamental set of solutions
 of \eqref{eq:9.2.21}.
 
  \exercises
- In Exercises~\ref{exer:9.2.1}--\ref{exer:9.2.14} find the general
+ In \zcref[range]{exer:9.2.1,exer:9.2.14} find the general
 solution.
 
 \begin{exerciselist}
@@ -1474,7 +1474,7 @@ solution.
 
 \item\label{exer:9.2.14}$y^{(4)}-4y'''+7y''-6y'+2y=0$
 
-\exercisetext{In Exercises~\ref{exer:9.2.15}--\ref{exer:9.2.27} solve the
+\exercisetext{In \zcref[range]{exer:9.2.15,exer:9.2.27} solve the
 initial value problem. Where indicated by \CGex, graph the solution.}
 
 \item\label{exer:9.2.15}$y'''-2y''+4y'-8y=0, \quad  y(0)=2,\quad y'(0)=-2,\;  y''(0)=0$
@@ -1526,7 +1526,7 @@ at $x=0$.
 \item $(D^2-2D+2)(D^2+1)y=0$
 \end{alist}
 
-\exercisetext{In Exercises~\ref{exer:9.2.29}--\ref{exer:9.2.38} find a
+\exercisetext{In \zcref[range]{exer:9.2.29,exer:9.2.38} find a
 fundamental set of solutions.}
 
 \item\label{exer:9.2.29}$(D^2+6D+13)(D-2)^2D^3y=0$
@@ -1689,7 +1689,7 @@ e^{\lambda x}\sin\omega x, xe^{\lambda x}\sin\omega x,&
 are all solutions of (C).
 
 \item % (f)
-Complete the proof of Theorem~\ref{thmtype:9.2.2} by showing that the
+Complete the proof of \zcref{thmtype:9.2.2} by showing that the
 functions in (D) are linearly independent.
 \end{alist}
 
@@ -1754,7 +1754,7 @@ z^n+\rho=(z-\rho^{1/n} \zeta_0)(z-\rho^{1/n} \zeta_1)\cdots(z-\rho^{1/n}
 \]
 \end{alist}
 
-\item\label{exer:9.2.43}Use \part{e} of Exercise~\ref{exer:9.2.42} to find a fundamental set of
+\item\label{exer:9.2.43}Use \part{e} of \zcref{exer:9.2.42} to find a fundamental set of
 solutions of the given equation.
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
@@ -1802,7 +1802,7 @@ show that the substitution (B) transforms (A) into a
 constant coefficient equation for $Y$ as a function of $t$.
 
 
-\item\label{exer:9.2.45}Use Exercise~\ref{exer:9.2.44}  to show that a function $y=y(x)$ satisfies
+\item\label{exer:9.2.45}Use \zcref{exer:9.2.44}  to show that a function $y=y(x)$ satisfies
 the equation
 \[
  a_0x^3y'''+a_1x^2y''+a_2xy'+a_3y=0,
@@ -1821,6 +1821,7 @@ the possible forms for the general solution of (A).
 
 
 \section{Undetermined Coefficients for Higher Order  Equations}
+\label{sec:higher_undetermined}
 
 In this section we consider the constant coefficient equation
 \begin{equation}
@@ -1845,7 +1846,7 @@ $y_c$ is the general solution of the complementary equation
 \[
 a_0y^{(n)}+a_1y^{(n-1)}+\cdots+a_ny=0.
 \]
-In Section~9.2 we learned how to find $y_c$. Here
+In \zcref{sec:higher_const_coeff} we learned how to find $y_c$. Here
 we
 will learn how to find $y_p$ when the forcing function has the form stated
 above. The procedure that we  use is a generalization of the
@@ -1928,7 +1929,7 @@ is a particular solution of  \eqref{eq:9.3.3}, so
 \[
 y_p=e^xu_p=e^x(1+2x-x^2+x^3)
 \]
-is a particular solution of  \eqref{eq:9.3.2} (Figure~\ref{figure:9.3.1}).
+is a particular solution of  \eqref{eq:9.3.2} (\zcref{figure:9.3.1}).
 
 
 \begin{figure}[tbp]
@@ -2001,7 +2002,7 @@ is a particular solution of  \eqref{eq:9.3.5}, so
 y_p=e^{2x}u_p=\frac{x^2e^{2x}}{24}(-4+4x+x^2)
 \]
 is a particular solution of  \eqref{eq:9.3.4}.
-(Figure~\ref{figure:9.3.2}).
+(\zcref{figure:9.3.2}).
 
 \begin{figure}[tbp]
   \centering\color{blue}
@@ -2050,7 +2051,7 @@ equation
 \[
 u'''+4u''+u'-6u=0,
 \]
-a theorem analogous to Theorem~\ref{thmtype:5.5.1} implies that
+a theorem analogous to \zcref{thmtype:5.5.1} implies that
 \eqref{eq:9.3.8} has a particular solution of the form
 \begin{equation} \label{eq:9.3.9}
 u_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x.
@@ -2096,7 +2097,7 @@ is a particular solution of  \eqref{eq:9.3.8}, so
 \[
 y_p=e^xu_p=-\frac{e^x}{2}\left[(2-x)\cos x+(1+x)\sin x\right]
 \]
-is a particular  solution of \eqref{eq:9.3.7} (Figure~\ref{figure:9.3.3}).
+is a particular  solution of \eqref{eq:9.3.7} (\zcref{figure:9.3.3}).
 
 
      \begin{figure}[tbp]
@@ -2139,7 +2140,7 @@ equation
 \[
 u'''+u''+u'+u=0,
 \]
-a theorem analogous to Theorem~\ref{thmtype:5.5.1} implies
+a theorem analogous to \zcref{thmtype:5.5.1} implies
 that  \eqref{eq:9.3.11} has a particular solution of the form
 \begin{equation} \label{eq:9.3.12}
 u_p=(A_0x+A_1x^2)\cos x+(B_0x+B_1x^2)\sin x.
@@ -2205,13 +2206,13 @@ is a particular solution of  \eqref{eq:9.3.11}, so
  y_p=e^{-x}u_p=-\frac{xe^{-x}}{2}\left[(3-2x)\cos
 x+(1+x)\sin x\right]
 \]
-(Figure~\ref{figure:9.3.4}) is a particular  solution of \eqref{eq:9.3.10}.
+(\zcref{figure:9.3.4}) is a particular  solution of \eqref{eq:9.3.10}.
 
 
 
 
 \exercises
-In Exercises~\ref{exer:9.3.1}--\ref{exer:9.3.59} find a particular solution.
+In \zcref[range]{exer:9.3.1,exer:9.3.59} find a particular solution.
 
 \begin{exerciselist}
 
@@ -2295,7 +2296,7 @@ x+2\cos2x)$
 x+2\sin x)$
 
 \exercisetext{
-In Exercises~\ref{exer:9.3.60}--\ref{exer:9.3.68} find the general solution.}
+In \zcref[range]{exer:9.3.60,exer:9.3.68} find the general solution.}
 
 \item\label{exer:9.3.60}$y'''-y''-y'+y=e^{2x}(10+3x)$
 \item\label{exer:9.3.61}$y'''+y''-2y=-e^{3x}(9+67x+17x^2)$
@@ -2312,7 +2313,7 @@ x+(8-9x)\sin x\right]$
 
 
 \exercisetext{
-In Exercises~\ref{exer:9.3.69}--\ref{exer:9.3.74} solve the initial value
+In \zcref[range]{exer:9.3.69,exer:9.3.74} solve the initial value
 problem and graph the solution.}
 
 
@@ -2402,7 +2403,9 @@ a(V''(x)-2\omega U'(x))&=&q_0+q_1x+\cdots+q_kx^k.
 
 \end{exerciselist}
 
+
 \section{Variation of Parameters for Higher Order  Equations}
+\label{sec:higher_variation_param}
 
 \boxit{Derivation of the method}
 
@@ -2526,7 +2529,7 @@ y_1^{(n-1)}&y_2^{(n-1)}&\cdots&y_n^{(n-1)}
 \end{equation}
 The determinant of this system  is the Wronskian $W$ of
 the fundamental set of solutions  $\{y_1,y_2,\dots,y_n\}$,
-which has no zeros on $(a,b)$, by Theorem~\ref{thmtype:9.1.4}.
+which has no zeros on $(a,b)$, by \zcref{thmtype:9.1.4}.
 Solving
 \eqref{eq:9.4.5} by Cramer's rule  yields
 \begin{equation} \label{eq:9.4.6}
@@ -2539,7 +2542,7 @@ same order. Equivalently, $W_j$ is the determinant obtained by
 deleting the last row and $j$-th column of $W$.
 
 Having obtained $u_1'$, $u_2'$, \dots, $u_n'$, we can integrate  to
-obtain $u_1,\,u_2,\dots,u_n$. As in Section~5.7, we
+obtain $u_1,\,u_2,\dots,u_n$. As in \zcref{sec:variation_param}, we
 take the constants
 of integration to be zero, and we drop any linear combination of
 $\{y_1,y_2,\dots,y_n\}$ that may appear in $y_p$.
@@ -2799,7 +2802,7 @@ is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
 
 \enlargethispage{1in}
 \exercises
-In Exercises~\ref{exer:9.4.1}--\ref{exer:9.4.21} find a particular
+In \zcref[range]{exer:9.4.1,exer:9.4.21} find a particular
 solution,
 given the fundamental set of solutions of the complementary equation.
 
@@ -2880,7 +2883,7 @@ $\{e^x,\,e^{-x},\,e^x/x,\,e^{-x}/x\}$
  $\{x,\,x^2,\,xe^x,\,xe^{-x}\}$
 
 
-\exercisetext{In Exercises~\ref{exer:9.4.22}--\ref{exer:9.4.33} solve the
+\exercisetext{In \zcref[range]{exer:9.4.22,exer:9.4.33} solve the
 initial value problem, given the fundamental set of solutions of the
 complementary equation. Where indicated by \CGex, graph the solution.}
 
@@ -3042,8 +3045,8 @@ Show that
 \]
 \end{alist}
 
-\exercisetext{In Exercises~\ref{exer:9.4.35}--\ref{exer:9.4.42}
-use the method suggested by Exercise~\ref{exer:9.4.34} to find a particular
+\exercisetext{In \zcref[range]{exer:9.4.35,exer:9.4.42}
+use the method suggested by \zcref{exer:9.4.34} to find a particular
  solution in the form
 $y_p=\int_{x_0}^x G(x,t)F(t)\,dt$, given the indicated fundamental
 set of
