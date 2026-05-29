@@ -37,9 +37,9 @@ in electromagnetism.
 %
 These equations and  others   considered in this
 chapter can be written in the form
-\begin{equation}
+\[
 P_0(x)y''+P_1(x)y'+P_2(x)y=0, \tag{A}
-\end{equation}
+\]
 where $P_0$, $P_1$, and $P_2$ are polynomials with no common
 factor. For most
  equations that occur in applications, these polynomials are of
@@ -96,10 +96,10 @@ assumptions introduced in \zcref*{sec:regular_singular}. In all three cases,
 y_1=x^r\sum_{n=0}^\infty a_nx^n,
 \]
 where $r$ need not be an integer. The problem is that there are three
-possibilities --- each requiring a different approach -- for the
+possibilities --- each requiring a different approach --- for the
 form of a second solution $y_2$ such that
 $\{y_1,y_2\}$ is a
-fundamental pair of solutions~of~(A).
+fundamental pair of solutions of (A).
 
 \newpage
 
@@ -114,7 +114,7 @@ series. We'll study such equations in this chapter. In this section
 we review relevant properties of power series. We'll omit proofs,
 which can be found in any standard calculus text.
 
-\begin{definition}\color{blue} \label{thmtype:7.1.1} \rm
+\begin{definition}\label{thmtype:7.1.1}
 An infinite series of the form
 \begin{equation} \label{eq:7.1.1}
 \sum_{n=0}^\infty a_n(x-x_0)^n,
@@ -139,7 +139,7 @@ $x\ne
 x_0$ then the set of all values of $x$ for which it converges forms an
 interval.
 
-\begin{theorem}\color{blue}\label{thmtype:7.1.2}
+\begin{theorem}\label{thmtype:7.1.2}
 For any power series
 \[
 \sum_{n=0}^\infty a_n(x-x_0)^n,
@@ -163,8 +163,9 @@ in this definition by defining $R=0$ in case~(i) and $R=\infty$ in
 case~(ii). We define the \emph{\color{blue}open interval of convergence} of
 $\sum_{n=0}^\infty a_n(x-x_0)^n$ to be
 \[
- (x_0-R,x_0+R)\quad\mbox{ if }\quad  0<R<\infty,\quad \mbox{ or
-}\quad(-\infty,\infty) \quad\mbox{ if }\quad R=\infty.
+ (x_0-R,x_0+R)\quad\text{if}\quad  0<R<\infty,
+ \quad\text{or}\quad
+ (-\infty,\infty) \quad\text{if}\quad R=\infty.
 \]
 If $R$ is finite, no general statement
 can be made concerning convergence at the endpoints $x=x_0\pm R$ of
@@ -190,7 +191,7 @@ radius of convergence of a power series. It's derived in calculus by
 applying the ratio test to the corresponding series of absolute
 values. For related theorems see \zcref{exer:7.1.2,exer:7.1.4}.
 
-\begin{theorem}\color{blue} \label{thmtype:7.1.3}
+\begin{theorem}\label{thmtype:7.1.3}
 Suppose there's an integer $N$ such that $a_n\ne0$ if
 $n\ge N$ and
 \[
@@ -201,36 +202,37 @@ $\sum_{n=0}^\infty a_n(x-x_0)^n$ is $R=1/ L,$ which should be interpreted
 to mean that $R=0$ if $L=\infty,$ or $R=\infty$ if $L=0.$
 \end{theorem}
 
-\begin {example} \label{example:7.1.1} \rm
- Find the radius of convergence of the series:
-\[
-\mbox{\bf (a)}\quad \sum_{n=0}^\infty n!x^n\quad\mbox{\bf (b) }\quad
-\sum_{n=10}^\infty (-1)^n \frac{x^n}{n!}\quad \mbox{\bf (c) }\quad
-\sum_{n=0}^\infty 2^nn^2 (x-1)^n.
-\]
+\begin{example} \label{example:7.1.1}
+Find the radius of convergence of the series:
+\begin{enumext*}[label=\alph*,wrap-label={(#1)},columns=3,labelwidth=2em,list-offset=5em]
+\item$\dst\sum_{n=0}^\infty n!x^n$
+\item$\dst\sum_{n=10}^\infty (-1)^n \frac{x^n}{n!}$
+\item$\dst\sum_{n=0}^\infty 2^nn^2 (x-1)^n$.
+\end{enumext*}
 \end{example}
 
-\solutionpart{a}   Here $a_n=n!$, so
+\begin{alistSolution}
+\item Here $a_n=n!$, so
 \[
 \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=\lim_{n\to\infty}
 \frac{(n+1)!}{n!}=\lim_{n\to\infty}(n+1)=\infty.
 \]
 Hence, $R=0$.
 
-\solutionpart{b}   Here $a_n=(1)^n/n!$ for $n\ge N=10$, so
+\item Here $a_n=(1)^n/n!$ for $n\ge N=10$, so
 \[
 \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=\lim_{n\to\infty}
 \frac{n!}{(n+1)!}=\lim_{n\to\infty}\frac{1}{n+1}=0.
 \]
 Hence, $R=\infty$.
 
-\solutionpart{c}   Here $a_n=2^nn^2$, so
+\item Here $a_n=2^nn^2$, so
 \[
 \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=\lim_{n\to\infty}
 \frac{2^{n+1}(n+1)^2}{2^nn^2}=2\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^2=2.
 \]
 Hence, $R=1/2$.
-
+\end{alistSolution}
 
 \boxit{Taylor Series}
 
@@ -281,7 +283,7 @@ series  has  derivatives  of  all  orders  on  the  open  interval  of
 convergence  of   the  power   series,  and   provides  power  series
 representations of the derivatives.
 
-\begin{theorem}\color{blue} \label{thmtype:7.1.4}
+\begin{theorem}\label{thmtype:7.1.4}
 A power series
 \[
 f(x)=\sum_{n=0}^\infty a_n(x-x_0)^n
@@ -299,7 +301,7 @@ n(n-1)\cdots(n-k+1)a_n(x-x_0)^{n-k}}\label{eq:7.1.8}.
 Moreover, all of these series have the same radius of convergence $R$.
 \end{theorem}
 
-\begin{example}\label{example:7.1.2} \rm
+\begin{example}\label{example:7.1.2}
 Let $f(x)=\sin x$. From \eqref{eq:7.1.3},
 \[
 f(x)=\sum_{n=0}^\infty(-1)^n\frac{x^{2n+1}}{(2n+1)!}.
@@ -319,7 +321,7 @@ The next theorem shows that if $f$ is \emph{\color{blue}defined} by a power
 series in $x-x_0$ with a positive radius of convergence, then the power
 series is the Taylor series of $f$ about $x_0$.
 
-\begin{theorem}\color{blue} \label{thmtype:7.1.5}
+\begin{theorem}\label{thmtype:7.1.5}
 If the power series
 \[
 f(x)=\sum_{n=0}^\infty a_n(x-x_0)^n
@@ -348,7 +350,7 @@ Except for notation, this is the same as \eqref{eq:7.1.9}.
 The next theorem lists two important properties of power series
 that follow from \zcref{thmtype:7.1.5}.
 
-\begin{theorem}\color{blue} \label{thmtype:7.1.6}\mbox{}\newline
+\begin{theorem}\label{thmtype:7.1.6}
 \begin{alist}
 \item % (a)
 If
@@ -368,14 +370,14 @@ $n=0$, $1$, $2$, \dots.
 \end{alist}
 \end{theorem}
 
-To obtain \part{a} we observe that the two series represent the
+To obtain (a) we observe that the two series represent the
 same
 function $f$ on the open  interval; hence, \zcref{thmtype:7.1.5}
 implies that
 \[
 a_n=b_n=\frac{f^{(n)}(x_0)}{n!},\quad n=0,1,2, \dots.
 \]
-\part{b}  can be obtained from \part{a} by taking $b_n=0$ for
+(b)  can be obtained from (a) by taking $b_n=0$ for
 $n=0$, $1$, $2$, \dots.
 
 
@@ -412,10 +414,11 @@ that the accuracy of the
 approximation of $y=e^x$ by its Taylor polynomial $T_N$ improves as
 $N$ increases.
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig070101}
-\caption{ Approximation of $y=e^x$ by Taylor
+  \includegraphics[alt={Plot of y=e^x on 0<x<5 with dashed approximations for N=1 through N=6.  The approximations increase in x and N, and are always between y=0 and y=e^x.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig070101}
+\caption{Approximation of $y=e^x$ by Taylor
 polynomials about $x=0$}
   \label{figure:7.1.1}
 \end{figure}
@@ -454,7 +457,7 @@ subtracting $1$ from the lower limit of \eqref{eq:7.1.6}. More generally,
 we use the following procedure for shifting indices.
 
 \bigbox{%\figspace{-25pt}
-\begin{center}{\bf Shifting the Summation Index in a Power
+\begin{center}{\bfseries Shifting the Summation Index in a Power
 Series}\end{center}
 For any integer $k$,  the power series
 \[
@@ -469,35 +472,34 @@ $k$ from the lower limit of summation leaves the series unchanged.}
 
 
 
-\begin{example}\label{example:7.1.3} \rm
+\begin{example}\label{example:7.1.3}
 Rewrite the following power series from \eqref{eq:7.1.7}  and \eqref{eq:7.1.8}
 so that the general term in each  is a  constant multiple of
 $(x-x_0)^n$:
-\[
-\mbox{\bf (a)}\;
-\sum_{n=2}^\infty
-n(n-1)a_n(x-x_0)^{n-2}\quad \mbox{\bf (b)}\;
-\sum_{n=k}^\infty
-n(n-1)\cdots(n-k+1)a_n(x-x_0)^{n-k}.
-\]
+\begin{enumext*}[columns=2,label=\alph*,wrap-label={(#1)},labelwidth=2em,list-offset=3em]
+\item$\dst\sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}$
+\item$\dst\sum_{n=k}^\infty n(n-1)\cdots(n-k+1)a_n(x-x_0)^{n-k}$.
+\end{enumext*}
 \end{example}
 
-\solutionpart{a}  Replacing $n$ by $n+2$ in the general term
+\begin{alistSolution}
+\item Replacing $n$ by $n+2$ in the general term
 and subtracting $2$ from the lower limit of summation yields
 \[
 \sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}=
 \sum_{n=0}^\infty (n+2)(n+1)a_{n+2}(x-x_0)^n.
 \]
 
-\solutionpart{b}  Replacing $n$ by $n+k$ in the general term
+\item Replacing $n$ by $n+k$ in the general term
 and subtracting $k$ from the lower limit of summation yields
 \[
 \sum_{n=k}^\infty
 n(n-1)\cdots(n-k+1)a_n(x-x_0)^{n-k}=
 \sum_{n=0}^\infty (n+k)(n+k-1)\cdots(n+1)a_{n+k}(x-x_0)^n.
 \]
+\end{alistSolution}
 
-\begin{example}\label{example:7.1.4} \rm
+\begin{example}\label{example:7.1.4}
 Given that
 \[
 f(x)=\sum_{n=0}^\infty a_nx^n,
@@ -538,7 +540,7 @@ c\sum_{n=0}^\infty a_n(x-x_0)^n=\sum_{n=0}^\infty ca_n(x-x_0)^n.
 \]
 Two power series
 \[
-f(x)=\sum_{n=0}^\infty a_n(x-x_0)^n\quad\mbox{ and }\quad
+f(x)=\sum_{n=0}^\infty a_n(x-x_0)^n\quad\text{and}\quad
 g(x)=\sum_{n=0}^\infty b_n(x-x_0)^n
 \]
 with positive radii of convergence can be added term by term at points
@@ -555,7 +557,7 @@ by term;   for example,
 c_1f(x)+c_2f(x)=\sum_{n=0}^\infty(c_1a_n+c_2b_n)(x-x_0)^n.
 \]
 
-\begin{example}\label{example:7.1.5} \rm
+\begin{example}\label{example:7.1.5}
 Find the Maclaurin series for $\cosh x$  as a linear
 combination of the Maclaurin series for $e^x$ and $e^{-x}$.
 \end{example}
@@ -566,7 +568,7 @@ By definition,
 \cosh x=\frac{1}{2}e^x+\frac{1}{2}e^{-x}.
 \]
 Since
-\[ e^x=\sum_{n=0}^\infty  \frac{x^n}{n!}\quad\mbox{ and }\quad
+\[ e^x=\sum_{n=0}^\infty  \frac{x^n}{n!}\quad\text{and}\quad
  e^{-x}=\sum_{n=0}^\infty (-1)^n \frac{x^n}{n!},
 \]
 it follows that
@@ -576,8 +578,8 @@ it follows that
 Since
 \[
 \frac{1}{2}[1+(-1)^n]=\begin{cases}
-1&\mbox{ if } n=2m,\mbox{an even integer},\\
-0&\mbox{ if }n=2m+1,\mbox{ an odd integer},
+1&\text{if }n=2m,\text{ an even integer},\\
+0&\text{if }n=2m+1,\text{ an odd integer},
 \end{cases}
 \]
 we can rewrite \eqref{eq:7.1.12} more simply as
@@ -588,7 +590,7 @@ This result is valid on $(-\infty,\infty)$, since this is the open
 interval of convergence of the Maclaurin series for $e^x$ and
 $e^{-x}$.
 
-\begin{example}\label{example:7.1.6} \rm
+\begin{example}\label{example:7.1.6}
 Suppose
 \[
 y=\sum_{n=0}^\infty a_n x^n
@@ -602,7 +604,7 @@ Express
 \]
 as a power series in $x$ on $I$.
 \item % (b)
-Use the result of \part{a} to find necessary and sufficient conditions
+Use the result of (a) to find necessary and sufficient conditions
 on the coefficients $\{a_n\}$ for
  $y$ to be  a solution of the homogeneous equation
 \begin{equation} \label{eq:7.1.13}
@@ -612,7 +614,8 @@ on $I$.
 \end{alist}
 \end{example}
 
-\solutionpart{a}
+\begin{alistSolution}
+\item
 From \eqref{eq:7.1.7} with $x_0=0$,
 \[
 y''=\sum_{n=2}^\infty n(n-1)a_nx^{n-2}.
@@ -645,16 +648,17 @@ all three series will start with $n=0$;   thus,
 [2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_n]x^n.
 \end{equation}
 
-\solutionpart{b} From   \eqref{eq:7.1.17}
+\item From   \eqref{eq:7.1.17}
 we see that $y$ satisfies \eqref{eq:7.1.13} on $I$ if
 \begin{equation} \label{eq:7.1.18}
 2(n+2)(n+1)a_{n+2}-(n+1)na_{n+1}+2a_n=0,\quad n=0,1,2, \dots.
 \end{equation}
-Conversely, \zcref{thmtype:7.1.6}~\part{b} implies that if
+Conversely, \zcref{thmtype:7.1.6}(b) implies that if
 $y=\sum_{n=0}^\infty a_nx^n$
 satisfies \eqref{eq:7.1.13} on $I$,  then \eqref{eq:7.1.18} holds.
+\end{alistSolution}
 
-\begin{example}\label{example:7.1.7} \rm
+\begin{example}\label{example:7.1.7}
 Suppose
 \[
 y=\sum_{n=0}^\infty a_n (x-1)^n
@@ -675,7 +679,7 @@ $1+x=2+(x-1)$, so   \eqref{eq:7.1.19} becomes
 \]
 From \eqref{eq:7.1.6}  and \eqref{eq:7.1.7} with $x_0=1$,
 \[
-y'=\sum_{n=1}^\infty na_n(x-1)^{n-1}\quad\mbox{ and }\quad
+y'=\sum_{n=1}^\infty na_n(x-1)^{n-1}\quad\text{and}\quad
 y ''=\sum_{n=2}^\infty n(n-1)a_n(x-1)^{n-2}.
 \]
 Therefore
@@ -882,11 +886,11 @@ your software package provides.
 method.)
 \item % (b)
 For $N=2$, $3$, $4$, \dots, compute $a_2$, \dots, $a_N$
-from Eqn.\eqref{eq:7.1.18} and graph
+from \zcref{eq:7.1.18} and graph
 \[
 T_N(x)=\sum_{n=0}^N a_nx^n
 \]
-and the solution obtained in \part{a} on the same axes.
+and the solution obtained in (a) on the same axes.
 Continue increasing $N$ until it's obvious that there's
 no point in continuing.
 (This sounds vague, but you'll know when to stop.)
@@ -898,7 +902,7 @@ value problem
 \[
 (1+x)y''+2(x-1)^2y'+3y=0,\quad y(1)=a_0,\quad y'(1)=a_1,
 \]
-on the interval $(0,2)$. Use Eqns.~\eqref{eq:7.1.24} and \eqref{eq:7.1.25}
+on the interval $(0,2)$. Use \zcref{eq:7.1.24,eq:7.1.25}
 to compute $\{a_n\}$.
 
 \item\label{exer:7.1.20}Suppose the series $\sum_{n=0}^\infty a_nx^n$ converges on an
@@ -956,7 +960,7 @@ $P_0(x_0)=0$. For  Legendre's equation,
 (1-x^2)y''-2xy'+\alpha(\alpha+1)y=0,
 \end{equation}
 $x_0=1$ and $x_0=-1$ are singular points and all other points are
-ordinary points. For  Bessel's~ equation,
+ordinary points. For  Bessel's equation,
 \[
 x^2y''+xy'+(x^2-\nu^2)y=0,
 \]
@@ -988,7 +992,7 @@ converge  for values of $x$  near an ordinary point $x_0$.
 
 We state the next theorem without proof.
 
-\begin{theorem}\color{blue}\label{thmtype:7.2.1}
+\begin{theorem}\label{thmtype:7.2.1}
 Suppose $P_0$, $P_1$, and $P_2$ are polynomials with no common
 factor and $P_0$ isn't  identically zero. Let $x_0$ be a point such
 that $P_0(x_0)\ne0,$ and let $\rho$ be the distance from $x_0$ to the
@@ -1002,7 +1006,7 @@ can be represented by a power series
 y=\sum_{n=0}^\infty a_n(x-x_0)^n
 \end{equation}
 that converges at least on the open interval $(x_0-\rho,x_0+\rho)$.
-( If $P_0$ is nonconstant, so that $\rho$ is necessarily finite,
+(If $P_0$ is nonconstant, so that $\rho$ is necessarily finite,
 then the open interval of convergence of $\eqref{eq:7.2.6}$ may be larger
 than $(x_0-\rho,x_0+\rho).$ If $P_0$ is constant then $\rho=\infty$
 and $(x_0-\rho,x_0+\rho)=(-\infty,\infty)$.)
@@ -1032,15 +1036,11 @@ uniquely determined by them.
 
 To find $a_2$, $a_3$, \dots, we write $P_0$, $P_1$, and $P_2$ in powers of
 $x-x_0$, substitute
-\[
-y=\sum^\infty_{n=0}a_n(x-x_0)^n,
-\]
-\[
-y'=\sum^\infty_{n=1}na_n(x-x_0)^{n-1},
-\]
-\[
-y''=\sum^\infty_{n=2}n(n-1)a_n(x-x_0)^{n-2}
-\]
+\begin{align*}
+y&=\sum^\infty_{n=0}a_n(x-x_0)^n,\\
+y'&=\sum^\infty_{n=1}na_n(x-x_0)^{n-1},\\
+y''&=\sum^\infty_{n=2}n(n-1)a_n(x-x_0)^{n-2}
+\end{align*}
 into \eqref{eq:7.2.7}, and collect the coefficients of like powers of
 $x-x_0$. This yields
 \begin{equation}\label{eq:7.2.8}
@@ -1049,7 +1049,7 @@ Ly=\sum^\infty_{n=0}b_n(x-x_0)^n,
 where $\{b_0, b_1, \dots, b_n, \dots\}$ are expressed in terms of
 $\{a_0, a_1, \dots,a_n, \dots\}$ and the coefficients of $P_0$, $P_1$,
 and $P_2$, written in powers of $x-x_0$. Since \eqref{eq:7.2.8} and
-\part{a} of \zcref{thmtype:7.1.6} imply that $Ly=0$ if and only if
+(a) of \zcref{thmtype:7.1.6} imply that $Ly=0$ if and only if
 $b_n=0$ for $n\ge0$,  all power series solutions in
 $x-x_0$ of $Ly=0$ can be obtained by choosing $a_0$ and $a_1$
 arbitrarily and computing $a_2$, $a_3$, \dots, successively so that
@@ -1059,7 +1059,7 @@ way \emph{\color{blue}the power series in $x-x_0$ for the general solution} of
 $Ly=0$, without explicitly identifying the open interval of
 convergence of the series.
 
-\begin{example}\label{example:7.2.1}\rm
+\begin{example}\label{example:7.2.1}
 Let $x_0$ be an arbitrary real number. Find the power series in
 $x-x_0$ for the general solution of
 \begin{equation}\label{eq:7.2.9}
@@ -1153,7 +1153,7 @@ y=a_0\sum_{m=0}^\infty(-1)^m\frac{(x-x_0)^{2m}}{(2m)!}
 If we recall from calculus that
 \[
 \sum_{m=0}^\infty(-1)^m\frac{(x-x_0)^{2m}}{(2m)!}=\cos(x-x_0)
-\mbox{\quad  and \quad }
+\quad\text{and}\quad
 \sum_{m=0}^\infty(-1)^m\frac{(x-x_0)^{2m+1}}{(2m+1)!}=\sin(x-x_0),
 \]
 then \eqref{eq:7.2.15} becomes
@@ -1203,27 +1203,22 @@ To simplify
 finding the coefficients, we introduce some notation for
 products:
 \[
-\prod^s_{j=r}b_j=b_rb_{r+1}\cdots b_s\quad \mbox{if}
-\quad s\ge r.
+\prod^s_{j=r}b_j=b_rb_{r+1}\cdots b_s\quad \text{if}\quad s\ge r.
 \]
 Thus,
-\[
-\prod^7_{j=2}b_j=b_2b_3b_4b_5b_6b_7,
-\]
-\[
-\prod^4_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945,
-\]
-and
-\[
+\begin{gather*}
+\prod^7_{j=2}b_j=b_2b_3b_4b_5b_6b_7,\\
+\prod^4_{j=0}(2j+1)=(1)(3)(5)(7)(9)=945,\\
+\shortintertext{and}
 \prod^2_{j=2}j^2=2^2=4.
-\]
+\end{gather*}
 We define
 \[
-\prod^s_{j=r}b_j=1\quad \mbox{if}\quad s < r,
+\prod^s_{j=r}b_j=1\quad \text{if}\quad s < r,
 \]
 no matter what the form of $b_j$.
 
-\begin{example}\label{example:7.2.2}\rm
+\begin{example}\label{example:7.2.2}
 Find the power series in $x$ for the general solution of
 \begin{equation}\label{eq:7.2.17}
  (1+2x^2)y''+6xy'+2y=0.
@@ -1241,7 +1236,7 @@ y=\sum_{n=0}^\infty a_nx^n
 \]
 then
 \[
-y'=\sum_{n=1}^\infty na_nx^{n-1}\quad\mbox{ and }\quad
+y'=\sum_{n=1}^\infty na_nx^{n-1}\quad\text{and}\quad
 y''=\sum_{n=2}^\infty n(n-1)a_nx^{n-2},
 \]
 so
@@ -1334,7 +1329,7 @@ choice of $a_0$ and $a_1$.
 The results in \zcref{example:7.2.1,example:7.2.2} are
 consequences of the following general theorem.
 
-\begin{theorem}\color{blue}\label{thmtype:7.2.2}
+\begin{theorem}\label{thmtype:7.2.2}
 The coefficients $\{a_n\}$ in any solution
 $y=\sum_{n=0}^\infty a_n(x-x_0)^n$ of
 \begin{equation}\label{eq:7.2.23}
@@ -1370,7 +1365,7 @@ y=\sum_{n=0}^\infty a_n(x-x_0)^n,
 then
 \[
 y'=\sum_{n=1}^\infty na_n(x-x_0)^{n-1}
-\quad\mbox{ and }\quad y''=\sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}.
+\quad\text{and}\quad y''=\sum_{n=2}^\infty n(n-1)a_n(x-x_0)^{n-2}.
 \]
 Hence,
 \begin{align*}
@@ -1395,7 +1390,7 @@ for the cases where $n=2m$ and $n=2m+1$ yields \eqref{eq:7.2.26} and
 \eqref{eq:7.2.27}.
 \end{proof}
 
-\begin{example}\label{example:7.2.3}\rm
+\begin{example}\label{example:7.2.3}
 Find the power series in $x-1$  for the general
 solution of
 \begin{equation}\label{eq:7.2.28}
@@ -1437,7 +1432,7 @@ a_{2m+3}&=-\frac{p(2m+1)}{(2m+3)(2m+2)}a_{2m+1}\\
 \end{align*}
 We leave it to you to show that
 \[
-a_{2m}=\frac{2m+1}{2^m}a_0\quad\mbox{ and }\quad
+a_{2m}=\frac{2m+1}{2^m}a_0\quad\text{and}\quad
 a_{2m+1}=\frac{m+1}{2^m}a_1,\quad m\ge0,
 \]
 which implies that the power series in $x-1$ for the general solution
@@ -1454,7 +1449,7 @@ this is impossible, and we must settle for computing a finite number
 of terms in the series. The next example illustrates this with an
 initial value problem.
 
-\begin{example}\label{example:7.2.4}\rm
+\begin{example}\label{example:7.2.4}
 Compute  $a_0$, $a_1$, \dots, $a_7$  in the series solution
 $y=\sum_{n=0}^\infty a_nx^n$ of the initial value problem
 \begin{equation}\label{eq:7.2.29}
@@ -1577,8 +1572,7 @@ For several choices of $a_0$ and $a_1$,
 use  differential equations software to solve the initial
 value problem
 \[
-y''+xy'+2y=0,\quad y(0)=a_0,\quad y'(0)=a_1,
-\eqno{\rm(A)}
+y''+xy'+2y=0,\quad y(0)=a_0,\quad y'(0)=a_1,\tag{A}
 \]
 numerically on $(-5,5)$.
 \item % ()
@@ -1586,7 +1580,7 @@ For fixed $r$ in $\{1,2,3,4,5\}$ graph
 \[
 T_N(x)=\sum_{n=0}^N a_nx^n
 \]
-and the solution obtained in \part{a} on $(-r,r)$.
+and the solution obtained in (a) on $(-r,r)$.
 Continue increasing $N$ until there's no perceptible
 difference between the two graphs.
 \end{alist}
@@ -1620,8 +1614,7 @@ real numbers  $a_0$, $a_1$, and $r$, with $0<r<1/\sqrt2$.
 Use  differential equations software  to solve the initial
 value problem
 \[
-(1-2x^2)y''-xy'+3y=0,\quad y(0)=a_0,\quad y'(0)=a_1,
-\eqno{\rm(A)}
+(1-2x^2)y''-xy'+3y=0,\quad y(0)=a_0,\quad y'(0)=a_1,\tag{A}
 \]
 numerically on $(-r,r)$.
 \item % (b)
@@ -1631,19 +1624,13 @@ $y=\sum_{n=0}^\infty a_nx^n$ of (A), and graph
 \[
 T_N(x)=\sum_{n=0}^N a_nx^n
 \]
-and the solution obtained in \part{a} on $(-r,r)$.
+and the solution obtained in (a) on $(-r,r)$.
 Continue increasing $N$ until there's no perceptible
 difference between the two graphs.
 \end{alist}
 
-
-
-
-
-
-
 \item\label{exer:7.2.15}\Lex
-Do \part{a} and \part{b}  for several values of
+Do (a) and (b)  for several values of
 $r$ in
 $(0,1)$:
 \begin{alist}
@@ -1651,8 +1638,7 @@ $(0,1)$:
 Use  differential equations software  to solve the initial
 value problem
 \[
-(1+x^2)y''+10xy'+14y=0,\quad y(0)=5,\quad y'(0)=1,
-\eqno{\rm(A)}
+(1+x^2)y''+10xy'+14y=0,\quad y(0)=5,\quad y'(0)=1,\tag{A}
 \]
 numerically on $(-r,r)$.
 \item % (b)
@@ -1663,13 +1649,12 @@ graph
 \[
 T_N(x)=\sum_{n=0}^N a_nx^n
 \]
-\enlargethispage{1in}
-and the solution obtained in \part{a} on $(-r,r)$.
+and the solution obtained in (a) on $(-r,r)$.
 Continue increasing $N$ until there's no perceptible
 difference between the two graphs. What  happens to the required $N$
 as $r\to1$?
 \item % (c)
-Try \part{a} and \part{b} with $r=1.2$. Explain your results.
+Try (a) and (b) with $r=1.2$. Explain your results.
 \end{alist}
 
 
@@ -1703,7 +1688,8 @@ y(4)=3,\quad y'(4)=-4$
 \item\label{exer:7.2.26}\Cex
 $(2x^2+4x+5)y''-20(x+1)y'+60y=0,\quad y(-1)=3,\quad y'(-1)=-3$
 
-\item\label{exer:7.2.27}\begin{alist}
+\item\label{exer:7.2.27}
+\begin{alist}[above=-\baselineskip]
 \item % (a)
 Find a power series in $x$ for the general solution of
 \[
@@ -1718,7 +1704,7 @@ Use (a) and the formula
 for the sum of a geometric series to find a closed form expression for
 the general solution of (A) on $(-1,1)$.
 \item % (c)
-Show that the expression obtained in \part{b} is actually the general
+Show that the expression obtained in (b) is actually the general
 solution of of (A) on $(-\infty,\infty)$.
 \end{alist}
 
@@ -1747,7 +1733,8 @@ a_1\sum^\infty_{m=0}(-1)^m
 \]
 where $r$ and $s$ are nonnegative integers.
 
-\item\label{exer:7.2.30}\begin{alist}
+\item\label{exer:7.2.30}
+\begin{alist}[above=-\baselineskip]
 \item % (a)
 Use \zcref{exer:7.2.28}  to show that the power series in $x$
 for the general solution of
@@ -1800,7 +1787,8 @@ $(1-x^2)^{b-1}$.)
 \end{alist}
 
 
-\item\label{exer:7.2.31}\begin{alist}
+\item\label{exer:7.2.31}
+\begin{alist}[above=-\baselineskip]
 \item % (a)
 Use \zcref{exer:7.2.28}  to show that the power series in $x$
 for the general solution
@@ -1881,7 +1869,7 @@ a_{3m+4}&=-\frac{p(3m+1)}{(3m+4)(3m+3)}a_{3m+1},\quad m\ge0,
 \end{align*}
 where $a_0$ and $a_1$ may be specified arbitrarily.
 \item % (c)
-Conclude from \part{b}  that the  power series in $x$ for the general
+Conclude from (b)  that the  power series in $x$ for the general
 solution
 of (A)  is
 \[
@@ -1924,7 +1912,7 @@ y=\sum_{n=0}^\infty a_nx^n
 a_{n+k+2}=-\frac{p(n)}{(n+k+2)(n+k+1)}a_n,\quad n\ge0.
 \]
 \item % (b)
-Show from \part{a}  that $a_n=0$  unless $n=(k+2)m$  or $n=(k+2)m+1$
+Show from (a)  that $a_n=0$  unless $n=(k+2)m$  or $n=(k+2)m+1$
 for some nonnegative integer $m$, and that
 \begin{align*}
 a_{(k+2)(m+1)}&=-\frac{p\left((k+2)m\right)}{(k+2)(m+1)[(k+2)(m+1)-1]}a_{(k+2)m},\quad m\ge
@@ -1935,7 +1923,7 @@ a_{(k+2)m+1},\quad m\ge0,
 \end{align*}
 where $a_0$ and $a_1$ may be specified arbitrarily.
 \item % (c)
-Conclude from \part{b}  that the  power series in $x$ for the general
+Conclude from (b)  that the  power series in $x$ for the general
 solution
 of (A) is
 \begin{align*}
@@ -1987,7 +1975,7 @@ formula for $a_n$ in terms of $n$. Nevertheless, we can calculate as
 many coefficients as we wish. The next three examples illustrate
 this.
 
-\begin{example}\label{example:7.3.1} \rm
+\begin{example}\label{example:7.3.1}
 Find the coefficients $a_0$, \dots, $a_7$ in the  series solution
 $y=\sum^\infty_{n=0}
 a_nx^n$  of the initial value problem
@@ -2008,7 +1996,7 @@ converges to the solution of \eqref{eq:7.3.2} on $(-1/\sqrt2,1/\sqrt2)$.
 Since
 \[
 y=\sum^\infty_{n=0} a_nx^n,\quad y'=\sum^\infty_{n=1} n
-a_nx^{n-1}\quad\mbox{ and }\quad  y''=\sum^\infty_{n=2}n(n-1)a_nx^{n-2},
+a_nx^{n-1}\quad\text{and}\quad  y''=\sum^\infty_{n=2}n(n-1)a_nx^{n-2},
 \]
 \begin{align*}
 Ly&=\sum^\infty_{n=2}n(n-1)a_nx^{n-2}+\sum^\infty_{n=2}n(n-1)a_nx^{n-1}
@@ -2048,14 +2036,14 @@ We leave it to you to compute $a_4,a_5,a_6,a_7$ from \eqref{eq:7.3.3} and
 show that
 \[
 y=-1-2x+2x^2+\frac{5}{3}x^3-\frac{55}{12}x^4+\frac{3}{4}x^5+\frac{61}{8}x^6-
-\frac{443}{56}x^7+\cdots .
+\frac{443}{56}x^7+\dots .
 \]
 We also leave it to you (\zcref{exer:7.3.13}) to verify numerically
 that the Taylor polynomials $T_N(x)=\sum_{n=0}^Na_nx^n$ converge
 to the solution of \eqref{eq:7.3.2}
 on $(-1/\sqrt2,1/\sqrt2)$.
 
-\begin{example}\label{example:7.3.2} \rm
+\begin{example}\label{example:7.3.2}
 Find  the coefficients $a_0$, \dots, $a_5$ in the series
 solution
 \[
@@ -2076,7 +2064,7 @@ Ly=\left(2+(x+1)\right)y''-\left(1-2(x+1)\right)y'-\left(3-(x+1)\right)y.
 Since
 \[
 y=\sum^\infty_{n=0} a_n(x+1)^n,\quad y'=\sum^\infty_{n=1} n
-a_n(x+1)^{n-1}\quad\mbox{ and }\quad
+a_n(x+1)^{n-1}\quad\text{and}\quad
 y''=\sum^\infty_{n=2}n(n-1)a_n(x+1)^{n-2},
 \]
 \begin{align*}
@@ -2124,7 +2112,7 @@ that the Taylor polynomials $T_N(x)=\sum_{n=0}^Na_nx^n$ converge to
 the solution of \eqref{eq:7.3.4}  on the interval of
 convergence of the power series solution.
 
-\begin{example}\label{example:7.3.3} \rm
+\begin{example}\label{example:7.3.3}
 Find the coefficients $a_0$, \dots, $a_5$ in the series
 solution $y=\sum^\infty_{n=0}
 a_nx^n$   of the initial value problem
@@ -2141,7 +2129,7 @@ Ly=y''+3xy'+(4+2x^2)y.
 Since
 \begin{gather*}
 y=\sum^\infty_{n=0} a_nx^n,\quad y'=\sum^\infty_{n=1} n
-a_nx^{n-1},\quad\mbox{ and }\quad
+a_nx^{n-1},\quad\text{and}\quad
 y''=\sum^\infty_{n=2}n(n-1)a_nx^{n-2},
 \\
 Ly=\sum^\infty_{n=2}n(n-1)a_nx^{n-2}
@@ -2237,8 +2225,7 @@ real numbers  $a_0$, $a_1$, and $r$, with $0<r<1/\sqrt2$.
 Use  differential equations software  to solve the initial
 value problem
 \[
-(1+x+2x^2)y''+(1+7x)y'+2y=0,\quad y(0)=a_0,\quad y'(0)=a_1,
-\eqno{\rm(A)}
+(1+x+2x^2)y''+(1+7x)y'+2y=0,\quad y(0)=a_0,\quad y'(0)=a_1,\tag{A}
 \]
 numerically on $(-r,r)$. (See \zcref{example:7.3.1}.)
 \item % (b)
@@ -2248,7 +2235,7 @@ $y=\sum_{n=0}^\infty a_nx^n$ of (A), and graph
 \[
 T_N(x)=\sum_{n=0}^N a_nx^n
 \]
-and the solution obtained in \part{a} on $(-r,r)$.
+and the solution obtained in (a) on $(-r,r)$.
 Continue increasing $N$ until there's no perceptible
 difference between the two graphs.
 \end{alist}
@@ -2262,8 +2249,7 @@ real numbers  $a_0$, $a_1$, and $r$, with $0<r<2$.
 Use  differential equations software  to solve the initial
 value problem
 \[
-(3+x)y''+(1+2x)y'-(2-x)y=0,\quad y(-1)=a_0,\quad y'(-1)=a_1,
-\eqno{\rm(A)}
+(3+x)y''+(1+2x)y'-(2-x)y=0,\quad y(-1)=a_0,\quad y'(-1)=a_1,\tag{A}
 \]
 numerically on $(-1-r,-1+r)$.  (See \zcref{example:7.3.2}. Why this
 interval?)
@@ -2277,7 +2263,7 @@ y=\sum_{n=0}^\infty a_n(x+1)^n
 \[
 T_N(x)=\sum_{n=0}^N a_n(x+1)^n
 \]
-and the solution obtained in \part{a} on $(-1-r,-1+r)$.
+and the solution obtained in (a) on $(-1-r,-1+r)$.
 Continue increasing $N$ until there's no perceptible
 difference between the two graphs.
 \end{alist}
@@ -2290,8 +2276,7 @@ Do the following experiment for several choices of $a_0$,
 Use  differential equations software to solve the initial
 value problem
 \[
-y''+3xy'+(4+2x^2)y=0,\quad y(0)=a_0,\quad y'(0)=a_1,
-\eqno{\rm(A)}
+y''+3xy'+(4+2x^2)y=0,\quad y(0)=a_0,\quad y'(0)=a_1,\tag{A}
 \]
 numerically on $(-r,r)$. (See \zcref{example:7.3.3}.)
 \item % (b)
@@ -2301,7 +2286,7 @@ graph
 \[
 T_N(x)=\sum_{n=0}^N a_nx^n
 \]
-and the solution obtained in \part{a} on $(-r,r)$.
+and the solution obtained in (a) on $(-r,r)$.
 Continue increasing $N$ until there's no perceptible
 difference between the two graphs.
 \end{alist}
@@ -2314,8 +2299,7 @@ and $a_1$.
 Use differential equations software  to solve the initial
 value problem
 \[
-(1-x)y''-(2-x)y'+y=0,\quad y(0)=a_0,\quad y'(0)=a_1,
-\eqno{\rm(A)}
+(1-x)y''-(2-x)y'+y=0,\quad y(0)=a_0,\quad y'(0)=a_1,\tag{A}
 \]
 numerically on $(-r,r)$.
 \item % (b)
@@ -2324,7 +2308,7 @@ in the power series solution $y=\sum_{n=0}^Na_nx^n$ of (A), and graph
 \[
 T_N(x)=\sum_{n=0}^N a_nx^n
 \]
-and the solution obtained in \part{a} on $(-r,r)$.
+and the solution obtained in (a) on $(-r,r)$.
 Continue increasing $N$ until there's no perceptible
 difference between the two graphs. What happens as you let $r\to1$?
 \end{alist}
@@ -2392,14 +2376,15 @@ solution of
 \[
 (1+\alpha x+\beta x^2)y''+(\gamma+\delta x)y'+\epsilon y=0
 \]
-satisfy the recurrrence relation
+satisfy the recurrence relation
 \[
 a_{n+2}=-\frac{\gamma+\alpha n}{n+2}\,a_{n+1}-\frac{\beta n(n-1)+\delta
 n+\epsilon}{(n+2)(n+1)}\, a_n.
 \]
 
 
-\item\label{exer:7.3.30}\begin{alist}
+\item\label{exer:7.3.30}
+\begin{alist}[above=-\baselineskip]
 \item % (a)
 Let $\alpha$  and $\beta$  be constants, with $\beta\ne0$. Show that
 $y=\sum_{n=0}^\infty a_nx^n$
@@ -2436,17 +2421,17 @@ y=\sum_{n=0}^\infty (c_1r_1^n+c_2r_2^n)x^n
 \]
 is a solution of (A) on $(-\rho,\rho)$.
 \item % (c)
-Use \part{b}  and the formula for the sum of a geometric series to show
+Use (b)  and the formula for the sum of a geometric series to show
 that
 the functions
 \[
-y_1=\frac{1}{1-r_1x}\quad\mbox{ and }\quad y_2=\frac{1}{1-r_2x}
+y_1=\frac{1}{1-r_1x}\quad\text{and}\quad y_2=\frac{1}{1-r_2x}
 \]
 form a fundamental set of solutions of (A) on $(-\rho,\rho)$.
 \item % (d)
 Show that $\{y_1,y_2\}$ is
 a fundamental set of solutions of (A) on any interval that
-does'nt contain either $1/r_1$ or $1/r_2$.
+doesn't contain either $1/r_1$ or $1/r_2$.
 \item % (e)
 Suppose  $p(r)=(r-r_1)^2$, and let $\rho=1/|r_1|$.
 Show that if   $c_1$  and $c_2$ are constants then the sequence
@@ -2462,7 +2447,7 @@ is a solution of (A) on $(-\rho,\rho)$.
 Use (e)  and the formula for the sum of a geometric series to show
 that the functions
 \[
-y_1=\frac{1}{1-r_1x}\quad\mbox{ and }\quad y_2=\frac{x}{(1-r_1x)^2}
+y_1=\frac{1}{1-r_1x}\quad\text{and}\quad y_2=\frac{x}{(1-r_1x)^2}
 \]
 form a fundamental set of solutions of (A) on $(-\rho,\rho)$.
 \item % (g)
@@ -2474,17 +2459,13 @@ does not contain $1/r_1$.
 \item\label{exer:7.3.31}Use the results of \zcref{exer:7.3.30} to find the general solution
 of the given equation on any interval on which polynomial multiplying
 $y''$ has no zeros.
-
-{\bf (a)}  $(1+3x+2x^2)y''+(6+8x)y'+4y=0$
-
-{\bf (b)} $(1-5x+6x^2)y''-(10-24x)y'+12y=0$
-
-{\bf (c)} $(1-4x+4x^2)y''-(8-16x)y'+8y=0$
-
-{\bf (d)} $(4+4x+x^2)y''+(8+4x)y'+2y=0$
-
-{\bf (e)} $(4+8x+3x^2)y''+(16+12x)y'+6y=0$
-
+\begin{alist}
+\item $(1+3x+2x^2)y''+(6+8x)y'+4y=0$
+\item $(1-5x+6x^2)y''-(10-24x)y'+12y=0$
+\item $(1-4x+4x^2)y''-(8-16x)y'+8y=0$
+\item $(4+4x+x^2)y''+(8+4x)y'+2y=0$
+\item $(4+8x+3x^2)y''+(16+12x)y'+6y=0$
+\end{alist}
 
 
 \exercisetext{In \zcref[range]{exer:7.3.32,exer:7.3.38}  find
@@ -2563,16 +2544,11 @@ $(3+4x+x^2)y''-(5+4x-x^2)y'-(2+x)y=0,\quad y(-2)=2,\quad y'(-2)=-1$
 \item\label{exer:7.3.47}\Cex
 $(1+2x+x^2)y''+(1-x)y=0,\quad y(0)=2,\quad y'(0)=-1$
 
-\enlargethispage{1in}
-
 \item\label{exer:7.3.48}\Cex
 $(x-2x^2)y''+(1+3x-x^2)y'+(2+x)y=0,\quad y(1)=1,\quad y'(1)=0$
 
 \item\label{exer:7.3.49}\Cex
 $(16-11x+2x^2)y''+(10-6x+x^2)y'-(2-x)y,\quad y(3)=1,\quad y'(3)=-2$
-
-
-
 
 \end{exerciselist}
 
@@ -2580,12 +2556,9 @@ $(16-11x+2x^2)y''+(10-6x+x^2)y'-(2-x)y,\quad y(3)=1,\quad y'(3)=-2$
 \section{Regular Singular Points: Euler Equations}
 \label{sec:regular_singular}
 
-\bigbox{This section sets the stage for Sections~1.5,
-1.6,
-and 1.7. If you're not interested in those sections, but wish
+\bigbox{This section sets the stage for \zcref[nocomp]{sec:frobenius_i,sec:frobenius_ii,sec:frobenius_iii}. If you're not interested in those sections, but wish
 to learn about Euler equations, omit the introductory paragraphs
 and start reading at \zcref{thmtype:7.4.2}.}
-%%%????? TODO
 
 \noindent
 In the next three sections we'll continue to study  equations of
@@ -2594,7 +2567,7 @@ the form
 P_0(x)y''+P_1(x)y'+P_2(x)y=0
 \end{equation}
 where $P_0$, $P_1$, and $P_2$ are polynomials, but the emphasis will
-be different from that of Sections~7.2 and 7.3,
+be different from that of \zcref{sec:series_ordinary_i,sec:series_ordinary_ii},
 where we
 obtained solutions of \eqref{eq:7.4.1} near an ordinary point $x_0$ in the
 form of power series in $x-x_0$. If $x_0$ is a singular point of
@@ -2608,7 +2581,7 @@ next definition can be solved by series methods discussed in the
 next three sections. Fortunately, many equations arising in
 applications satisfy these requirements.
 
-\begin{definition}\color{blue}\label{thmtype:7.4.1}\rm
+\begin{definition}\label{thmtype:7.4.1}
 Let $P_0$, $P_1$, and $P_2$ be polynomials with no common factor and
 suppose  $P_0(x_0)=0$. Then $x_0$ is a \emph{\color{blue}regular singular
 point} of the equation
@@ -2623,7 +2596,7 @@ where $A$, $B$, and $C$ are polynomials and $A(x_0)\ne0$;   otherwise,
 $x_0$ is an \emph{\color{blue}irregular} singular point of \eqref{eq:7.4.2}.
 \end{definition}
 
-\begin{example}\label{example:7.4.1} \rm
+\begin{example}\label{example:7.4.1}
 Bessel's equation,
 \begin{equation} \label{eq:7.4.4}
 x^2y''+xy'+(x^2-\nu^2)y=0,
@@ -2634,7 +2607,7 @@ it follows that $x_0=0$ is a regular singular point of
 \eqref{eq:7.4.4}.
  \end{example}
 
-\begin{example}\label{example:7.4.2} \rm
+\begin{example}\label{example:7.4.2}
 Legendre's equation,
 \begin{equation} \label{eq:7.4.5}
 (1-x^2)y''-2xy'+\alpha(\alpha+1)y=0,
@@ -2651,7 +2624,7 @@ you to show that $x_0=-1$ is also a regular singular point of
 \eqref{eq:7.4.5}.
 \end{example}
 
-\begin{example}\label{example:7.4.3} \rm
+\begin{example}\label{example:7.4.3}
 The equation
 \[
 x^3y''+xy'+y=0
@@ -2674,7 +2647,7 @@ equation, and in \zcref{exer:7.4.23} for the general case.
 The simplest kind of equation with a regular singular point at $x_0=0$
 is the Euler equation, defined as follows.
 
-\begin{definition}\color{blue} \label{thmtype:7.4.2} \rm
+\begin{definition}\label{thmtype:7.4.2}
 An
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Euler.html}
 \emph{\color{blue}Euler equation} is an equation that can be written in the
@@ -2722,7 +2695,7 @@ y=c_1x^{r_1}+c_2x^{r_2}
 \]
 is the general solution of \eqref{eq:7.4.6} on $(0,\infty)$.
 
-\begin{example}\label{example:7.4.4} \rm
+\begin{example}\label{example:7.4.4}
  Find the general solution of
 \begin{equation} \label{eq:7.4.8}
 x^2y''-xy'-8y=0
@@ -2741,7 +2714,7 @@ $(0,\infty)$, and its general solution on $(0,\infty)$ is
 y=c_1x^4+\frac{c_2}{x^2}.
 \]
 
-\begin{example}\label{example:7.4.5} \rm
+\begin{example}\label{example:7.4.5}
   Find the general solution of
 \begin{equation} \label{eq:7.4.9}
 6x^2y''+5xy'-y=0
@@ -2771,7 +2744,7 @@ $y=x^r$. If the indicial equation has complex conjugate zeros then
 Fortunately we can use the results of Section~5.2 for
 constant coefficient equations to solve \eqref{eq:7.4.10} in any case.
 
-\begin{theorem}\color{blue} \label{thmtype:7.4.3}
+\begin{theorem}\label{thmtype:7.4.3}
 Suppose the roots of the indicial equation
 \begin{equation}
 \label{eq:7.4.11} ar(r-1)+br+c=0
@@ -2783,11 +2756,11 @@ ax^2y''+bxy'+cy=0
 on $(0,\infty)$ is
 \[
 y=\begin{cases}
-c_1x^{r_1}+c_2x^{r_2}&\mbox{ if $r_1$ and $r_2$ are distinct real numbers;}\\
-x^{r_1}(c_1+c_2\ln x)&\mbox{ if $r_1=r_2$;}\\
+c_1x^{r_1}+c_2x^{r_2}&\text{if $r_1$ and $r_2$ are distinct real numbers;}\\
+x^{r_1}(c_1+c_2\ln x)&\text{if $r_1=r_2$;}\\
 x^{\lambda}\left[c_1\cos\left(\omega\ln x\right)+
 c_2\sin\left(\omega\ln x \right)\right]
-&\mbox{ if $r_1,r_2=\lambda\pm i\omega$ with $\omega>0$}.
+&\text{if $r_1,r_2=\lambda\pm i\omega$ with $\omega>0$}.
 \end{cases}
 \]
 \end{theorem}
@@ -2819,7 +2792,7 @@ respect to $t$ and using the chain rule again yields
 \frac{d^2Y}{dt^2}
 &=\frac{d\phantom{t}}{dt}\left(\frac{dY}{dt}\right)=\frac{d\phantom{t}}{dt}\left(x\frac{dy}{dx}\right)\\
 &=\frac{dx}{dt}\frac{dy}{dx}+x\frac{d^2y}{dx^2}\frac{dx}{dt}\\
-&=x\frac{dy}{dx}+x^2\frac{d^2y}{dx^2}\quad\left(\mbox{ since } \frac{dx}{dt}=x\right).
+&=x\frac{dy}{dx}+x^2\frac{d^2y}{dx^2}\quad\left(\text{since } \frac{dx}{dt}=x\right).
 \end{align*}
 From this and \eqref{eq:7.4.14},
 \[
@@ -2831,10 +2804,10 @@ Substituting this and \eqref{eq:7.4.14} into \eqref{eq:7.4.12} yields
 of \eqref{eq:7.4.13} on $(-\infty,\infty)$ is
 \[
 Y(t)=\begin{cases}
-c_1e^{r_1t}+c_2e^{r_2t}&\mbox{ if $r_1$ and $r_2$ are distinct real numbers;}\\
-e^{r_1t}(c_1+c_2t)&\mbox{ if $r_1=r_2$;}\\
+c_1e^{r_1t}+c_2e^{r_2t}&\text{if $r_1$ and $r_2$ are distinct real numbers;}\\
+e^{r_1t}(c_1+c_2t)&\text{if $r_1=r_2$;}\\
 e^{\lambda t }\left(c_1\cos\omega t+c_2\sin\omega t \right)
-&\mbox{ if $r_1,r_2=\lambda\pm i\omega$ with $\omega\ne0$}.
+&\text{if $r_1,r_2=\lambda\pm i\omega$ with $\omega\ne0$}.
 \end{cases}
 \]
 Since $Y(t)=y(e^t)$, substituting $t=\ln x$ in the last three
@@ -2842,7 +2815,7 @@ equations shows that the general solution of \eqref{eq:7.4.12} on
 $(0,\infty)$ has the form stated in the theorem.
 \end{proof}
 
-\begin{example}\label{example:7.4.6} \rm
+\begin{example}\label{example:7.4.6}
  Find the general solution of
 \begin{equation} \label{eq:7.4.15}
 x^2y''-5xy'+9y=0
@@ -2860,7 +2833,7 @@ Therefore the general solution of \eqref{eq:7.4.15} on $(0,\infty)$ is
 y=x^3(c_1+c_2 \ln x).
 \]
 
-\begin{example}\label{example:7.4.7} \rm
+\begin{example}\label{example:7.4.7}
   Find the general solution of
 \begin{equation} \label{eq:7.4.16}
 x^2y''+3xy'+2y=0
@@ -2904,14 +2877,14 @@ the given Euler equation on $(0,\infty)$.
 \item(1)\label{exer:7.4.17}$x^2y''-3xy'+4y=0$%&
 \item(1)\label{exer:7.4.18}$2x^2y''+10xy'+9y=0$
 
-\item\label{exer:7.4.19}\begin{alist}
+\item\label{exer:7.4.19}
+\begin{alist}[above=-\baselineskip]
 \item % (a)
 Adapt the proof of \zcref{thmtype:7.4.3} to show that  $y=y(x)$
 satisfies the Euler equation
-\setcounter{equation}{0}
-\begin{equation} \label{eq:7.4.{exer:7.4.19}A}
+\[ \tag{A}
 ax^2y''+bxy'+cy=0
-\end{equation}
+\]
 on $(-\infty,0)$
 if and only if  $Y(t)=y(-e^t)$
 \[
@@ -2919,16 +2892,15 @@ a \frac{d^2Y}{dt^2}+(b-a)\frac{dY}{dt}+cY=0.
 \]
 on   $(-\infty,\infty)$.
 \item % (b)
-Use \part{a}  to show that  the general solution of
-\eqref{eq:7.4.{exer:7.4.19}A} on $(-\infty,0)$ is
+Use (a)  to show that  the general solution of (A) on $(-\infty,0)$ is
 \[
 y=\begin{cases}
-c_1|x|^{r_1}+c_2|x|^{r_2}&\mbox{ if $r_1$ and $r_2$ are distinct
+c_1|x|^{r_1}+c_2|x|^{r_2}&\text{if $r_1$ and $r_2$ are distinct
 real numbers;} \\
-|x|^{r_1}(c_1+c_2\ln|x|)&\mbox{ if $r_1=r_2$;}\\
+|x|^{r_1}(c_1+c_2\ln|x|)&\text{if $r_1=r_2$;}\\
 |x|^{\lambda}\left[c_1\cos\left(\omega\ln|x|\right)+
 c_2\sin\left(\omega\ln|x| \right)\right]
-&\mbox{ if $r_1,r_2=\lambda\pm i\omega$ with $\omega>0$}.
+&\text{if $r_1,r_2=\lambda\pm i\omega$ with $\omega>0$}.
 \end{cases}
 \]
 \end{alist}
@@ -2952,7 +2924,7 @@ is said to be \emph{\color{blue}oscillatory} on an interval $(a,b)$ if it has in
 many zeros on $(a,b)$.  Otherwise $y$ is said to be \emph{\color{blue}nonoscillatory}
 on $(a,b)$.  Show that the equation
 \[
-x^2y''+ky=0 \quad (k=\; \mbox{constant})
+x^2y''+ky=0 \quad (k=\; \text{constant})
 \]
 has oscillatory solutions on $(0,\infty)$ if and only if $k>1/4$.
 
@@ -3051,11 +3023,11 @@ where $\alpha_i$, $\beta_i$, and $\gamma_i$ are real constants and
 $\alpha_0\ne0$. Most  equations that arise in
 applications can be written this way. Some examples are
 \begin{align*}
-\alpha x^2y''+\beta xy'+\gamma y&=0 \mbox{\quad(Euler's equation)},\\
-x^2y''+xy'+(x^2-\nu^2)y&=0 \mbox{\quad (Bessel's equation)},\\
+\alpha x^2y''+\beta xy'+\gamma y&=0 \quad\text{(Euler's equation)},\\
+x^2y''+xy'+(x^2-\nu^2)y&=0 \quad\text{(Bessel's equation)},\\
 \shortintertext{and}
 xy''+(1-x)y'+\lambda y&=0,
-\mbox{\quad(\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Laguerre.html}
+\quad\text{(\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Laguerre.html}
 {\color{blue}Laguerre's equation})},
 \end{align*}
 where we would multiply the last equation through by $x$ to put it in
@@ -3067,7 +3039,7 @@ and $A_0(0)\ne0$ (\zcref{exer:7.5.57,exer:7.5.58}).
 The next two theorems will enable us to develop systematic methods for
 finding Frobenius solutions of \eqref{eq:7.5.2}.
 
-\begin{theorem}\color{blue} \label{thmtype:7.5.1}
+\begin{theorem}\label{thmtype:7.5.1}
 Let
 \[
 Ly=
@@ -3194,7 +3166,7 @@ which implies \eqref{eq:7.5.4} with $\{b_n\}$ defined as in
 \eqref{eq:7.5.5}.
 \end{proof}
 
-\begin{theorem}\color{blue} \label{thmtype:7.5.2}
+\begin{theorem}\label{thmtype:7.5.2}
 Let
 \[
 Ly=
@@ -3254,7 +3226,7 @@ polynomial} of \eqref{eq:7.5.2}, and that $p_0(r)=0$ is the {\color{blue}\it
 indicial equation\/} of $Ly=0$. We'll consider only cases where the
 indicial equation has real roots $r_1$ and $r_2$, with $r_1\ge r_2$.
 
-\begin{theorem}\color{blue} \label{thmtype:7.5.3}
+\begin{theorem}\label{thmtype:7.5.3}
 Let $L$ and $\{a_n(r)\}$ be as in \zcref{thmtype:7.5.2}, and
 suppose the
 indicial equation $p_0(r)=0$ of $Ly=0$ has real roots $r_1$ and $r_2,$
@@ -3287,7 +3259,7 @@ assumptions of \zcref{thmtype:7.5.2} hold with $r=r_1$, and
 
 Now suppose $r_1-r_2$ isn't  an integer. From \eqref{eq:7.5.15},
 \[
-p_0(n+r_2)=n\alpha_0(n-r_1+r_2)\ne0\mbox{\quad if \quad} n=1,2,\cdots.
+p_0(n+r_2)=n\alpha_0(n-r_1+r_2)\ne0\quad\text{if}\quad n=1,2,\cdots.
 \]
 Hence, the assumptions of \zcref{thmtype:7.5.2} hold with $r=r_2$,
 and \eqref{eq:7.5.14} implies that $Ly_2=p_0(r_2)x^{r_2}=0$. We leave the
@@ -3300,7 +3272,7 @@ coefficients in Frobenius solutions. However, we can always set up the
 recurrence relations and use them to compute as many coefficients as we
 want. The next example illustrates this.
 
-\begin{example}\label{example:7.5.1}\rm
+\begin{example}\label{example:7.5.1}
 Find a fundamental set of
 Frobenius solutions of
 \begin{equation} \label{eq:7.5.16}
@@ -3324,8 +3296,7 @@ The zeros of the indicial polynomial $p_0$ are $r_1=-3/2$
 and $r_2=-2$, so  $r_1-r_2=1/2$. Therefore
 \zcref{thmtype:7.5.3} implies that
 \begin{equation} \label{eq:7.5.17}
-y_1=x^{-3/2}\sum_{n=0}^\infty a_n(-3/2)x^n\quad\mbox{ and
-}\quad
+y_1=x^{-3/2}\sum_{n=0}^\infty a_n(-3/2)x^n\quad\text{and}\quad
 y_2=x^{-2}\sum_{n=0}^\infty a_n(-2)x^n
 \end{equation}
 form a fundamental set of  Frobenius solutions of \eqref{eq:7.5.16}.
@@ -3395,7 +3366,7 @@ a_n(r)&=-\dst\frac{p_1(n+r-1)}{p_0(n+r)}a_{n-1}(r),\quad n\ge1.
 \end{aligned}
 \end{equation}
 
-\begin{example}\label{example:7.5.2}\rm
+\begin{example}\label{example:7.5.2}
 Find a fundamental set of Frobenius  solutions of
 \begin{equation} \label{eq:7.5.21}
 x^2(3+x)y''+5x(1+x)y'-(1-4x)y=0.
@@ -3416,8 +3387,7 @@ p_2(r)&=0.
 The zeros of the indicial polynomial $p_0$ are $r_1=1/3$ and $r_2=-1$,
 so $r_1-r_2=4/3$. Therefore \zcref{thmtype:7.5.3} implies that
 \[
-y_1=x^{1/3}\sum_{n=0}^\infty a_n(1/3)x^n\quad\mbox{ and
-}\quad
+y_1=x^{1/3}\sum_{n=0}^\infty a_n(1/3)x^n\quad\text{and}\quad
 y_2=x^{-1}\sum_{n=0}^\infty a_n(-1)x^n
 \]
 form a fundamental set of Frobenius solutions of \eqref{eq:7.5.21}. To
@@ -3490,7 +3460,7 @@ a_{2m}(r)&=-\dst\frac{p_2(2m+r-2)}{p_0(2m+r)}a_{2m-2}(r),\quad m\ge1.
 \end{aligned}
 \end{equation}
 
-\begin{example}\label{example:7.5.3}\rm
+\begin{example}\label{example:7.5.3}
 Find a fundamental set of   Frobenius solutions of
 \begin{equation} \label{eq:7.5.25}
 x^2(2-x^2)y''-x(3+4x^2)y'+(2-2x^2)y=0.
@@ -3510,8 +3480,7 @@ The zeros of the indicial polynomial $p_0$ are $r_1=2$
 and $r_2=1/2$, so  $r_1-r_2=3/2$. Therefore
 \zcref{thmtype:7.5.3} implies that
 \[
-y_1=x^2\sum_{m=0}^\infty a_{2m}(1/3)x^{2m}\quad\mbox{ and
-}\quad
+y_1=x^2\sum_{m=0}^\infty a_{2m}(1/3)x^{2m}\quad\text{and}\quad
 y_2=x^{1/2}\sum_{m=0}^\infty a_{2m}(1/2)x^{2m}
 \]
 form a fundamental set of  Frobenius solutions of \eqref{eq:7.5.25}.
@@ -3535,7 +3504,6 @@ so
 a_{2m}(2)=(m+1)\prod_{j=1}^m\frac{2j+1}{4j+3}.
 \]
 Therefore
-\enlargethispage{1in}
 \[
  y_1=x^2\sum_{m=0}^\infty
 (m+1)\left(\prod_{j=1}^m\frac{2j+1}{4j+3}\right)x^{2m}
@@ -3570,9 +3538,8 @@ apply \zcref{thmtype:7.5.3}. However, for equations of the form
 defined for $r=r_2$ if $r_1-r_2$ isn't  an \emph{\color{blue}even} integer. It can be
 shown (\zcref{exer:7.5.56}) that in this case
 \[
-y_1=x^{r_1}\sum_{m=0}^\infty a_{2m}(r_1)x^{2m}\quad \mbox{
-and
-}\quad y_2=x^{r_2}\sum_{m=0}^\infty a_{2m}(r_2)x^{2m}
+y_1=x^{r_1}\sum_{m=0}^\infty a_{2m}(r_1)x^{2m}\quad\text{and}\quad
+y_2=x^{r_2}\sum_{m=0}^\infty a_{2m}(r_2)x^{2m}
 \]
 form a fundamental set  Frobenius solutions of \eqref{eq:7.5.23}}.
 \color{black}
@@ -3609,7 +3576,7 @@ singular point. Therefore, motivated by \zcref{thmtype:7.5.2}
 (specifically, \eqref{eq:7.5.14}), we suggest the following  procedure.
 
 {\color{blue}
-\centerline{\bf Verification Procedure}
+\centerline{\bfseries Verification Procedure}
 
  \itshape Let $L$ and
 $Y_n(x; r_i)$ be defined by
@@ -3710,7 +3677,7 @@ with $M=20$ and $\delta=.5\rho$, $.7\rho$, and $.9\rho$
 in the verification procedure described at the end of this section.
 \begin{alist}
 \item % (a)
-Compute  $\sigma_N(\delta)$  (see Eqn.~\eqref{eq:7.5.28})
+Compute  $\sigma_N(\delta)$  (see \zcref{eq:7.5.28})
 for $N=5$, $10$, $15$,\dots, $50$.
 \item % (b)
 Find $N$ such that $\sigma_N(\delta)<10^{-5}$.
@@ -3722,7 +3689,7 @@ Find $N$ such that $\sigma_N(\delta)<10^{-10}$.
 \item\label{exer:7.5.12}\Lex
 By \zcref{thmtype:7.5.2}
 the Frobenius solutions of the equation in \zcref{exer:7.5.4} are
-defined on $(0,\infty)$. Do experiments \part{a}, \part{b}, and \part{c} of
+defined on $(0,\infty)$. Do experiments (a), (b), and (c) of
 \zcref{exer:7.5.11} for each Frobenius solution, with $M=20$ and
 $\delta=1$, $2$, and $3$ in the verification procedure described at
 the end of this section.
@@ -3731,9 +3698,9 @@ the end of this section.
 \item\label{exer:7.5.13}\Lex
 The Frobenius solutions of the equation in \zcref{exer:7.5.6} are
 defined on $(0,\rho)$, where $\rho$ is defined in
-\zcref{thmtype:7.5.2}. Find $\rho$ and do experiments \part{a},
-\part{b}, and
-\part{c} of \zcref{exer:7.5.11} for each Frobenius solution, with
+\zcref{thmtype:7.5.2}. Find $\rho$ and do experiments (a),
+(b), and
+(c) of \zcref{exer:7.5.11} for each Frobenius solution, with
 $M=20$ and $\delta=.3\rho$, $.4\rho$, and $.5\rho$, in the verification
 procedure described at the end of this section.
 
@@ -3768,8 +3735,8 @@ coefficients in each solution.}
 \item\label{exer:7.5.26}\Lex
 By \zcref{thmtype:7.5.2} the Frobenius solutions of the equation in
 \zcref{exer:7.5.17} are defined on $(0,\infty)$. Do experiments
-\part{a},
-\part{b}, and \part{c} of \zcref{exer:7.5.11} for each Frobenius
+(a),
+(b), and (c) of \zcref{exer:7.5.11} for each Frobenius
 solution,
 with $M=20$ and $\delta=3$, $6$, $9$, and $12$ in the verification
 procedure described at the end of this section.
@@ -3777,9 +3744,9 @@ procedure described at the end of this section.
 \item\label{exer:7.5.27}\Lex
 The Frobenius solutions of the equation in \zcref{exer:7.5.22} are
 defined on $(0,\rho)$, where $\rho$ is defined in
-\zcref{thmtype:7.5.2}. Find $\rho$ and do experiments \part{a},
-\part{b}, and
-\part{c} of \zcref{exer:7.5.11} for each Frobenius solution, with
+\zcref{thmtype:7.5.2}. Find $\rho$ and do experiments (a),
+(b), and
+(c) of \zcref{exer:7.5.11} for each Frobenius solution, with
 $M=20$ and
 $\delta=.25\rho$, $.5\rho$, and $.75\rho$ in the verification
 procedure described at the end of this section.
@@ -3859,7 +3826,7 @@ $8x^2(1+2x^2)y''+2x(5+34x^2)y'-(1-30x^2)y=0$
 \item\label{exer:7.5.52}Suppose $r_1>r_2$, $a_0=b_0=1$, and the
 Frobenius series
 \[
-y_1=x^{r_1}\sum_{n=0}^\infty a_nx^n\quad\mbox{ and }
+y_1=x^{r_1}\sum_{n=0}^\infty a_nx^n\quad\text{and}
 \quad y_2=x^{r_2}\sum_{n=0}^\infty b_nx^n
 \]
 both converge on an interval $(0,\rho)$.
@@ -3876,21 +3843,20 @@ c_2\sum_{n=0}^\infty b_nx^n=0,\quad 0<x<\rho.
 \]
 Then let $x\to0+$ to conclude that $c_2=0$.}
 \item % (b)
- Use the  result of \part{b} to
+ Use the  result of (b) to
 complete the proof of \zcref{thmtype:7.5.3}.
 \end{alist}
 
 \item\label{exer:7.5.53}The equation
- \setcounter{equation}{0}
-\begin{equation} \label{eq:7.5.{exer:7.5.53}A}
+\[\tag{A}
  x^2y''+xy'+(x^2-\nu^2)y=0
-\end{equation}
+\]
 is
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Bessel.html}
  {\color{blue}\itshape Bessel's equation of order~$\nu$\/}.
 (Here $\nu$ is a parameter, and this use of ``order'' should not be
 confused with its usual use as in ``the order of the equation.'') The
-solutions of \eqref{eq:7.5.{exer:7.5.53}A} are
+solutions of (A) are
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Bessel.html}
 {\color{blue}\itshape Bessel
 functions of order\/} $\nu$.
@@ -3898,14 +3864,15 @@ functions of order\/} $\nu$.
 \item % (a)
 Assuming that $\nu$ isn't
 an integer, find a fundamental set of Frobenius solutions of
-\eqref{eq:7.5.{exer:7.5.53}A}.
+(A).
 \item % (b)
  If $\nu=1/2$, the solutions of
-\eqref{eq:7.5.{exer:7.5.53}A} reduce to familiar elementary functions. Identify these
+(A) reduce to familiar elementary functions. Identify these
 functions.
 \end{alist}
 
-\item\label{exer:7.5.54}\begin{alist}
+\item\label{exer:7.5.54}
+\begin{alist}[above=-\baselineskip]
 \item % (a)
 Verify that
 \[
@@ -3926,9 +3893,9 @@ $(0,\rho)$ then  $|x|^r\sum_{n=0}^\infty a_nx^n$ is a solution on
 $(-\rho,0)$ and $(0,\rho)$.
 \end{alist}
 
-\item\label{exer:7.5.55}\begin{alist}
+\item\label{exer:7.5.55}\begin{alist}[above=-\baselineskip]
 \item % (a)
-Deduce from Eqn.~\eqref{eq:7.5.20} that
+Deduce from \zcref{eq:7.5.20} that
 \[
 a_n(r)=(-1)^n\prod_{j=1}^n\frac{p_1(j+r-1)}{p_0(j+r)}.
 \]
@@ -3936,7 +3903,7 @@ a_n(r)=(-1)^n\prod_{j=1}^n\frac{p_1(j+r-1)}{p_0(j+r)}.
 Conclude that if $p_0(r)=\alpha_0(r-r_1)(r-r_2)$ where $r_1-r_2$
 is not an integer, then
 \[
-y_1=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n\quad\mbox{ and }\quad
+y_1=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n\quad\text{and}\quad
 y_2=x^{r_2}\sum_{n=0}^\infty a_n(r_2)x^n
 \]
  form a fundamental set of  Frobenius solutions of
@@ -3944,7 +3911,7 @@ y_2=x^{r_2}\sum_{n=0}^\infty a_n(r_2)x^n
 x^2(\alpha_0+\alpha_1x)y''+x(\beta_0+\beta_1x)y'+(\gamma_0+\gamma_1x)y=0.
 \]
 \item % (c)
-Show that if $p_0$ satisfies the hypotheses of \part{b} then
+Show that if $p_0$ satisfies the hypotheses of (b) then
 \[
 y_1=x^{r_1}\sum_{n=0}^\infty\frac{(-1)^n}{n!\prod_{j=1}^n(j+r_1-r_2)}
 \left(\frac{\gamma_1}{\alpha_0}\right)^nx^n
@@ -3967,24 +3934,23 @@ Ly=x^2(\alpha_0+\alpha_2x^2)y''+x(\beta_0+\beta_2x^2)y'+
 \]
 and define
 \[
-p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\mbox{ and }\quad
+p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\text{and}\quad
 p_2(r)=\alpha_2r(r-1)+\beta_2r+\gamma_2.
 \]
 \begin{alist}
 \item % (a)
 Use \zcref{thmtype:7.5.2} to show that if
-\setcounter{equation}{0}
-\begin{equation} \label{eq:7.5.{exer:7.5.56}A}
+\[\tag{A}
 \begin{aligned}
 a_0(r)&=1,\\
 p_0(2m+r)a_{2m}(r)+p_2(2m+r-2)a_{2m-2}(r)&=0,\quad m\ge1,
 \end{aligned}
-\end{equation}
+\]
 then the Frobenius series
  $y(x,r)=x^r\sum_{m=0}^\infty a_{2m}x^{2m}$ satisfies
 $Ly(x,r)=p_0(r)x^r$.
 \item % (b)
-Deduce from \eqref{eq:7.5.{exer:7.5.56}A} that  if $p_0(2m+r)$ is nonzero
+Deduce from (A) that  if $p_0(2m+r)$ is nonzero
 for every positive integer $m$ then
 \[
 a_{2m}(r)=(-1)^m\prod_{j=1}^m\frac{p_2(2j+r-2)}{p_0(2j+r)}.
@@ -3993,12 +3959,12 @@ a_{2m}(r)=(-1)^m\prod_{j=1}^m\frac{p_2(2j+r-2)}{p_0(2j+r)}.
 Conclude that if $p_0(r)=\alpha_0(r-r_1)(r-r_2)$ where $r_1-r_2$
 is not an even integer, then
 \[
-y_1=x^{r_1}\sum_{m=0}^\infty a_{2m}(r_1)x^{2m}\quad\mbox{ and
-}\quad y_2=x^{r_2}\sum_{m=0}^\infty a_{2m}(r_2)x^{2m}
+y_1=x^{r_1}\sum_{m=0}^\infty a_{2m}(r_1)x^{2m}\quad\text{and}\quad
+y_2=x^{r_2}\sum_{m=0}^\infty a_{2m}(r_2)x^{2m}
 \]
 form a fundamental set of  Frobenius solutions of $Ly=0$.
 \item % (d)
-Show that if $p_0$ satisfies the hypotheses of \part{c} then
+Show that if $p_0$ satisfies the hypotheses of (c) then
 \[
 y_1=x^{r_1}\sum_{m=0}^\infty\frac{(-1)^m}{2^mm!\prod_{j=1}^m(2j+r_1-r_2)}
 \left(\frac{\gamma_2}{\alpha_0}\right)^mx^{2m}
@@ -4037,7 +4003,7 @@ where
 b_n=\sum_{j=0}^np_j(n+r-j)a_{n-j}.
 \]
 
-\item\label{exer:7.5.58}\begin{alist}
+\item\label{exer:7.5.58}\begin{alist}[above=-\baselineskip]
 \item % (a)
 Let  $L$ be as in \zcref{exer:7.5.57}. Show that if
 \[
@@ -4069,7 +4035,7 @@ Ly=x^2(\alpha_0+\alpha_qx^q)y''+x(\beta_0+\beta_qx^q)y'+
 \]
 where $q$ is a positive integer, and  define
 \[
-p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\mbox{ and }\quad
+p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\text{and}\quad
 p_q(r)=\alpha_qr(r-1)+\beta_qr+\gamma_q.
 \]
 \begin{alist}
@@ -4079,19 +4045,18 @@ Show that if
 y(x,r)=x^{r}\sum_{m=0}^\infty a_{qm}(r)x^{qm}
 \]
 where
-\setcounter{equation}{0}
-\begin{equation} \label{eq:7.5.{exer:7.5.59}A}
+\[\tag{A}
 \begin{aligned}
 a_0(r)&=1,\\
 a_{qm}(r)&=-\dst\frac{p_q\left(q(m-1)+r\right)}{p_0(qm+r)}a_{q(m-1)}(r),\quad m\ge1,
 \end{aligned}
-\end{equation}
+\]
 then
 \[
 Ly(x,r)=p_0(r)x^r.
 \]
 \item % (b)
-Deduce from \eqref{eq:7.5.{exer:7.5.59}A} that
+Deduce from (A) that
 \[
 a_{qm}(r)=(-1)^m\prod_{j=1}^m\frac{p_q\left(q(j-1)+r\right)}{p_0(qj+r)}.
 \]
@@ -4099,12 +4064,12 @@ a_{qm}(r)=(-1)^m\prod_{j=1}^m\frac{p_q\left(q(j-1)+r\right)}{p_0(qj+r)}.
 Conclude that if $p_0(r)=\alpha_0(r-r_1)(r-r_2)$ where $r_1-r_2$
 is not an integer multiple of $q$, then
 \[
-y_1=x^{r_1}\sum_{m=0}^\infty a_{qm}(r_1)x^{qm}\quad\mbox{ and
-}\quad y_2=x^{r_2}\sum_{m=0}^\infty a_{qm}(r_2)x^{qm}
+y_1=x^{r_1}\sum_{m=0}^\infty a_{qm}(r_1)x^{qm}\quad\text{and}\quad
+y_2=x^{r_2}\sum_{m=0}^\infty a_{qm}(r_2)x^{qm}
 \]
 form a fundamental set of Frobenius solutions of $Ly=0$.
 \item % (d)
-Show that if $p_0$ satisfies the hypotheses of \part{c} then
+Show that if $p_0$ satisfies the hypotheses of (c) then
 \[
 y_1=x^{r_1}\sum_{m=0}^\infty\frac{(-1)^m}{q^mm!\prod_{j=1}^m(qj+r_1-r_2)}
 \left(\frac{\gamma_q}{\alpha_0}\right)^mx^{qm}
@@ -4120,7 +4085,7 @@ form a fundamental set of Frobenius solutions of
 \]
 \end{alist}
 
-\item\label{exer:7.5.60}\begin{alist}
+\item\label{exer:7.5.60}\begin{alist}[above=-\baselineskip]
 \item % (a)
 Suppose $\alpha_0,\alpha_1$, and $\alpha_2$ are real numbers with
 $\alpha_0\ne0$, and  $\{a_n\}_{n=0}^\infty$ is
@@ -4142,13 +4107,12 @@ and infer that
 a_nx^n=\frac{\alpha_0a_0}{\alpha_0+\alpha_1x+\alpha_2x^2}.
 \]
 \item % (b)
-With $\alpha_0,\alpha_1$, and $\alpha_2$ as in \part{a}, consider the
+With $\alpha_0,\alpha_1$, and $\alpha_2$ as in (a), consider the
 equation
-\setcounter{equation}{0}
-\begin{equation} \label{eq:7.5.{exer:7.5.60}A}
+\[\tag{A}
 x^2(\alpha_0+\alpha_1x+\alpha_2 x^2)y''+x(\beta_0+\beta_1x+\beta_2x^2)y'+
 (\gamma_0+\gamma_1x+\gamma_2x^2)y=0,
-\end{equation}
+\]
 and define
 \[
 p_j(r)=\alpha_jr(r-1)+\beta_jr+\gamma_j,\quad j=0,1,2.
@@ -4166,11 +4130,11 @@ p_0(r)=\alpha_0(r-r_1)(r-r_2),
 \]
 where $r_1>r_2$.  Show that
 \[
-y_1=\frac{x^{r_1}}{\alpha_0+\alpha_1x+\alpha_2x^2}\quad\mbox{ and }\quad
+y_1=\frac{x^{r_1}}{\alpha_0+\alpha_1x+\alpha_2x^2}\quad\text{and}\quad
 y_2=\frac{x^{r_2}}{\alpha_0+\alpha_1x+\alpha_2x^2}
 \]
 form a fundamental set of  Frobenius  solutions of
-\eqref{eq:7.5.{exer:7.5.60}A} on any interval $(0,\rho)$ on which
+(A) on any interval $(0,\rho)$ on which
 $\alpha_0+\alpha_1x+\alpha_2x^2$ has no zeros.
 \end{alist}
 
@@ -4196,6 +4160,7 @@ some interval $(0,\rho)$.}
 
 \end{exerciselist}
 
+
 \section{The Method of Frobenius II}\label{sec:frobenius_ii}
 
 In this section we discuss a method for finding two linearly
@@ -4217,7 +4182,7 @@ but does not provide a second solution $y_2$ such that $\{y_1,y_2\}$
 is a fundamental set of solutions. The following extension of
 \zcref{thmtype:7.5.2} provides a way to find a second solution.
 
-\begin{theorem}\color{blue} \label{thmtype:7.6.1}
+\begin{theorem}\label{thmtype:7.6.1}
 Let
 \begin{equation} \label{eq:7.6.2}
 Ly=
@@ -4316,7 +4281,7 @@ p'_0(r)x^r+p_0(r) x^r \ln x,
 which is equivalent to \eqref{eq:7.6.6}.
 \end{proof}
 
-\begin{theorem}\color{blue} \label{thmtype:7.6.2}
+\begin{theorem}\label{thmtype:7.6.2}
 Let $L$ be as in \zcref{thmtype:7.6.1} and suppose the
 indicial equation $p_0(r)=0$ has a repeated real root $r_1.$
 Then
@@ -4356,7 +4321,7 @@ leave the proof that $\{y_1,y_2\}$ is a fundamental set as an exercise
 (\zcref{exer:7.6.53}).
 \end{proof}
 
-\begin{example}\label{example:7.6.1} \rm
+\begin{example}\label{example:7.6.1}
 Find  a fundamental set of solutions of
 \begin{equation} \label{eq:7.6.9}
 x^2(1-2x+x^2)y''-x(3+x)y'+(4+x)y=0.
@@ -4376,7 +4341,7 @@ p_2(r)&=r(r-1).
 Since $r_1=2$ is a repeated root of the indicial polynomial $p_0$,
 \zcref{thmtype:7.6.2} implies that
 \begin{equation} \label{eq:7.6.10}
-y_1=x^2\sum_{n=0}^\infty  a_n(2)x^n\quad\mbox{ and }\quad
+y_1=x^2\sum_{n=0}^\infty  a_n(2)x^n\quad\text{and}\quad
 y_2=y_1\ln x+x^2\sum_{n=1}^\infty a_n'(2)x^n
 \end{equation}
 form a fundamental set of  Frobenius solutions of \eqref{eq:7.6.9}.
@@ -4456,7 +4421,7 @@ examples illustrate this.
 
 
 
-\begin{example}\label{example:7.6.2} \rm
+\begin{example}\label{example:7.6.2}
 Find a fundamental set of Frobenius  solutions of
 \begin{equation} \label{eq:7.6.15}
 2x^2(2+x)y''+5x^2y'+(1+x)y=0.
@@ -4545,7 +4510,7 @@ x-x^{1/2}\sum_{n=1}^\infty\frac{(-1)^n\prod_{j=1}^n(2j+1)}{4^nn!}
 \left(\sum_{j=1}^n\frac{1}{j(2j+1)}\right)x^n.
 \]
 
-\begin{example}\label{example:7.6.3} \rm
+\begin{example}\label{example:7.6.3}
 Find a fundamental set of Frobenius  solutions of
 \begin{equation} \label{eq:7.6.21}
 x^2(2-x^2)y''-2x(1+2x^2)y'+(2-2x^2)y=0.
@@ -4640,7 +4605,7 @@ difficulty in using logarithmic differentiation to obtain the coefficients
 $\{a_n'(r_1)\}$ in the second solution. The next example illustrates
 this difficulty and shows how to overcome it.
 
-\begin{example}\label{example:7.6.4} \rm
+\begin{example}\label{example:7.6.4}
 Find a fundamental set of Frobenius solutions of
 \begin{equation} \label{eq:7.6.27}
 x^2y''-x(5-x)y'+(9-4x)y=0.
@@ -4910,7 +4875,7 @@ coefficients.}
 \item\label{exer:7.6.53}Under the assumptions of \zcref{thmtype:7.6.2}, suppose
 the power series
 \[
-\sum_{n=0}^\infty a_n(r_1)x^n \quad\mbox{ and }\quad
+\sum_{n=0}^\infty a_n(r_1)x^n \quad\text{and}\quad
 \sum_{n=1}^\infty a_n'(r_1)x^n
 \]
   converge on $(-\rho,\rho)$.
@@ -4918,7 +4883,7 @@ the power series
 \item % (a)
 Show that
 \[
-y_1=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n\quad\mbox{ and }\quad
+y_1=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n\quad\text{and}\quad
 y_2=y_1\ln x+x^{r_1}\sum_{n=1}^\infty a_n'(r_1)x^n
 \]
 are linearly independent on $(0,\rho)$. \hint{Show that if $c_1$
@@ -4930,7 +4895,7 @@ c_2\sum_{n=1}^\infty a_n'(r_1)x^n=0,\quad 0<x<\rho.
 \]
 Then let $x\to0+$ to conclude that $c_2=0$.}
 \item % (b)
-Use the result of \part{a} to
+Use the result of (a) to
 complete the proof of \zcref{thmtype:7.6.2}.
 \end{alist}
 
@@ -4940,10 +4905,10 @@ Ly=x^2(\alpha_0+\alpha_1x)y''+x(\beta_0+\beta_1x)y'+(\gamma_0+\gamma_1x)y
 \]
 and define
 \[
-p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\mbox{ and }\quad
+p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\text{and}\quad
 p_1(r)=\alpha_1r(r-1)+\beta_1r+\gamma_1.
 \]
-\zcref[S]{thmtype:7.6.1}  and {Exercise~7.5.\ref{exer:7.5.55}}\part{a}
+\zcref[S]{thmtype:7.6.1}  and {Exercise~7.5.\ref{exer:7.5.55}}(a)
 imply that if
 \[
 y(x,r)=x^r\sum_{n=0}^\infty a_n(r)x^n
@@ -4979,7 +4944,7 @@ where
 J_n=\sum_{j=1}^n\frac{p_1'(j+r_1-1)}{p_1(j+r_1-1)}-2\sum_{j=1}^n\frac{1}{j}.
 \]
 \item % (c)
-Conclude from \part{a} and \part{b} that if
+Conclude from (a) and (b) that if
  $\gamma_1\ne0$ then
 \[
 y_1=x^{r_1}\sum_{n=0}^\infty
@@ -5004,12 +4969,12 @@ Ly=x^2(\alpha_0+\alpha_qx^q)y''+x(\beta_0+\beta_qx^q)y'+(\gamma_0+\gamma_qx^q)y
 \]
 where $q$ is a positive integer, and define
 \[
-p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\mbox{ and }\quad
+p_0(r)=\alpha_0r(r-1)+\beta_0r+\gamma_0\quad\text{and}\quad
 p_q(r)=\alpha_qr(r-1)+\beta_qr+\gamma_q.
 \]
 Suppose
 \[
-p_0(r)=\alpha_0(r-r_1)^2 \quad\mbox{ and }\quad p_q(r)\not\equiv0.
+p_0(r)=\alpha_0(r-r_1)^2 \quad\text{and}\quad p_q(r)\not\equiv0.
 \]
 \begin{alist}
 \item % (a)
@@ -5032,7 +4997,7 @@ where
 J_m=\sum_{j=1}^m\frac{p_q'\left(q(j-1)+r_1\right)}{p_q\left(q(j-1)+r_1\right)}-\frac{2}{q}\sum_{j=1}^m\frac{1}{j}.
 \]
 \item % (c)
-Conclude from \part{a} and \part{b} that if
+Conclude from (a) and (b) that if
  $\gamma_q\ne0$ then
 \[
 y_1=x^{r_1}\sum_{m=0}^\infty
@@ -5066,7 +5031,7 @@ p_0(r)=\alpha_0(r-r_1)^2.
 \]
  Show that
 \[
-y_1=\frac{x^{r_1}}{\alpha_0+\alpha_1x+\alpha_2x^2}\quad\mbox{ and }\quad
+y_1=\frac{x^{r_1}}{\alpha_0+\alpha_1x+\alpha_2x^2}\quad\text{and}\quad
 y_2=\frac{x^{r_1}\ln x}{\alpha_0+\alpha_1x+\alpha_2x^2}
 \]
 are linearly independent Frobenius  solutions of
@@ -5123,7 +5088,7 @@ y}{\partial r}(x,r_1)
 
 \section{The Method of Frobenius III}\label{sec:frobenius_iii}
 
-In Sections~7.5 and 7.6 we discussed methods
+In \zcref{sec:frobenius_i,sec:frobenius_ii} we discussed methods
 for finding
 Frobenius solutions of a homogeneous linear second order equation near
 a regular singular point in the case where the indicial equation has a
@@ -5146,7 +5111,7 @@ We begin with a theorem that provides a fundamental set of solutions
 of equations of the form \eqref{eq:7.7.1}.
 
 
-\begin{theorem}\color{blue} \label{thmtype:7.7.1}
+\begin{theorem}\label{thmtype:7.7.1}
 Let
 \[
 Ly=
@@ -5277,7 +5242,7 @@ We leave the proof that $\{y_1,y_2\}$ is a fundamental set as an
 exercise (\zcref{exer:7.7.41}).
 
 
-\begin{example}\label{example:7.7.1} \rm
+\begin{example}\label{example:7.7.1}
 Find a fundamental set of Frobenius  solutions of
 \[
 2x^2(2+x)y''-x(4-7x)y'-(5-3x)y=0.
@@ -5400,7 +5365,7 @@ This is illustrated  in the next example. (See also
 
 
 
-\begin{example}\label{example:7.7.2} \rm
+\begin{example}\label{example:7.7.2}
 Find a fundamental set of Frobenius  solutions of
 \[
 x^2(1-2x)y''+x(8-9x)y'+(6-3x)y=0.
@@ -5493,7 +5458,7 @@ integer can be handled by the method discussed in
 The  proof of the next theorem is similar to the proof of
 \zcref{thmtype:7.7.1} (\zcref{exer:7.7.43}).
 
-\begin{theorem}\color{blue} \label{thmtype:7.7.2}
+\begin{theorem}\label{thmtype:7.7.2}
 Let
 \[
 Ly=
@@ -5540,7 +5505,7 @@ is a fundamental set of  solutions.
 \end{theorem}
 
 
-\begin{example}\label{example:7.7.3} \rm
+\begin{example}\label{example:7.7.3}
 Find a fundamental set of Frobenius  solutions of
 \[
 x^2(1+x^2)y''+x(3+10x^2)y'-(15-14x^2)y=0.
@@ -5652,7 +5617,7 @@ x^3\sum_{m=1}^\infty
 \frac{(-1)^m\prod_{j=1}^m(2j+3)}{2^mm!}\left(\sum_{j=1}^m\frac{1}{j(2j+3)}\right) x^{2m}.
 \end{align*}
 
-\begin{example}\label{example:7.7.4} \rm
+\begin{example}\label{example:7.7.4}
 Find a fundamental set of Frobenius  solutions of
 \[
 x^2(1-2x^2)y''+x(7-13x^2)y'-14x^2y=0.
@@ -5810,7 +5775,7 @@ the coefficients.
 
 \item\label{exer:7.7.40}$4x^2(1+x^2)y''+4x(2+x^2)y'-(15+x^2)y=0$
 
-\item\label{exer:7.7.41}\begin{alist}
+\item\label{exer:7.7.41}\begin{alist}[above=-\baselineskip]
 \item % (a)
 Under the assumptions of \zcref{thmtype:7.7.1}, show that
 \[
@@ -5829,7 +5794,7 @@ x^{-r_2}(c_1y_1(x)+c_2y_2(x))=0,\quad 0<x<\rho.
 \]
 Then let $x\to0+$ to conclude that $c_2$=0.}
 \item % (b)
-Use the result of \part{a} to
+Use the result of (a) to
 complete the proof of \zcref{thmtype:7.7.1}.
 \end{alist}
 
@@ -5901,8 +5866,10 @@ and
 \begin{align*}
 y_2&=x^{r_2}\sum_{m=0}^{k-1}\frac{(-1)^m}{4^mm!\prod_{j=1}^m(j-k)}
 \left(\frac{\gamma_2}{\alpha_0}\right)^m
-x^{2m}\\
-&\quad{}-\frac{2}{4^kk!(k-1)!}\left(\frac{\gamma_2}{\alpha_0}\right)^k\left(y_1\ln x-
+x^{2m}-
+%{}\\&
+\frac{2}{4^kk!(k-1)!}\\
+&\qquad{}\times\left(\frac{\gamma_2}{\alpha_0}\right)^k\left(y_1\ln x-
 \frac{x^{r_1}}{2}\sum_{m=1}^\infty\frac{(-1)^m}{4^mm!\prod_{j=1}^m(j+k)}\left(\frac{\gamma_2}{\alpha_0}\right)^m
 \left(\sum_{j=1}^m\frac{2j+k}{j(j+k)}\right)x^{2m}\right).
 \end{align*}
@@ -5925,8 +5892,8 @@ y_1=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n.
 \]
 Define
 \[
-a_n(r_2)=-\frac{1}{p_0(n+r_2)}\sum_{j=1}^n p_j(n+r_2-j)a_{n-j}(r_2)\mbox{
-if } n\ge1\mbox{ and }n\ne k,
+a_n(r_2)=-\frac{1}{p_0(n+r_2)}\sum_{j=1}^n p_j(n+r_2-j)a_{n-j}(r_2)\text{
+if } n\ge1\text{ and }n\ne k,
 \]
 and let $a_k(r_2)$ be arbitrary.
 \begin{alist}
