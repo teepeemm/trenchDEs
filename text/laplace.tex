@@ -1,9 +1,9 @@
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = ../TRENCH_DIFFEQ.tex
 
-\chapter{Laplace Transforms}
+\chapter{Laplace Transforms}\label{ch:laplace}
 
-
-\noindent
-IN THIS CHAPTER
+\textsc{In this chapter}
  we study the method of
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Laplace.html}
 {\color{blue}\itshape Laplace
@@ -24,40 +24,40 @@ in physical problems dealing with discontinuous forcing functions.
 
 \medskip
 \noindent
-SECTION~8.1  defines  the Laplace transform and
-developes its properties.
+\zcref[S,CAP,font=\scshape]{sec:laplace_intro} defines the Laplace transform and
+develops its properties.
 
 \medskip
 \noindent
-SECTION~8.2 deals with
+\zcref[S,CAP,font=\scshape]{sec:inverse_laplace} deals with
 the problem of finding a function that has a given Laplace transform.
 
 \medskip
 \noindent
- SECTION~8.3 applies the Laplace transform to solve
+\zcref[S,CAP,font=\scshape]{sec:laplace_ivp} applies the Laplace transform to solve
 initial value problems for constant coefficient second order
 differential equations on $(0,\infty)$.
 
 \medskip
 \noindent
-SECTION~8.4
+\zcref[S,CAP,font=\scshape]{sec:unit_step_func}
 introduces the unit step function.
 
 \medskip
 \noindent
-SECTION~8.5 uses the unit step function
- to solve constant coefficient equations with piecewise
+\zcref[S,CAP,font=\scshape]{sec:laplace_piecewise_forcing} uses the unit step
+function to solve constant coefficient equations with piecewise
 continuous forcing functions.
 
 \medskip
 \noindent
-SECTION~8.6 deals with the
+\zcref[S,CAP,font=\scshape]{sec:laplace_convolution} deals with the
 convolution theorem, an important theoretical property of the Laplace
 transform.
 
 \medskip
 \noindent
- SECTION~8.7 introduces the idea of
+\zcref[S,CAP,font=\scshape]{sec:laplace_impulse} introduces the idea of
 impulsive force, and treats constant coefficient equations with
 impulsive forcing functions.
 
@@ -65,16 +65,15 @@ impulsive forcing functions.
 
 \medskip
 \noindent
-SECTION~8.8 is a brief table of Laplace transforms.
+\zcref[S,CAP,font=\scshape]{sec:laplace_table} is a brief table of Laplace transforms.
 
 \newpage
 
-\section{Introduction to the Laplace Transform}
+
+\section{Introduction to the Laplace Transform}\label{sec:laplace_intro}
 
 \boxit{Definition of the Laplace Transform}
 
-
-\noindent
 To define the Laplace transform, we first recall the definition of an
 improper integral. If $g$ is integrable over the
 interval $[a,T]$ for every $T>a$, then the \emph{\color{blue}improper
@@ -89,13 +88,13 @@ We say that the improper integral \emph{\color{blue}converges} if the limit in
 diverges\/} or \emph{\color{blue}does not exist}. Here's the definition of
 the Laplace transform of a function $f$.
 
-\begin{definition}\color{blue}\label{thmtype:8.1.1}\rm
-Let $f$ be defined for $t\ge0$ and let $s$ be a real number$.$ Then the
+\begin{definition}\label{thmtype:8.1.1}
+Let $f$ be defined for $t\ge0$ and let $s$ be a real number. Then the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Laplace.html}
 {\color{blue}\itshape Laplace transform} of $f$ is the function $F$ defined by
 \begin{equation}\label{eq:8.1.2} F(s)=\int_0^\infty e^{-st} f(t)\,dt,
 \end{equation} for those values of $s$ for which the improper integral
-converges$.$
+converges.
 \end{definition}
 
 It is important to keep in mind that the variable of integration in
@@ -103,11 +102,11 @@ It is important to keep in mind that the variable of integration in
 use $t$ as the independent variable for $f$ because in applications
 the Laplace transform is usually applied to functions of time.
 
-The Laplace transform can be viewed as an operator ${\cal L}$ that
+The Laplace transform can be viewed as an operator $\laplace$ that
 transforms the function $f=f(t)$  into the function $F=F(s)$. Thus,
 \eqref{eq:8.1.2} can be expressed as
 \[
-F={\cal L}(f).
+F=\laplace(f).
 \]
 The functions $f$ and $F$ form a \emph{\color{blue}transform pair}, which we'll
 sometimes denote by
@@ -115,12 +114,12 @@ sometimes denote by
 f(t)\leftrightarrow F(s).
 \]
 It can be shown that if $F(s)$ is defined for $s=s_0$ then it's defined
-for all $s>s_0$ (Exercise~\ref{exer:8.1.14}\part{b}).
+for all $s>s_0$ (\zcref{exer:8.1.14}(b)).
+
 
 \boxit{Computation of Some Simple Laplace Transforms}
 
-
-\begin{example}\label{example:8.1.1}\rm
+\begin{example}\label{example:8.1.1}
  Find the Laplace transform of  $f(t)=1$.
 \end{example}
 
@@ -136,10 +135,10 @@ If $s\ne 0$ then
 \end{equation}
 Therefore
 \begin{equation}\label{eq:8.1.4}
-\lim_{T\to\infty}\int_0^T e^{-st}dt=\left\{\begin{array}{rr}
+\lim_{T\to\infty}\int_0^T e^{-st}dt=\begin{cases}
 \dst\frac{1}{s}, &   s>0,\\
 \infty, &  s<0.
-\end{array}\right.
+\end{cases}
 \end{equation}
 If $s=0$  the integrand reduces to the constant $1$, and
 \[
@@ -152,7 +151,7 @@ F(s)=\int_0^\infty e^{-st}dt=\frac{1}{s},\quad s>0.
 \]
 This result can be written in operator notation as
 \[
-{\cal L}(1)=\frac{1}{s},\quad s>0,
+\laplace(1)=\frac{1}{s},\quad s>0,
 \]
 or as the transform pair
 \[
@@ -166,13 +165,15 @@ and letting $T\to\infty$. Therefore, instead of writing \eqref{eq:8.1.3}
 and \eqref{eq:8.1.4} as separate steps we write
 \[
 \int_0^\infty e^{-st}dt=- \frac{1}{s} e^{-st}\Big|_0^\infty=
-\left\{\begin{array}{rr}\dst\frac{1}{s}, & s>0,\\\infty,&s<
-0.\end{array}\right.
+\begin{cases}
+\dfrac{1}{s}, & s>0,\\
+\infty,&s\le0.
+\end{cases}
 \]
 We'll follow this practice throughout this chapter.}
 \color{black}
 
-\begin{example}\label{example:8.1.2}\rm
+\begin{example}\label{example:8.1.2}
  Find the Laplace transform of $f(t)=t$.
 \end{example}
 
@@ -182,13 +183,15 @@ We'll follow this practice throughout this chapter.}
 F(s)=\int_0^\infty e^{-st}t\,dt.
 \end{equation}
 If $s\ne0$,  integrating by parts yields
-\begin{eqnarray*}
-\int_0^\infty e^{-st}t\,dt&=&-\frac{te^{-st}}{s}\bigg|_0^\infty
-+\frac{1}{s}\int_0^\infty e^{-st}\,dt
-=-\left[\frac{t}{s}+\frac{1}{s^2}\right]e^{-st}\bigg|_0^\infty
-\\&=&\left\{\begin{array}{rr}\dst\frac{1}{s^2},\quad s>0,\\
-\infty,\,s<0.\end{array}\right.
-\end{eqnarray*}
+\begin{align*}
+\int_0^\infty e^{-st}t\,dt
+&=-\frac{te^{-st}}{s}\bigg|_0^\infty+\frac{1}{s}\int_0^\infty e^{-st}\,dt
+=-\left[\frac{t}{s}+\frac{1}{s^2}\right]e^{-st}\bigg|_0^\infty\\
+&=\begin{cases}
+\dfrac{1}{s^2},\quad s>0,\\
+\infty,\,s<0.
+\end{cases}
+\end{align*}
 If $s=0$, the integral in  \eqref{eq:8.1.5} becomes
 \[
 \int_0^\infty t\,dt=\frac{t^2}{2}\bigg|_0^\infty=\infty.
@@ -199,14 +202,14 @@ F(s)=\frac{1}{s^2},\quad s>0.
 \]
 This result can also be written as
 \[
-{\cal L}(t)=\frac{1}{s^2},\quad s>0,
+\laplace(t)=\frac{1}{s^2},\quad s>0,
 \]
 or as the transform pair
 \[
 t\leftrightarrow\frac{1}{s^2},\quad s>0.
 \]
 
-\begin{example}\label{example:8.1.3}\rm
+\begin{example}\label{example:8.1.3}
  Find the Laplace transform of $f(t)=e^{at}$, where $a$ is a constant.
 \end{example}
 
@@ -219,7 +222,7 @@ Combining the exponentials yields
 \[
 F(s)=\int_0^\infty e^{-(s-a)t}\,dt.
 \]
-However, we know from Example~\ref{example:8.1.1}  that
+However, we know from \zcref{example:8.1.1}  that
 \[
 \int_0^\infty e^{-st}\,dt=\frac{1}{s},\quad s>0.
 \]
@@ -229,11 +232,11 @@ F(s)=\frac{1}{s-a},\quad s>a.
 \]
 This can also be written as
 \[
-{\cal L}(e^{at})=\frac{1}{s-a},\quad s>a, \text{\; or \; }
+\laplace(e^{at})=\frac{1}{s-a},\quad s>a, \text{\; or \; }
  e^{at}\leftrightarrow\frac{1}{s-a},\quad s>a.
 \]
 
-\begin{example}\label{example:8.1.4}\rm
+\begin{example}\label{example:8.1.4}
 Find the Laplace transforms of $f(t)=\sin\omega t$ and
 $g(t)=\cos\omega t$, where $\omega$ is a constant.
 \end{example}
@@ -277,17 +280,17 @@ This and  \eqref{eq:8.1.8} imply that
 F(s)=\frac{\omega}{s^2+\omega^2},\quad s>0.
 \]
 
+
 \boxit{Tables of Laplace transforms}
 
-
-\noindent
 Extensive tables of Laplace transforms have been compiled and are
 commonly used in applications. The brief table of Laplace transforms
 in the Appendix will be adequate for our
 purposes.
 
-\begin{example}\label{example:8.1.5}\rm  Use the
-table of Laplace transforms to find  ${\cal L}(t^3e^{4t})$.
+\begin{example}\label{example:8.1.5}
+Use the
+table of Laplace transforms to find  $\laplace(t^3e^{4t})$.
 \end{example}
 
 \solution  The table
@@ -297,50 +300,47 @@ t^ne^{at}\leftrightarrow\frac{n!}{(s-a)^{n+1}}.
 \]
 Setting $n=3$  and $a=4$ here yields
 \[
-{\cal L}(t^3e^{4t})=\frac{3!}{(s-4)^4}=\frac{6}{(s-4)^4}.\bbox
+\laplace(t^3e^{4t})=\frac{3!}{(s-4)^4}=\frac{6}{(s-4)^4}.\bbox
 \]
 
 We'll  sometimes write Laplace transforms of specific functions
 without explicitly stating how they are obtained. In such cases you
 should refer to the table of Laplace transforms.
 
+
 \boxit{Linearity of the Laplace Transform}
 
-
-
-\noindent
 The next theorem presents an important property of the Laplace
 transform.
 
-\begin{theorem}\color{blue}$[$Linearity Property$]$\label{thmtype:8.1.2}
- Suppose ${\cal L}(f_i)$ is defined for
+\begin{theorem}\color{blue}[Linearity Property]\label{thmtype:8.1.2}
+ Suppose $\laplace(f_i)$ is defined for
  $s>s_i,$ $1\le i\le n).$
 Let $s_0$ be the largest of the numbers $s_1$, $s_{2},$ \dots,$s_n,$ and
 let
-$c_1$, $c_2$,\dots, $c_n$ be  constants$.$ Then
+$c_1$, $c_2$,\dots, $c_n$ be  constants. Then
 \[
-{\cal L}(c_1f_1+c_2f_2+\cdots+c_nf_n)=c_1{\cal L}(f_1)+c_2{\cal L}(f_2)
-+\cdots+c_n{\cal L}(f_n)\mbox{ for } s>s_0.
+\laplace(c_1f_1+c_2f_2+\cdots+c_nf_n)=c_1\laplace(f_1)+c_2\laplace(f_2)
++\cdots+c_n\laplace(f_n)\text{ for } s>s_0.
 \]
 \end{theorem}
 
 \begin{proof}
 We give the proof for the case where $n=2$. If $s>s_0$ then
-\begin{eqnarray*}
-{\cal L}(c_1f_1+c_2f_2)&=&
-\int_0^\infty
-e^{-st}\left(c_1f_1(t)+c_2f_2(t))\right)\,dt\\
-&=&c_1\int_0^\infty e^{-st}f_1(t)\,dt+c_2\int_0^\infty e^{-st}f_2(t)\,dt\\
-&=&c_1{\cal L}(f_1)+c_2{\cal L}(f_2).
-\end{eqnarray*}
+\begin{align*}
+\laplace(c_1f_1+c_2f_2)
+&=\int_0^\infty e^{-st}\left(c_1f_1(t)+c_2f_2(t))\right)\,dt\\
+&=c_1\int_0^\infty e^{-st}f_1(t)\,dt+c_2\int_0^\infty e^{-st}f_2(t)\,dt\\
+&=c_1\laplace(f_1)+c_2\laplace(f_2).
+\end{align*}
 \end{proof}
 
-\begin{example}\label{example:8.1.6}\rm
-Use  Theorem~\ref{thmtype:8.1.2} and the known Laplace transform
+\begin{example}\label{example:8.1.6}
+Use  \zcref{thmtype:8.1.2} and the known Laplace transform
 \[
-{\cal L}(e^{at})=\frac{1}{s-a}
+\laplace(e^{at})=\frac{1}{s-a}
 \]
- to find ${\cal L}(\cosh bt)\,(b\ne0)$.
+ to find $\laplace(\cosh bt)\,(b\ne0)$.
 \end{example}
 
 \solution  By definition,
@@ -349,32 +349,30 @@ Use  Theorem~\ref{thmtype:8.1.2} and the known Laplace transform
 \]
 Therefore
 \begin{equation}\label{eq:8.1.9}
-\begin{array}{ccl}
-{\cal L}(\cosh bt)&=& {\cal L}\left(\dst\frac{1}{2} e^{bt}+\dst\frac{1}{2}e^{-bt}\right)\\[2\jot]
-&=&\dst\frac{1}{2} {\cal L}(e^{bt}) +\dst\frac{1}{2} {\cal L}(e^{-bt})
-\qquad
-\hbox{(linearity property)}\\[2\jot]
-&=&\dst\frac{1}{2}\,\dst\frac{1}{s-b} +\dst\frac{1}{2}\,\dst\frac{1}{s+b},
-\end{array}
+\begin{aligned}
+\laplace(\cosh bt)
+&=\laplace\left(\frac{1}{2} e^{bt}+\frac{1}{2}e^{-bt}\right)\\
+&=\frac{1}{2} \laplace(e^{bt}) +\frac{1}{2} \laplace(e^{-bt})
+\qquad\hbox{(linearity property)}\\
+&=\frac{1}{2}\,\frac{1}{s-b} +\frac{1}{2}\,\frac{1}{s+b},
+\end{aligned}
 \end{equation}
 where the first transform on the right is defined for $s>b$ and the
 second
 for $s>-b$; hence, both are defined for $s>|b|$.  Simplifying the
 last expression in \eqref{eq:8.1.9} yields
 \[
-{\cal L}(\cosh bt)=\frac{s}{s^2-b^2},\quad s>|b|.
+\laplace(\cosh bt)=\frac{s}{s^2-b^2},\quad s>|b|.
 \]
+
 
 \boxit{The First Shifting Theorem}
 
-
-\noindent
 The next theorem enables us to start with known transform pairs and derive
-others. (For other results of this kind, see Exercises~\ref{exer:8.1.6}  and
-\ref{exer:8.1.13}.)
+others. (For other results of this kind, see \zcref{exer:8.1.6,exer:8.1.13}.)
 
-\begin{theorem}\color{blue}$[$First Shifting
-Theorem$]$\label{thmtype:8.1.3}
+\begin{theorem}\color{blue}[First Shifting
+Theorem]\label{thmtype:8.1.3}
  If
 \begin{equation}\label{eq:8.1.10}
 F(s)=\int_0^\infty e^{-st} f(t)\,dt
@@ -394,19 +392,19 @@ F(s-a)=\int_0^\infty e^{-st}\left(e^{at}f(t)\right)\,dt,
 \]
 which implies the conclusion.
 
-\begin{example}\label{example:8.1.7}\rm
-  Use Theorem~\ref{thmtype:8.1.3} and the known Laplace
+\begin{example}\label{example:8.1.7}
+  Use \zcref{thmtype:8.1.3} and the known Laplace
 transforms of $1$, $t$, $\cos\omega t$, and $\sin\omega t$ to find
 \[
-{\cal L}(e^{at}),\quad {\cal L}(te^{at}),\quad {\cal L}(e^{\lambda t}\sin
-\omega t),\mbox{and } {\cal L}(e^{\lambda t}\cos\omega t).
+\laplace(e^{at}),\quad \laplace(te^{at}),\quad \laplace(e^{\lambda t}\sin
+\omega t),\text{ and }\laplace(e^{\lambda t}\cos\omega t).
 \]
 \end{example}
 
 \solution  In the following table the known
 transform pairs  are listed on the left and  the required  transform pairs
 listed on the right are obtained  by applying
-Theorem~\ref{thmtype:8.1.3}.
+\zcref{thmtype:8.1.3}.
 
 \begin{center}
 \tagpdfsetup{table/header-rows={1}}
@@ -424,12 +422,11 @@ $e^{\lambda t}\sin\omega t\leftrightarrow\dst{\frac{s-\lambda}{(s-\lambda)^2+\om
 \end{tabular}
 \end{center}
 
+
 \boxit{Existence of Laplace Transforms}
 
-
-\noindent
 Not every function has a Laplace transform.  For example, it can be shown
-(Exercise~\ref{exer:8.1.3}) that
+(\zcref{exer:8.1.3}) that
 \[
 \int_0^\infty e^{-st}e^{t^2} dt=\infty
 \]
@@ -476,18 +473,15 @@ that $f$ has a \emph{\color{blue}jump discontinuity}  at $t_0$,
 \[
 f(t_0+)-f(t_0-)
 \]
-is called the \emph{\color{blue}jump} in $f$ at $t_0$ (Figure~\ref{figure:8.1.1}).
+is called the \emph{\color{blue}jump} in $f$ at $t_0$ (\zcref{figure:8.1.1}).
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={A graph of an x y function that is continuous other than a jump at x=t naught.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080101}
 \caption{A jump discontinuity}
   \label{figure:8.1.1}
 \end{figure}
-
-
-
 
 If $f(t_0+)$ and $f(t_0-)$ are finite and equal, but either $f$ isn't
 defined at $t_0$ or it's defined but
@@ -495,7 +489,7 @@ defined at $t_0$ or it's defined but
 f(t_0)\ne f(t_0+)=f(t_0-),
 \]
  we say that $f$ has a \emph{\color{blue}removable discontinuity} at $t_0$
-(Figure~\ref{figure:8.1.2}).
+(\zcref{figure:8.1.2}).
 This terminolgy is appropriate since a function $f$  with a removable
 discontinuity at $t_0$  can be made continuous at $t_0$ by defining (or
 redefining)
@@ -504,38 +498,34 @@ f(t_0)=f(t_0+)=f(t_0-).
 \]
 
 \noindent
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 %\centering
 \tagstructbegin{tag=Sect}
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={A graph of an x y function that is continuous other than a hole at (t naught, f(t naught)).},
   width=\linewidth,height=2.44in,keepaspectratio]{fig080102}
   \captionof{figure}{}
   \label{figure:8.1.2}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}[t]{0.49\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-  \includegraphics[%bb=-78 148 689 643,
+  \includegraphics[alt={A graph of an x y function that is several continuous pieces.},
   width=\linewidth,height=2.44in,keepaspectratio]{fig080103}
 \captionof{figure}{A piecewise continuous function on $[a,b]$}
   \label{figure:8.1.3}
 \tagstructend
 \end{minipage}
 
+{
 \color{blue}
 \remark{We know from calculus that a definite integral isn't
 affected by changing the values of its integrand at isolated points.
 Therefore, redefining a function $f$ to make it continuous at
-removable discontinuities does not change ${\cal L}(f)$.}
-\color{black}
+removable discontinuities does not change $\laplace(f)$.}
+}
 
-
-
-
-
-\begin{definition}\color{blue}\label{thmtype:8.1.4}\rm
-\mbox{}
+\begin{definition}\label{thmtype:8.1.4}
 \begin{rmlist}
 \item % (i)
 A function $f$ is said to be \emph{\color{blue}piecewise continuous} on a finite
@@ -550,7 +540,7 @@ $[0,T]$ for every $T>0$.
 \end{rmlist}
 \end{definition}
 
-Figure~\ref{figure:8.1.3} shows the graph of a typical piecewise
+\zcref[S]{figure:8.1.3} shows the graph of a typical piecewise
 continuous function.
 
 
@@ -574,10 +564,10 @@ $f(t)=e^{t^2}$. Stated informally, this occurs because $e^{t^2}$
 increases too rapidly as $t\to\infty$. The next definition
 provides a constraint on the growth of a function that guarantees
 convergence of its Laplace transform for $s$ in some interval
-$(s_0,\infty)$ .
+$(s_0,\infty)$.
 
-\begin{definition}\color{blue}\label{thmtype:8.1.5}\rm A
-function $f$ is said to be
+\begin{definition}\label{thmtype:8.1.5}
+A function $f$ is said to be
 \emph{\color{blue}of exponential order} $s_0$ if there are constants $M$ and $t_0$
 such that
 \begin{equation}\label{eq:8.1.14}
@@ -589,11 +579,11 @@ is irrelevant we say simply that $f$ is \emph{\color{blue}of exponential order}.
 
 The next theorem gives useful sufficient conditions for a function $f$
 to have a Laplace transform.  The proof is sketched in
-Exercise~\ref{exer:8.1.10}.
+\zcref{exer:8.1.10}.
 
 \begin{theorem}\color{blue}\label{thmtype:8.1.6} If $f$
 is piecewise continuous on $[0,\infty)$ and of exponential order $s_0,$
- then ${\cal L}(f)$ is defined for $s>s_0$.
+ then $\laplace(f)$ is defined for $s>s_0$.
 \end{theorem}
 
 
@@ -605,48 +595,50 @@ is piecewise continuous on $[0,\infty)$ and of exponential order $s_0,$
 
 \color{blue}
 \remark{
-We emphasize that the conditions of Theorem~\ref{thmtype:8.1.6}
+We emphasize that the conditions of \zcref{thmtype:8.1.6}
  are sufficient, but \emph{\color{blue}not necessary}, for $f$ to have a Laplace
-transform. For example, Exercise~\ref{exer:8.1.14}\part{c} shows that  $f$
+transform. For example, \zcref{exer:8.1.14}(c) shows that  $f$
 may have a Laplace transform even though $f$ isn't  of exponential
 order.}
 \color{black}
 
-\begin{example}\label{example:8.1.8}\rm
+\begin{example}\label{example:8.1.8}
 If $f$ is bounded on some interval $[t_0,\infty)$, say
 \[
 |f(t)|\le M,\quad t\ge t_0,
 \]
 then \eqref{eq:8.1.14} holds with $s_0=0$, so $f$ is of exponential order
 zero. Thus, for example, $\sin\omega t$ and $\cos \omega t$ are of
-exponential order zero, and Theorem~\ref{thmtype:8.1.6} implies that
-${\cal L}(\sin\omega t)$ and ${\cal L}(\cos \omega t)$ exist for
+exponential order zero, and \zcref{thmtype:8.1.6} implies that
+$\laplace(\sin\omega t)$ and $\laplace(\cos \omega t)$ exist for
 $s>0$. This is consistent with the conclusion of
-Example~\ref{example:8.1.4}.
+\zcref{example:8.1.4}.
 \end{example}
 
-\begin{example}\label{example:8.1.9}\rm
+\begin{example}\label{example:8.1.9}
 It can be shown that if $\lim_{t\to\infty}e^{-s_0t}f(t)$ exists and is
 finite then $f$ is of exponential order $s_0$
-(Exercise~\ref{exer:8.1.9}). If $\alpha$ is any real number and $s_0>0$
+(\zcref{exer:8.1.9}). If $\alpha$ is any real number and $s_0>0$
 then $f(t)=t^\alpha$ is of exponential order $s_0$, since
 \[
 \lim_{t\to\infty}e^{-s_0t}t^\alpha=0,
 \]
 by L'H\^opital's rule. If $\alpha\ge 0$, $f$ is also
-continuous on $[0,\infty)$. Therefore Exercise~\ref{exer:8.1.9} and
-Theorem~\ref{thmtype:8.1.6} imply that ${\cal L}(t^\alpha)$ exists for
+continuous on $[0,\infty)$. Therefore \zcref{exer:8.1.9} and
+\zcref{thmtype:8.1.6} imply that $\laplace(t^\alpha)$ exists for
 $s\ge s_0$. However, since $s_0$ is an arbitrary positive number, this
-really implies that ${\cal L}(t^\alpha)$ exists for all $s>0$. This is
-consistent with the results of Example~\ref{example:8.1.2} and
-Exercises~\ref{exer:8.1.6} and \ref{exer:8.1.8}.
+really implies that $\laplace(t^\alpha)$ exists for all $s>0$. This is
+consistent with the results of \zcref{example:8.1.2} and
+\zcref{exer:8.1.6,exer:8.1.8}.
 \end{example}
 
-\begin{example}\label{example:8.1.10}\rm
+\begin{example}\label{example:8.1.10}
 Find the Laplace transform of the piecewise continuous function
 \[
-f(t)=\left\{\begin{array}{cl} 1,&0\le t<1,\\  -3e^{-t},&t\ge
-1.\end{array}\right.
+f(t)=\begin{cases}
+1,&0\le t<1,\\
+-3e^{-t},&t\ge1.
+\end{cases}
 \]
 \end{example}
 
@@ -659,7 +651,10 @@ e^{-st}(-3e^{-t})\,dt.
 \]
 Since
 \[
-\int_0^1e^{-st}\,dt=\left\{\begin{array}{cl}\dst{\frac{1-e^{-s}}{s}},&\quad s\ne0,\\[2\jot] 1,&\quad s=0,\end{array}\right.
+\int_0^1e^{-st}\,dt=\begin{cases}
+\dst{\frac{1-e^{-s}}{s}},&\quad s\ne0,\\
+1,&\quad s=0,
+\end{cases}
 \]
  and
 \[
@@ -668,27 +663,30 @@ e^{-(s+1)t}\,dt=-\frac{3e^{-(s+1)}}{s+1},\quad s>-1,
 \]
 it follows that
 \[
-F(s)=\left\{\begin{array}{rl}\dst{\frac{1-e^{-s}}{s}-3\frac{e^{-(s+1)}}{s+1}},&s>-1,\,s\ne0,\\\hfill\dst{1-\frac{3}{e}}\hfill,&
-s=0.\end{array}\right.
+F(s)=\begin{cases}
+\dst{\frac{1-e^{-s}}{s}-3\frac{e^{-(s+1)}}{s+1}},&s>-1,\,s\ne0,\\
+\dst{1-\frac{3}{e}},&s=0.
+\end{cases}
 \]
-This is consistent with Theorem~\ref{thmtype:8.1.6}, since
+This is consistent with \zcref{thmtype:8.1.6}, since
 \[
 |f(t)|\le 3e^{-t},\quad  t\ge 1,
 \]
 and therefore $f$ is of exponential order $s_0=-1$.
 
+{
 \color{blue}
-\remark{In Section~8.4 we'll develop a more efficient
+\remark{In \zcref{sec:unit_step_func} we'll develop a more efficient
 method for finding Laplace transforms of piecewise continuous
 functions.}
-\color{black}
+}
 
-\begin{example}\label{example:8.1.11}\rm
+\begin{example}\label{example:8.1.11}
 We stated  earlier that
 \[
 \int_0^\infty e^{-st} e^{t^2} dt=\infty
 \]
-for all $s$, so Theorem~\ref{thmtype:8.1.6} implies that $f(t)=e^{t^2}$
+for all $s$, so \zcref{thmtype:8.1.6} implies that $f(t)=e^{t^2}$
 is not  of exponential order, since
 \[
 \lim_{t\to\infty}\frac{e^{t^2}}{Me^{s_0t}}=\lim_{t\to\infty} \frac{1}{M} e^{t^2-s_0t}=\infty,
@@ -698,7 +696,7 @@ so
 e^{t^2}>Me^{s_0t}
 \]
 for sufficiently large values of $t$, for any choice of $M$ and $s_{0}$
-(Exercise~\ref{exer:8.1.3}).
+(\zcref{exer:8.1.3}).
 \end{example}
 
 \exercises
@@ -779,18 +777,18 @@ the integral sign.}
 
 \item\label{exer:8.1.7}Use the known Laplace transforms
 \[
-{\cal L}(e^{\lambda t}\sin\omega t)=\frac{\omega}{(s-\lambda)^2+\omega^2}
-\quad\mbox{and }\quad
-{\cal L}(e^{\lambda t}\cos\omega t)=\frac{s-\lambda}{(s-\lambda)^2+\omega^2}
+\laplace(e^{\lambda t}\sin\omega t)=\frac{\omega}{(s-\lambda)^2+\omega^2}
+\quad\text{and}\quad
+\laplace(e^{\lambda t}\cos\omega t)=\frac{s-\lambda}{(s-\lambda)^2+\omega^2}
 \]
-  and the result of Exercise~\ref{exer:8.1.6} to find
-${\cal L}(te^{\lambda t}\cos\omega t)$ and
-${\cal L}(te^{\lambda t}\sin\omega t)$.
+  and the result of \zcref{exer:8.1.6} to find
+$\laplace(te^{\lambda t}\cos\omega t)$ and
+$\laplace(te^{\lambda t}\sin\omega t)$.
 
-\item\label{exer:8.1.8}Use the known Laplace transform ${\cal L}(1)=1/s$ and the result of
-Exercise~\ref{exer:8.1.6} to show that
+\item\label{exer:8.1.8}Use the known Laplace transform $\laplace(1)=1/s$ and the result of
+\zcref{exer:8.1.6} to show that
 \[
-{\cal L}(t^n)=\frac{n!}{s^{n+1}},\quad n=\mbox{ integer}.
+\laplace(t^n)=\frac{n!}{s^{n+1}},\quad\text{$n$ an integer}.
 \]
 
 \item\label{exer:8.1.9}\begin{alist}
@@ -807,27 +805,27 @@ where $\tau>0$, then $g$ is also of exponential order $s_0$.
 
 \item\label{exer:8.1.10}Recall the next  theorem from calculus.
 
-\color{blue}
-{\sc Theorem A.} \itshape Let $g$ be integrable on $[0,T]$ for
+\begin{theorem*}[A]
+Let $g$ be integrable on $[0,T]$ for
 every $T>0.$  Suppose there's a function $w$ defined on some
 interval $[\tau,\infty)$ (with $\tau\ge 0$) such that $|g(t)|\le
 w(t)$ for $t\ge\tau$ and $\int^\infty_\tau w(t)\,dt$
-converges.  Then $\int_0^\infty g(t)\,dt$ converges.\rm
-\color{black}
+converges.  Then $\int_0^\infty g(t)\,dt$ converges.
+\end{theorem*}
 
 Use Theorem A to show that if $f$ is piecewise continuous on
 $[0,\infty)$ and of exponential order $s_0$, then $f$ has a Laplace
 transform $F(s)$ defined for $s>s_0$.
 
 \item\label{exer:8.1.11}Prove: If $f$ is piecewise continuous and of exponential order
-then $\lim_{s\to\infty}F(s)~=~0$.
+then $\lim_{s\to\infty}F(s)=0$.
 
 
 
 \item\label{exer:8.1.12}Prove: If $f$ is continuous on $[0,\infty)$ and of exponential order
 $s_0>0$, then
 \[
-{\cal L}\left(\int^t_0 f(\tau)\,d\tau\right)=\frac{1}{s} {\cal L} (f),
+\laplace\left(\int^t_0 f(\tau)\,d\tau\right)=\frac{1}{s} \laplace (f),
 \quad s>s_0.
 \]
 \hint{Use integration by parts to evaluate the transform on
@@ -836,9 +834,9 @@ the left.}
 \item\label{exer:8.1.13}Suppose $f$ is piecewise continuous and of exponential
 order, and that $\lim_{t\to 0+} f(t)/t$ exists.  Show that
 \[
-{\cal L}\left(\frac{f(t)}{t}\right)=\int^\infty_s F(r)\,dr.
+\laplace\left(\frac{f(t)}{t}\right)=\int^\infty_s F(r)\,dr.
 \]
-\hint{Use  the results of Exercises~$6$ and $11$.}
+\hint{Use  the results of \zcref{exer:8.1.6,exer:8.1.11}.}
 
 \item\label{exer:8.1.14}Suppose $f$ is piecewise continuous on $[0,\infty)$.
 \begin{alist}
@@ -852,7 +850,7 @@ parts to show that
 +(s-s_0)\int_0^Te^{-(s-s_0)t}g(t)\,dt.
 \]}
 \item % (b)
- Show that if ${\cal L}(f)$ exists for
+ Show that if $\laplace(f)$ exists for
 $s=s_0$ then it exists for $s>s_0$.
 Show that the function
 \[
@@ -870,7 +868,7 @@ exponential order.
 \end{alist}
 
 \item\label{exer:8.1.15}Use the table of Laplace transforms and the result of
-Exercise~\ref{exer:8.1.13} to find the Laplace transforms of the following
+\zcref{exer:8.1.13} to find the Laplace transforms of the following
 functions.
 
 \begin{alist}[columns=3]
@@ -896,9 +894,9 @@ which can be shown to converge if $\alpha>0$.
 \item % (b)
  Show that $\Gamma(n+1)=n!$ if $n=1$, $2$, $3$,\dots.
 \item % (c)
- From  \part{b} and the table of Laplace transforms,
+ From  (b) and the table of Laplace transforms,
 \[
-{\cal L}(t^\alpha)=\frac{\Gamma (\alpha+1)}{s^{\alpha+1}},\quad s>0,
+\laplace(t^\alpha)=\frac{\Gamma (\alpha+1)}{s^{\alpha+1}},\quad s>0,
 \]
 if $\alpha$ is a nonnegative integer.  Show that this formula is valid for
 any $\alpha>-1$. \hint{Change the variable of integration in the
@@ -910,12 +908,12 @@ for all $t\ge 0$.  (We say in this case that $f$ is \emph{\color{blue}periodic w
 period} $T$.)
 \begin{alist}
 \item % (a)
- Conclude from Theorem~\ref{thmtype:8.1.6} that the Laplace transform of
+ Conclude from \zcref{thmtype:8.1.6} that the Laplace transform of
 $f$ is defined for $s>0$. \hint{Since $f$ is
 continuous on $[0,T]$ and periodic with period $T$, it's bounded
 on $[0,\infty)$.}
 \item % (b)
- \part{b} Show that
+ Show that
 \[
 F(s)=\frac{1}{1-e^{-sT}}\int_0^T e^{-st}f(t)\,dt,\quad s>0.
 \]
@@ -930,47 +928,51 @@ Then show that
 and recall the formula for the sum of a geometric series.}
 \end{alist}
 
-\item\label{exer:8.1.18}Use the formula given in Exercise~\ref{exer:8.1.17}\part{b} to find
+\item\label{exer:8.1.18}Use the formula given in \zcref{exer:8.1.17}(b) to find
 the
 Laplace transforms of the given periodic functions:
 \begin{alist}
 \item % (a)
- $\dst{f(t)=\left\{\begin{array}{cl} t, & 0\le
-t<1,\\ 2-t, & 1\le t<2,\end{array}\right.\hskip30pt f(t+2)=f(t),
+$\dst{f(t)=\begin{cases}
+t, & 0\le t<1,\\
+2-t, & 1\le t<2,
+\end{cases}
+\qquad f(t+2)=f(t),
 \quad t\ge 0}$
 \item % (b)
- $\dst{f(t)=\left\{\begin{array}{rl}1, & 0\le
-t<\frac{1}{2},\\ -1, & \frac{1}{2}\le t<1,\end{array}\right.
-\hskip30pt f(t+1)=f(t),\quad t\ge 0}$
+ $\dst{f(t)=\begin{cases}
+ 1, & 0\le t<\frac{1}{2},\\
+ -1, & \frac{1}{2}\le t<1,
+ \end{cases}
+\qquad f(t+1)=f(t),\quad t\ge 0}$
 \item % (c)
  $f(t)=|\sin t|$
 \item % (d)
- $\dst{f(t)=\left\{\begin{array}{cl}\sin t, & 0\le t<
-\pi,
-\\ 0, &\pi\le t<2\pi,\end{array}\right.\hskip30pt
+$\dst{f(t)=\begin{cases}
+\sin t, & 0\le t<\pi,\\
+0, &\pi\le t<2\pi,
+\end{cases}
+\qquad
 f(t+2\pi)=f(t)}$
 \end{alist}
 
 \end{exerciselist}
 
 
-
-
-\section{The Inverse Laplace Transform}
+\section{The Inverse Laplace Transform}\label{sec:inverse_laplace}
 
 \boxit{Definition of the Inverse Laplace Transform}
 
-\noindent
-In Section~8.1 we defined the Laplace transform
+In \zcref{sec:laplace_intro} we defined the Laplace transform
 of
 $f$ by
 \[
-F(s)={\cal L}(f)=\int_0^\infty e^{-st}f(t)\,dt.
+F(s)=\laplace(f)=\int_0^\infty e^{-st}f(t)\,dt.
 \]
 We'll also say that $f$ is an \emph{\color{blue}inverse Laplace Transform} of
 $F$, and write
 \[
-f={\cal L}^{-1}(F).
+f=\laplace^{-1}(F).
 \]
 To solve differential equations with the Laplace transform, we
 must be able to obtain $f$ from its transform $F$. There's a formula
@@ -978,72 +980,78 @@ for doing this, but we can't use it because it requires the theory of
 functions of a complex variable. Fortunately, we can use the table of
 Laplace transforms to find inverse transforms that we'll need.
 
-\begin{example}\label{example:8.2.1}\rm Use the table of Laplace
+\begin{example}\label{example:8.2.1}
+Use the table of Laplace
 transforms to find
-\[
-\mbox{\part{a} }{\cal L}^{-1}\left(\frac{1}{s^2-1}\right)
-\mbox{\quad and \quad\part{b} }{\cal L}^{-1}\left(\frac{s}{s^2+9}\right).
-\]
+\begin{alist}[columns=2,list-offset=6em]
+\item$\laplace^{-1}\left(\dfrac{1}{s^2-1}\right)$
+\qquad\qquad\text{and}
+\item$\laplace^{-1}\left(\dfrac{s}{s^2+9}\right)$.
+\end{alist}
 \end{example}
 
-\solutionpart{a}
+\begin{alistSolution}
+\item
 Setting $b=1$ in  the transform pair
 \[
 \sinh bt\leftrightarrow \frac{b}{s^2-b^2}
 \]
 shows that
 \[
-{\cal L}^{-1}\left(\frac{1}{s^2-1}\right)=\sinh t.
+\laplace^{-1}\left(\frac{1}{s^2-1}\right)=\sinh t.
 \]
 
-\solutionpart{b}
+\item
 Setting $\omega=3$ in  the transform pair
 \[
 \cos\omega t\leftrightarrow\frac{s}{s^2+\omega^2}
 \]
 shows that
 \[
-{\cal L}^{-1}\left(\frac{s}{s^2+9}\right)=\cos3t.\bbox
+\laplace^{-1}\left(\frac{s}{s^2+9}\right)=\cos3t.\bbox
 \]
+\end{alistSolution}
 
 The next theorem enables us to find inverse transforms of linear
 combinations of transforms in the table. We omit the proof.
 
-\begin{theorem}\color{blue}$[$Linearity Property$]$\label{thmtype:8.2.1}
-If $F_1,$ $F_2,$ \dots$,$ $F_n$ are Laplace transforms and
-$c_1,$ $c_2,$ \dots, $c_n$ are constants$,$ then
+\begin{theorem}[Linearity Property]\label{thmtype:8.2.1}
+If $F_1$, $F_2$, \dots, $F_n$ are Laplace transforms and
+$c_1$, $c_2$, \dots, $c_n$ are constants, then
 \[
-{\cal L}^{-1}(c_1F_1+c_2F_2+\cdots+c_nF_n)=c_1{\cal L}^{-1}(F_1)+c_2{\cal
-L}^{-1}(F_2)+\cdots+c_n{\cal L}^{-1}F_n.
+\laplace^{-1}(c_1F_1+c_2F_2+\cdots+c_nF_n)=c_1\laplace^{-1}(F_1)+c_2\laplace^{-1}(F_2)+\cdots+c_n\laplace^{-1}F_n.
 \]
 \end{theorem}
 
-\begin{example}\label{example:8.2.2}\rm Find
+\begin{example}\label{example:8.2.2}
+Find
 \[
-{\cal L}^{-1}\left(\frac{8}{s+5}+\frac{7}{s^2+3}\right).
+\laplace^{-1}\left(\frac{8}{s+5}+\frac{7}{s^2+3}\right).
 \]
 \end{example}
 
 \solution
-From the table of Laplace transforms in Section~8.8,,
+From the table of Laplace transforms in \zcref{sec:laplace_table},
 \[
-e^{at}\leftrightarrow \frac{1}{s-a}\quad\mbox{ and }\quad
+e^{at}\leftrightarrow \frac{1}{s-a}\quad\text{and}\quad
 \sin\omega t\leftrightarrow \frac{\omega}{s^2+\omega^2}.
 \]
-Theorem~\ref{thmtype:8.2.1}
+\zcref[S]{thmtype:8.2.1}
 with $a=-5$ and   $\omega=\sqrt3$
 yields
-\begin{eqnarray*}
-{\cal L}^{-1}\left(\frac{8}{s+5}+\frac{7}{s^2+3}\right)&=&
-8{\cal L}^{-1}\left(\frac{1}{s+5}\right)+7{\cal L}^{-1}\left(\frac{1}{s^2+3}\right)\\[10pt]
-&=&
-8{\cal L}^{-1}\left(\frac{1}{s+5}\right)+\frac{7}{\sqrt3}{\cal
-L}^{-1}\left(\frac{\sqrt3}{s^2+3}\right)\\[10pt]&=&8e^{-5t}+\frac{7}{\sqrt3}\sin\sqrt3t.
-\end{eqnarray*}
+\begin{align*}
+\laplace^{-1}\left(\frac{8}{s+5}+\frac{7}{s^2+3}\right)
+&=8\laplace^{-1}\left(\frac{1}{s+5}\right)
++7\laplace^{-1}\left(\frac{1}{s^2+3}\right)\\
+&=8\laplace^{-1}\left(\frac{1}{s+5}\right)
++\frac{7}{\sqrt3}\laplace^{-1}\left(\frac{\sqrt3}{s^2+3}\right)\\
+&=8e^{-5t}+\frac{7}{\sqrt3}\sin\sqrt3t.
+\end{align*}
 
-\begin{example}\label{example:8.2.3}\rm Find
+\begin{example}\label{example:8.2.3}
+Find
 \[
-{\cal L}^{-1}\left(\frac{3s+8}{s^2+2s+5}\right).
+\laplace^{-1}\left(\frac{3s+8}{s^2+2s+5}\right).
 \]
 \end{example}
 
@@ -1060,25 +1068,25 @@ the transform pairs
  e^{-t}\sin 2t\leftrightarrow\frac{2}{(s+1)^2+4},
 \]
 and write
-\begin{eqnarray*}
-{\cal L}^{-1}\left(\frac{3s+8}{(s+1)^2+4}\right)&=&
-{\cal L}^{-1}\left(\frac{3s+3}{(s+1)^2+4}\right)+
-{\cal L}^{-1}\left(\frac{5}{(s+1)^2+4}\right)\\[10pt]&=&
-3{\cal L}^{-1}\left(\frac{s+1}{(s+1)^2+4}\right)+
-\frac{5}{2}{\cal L}^{-1}\left(\frac{2}{(s+1)^2+4}\right)\\[10pt]&=&
-e^{-t}(3\cos 2t+\frac{5}{2}\sin 2t).
-\end{eqnarray*}
+\begin{align*}
+\laplace^{-1}\left(\frac{3s+8}{(s+1)^2+4}\right)
+&=\laplace^{-1}\left(\frac{3s+3}{(s+1)^2+4}\right)
++\laplace^{-1}\left(\frac{5}{(s+1)^2+4}\right)\\
+&=3\laplace^{-1}\left(\frac{s+1}{(s+1)^2+4}\right)
++\frac{5}{2}\laplace^{-1}\left(\frac{2}{(s+1)^2+4}\right)\\
+&=e^{-t}(3\cos 2t+\frac{5}{2}\sin 2t).
+\end{align*}
 
+{
 \color{blue}
 \remark{We'll often write inverse Laplace transforms of specific
 functions without explicitly stating how they are obtained. In such
-cases you should refer to the table of Laplace transforms in Section~8.8.}
-\color{black}
+cases you should refer to the table of Laplace transforms in \zcref{sec:laplace_table}.}
+}
+
 
 \boxit{Inverse Laplace Transforms of Rational Functions}
 
-
-\noindent
 Using the Laplace transform to
  solve differential equations
 often requires  finding the inverse
@@ -1089,20 +1097,21 @@ F(s)=\frac{P(s)}{Q(s)},
 where $P$ and $Q$ are polynomials in $s$ with no common factors. Since
 it can be shown that $\lim_{s\to\infty}F(s)=0$ if $F$ is a Laplace
 transform, we need only consider the case where
-$\mbox{degree}(P)<\mbox{degree}(Q)$. To obtain ${\cal L}^{-1}(F)$, we
+$\mathrm{degree}(P)<\mathrm{degree}(Q)$. To obtain $\laplace^{-1}(F)$, we
 find the partial fraction expansion of $F$, obtain inverse transforms
 of the individual terms in the expansion from the table of Laplace
 transforms, and use the linearity property of the inverse transform.
 The next two examples illustrate this.
 
-\begin{example}\label{example:8.2.4}\rm Find the inverse Laplace transform
-of
+\begin{example}\label{example:8.2.4}
+Find the inverse Laplace transform of
 \begin{equation}\label{eq:8.2.1}
 F(s)=\frac{3s+2}{s^2-3s+2}.
 \end{equation}
 \end{example}
 
-\solution ({\sc Method 1})
+\begin{enumext}[label=\arabic*,wrap-label={\scshape Solution (Method #1)},labelwidth=11em,list-indent=0pt]
+\item
  Factoring the denominator in  \eqref{eq:8.2.1} yields
 \begin{equation}\label{eq:8.2.2}
 F(s)=\frac{3s+2}{(s-1)(s-2)}.
@@ -1121,11 +1130,11 @@ F(s)=-\frac{5}{s-1}+\frac{8}{s-2}
 \]
 and
 \[
-{\cal L}^{-1}(F)=-5{\cal L}^{-1}\left(\frac{1}{s-1}\right)
-+8{\cal L}^{-1}\left(\frac{1}{s-2}\right)=-5e^t+8e^{2t}.
+\laplace^{-1}(F)=-5\laplace^{-1}\left(\frac{1}{s-1}\right)
++8\laplace^{-1}\left(\frac{1}{s-2}\right)=-5e^t+8e^{2t}.
 \]
 
-\solution ({\sc Method 2})
+\item
 We don't really have to multiply  \eqref{eq:8.2.3} by $(s-1)(s-2)$
 to compute $A$ and $B$. We can obtain $A$ by simply ignoring the factor
 $s-1$ in the denominator of  \eqref{eq:8.2.2} and setting $s=1$ elsewhere;
@@ -1154,30 +1163,30 @@ and setting $s=2$ leads to
  write the last two equations. We wrote them  only to justify
 the shortcut procedure indicated in  \eqref{eq:8.2.4} and
 \eqref{eq:8.2.5}.) \bbox
-
+\end{enumext}
 
 The shortcut employed in the second solution of
-Example~\ref{example:8.2.4} is
+\zcref{example:8.2.4} is
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Heaviside.html}
  {\color{blue}\itshape Heaviside's method}.
 The next theorem states this method formally. For a proof
-and an extension of this theorem, see Exercise~\ref{exer:8.2.10}.
+and an extension of this theorem, see \zcref{exer:8.2.10}.
 
 \begin{theorem}\color{blue}\label{thmtype:8.2.2}
 Suppose
 \begin{equation}\label{eq:8.2.6}
 F(s)=\frac{P(s)}{(s-s_1)(s-s_2)\cdots(s-s_n)},
 \end{equation}
-where $s_1$, $s_2,$ \dots$,$ $s_n$ are distinct  and $P$ is a polynomial of
-degree less than $n.$  Then
+where $s_1$, $s_2$, \dots, $s_n$ are distinct  and $P$ is a polynomial of
+degree less than $n$.  Then
 \[
 F(s)=\frac{A_1}{s-s_1}+\frac{A_2}{s-s_2}+\cdots+\frac{A_n}{s-s_n},\]
 where $A_i$ can be computed from \eqref{eq:8.2.6}
 by ignoring the factor $s-s_i$  and setting $s=s_i$ elsewhere.
 \end{theorem}
 
-\begin{example}\label{example:8.2.5}\rm Find the inverse Laplace transform
-of
+\begin{example}\label{example:8.2.5}
+Find the inverse Laplace transform of
 \begin{equation}\label{eq:8.2.7}
 F(s)=\frac{6+(s+1)(s^2-5s+11)}{s(s-1)(s-2)(s+1)}.
 \end{equation}
@@ -1209,12 +1218,14 @@ Therefore
 F(s)=\frac{17}{2}\,\frac{1}{s}-\frac{10}{s-1}+\frac{7}{2}\,\frac{1}{s-2}-\frac{1}{s+1}
 \]
 and
-\begin{eqnarray*}
-{\cal L}^{-1}(F)&=&
- \frac{17}{2}{\cal L}^{-1}\left(\frac{1}{s}\right)-10{\cal L}^{-1}\left(\frac{1
-}{s-1}\right)+\frac{7}{2}{\cal L}^{-1}\left(\frac{1}{s-2}\right)-{\cal L}^{-1}\left(\frac{1}{s+1}\right)\\[1\jot]
-&=& \frac{17}{2}-10e^t+\frac{7}{2}e^{2t}-e^{-t}.
-\end{eqnarray*}
+\begin{align*}
+\laplace^{-1}(F)
+&=\frac{17}{2}\laplace^{-1}\left(\frac{1}{s}\right)
+-10\laplace^{-1}\left(\frac{1}{s-1}\right)
++\frac{7}{2}\laplace^{-1}\left(\frac{1}{s-2}\right)
+-\laplace^{-1}\left(\frac{1}{s+1}\right)\\
+&= \frac{17}{2}-10e^t+\frac{7}{2}e^{2t}-e^{-t}.
+\end{align*}
 
 \color{blue}
 \remark{We didn't ``multiply out'' the numerator in
@@ -1223,8 +1234,8 @@ computing the coefficients in \eqref{eq:8.2.8}, since
  it wouldn't simplify the computations.}
 \color{black}
 
-\begin{example}\label{example:8.2.6}\rm Find the inverse Laplace transform
-of
+\begin{example}\label{example:8.2.6}
+Find the inverse Laplace transform of
 \begin{equation}\label{eq:8.2.9}
 F(s)=\frac{8-(s+2)(4s+10)}{(s+1)(s+2)^2}.
 \end{equation}
@@ -1258,14 +1269,16 @@ $A=2$ and $C=-8$ this implies that $B=-6$. Therefore
 F(s)=\frac{2}{s+1}-\frac{6}{s+2}-\frac{8}{(s+2)^2}
 \]
 and
-\begin{eqnarray*}
-{\cal L}^{-1}(F)&=&
-2{\cal L}^{-1}\left(\frac{1}{s+1}\right)-6{\cal L}^{-1}\left(\frac{1}{s+2}\right)-8{\cal L}^{-1}\left(\frac{1}{(s+2)^2}\right)\\[1\jot]
-&=&2e^{-t}-6e^{-2t}-8te^{-2t}.
-\end{eqnarray*}
+\begin{align*}
+\laplace^{-1}(F)
+&=2\laplace^{-1}\left(\frac{1}{s+1}\right)
+-6\laplace^{-1}\left(\frac{1}{s+2}\right)
+-8\laplace^{-1}\left(\frac{1}{(s+2)^2}\right)\\
+&=2e^{-t}-6e^{-2t}-8te^{-2t}.
+\end{align*}
 
-\begin{example}\label{example:8.2.7}\rm Find the inverse Laplace transform
-of
+\begin{example}\label{example:8.2.7}
+Find the inverse Laplace transform of
 \[
 F(s)=\frac{s^2-5s+7}{(s+2)^3}.
 \]
@@ -1282,20 +1295,20 @@ in powers of $s+2$. This yields
 s^2-5s+7=[(s+2)-2]^2-5[(s+2)-2]+7=(s+2)^2-9(s+2)+21.
 \]
 Therefore
-\begin{eqnarray*}
-F(s)&=&\frac{(s+2)^2-9(s+2)+21}{(s+2)^3}\\[10pt]
-&=&\frac{1}{s+2}-\frac{9}{(s+2)^2}+\frac{21}{(s+2)^3}
-\end{eqnarray*}
+\begin{align*}
+F(s)&=\frac{(s+2)^2-9(s+2)+21}{(s+2)^3}\\
+&=\frac{1}{s+2}-\frac{9}{(s+2)^2}+\frac{21}{(s+2)^3}
+\end{align*}
 and
-\begin{eqnarray*}
-{\cal L}^{-1}(F)&=&
-{\cal L}^{-1}\left(\frac{1}{s+2}\right)-9{\cal
-L}^{-1}\left(\frac{1}{(s+2)^2}\right)+\frac{21}{2}{\cal
-L}^{-1}\left(\frac{2}{(s+2)^3}\right)\\[10pt]&=&
-e^{-2t}\left(1-9t+\frac{21}{2}t^2\right).
-\end{eqnarray*}
+\begin{align*}
+\laplace^{-1}(F)
+&=\laplace^{-1}\left(\frac{1}{s+2}\right)
+-9\laplace^{-1}\left(\frac{1}{(s+2)^2}\right)
++\frac{21}{2}\laplace^{-1}\left(\frac{2}{(s+2)^3}\right)\\
+&=e^{-2t}\left(1-9t+\frac{21}{2}t^2\right).
+\end{align*}
 
-\begin{example}\label{example:8.2.8}\rm %\exampleinverse
+\begin{example}\label{example:8.2.8}
  Find the inverse Laplace transform of
 \begin{equation}\label{eq:8.2.13}
 F(s)=\frac{1-s(5+3s)}{s\left[(s+1)^2+1\right]}.
@@ -1311,11 +1324,11 @@ However, we see from the table of Laplace transforms that the inverse
 transform of the second fraction on the right of \eqref{eq:8.2.14} will be
 a linear combination of the inverse transforms
 \[
-e^{-t}\cos t\quad\mbox{ and }\quad e^{-t}\sin t
+e^{-t}\cos t\quad\text{and}\quad e^{-t}\sin t
 \]
 of
 \[
-\frac{s+1}{(s+1)^2+1}\quad\mbox{ and }\quad \frac{1}{(s+1)^2+1}
+\frac{s+1}{(s+1)^2+1}\quad\text{and}\quad \frac{1}{(s+1)^2+1}
 \]
 respectively. Therefore, instead of \eqref{eq:8.2.14} we write
 \begin{equation}\label{eq:8.2.15}
@@ -1331,11 +1344,11 @@ A\left[(s+1)^2+1\right]+B(s+1)s+Cs=1-s(5+3s).
 \]
 This is true for all $s$ if it's true for three distinct values of
 $s$.  Choosing $s=0$, $-1$, and $1$ yields the system
-\[
-\begin{array}{rcr}
-2A&=&1\phantom{.}\\ A-C&=&3\phantom{.}\\5A+2B+C&=&-7.
-\end{array}
-\]
+\begin{align*}
+2A&=1\\
+A-C&=3\\
+5A+2B+C&=-7.
+\end{align*}
 Solving this system yields
 \[
 A=\frac{1}{2},\quad B=-\frac{7}{2},\quad C=-\frac{5}{2}.
@@ -1346,14 +1359,16 @@ F(s)=\frac{1}{2s}-\frac{7}{2}\,\frac{s+1}{(s+1)^2+1}-
 \frac{5}{2}\,\frac{1}{(s+1)^2+1}.
 \]
 Therefore
-\begin{eqnarray*}
-{\cal L}^{-1}(F)&=&
-\frac{1}{2}{\cal L}^{-1}\left(\frac{1}{s}\right)-\frac{7}{2}{\cal
-L}^{-1}\left(\frac{s+1}{(s+1)^2+1}\right)-\frac{5}{2} {\cal L}^{-1}\left(\frac{1}{(s+1)^2+1}\right)\\[1\jot]
-&=& \frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t.
-\end{eqnarray*}
+\begin{align*}
+\laplace^{-1}(F)
+&=\frac{1}{2}\laplace^{-1}\left(\frac{1}{s}\right)
+-\frac{7}{2}\laplace^{-1}\left(\frac{s+1}{(s+1)^2+1}\right)
+-\frac{5}{2} \laplace^{-1}\left(\frac{1}{(s+1)^2+1}\right)\\
+&=\frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t.
+\end{align*}
 
-\begin{example}\label{example:8.2.9}\rm Find the inverse Laplace transform of
+\begin{example}\label{example:8.2.9}
+Find the inverse Laplace transform of
 \begin{equation}\label{eq:8.2.17}
 F(s)=\frac{8+3s}{(s^2+1)(s^2+4)}.
 \end{equation}
@@ -1385,7 +1400,7 @@ F(s)=\frac{8+3s}{(s^2+1)(s^2+4)}=\frac{1}{3}\left(\frac{8+3s}{s^2+1}-\frac{8+3s}
 \]
 Therefore
 \[
-{\cal L}^{-1}(F)=\frac{8}{3}\sin t+\cos t-\frac{4}{3}\sin 2t-\cos 2t.
+\laplace^{-1}(F)=\frac{8}{3}\sin t+\cos t-\frac{4}{3}\sin 2t-\cos 2t.
 \]
 
 \technology
@@ -1417,7 +1432,7 @@ transform.
 \item $\dst\frac{s^2-4s+3}{(s^2-4s+5)^2}$
 \end{alist}
 
-\item\label{exer:8.2.2}Use Theorem~\ref{thmtype:8.2.1} and the table of Laplace transforms
+\item\label{exer:8.2.2}Use \zcref{thmtype:8.2.1} and the table of Laplace transforms
   to find the inverse Laplace transform.
 
 \begin{alist}[columns=3]
@@ -1459,7 +1474,7 @@ transform.
 \item $\dst\frac{3s+2}{(s^2+1)(s-1)^2}$
 \end{alist}
 
-\item\label{exer:8.2.5}Use the method of Example~\ref{example:8.2.9}  to find the inverse Laplace transform.
+\item\label{exer:8.2.5}Use the method of \zcref{example:8.2.9}  to find the inverse Laplace transform.
 
 \begin{alist}[columns=3]
 % TODO was horizontal
@@ -1512,7 +1527,7 @@ transform.
 Laplace transform of $F(as-b)$, where $a>0$.
 
 
-\item\label{exer:8.2.10}\begin{alist}
+\item\label{exer:8.2.10}\begin{alist}[above=-\baselineskip]
 \item  % (a)
 If $s_1$, $s_2$, \dots, $s_n$ are distinct and $P$ is a polynomial of
 degree less than $n$, then
@@ -1525,7 +1540,7 @@ Multiply through by $s-s_i$ to show that
 left  and setting $s=s_i$ elsewhere.
 \item % (b)
 Suppose $P$ and $Q_1$ are polynomials such that
-$\mbox{degree}(P)\le\mbox{degree}(Q_1)$ and $Q_1(s_1)\ne0$.
+$\mathrm{degree}(P)\le\mathrm{degree}(Q_1)$ and $Q_1(s_1)\ne0$.
 Show that the coefficient of $1/(s-s_1)$ in the partial fraction
 expansion of
 \[
@@ -1533,16 +1548,16 @@ F(s)=\frac{P(s)}{(s-s_1)Q_1(s)}
 \]
 is $P(s_1)/Q_1(s_1)$.
 \item % (c)
-Explain how the results of \part{a} and \part{b} are related.
+Explain how the results of (a) and (b) are related.
 \end{alist}
 
 \end{exerciselist}
 
-\section{Solution of Initial Value Problems}
+
+\section{Solution of Initial Value Problems}\label{sec:laplace_ivp}
 
 \boxit{Laplace Transforms of Derivatives}
 
-\noindent
 In the rest of this chapter we'll use the Laplace transform to solve
 initial value problems for constant coefficient second order
 equations. To do this, we must know how the Laplace transform of
@@ -1555,70 +1570,70 @@ on $[0,\infty)$ and of exponential order $s_0$, and $f'$ is piecewise
 continuous on $[0,\infty).$  Then $f$ and $f'$ have Laplace transforms for
 $s > s_0,$ and
 \begin{equation}\label{eq:8.3.1}
-{\cal L}(f')=s {\cal L}(f)-f(0).
+\laplace(f')=s \laplace(f)-f(0).
 \end{equation}
 \end{theorem}
 
 \begin{proof}
-We know from Theorem~8.1.6 that ${\cal L}(f)$ is defined for
+We know from Theorem~8.1.6 that $\laplace(f)$ is defined for
 $s>s_0$.
 We first consider the case where $f'$ is continuous on $[0,\infty)$.
 Integration by parts yields
 \begin{equation}\label{eq:8.3.2}
-\begin{array}{ccl}
-\dst\int^T_0 e^{-st}f'(t)\,dt &=&\dst e^{-st}f(t)\Big|^T_0+s
-\dst \int^T_0e^{-st}f(t)\,dt\\
-&=& \dst e^{-sT}f(T)-f(0)+s\int^T_0 e^{-st}f(t)\,dt
-\end{array}
+\begin{aligned}
+\int^T_0 e^{-st}f'(t)\,dt
+&=e^{-st}f(t)\Big|^T_0+s\int^T_0e^{-st}f(t)\,dt\\
+&=e^{-sT}f(T)-f(0)+s\int^T_0 e^{-st}f(t)\,dt
+\end{aligned}
 \end{equation}
 for any $T>0$. Since $f$ is of exponential order $s_0$,
  $\lim_{T\to \infty}e^{-sT}f(T)=0$ and the last integral in
 \eqref{eq:8.3.2} converges as $T\to\infty$ if $s> s_0$. Therefore
-\begin{eqnarray*}
-\int^\infty_0 e^{-st}f'(t)\,dt&=&-f(0)+s\int^\infty_0
-e^{-st}f(t)\,dt\\ &=&-f(0)+s{\cal L}(f),
-\end{eqnarray*}
-which proves  \eqref{eq:8.3.1}.
-Now  suppose     $T>0$  and  $f'$  is  only piecewise continuous on
-$[0,T]$, with discontinuities  at $t_1 <  t_2 <\cdots <  t_{n-1}$. For
+\begin{align*}
+\int^\infty_0 e^{-st}f'(t)\,dt
+&=-f(0)+s\int^\infty_0 e^{-st}f(t)\,dt\\
+&=-f(0)+s\laplace(f),
+\end{align*}
+which proves \eqref{eq:8.3.1}.
+Now suppose $T>0$ and $f'$ is only piecewise continuous on
+$[0,T]$, with discontinuities at $t_1 <  t_2 <\cdots <  t_{n-1}$. For
 convenience,  let  $t_0=0$  and  $t_n=T$.  Integrating by parts yields
-\begin{eqnarray*}       \int^{t_i}_{t_{i-1}}e^{-st}f'(t)\,dt       &=&
-e^{-st}f(t)\Big|^{t_i}_{t_{i-1}}+s\int^{t_i}_{t_{i-1}}e^{-st}f(t)\,dt\\
-&=&                         e^{-st_i}                          f(t_i)-
-e^{-st_{i-1}}f(t_{i-1})+s\int^{t_i}_{t_{i-1}}e^{-st}f(t)\,dt.
-\end{eqnarray*} Summing both sides of this equation from $i=1$ to  $n$
+\begin{align*}
+\int^{t_i}_{t_{i-1}}e^{-st}f'(t)\,dt
+&=e^{-st}f(t)\Big|^{t_i}_{t_{i-1}}+s\int^{t_i}_{t_{i-1}}e^{-st}f(t)\,dt\\
+&=e^{-st_i}f(t_i)-e^{-st_{i-1}}f(t_{i-1})+s\int^{t_i}_{t_{i-1}}e^{-st}f(t)\,dt.
+\end{align*}
+Summing both sides of this equation from $i=1$ to  $n$
 and noting that
-\[
+\begin{multline*}
 \left(e^{-st_1}f(t_1)-e^{-st_0}f(t_0)\right)+\left(e^{-st_2}
 f(t_2)-e^{-st_1}f(t_1)\right)
-+\cdots+\left(e^{-st_N}f(t_N)-e^{-st_{N-1}}f(t_{N-1})\right)
-\]
-\[
++\cdots+\left(e^{-st_N}f(t_N)-e^{-st_{N-1}}f(t_{N-1})\right)\\
 =e^{-st_N}f(t_N)-e^{-st_0}f(t_0)=e^{-sT}f(T)-f(0)
-\]
+\end{multline*}
 yields \eqref{eq:8.3.2}, so \eqref{eq:8.3.1} follows as before.
 \end{proof}
 
-\begin{example}\label{example:8.3.1}\rm
- In Example~\ref{example:8.1.4} we saw that
+\begin{example}\label{example:8.3.1}
+In \zcref{example:8.1.4} we saw that
 \[
-{\cal L}(\cos\omega t)=\frac{s}{s^2+\omega^2}.
+\laplace(\cos\omega t)=\frac{s}{s^2+\omega^2}.
 \]
 Applying  \eqref{eq:8.3.1} with $f(t)=\cos\omega t$ shows that
 \[
-{\cal L}(-\omega\sin\omega t)=s \frac{s}{s^2+\omega^2}-1=-
+\laplace(-\omega\sin\omega t)=s \frac{s}{s^2+\omega^2}-1=-
 \frac{\omega^2}{s^2+\omega^2}.
 \]
 Therefore
 \[
-{\cal L}(\sin\omega t)=\frac{\omega}{s^2+\omega^2},
+\laplace(\sin\omega t)=\frac{\omega}{s^2+\omega^2},
 \]
 which agrees with the corresponding  result obtained  in
-\ref{example:8.1.4}.
+\zcref{example:8.1.4}.
 \bbox
 \end{example}
 
-In Section~2.1 we showed that the solution of the
+In \zcref{sec:linar_first_order} we showed that the solution of the
 initial value problem
 \begin{equation}\label{eq:8.3.3}
 y'=ay, \quad  y(0)=y_0,
@@ -1626,15 +1641,15 @@ y'=ay, \quad  y(0)=y_0,
  is $y=y_0e^{at}$.
 We'll now obtain this result by using the Laplace transform.
 
-Let $Y(s)={\cal L}(y)$ be the Laplace transform of the unknown solution
+Let $Y(s)=\laplace(y)$ be the Laplace transform of the unknown solution
 of \eqref{eq:8.3.3}. Taking Laplace transforms of both sides of
 \eqref{eq:8.3.3} yields
 \[
-{\cal L}(y')={\cal L}(ay),
+\laplace(y')=\laplace(ay),
 \]
-which, by Theorem~\ref{thmtype:8.3.1}, can be rewritten as
+which, by \zcref{thmtype:8.3.1}, can be rewritten as
 \[
-s{\cal L}(y)-y(0)=a{\cal L}(y),
+s\laplace(y)-y(0)=a\laplace(y),
 \]
 or
 \[
@@ -1646,8 +1661,8 @@ Y(s)=\frac{y_0}{s-a},
 \]
 so
 \[
-y={\cal L}^{-1}(Y(s))={\cal L}^{-1}\left(\frac{y_0}{s-a}\right)=y_0{\cal
-L}^{-1}\left(\frac{1}{s-a}\right)=y_0e^{at},
+y=\laplace^{-1}(Y(s))=\laplace^{-1}\left(\frac{y_0}{s-a}\right)
+=y_0\laplace^{-1}\left(\frac{1}{s-a}\right)=y_0e^{at},
 \]
 which agrees with the known result.
 
@@ -1660,40 +1675,39 @@ exponential order $s_0,$ and that $f''$ is piecewise continuous on
 $[0,\infty).$ Then $f$, $f'$, and $f''$ have Laplace transforms for $s
 > s_0$,
 \begin{equation}\label{eq:8.3.4}
-{\cal L}(f')=s {\cal L}(f)-f(0),
+\laplace(f')=s \laplace(f)-f(0),
 \end{equation}
 and
 \begin{equation}\label{eq:8.3.5}
-{\cal L}(f'')=s^2{\cal L}(f)-f'(0)-sf(0).
+\laplace(f'')=s^2\laplace(f)-f'(0)-sf(0).
 \end{equation}
 \end{theorem}
 
 \begin{proof}
-Theorem~\ref{thmtype:8.3.1} implies that ${\cal L}(f')$ exists and
-satisfies \eqref{eq:8.3.4} for $s>s_0$. To prove that ${\cal L}(f'')$
+\zcref[S]{thmtype:8.3.1} implies that $\laplace(f')$ exists and
+satisfies \eqref{eq:8.3.4} for $s>s_0$. To prove that $\laplace(f'')$
 exists and satisfies \eqref{eq:8.3.5} for $s>s_0$, we first apply
-Theorem~\ref{thmtype:8.3.1} to $g=f'$. Since $g$ satisfies the hypotheses
-of Theorem~\ref{thmtype:8.3.1}, we conclude that ${\cal L}(g')$ is defined
+\zcref{thmtype:8.3.1} to $g=f'$. Since $g$ satisfies the hypotheses
+of \zcref{thmtype:8.3.1}, we conclude that $\laplace(g')$ is defined
 and satisfies
 \[
-{\cal L}(g')=s{\cal L}(g)-g(0)
+\laplace(g')=s\laplace(g)-g(0)
 \]
 for $s>s_0$. However, since $g'=f''$, this can be rewritten as
 \[
-{\cal L}(f'')=s{\cal L}(f')-f'(0).
+\laplace(f'')=s\laplace(f')-f'(0).
 \]
 Substituting \eqref{eq:8.3.4} into this yields
 \eqref{eq:8.3.5}.
 \end{proof}
 
+
 \boxit{Solving Second Order Equations with the Laplace Transform}
 
-
-\noindent
 We'll now use the Laplace transform to solve initial value problems
 for  second order equations.
 
-\begin{example}\label{example:8.3.2}\rm
+\begin{example}\label{example:8.3.2}
 Use the Laplace transform to solve the initial value problem
 \begin{equation}\label{eq:8.3.6}
 y''-6y'+5y=3e^{2t},\quad y(0)=2, \quad   y'(0)=3.
@@ -1704,20 +1718,20 @@ y''-6y'+5y=3e^{2t},\quad y(0)=2, \quad   y'(0)=3.
 Taking Laplace transforms of both sides of the differential equation
 in \eqref{eq:8.3.6} yields
 \[
-{\cal L}(y''-6y'+5y)={\cal L}\left(3e^{2t}\right)=\frac{3}{s-2},
+\laplace(y''-6y'+5y)=\laplace\left(3e^{2t}\right)=\frac{3}{s-2},
 \]
 which we rewrite as
 \begin{equation}\label{eq:8.3.7}
-{\cal L}(y'')-6{\cal L}(y')+5{\cal L}(y)=\frac{3}{s-2}.
+\laplace(y'')-6\laplace(y')+5\laplace(y)=\frac{3}{s-2}.
 \end{equation}
-Now denote ${\cal L}(y)=Y(s)$. Theorem~\ref{thmtype:8.3.2} and the
+Now denote $\laplace(y)=Y(s)$. \zcref[S]{thmtype:8.3.2} and the
 initial conditions in \eqref{eq:8.3.6} imply that
 \[
-{\cal L}(y')=sY(s)-y(0)=sY(s)-2
+\laplace(y')=sY(s)-y(0)=sY(s)-2
 \]
 and
 \[
-{\cal L}(y'')=s^2Y(s)-y'(0)-sy(0)=s^2Y(s)-3-2s.
+\laplace(y'')=s^2Y(s)-y'(0)-sy(0)=s^2Y(s)-3-2s.
 \]
 Substituting from the last two equations into  \eqref{eq:8.3.7} yields
 \[
@@ -1747,7 +1761,7 @@ as the solution of  \eqref{eq:8.3.6}.\bbox
 
 It isn't necessary to write all the steps that we used to obtain
 \eqref{eq:8.3.8}. To see how to avoid this, let's apply the method of
-Example~\ref{example:8.3.2} to the general initial value problem
+\zcref{example:8.3.2} to the general initial value problem
 \begin{equation}\label{eq:8.3.9}
 ay''+by'+cy=f(t), \quad  y(0)=k_0,\quad y'(0)=k_1.
 \end{equation}
@@ -1755,12 +1769,12 @@ ay''+by'+cy=f(t), \quad  y(0)=k_0,\quad y'(0)=k_1.
 Taking Laplace transforms of both sides of  the differential
 equation in \eqref{eq:8.3.9} yields
 \begin{equation}\label{eq:8.3.10}
-a{\cal L}(y'')+b{\cal L}(y')+c{\cal L}(y)=F(s).
+a\laplace(y'')+b\laplace(y')+c\laplace(y)=F(s).
 \end{equation}
-Now let $Y(s)={\cal L}(y)$.  Theorem~\ref{thmtype:8.3.2} and the
+Now let $Y(s)=\laplace(y)$.  \zcref[S]{thmtype:8.3.2} and the
 initial conditions in \eqref{eq:8.3.9} imply that
 \[
-{\cal L}(y')=sY(s)-k_0\quad\text{and}\quad  {\cal L}(y'')=s^2Y(s)-k_1-k_0s.
+\laplace(y')=sY(s)-k_0\quad\text{and}\quad  \laplace(y'')=s^2Y(s)-k_1-k_0s.
 \]
 Substituting these  into  \eqref{eq:8.3.10} yields
 \begin{equation}\label{eq:8.3.11}
@@ -1777,7 +1791,7 @@ yields
 \begin{equation}\label{eq:8.3.12}
 p(s)Y(s)=F(s)+a(k_1+k_0s)+bk_0.
 \end{equation}
-This equation corresponds to \eqref{eq:8.3.8} of Example~\ref{example:8.3.2}.
+This equation corresponds to \eqref{eq:8.3.8} of \zcref{example:8.3.2}.
 Having established the form of this equation in the general case, it
 is preferable to go directly from the initial value problem to this
 equation. You may find it easier to remember \eqref{eq:8.3.12} rewritten
@@ -1786,7 +1800,7 @@ as
 p(s)Y(s)=F(s)+a\left(y'(0)+sy(0)\right)+by(0).
 \end{equation}
 
-\begin{example}\label{example:8.3.3}\rm
+\begin{example}\label{example:8.3.3}
  Use the Laplace transform to solve the
 initial value problem
 \begin{equation}\label{eq:8.3.14}
@@ -1800,7 +1814,7 @@ p(s)=2s^2+3s+1=(2s+1)(s+1)
 \]
  and
 \[
-F(s)={\cal L}(8e^{-2t})=\frac{8}{s+2},
+F(s)=\laplace(8e^{-2t})=\frac{8}{s+2},
 \]
 so \eqref{eq:8.3.13} becomes
 \[
@@ -1816,29 +1830,31 @@ Y(s)=\frac{4}{3}\frac{1}{s+1/2}-\frac{8}{s+1}+\frac{8}{3}\frac{1}{s+2},
 \]
 so the solution of  \eqref{eq:8.3.14} is
 \[
-y={\cal L}^{-1}(Y(s))=\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}
+y=\laplace^{-1}(Y(s))=\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}
 \]
-(Figure~\ref{figure:8.3.1}).
+(\zcref{figure:8.3.1}).
 
 \noindent
-  \begin{minipage}{0.49\linewidth}
+  \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-  \includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig080301}
+  \includegraphics[alt={A solution curve for 0<t<7 and -4<y<1 that begins at (0,-4), crosses the t axis near t=3.5, and converges to a horizontal asymptote of y=0.},
+  width=\linewidth,height=2.44in,keepaspectratio]{fig080301}
 \captionof{figure}{$y=\dst{\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}}$}
   \label{figure:8.3.1}
 \tagstructend
 \end{minipage}%
 \hfill
-  \begin{minipage}{0.49\linewidth}
+  \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-  \includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig080302}
+  \includegraphics[alt={A solution curve for 0<t<7 and -4<y<1 that begins at (0,-3), crosses the t axis near t=1.5, converges to a horizontal asymptote of y=0.5, but also crosses that asymptote near (2,0.5).},
+width=\linewidth,height=2.44in,keepaspectratio]{fig080302}
 \captionof{figure}{$y=\dst{\frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t}$}
 \label{figure:8.3.2}
 \tagstructend
 \end{minipage}
 
 
-\begin{example}\label{example:8.3.4}\rm
+\begin{example}\label{example:8.3.4}
  Solve the initial value problem
 \begin{equation}\label{eq:8.3.15}
 y''+2y'+2y=1, \quad   y(0)=-3,\;  y'(0)=1.
@@ -1852,7 +1868,7 @@ p(s)=s^2+2s+2=(s+1)^2+1
 \]
 and
 \[
-F(s)={\cal L}(1)=\frac{1}{s},
+F(s)=\laplace(1)=\frac{1}{s},
 \]
 so \eqref{eq:8.3.13} becomes
 \[
@@ -1862,12 +1878,12 @@ Solving for $Y(s)$ yields
 \[
 Y(s)=\frac{1-s(5+3s)}{s\left[(s+1)^2+1\right]}.
 \]
-In Example~\ref{example:8.2.8}  we found the inverse transform of this
+In \zcref{example:8.2.8}  we found the inverse transform of this
 function to be
 \[
 y=\frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t
 \]
-(Figure~\ref{figure:8.3.2}),
+(\zcref{figure:8.3.2}),
 which is therefore  the solution of  \eqref{eq:8.3.15}.
 
 
@@ -1877,8 +1893,7 @@ which is therefore  the solution of  \eqref{eq:8.3.15}.
 
 \color{blue}
 \remark{
-In our examples we applied Theorems~\ref{thmtype:8.3.1} and
-\ref{thmtype:8.3.2}
+In our examples we applied \zcref{thmtype:8.3.1,thmtype:8.3.2}
 without verifying that the unknown function $y$ satisfies their
 hypotheses. This is characteristic of the formal manipulative way in
 which the Laplace transform is used to solve differential equations.
@@ -1888,7 +1903,7 @@ is  the solution of the given problem.}
 \color{black}
 
 \exercises
-In Exercises~\ref{exer:8.3.1}--\ref{exer:8.3.31}
+In \zcref[range]{exer:8.3.1,exer:8.3.31}
 use the Laplace transform to solve the initial value problem.
 
 \begin{exerciselist}
@@ -1943,8 +1958,8 @@ y(0)=0,\quad y'(0)=4$
 
 \item\label{exer:8.3.38}Suppose $a,b$, and $c$ are constants and $a\ne0$.  Let
 \[
-y_1={\cal L}^{-1}\left(\frac{as+b}{as^2+bs+c}\right)\quad\text{and}\quad 
-y_2={\cal L}^{-1}\left(\frac{a}{as^2+bs+c}\right).
+y_1=\laplace^{-1}\left(\frac{as+b}{as^2+bs+c}\right)\quad\text{and}\quad 
+y_2=\laplace^{-1}\left(\frac{a}{as^2+bs+c}\right).
 \]
 Show that
 \[
@@ -1952,15 +1967,15 @@ y_1(0)=1,\quad y_1'(0)=0\quad\text{and}\quad  y_2(0)=0,\quad y_2'(0)=1.
 \]
 \hint{Use the Laplace transform to solve the initial value
 problems
-\begin{eqnarray*}
-ay''+by'+cy&=&0, \quad   y(0)=1,\quad y'(0)=0 \\
-ay''+by'+cy&=&0, \quad  y(0)=0,\quad y'(0)=1.
-\end{eqnarray*}}
+\begin{align*}
+ay''+by'+cy&=0, \quad   y(0)=1,\quad y'(0)=0 \\
+ay''+by'+cy&=0, \quad  y(0)=0,\quad y'(0)=1.
+\end{align*}}
 
 \end{exerciselist}
 
 
-\section{The Unit Step Function}
+\section{The Unit Step Function}\label{sec:unit_step_func}
 
 In the next section we'll consider initial value problems
 \[
@@ -1972,16 +1987,16 @@ table of Laplace transforms to find  Laplace transforms of
 piecewise continuous functions, and to find the piecewise continuous
 inverses of Laplace transforms.
 
-\begin{example}\label{example:8.4.1}\rm
+\begin{example}\label{example:8.4.1}
  Use the table of Laplace transforms to find the Laplace
 transform of
 \begin{equation} \label{eq:8.4.1}
-f(t)=\left\{\begin{array}{cl}
-2t+1,&0\le t<2,\\[1\jot]
+f(t)=\begin{cases}
+2t+1,&0\le t<2,\\
  3t,&t\ge2
-\end{array}\right.
+\end{cases}
 \end{equation}
-(Figure~\ref{figure:8.4.1}).
+(\zcref{figure:8.4.1}).
 \end{example}
 
 
@@ -1989,10 +2004,11 @@ f(t)=\left\{\begin{array}{cl}
 
 \solution Since the formula for $f$ changes at $t=2$, we write
 \begin{equation}\label{eq:8.4.2}
-\begin{array}{ccl}
-{\cal L}(f)&=&\dst \int_0^\infty e^{-st}f(t)\,dt\\[2\jot]
-&=&\dst\int_0^2 e^{-st}(2t+1)\,dt+\int_2^\infty e^{-st}(3t)\,dt.
-\end{array}
+\begin{aligned}
+\laplace(f)
+&=\int_0^\infty e^{-st}f(t)\,dt\\
+&=\int_0^2 e^{-st}(2t+1)\,dt+\int_2^\infty e^{-st}(3t)\,dt.
+\end{aligned}
 \end{equation}
 To relate the first term to a Laplace transform,  we   add and subtract
 \[
@@ -2000,80 +2016,80 @@ To relate the first term to a Laplace transform,  we   add and subtract
 \]
 in \eqref{eq:8.4.2} to obtain
 \begin{equation}\label{eq:8.4.3}
-\begin{array}{ccl}
-{\cal L}(f)&=&\dst\int_0^\infty e^{-st}(2t+1)\,dt+
-\int_2^\infty e^{-st}(3t-2t-1)\,dt\\[2\jot]
-&=&\dst\int_0^\infty e^{-st}(2t+1)\,dt+
-\int_2^\infty e^{-st}(t-1)\,dt\\[2\jot]
-&=&\dst{\cal L}(2t+1)+\int_2^\infty e^{-st}(t-1)\,dt.
-\end{array}
+\begin{aligned}
+\laplace(f)
+&=\int_0^\infty e^{-st}(2t+1)\,dt+\int_2^\infty e^{-st}(3t-2t-1)\,dt\\
+&=\int_0^\infty e^{-st}(2t+1)\,dt+\int_2^\infty e^{-st}(t-1)\,dt\\
+&=\laplace(2t+1)+\int_2^\infty e^{-st}(t-1)\,dt.
+\end{aligned}
 \end{equation}
 To relate  the last integral to a Laplace transform,
   we make the change of variable
  $x=t-2$   and rewrite the integral as
-\begin{eqnarray*}
-\int_2^\infty e^{-st}(t-1)\,dt&=&\int_0^\infty e^{-s(x+2)}(x+1)\,dx
-\\[2\jot]
-&=&e^{-2s}\int_0^\infty e^{-sx}(x+1)\,dx.
-\end{eqnarray*}
+\begin{align*}
+\int_2^\infty e^{-st}(t-1)\,dt
+&=\int_0^\infty e^{-s(x+2)}(x+1)\,dx\\
+&=e^{-2s}\int_0^\infty e^{-sx}(x+1)\,dx.
+\end{align*}
 Since the symbol used for the variable of integration has no effect on the
 value of a definite integral, we can now replace $x$ by the more standard
 $t$ and write
 \[
 \int_2^\infty e^{-st}(t-1)\,dt
-=e^{-2s}\int_0^\infty e^{-st}(t+1)\,dt=e^{-2s}{\cal L}(t+1).
+=e^{-2s}\int_0^\infty e^{-st}(t+1)\,dt=e^{-2s}\laplace(t+1).
 \]
 This and \eqref{eq:8.4.3} imply that
 \[
-{\cal L}(f)={\cal L}(2t+1)+e^{-2s}{\cal L} (t+1).
+\laplace(f)=\laplace(2t+1)+e^{-2s}\laplace (t+1).
 \]
 Now we can use the table of Laplace transforms to find that
 \[
-{\cal L}(f)=\frac{2}{s^2}+\frac{1}{s} +e^{-2s}\left(\frac{1}{s^2}+\frac{1}{s}\right).\bbox
+\laplace(f)=\frac{2}{s^2}+\frac{1}{s} +e^{-2s}\left(\frac{1}{s^2}+\frac{1}{s}\right).\bbox
 \]
 
 
 \noindent
-\begin{minipage}[t]{0.5\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-  \includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig080401}
+  \includegraphics[alt={A function that is two line segments: one segments connects (0,1) to (2,5); another segment connects (2,6) to (4,12).},
+  width=\linewidth,height=2.44in,keepaspectratio]{fig080401}
 \captionof{figure}{The piecewise continuous function \eqref{eq:8.4.1}}
   \label{figure:8.4.1}
 \tagstructend
 \end{minipage}%
 \hfill
-  \begin{minipage}[t]{0.5\linewidth}
+  \begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-  \includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig080402}
+  \includegraphics[alt={A function that is 0 for t<𝜏 and 1 for t≥𝜏.},
+  width=\linewidth,height=2.44in,keepaspectratio]{fig080402}
 \captionof{figure}{$y=u(t-\tau)$}
   \label{figure:8.4.2}
 \tagstructend
 \end{minipage}
 
+
 \boxit{Laplace Transforms of Piecewise Continuous Functions}
 
-
-\noindent
-We'll now develop the method of Example~\ref{example:8.4.1} into a
+We'll now develop the method of \zcref{example:8.4.1} into a
 systematic way to find the Laplace transform of a piecewise continuous
 function. It is convenient to introduce the \emph{\color{blue}unit step
 function}, defined as
 \begin{equation}\label{eq:8.4.4}
-u(t)=\left\{\begin{array}{rl}
+u(t)=\begin{cases}
 0,&t<0\\
 1,&t\ge0.
-\end{array}\right.
+\end{cases}
 \end{equation}
 Thus, $u(t)$ ``steps'' from the constant value $0$ to the constant
 value $1$ at $t=0$. If we replace $t$ by
 $t-\tau$ in \eqref{eq:8.4.4}, then
 \[
-u(t-\tau)=\left\{\begin{array}{rl}
+u(t-\tau)=\begin{cases}
 0,&t<\tau,\\
 1,&t\ge\tau
-\end{array}\right.;
+\end{cases};
 \]
-that is, the step now occurs at $t=\tau$ (Figure~\ref{figure:8.4.2}).
+that is, the step now occurs at $t=\tau$ (\zcref{figure:8.4.2}).
 
 
 
@@ -2083,10 +2099,10 @@ that is, the step now occurs at $t=\tau$ (Figure~\ref{figure:8.4.2}).
 The step function enables us to represent piecewise continuous
 functions conveniently. For example, consider the function
 \begin{equation}\label{eq:8.4.5}
-f(t)=\left\{\begin{array}{rl}
-f_0(t),&0\le t<t_1,\\[1\jot]
+f(t)=\begin{cases}
+f_0(t),&0\le t<t_1,\\
 f_1(t),&t\ge t_1,
-\end{array}\right.
+\end{cases}
 \end{equation}
 where we assume that $f_0$ and $f_1$ are defined on $[0,\infty)$, even
 though they equal $f$ only on the indicated intervals. This assumption
@@ -2105,47 +2121,47 @@ f(t)=f_0(t)+(1)\left(f_1(t)-f_0(t)\right)=f_1(t).
 \]
 
 We need the next theorem to
- show how \eqref{eq:8.4.6} can be used to find ${\cal L}(f)$.
+ show how \eqref{eq:8.4.6} can be used to find $\laplace(f)$.
 
 \begin{theorem}\color{blue}\label{thmtype:8.4.1}
-Let $g$ be defined on $[0,\infty).$ Suppose   $\tau\ge0$ and ${\cal
-L}\left(g(t+\tau)\right)$ exists for $s>s_0.$ Then ${\cal
-L}\left(u(t-\tau)g(t)\right)$ exists for $s>s_0$, and
+Let $g$ be defined on $[0,\infty).$ Suppose   $\tau\ge0$ and
+$\laplace\left(g(t+\tau)\right)$ exists for $s>s_0.$ Then
+$\laplace\left(u(t-\tau)g(t)\right)$ exists for $s>s_0$, and
 \[
-{\cal L}(u(t-\tau)g(t))=e^{-s\tau}{\cal L}\left(g(t+\tau)\right).
+\laplace(u(t-\tau)g(t))=e^{-s\tau}\laplace\left(g(t+\tau)\right).
 \]
 \end{theorem}
 
 \begin{proof}
 By definition,
 \[
-{\cal L}\left(u(t-\tau)g(t)\right)=\int_0^\infty e^{-st} u(t-\tau)g(t)\,
+\laplace\left(u(t-\tau)g(t)\right)=\int_0^\infty e^{-st} u(t-\tau)g(t)\,
 dt.
 \]
 From this and the definition of $u(t-\tau)$,
 \[
-{\cal L}\left(u(t-\tau)g(t)\right)=\int_0^\tau
+\laplace\left(u(t-\tau)g(t)\right)=\int_0^\tau
 e^{-st}(0)\,dt+\int_{\tau}^\infty e^{-st}g(t)\,dt.
 \]
 The first integral on the right equals zero.  Introducing the new variable
 of integration $x=t-\tau$ in the second integral yields
 \[
-{\cal L}\left(u(t-\tau)g(t)\right)=\int_0^\infty e^{-s(x+\tau)}g(x+\tau)\,dx
+\laplace\left(u(t-\tau)g(t)\right)=\int_0^\infty e^{-s(x+\tau)}g(x+\tau)\,dx
 =e^{-s\tau}\int_0^\infty e^{-sx} g(x+\tau)\,dx.
 \]
 Changing the name of the variable of integration in the last integral
 from $x$ to $t$ yields
 \[
-{\cal L}\left(u(t-\tau)g(t)\right)
-=e^{-s\tau}\int_0^\infty e^{-st} g(t+\tau)\,dt=e^{-s\tau}{\cal
-L}(g(t+\tau)).%\bbox
+\laplace\left(u(t-\tau)g(t)\right)
+=e^{-s\tau}\int_0^\infty e^{-st} g(t+\tau)\,dt
+=e^{-s\tau}\laplace(g(t+\tau)).%\bbox
 \]
 \end{proof}
 
-\begin{example}\label{example:8.4.2}\rm
+\begin{example}\label{example:8.4.2}
  Find
 \[
-{\cal L}\left(u(t-1)(t^2+1)\right).
+\laplace\left(u(t-1)(t^2+1)\right).
 \]
 \end{example}
 
@@ -2155,21 +2171,20 @@ g(t+1)=(t+1)^2+1=t^2+2t+2.
 \]
 Since
 \[
-{\cal L}\left(g(t+1)\right)=\frac{2}{s^3}+\frac{2}{s^2}+\frac{2}{s},
+\laplace\left(g(t+1)\right)=\frac{2}{s^3}+\frac{2}{s^2}+\frac{2}{s},
 \]
-Theorem~\ref{thmtype:8.4.1} implies that
-\[{\cal L}\left(u(t-1)(t^2+1)\right)
+\zcref{thmtype:8.4.1} implies that
+\[\laplace\left(u(t-1)(t^2+1)\right)
 =e^{-s}\left(\frac{2}{s^3}+\frac{2}{s^2}+\frac{2}{s}\right).
 \]
 
-\begin{example}\label{example:8.4.3}\rm
-Use Theorem~\ref{thmtype:8.4.1} to find the Laplace transform of the
+\begin{example}\label{example:8.4.3}
+Use \zcref{thmtype:8.4.1} to find the Laplace transform of the
 function
 \[
-f(t)=\left\{\begin{array}{cl} 2t+1,&0\le t<2,\\[1\jot] 3t,&t\ge2,
-\end{array}\right.
+f(t)=\begin{cases} 2t+1,&0\le t<2,\\3t,&t\ge2,\end{cases}
 \]
-from Example~\ref{example:8.4.1}.
+from \zcref{example:8.4.1}.
 \end{example}
 
 \solution
@@ -2178,22 +2193,22 @@ We first write $f$ in the form \eqref{eq:8.4.6} as
 f(t)=2t+1+u(t-2)(t-1).
 \]
 Therefore
-\begin{eqnarray*}
-{\cal L}(f)&=&{\cal L}(2t+1) +{\cal L}\left(u(t-2)(t-1)\right)\\
-&=&{\cal L}(2t+1) +e^{-2s}{\cal L}(t+1)\quad\mbox{ (from
-Theorem~\ref{thmtype:8.4.1}})\\
-&=&\frac{2}{s^2}+\frac{1}{s}+e^{-2s}\left(\frac{1}{s^2}+\frac{1}{s}\right),
-\end{eqnarray*}
-which is the result obtained in Example~\ref{example:8.4.1}.\bbox
+\begin{align*}
+\laplace(f)
+&=\laplace(2t+1)+\laplace\left(u(t-2)(t-1)\right)\\
+&=\laplace(2t+1)+e^{-2s}\laplace(t+1)\quad\text{(from \zcref{thmtype:8.4.1}})\\
+&=\frac{2}{s^2}+\frac{1}{s}+e^{-2s}\left(\frac{1}{s^2}+\frac{1}{s}\right),
+\end{align*}
+which is the result obtained in \zcref{example:8.4.1}.\bbox
 
 Formula \eqref{eq:8.4.6} can be extended to more general piecewise continuous
 functions. For example, we can write
 \[
-f(t)=\left\{\begin{array}{rl}
-f_0(t),&0\le t<t_1,\\[1\jot]
-f_1(t),&t_1\le t<t_2,\\[1\jot]
+f(t)=\begin{cases}
+f_0(t),&0\le t<t_1,\\
+f_1(t),&t_1\le t<t_2,\\
 f_2(t),&t\ge t_2,
-\end{array}\right.
+\end{cases}
 \]
 as
 \[
@@ -2202,75 +2217,77 @@ u(t-t_2)\left(f_2(t)-f_1(t)\right)
 \]
 if $f_0$, $f_1$, and $f_2$ are all defined on $[0,\infty)$.
 
-\begin{example}\label{example:8.4.4}\rm
+\begin{example}\label{example:8.4.4}
  Find the Laplace transform of
 \begin{equation} \label{eq:8.4.7}
-f(t)=\left\{\begin{array}{cl}
- 1,&0\le t<2,\\[1\jot]
--2t+1,&2\le t<3,\\[1\jot]
- 3t,&3\le t<5,\\[1\jot]
+f(t)=\begin{cases}
+ 1,&0\le t<2,\\
+-2t+1,&2\le t<3,\\
+ 3t,&3\le t<5,\\
  t-1,&t\ge5
-\end{array}\right.
+\end{cases}
 \end{equation}
-(Figure~\ref{figure:8.4.3}).
+(\zcref{figure:8.4.3}).
 \end{example}
 
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080403}
-  \caption{The piecewise contnuous function \eqref{eq:8.4.7}}
+  \includegraphics[alt={A function that is line segments connecting (0,1) to (2,1), (2,-3) to (3,-5), (3,9) to (5,15), and then (5,4) to (7,6).},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080403}
+  \caption{The piecewise continuous function \eqref{eq:8.4.7}}
   \label{figure:8.4.3}
 \end{figure}
 
 
 
 
-\solution   In terms of step functions,
-\begin{eqnarray*}
-f(t)&=&1+u(t-2)(-2t+1-1)+u(t-3)(3t+2t-1)\\
-&&+u(t-5)(t-1-3t),
-\end{eqnarray*}
+\solution  In terms of step functions,
+\[
+f(t)=1+u(t-2)(-2t+1-1)+u(t-3)(3t+2t-1)
++u(t-5)(t-1-3t),
+\]
 or
 \[
 f(t)=1-2u(t-2)t+u(t-3)(5t-1)-u(t-5)(2t+1).
 \]
-Now Theorem~\ref{thmtype:8.4.1} implies that
-\begin{eqnarray*}
-{\cal L}(f)&=&{\cal L}(1)-2e^{-2s}{\cal L}(t+2)+e^{-3s}{\cal
-L}\left(5(t+3)-1\right)-e^{-5s}{\cal L}\left(2(t+5)+1\right)\\[1\jot]
-&=&{\cal L}(1)-2e^{-2s}{\cal L}(t+2)+e^{-3s}{\cal
-L}(5t+14)-e^{-5s}{\cal L}(2t+11)\\[1\jot]
-&=&\frac{1}{s}-2e^{-2s}\left(\frac{1}{s^2}+\frac{2}{s}\right)+
-e^{-3s}\left(\frac{5}{s^2}+\frac{14}{s}\right)-e^{-5s}\left(\frac{2}{s^2}+\frac{11}{s}\right).\bbox
-\end{eqnarray*}
+Now \zcref{thmtype:8.4.1} implies that
+\begin{align*}
+\laplace(f)
+&=\laplace(1)-2e^{-2s}\laplace(t+2)
++e^{-3s}\laplace\left(5(t+3)-1\right)
+-e^{-5s}\laplace\left(2(t+5)+1\right)\\
+&=\laplace(1)-2e^{-2s}\laplace(t+2)
++e^{-3s}\laplace(5t+14)-e^{-5s}\laplace(2t+11)\\
+&=\frac{1}{s}-2e^{-2s}\left(\frac{1}{s^2}+\frac{2}{s}\right)+
+e^{-3s}\left(\frac{5}{s^2}+\frac{14}{s}\right)
+-e^{-5s}\left(\frac{2}{s^2}+\frac{11}{s}\right).\bbox
+\end{align*}
 
  The trigonometric identities
-\begin{eqnarray}
-\sin (A+B)&=&\sin A\cos B+\cos A\sin B\label{eq:8.4.8}\\
-\cos (A+B)&=&\cos A\cos B-\sin A\sin B\label{eq:8.4.9}
-\end{eqnarray}
+\begin{align}
+\sin (A+B)&=\sin A\cos B+\cos A\sin B\label{eq:8.4.8}\\
+\cos (A+B)&=\cos A\cos B-\sin A\sin B\label{eq:8.4.9}
+\end{align}
 are useful in problems that involve shifting the arguments of
 trigonometric functions. We'll use these identities in the next
 example.
 
-\begin{example}\label{example:8.4.5}\rm
+\begin{example}\label{example:8.4.5}
  Find the Laplace transform of
 \begin{equation} \label{eq:8.4.10}
-f(t)=\left\{\begin{array}{cl}
-\sin t,&0\le t<\dst\frac{\pi}{2},\\[2\jot]
-\cos t-3\sin t,&\dst\frac{\pi}{2}\le t<\pi,\\[2\jot]
+f(t)=\begin{cases}
+\sin t,&0\le t<\dst\frac{\pi}{2},\\
+\cos t-3\sin t,&\dst\frac{\pi}{2}\le t<\pi,\\
  3\cos t,&t\ge\pi
-\end{array}\right.
+\end{cases}
 \end{equation}
-(Figure~\ref{figure:8.4.4}).
+(\zcref{figure:8.4.4}).
 \end{example}
 
-                 %
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080404}
+  \includegraphics[alt={A function that is a curve connecting (0,0) to (π/2,1), (π/2,-3) to (π,-1), and is continuous starting at (π,-3) onward.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080404}
   \caption{The piecewise continuous function \eqref{eq:8.4.10}}
   \label{figure:8.4.4}
 \end{figure}
@@ -2284,13 +2301,14 @@ f(t)=\left\{\begin{array}{cl}
 f(t)=\sin t+u(t-\pi/2) (\cos t-4\sin t)+u(t-\pi) (2
 \cos t+3\sin t).
 \]
-Now Theorem~\ref{thmtype:8.4.1} implies that
+Now \zcref{thmtype:8.4.1} implies that
 \begin{equation}\label{eq:8.4.11}
-\begin{array}{ccl}
-{\cal L}(f)&=&{\cal L}(\sin t)+e^{-\frac{\pi}{2}s}{\cal L}
-\left(\cos\left(t+\frac{\pi}{2}\right)-4\sin\left(t+\frac{\pi}{2}\right)\right)\\
-[1\jot]&&\qquad+e^{-\pi s}{\cal L}\left(2\cos(t+\pi)+3\sin(t+\pi)\right).
-\end{array}
+\begin{multlined}
+\laplace(f)=\laplace(\sin t)+e^{-\frac{\pi}{2}s}\laplace
+\left(\cos\left(t+\frac{\pi}{2}\right)-4\sin\left(t+\frac{\pi}{2}\right)\right)
+\\
++e^{-\pi s}\laplace\left(2\cos(t+\pi)+3\sin(t+\pi)\right).
+\end{multlined}
 \end{equation}
 Since
 \[
@@ -2301,57 +2319,58 @@ and
  2\cos (t+\pi)+3\sin (t+\pi)=-2\cos t-3\sin t,
 \]
 we see from \eqref{eq:8.4.11} that
-\begin{eqnarray*}
-{\cal L}(f)&=&{\cal L}(\sin t)-e^{-\pi s/2}{\cal L}(\sin t+4\cos t)
--e^{-\pi s}{\cal L}(2\cos t+3\sin t)\\[1\jot]
-&=&\frac{1}{s^2+1}-e^{-\frac{\pi}{2}s}\left(\frac{1+4s}{s^2+1}\right)
+\begin{align*}
+\laplace(f)
+&=\laplace(\sin t)-e^{-\pi s/2}\laplace(\sin t+4\cos t)
+-e^{-\pi s}\laplace(2\cos t+3\sin t)\\
+&=\frac{1}{s^2+1}-e^{-\frac{\pi}{2}s}\left(\frac{1+4s}{s^2+1}\right)
 -e^{-\pi s}\left(\frac{3+2s}{s^2+1}\right).\bbox
-\end{eqnarray*}
+\end{align*}
+
 
 \boxit{The Second Shifting Theorem}
 
-
-\noindent
-Replacing $g(t)$ by $g(t-\tau)$ in Theorem~\ref{thmtype:8.4.1}
+Replacing $g(t)$ by $g(t-\tau)$ in \zcref{thmtype:8.4.1}
 yields the next theorem.
 
-\begin{theorem}\color{blue}$[$Second Shifting
-Theorem$]$\label{thmtype:8.4.2} If
- $\tau\ge0$ and ${\cal L}(g)$ exists for $s>s_0$
-then  ${\cal L}\left(u(t-\tau)g(t-\tau)\right)$ exists for $s>s_0$ and
+\begin{theorem}[Second Shifting Theorem]\label{thmtype:8.4.2} If
+ $\tau\ge0$ and $\laplace(g)$ exists for $s>s_0$
+then
+\[\laplace\left(u(t-\tau)g(t-\tau)\right)\]
+exists for $s>s_0$ and
 \[
-{\cal L}(u(t-\tau)g(t-\tau))=e^{-s\tau}{\cal L}(g(t)),
+\laplace(u(t-\tau)g(t-\tau))=e^{-s\tau}\laplace(g(t)),
 \]
 or, equivalently,
 \begin{equation}\label{eq:8.4.12}
-\mbox{if } g(t)\leftrightarrow G(s),\mbox{ then
-}u(t-\tau)g(t-\tau)\leftrightarrow e^{-s\tau}G(s).
+\text{if } g(t)\leftrightarrow G(s),\text{ then }u(t-\tau)g(t-\tau)
+\leftrightarrow e^{-s\tau}G(s).
 \end{equation}
 \end{theorem}
 
-\color{blue}
-\remark{ Recall that the First Shifting Theorem
-(Theorem~\ref{thmtype:8.1.3} states that multiplying a function  by
+{\color{blue}
+\remark{Recall that the First Shifting Theorem
+(\zcref{thmtype:8.1.3}) states that multiplying a function  by
 $e^{at}$ corresponds to shifting the argument of its transform by $a$
-units. Theorem~\ref{thmtype:8.4.2} states that multiplying a Laplace
+units. \zcref[S]{thmtype:8.4.2} states that multiplying a Laplace
 transform by the exponential $e^{-\tau s}$ corresponds to shifting the
 argument of the inverse transform by $\tau$ units.}
-\color{black}
+}
 
-\begin{example}\label{example:8.4.6}\rm
+\begin{example}\label{example:8.4.6}
  Use \eqref{eq:8.4.12} to find
 \[
-{\cal L}^{-1}\left(\frac{e^{-2s}}{s^2}\right).
+\laplace^{-1}\left(\frac{e^{-2s}}{s^2}\right).
 \]
 \end{example}
 
 \solution  To apply \eqref{eq:8.4.12} we let
 $\tau=2$ and $G(s)=1/s^2$. Then $g(t)=t$ and \eqref{eq:8.4.12} implies that
 \[
-{\cal L}^{-1}\left(\frac{e^{-2s}}{s^2}\right)=u(t-2)(t-2).\bbox
+\laplace^{-1}\left(\frac{e^{-2s}}{s^2}\right)=u(t-2)(t-2).\bbox
 \]
 
-\begin{example}\label{example:8.4.7}\rm
+\begin{example}\label{example:8.4.7}
  Find the inverse Laplace transform $h$ of
 \[
 H(s)=\frac{1}{s^2}-e^{-s}\left(\frac{1}{s^2}+\frac{2}{s}\right)+
@@ -2369,24 +2388,22 @@ Then
 \[
 g_0(t)=t,\; g_1(t)=t+2,\; g_2(t)=2t^2+1.
 \]
-Hence, \eqref{eq:8.4.12} and the linearity of ${\cal L}^{-1}$ imply that
-\begin{eqnarray*}
-h(t)&=&{\cal L}^{-1}\left(G_0(s)\right)-{\cal
-L}^{-1}\left(e^{-s}G_1(s)\right)+{\cal
-L}^{-1}\left(e^{-4s}G_2(s)\right)\\[1\jot]
-&=&t-u(t-1)\left[(t-1)+2\right]+u(t-4)\left[2(t-4)^2+1\right]\\[1\jot]
-&=&t-u(t-1)(t+1)+u(t-4)(2t^2-16t+33),
-\end{eqnarray*}
+Hence, \eqref{eq:8.4.12} and the linearity of $\laplace^{-1}$ imply that
+\begin{align*}
+h(t)&=\laplace^{-1}\left(G_0(s)\right)-\laplace^{-1}\left(e^{-s}G_1(s)\right)+\laplace^{-1}\left(e^{-4s}G_2(s)\right)\\
+&=t-u(t-1)\left[(t-1)+2\right]+u(t-4)\left[2(t-4)^2+1\right]\\
+&=t-u(t-1)(t+1)+u(t-4)(2t^2-16t+33),
+\end{align*}
 which can also be written as
 \[
-h(t)=\left\{\begin{array}{cl}
- t,&0\le t<1,\\[1\jot]
--1,&1\le t<4,\\[1\jot]
+h(t)=\begin{cases}
+ t,&0\le t<1,\\
+-1,&1\le t<4,\\
 2t^2-16t+32,&t\ge4.
-\end{array}\right.\bbox
+\end{cases}\bbox
 \]
 
-\begin{example}\label{example:8.4.8}\rm
+\begin{example}\label{example:8.4.8}
  Find the inverse transform of
 \[
 H(s)=\frac{2s}{s^2+4}-e^{-\frac{\pi}{2}s} \frac{3s+1}{s^2+9}+e^{-\pi
@@ -2410,147 +2427,129 @@ and
 \[
 g_2(t)=e^{-3t}(\cos t-2\sin t).
 \]
-Therefore \eqref{eq:8.4.12} and the linearity of ${\cal L}^{-1}$
+Therefore \eqref{eq:8.4.12} and the linearity of $\laplace^{-1}$
 imply that
-\begin{eqnarray*}
-h(t)&=&2\cos 2t-u(t-\pi/2)\left[3\cos
-3(t-\pi/2)+\frac{1}{3}\sin 3\left(t-\frac{\pi}{2}\right)\right]\\[2\jot]
-&&+u(t-\pi)e^{-3(t-\pi)}\left[\cos (t-\pi)-2\sin (t-\pi)\right].
-\end{eqnarray*}
+\begin{align*}
+h(t)=2\cos 2t&{}-u(t-\pi/2)
+\left[3\cos3(t-\pi/2)+\frac{1}{3}\sin 3\left(t-\frac{\pi}{2}\right)\right]\\
+&+u(t-\pi)e^{-3(t-\pi)}\left[\cos (t-\pi)-2\sin (t-\pi)\right].
+\end{align*}
 Using the trigonometric identities  \eqref{eq:8.4.8} and
 \eqref{eq:8.4.9}, we can rewrite this as
-\begin{equation} \label{eq:8.4.13}
-\begin{array}{rcl}
-h(t)&=&2\cos 2t+u(t-\pi/2)\left(3\sin 3t-
-\frac{1}{3}\cos 3t\right)\\[2\jot]
-&&-u(t-\pi)e^{-3(t-\pi)} (\cos t-2\sin t)
-\end{array}
+\begin{equation}\label{eq:8.4.13}
+\begin{aligned}
+h(t)=2\cos 2t&{}+u(t-\pi/2)\left(3\sin 3t-\frac{1}{3}\cos 3t\right)\\
+&-u(t-\pi)e^{-3(t-\pi)} (\cos t-2\sin t)
+\end{aligned}
 \end{equation}
-(Figure~\ref{figure:8.4.5}).
+(\zcref{figure:8.4.5}).
 
-
-\begin{figure}[H]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080405}
-  \caption{ The piecewise continouous function
+  \includegraphics[alt={A function that is a curve connecting (0,2) to (π/2,-2), (π/2,1) to (π,2), and is continuous starting from (π,3) onward.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080405}
+  \caption{ The piecewise continuous function
 \eqref{eq:8.4.13}}
   \label{figure:8.4.5}
 \end{figure}
 
 
  \exercises
-In Exercises~\ref{exer:8.4.1}--\ref{exer:8.4.6} find the Laplace transform by
-the method of Example~\ref{example:8.4.1}. Then express the given function
-$f$ in terms of unit step functions as in Eqn.~\eqref{eq:8.4.6}, and use
-Theorem~\ref{thmtype:8.4.1} to find ${\cal L}(f)$.
+In \zcref[range]{exer:8.4.1,exer:8.4.6} find the Laplace transform by
+the method of \zcref{example:8.4.1}. Then express the given function
+$f$ in terms of unit step functions as in \zcref{eq:8.4.6}, and use
+\zcref{thmtype:8.4.1} to find $\laplace(f)$.
 Where indicated by \CGex, graph $f$.
 \begin{exerciselist}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 1--6 in two columns
-\item\label{exer:8.4.1}$\dst{f(t)=\left\{\begin{array}{cl} 1,&0
-\le t<4,\\[2\jot] t,&t\ge4.\end{array}\right.}$
-%&
-\item\label{exer:8.4.2}$\dst{f(t)=\left\{\begin{array}{cl} t,&0
-\le t<1,\\[2\jot] 1,&t\ge1.\end{array}\right.}$
-%\end{tabular}
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:8.4.3}\CGex $\dst{f(t)=\left\{\begin{array}{cl} 2t-1,&
-0\le t<2,\\[2\jot]  t,&t\ge2.\end{array}\right.}$
-%&
-\item\label{exer:8.4.4}\CGex $\dst{f(t)=\left\{\begin{array}{cl}1,
-&0\le t<1,\\[2\jot] t+2,&t\ge1.\end{array}\right.}$
-%\end{tabular}
-
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:8.4.5}$\dst{f(t)=\left\{\begin{array}{cl} t-1,& 0\le
-t<2,\\[2\jot] 4,&t\ge2.\end{array}\right.}$
-%&
-\item\label{exer:8.4.6}$\dst{f(t)=\left\{\begin{array}{cl} t^2,& 0\le
-t<1,\\[2\jot] 0,&t\ge1.\end{array}\right.}$
-%\end{tabular}
+\item(1)\label{exer:8.4.1}$f(t)=\begin{cases}
+1,&0 \le t<4,\\
+t,&t\ge4.\end{cases}$
+\item(1)\label{exer:8.4.2}$f(t)=\begin{cases}
+t,&0 \le t<1,\\
+1,&t\ge1.\end{cases}$
+\item(1)\label{exer:8.4.3}\CGex $f(t)=\begin{cases}
+2t-1,& 0\le t<2,\\
+t,&t\ge2.\end{cases}$
+\item(1)\label{exer:8.4.4}\CGex $f(t)=\begin{cases}
+1, &0\le t<1,\\
+t+2,&t\ge1.\end{cases}$
+\item(1)\label{exer:8.4.5}$f(t)=\begin{cases}
+t-1,& 0\le t<2,\\
+4,&t\ge2.\end{cases}$
+\item(1)\label{exer:8.4.6}$f(t)=\begin{cases}
+t^2,& 0\le t<1,\\
+0,&t\ge1.\end{cases}$
 
 
-\exercisetext{In Exercises~\ref{exer:8.4.7}--\ref{exer:8.4.18} express the
+\exercisetext{In \zcref[range]{exer:8.4.7,exer:8.4.18} express the
 given function $f$ in terms of unit step functions
- and use Theorem~\ref{thmtype:8.4.1} to find ${\cal
-L}(f)$.
+ and use \zcref{thmtype:8.4.1} to find $\laplace(f)$.
 Where indicated by \CGex, graph $f$.}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-% TODO 7--14 in two columns
-\item\label{exer:8.4.7}$\dst{f(t)=\left\{\begin{array}{cl} 0, &0\le
-t<2,\\[2\jot] t^2+3t,&t\ge2.\end{array}\right.}$
-%&
-\item\label{exer:8.4.8}$\dst{f(t)=\left\{\begin{array}{cl} t^2+2, &0\le
-t<1,\\[2\jot] t,&t\ge1.\end{array}\right.}$
-%\end{tabular}
+\item(1)\label{exer:8.4.7}$f(t)=\begin{cases}
+0, &0\le t<2,\\
+t^2+3t,&t\ge2.\end{cases}$
+\item(1)\label{exer:8.4.8}$f(t)=\begin{cases}
+t^2+2, &0\le t<1,\\
+t,&t\ge1.\end{cases}$
+\item(1)\label{exer:8.4.9}$f(t)=\begin{cases}
+te^t,& 0\le t<1,\\
+e^t,&t\ge1.\end{cases}$
+\item(1)\label{exer:8.4.10}$f(t)=\begin{cases}
+e^{\phantom{2}-t}, &0\le t<1,\\
+e^{-2t},&t\ge1.\end{cases}$
+\item(1)\label{exer:8.4.11}$f(t)=\begin{cases}
+-t,&0 \le t<2,\\
+t-4,&2\le t<3,\\
+1,&t\ge3.
+\end{cases}$
+\item(1)\label{exer:8.4.12}$f(t)=\begin{cases}
+0,&0 \le t<1,\\
+t,&1\le t<2,\\
+0,&t\ge2.\end{cases}$
+\item(1)\label{exer:8.4.13}$f(t)=\begin{cases}
+t,&0 \le t<1,\\
+t^2,&1\le t<2,\\
+0,&t\ge2.\end{cases}$
+\item(1)\label{exer:8.4.14}$f(t)=\begin{cases}
+t,&0\le t<1,\\
+2-t,&1\le t<2,\\
+6,&t > 2.\end{cases}$
+
+\item(1)\label{exer:8.4.15}\CGex $f(t)=\begin{cases}
+\phantom{2}\sin t,&0\le t<\dfrac{\pi}{2},\\
+2\sin t,&\dfrac{\pi}{2}\le t<\pi,\\
+\phantom{2}\cos t,&t\ge\pi.\end{cases}$
+
+\item(1)\label{exer:8.4.16}\CGex
+$f(t)=\begin{cases}
+\phantom{-} 2,&0\le t<1,\\
+-2t+2,&1\le t<3,\\
+\phantom{-}3t,&t\ge3.\end{cases}$
 
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:8.4.9}$\dst{f(t)=\left\{\begin{array}{cl} te^t,& 0\le t
-<1,\\[2\jot] e^t,&t\ge1.\end{array}\right.}$
-%&
-\item\label{exer:8.4.10}$\dst{f(t)=\left\{\begin{array}{cl}
-e^{\phantom{2}-t}, &0\le t<1,\\[2\jot]
-e^{-2t},&t\ge1.\end{array}\right.}$
-%\end{tabular}
+\item(1)\label{exer:8.4.17}\CGex
+$f(t)=\begin{cases}
+3,&0\le t<2,\\
+3t+2,&2\le t<4,\\
+4t,&t\ge 4.\end{cases}$
+
+\item(1)\label{exer:8.4.18}\CGex
+$f(t)=\begin{cases}
+(t+1)^2,&0\le t<1,\\
+(t+2)^2,&t\ge1.\end{cases}$
 
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:8.4.11}$\dst{f(t)=\left\{\begin{array}{cl} -t,&0 \le
-t<2,\\[2\jot] t-4,&2\le t<3,\\[2\jot] 1,&t\ge3.
-\end{array}\right.}$
-%&
-\item\label{exer:8.4.12}$\dst{f(t)=\left\{\begin{array}{cl} 0,&0 \le
-t<1,\\[2\jot] t,&1\le t<2,\\[2\jot] 0,&t\ge2.\end{array}\right.}$
-%\end{tabular}
-
-
-%\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-\item\label{exer:8.4.13}$\dst{f(t)=\left\{\begin{array}{cl} t,&0 \le
-t<1,\\[2\jot] t^2,&1\le t<2,\\[2\jot] 0,&t\ge2. \end{array}\right.}$
-%&
-\item\label{exer:8.4.14}$\dst{f(t)=\left\{\begin{array}{cl} t,&0\le
-t<1,\\[2\jot] 2-t,&1\le t<2,\\[2\jot] 6,&t > 2. \end{array}\right.}$
-%\end{tabular}
-
-\item\label{exer:8.4.15}\CGex $\dst{f(t)=\left\{\begin{array}{cl}
-\phantom{2}
-\sin t,&0\le t<\dst\frac{\pi}{2},\\[2\jot] 2\sin t,&
-\dst\frac{\pi}{2}\le t<\pi,\\[2\jot]\phantom{2}\cos t,
-&t\ge\pi.\end{array}\right.}$
-
-\item\label{exer:8.4.16}\CGex
-$f(t)=\dst{\left\{\begin{array}{cl}\phantom{-} 2,&0\le
-t<1,\\[2\jot]-2t+2,&1\le t<3,\\[2\jot]\phantom{-}3t,&t\ge
-3.\end{array}\right.}$
-
-
-\item\label{exer:8.4.17}\CGex
-$f(t)=\dst{\left\{\begin{array}{cl}3,&0\le t<2,\\[2\jot]3t+2,&2\le
-t<4,\\[2\jot]4t,&t\ge
-4.\end{array}\right.}$
-
-\item\label{exer:8.4.18}\CGex
-$\dst{f(t)=\left\{\begin{array}{ll}(t+1)^2,&0\le t<1,
-\\[2\jot](t+2)^2,&t\ge1.\end{array}\right.}$
-
-
-\exercisetext{In Exercises~\ref{exer:8.4.19}--\ref{exer:8.4.28} use
-Theorem~\ref{thmtype:8.4.2} to express the inverse transforms in terms of
+\exercisetext{In \zcref[range]{exer:8.4.19,exer:8.4.28} use
+\zcref{thmtype:8.4.2} to express the inverse transforms in terms of
 step functions, and then find distinct formulas the for inverse
 transforms on the appropriate intervals, as in
-Example~\ref{example:8.4.7}.
+\zcref{example:8.4.7}.
 Where indicated by \CGex, graph the inverse transform.}
 
-%\begin{tabular}[t]{@{}p{168pt}@{}p{112pt}@{}p{68pt}}
-% TODO 19--20 in two columns
-\item\label{exer:8.4.19}$\dst{H(s)=\frac{e^{-2s}}{s-2}}$%&
-\item\label{exer:8.4.20}$\dst{H(s)=\frac{e^{-s}}{s(s+1)}}$
-%\end{tabular}
+\item(1)\label{exer:8.4.19}$\dst{H(s)=\frac{e^{-2s}}{s-2}}$%&
+\item(1)\label{exer:8.4.20}$\dst{H(s)=\frac{e^{-s}}{s(s+1)}}$
 
 \item\label{exer:8.4.21}\CGex $\dst{H(s)=\frac{e^{-s}}{s^3}+
 \frac{e^{-2s}}{s^2}}$
@@ -2572,7 +2571,7 @@ e^{-2s}\left[\frac{3(s-3)}{(s+1)(s-2)}-\frac{s+1}{(s-1)(s-2)}\right]}$
 
 \item\label{exer:8.4.28}$\dst{H(s)=\frac{1}{s}-\frac{2}{s^3}+e^{-2s}\left(\frac{3}{s}-\frac{1}{s^3}\right) +\frac{e^{-4s}}{s^2}}$
 
-\item\label{exer:8.4.29}Find ${\cal L}\left(u(t-\tau)\right)$.
+\item\label{exer:8.4.29}Find $\laplace\left(u(t-\tau)\right)$.
 
 
 \item\label{exer:8.4.30}Let $\{t_m\}_{m=0}^\infty$ be a sequence of points such that $t_0=0$,
@@ -2591,7 +2590,7 @@ f(t)=f_0(t)+\sum_{m=1}^\infty u(t-t_m)\left(f_m(t)-f_{m-1}(t)\right),\,
 How do we know that the series on the right converges for all $t$
 in $[0,\infty)$?
 
-\item\label{exer:8.4.31}In addition to the assumptions of Exercise~\ref{exer:8.4.30},
+\item\label{exer:8.4.31}In addition to the assumptions of \zcref{exer:8.4.30},
 assume that
 \[
 |f_m(t)|\le Me^{s_0t},\,t\ge t_m,\,m=0,1,\dots,
@@ -2604,9 +2603,9 @@ and that the series
 \]
 converges for some $\rho>0$. Using the  steps listed below, show
 that
-${\cal L}(f)$ is defined for $s>s_0$  and
+$\laplace(f)$ is defined for $s>s_0$  and
 \[
-{\cal L}(f)={\cal L}(f_0)+\sum_{m=1}^\infty e^{-st_m}{\cal L}(g_m)
+\laplace(f)=\laplace(f_0)+\sum_{m=1}^\infty e^{-st_m}\laplace(g_m)
 \tag{C}
 \]
 for $s>s_0+\rho$,
@@ -2619,15 +2618,14 @@ g_m(t)=f_m(t+t_m)-f_{m-1}(t+t_m).
 \item
 Use (A) and Theorem~8.1.6 to show that
 \[
-{\cal
-L}(f)=\sum_{m=0}^\infty\int_{t_m}^{t_{m+1}}e^{-st}f_m(t)\,dt
+\laplace(f)=\sum_{m=0}^\infty\int_{t_m}^{t_{m+1}}e^{-st}f_m(t)\,dt
 \tag{D}
 \]
 is defined for $s>s_0$.
 \item % (b)
 Show that  (D) can be rewritten as
 \[
-{\cal L}(f)=\sum_{m=0}^\infty\left(\int_{t_m}^\infty e^{-st}f_m(t)\,dt
+\laplace(f)=\sum_{m=0}^\infty\left(\int_{t_m}^\infty e^{-st}f_m(t)\,dt
 -\int_{t_{m+1}}^\infty e^{-st}f_m(t)\,dt\right).
 \tag{E}
 \]
@@ -2642,7 +2640,7 @@ both converge (absolutely) if $s>s_0+\rho$.
 \item % (d)
 Show that  (E) can be rewritten as
  \[
-{\cal L}(f)={\cal L}(f_0)+\sum_{m=1}^\infty\int_{t_m}^\infty e^{-st}
+\laplace(f)=\laplace(f_0)+\sum_{m=1}^\infty\int_{t_m}^\infty e^{-st}
 \left(f_m(t)-f_{m-1}(t)\right)\,dt
 \]
 if $s>s_0+\rho$.
@@ -2652,15 +2650,15 @@ Complete the proof of  (C).
 
 \item\label{exer:8.4.32}Suppose $\{t_m\}_{m=0}^\infty$ and
 $\{f_m\}_{m=0}^\infty$ satisfy the assumptions of
-Exercises~\ref{exer:8.4.30} and \ref{exer:8.4.31}, and
+\zcref{exer:8.4.30,exer:8.4.31}, and
 there's a positive constant $K$ such that $t_m\ge Km$ for $m$
 sufficiently large. Show that the series  (B) of
-Exercise~\ref{exer:8.4.31} converges for any $\rho>0$, and conclude from
-this that  (C) of Exercise~\ref{exer:8.4.31} holds for $s>s_0$.
+\zcref{exer:8.4.31} converges for any $\rho>0$, and conclude from
+this that  (C) of \zcref{exer:8.4.31} holds for $s>s_0$.
 
-\exercisetext{In Exercises~\ref{exer:8.4.33}--\ref{exer:8.4.36} find the step
+\exercisetext{In \zcref[range]{exer:8.4.33,exer:8.4.36} find the step
 function representation of $f$ and use the result of
-Exercise~\ref{exer:8.4.32} to find ${\cal L}(f)$. \hint{You will need
+\zcref{exer:8.4.32} to find $\laplace(f)$. \hint{You will need
 formulas related to the formula for the sum of a geometric series.}}
 
 \item\label{exer:8.4.33}$f(t)=m+1,\,m\le t<m+1\; (m=0,1,2,\dots)$
@@ -2674,8 +2672,9 @@ formulas related to the formula for the sum of a geometric series.}}
 
 
 
-\section{Constant Coeefficient Equations with Piecewise Continuous Forcing
-Functions}
+\section[running={Piecewise Continuous Forcing Functions}]
+{Constant Coefficient Equations with Piecewise Continuous Forcing Functions}
+\label{sec:laplace_piecewise_forcing}
 
 We'll now consider initial value problems of the form
 \begin{equation}\label{eq:8.5.1}
@@ -2687,7 +2686,7 @@ where the input to a physical system undergoes instantaneous changes,
 as when a switch is turned on or off or the forces acting on the
 system change abruptly.
 
-It can be shown (Exercises~\ref{exer:8.5.23} and \ref{exer:8.5.24}) that the
+It can be shown (\zcref{exer:8.5.23,exer:8.5.24}) that the
 differential equation in \eqref{eq:8.5.1} has no solutions on
 an open interval that contains a jump discontinuity of $f$. Therefore we
 must define what we mean by a solution of \eqref{eq:8.5.1} on $[0,\infty)$
@@ -2718,23 +2717,24 @@ ay''+by'+cy=f(t)
 \]
 on every such subinterval.
 \item % (d)
-$y''$ has limits from the right and left at $t_1,$ \dots$,$ $t_n$.
+$y''$ has limits from the right and left at $t_1$, \dots, $t_n$.
 \end{alist}
 \end{theorem}
 
-We define the function $y$  of Theorem~\ref{thmtype:8.5.1}  to be the
+We define the function $y$  of \zcref{thmtype:8.5.1}  to be the
 solution of the initial value problem \eqref{eq:8.5.1}.
 
 We begin by considering initial value problems of the form
 \begin{equation}\label{eq:8.5.2}
-ay''+by'+cy=\left\{\begin{array}{cl} f_0(t),&0\le
-t<t_1,\\[1\jot]f_1(t),&t\ge t_1,
-\end{array}\right.\quad y(0)=k_0,\quad y'(0)=k_1,
+ay''+by'+cy=\begin{cases}
+f_0(t),&0\le t<t_1,\\
+f_1(t),&t\ge t_1,
+\end{cases}\quad y(0)=k_0,\quad y'(0)=k_1,
 \end{equation}
 where the forcing function has a single jump discontinuity at $t_1$.
 
 We can solve \eqref{eq:8.5.2} by  the these steps:
-\begin{enumext}[label=\arabic*,wrap-label*={Step #1.},font=\bfseries]
+\begin{enumext}[label=\arabic*,wrap-label*={Step #1.},labelwidth=4em]
 \item Find the solution $y_0$ of  the initial value problem
 \[ay''+by'+cy=f_0(t), \quad  y(0)=k_0,\quad y'(0)=k_1.\]
 \item Compute $c_0=y_0(t_1)$ and $c_1=y_0'(t_1)$.
@@ -2742,16 +2742,19 @@ We can solve \eqref{eq:8.5.2} by  the these steps:
 \[ay''+by'+cy=f_1(t), \quad  y(t_1)=c_0,\quad y'(t_1)=c_1.\]
 \item Obtain the solution $y$ of  \eqref{eq:8.5.2} as
 \[
-y=\left\{\begin{array}{cl} y_0(t),&0\le t<t_1\\[1\jot]y_1(t),&t\ge t_1.
-\end{array}\right.
+y=
+\begin{cases}
+y_0(t),&0\le t<t_1\\
+y_1(t),&t\ge t_1.
+\end{cases}
 \]
 \end{enumext}
 
 
-It is shown  in  Exercise~\ref{exer:8.5.23} that $y'$  exists and is
+It is shown  in  \zcref{exer:8.5.23} that $y'$  exists and is
 continuous at $t_1$. The next example illustrates this procedure.
 
-\begin{example}\label{example:8.5.1}\rm
+\begin{example}\label{example:8.5.1}
 Solve the initial value problem
 \begin{equation}\label{eq:8.5.3}
 y''+y=f(t),
@@ -2759,10 +2762,10 @@ y''+y=f(t),
 \end{equation}
 where
 \[
-f(t)=\left\{\begin{array}{rl}
-1,&0\le t<\displaystyle\frac{\pi}{2},\\[2\jot]
--1,&t\ge\displaystyle{\frac{\pi}{2}}.
-\end{array}\right.
+f(t)=\begin{cases}
+1,&0\le t<\dfrac{\pi}{2},\\
+-1,&t\ge\dfrac{\pi}{2}.
+\end{cases}
 \]
 \end{example}
 
@@ -2788,18 +2791,18 @@ y_1=-1+\cos t+\sin t.
 \]
 Hence, the solution of \eqref{eq:8.5.3} is
 \begin{equation}\label{eq:8.5.4}
-y=\left\{\begin{array}{rl}
-1+\cos t-\sin t,&0\le t<\displaystyle{\frac{\pi}{2}},
-\\[2\jot]
--1+\cos t+\sin t,&t\ge\displaystyle{\frac{\pi}{2}}
-\end{array}\right.
+y=\begin{cases}
+1+\cos t-\sin t,&0\le t<\dfrac{\pi}{2},\\
+-1+\cos t+\sin t,&t\ge\dfrac{\pi}{2}
+\end{cases}
 \end{equation}
-(Figure:8.5.1).
+(\zcref{figure:8.5.1}).
 
 
-                    \begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080501}
+  \includegraphics[alt={A curve for 0<t<2π and -2.5<y<2.5 that begins at (0,2), crosses the t axis near t=1.6, bottoms out near (4,-2.2), and increases to another t intercept near t=2π.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080501}
   \caption{ Graph of \eqref{eq:8.5.4}}
   \label{figure:8.5.1}
 \end{figure}
@@ -2811,19 +2814,19 @@ If $f_0$ and $f_1$ are defined on $[0,\infty)$, we can rewrite
 ay''+by'+cy=f_0(t)+u(t-t_1)\left(f_1(t)-f_0(t)\right), \quad  y(0)=k_0,\quad y'(0)=k_1,
 \]
 and apply the method of Laplace transforms. We'll now solve
-the problem considered in Example~\ref{example:8.5.1} by this method.
+the problem considered in \zcref{example:8.5.1} by this method.
 
-\begin{example}\label{example:8.5.2}\rm
+\begin{example}\label{example:8.5.2}
 \space Use the Laplace transform to solve the initial value problem
 \begin{equation}\label{eq:8.5.5}
 y''+y=f(t), \quad   y(0)=2,\;  y'(0)=-1,
 \end{equation}
 where
 \[
-f(t)=\left\{\begin{array}{cl}
-\phantom{-}1,&0\le t<\dst{\frac{\pi}{2}},\\
--1,&t\ge\dst{\frac{\pi}{2}}.
-\end{array}\right.
+f(t)=\begin{cases}
+\phantom{-}1,&0\le t<\frac{\pi}{2},\\
+-1,&t\ge\frac{\pi}{2}.
+\end{cases}
 \]
 \end{example}
 
@@ -2831,9 +2834,9 @@ f(t)=\left\{\begin{array}{cl}
 \[
 f(t)=1-2u\left(t-\frac{\pi}{2}\right),
 \]
-so Theorem~\ref{thmtype:8.4.1} (with $g(t)=1$) implies that
+so \zcref{thmtype:8.4.1} (with $g(t)=1$) implies that
 \[
-{\cal L}(f)=\frac{1-2e^{-{\pi s/2}}}{s}.
+\laplace(f)=\frac{1-2e^{-{\pi s/2}}}{s}.
 \]
 Therefore, transforming  \eqref{eq:8.5.5} yields
 \[
@@ -2870,7 +2873,7 @@ Therefore
 g(t)=1-\cos t.
 \]
 From this,  \eqref{eq:8.5.6}, and
-Theorem~\ref{thmtype:8.4.2},
+\zcref{thmtype:8.4.2},
 \[
 y=1-\cos t-2u\left(t-\frac{\pi}{2}\right)\left(1-\cos\left(t-\frac{\pi}{2}\right)\right)+2\cos t-\sin t.
 \]
@@ -2880,37 +2883,37 @@ y=1+\cos t-\sin t-2u\left(t-\frac{\pi}{2}\right)(1-\sin t),
 \]
 or
 \[
-y=\left\{\begin{array}{cl}
-\phantom{-} 1+\cos t-\sin t,&0\le t<\dst{\frac{\pi}{2}},\\
--1+\cos t+\sin t,&t\ge\dst{\frac{\pi}{2}},
-\end{array}\right.
+y=\begin{cases}
+\phantom{-}1+\cos t-\sin t,&0\le t<\frac{\pi}{2},\\
+-1+\cos t+\sin t,&t\ge\frac{\pi}{2},
+\end{cases}
 \]
-which is the result obtained in Example~\ref{example:8.5.1}.
+which is the result obtained in \zcref{example:8.5.1}.
 
 \medskip
 \color{blue}
 \remark{It isn't obvious that using the Laplace transform to solve
-\eqref{eq:8.5.2} as we did in Example~\ref{example:8.5.2} yields a function
-$y$ with the properties stated in Theorem~\ref{thmtype:8.5.1}; that is,
+\eqref{eq:8.5.2} as we did in \zcref{example:8.5.2} yields a function
+$y$ with the properties stated in \zcref{thmtype:8.5.1}; that is,
 such that $y$ and $y'$ are continuous on $[0,\infty)$ and $y''$ has
 limits from the right and left at $t_1$. However, this is
 true if  $f_0$ and $f_1$ are continuous and of exponential order on
 $[0,\infty)$. A proof  is sketched in
-Exercises~8.6.~\hspace*{-3pt}\ref{exer:8.6.11}--8.6.\hspace*{-3pt}\ref{exer:8.6.13}.}
+{Exercises~8.6.\ref{exer:8.6.11}}--8.6.\ref{exer:8.6.13}.}
 \color{black}
 
 
-\begin{example}\label{example:8.5.3}\rm
+\begin{example}\label{example:8.5.3}
 \space Solve the initial value problem
 \begin{equation}\label{eq:8.5.8}
 y''-y=f(t), \quad   y(0)=-1,\;  y'(0)=2,
 \end{equation}
 where
 \[
-f(t)=\left\{\begin{array}{cl}
+f(t)=\begin{cases}
 t,&0\le t<1,\\
 1,&t\ge 1.
-\end{array}\right.
+\end{cases}
 \]
 \end{example}
 
@@ -2919,15 +2922,15 @@ t,&0\le t<1,\\
 f(t)=t-u(t-1)(t-1),
 \]
 so
-\begin{eqnarray*}
-{\cal L}(f)&=&{\cal L}(t)-{\cal L}\left(u(t-1)(t-1)\right)\\[1\jot]
-&=&{\cal L}(t)-e^{-s}{\cal L}(t)\mbox{ (from
-Theorem~\ref{thmtype:8.4.1})}\\[1\jot]
-&=&\frac{1}{s^2}-\frac{e^{-s}}{s^2}.
-\end{eqnarray*}
+\begin{align*}
+\laplace(f)
+&=\laplace(t)-\laplace\left(u(t-1)(t-1)\right)\\
+&=\laplace(t)-e^{-s}\laplace(t)\quad\text{(from \zcref{thmtype:8.4.1})}\\
+&=\frac{1}{s^2}-\frac{e^{-s}}{s^2}.
+\end{align*}
 Since transforming  \eqref{eq:8.5.8} yields
 \[
-(s^2-1) Y(s)={\cal L}(f)+2-s,
+(s^2-1) Y(s)=\laplace(f)+2-s,
 \]
 we see that
 \begin{equation}\label{eq:8.5.9}
@@ -2943,10 +2946,10 @@ h(t)=\sinh t-t.
 \end{equation}
 Since
 \[
-{\cal L}^{-1}\left(\frac{2-s}{s^2-1}\right)=2\sinh t-\cosh t,
+\laplace^{-1}\left(\frac{2-s}{s^2-1}\right)=2\sinh t-\cosh t,
 \]
 we conclude from  \eqref{eq:8.5.9},  \eqref{eq:8.5.10}, and
-Theorem~\ref{thmtype:8.4.1} that
+\zcref{thmtype:8.4.1} that
 \[
 y=\sinh t-t-u(t-1)\left(\sinh (t-1)-t+1\right)+2\sinh t-
 \cosh t,
@@ -2961,18 +2964,18 @@ $t_1=1$.
 
 
 
-\begin{example}\label{example:8.5.4}\rm
+\begin{example}\label{example:8.5.4}
  Solve the initial value problem
 \begin{equation}\label{eq:8.5.12}
 y''+y=f(t), \quad   y(0)=0,\;  y'(0)=0,
 \end{equation}
 where
 \[
-f(t)=\left\{\begin{array}{cl}
- 0,&0\le t<\dst{\frac{\pi}{4}},\\[2\jot]
-\cos2t,&\dst{\frac{\pi}{4}}\le t<\pi,\\[2\jot]
+f(t)=\begin{cases}
+ 0,&0\le t<\frac{\pi}{4},\\
+\cos2t,&\frac{\pi}{4}\le t<\pi,\\
  0,&t\ge\pi.
-\end{array}\right.
+\end{cases}
 \]
 \end{example}
 
@@ -2981,18 +2984,17 @@ f(t)=\left\{\begin{array}{cl}
 f(t)=u(t-\pi/4)\cos2t-u(t-\pi)\cos2t,
 \]
 so
-\begin{eqnarray*}
-{\cal L}(f)&=&{\cal L}\left(u(t-\pi/4)\cos2t\right)-{\cal L}\left(
-u(t-\pi)\cos2t\right)\\[1\jot]
-&=&e^{-{\pi s/4}}{\cal L}\left(\cos2(t+\pi/4)\right)-e^{-\pi s}
-{\cal L}\left(\cos2(t+\pi)\right)\\[1\jot]
-&=&-e^{-{\pi s/4}}{\cal L}(\sin2t)-e^{-\pi s}
-{\cal L}(\cos2t)\\[1\jot]
-&=&-\frac{2e^{-{\pi s/ 4}}}{s^2+4}-\frac{se^{-\pi s}}{s^2+4}.
-\end{eqnarray*}
+\begin{align*}
+\laplace(f)
+&=\laplace\left(u(t-\pi/4)\cos2t\right)-\laplace\left(u(t-\pi)\cos2t\right)\\
+&=e^{-{\pi s/4}}\laplace\left(\cos2(t+\pi/4)\right)
+-e^{-\pi s}\laplace\left(\cos2(t+\pi)\right)\\
+&=-e^{-{\pi s/4}}\laplace(\sin2t)-e^{-\pi s}\laplace(\cos2t)\\
+&=-\frac{2e^{-{\pi s/ 4}}}{s^2+4}-\frac{se^{-\pi s}}{s^2+4}.
+\end{align*}
 Since transforming  \eqref{eq:8.5.12} yields
 \[
-(s^2+1)Y(s)={\cal L}(f),
+(s^2+1)Y(s)=\laplace(f),
 \]
 we see that
 \begin{equation}\label{eq:8.5.13}
@@ -3000,7 +3002,7 @@ Y(s)=e^{-{\pi s/ 4}} H_1(s)+e^{-\pi s} H_2(s),
 \end{equation}
 where
 \begin{equation}\label{eq:8.5.14}
-H_1(s)=-\frac{2}{(s^2+1)(s^2+4)}\quad\mbox{ and }\quad H_2(s)=-\frac{s}{
+H_1(s)=-\frac{2}{(s^2+1)(s^2+4)}\quad\text{and}\quad H_2(s)=-\frac{s}{
 (s^2+1)(s^2+4)}.
 \end{equation}
 To simplify the required partial fraction expansions, we first write
@@ -3010,13 +3012,13 @@ To simplify the required partial fraction expansions, we first write
 Setting $x=s^2$ and substituting the result in  \eqref{eq:8.5.14} yields
 \[
 H_1(s)=-\frac{2}{3}\left[\frac{1}{s^2+1}-\frac{1}{s^2+4}\right]
-\quad\mbox{ and }\quad
+\quad\text{and}\quad
 H_2(s)=-\frac{1}{3}\left[\frac{s}{s^2+1}-\frac{s}{s^2+4}\right].
 \]
 The inverse transforms are
 \[
 h_1(t)=-\frac{2}{3}\sin t+\frac{1}{3}\sin2t
-\quad\mbox{ and }\;
+\quad\text{and}\quad
 h_2(t)=-\frac{1}{3}\cos t+\frac{1}{3}\cos2t.
 \]
 From  \eqref{eq:8.5.13} and Theorem~8.4.2,
@@ -3025,16 +3027,19 @@ y=u\left(t-\frac{\pi}{4}\right) h_1\left(t-\frac{\pi}{4}\right)+
 u(t-\pi) h_2(t-\pi).
 \end{equation}
 Since
-\begin{eqnarray*}
-h_1\left(t-\frac{\pi}{4}\right)&=&-\frac{2}{3}\sin\left(t-\frac{\pi}{4}\right)+\frac{1}{3}\sin2\left(t-\frac{\pi}{4}\right)\\
-&=&-\frac{\sqrt{2}}{3} (\sin t-\cos t)-\frac{1}{3}\cos2t
-\end{eqnarray*}
+\begin{align*}
+h_1\left(t-\frac{\pi}{4}\right)
+&=-\frac{2}{3}\sin\left(t-\frac{\pi}{4}\right)
++\frac{1}{3}\sin2\left(t-\frac{\pi}{4}\right)\\
+&=-\frac{\sqrt{2}}{3} (\sin t-\cos t)-\frac{1}{3}\cos2t
+\end{align*}
 and
-\begin{eqnarray*}
-h_2(t-\pi)&=&-\frac{1}{3}\cos (t-\pi)+\frac{1}{3}\cos2(t-\pi)\\
-&=&\frac{1}{3}\cos t+\frac{1}{3}\cos2t,
-\end{eqnarray*}
- \eqref{eq:8.5.15} can be rewritten as
+\begin{align*}
+h_2(t-\pi)
+&=-\frac{1}{3}\cos (t-\pi)+\frac{1}{3}\cos2(t-\pi)\\
+&=\frac{1}{3}\cos t+\frac{1}{3}\cos2t,
+\end{align*}
+\eqref{eq:8.5.15} can be rewritten as
 \[
 y=-\frac{1}{3}u\left(t-\frac{\pi}{4}\right)\left(\sqrt{2}(\sin
 t-\cos t)+\cos2t\right)
@@ -3042,21 +3047,20 @@ t-\cos t)+\cos2t\right)
 \]
 or
 \begin{equation}\label{eq:8.5.16}
-y=\left\{\begin{array}{cl}
-0,&0\le t<\dst{\frac{\pi}{4}},\\[2\jot]
--\dst{\frac{\sqrt{2}}{3}}(\sin t-\cos t)-\dst{\frac{1}{3}}\cos2t,&\dst\frac{\pi}{4}\le t<\pi,\\[2\jot]
--\dst{ \frac{\sqrt{2}}{3}}\sin t+
-\dst{\frac{1+\sqrt{2}}{3}}\cos t ,&t\ge\pi.
-\end{array}\right.
+y=\begin{cases}
+0,&0\le t<\frac{\pi}{4},\\
+-\frac{\sqrt{2}}{3}(\sin t-\cos t)-\frac{1}{3}\cos2t,&\frac{\pi}{4}\le t<\pi,\\
+-\frac{\sqrt{2}}{3}\sin t+\frac{1+\sqrt{2}}{3}\cos t ,&t\ge\pi.
+\end{cases}
 \end{equation}
 We leave it to you to verify that $y$ and $y'$ are continuous and
 $y''$ has limits from the right and left at $t_1=\pi/4$ and $t_2=\pi$
-(Figure~\ref{figure:8.5.2}).
+(\zcref{figure:8.5.2}).
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080502}
+  \includegraphics[alt={A solution curve for 0<t<2π and -1<y<1 that is 0 for t<1, then curves downward, bottoms out near (3,-0.9), crosses the t axis near t=4.2, peaks near (5.6,1), and finishes near (2π,0.8).},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080502}
   \caption{ Graph of \eqref{eq:8.5.16}}
   \label{figure:8.5.2}
 \end{figure}
@@ -3064,83 +3068,112 @@ $y''$ has limits from the right and left at $t_1=\pi/4$ and $t_2=\pi$
 
 
 \exercises
-\noindent In Exercises~\ref{exer:8.5.1}--\ref{exer:8.5.20} use the Laplace
+\noindent In \zcref[range]{exer:8.5.1,exer:8.5.20} use the Laplace
 transform to solve the initial value problem.
-Where indicated by\\ \CGex, graph the solution.
+Where indicated by \CGex, graph the solution.
 
 \begin{exerciselist}
 
-\item\label{exer:8.5.1}$\dst{y''+y=\left\{\begin{array}{cl} 3,& 0\le
-t<\pi,\\[2\jot] 0,&t\ge\pi,\end{array}\right.\qquad y(0)=0, \quad  y'(0)=0}$
+\item\label{exer:8.5.1}$y''+y=\begin{cases}
+3,& 0\le t<\pi,\\
+0,&t\ge\pi,\end{cases}\qquad y(0)=0, \quad  y'(0)=0$
 
-\item\label{exer:8.5.2}$\dst{y''+y=\left\{\begin{array}{cl} 3,&0\le
-t<4,\\; 2t-5,&t > 4,\end{array}\right.\qquad y(0)=1,\quad y'(0)=0}$
+\item\label{exer:8.5.2}$y''+y=\begin{cases}
+3,&0\le t<4,\\
+2t-5,&t > 4,\end{cases}\qquad y(0)=1,\quad y'(0)=0$
 
-\item\label{exer:8.5.3}$\dst{y''-2y'= \left\{\begin{array}{cl} 4,&0\le
-t<1,\\[2\jot] 6,&t\ge 1,\end{array}\right.\qquad y(0)=-6,\quad y'(0)=1 }$
+\item\label{exer:8.5.3}$y''-2y'=\begin{cases}
+4,&0\le t<1,\\
+6,&t\ge 1,\end{cases}\qquad y(0)=-6,\quad y'(0)=1$
 
-\item\label{exer:8.5.4}$\dst{y''-y=\left\{\begin{array}{cl} e^{2t},&0\le
-t< 2,\\[2\jot] 1,&t\ge 2,\end{array}\right.\qquad y(0)=3,\quad y'(0)=-1
-}$
+\item\label{exer:8.5.4}$y''-y=\begin{cases}
+e^{2t},&0\le t< 2,\\
+1,&t\ge 2,\end{cases}\qquad y(0)=3,\quad y'(0)=-1$
 
-\item\label{exer:8.5.5}$\dst{y''-3y'+2y= \left\{\begin{array}{rl} 0,&0\le
-t<1,\\[2\jot] 1,&1\le t<2,\\[2\jot]-1,&t\ge 2,
-\end{array}\right.\qquad y(0)=-3,\quad y'(0)=1}$
+\item\label{exer:8.5.5}$y''-3y'+2y= \begin{cases}
+0,&0\le t<1,\\
+1,&1\le t<2,\\
+-1,&t\ge 2,
+\end{cases}\qquad y(0)=-3,\quad y'(0)=1$
 
-\item\label{exer:8.5.6}\CGex $\dst{y''+4y= \left\{\begin{array}{cl}|\sin
-t|,&0\le t<2\pi,\\[2\jot] 0,&t\ge 2\pi,\end{array}\right.\qquad
-y(0)=-3,\quad y'(0)=1}$
+\item\label{exer:8.5.6}\CGex $y''+4y=\begin{cases}
+|\sin t|,&0\le t<2\pi,\\
+0,&t\ge 2\pi,
+\end{cases}\qquad y(0)=-3,\quad y'(0)=1$
 
-\item\label{exer:8.5.7}$\dst{y''-5y'+4y= \left\{\begin{array}{rl} 1,&0\le
-t<1\\[2\jot] -1,&1\le t<2,\\[2\jot] 0,&t\ge 2,\end{array}\right.\qquad
-y(0)=3,\quad y'(0)=-5}$
+\item\label{exer:8.5.7}$y''-5y'+4y=\begin{cases}
+1,&0\le t<1\\
+-1,&1\le t<2,\\
+0,&t\ge 2,
+\end{cases}\qquad y(0)=3,\quad y'(0)=-5$
 
-\item\label{exer:8.5.8}$\dst{y''+9y= \left\{\begin{array}{cl} \cos
-t,&0\le t<\dst{\frac{3\pi}{2}},\\[2\jot] \sin
-t,&t\ge\dst{\frac{3\pi}{2}},\end{array}\right.\qquad y(0)=0,\;  y'(0)=0}$
+\item\label{exer:8.5.8}$y''+9y=\begin{cases}
+\cos t,&0\le t<\frac{3\pi}{2},\\
+\sin t,&t\ge\frac{3\pi}{2},
+\end{cases}\qquad y(0)=0,\;  y'(0)=0$
 
-\item\label{exer:8.5.9}\CGex $\dst{y''+4y= \left\{\begin{array}{cl} t,&0\le
-t<\dst\frac{\pi }{2},\\[2\jot]\pi,&t\ge\dst{ \frac{\pi}{2}},
-\end{array}\right.\quad y(0)=0,\quad y'(0)=0}$
+\item\label{exer:8.5.9}\CGex $y''+4y=\begin{cases}
+t,&0\le t<\frac{\pi}{2},\\
+\pi,&t\ge\frac{\pi}{2},
+\end{cases}\quad y(0)=0,\quad y'(0)=0$
 
-\item\label{exer:8.5.10}$\dst{y''+y=\left\{\begin{array}{cl}\phantom{-}t,&0\le t<\pi,
-\\[2\jot]-t,&t\ge\pi ,\end{array}\right.\;  y(0)=0,\;  y'(0)=0}$
+\item\label{exer:8.5.10}$y''+y=\begin{cases}
+\phantom{-}t,&0\le t<\pi,\\
+-t,&t\ge\pi,
+\end{cases}\quad y(0)=0,\quad  y'(0)=0$
 
-\item\label{exer:8.5.11}$\dst{y''-3y'+2y=\left\{\begin{array}{cl} 0,&0\le
-t<2,\\2t-4,&t\ge 2,\end{array}\right. ,\quad y(0)=0,\quad y'(0)=0}$
+\item\label{exer:8.5.11}$y''-3y'+2y=\begin{cases}
+0,&0\le t<2,\\
+2t-4,&t\ge 2,
+\end{cases}\quad y(0)=0,\quad y'(0)=0$
 
-\item\label{exer:8.5.12}$\dst{y''+y=\left\{\begin{array}{cl} t,&0\le
-t<2\pi,\\-2t,&t\ge 2\pi,\end{array}\right.\quad y(0)=1,\quad y'(0)=2}$
+\item\label{exer:8.5.12}$y''+y=\begin{cases}
+t,&0\le t<2\pi,\\
+-2t,&t\ge 2\pi,
+\end{cases}\quad y(0)=1,\quad y'(0)=2$
 
 \item\label{exer:8.5.13}\CGex
-$\dst{y''+3y'+2y=\left\{\begin{array}{cl}\phantom{-}1,&0\le
-t<2,\\-1,&t\ge 2,\end{array}\right.\;  y(0)=0,\;  y'(0)=0}$
+$y''+3y'+2y=\begin{cases}
+\phantom{-}1,&0\le t<2,\\
+-1,&t\ge 2,
+\end{cases}\quad y(0)=0,\quad y'(0)=0$
 
-\item\label{exer:8.5.14}$\dst{y''-4y'+3y=\left\{\begin{array}{cl}-1,&0\le
-t<1,\\\phantom{-}1,&t\ge 1,\end{array}\right.\;  y(0)=0,\;  y'(0)=0}$
+\item\label{exer:8.5.14}$y''-4y'+3y=\begin{cases}
+-1,&0\le t<1,\\
+\phantom{-}1,&t\ge 1,
+\end{cases}\quad y(0)=0,\quad y'(0)=0$
 
-\item\label{exer:8.5.15}$\dst{y''+2y'+y=\left\{\begin{array}{cl}
-e^t,&0\le t<1,\\e^t-1,&t\ge 1,\end{array}\right.\;  y(0)=3,\;
-y'(0)=-1}$
+\item\label{exer:8.5.15}$y''+2y'+y=\begin{cases}
+e^t,&0\le t<1,\\
+e^t-1,&t\ge 1,
+\end{cases}\quad y(0)=3,\quad y'(0)=-1$
 
-\item\label{exer:8.5.16}$\dst{y''+2y'+y=\left\{\begin{array}{cl}
-4e^t,&0\le t<1,\\0,&t\ge 1,\end{array}\right.\;  y(0)=0,\;
-y'(0)=0}$
+\item\label{exer:8.5.16}$y''+2y'+y=\begin{cases}
+4e^t,&0\le t<1,\\
+0,&t\ge 1,
+\end{cases}\quad y(0)=0,\quad y'(0)=0$
 
-\item\label{exer:8.5.17}$\dst{y''+3y'+2y=\left\{\begin{array}{cl}
-e^{-t},&0\le t<1,\\0,&t\ge 1,\end{array}\right.\;  y(0)=1,\;  y'(0)=-1}$
+\item\label{exer:8.5.17}$y''+3y'+2y=\begin{cases}
+e^{-t},&0\le t<1,\\
+0,&t\ge 1,
+\end{cases}\quad y(0)=1,\quad y'(0)=-1$
 
-\item\label{exer:8.5.18}$\dst{y''-4y'+4y=\left\{\begin{array}{rl}
-e^{2t},&0\le t<2,\\-e^{2t},&t\ge 2,\end{array}\right.\;  y(0)=0,\;
-y'(0)=-1}$
+\item\label{exer:8.5.18}$y''-4y'+4y=\begin{cases}
+e^{2t},&0\le t<2,\\
+-e^{2t},&t\ge 2,
+\end{cases}\quad y(0)=0,\quad y'(0)=-1$
 
-\item\label{exer:8.5.19}\CGex $\dst{y''=\left\{\begin{array}{cl}t^2,&0\le
-t<1,\\-t,&1\le t<2,\\t+1,&t\ge 2,\end{array}\right.\;  y(0)=1,\;
-y'(0)=0}$
+\item\label{exer:8.5.19}\CGex $y''=\begin{cases}
+t^2,&0\le t<1,\\
+-t,&1\le t<2,\\
+t+1,&t\ge 2,
+\end{cases}\quad y(0)=1,\quad y'(0)=0$
 
-\item\label{exer:8.5.20}$\dst{y''+2y'+2y=\left\{\begin{array}{rl}1,&0\le
-t<2\pi,\\t,&2\pi\le t<3\pi,\\-1,&t\ge 3\pi,\end{array}\right.\;
-y(0)=2,\quad y'(0)=-1}$
+\item\label{exer:8.5.20}$y''+2y'+2y=\begin{cases}
+1,&0\le t<2\pi,\\
+t,&2\pi\le t<3\pi,\\
+-1,&t\ge 3\pi,
+\end{cases}\quad y(0)=2,\quad y'(0)=-1$
 
 \item\label{exer:8.5.21}Solve the initial value problem \[ y''=f(t), \quad
 y(0)=0,\quad  y'(0)=0, \] where \[ f(t)=m+1,\quad m\le t<m+1,\quad
@@ -3185,14 +3218,14 @@ $y''+2y'+2y=f(t), \quad  y(0)=0,\quad  y'(0)=0$;
 $f(t)=(m+1)(\sin t+2\cos t),\quad  2m\pi\le t<2(m+1)\pi,\quad
 m=0,1,2,\dots.$
 
-(See the hint in \part{d}.)
+(See the hint in (d).)
 
 \item % (f)
 $y''-3y'+2y=f(t), \quad  y(0)=0,\quad y'(0)=0$;
 
 $f(t)=m+1,\quad  m\le t<m+1,\quad m=0,1,2,\dots.$
 
- (See the hints in \part{b} and \part{d}.)
+ (See the hints in (b) and (d).)
 \end{alist}
 
 
@@ -3204,20 +3237,20 @@ and $(t_0,\beta)$. Suppose $A=\lim_{t\to t_0-}g'(t)$
 and $B=\lim_{t\to t_0+}g'(t)$ both exist. Use the mean value theorem
 to show that
 \[
-\lim_{t\to t_0-}\frac{g(t)-g(t_0)}{t-t_0}=A\quad\mbox{ and }\quad
+\lim_{t\to t_0-}\frac{g(t)-g(t_0)}{t-t_0}=A\quad\text{and}\quad
 \lim_{t\to t_0+}\frac{g(t)-g(t_0)}{t-t_0}=B.
 \]
 \item % (b)
-Conclude from \part{a} that $g'(t_0)$ exists and $g'$ is continuous at
+Conclude from (a) that $g'(t_0)$ exists and $g'$ is continuous at
 $t_0$ if $A=B$.
 
 \item % (c)
-Conclude from \part{a}
+Conclude from (a)
  that if $g$  is differentiable on $(\alpha,\beta)$ then
 $g'$ can't have a jump discontinuity on $(\alpha,\beta)$.
 \end{alist}
 
-\item\label{exer:8.5.24}\begin{alist}
+\item\label{exer:8.5.24}\begin{alist}[above=-\baselineskip]
 \item % (a)
 Let $a$, $b$, and $c$ be constants, with $a\ne0$. Let $f$ be piecewise
 continuous on an interval $(\alpha,\beta)$, with a single jump
@@ -3234,7 +3267,7 @@ Show that
 y''(t_0+)-y''(t_0-)=\frac{f(t_0+)-f(t_0-)}{a}\ne0.
 \]
 \item % (b)
-Use \part{a}  and Exercise~\ref{exer:8.5.23}\part{c} to show that
+Use (a) and \zcref{exer:8.5.23}(c) to show that
 (A)
 does not  have  solutions on any interval $(\alpha,\beta)$ that contains
 a jump discontinuity of $f$.
@@ -3247,8 +3280,8 @@ Show that the differential equation
 \[
 P_0(t)y''+P_1(t)y'+P_2(t)y=F(t)
 \]
-has no solutions on $(a,b)$.\hint{Generalize the result of
-Exercise~$\ref{exer:8.5.24}$ and use Exercise~$\ref{exer:8.5.23}\part{c}$.}
+has no solutions on $(a,b)$. \hint{Generalize the result of
+\zcref{exer:8.5.24} and use \zcref{exer:8.5.23}(c).}
 
 
 \item\label{exer:8.5.26}Let $0=t_0<t_1<\cdots <t_n$. Suppose $f_m$ is continuous
@@ -3256,25 +3289,25 @@ on $[t_m,\infty)$ for $m=1,\dots,n$.
  Let
 \[
 f(t)=
-\left\{\begin{array}{cl}
+\begin{cases}
 f_m(t),&t_m\le t< t_{m+1},\quad m=1,\dots,n-1,\\
 f_n(t),&t\ge t_n.
-\end{array}\right.
+\end{cases}
 \]
 Show that the
 solution of
 \[
 ay''+by'+cy=f(t), \quad  y(0)=k_0,\quad y'(0)=k_1,
 \]
-as defined following  Theorem~8.5.1, is given by
+as defined following \zcref{thmtype:8.5.1}, is given by
 \[
-y=\left\{\begin{array}{cl}
- z_0(t),&0\le t<t_1,\\[1\jot]
+y=\begin{cases}
+ z_0(t),&0\le t<t_1,\\
 z_0(t)+ z_1(t),&t_1\le t<t_2,\\
-&\vdots\\
-z_0+\cdots+z_{n-1}(t),&t_{n-1}\le t<t_n,\\[1\jot]
-z_0+\cdots+ z_n(t),&t\ge t_n,
-\end{array}\right.
+\quad\vdots&\quad\vdots\\
+z_0(t)+\cdots+z_{n-1}(t),&t_{n-1}\le t<t_n,\\
+z_0(t)+\cdots+ z_n(t),&t\ge t_n,
+\end{cases}
 \]
 where $z_0$ is the solution of
 \[
@@ -3288,7 +3321,7 @@ for $m=1,\dots,n$.
 \end{exerciselist}
 
 
-\section{Convolution}
+\section{Convolution}\label{sec:laplace_convolution}
 
 In this section we consider the problem of finding the inverse Laplace
 transform of a product $H(s)=F(s)G(s)$, where $F$ and $G$ are the
@@ -3314,12 +3347,12 @@ Until now wen't been interested in the factorization indicated
 in \eqref{eq:8.6.1}, since we dealt only with differential equations
 with specific forcing functions. Hence, we could simply do the
 indicated multiplication in \eqref{eq:8.6.1} and use the table of Laplace
-transforms to find $y={\cal L}^{-1}(Y)$. However, this isn't  possible
+transforms to find $y=\laplace^{-1}(Y)$. However, this isn't  possible
 if we want a \emph{\color{blue}formula} for $y$ in terms of $f$, which may be
 unspecified.
 
 
-To motivate the formula for ${\cal L}^{-1}(FG)$, consider the initial
+To motivate the formula for $\laplace^{-1}(FG)$, consider the initial
 value problem
 \begin{equation}\label{eq:8.6.2}
 y'-ay=f(t),\quad  y(0)=0,
@@ -3353,7 +3386,7 @@ Y(s)=F(s) \frac{1}{s-a},
 \]
 which implies that
 \begin{equation}\label{eq:8.6.4}
-y(t)= {\cal L}^{-1}\left(F(s)\frac{1}{s-a}\right).
+y(t)= \laplace^{-1}\left(F(s)\frac{1}{s-a}\right).
 \end{equation}
 If we now let $g(t)=e^{at}$, so that
 \[
@@ -3365,18 +3398,18 @@ y(t)=\int_0^tf(\tau)g(t-\tau)\,d\tau
 \]
 and
 \[
-y={\cal L}^{-1}(FG),
+y=\laplace^{-1}(FG),
 \]
 respectively.  Therefore
 \begin{equation}\label{eq:8.6.5}
-{\cal L}^{-1}(FG)=\int_0^t f(\tau)g(t-\tau)\,d\tau
+\laplace^{-1}(FG)=\int_0^t f(\tau)g(t-\tau)\,d\tau
 \end{equation}
 in this case.
 
 This motivates  the next definition.
 
-\begin{definition}\color{blue} \label{thmtype:8.6.1}
-\rm The \emph{\color{blue}convolution} $f*g$ of two functions $f$
+\begin{definition}\label{thmtype:8.6.1}
+The \emph{\color{blue}convolution} $f*g$ of two functions $f$
 and $g$ is defined by
 \[
 (f*g)(t)=\int_0^t f(\tau)g(t-\tau)\,d\tau.
@@ -3384,22 +3417,21 @@ and $g$ is defined by
 \end{definition}
 
 
-It can be shown (Exercise~\ref{exer:8.6.6}) that $f\ast g=g\ast f$;   that
+It can be shown (\zcref{exer:8.6.6}) that $f\ast g=g\ast f$;   that
 is,
 \[
 \int_0^tf(t-\tau)g(\tau)\,d\tau=\int_0^tf(\tau)g(t-\tau)\,d\tau.
 \]
 
 
-Eqn.~\eqref{eq:8.6.5} shows that ${\cal L}^{-1}(FG)=f*g$ in the special
+\zcref[S]{eq:8.6.5} shows that $\laplace^{-1}(FG)=f*g$ in the special
 case where $g(t)=e^{at}$. This next theorem states that this is
 true in general.
 
-\begin{theorem}\color{blue}$[$The Convolution
-Theorem$]$\label{thmtype:8.6.2}
-If ${\cal L}(f)=F$  and ${\cal L}(g)=G,$ then
+\begin{theorem}[The Convolution Theorem]\label{thmtype:8.6.2}
+If $\laplace(f)=F$  and $\laplace(g)=G,$ then
 \[
-{\cal L}(f*g)=FG.
+\laplace(f*g)=FG.
 \]
 \end{theorem}
 
@@ -3408,83 +3440,80 @@ this book. However, we'll assume that $f\ast g$ has a Laplace
 transform and verify the conclusion of the theorem in a purely
 computational way. By the definition of the Laplace transform,
 \[
-{\cal L}(f\ast g)=\int_0^\infty e^{-st}(f\ast g)(t)\,dt=\int_0^\infty
+\laplace(f\ast g)=\int_0^\infty e^{-st}(f\ast g)(t)\,dt=\int_0^\infty
 e^{-st}
 \int_0^t f(\tau)g(t-\tau)\,d\tau\,dt.
 \]
 This iterated integral equals a double integral over the region shown
-in Figure~\ref{figure:8.6.1}. Reversing the order of integration yields
+in \zcref{figure:8.6.1}. Reversing the order of integration yields
 \begin{equation}\label{eq:8.6.6}
-{\cal L}(f*g)=\int_0^\infty f(\tau)\int^\infty_\tau e^{-st}g(t-\tau)\,
+\laplace(f*g)=\int_0^\infty f(\tau)\int^\infty_\tau e^{-st}g(t-\tau)\,
 dt
 \,d\tau.
 \end{equation}
 However, the substitution $x=t-\tau$ shows that
-\begin{eqnarray*}
-\int^\infty_\tau e^{-st}g(t-\tau)\,dt&=&\int_0^\infty
-e^{-s(x+\tau)}g(x)\,dx\\
-&=&e^{-s\tau}\int_0^\infty e^{-sx}g(x)\,dx=e^{-s\tau}G(s).
-\end{eqnarray*}
+\begin{align*}
+\int^\infty_\tau e^{-st}g(t-\tau)\,dt
+&=\int_0^\infty e^{-s(x+\tau)}g(x)\,dx\\
+&=e^{-s\tau}\int_0^\infty e^{-sx}g(x)\,dx=e^{-s\tau}G(s).
+\end{align*}
 Substituting this into  \eqref{eq:8.6.6} and noting that $G(s)$ is
 independent of $\tau$ yields
-\begin{eqnarray*}
-{\cal L}(f\ast g)&=&\int_0^\infty e^{-s\tau} f(\tau)G(s)\,d\tau\\
-&=&G(s)\int_0^\infty e^{-st}f(\tau)\,d\tau=F(s)G(s).
-\end{eqnarray*}
+\begin{align*}
+\laplace(f\ast g)
+&=\int_0^\infty e^{-s\tau} f(\tau)G(s)\,d\tau\\
+&=G(s)\int_0^\infty e^{-st}f(\tau)\,d\tau=F(s)G(s).
+\end{align*}
 
-
-
-\
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080601}
+  \includegraphics[alt={A graph of t=𝜏 with the region where 𝜏<t shaded.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080601}
   \caption{}
   \label{figure:8.6.1}
 \end{figure}
 
-\begin{example}\label{example:8.6.1}\rm
+\begin{example}\label{example:8.6.1}
  Let
 \[
 f(t)=e^{at}\quad\text{and}\quad   g(t)=e^{bt}\qquad (a\ne b).
 \]
-Verify that ${\cal L}(f\ast g)={\cal L}(f){\cal L}(g)$, as
+Verify that $\laplace(f\ast g)=\laplace(f)\laplace(g)$, as
 implied by the convolution theorem.
 \end{example}
 
 \solution
 We first compute
-\[
-\begin{array}{ccccc}
-(f\ast g)(t)&=&\dst\int_0^t e^{a\tau}e^{b(t-\tau)}\,d\tau
-&=&\dst e^{bt}\int_0^t e^{(a-b)\tau} d\tau\\[2\jot]
-&=&\dst{e^{bt}\frac{e^{(a-b)\tau}}{a-b}\,\bigg|^t_0}&=&
-\dst\frac{e^{bt}\left[e^{(a-b)t}-1\right]}{a-b}\\[2\jot]
-&=&\dst\frac{e^{at}-e^{bt}}{a-b}.
-\end{array}
-\]
+\begin{alignat*}{2}
+(f\ast g)(t)
+&=\dst\int_0^t e^{a\tau}e^{b(t-\tau)}\,d\tau
+&&=\dst e^{bt}\int_0^t e^{(a-b)\tau} d\tau\\
+&=\dst{e^{bt}\frac{e^{(a-b)\tau}}{a-b}\,\bigg|^t_0}
+&&=\dst\frac{e^{bt}\left[e^{(a-b)t}-1\right]}{a-b}\\
+&=\dst\frac{e^{at}-e^{bt}}{a-b}.
+\end{alignat*}
 Since
 \[
-e^{at}\leftrightarrow \frac{1}{s-a}\quad\mbox{ and }\quad
+e^{at}\leftrightarrow \frac{1}{s-a}\quad\text{and}\quad
 e^{bt}\leftrightarrow \frac{1}{s-b},
 \]
 it follows that
-\begin{eqnarray*}
-{\cal L}(f\ast g)&=&\frac{1}{a-b}\left[\frac{1}{s-a}-\frac{1}{s-b}\right]\\[10pt ]
-&=&\frac{1}{(s-a)(s-b)}\\ [2\jot]
-&=&{\cal L}(e^{at}){\cal L}(e^{bt})={\cal L}(f){\cal L}(g).
-\end{eqnarray*}
+\begin{align*}
+\laplace(f\ast g)
+&=\frac{1}{a-b}\left[\frac{1}{s-a}-\frac{1}{s-b}\right]\\
+&=\frac{1}{(s-a)(s-b)}\\
+&=\laplace(e^{at})\laplace(e^{bt})=\laplace(f)\laplace(g).
+\end{align*}
 
 
 \boxit{A Formula for the Solution of an Initial Value Problem}
 
-
-\noindent
 The convolution theorem provides a formula for the
 solution of an initial value problem for a linear constant coefficient
 second order equation with an unspecified.
 The next three examples illustrate this.
 
-\begin{example}\label{example:8.6.2}\rm
+\begin{example}\label{example:8.6.2}
  Find a formula for the solution of the initial value problem
 \begin{equation}\label{eq:8.6.7}
 y''-2y'+y=f(t),\quad  y(0)=k_0,\quad y'(0)=k_1.
@@ -3496,23 +3525,23 @@ y''-2y'+y=f(t),\quad  y(0)=k_0,\quad y'(0)=k_1.
 (s^2-2s+1)Y(s)=F(s)+(k_1+k_0s)-2k_0.
 \]
 Therefore
-\begin{eqnarray*}
-Y(s)&=&\frac{1}{(s-1)^2}F(s)+\frac{k_1+k_0s-2k_0}{(s-1)^2}\\[2\jot]
-&=&\frac{1}{(s-1)^2}F(s)+\frac{k_0}{s-1}+\frac{k_1-k_0}{(s-1)^2}.
-\end{eqnarray*}
+\begin{align*}
+Y(s)&=\frac{1}{(s-1)^2}F(s)+\frac{k_1+k_0s-2k_0}{(s-1)^2}\\
+&=\frac{1}{(s-1)^2}F(s)+\frac{k_0}{s-1}+\frac{k_1-k_0}{(s-1)^2}.
+\end{align*}
 From the table of Laplace transforms,
 \[
-{\cal L}^{-1}\left(\frac{k_0}{s-1}+\frac{k_1-k_0}{(s-1)^2}\right)
+\laplace^{-1}\left(\frac{k_0}{s-1}+\frac{k_1-k_0}{(s-1)^2}\right)
 =e^t\left(k_0+(k_1-k_0)t\right).
 \]
 Since
 \[
-\frac{1}{(s-1)^2}\leftrightarrow te^t\mbox{\quad  and \quad } F(s)
+\frac{1}{(s-1)^2}\leftrightarrow te^t\quad\text{and}\quad F(s)
 \leftrightarrow f(t),
 \]
 the convolution theorem implies that
 \[
-{\cal L}^{-1}
+\laplace^{-1}
 \left(\frac{1}{(s-1)^2}F(s)\right)=
 \int_0^t\tau e^\tau f(t-\tau)\,d\tau.
 \]
@@ -3522,7 +3551,7 @@ y(t)=e^t\left(k_0+(k_1-k_0)t\right)+\int_0^t\tau e^\tau f(t-\tau)\,
 d\tau.
 \]
 
-\begin{example}\label{example:8.6.3}\rm
+\begin{example}\label{example:8.6.3}
  Find a formula for the solution of the initial value problem
 \begin{equation}\label{eq:8.6.8}
 y''+4y=f(t),\quad y(0)=k_0,\quad y'(0)=k_1.
@@ -3539,7 +3568,7 @@ Y(s) =\frac{1}{(s^2+4)}F(s)+\frac{k_1+k_0s}{s^2+4}.
 \]
 From the table of Laplace transforms,
 \[
-{\cal L}^{-1}\left(\frac{k_1+k_0s}{s^2+4}\right)=k_0\cos 2t+\frac{k_1}{2}\sin 2t.
+\laplace^{-1}\left(\frac{k_1+k_0s}{s^2+4}\right)=k_0\cos 2t+\frac{k_1}{2}\sin 2t.
 \]
 Since
 \[
@@ -3548,7 +3577,7 @@ F(s)\leftrightarrow f(t),
 \]
 the convolution theorem implies that
 \[
-{\cal L}^{-1}\left(\frac{1}{(s^2+4)}F(s)\right)=
+\laplace^{-1}\left(\frac{1}{(s^2+4)}F(s)\right)=
  \frac{1}{2}\int_0^t  f(t-\tau)\sin 2\tau\,
 d\tau.
 \]
@@ -3558,7 +3587,7 @@ y(t)=k_0\cos 2t+\frac{k_1}{2}\sin 2t+\frac{1}{2}\int_0^tf(t-\tau)\sin
 2\tau\,d\tau.
 \]
 
-\begin{example}\label{example:8.6.4}\rm
+\begin{example}\label{example:8.6.4}
   Find a formula for the solution of the initial value problem
 \begin{equation}\label{eq:8.6.9}
 y''+2y'+2y=f(t),\quad y(0)=k_0,\quad y'(0)=k_1.
@@ -3570,13 +3599,13 @@ y''+2y'+2y=f(t),\quad y(0)=k_0,\quad y'(0)=k_1.
 (s^2+2s+2)Y(s)=F(s)+k_1+k_0s+2k_0.
 \]
 Therefore
-\begin{eqnarray*}
-Y(s)&=&\frac{1}{(s+1)^2+1}F(s)+\frac{k_1+k_0s+2k_0}{(s+1)^2+1}\\[2\jot]
-&=&\frac{1}{(s+1)^2+1}F(s)+\frac{(k_1+k_0)+k_0(s+1)}{(s+1)^2+1}.
-\end{eqnarray*}
+\begin{align*}
+Y(s)&=\frac{1}{(s+1)^2+1}F(s)+\frac{k_1+k_0s+2k_0}{(s+1)^2+1}\\
+&=\frac{1}{(s+1)^2+1}F(s)+\frac{(k_1+k_0)+k_0(s+1)}{(s+1)^2+1}.
+\end{align*}
 From the table of Laplace transforms,
 \[
-{\cal L}^{-1}\left(\frac{(k_1+k_0)+k_0(s+1)}{(s+1)^2+1}\right)=
+\laplace^{-1}\left(\frac{(k_1+k_0)+k_0(s+1)}{(s+1)^2+1}\right)=
 e^{-t}\left((k_1+k_0)\sin t+k_0\cos t\right).
 \]
 Since
@@ -3586,7 +3615,7 @@ Since
 \]
 the convolution theorem implies that
 \[
-{\cal L}^{-1}\left(\frac{1}{(s+1)^2+1}F(s)\right)=
+\laplace^{-1}\left(\frac{1}{(s+1)^2+1}F(s)\right)=
 \int_0^t  f(t-\tau)e^{-\tau}\sin\tau
 \,d\tau.
 \]
@@ -3596,16 +3625,15 @@ y(t)=e^{-t}\left((k_1+k_0)\sin t+k_0\cos
 t\right)+\int_0^tf(t-\tau)e^{-\tau}\sin\tau\,d\tau.
 \end{equation}
 
+
 \boxit{Evaluating Convolution Integrals}
 
-
-\noindent
 We'll say that an integral of the form $\int_0^t
 u(\tau)v(t-\tau)\,d\tau$ is a \emph{\color{blue}convolution integral}. The
 convolution theorem provides a convenient way to evaluate convolution
 integrals.
 
-\begin{example}\label{example:8.6.5}\rm
+\begin{example}\label{example:8.6.5}
  Evaluate the convolution integral
 \[
 h(t)=\int_0^t(t-\tau)^5\tau^7 d\tau.
@@ -3617,7 +3645,7 @@ $(t-\tau)^5$ in powers of $\tau$ and then integrating. However, the
 convolution theorem provides an easier way. The integral is the
 convolution of $f(t)=t^5$ and $g(t)=t^7$. Since
 \[
-t^5\leftrightarrow \frac{5!}{s^6}\quad\mbox{ and }\quad  t^7
+t^5\leftrightarrow \frac{5!}{s^6}\quad\text{and}\quad  t^7
 \leftrightarrow \frac{7!}{s^8},
 \]
 the convolution theorem implies that
@@ -3634,7 +3662,7 @@ Hence,
 h(t)=\frac{5!7!}{13!}\, t^{13}.
 \]
 
-\begin{example}\label{example:8.6.6}\rm
+\begin{example}\label{example:8.6.6}
 Use the convolution theorem and a partial fraction expansion to
 evaluate the convolution integral
 \[
@@ -3644,7 +3672,7 @@ h(t)=\int_0^t\sin a(t-\tau)\cos b\tau\,d\tau\quad (|a|\ne |b|).
 
 \solution  Since
 \[
-\sin at\leftrightarrow \frac{a}{s^2+a^2}\quad\mbox{and}\quad
+\sin at\leftrightarrow \frac{a}{s^2+a^2}\quad\text{and}\quad
 \cos bt\leftrightarrow \frac{s}{s^2+b^2},
 \]
  the convolution theorem implies that
@@ -3660,10 +3688,9 @@ Therefore
 h(t)=\frac{a}{b^2-a^2}\left(\cos at-\cos bt\right).
 \]
 
+
 \boxit{Volterra Integral Equations}
 
-
-\noindent
 An equation of the form
 \begin{equation}\label{eq:8.6.11}
 y(t)=f(t)+\int_0^t k(t-\tau) y(\tau)\,d\tau
@@ -3684,9 +3711,9 @@ and solving this for $Y(s)$ yields
 Y(s)=\frac{F(s)}{1-K(s)}.
 \]
 We  then obtain the solution of  \eqref{eq:8.6.11} as
- $y={\cal L}^{-1}(Y)$.
+ $y=\laplace^{-1}(Y)$.
 
-\begin{example}\label{example:8.6.7}\rm
+\begin{example}\label{example:8.6.7}
  Solve the integral equation
 \begin{equation}\label{eq:8.6.12}
 y(t)=1+2\int_0^t e^{-2(t-\tau)} y(\tau)\,d\tau.
@@ -3709,21 +3736,19 @@ y(t)=1+2t.
 
 \boxit{Transfer Functions}
 
-
-\noindent
 The next theorem presents a formula for the solution of
 the general initial value problem
 \[
 ay''+by'+cy=f(t),\quad y(0)=k_0,\quad y'(0)=k_1,
 \]
 where we assume for simplicity that $f$ is continuous on $[0,\infty)$
-and that ${\cal L}(f)$ exists. In
-Exercises~\ref{exer:8.6.11}--\ref{exer:8.6.14} it's shown that the formula is
+and that $\laplace(f)$ exists. In
+\zcref[range]{exer:8.6.11,exer:8.6.14} it's shown that the formula is
 valid under much weaker conditions on $f$.
 
 \begin{theorem}\color{blue}\label{thmtype:8.6.3}
 Suppose $f$  is continuous on $[0,\infty)$ and has a Laplace
-transform$.$ Then the solution of the initial value problem
+transform. Then the solution of the initial value problem
 \begin{equation}\label{eq:8.6.13}
 ay''+by'+cy=f(t),\quad y(0)=k_0,\quad y'(0)=k_1,
 \end{equation}
@@ -3770,7 +3795,7 @@ V(s)=\frac{a(k_1+k_0s)+bk_0}{p(s)}.
 
 Taking Laplace transforms in  \eqref{eq:8.6.15} and  \eqref{eq:8.6.16} shows that
 \[
-p(s)Y_1(s)=as+b\quad\mbox{and}\quad p(s)Y_2(s)=a.
+p(s)Y_1(s)=as+b\quad\text{and}\quad p(s)Y_2(s)=a.
 \]
 Therefore
 \[
@@ -3819,13 +3844,13 @@ essentially independent of the values of $f(t-\tau)$ for large $\tau$,
 since $\lim_{\tau\to\infty}w(\tau)=0$. In this case we say that $v$
 and $h$ are \emph{\color{blue}transient} and \emph{\color{blue}steady state components},
 respectively, of the solution $y$ of \eqref{eq:8.6.13}. These definitions
-apply to the initial value problem of Example~\ref{example:8.6.4}, where
+apply to the initial value problem of \zcref{example:8.6.4}, where
 the zeros of
 \[
 p(s)=s^2+2s+2=(s+1)^2+1
 \]
 are $-1\pm i$. From  \eqref{eq:8.6.10}, we see that the solution of the
-general initial value problem  of Example~\ref{example:8.6.4} is $y=v+h$,
+general initial value problem  of \zcref{example:8.6.4} is $y=v+h$,
 where
 \[
 v(t)=e^{-t}\left((k_1+k_0)\sin t+k_0\cos t\right)
@@ -3835,13 +3860,12 @@ is the transient component of the solution and
 h(t)=\int_0^t f(t-\tau)e^{-\tau}\sin\tau\,d\tau
 \]
 is the steady state component. The definitions don't apply to the initial
-value problems  considered in Examples~\ref{example:8.6.2} and
-\ref{example:8.6.3}, since the zeros of the characteristic polynomials
+value problems  considered in \zcref{example:8.6.2,example:8.6.3}, since the zeros of the characteristic polynomials
 in these two examples don't have negative real parts.
 
 In physical applications where the input $f$ and the output $y$ of a
 device are related by \eqref{eq:8.6.13}, the zeros of the characteristic
-polynomial usually do have negative real parts. Then $W={\cal L}(w)$
+polynomial usually do have negative real parts. Then $W=\laplace(w)$
 is called the \emph{\color{blue}transfer function} of the device. Since
 \[
 H(s)=W(s)F(s),
@@ -3863,7 +3887,7 @@ called the \emph{\color{blue}impulse response} of the device, for reasons
 discussed in the next section.
 
 Formula \eqref{eq:8.6.14} is given in more detail in
-Exercises~\ref{exer:8.6.8}--\ref{exer:8.6.10} for the three possible cases
+\zcref[range]{exer:8.6.8,exer:8.6.10} for the three possible cases
 where the zeros of $p(s)$ are real and distinct, real and repeated, or
 complex conjugates, respectively.
 
@@ -3968,11 +3992,11 @@ distinct real zeros $r_1$ and $r_2$ then
 ay''+by'+cy=f(t),\quad y(0)=k_0,\quad y'(0)=k_1
 \]
 is
-\begin{eqnarray*}
-y(t)&=&\; k_0\frac{r_2e^{r_1t}-r_1e^{r_2t}}{r_2-r_1}+k_1\frac{e^{r_2t}-e^{r_1t}}{r_2-r_1}
-\\
-&&+\frac{1}{a(r_2-r_1)}\int_0^t(e^{r_2\tau}-e^{r_1\tau})f(t-\tau)\,d\tau.
-\end{eqnarray*}
+\[
+y(t)=k_0\frac{r_2e^{r_1t}-r_1e^{r_2t}}{r_2-r_1}
++k_1\frac{e^{r_2t}-e^{r_1t}}{r_2-r_1}
++\frac{1}{a(r_2-r_1)}\int_0^t(e^{r_2\tau}-e^{r_1\tau})f(t-\tau)\,d\tau.
+\]
 
 \item\label{exer:8.6.9}Show that if $p(s)=as^2+bs+c$ has
 a repeated  real zero $r_1$ then
@@ -3994,18 +4018,17 @@ then the solution of
 ay''+by'+cy=f(t),\quad y(0)=k_0,\quad y'(0)=k_1
 \]
 is
-\begin{eqnarray*}
-y(t)&=&\;  e^{\lambda t}\left[k_0(\cos\omega t-\frac{\lambda}{\omega}\sin\omega
-t)+\frac{k_1}{\omega}\sin\omega t\right]
-\\
-&&+\frac{1}{a\omega}\int_0^te^{\lambda t}f(t-\tau)\sin\omega\tau\,
-d\tau.
-\end{eqnarray*}
+\[
+y(t)
+=e^{\lambda t}\left[k_0(\cos\omega t-\frac{\lambda}{\omega}\sin\omega t)
++\frac{k_1}{\omega}\sin\omega t\right]
++\frac{1}{a\omega}\int_0^te^{\lambda t}f(t-\tau)\sin\omega\tau\,d\tau.
+\]
 
 
 \item\label{exer:8.6.11}Let
 \[
-w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right),
+w=\laplace^{-1}\left(\frac{1}{as^2+bs+c}\right),
 \]
 where $a,b$, and $c$ are constants and $a\ne0$.
 \begin{alist}
@@ -4027,8 +4050,8 @@ respect to a parameter to show  that $h$ is the solution of
 ah''+bh'+ch=f,\quad h(0)=0,\quad h'(0)=0.
 \]
 \item % (c)
- Show that the function $y$ in  Eqn.~\eqref{eq:8.6.14} is the solution of
-Eqn.~\eqref{eq:8.6.13} provided that $f$ is continuous on $[0,\infty)$;
+ Show that the function $y$ in  \zcref{eq:8.6.14} is the solution of
+\zcref{eq:8.6.13} provided that $f$ is continuous on $[0,\infty)$;
 thus, it's not necessary to assume that $f$ has a Laplace transform.
 \end{alist}
 
@@ -4039,8 +4062,10 @@ ay''+by'+cy=f(t),\quad y(0)=0,\quad y'(0)=0,
 \]
 where $a,b$, and $c$ are constants, $a\ne0$, and
 \[
-f(t)=\left\{\begin{array}{cc}f_0(t),&0\le t<t_1,\\[5pt]
-f_1(t),&t\ge t_1.\end{array}\right.
+f(t)=\begin{cases}
+f_0(t),&0\le t<t_1,\\
+f_1(t),&t\ge t_1.
+\end{cases}
 \]
 Assume that $f_0$ is continuous and of exponential order on $[0,\infty)$
 and $f_1$ is continuous and of exponential order on $[t_1,\infty)$.
@@ -4057,8 +4082,8 @@ Y(s)=\frac{F_0(s)+e^{-st_1}G(s)}{p(s)}
 \]
 where  $g(t)=f_1(t+t_1)-f_0(t+t_1)$.
 \item % (b)
-Let $w$ be as in Exercise~\ref{exer:8.6.11}.
-Use Theorem~\ref{thmtype:8.4.2} and the convolution theorem
+Let $w$ be as in \zcref{exer:8.6.11}.
+Use \zcref{thmtype:8.4.2} and the convolution theorem
 to show that the solution of  (A) is
 \[
 y(t)=\int_0^t
@@ -4069,8 +4094,7 @@ for $t>0$.
 \item % (c)
 Henceforth,  assume only that $f_0$ is continuous on $[0,\infty)$ and $f_1$
  is continuous on $[t_1,\infty)$.
- Use  Exercise~\ref{exer:8.6.11} \part{a} and
-\part{b} to show that
+ Use  \zcref{exer:8.6.11} (a) and (b) to show that
 \[
 y'(t)=\int_0^t
 w'(t-\tau)f_0(\tau)\,d\tau+u(t-t_1)\int_0^{t-t_1}
@@ -4091,20 +4115,20 @@ Show that $y$ and $y'$ are continuous on $[0,\infty)$.
 
 \item\label{exer:8.6.13}Suppose
 \[
-f(t)=\left\{\begin{array}{cl}
- f_0(t),&0\le t < t_1,\\[5pt]
+f(t)=\begin{cases}
+ f_0(t),&0\le t < t_1,\\
  f_1(t),&t_1\le t < t_2,\\
-&\vdots\\
+\quad\vdots&\quad\vdots\\
 f_{k-1}(t),&t_{k-1}\le t < t_k,\\[5pt]
  f_k(t),&t\ge t_k,
-\end{array}\right.
+\end{cases}
 \]
 where  $f_m$ is continuous on $[t_m,\infty)$ for $m=0,\dots,k$
 (let $t_0=0$),  and define
 \[
 g_m(t)=f_m(t+t_m)-f_{m-1}(t+t_m) ,\, m=1,\dots,k.
 \]
-Extend the results of Exercise~\ref{exer:8.6.12} to show that
+Extend the results of \zcref{exer:8.6.12} to show that
 the solution of
 \[
 ay''+by'+cy=f(t),\quad y(0)=0,\quad y'(0)=0
@@ -4127,7 +4151,7 @@ Let
 \[
 g_m(t)=f_m(t+t_m)-f_{m-1}(t+t_m),\quad  m=1,\dots,k.
 \]
-Extend the results of Exercise~\ref{exer:8.6.13} to show that the solution
+Extend the results of \zcref{exer:8.6.13} to show that the solution
 of
 \[
 ay''+by'+cy=f(t),\quad y(0)=0,\quad y'(0)=0
@@ -4138,12 +4162,12 @@ y(t)=\int_0^t w(t-\tau)f_0(\tau)\,d\tau+\sum_{m=1}^\infty u(t-t_m)
 \int_0^{t-t_m}w(t-t_m-\tau)g_m(\tau)
 \,d\tau.
 \]
-\hint{See Exercise{\ref{exer:8.4.30}.}}
+\hint{See {Exercise~8.4.\ref{exer:8.4.30}}.}
 
 \end{exerciselist}
 
 
-\section{Constant Coefficient Equations with Impulses}
+\section{Constant Coefficient Equations with Impulses}\label{sec:laplace_impulse}
 
 So far in this chapter, we've considered initial value problems
 for the constant coefficient equation
@@ -4200,25 +4224,28 @@ ay_h''+by_h'+cy_h=f_h(t), \quad  y_h(0)=0,\quad y_h'(0)=0,
 \end{equation}
 where
 \begin{equation} \label{eq:8.7.2}
-f_h(t)=\left\{\begin{array}{cl} 0,&0\le t<t_0,\\[2\jot]
-1/h,&t_0\le t< t_0+h,\\[2\jot]
-0,&t\ge t_0+h,\end{array}\right.
+f_h(t)=\begin{cases}
+0,&0\le t<t_0,\\
+1/h,&t_0\le t< t_0+h,\\
+0,&t\ge t_0+h,
+\end{cases}
 \end{equation}
  so  $f_h$ has unit total impulse
-equal to the area of the shaded rectangle in Figure~$\ref{figure:8.7.1}$.
+equal to the area of the shaded rectangle in \zcref{figure:8.7.1}.
 Then
 \begin{equation} \label{eq:8.7.3}
 \lim_{h\to0+}y_h(t)=u(t-t_0)w(t-t_0),
 \end{equation}
 where
 \[
-w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right).
+w=\laplace^{-1}\left(\frac{1}{as^2+bs+c}\right).
 \]
 \end{theorem}
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080701}
+  \includegraphics[alt={A rectangle with base from t naught to t naught + h and height 1/h.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080701}
 \caption{  $y=f_h(t)$}
   \label{figure:8.7.1}
 \end{figure}
@@ -4241,26 +4268,26 @@ y_h(t)=\int_0^t w(t-\tau)f_h(\tau)\,d\tau.
 \]
 Therefore,  \eqref{eq:8.7.2} implies that
 \begin{equation} \label{eq:8.7.4}
-y_h(t)=\left\{\begin{array}{cl} 0,&0\le t<t_0,\\[2\jot]
-\dst{\frac{1}{h}\int_{t_0}^tw(t-\tau)\,d\tau},&t_0\le t\le
-t_0+h,\\[2\jot]
-\dst{\frac{1}{h
-}\int_{t_0}^{t_0+h}w(t-\tau)\,d\tau},&t>t_0+h.\end{array}\right.
+y_h(t)=\begin{cases}
+0,&0\le t<t_0,\\
+\frac{1}{h}\int_{t_0}^tw(t-\tau)\,d\tau,&t_0\le t\le t_0+h,\\
+\frac{1}{h}\int_{t_0}^{t_0+h}w(t-\tau)\,d\tau,&t>t_0+h.
+\end{cases}
 \end{equation}
 Since $y_h(t)=0$ for all $h$ if $0\le t\le t_0$, it follows that
 \begin{equation} \label{eq:8.7.5}
-\lim_{h\to0+}y_h(t)=0\mbox{\quad if \quad}0\le t\le t_0.
+\lim_{h\to0+}y_h(t)=0\quad\text{if}\quad0\le t\le t_0.
 \end{equation}
 We'll now show that
 \begin{equation} \label{eq:8.7.6}
-\lim_{h\to0+}y_h(t)=w(t-t_0)\mbox{\quad if \quad}t>t_0.
+\lim_{h\to0+}y_h(t)=w(t-t_0)\quad\text{if}\quad t>t_0.
 \end{equation}
 
 Suppose   $t$ is fixed and $t>t_0$.
 From
 \eqref{eq:8.7.4},
 \begin{equation} \label{eq:8.7.7}
-y_h(t)=\frac{1}{h}\int_{t_0}^{t_0+h}w(t-\tau)d\tau\mbox{\quad if \quad}
+y_h(t)=\frac{1}{h}\int_{t_0}^{t_0+h}w(t-\tau)d\tau\quad\text{if}\quad
 h<t-t_0.
 \end{equation}
 Since
@@ -4294,9 +4321,9 @@ Therefore \eqref{eq:8.7.10} implies \eqref{eq:8.7.6}.
 This and \eqref{eq:8.7.5} imply \eqref{eq:8.7.3}.% \bbox
 \end{proof}
 
-Theorem~\ref{thmtype:8.7.1} motivates the next definition.
+\zcref[S]{thmtype:8.7.1} motivates the next definition.
 
-\begin{definition}\color{blue}\label{thmtype:8.7.2} \rm
+\begin{definition}\label{thmtype:8.7.2}
 If $t_0>0$, then the solution of the initial value problem
 \begin{equation} \label{eq:8.7.11}
 ay''+by'+cy=\delta(t-t_0), \quad  y(0)=0,\quad y'(0)=0,
@@ -4307,7 +4334,7 @@ y=u(t-t_0)w(t-t_0),
 \]
 where
 \[
-w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right).
+w=\laplace^{-1}\left(\frac{1}{as^2+bs+c}\right).
 \]
 \end{definition}
 
@@ -4325,11 +4352,11 @@ aw''+bw'+cw=0, \quad  w(0)=0,\quad  w'(0)=1/a,
 as can be seen by using the Laplace transform to solve this problem.
 (Verify.)
 On the other hand, we can solve \eqref{eq:8.7.12} by the methods of
-Section~5.2 and show that $w$ is defined on
+\zcref{sec:const_coeff_homog} and show that $w$ is defined on
 $(-\infty,\infty)$ by
 \begin{equation} \label{eq:8.7.13}
 w=\frac{e^{r_2t}-e^{r_1t}}{a(r_2-r_1)},\quad
-w=\frac{1}{a}te^{r_1t}, \mbox{\quad or \quad}
+w=\frac{1}{a}te^{r_1t}, \quad\text{or}\quad
 w=\frac{1}{a\omega}e^{\lambda t}\sin\omega t,
 \end{equation}
 depending upon whether the polynomial $p(r)=ar^2+br+c$ has distinct
@@ -4342,8 +4369,7 @@ defined on $(-\infty,\infty)$ and has the following properties:
 y(t)=0,\quad  t<t_0,
 \]
 \[
-ay''+by'+cy=0\mbox{\quad  on \quad }  (-\infty,t_0)\mbox{\quad and
-\quad}(t_0,\infty),
+ay''+by'+cy=0\quad\text{on}\quad(-\infty,t_0)\quad\text{and}\quad(t_0,\infty),
 \]
 and
 \begin{equation} \label{eq:8.7.14}
@@ -4368,7 +4394,7 @@ where the condition on the derivative at $t=0$ has been replaced by a
 condition on the derivative from the left.
 
 
-Figure~\ref{figure:8.7.2} illustrates Theorem~\ref{thmtype:8.7.1} for the
+\zcref[S]{figure:8.7.2} illustrates \zcref[S]{thmtype:8.7.1} for the
 case where the impulse response $w$ is the first expression in
 \eqref{eq:8.7.13} and $r_1$ and $r_2$ are distinct and both negative. The
 solid curve in the figure is the graph of $w$. The dashed curves are
@@ -4376,17 +4402,17 @@ solutions of \eqref{eq:8.7.1} for various values of $h$. As $h$ decreases
 the graph of $y_h$ moves to the left toward the graph of $w$.
 
 
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080702}
-\caption{ An illustration of
-Theorem~\ref{thmtype:8.7.1}}
+  \includegraphics[alt={A graph of solution curves in the t y plane as described in the text.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080702}
+\caption{An illustration of \zcref{thmtype:8.7.1}}
   \label{figure:8.7.2}
 \end{figure}
 
 
-\begin{example}\label{example:8.7.1} \rm  Find the solution of the initial
-value problem
+\begin{example}\label{example:8.7.1}
+Find the solution of the initial value problem
 \begin{equation} \label{eq:8.7.15}
 y''-2y'+y=\delta(t-t_0), \quad  y(0)=0,\quad y'(0)=0,
 \end{equation}
@@ -4396,9 +4422,9 @@ where $t_0>0$. Then interpret the solution for the case where $t_0=0$.
 \solution
 Here
 \[
-w={\cal L}^{-1}\left(\frac{1}{s^2-2s+1}\right)={\cal L}^{-1}\left(\frac{1}{(s-1)^2}\right)=te^{-t},
+w=\laplace^{-1}\left(\frac{1}{s^2-2s+1}\right)=\laplace^{-1}\left(\frac{1}{(s-1)^2}\right)=te^{-t},
 \]
-so  Definition~\ref{thmtype:8.7.2} yields
+so \zcref{thmtype:8.7.2} yields
 \[
 y=u(t-t_0)(t-t_0)e^{-(t-t_0)}
 \]
@@ -4412,27 +4438,23 @@ y''-2y'+y=\delta(t), \quad  y(0)=0,\quad y_-'(0)=0.
 \]
 
 The graph of $y=u(t-t_0)(t-t_0)e^{-(t-t_0)}$ is shown in
-Figure~\ref{figure:8.7.3} \bbox
+\zcref{figure:8.7.3} \bbox
 
-
-
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig080703}
+  \includegraphics[alt={A curve for t naught < t < t naught + 7 and 0<y<0.4 that begins at (t naught,0), peaks near (t naught+1,0.37), and then decreases to a horizontal asymptote of y=0.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig080703}
 \caption{
 $y=u(t-t_0)(t-t_0)e^{-(t-t_0)}$}
   \label{figure:8.7.3}
 \end{figure}
 
 
-Definition~\ref{thmtype:8.7.2} and the principle of superposition
+\zcref[S]{thmtype:8.7.2} and the principle of superposition
 motivate the next definition.
 
-\begin{definition}\color{blue} \label{thmtype:8.7.3} \rm  Suppose
-$\alpha$ is a nonzero constant and
-$f$ is
+\begin{definition}\label{thmtype:8.7.3}
+Suppose $\alpha$ is a nonzero constant and $f$ is
 piecewise continuous on $[0,\infty)$.
 If $t_0>0$, then the solution of  the  initial value problem
 \[
@@ -4450,7 +4472,7 @@ This definition also applies if $t_0=0$, provided that the initial
 condition $y'(0)=k_1$ is replaced by $y_-'(0)=k_1$.
 \end{definition}
 
-\begin{example}\label{example:8.7.2} \rm
+\begin{example}\label{example:8.7.2}
 Solve the initial value problem
 \begin{equation} \label{eq:8.7.16}
 y''+6y'+5y=3e^{-2t}+2\delta(t-1),\quad y(0)=-3,\quad y'(0)=2.
@@ -4467,43 +4489,44 @@ is
 \hat y=-e^{-2t}+\frac{1}{2}e^{-5t}-\frac{5}{2}e^{-t}.
 \]
 Since
-\[
-\begin{array}{ccccl}
-w(t)&=&{\cal L}^{-1}\left(\dst\frac{1}{s^2+6s+5}\right)&=&
-{\cal L}^{-1}\left(\dst\frac{1}{(s+1)(s+5)}\right)\\[2\jot]
-&=&\dst{\frac{1}{4}{\cal L}^{-1}\left(\frac{1}{s+1}-\frac{1}{s+5}\right)}
-&=&\dst\frac{e^{-t}-e^{-5t}}{4},
-\end{array}
-\]
+\begin{alignat*}{2}
+w(t)&=\laplace^{-1}\left(\frac{1}{s^2+6s+5}\right)
+&&=\laplace^{-1}\left(\frac{1}{(s+1)(s+5)}\right)\\
+&=\frac{1}{4}\laplace^{-1}\left(\frac{1}{s+1}-\frac{1}{s+5}\right)
+&&=\frac{e^{-t}-e^{-5t}}{4},
+\end{alignat*}
 the solution of  \eqref{eq:8.7.16} is
 \begin{equation} \label{eq:8.7.17}
 y=-e^{-2t}+\frac{1}{2}e^{-5t}-\frac{5}{2}e^{-t}
 +u(t-1)\frac{e^{-(t-1)}-e^{-5(t-1)}}{2}
 \end{equation}
-(Figure~\ref{figure:8.7.4})\bbox.
+(\zcref{figure:8.7.4})\bbox.
 
 \noindent
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-  \includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig080704}
+  \includegraphics[alt={A curve that begins at (0,-3), increases to near (1,-1.1), and then has a sharp cusp to increase more rapidly to a horizontal asymptote of y=0.},
+  width=\linewidth,height=2.44in,keepaspectratio]{fig080704}
 \captionof{figure}{Graph of \eqref{eq:8.7.17}}
   \label{figure:8.7.4}
 \tagstructend
 \end{minipage}%
 \hfill
-  \begin{minipage}{0.49\linewidth}
+  \begin{minipage}{0.48\linewidth}
     \centering
 \tagstructbegin{tag=Sect}
-  \includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig080705}
+  \includegraphics[alt={A curve that begins at (0,-1), increases to a peak near (2,4), decreases to a sharp transition at (π,3) where it is momentarily flatter before decreasing to (2π,-1) where it has another sharp transition to decrease rapidly and bottom out near (7.2,-2.7) before peaking near (10.2,4.5) and finishing near (12.4,-0.8).},
+  width=\linewidth,height=2.44in,keepaspectratio]{fig080705}
 \captionof{figure}{Graph of \eqref{eq:8.7.19}}
   \label{figure:8.7.5}
 \tagstructend
 \end{minipage}
 
 
-Definition~\ref{thmtype:8.7.3} can be extended in the obvious way to cover
+\zcref[S]{thmtype:8.7.3} can be extended in the obvious way to cover
 the case where the forcing function contains more than one impulse.
-\begin{example}\label{example:8.7.3} \rm
+
+\begin{example}\label{example:8.7.3}
 Solve the  initial value problem
 \begin{equation} \label{eq:8.7.18}
 y''+y=1+2\delta(t-\pi)-3\delta(t-2\pi), \quad    y(0)=-1,\;   y'(0)=2.
@@ -4521,24 +4544,25 @@ y''+y=1, \quad    y(0)=-1,\quad    y'(0)=2.
 \]
 Since
 \[
-w={\cal L}^{-1}\left(\frac{1}{s^2+1}\right)=\sin t,
+w=\laplace^{-1}\left(\frac{1}{s^2+1}\right)=\sin t,
 \]
 the solution of  \eqref{eq:8.7.18} is
-\begin{eqnarray*}
-y&=&1-2\cos t+2\sin t+2u(t-\pi)\sin(t-\pi)-3u(t-2\pi)\sin(t-2\pi)\\
-&=&1-2\cos t+2\sin t-2u(t-\pi)\sin t-3u(t-2\pi)\sin t,
-\end{eqnarray*}
+\begin{align*}
+y&=1-2\cos t+2\sin t+2u(t-\pi)\sin(t-\pi)-3u(t-2\pi)\sin(t-2\pi)\\
+&=1-2\cos t+2\sin t-2u(t-\pi)\sin t-3u(t-2\pi)\sin t,
+\end{align*}
 or
 \begin{equation} \label{eq:8.7.19}
-y=\left\{\begin{array}{cl} 1-2\cos t+2\sin t,&0\le t<\pi,\\[5pt]
-1-2\cos t,&\pi\le t<2\pi,\\[5pt]
-1-2\cos t-3\sin t,&t\ge 2\pi\end{array}\right.
+y=\begin{cases} 1-2\cos t+2\sin t,&0\le t<\pi,\\
+1-2\cos t,&\pi\le t<2\pi,\\
+1-2\cos t-3\sin t,&t\ge 2\pi
+\end{cases}
 \end{equation}
-(Figure~\ref{figure:8.7.5}).
+(\zcref{figure:8.7.5}).
 
 
 \exercises
-In Exercises~\ref{exer:8.7.1}--\ref{exer:8.7.20} solve the initial value
+In \zcref[range]{exer:8.7.1,exer:8.7.20} solve the initial value
 problem. Where indicated by \CGex, graph the solution.
 
 \begin{exerciselist}
@@ -4589,14 +4613,18 @@ $y''-y=4e^{-t}-5\delta(t-1)+3\delta(t-2), \quad  y(0)=0,\quad y'(0)=0$
 
 \item\label{exer:8.7.19}$y''+y=f(t)+\delta(t-2\pi), \quad  y(0)=0,\quad y'(0)=1$, \text{and}
 
-$f(t)=\dst{\left\{\begin{array}{cl}
-\sin2t,&0\le t<\pi,\\[5pt]0,&t\ge \pi.\end{array}\right.}$
+$f(t)=\begin{cases}
+\sin2t,&0\le t<\pi,\\
+0,&t\ge \pi.
+\end{cases}$
 
 \item\label{exer:8.7.20}$y''+4y=f(t)+\delta(t-\pi)-3\delta(t-3\pi/2), \quad  y(0)=1,\quad
 y'(0)=-1$, \text {and}
 
-$f(t)=\dst{\left\{\begin{array}{cl}1,&0\le t<\pi/2,\\[5pt]2,&t\ge
-\pi/2\end{array}\right.}$
+$f(t)=\begin{cases}
+1,&0\le t<\pi/2,\\
+2,&t\ge\pi/2
+\end{cases}$
 
 \item\label{exer:8.7.21}$y''+y=\delta(t), \quad  y(0)=1,\quad y_-'(0)=-2$
 
@@ -4610,20 +4638,22 @@ $f(t)=\dst{\left\{\begin{array}{cl}1,&0\le t<\pi/2,\\[5pt]2,&t\ge
 
 
 \exercisetext{
-In Exercises~\ref{exer:8.7.26}-\ref{exer:8.7.28}, solve the initial value
+In \zcref[range]{exer:8.7.26,exer:8.7.28}, solve the initial value
 problem
 \[
 ay_h''+by_h'+cy_h=
-\left\{\begin{array}{cl} 0,&0\le t<t_0,\\[2\jot]
-1/h,&t_0\le t< t_0+h,\\[2\jot]
-0,&t\ge t_0+h,\end{array}\right.
+\begin{cases}
+0,&0\le t<t_0,\\
+1/h,&t_0\le t< t_0+h,\\
+0,&t\ge t_0+h,
+\end{cases}
 \quad y_h(0)=0,\quad y_h'(0)=0,
 \]
 where $t_0>0$ and $h>0$. Then find
 \[
-w={\cal L}^{-1}\left(\frac{1}{as^2+bs+c}\right)
+w=\laplace^{-1}\left(\frac{1}{as^2+bs+c}\right)
 \]
-and verify Theorem~\ref{thmtype:8.7.1} by graphing $w$ and $y_h$
+and verify \zcref{thmtype:8.7.1} by graphing $w$ and $y_h$
 on the same axes, for small positive values of $h$.}
 
 
@@ -4637,7 +4667,7 @@ $y''+2y'+y=f_h(t), \quad  y(0)=0,\quad y'(0)=0$
 $y''+3y'+2y=f_h(t), \quad  y(0)=0,\quad y'(0)=0$
 
 
-\item\label{exer:8.7.29}Recall from Section~6.2 that the displacement of
+\item\label{exer:8.7.29}Recall from \zcref{sec:spring_ii} that the displacement of
 an
 object of mass $m$ in a spring--mass system in free damped oscillation is
 \[
@@ -4655,23 +4685,19 @@ Find the impulse that would have to be applied to the object at $t=\tau$
 does not involve step functions and represents $y$  on each subinterval of
 $[0,\infty)$  on which the forcing function is zero.
 
-{\bf (a)} $\dst{y''-y=\sum_{k=1}^\infty\delta(t-k), \quad  y(0)=0,\quad y'(0)=1}$
-
-{\bf (b)}
-$\dst{y''+y=\sum_{k=1}^\infty\delta(t-2k\pi), \quad  y(0)=0,\quad y'(0)=1}$
-
-{\bf (c)}
-$\dst{y''-3y'+2y=\sum_{k=1}^\infty\delta(t-k), \quad  y(0)=0,\quad y'(0)=1}$
-
-{\bf (d)}
-$\dst{y''+y=\sum_{k=1}^\infty\delta(t-k\pi), \quad  y(0)=0,\quad y'(0)=0}$
+\begin{alist}
+\item $\dst{y''-y=\sum_{k=1}^\infty\delta(t-k), \quad  y(0)=0,\quad y'(0)=1}$
+\item $\dst{y''+y=\sum_{k=1}^\infty\delta(t-2k\pi), \quad  y(0)=0,\quad y'(0)=1}$
+\item $\dst{y''-3y'+2y=\sum_{k=1}^\infty\delta(t-k), \quad  y(0)=0,\quad y'(0)=1}$
+\item $\dst{y''+y=\sum_{k=1}^\infty\delta(t-k\pi), \quad  y(0)=0,\quad y'(0)=0}$
+\end{alist}
 
 \end{exerciselist}
 
 \newpage
 
 
-\section{A Brief Table of Laplace Transforms}
+\section{A Brief Table of Laplace Transforms}\label{sec:laplace_table}
 
 \[
 \tagpdfsetup{table/header-rows={1}}
