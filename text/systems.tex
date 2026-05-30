@@ -274,9 +274,9 @@ Cancelling the common factor $m$ and equating components on the two sides
 of this equation yields the  system
 \begin{equation} \label{eq:10.1.14}
 \begin{aligned}
- x''&=-\dst\frac{gR^2x}{(x^2+y^2+z^2)^{3/2}}\\
- y''&=-\dst\frac{gR^2y}{(x^2+y^2+z^2)^{3/2}}\\
- z''&=-\dst\frac{gR^2z}{(x^2+y^2+z^2)^{3/2}}.
+ x''&=-\dfrac{gR^2x}{(x^2+y^2+z^2)^{3/2}}\\
+ y''&=-\dfrac{gR^2y}{(x^2+y^2+z^2)^{3/2}}\\
+ z''&=-\dfrac{gR^2z}{(x^2+y^2+z^2)^{3/2}}.
 \end{aligned}
 \end{equation}
 \end{example}
@@ -939,22 +939,22 @@ defined, then
 
 \begin{alist}
 \item  % (a)
- $\dst{Y = \twobytwo {e^{6t}}{e^{-2t}}
-{e^{6t}}{-e^{-2t}}, \quad A = \twobytwo 2 4 4 2}$
+ $Y = \twobytwo {e^{6t}}{e^{-2t}}
+{e^{6t}}{-e^{-2t}}, \quad A = \twobytwo 2 4 4 2$
 
 \item % (b)
- $\dst{Y = \twobytwo {e^{-4t}}
+ $Y = \twobytwo {e^{-4t}}
 {-2e^{3t}} {e^{-4t}} {5e^{3t}}, \quad A = \twobytwo {-2}
-{-2} {-5} {1}}$
+{-2} {-5} {1}$
 
 \item % (c)
- $\dst{Y  = \twobytwo {-5e^{2t}}
+ $Y  = \twobytwo {-5e^{2t}}
 {2e^t} {3e^{2t}} {-e^t}, \quad A =
-\twobytwo {-4} {-10} 3 7}$
+\twobytwo {-4} {-10} 3 7$
 
 \item % (d)
- $\dst{Y = \twobytwo {e^{3t}}
-{e^t} {e^{3t}} {-e^t}, \quad A = \twobytwo 2 1 1 2}$
+ $Y = \twobytwo {e^{3t}}
+{e^t} {e^{3t}} {-e^t}, \quad A = \twobytwo 2 1 1 2$
 
 \item % (e)
 $Y = \begin{bmatrix}
@@ -964,16 +964,16 @@ e^t&0&-2e^{-2t}\\
 A = \threebythree {-1} 2 {3} {0} 1 6 0 0 {-2}$
 
 \item % (f)
-$\dst{Y = \cthreebythree {-e^{-2t}}
+$Y = \cthreebythree {-e^{-2t}}
 {-e^{-2t}} {e^{4t}} 0 {\phantom{-} e^{-2t}} {e^{4t}}
 {e^{-2t}} 0 {e^{4t}}, \quad A =
-\threebythree 0 2 2 2 0 2 2 2 0}$
+\threebythree 0 2 2 2 0 2 2 2 0$
 
 \item % (g)
- $\dst{Y = \cthreebythree {e^{3t}}
+ $Y = \cthreebythree {e^{3t}}
 {e^{-3t}} 0 {e^{3t}} 0 {-e^{-3t}} {e^{3t}}
 {e^{-3t}} {\phantom{-}e^{-3t}}, \quad A = \threebythree
-{-9}66{-6}36{-6}63}$
+{-9}66{-6}36{-6}63$
 
 \item % (h)
 $Y = \begin{bmatrix}
@@ -2007,26 +2007,22 @@ which implies that $x_1=-x_2$.  Taking $x_2=1$ yields the eigenvector
 \]
 so
 \[
-{\bf y}_2=\left[\begin{array}{r}-1\\1\end{array}
-\right]e^{-2t}
+{\bf y}_2=\begin{bmatrix}-1\\1\end{bmatrix}e^{-2t}
 \]
 is a solution of  \eqref{eq:10.4.8}.
 From \zcref{thmtype:10.4.1}, the general solution of
 \eqref{eq:10.4.8} is
 \begin{equation}\label{eq:10.4.11}
-{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2=c_1\left[\begin{array}{r}1\\1
-\end{array}\right]e^{6t}+c_2\left[\begin{array}{r}-1\\1
-\end{array}\right]e^{-2t}.
+{\bf y}=c_1{\bf y}_1+c_2{\bf y}_2=c_1\begin{bmatrix}1\\1\end{bmatrix}e^{6t}
++c_2\begin{bmatrix}-1\\1\end{bmatrix}e^{-2t}.
 \end{equation}
 
 \item
  To satisfy the initial condition in  \eqref{eq:10.4.9}, we must choose
 $c_1$ and $c_2$ in  \eqref{eq:10.4.11} so that
 \[
-c_1\left[\begin{array}{r}1\\1\end{array}\right]+c_2\left[
-\begin{array}{r}-1\\
-1\end{array}\right]=\left[\begin{array}{r}5\\-1
-\end{array}\right].
+c_1\begin{bmatrix}1\\1\end{bmatrix}+c_2\begin{bmatrix}-1\\1\end{bmatrix}
+=\begin{bmatrix}5\\-1\end{bmatrix}.
 \]
 This is equivalent to the system
 \begin{align*}
@@ -2036,8 +2032,8 @@ c_1+c_2&=-1,
 so $c_1=2, c_2=-3$.  Therefore the solution of
 \eqref{eq:10.4.9} is
 \[
-{\bf y}=2\left[\begin{array}{r}1\\1\end{array}\right]e^{6t}-3
-\left[\begin{array}{r}-1\\1\end{array}\right]e^{-2t},
+{\bf y}=2\begin{bmatrix}1\\1\end{bmatrix}e^{6t}-3
+\begin{bmatrix}-1\\1\end{bmatrix}e^{-2t},
 \]
 or, in terms of components,
 \[
@@ -2050,18 +2046,14 @@ y_1=2e^{6t}+3e^{-2t},\quad y_2=2e^{6t}-3e^{-2t}.
 \item % (a)
  Find the general solution of
 \begin{equation}\label{eq:10.4.12}
-{\bf y}'=\left[\begin{array}{rrr}3&-1&-1\\-2&
-3&
-2\\4&-1&-2\end{array}\right]{\bf y}.
+{\bf y}'=\begin{bmatrix}3&-1&-1\\-2&3&2\\4&-1&-2\end{bmatrix}{\bf y}.
 \end{equation}
 
 \item  % (b)
  Solve the initial value problem
 \begin{equation}\label{eq:10.4.13}
-{\bf y}'=\left[\begin{array}{rrr}3&-1&-1\\-2&3&
-2\\4&-1&-2\end{array}
-\right]{\bf y},\quad{\bf y}(0)=\left[\begin{array}{r}2\\
--1\\8\end{array}\right].
+{\bf y}'=\begin{bmatrix}3&-1&-1\\-2&3&2\\4&-1&-2\end{bmatrix}{\bf y},\quad
+{\bf y}(0)=\begin{bmatrix}2\\-1\\8\end{bmatrix}.
 \end{equation}
 \end{alist}
 \end{example}
@@ -2070,94 +2062,88 @@ y_1=2e^{6t}+3e^{-2t},\quad y_2=2e^{6t}-3e^{-2t}.
 \item The characteristic
 polynomial of the  coefficient matrix $A$ in  \eqref{eq:10.4.12} is
 \[
-\left|\begin{array}{ccc}3-\lambda&-1&-1\\-2&3-\lambda&
-2\\4
-&-1&-2-\lambda\end{array}\right|=-(\lambda-2)(\lambda-3)(\lambda+1).
+\begin{vmatrix}3-\lambda&-1&-1\\-2&3-\lambda&2\\4&-1&-2-\lambda\end{vmatrix}
+=-(\lambda-2)(\lambda-3)(\lambda+1).
 \]
 Hence, the eigenvalues of $A$ are $\lambda_1=2$, $\lambda_2=3$,  and
 $\lambda_3=-1$.
 To find the  eigenvectors, we must solve the system
 \begin{equation}\label{eq:10.4.14}
-\left[\begin{array}{ccc}3-\lambda&-1&-1\\-2&3-\lambda&
-2\\4&-1&
--2-\lambda\end{array}\right]\left[\begin{array}{c} x_1\\x_2\\x_3
-\end{array}
-\right]=\left[\begin{array}{r}0\\0\\0\end{array}\right]
+\begin{bmatrix}3-\lambda&-1&-1\\-2&3-\lambda&2\\4&-1&-2-\lambda\end{bmatrix}
+\begin{bmatrix} x_1\\x_2\\x_3\end{bmatrix}
+=\begin{bmatrix}0\\0\\0\end{bmatrix}
 \end{equation}
 with $\lambda=2$, $3$, $-1$.  With $\lambda=2$, the augmented matrix of
 \eqref{eq:10.4.14} is
 \[
-\left[\begin{array}{rrrcr} 1&-1&-1&\vdots&0\\-2&
-1&2&\vdots&0\\4&-1&-4&\vdots&0
-\end{array}\right],
+\begin{bmatrix}
+1&-1&-1&\vdots&0\\-2&1&2&\vdots&0\\4&-1&-4&\vdots&0
+\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1&0&-1&\vdots&0\\0&1&0&
-\vdots&0\\0&0&0&\vdots&0\end{array}\right].
+\begin{bmatrix}1&0&-1&\vdots&0\\0&1&0&\vdots&0\\0&0&0&\vdots&0\end{bmatrix}.
 \]
 Hence,  $x_1=x_3$ and $x_2=0$.  Taking $x_3=1$ yields
 \[
-{\bf y}_1=\left[\begin{array}{rrr}1\\0\\1\end{array}\right]e^{2t}
+{\bf y}_1=\begin{bmatrix}1\\0\\1\end{bmatrix}e^{2t}
 \]
 as a solution of  \eqref{eq:10.4.12}.  With $\lambda=3$, the augmented
 matrix of  \eqref{eq:10.4.14} is
 \[
-\left[\begin{array}{rrrcr}0&-1&-1&\vdots&0\\-2&
-0& 2&\vdots&0\\4&-1&-5&\vdots&0
-\end{array}\right],
+\begin{bmatrix}
+0&-1&-1&\vdots&0\\-2&0& 2&\vdots&0\\4&-1&-5&\vdots&0
+\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1&0&-1&\vdots&0\\0&1&1&
-\vdots&0\\0&0&0&\vdots&0\end{array}\right].
+\begin{bmatrix}1&0&-1&\vdots&0\\0&1&1&\vdots&0\\0&0&0&\vdots&0\end{bmatrix}.
 \]
 Hence,  $x_1=x_3$ and $x_2=-x_3$. Taking $x_3=1$ yields
 \[
-{\bf y}_2=\left[\begin{array}{r}1\\-1\\1\end{array}
-\right]e^{3t}
+{\bf y}_2=\begin{bmatrix}1\\-1\\1\end{bmatrix}e^{3t}
 \]
 as a solution of  \eqref{eq:10.4.12}.  With $\lambda=-1$, the augmented
 matrix of  \eqref{eq:10.4.14} is
 \[
-\left[\begin{array}{rrrcr} 4&-1&-1&\vdots&0\\-2&4&
-2&\vdots&0\\4&-1&-1&\vdots&0
-\end{array}\right],
+\begin{bmatrix}
+4&-1&-1&\vdots&0\\-2&4&2&\vdots&0\\4&-1&-1&\vdots&0
+\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1&0&-\frac{1}{7}&\vdots&0\\0&1&
-\frac{3}{7}&\vdots&0\\0&0&0&\vdots&0\end{array}\right].
+\begin{bmatrix}
+1&0&-\frac{1}{7}&\vdots&0\\0&1&\frac{3}{7}&\vdots&0\\0&0&0&\vdots&0
+\end{bmatrix}.
 \]
 Hence, $x_1=x_3/7$ and $x_2=-3x_3/7$.  Taking $x_3=7$ yields
 \[
-{\bf y}_3=\left[\begin{array}{r}1\\-3\\7\end{array}
-\right]e^{-t}
+{\bf y}_3=\begin{bmatrix}1\\-3\\7\end{bmatrix}e^{-t}
 \]
 as a solution of  \eqref{eq:10.4.12}. By \zcref{thmtype:10.4.1},
  the general solution of  \eqref{eq:10.4.12} is
 \[
-{\bf y}=c_1\left[\begin{array}{r}1\\0\\1\end{array}\right]e^{2t}
-+c_2\left[\begin{array}{r}1\\-1\\1\end{array}\right]
+{\bf y}=c_1\begin{bmatrix}1\\0\\1\end{bmatrix}e^{2t}
++c_2\begin{bmatrix}1\\-1\\1\end{bmatrix}
 e^{3t}+c_3
-\left[\begin{array}{r}1\\-3\\7\end{array}\right]e^{-t},
+\begin{bmatrix}1\\-3\\7\end{bmatrix}e^{-t},
 \]
 which can also be written as
 \begin{equation}\label{eq:10.4.15}
-{\bf y}=\left[\begin{array}{crc}e^{2t}&e^{3t}&e^{-t}
-\\0&-e^{3t}&
--3e^{-t}\\e^{2t}&e^{3t}&\phantom{-}7e^{-t}\end{array}
-\right]\left[\begin{array}{c} c_1\\c_2\\c_3\end{array}\right].
+{\bf y}=\begin{bmatrix}
+e^{2t}&e^{3t}&e^{-t}\\
+0&-e^{3t}&-3e^{-t}\\
+e^{2t}&e^{3t}&\phantom{-}7e^{-t}
+\end{bmatrix}\begin{bmatrix}c_1\\c_2\\c_3\end{bmatrix}.
 \end{equation}
 
 \item
  To satisfy the initial condition in  \eqref{eq:10.4.13} we must choose
 $c_1$, $c_2$, $c_3$ in  \eqref{eq:10.4.15} so that
 \[
-\left[\begin{array}{rrr}1&1&1\\0&-1&-3\\
-1&1&7\end{array}\right]
-\left[\begin{array}{c} c_1\\c_2\\c_3\end{array}\right]=
-\left[\begin{array}{r}2\\-1\\8\end{array}\right].
+\begin{bmatrix}1&1&1\\0&-1&-3\\1&1&7\end{bmatrix}
+\begin{bmatrix}c_1\\c_2\\c_3\end{bmatrix}=
+\begin{bmatrix}2\\-1\\8\end{bmatrix}.
 \]
 Solving this system yields $c_1=3$, $c_2=-2$, $c_3=1$.  Hence, the solution
 of  \eqref{eq:10.4.13} is
@@ -2177,42 +2163,40 @@ e^{2t}&e^{3t}&7e^{-t}
 \begin{example}\label{example:10.4.3}\rm
  Find the general solution of
 \begin{equation}\label{eq:10.4.16}
-{\bf y}'=\left[\begin{array}{rrr}-3&2&2\\
-2&-3&2\\2&2&-3
-\end{array}\right]{\bf y}.
+{\bf y}'=\begin{bmatrix}-3&2&2\\2&-3&2\\2&2&-3\end{bmatrix}{\bf y}.
 \end{equation}
 \end{example}
 
 \solution  The characteristic polynomial of
 the  coefficient matrix $A$ in  \eqref{eq:10.4.16} is
 \[
-\left|\begin{array}{ccc}-3-\lambda&2&2\\2&-3-\lambda&2\\2&2
-&-3-\lambda\end{array}\right|=-(\lambda-1)(\lambda+5)^2.
+\begin{vmatrix}-3-\lambda&2&2\\2&-3-\lambda&2\\2&2&-3-\lambda\end{vmatrix}
+=-(\lambda-1)(\lambda+5)^2.
 \]
 Hence, $\lambda_1=1$ is an eigenvalue of multiplicity $1$, while
 $\lambda_2=-5$ is an eigenvalue of multiplicity $2$. Eigenvectors
 associated with $\lambda_1=1$ are solutions of the system with
 augmented matrix
 \[
-\left[\begin{array}{rrrcr}-4&2&2&\vdots&0\\
-2
-&-4&2&\vdots&0\\2&2&-4&
-\vdots&0\end{array}\right], \]
+\begin{bmatrix}-4&2&2&\vdots&0\\2&-4&2&\vdots&0\\2&2&-4&\vdots&0\end{bmatrix},
+\]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1&0&-1&\vdots& 0\\0&1&-1 &\vdots& 0
-\\0&0&0&\vdots&0\end{array}\right].
+\begin{bmatrix}
+1&0&-1&\vdots& 0\\0&1&-1 &\vdots& 0\\0&0&0&\vdots&0
+\end{bmatrix}.
 \]
 Hence, $x_1=x_2=x_3$, and we choose $x_3=1$ to obtain the solution
 \begin{equation}\label{eq:10.4.17}
-{\bf y}_1=\left[\begin{array}{r}1\\1\\1\end{array}\right]e^t
+{\bf y}_1=\begin{bmatrix}1\\1\\1\end{bmatrix}e^t
 \end{equation}
 of  \eqref{eq:10.4.16}.  Eigenvectors associated with $\lambda_2=-5$
 are solutions of the system
 with  augmented matrix
 \[
-\left[\begin{array}{rrrcr} 2&2&2&\vdots&0\\2&2&2&\vdots&0
-\\2&2&2&\vdots&0\end{array}\right].
+\begin{bmatrix}
+2&2&2&\vdots&0\\2&2&2&\vdots&0\\2&2&2&\vdots&0
+\end{bmatrix}.
 \]
 Hence, the components of these eigenvectors need only satisfy the single
 condition
@@ -2224,26 +2208,22 @@ $x_3$  arbitrarily. We obtain one eigenvector by choosing $x_2=0$
 and $x_3=1$, and another by choosing $x_2=1$ and $x_3=0$. In both
 cases $x_1=-1$. Therefore
 \[
-\left[\begin{array}{r}-1\\0\\1\end{array}\right]\quad
-\mbox{ and }\quad\left[\begin{array}{r}-1\\1\\0
-\end{array}\right]
+\begin{bmatrix}-1\\0\\1\end{bmatrix}
+\quad\mbox{ and }\quad
+\begin{bmatrix}-1\\1\\0\end{bmatrix}
 \]
 are linearly independent eigenvectors associated with  $\lambda_2=
 -5$, and the corresponding solutions of  \eqref{eq:10.4.16} are
 \[
-{\bf y}_2=\left[\begin{array}{r}-1\\0\\1\end{array}
-\right]e^{-5t}\quad
-\mbox{ and }\quad{\bf y}_3=\left[\begin{array}{r}-1\\1\\
-0\end{array}\right]e^{-5t}.
+{\bf y}_2=\begin{bmatrix}-1\\0\\1\end{bmatrix}e^{-5t}\quad
+\mbox{ and }\quad{\bf y}_3=\begin{bmatrix}-1\\1\\0\end{bmatrix}e^{-5t}.
 \]
 Because of this and  \eqref{eq:10.4.17}, \zcref{thmtype:10.4.1} implies
 that  the general solution of \eqref{eq:10.4.16} is
 \[
-{\bf y}=c_1\left[\begin{array}{r}1\\1\\
-1\end{array}\right]e^t+c_2
-\left[\begin{array}{r}-1\\0\\1\end{array}\right]
-e^{-5t}+c_3\left[\begin{array}{r}-1\\1\\0\end{array}
-\right]e^{-5t}.
+{\bf y}=c_1\begin{bmatrix}1\\1\\1\end{bmatrix}e^t+c_2
+\begin{bmatrix}-1\\0\\1\end{bmatrix}
+e^{-5t}+c_3\begin{bmatrix}-1\\1\\0\end{bmatrix}e^{-5t}.
 \]
 
 
@@ -2252,12 +2232,13 @@ e^{-5t}+c_3\left[\begin{array}{r}-1\\1\\0\end{array}
 We'll now  consider the geometric properties of solutions of a
 $2\times2$ constant coefficient system
 \begin{equation} \label{eq:10.4.18}
-\twocol{y_1'}{y_2'}=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]\twocol{y_1}{y_2}.
+\twocol{y_1'}{y_2'}=\begin{bmatrix}
+a_{11}&a_{12}\\a_{21}&a_{22}
+\end{bmatrix}\twocol{y_1}{y_2}.
 \end{equation}
 It is convenient to think of a ``$y_1$-$y_2$ plane," where a point
 is identified by rectangular coordinates $(y_1,y_2)$. If ${\bf
-y}=\dst{\twocol{y_1}{y_2}}$ is a non-constant solution of \eqref{eq:10.4.18},
+y}=\twocol{y_1}{y_2}$ is a non-constant solution of \eqref{eq:10.4.18},
 then the point $(y_1(t),y_2(t))$ moves along a curve $C$ in the
 $y_1$-$y_2$ plane as $t$ varies from $-\infty$ to $\infty$. We call
 $C$ the \emph{\color{blue}trajectory} of ${\bf y}$. (We also say that $C$ is a
@@ -2277,7 +2258,7 @@ From \zcref{exer:10.4.28}(a), a trajectory of a nontrivial
 solution
 of \eqref{eq:10.4.18} can't contain $(0,0)$, which we define to be the
 trajectory of the trivial solution ${\bf y}\equiv0$. More generally,
-if ${\bf y}=\dst{\twocol{k_1}{k_2}}\ne{\bf 0}$ is a constant solution
+if ${\bf y}=\twocol{k_1}{k_2}\ne{\bf 0}$ is a constant solution
 of \eqref{eq:10.4.18} (which could occur if zero is an eigenvalue of the
 matrix of \eqref{eq:10.4.18}), we define the trajectory of ${\bf y}$ to be
 the single point $(k_1,k_2)$.
@@ -2286,8 +2267,7 @@ To be specific, this is the question: What do the trajectories look
 like, and how are they traversed? In this section we'll answer this
 question, assuming that the matrix
 \[
-A=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]
+A=\begin{bmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
 \]
 of \eqref{eq:10.4.18} has real eigenvalues $\lambda_1$ and $\lambda_2$ with
 associated linearly independent eigenvectors ${\bf x}_1$ and ${\bf
@@ -2487,80 +2467,77 @@ trajectory is away from $L_1$, toward $L_2$.
 solution.
 
 \begin{exerciselist}
-\item(1)\label{exer:10.4.1}$\dst{{\bf y}'=
-\begin{bmatrix} 1&2\\2&1\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.2}$\dst{{\bf y}'=
-\frac{1}{4}\begin{bmatrix}-5&3 \\3&-5\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.3}$\dst{{\bf y}'=
-\frac{1}{5}\begin{bmatrix}-4&3\\-2&-11\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.4}$\dst{{\bf y}'=
-\begin{bmatrix}-1&-4\\-1&-1\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.5}$\dst{{\bf y}'=
-\begin{bmatrix}2&-4\\-1&-1\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.6}$\dst{{\bf y}'=
-\begin{bmatrix}4&-3\\2&-1\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.7}$\dst{{\bf y}'=
-\begin{bmatrix}-6&-3\\1&-2\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.8}$\dst{{\bf y}'=
-\begin{bmatrix}1&-1&-2\\1&-2&-3\\-4&1&-1\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.9}$\dst{{\bf y}'=
-\begin{bmatrix}-6&-4&-8\\-4&0&-4\\-8&-4&-6\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.10}$\dst{{\bf y}'=
-\begin{bmatrix}3&5&8\\1&-1&-2\\-1&-1&-1\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.11}$\dst{{\bf y}'=
-\begin{bmatrix}1&-1&2\\12&-4& 10\\-6&1&-7\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.12}$\dst{{\bf y}'=
-\begin{bmatrix}4&-1&-4\\4&-3&-2\\1&-1&-1\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.13}$\dst{{\bf y}'=
-\begin{bmatrix}-2&2&-6\\2&6&2\\-2&-2&2\end{bmatrix}{\bf y}}$
-\item(1)\label{exer:10.4.14}$\dst{{\bf y}'=
-\begin{bmatrix}3&2&-2\\-2&7&-2\\-10&10&-5\end{bmatrix}{\bf y}}$
+\item(1)\label{exer:10.4.1}${\bf y}'=
+\begin{bmatrix} 1&2\\2&1\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.2}${\bf y}'=
+\dfrac{1}{4}\begin{bmatrix}-5&3 \\3&-5\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.3}${\bf y}'=
+\dfrac{1}{5}\begin{bmatrix}-4&3\\-2&-11\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.4}${\bf y}'=
+\begin{bmatrix}-1&-4\\-1&-1\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.5}${\bf y}'=
+\begin{bmatrix}2&-4\\-1&-1\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.6}${\bf y}'=
+\begin{bmatrix}4&-3\\2&-1\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.7}${\bf y}'=
+\begin{bmatrix}-6&-3\\1&-2\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.8}${\bf y}'=
+\begin{bmatrix}1&-1&-2\\1&-2&-3\\-4&1&-1\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.9}${\bf y}'=
+\begin{bmatrix}-6&-4&-8\\-4&0&-4\\-8&-4&-6\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.10}${\bf y}'=
+\begin{bmatrix}3&5&8\\1&-1&-2\\-1&-1&-1\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.11}${\bf y}'=
+\begin{bmatrix}1&-1&2\\12&-4& 10\\-6&1&-7\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.12}${\bf y}'=
+\begin{bmatrix}4&-1&-4\\4&-3&-2\\1&-1&-1\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.13}${\bf y}'=
+\begin{bmatrix}-2&2&-6\\2&6&2\\-2&-2&2\end{bmatrix}{\bf y}$
+\item(1)\label{exer:10.4.14}${\bf y}'=
+\begin{bmatrix}3&2&-2\\-2&7&-2\\-10&10&-5\end{bmatrix}{\bf y}$
 
-\item\label{exer:10.4.15}$\dst{{\bf y}'=
-\begin{bmatrix}3&1&-1\\3&5&1\\-6&2&4\end{bmatrix}{\bf y}}$
+\item\label{exer:10.4.15}${\bf y}'=
+\begin{bmatrix}3&1&-1\\3&5&1\\-6&2&4\end{bmatrix}{\bf y}$
 
 \exercisetext{In \zcref[range]{exer:10.4.16,exer:10.4.27}
 solve the initial value problem.}
 
-\item\label{exer:10.4.16}$\dst{{\bf y}'=\twobytwo{-7}4{-6}7{\bf y},\quad{\bf
-y}(0)=\twocol2{-4}}$
+\item\label{exer:10.4.16}${\bf y}'=\twobytwo{-7}4{-6}7{\bf y},\quad{\bf
+y}(0)=\twocol2{-4}$
 
-\item\label{exer:10.4.17}$\dst{{\bf y}'=\frac{1}{6}\twobytwo72{-2}2{\bf y},\quad{\bf
-y}(0)=\twocol0{-3}}$
+\item\label{exer:10.4.17}${\bf y}'=\frac{1}{6}\twobytwo72{-2}2{\bf y},\quad{\bf
+y}(0)=\twocol0{-3}$
 
-\item\label{exer:10.4.18}$\dst{{\bf y}'=\twobytwo{21}{-12}{24}{-15}{\bf y},\quad{\bf
-y}(0)=\twocol53}$
+\item\label{exer:10.4.18}${\bf y}'=\twobytwo{21}{-12}{24}{-15}{\bf y},\quad{\bf
+y}(0)=\twocol53$
 
-\item\label{exer:10.4.19}$\dst{{\bf y}'=\twobytwo{-7}4{-6}7{\bf y},\quad{\bf
-y}(0)=\twocol{-1}7}$
+\item\label{exer:10.4.19}${\bf y}'=\twobytwo{-7}4{-6}7{\bf y},\quad{\bf
+y}(0)=\twocol{-1}7$
 
-\item\label{exer:10.4.20}$\dst{{\bf y}'=\frac{1}{6}\threebythree1204{-1}0003{\bf y},\quad{\bf
-y}(0)=\threecol471}$
+\item\label{exer:10.4.20}${\bf y}'=\dfrac{1}{6}\threebythree1204{-1}0003{\bf y},\quad{\bf
+y}(0)=\threecol471$
 
-\item\label{exer:10.4.21}$\dst{{\bf y}'=\frac{1}{3}\threebythree2{-2}3{-4}43210{\bf
-y},\quad{\bf y}(0)=\threecol115}$
+\item\label{exer:10.4.21}${\bf y}'=\dfrac{1}{3}\threebythree2{-2}3{-4}43210{\bf
+y},\quad{\bf y}(0)=\threecol115$
 
-\item\label{exer:10.4.22}$\dst{{\bf y}'=\threebythree6{-3}{-8}21{-2}3{-3}{-5}{\bf
-y},\quad{\bf y}(0)=\threecol0{-1}{-1}}$
+\item\label{exer:10.4.22}${\bf y}'=\threebythree6{-3}{-8}21{-2}3{-3}{-5}{\bf
+y},\quad{\bf y}(0)=\threecol0{-1}{-1}$
 
-\item\label{exer:10.4.23}$\dst{{\bf y}'=\frac{1}{3}\threebythree24{-7}15{-5}{-4}4{-1}{\bf
-y},\quad{\bf y}(0)=\threecol413}$
+\item\label{exer:10.4.23}${\bf y}'=\dfrac{1}{3}\threebythree24{-7}15{-5}{-4}4{-1}{\bf
+y},\quad{\bf y}(0)=\threecol413$
 
-\item\label{exer:10.4.24}$\dst{
-{\bf y}'=\threebythree301{11}{-2}7103{\bf y},\quad
-{\bf y}(0)=\threecol276}$
+\item\label{exer:10.4.24}${\bf y}'=\threebythree301{11}{-2}7103{\bf y},\quad
+{\bf y}(0)=\threecol276$
 
-\item\label{exer:10.4.25}$\dst{
-{\bf y}'=\threebythree{-2}{-5}{-1}{-4}{-1}145{3}{\bf y},\quad
-{\bf y}(0)=\threecol8{-10}{-4}}$
+\item\label{exer:10.4.25}${\bf y}'=\threebythree{-2}{-5}{-1}{-4}{-1}145{3}{\bf y},\quad
+{\bf y}(0)=\threecol8{-10}{-4}$
 
-\item\label{exer:10.4.26}$\dst{
-{\bf y}'=\threebythree3{-1}04{-2}04{-4}2{\bf y},\quad
-{\bf y}(0)=\threecol7{10}2}$
+\item\label{exer:10.4.26}${\bf y}'=\threebythree3{-1}04{-2}04{-4}2{\bf y},\quad
+{\bf y}(0)=\threecol7{10}2$
 
-\item\label{exer:10.4.27}$\dst{{\bf y}'=
-\left[\begin{array}{rrr}-2&2&6\\2&6&2\\-2&-2&
-2\end{array}\right]{\bf y}},\quad{\bf y}(0)=\threecol6{-10}7$
+\item\label{exer:10.4.27}${\bf y}'=
+\begin{bmatrix}-2&2&6\\2&6&2\\-2&-2&2\end{bmatrix}{\bf y},\quad
+{\bf y}(0)=\threecol6{-10}7$
 
 \item\label{exer:10.4.28}Let $A$ be an $n\times n$ constant matrix. Then
 \zcref{thmtype:10.2.1} implies that the solutions
@@ -2594,14 +2571,14 @@ and apply the uniqueness assertion of
 \exercisetext{In \zcref[range]{exer:10.4.29,exer:10.4.34}
 describe and graph trajectories of the given system.}
 
-\item(1)\label{exer:10.4.29}\CGex ${\bf y}'=\dst{\twobytwo111{-1}}{\bf y}$
-\item(1)\label{exer:10.4.30}\CGex ${\bf y}'=\dst{\twobytwo{-4}3{-2}{-11}}{\bf
+\item(1)\label{exer:10.4.29}\CGex ${\bf y}'=\twobytwo111{-1}{\bf y}$
+\item(1)\label{exer:10.4.30}\CGex ${\bf y}'=\twobytwo{-4}3{-2}{-11}{\bf
 y}$
-\item(1)\label{exer:10.4.31}\CGex ${\bf y}'=\dst{\twobytwo9{-3}{-1}{11}}{\bf
+\item(1)\label{exer:10.4.31}\CGex ${\bf y}'=\twobytwo9{-3}{-1}{11}{\bf
 y}$
-\item(1)\label{exer:10.4.32}\CGex ${\bf y}'=\dst{\twobytwo{-1}{-10}{-5}4}{\bf y}$
-\item(1)\label{exer:10.4.33}\CGex ${\bf y}'=\dst{\twobytwo5{-4}1{10}}{\bf y}$
-\item(1)\label{exer:10.4.34}\CGex ${\bf y}'=\dst{\twobytwo{-7}13{-5}}{\bf y}$
+\item(1)\label{exer:10.4.32}\CGex ${\bf y}'=\twobytwo{-1}{-10}{-5}4{\bf y}$
+\item(1)\label{exer:10.4.33}\CGex ${\bf y}'=\twobytwo5{-4}1{10}{\bf y}$
+\item(1)\label{exer:10.4.34}\CGex ${\bf y}'=\twobytwo{-7}13{-5}{\bf y}$
 
 \item\label{exer:10.4.35}Suppose the eigenvalues of the $2\times 2$
 matrix $A$ are $\lambda=0$ and $\mu\ne0$, with
@@ -2623,12 +2600,12 @@ away from $L_1$ if $\mu>0$, or toward $L_1$ if $\mu<0$.
 and graph the trajectories of nonconstant solutions  of the given
 systems.}
 
-\item(1)\label{exer:10.4.36}\CGex ${\bf y}'=\dst{\twobytwo{-1}11{-1}}{\bf y}$
-\item(1)\label{exer:10.4.37}\CGex ${\bf y}'=\dst{\twobytwo{-1}{-3}26}{\bf y}$
-\item(1)\label{exer:10.4.38}\CGex ${\bf y}'=\dst{\twobytwo1{-3}{-1}3}{\bf y}$
-\item(1)\label{exer:10.4.39}\CGex ${\bf y}'=\dst{\twobytwo1{-2}{-1}2}{\bf y}$
-\item(1)\label{exer:10.4.40}\CGex ${\bf y}'=\dst{\twobytwo{-4}{-4}11}{\bf y}$
-\item(1)\label{exer:10.4.41}\CGex ${\bf y}'=\dst{\twobytwo3{-1}{-3}1}{\bf y}$
+\item(1)\label{exer:10.4.36}\CGex ${\bf y}'=\twobytwo{-1}11{-1}{\bf y}$
+\item(1)\label{exer:10.4.37}\CGex ${\bf y}'=\twobytwo{-1}{-3}26{\bf y}$
+\item(1)\label{exer:10.4.38}\CGex ${\bf y}'=\twobytwo1{-3}{-1}3{\bf y}$
+\item(1)\label{exer:10.4.39}\CGex ${\bf y}'=\twobytwo1{-2}{-1}2{\bf y}$
+\item(1)\label{exer:10.4.40}\CGex ${\bf y}'=\twobytwo{-4}{-4}11{\bf y}$
+\item(1)\label{exer:10.4.41}\CGex ${\bf y}'=\twobytwo3{-1}{-3}1{\bf y}$
 
 \item\label{exer:10.4.42}\Lex
 Let $P=P(t)$ and $Q=Q(t)$ be the populations of two species at time
@@ -2733,17 +2710,16 @@ matrix of the system $(A-I){\bf x}={\bf 0}$ is
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrcr}1&-\dst\frac{5}{2}&\vdots&0\\[10pt]0&
-0&\vdots&0\end{array}\right].
+\begin{bmatrix}1&-\dfrac{5}{2}&\vdots&0\\0&0&\vdots&0\end{bmatrix}.
 \]
 Hence, $x_1=5x_2/2$ where $x_2$ is arbitrary. Therefore all
 eigenvectors of $A$ are scalar multiples of ${\bf
-x}_1=\dst{\twocol52}$,
+x}_1=\twocol52$,
 so $A$ does not have a set of two linearly independent eigenvectors.
 \bbox
 
 From \zcref{example:10.5.1}, we know that all scalar multiples of
-${\bf y}_1=\dst{\twocol52}e^t$ are solutions of \eqref{eq:10.5.1};
+${\bf y}_1=\twocol52e^t$ are solutions of \eqref{eq:10.5.1};
 however,
 to find the general solution we must find a second solution ${\bf
 y}_2$ such that $\{{\bf y}_1,{\bf y}_2\}$ is linearly independent.
@@ -2755,7 +2731,7 @@ ay''+by'+cy=0
 in the case where the characteristic polynomial has a repeated root,
 you might expect to obtain a second solution of \eqref{eq:10.5.1} by
 multiplying the first solution by $t$. However, this yields ${\bf
-y}_2=\dst{\twocol52}te^t$, which doesn't work, since
+y}_2=\twocol52te^t$, which doesn't work, since
 \[
 {\bf y}_2'=\twocol52(te^t+e^t),\mbox{\quad  while \quad }
 \twobytwo{11}{-25}4{-9}{\bf y}_2=\twocol52te^t.
@@ -2843,12 +2819,11 @@ is a solution of \eqref{eq:10.5.6}. From \zcref{thmtype:10.5.1}, a second
 solution is given by ${\bf y}_2={\bf u}e^t+{\bf x}te^t$, where
 $(A-I){\bf u}={\bf x}$. The augmented matrix of this system is
 \[
-\left[\begin{array}{rrcr}10&-25&\vdots&5\\4&-10&\vdots&2\end{array}\right],
+\begin{bmatrix}10&-25&\vdots&5\\4&-10&\vdots&2\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\dst{\left[\begin{array}{rrcr}1&-\frac{5}{2}&\vdots&\frac12\\
-0&0&\vdots&0\end{array}\right]}.
+\begin{bmatrix}1&-\frac{5}{2}&\vdots&\frac12\\0&0&\vdots&0\end{bmatrix}.
 \]
 Therefore the components of ${\bf u}$ must satisfy
 \[
@@ -2884,8 +2859,9 @@ solution ${\bf y}_2$ (\zcref{exer:10.5.33}).
 \solution  The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.7} is
 \[
-\left|\begin{array}{ccc} 3-\lambda & 4 & -10\\ 2 & 1-\lambda &
--2\\ 2 & 2 &-5-\lambda\end{array}\right| =-
+\begin{vmatrix}
+3-\lambda & 4 & -10\\ 2 & 1-\lambda &-2\\ 2 & 2 &-5-\lambda
+\end{vmatrix} =-
 (\lambda-1)(\lambda+1)^2.
 \]
 Hence, the eigenvalues are $\lambda_1=1$ with multiplicity~$1$ and
@@ -2894,13 +2870,15 @@ $\lambda_2=-1$ with  multiplicity~$2$.
 Eigenvectors associated with $\lambda_1=1$ must satisfy $(A-I){\bf
 x}={\bf 0}$. The augmented matrix of this system is
 \[
-\left[\begin{array}{rrrcr} 2 & 4 & -10 &\vdots & 0\\
-2& 0 & -2 &\vdots & 0\\ 2 & 2 & -6 &
-\vdots & 0\end{array}\right], \]
+\begin{bmatrix}
+2 & 4 & -10 &\vdots & 0\\2& 0 & -2 &\vdots & 0\\2 & 2 & -6 & \vdots & 0
+\end{bmatrix},
+\]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1 & 0 & -1 &\vdots& 0\\  0 & 1 & -2
-&\vdots& 0\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\begin{bmatrix}
+1 & 0 & -1 &\vdots& 0\\  0 & 1 & -2&\vdots& 0\\ 0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \]
 Hence, $x_1 =x_3$ and  $x_2 =2 x_3$, where $x_3$ is arbitrary.
 Choosing $x_3=1$ yields the eigenvector
@@ -2916,14 +2894,15 @@ is a solution of  \eqref{eq:10.5.7}.
 Eigenvectors associated with $\lambda_2 =-1$ satisfy $(A+I){\bf
 x}={\bf 0}$. The  augmented matrix of this system is
 \[
-\left[\begin{array}{rrrcr} 4 & 4 & -10 &\vdots & 0\\ 2 & 2 & -2 &
-\vdots & 0\\2 & 2 & -4 &\vdots & 0\end{array}\right],
+\begin{bmatrix}
+4 & 4 & -10 &\vdots & 0\\ 2 & 2 & -2 &\vdots & 0\\2 & 2 & -4 &\vdots & 0
+\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1 & 1 & 0 &\vdots& 0\\ 0 & 0 & 1
-&\vdots& 0
-\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\begin{bmatrix}
+1 & 1 & 0 &\vdots& 0\\ 0 & 0 & 1&\vdots& 0\\ 0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \]
 Hence, $x_3=0$ and $x_1 =-x_2$, where $x_2$ is
 arbitrary. Choosing $x_2=1$  yields the eigenvector
@@ -2945,14 +2924,15 @@ find a third solution of \eqref{eq:10.5.7} in the form
 where ${\bf u}$ is a solution of $(A+I){\bf u=x}_2$.
 The  augmented matrix  of this system is
 \[
-\left[\begin{array}{rrrcr} 4 & 4 & -10 &\vdots & -1\\ 2 & 2 & -2 &
-\vdots & 1\\ 2 & 2 & -4 &\vdots & 0\end{array}\right],
+\begin{bmatrix}
+4 & 4 & -10 &\vdots & -1\\ 2 & 2 & -2 &\vdots & 1\\ 2 & 2 & -4 &\vdots & 0
+\end{bmatrix},
 \]
 which is  row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1 & 1 & 0 &\vdots& 1\\ 0 & 0 & 1
-&\vdots& \frac{1}{2}
-\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\begin{bmatrix}
+1 & 1 & 0 &\vdots& 1\\ 0 & 0 & 1&\vdots& \frac{1}{2}\\ 0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \]
 Hence, $u_3=1/2$ and $u_1 =1-u_2$, where $u_2$  is
 arbitrary. Choosing $u_2=0$ yields
@@ -2969,8 +2949,7 @@ of  \eqref{eq:10.5.7}.
 Since the Wronskian of $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$
 at $t=0$ is
 \[
-\left|\begin{array}{rrr}
-1&-1&1\\2&1&0\\1&0&\frac12\end{array}\right|=\frac{1}{2},
+\begin{vmatrix}1&-1&1\\2&1&0\\1&0&\frac12\end{vmatrix}=\frac{1}{2},
 \]
 $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is a fundamental set of solutions
 of \eqref{eq:10.5.7}. Therefore the general solution of \eqref{eq:10.5.7}
@@ -3022,22 +3001,24 @@ Use \zcref{thmtype:10.5.2} to find the general solution of
 \solution  The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.11} is
 \[
-\left|\begin{array}{ccc} 1-\lambda & 1 & \phantom{-}1\\ 1 & 3-\lambda
-&
--1\\ 0 & 2 & 2-\lambda\end{array}\right| =-(\lambda-2)^3.
+\begin{vmatrix}
+1-\lambda & 1 & \phantom{-}1\\ 1 & 3-\lambda&-1\\ 0 & 2 & 2-\lambda
+\end{vmatrix}
+=-(\lambda-2)^3.
 \]
 Hence, $\lambda_1=2$ is an eigenvalue of multiplicity $3$. The
 associated eigenvectors satisfy $(A-2I){\bf x=0}$. The augmented
 matrix of this system is
 \[
-\left[\begin{array}{rrrcr} -1 & 1 & 1 &\vdots & 0\\
-1& 1 & -1 &\vdots & 0\\ 0 & 2 & 0 &
-\vdots & 0\end{array}\right],
+\begin{bmatrix}
+-1 & 1 & 1 &\vdots & 0\\1& 1 & -1 &\vdots & 0\\ 0 & 2 & 0 &\vdots & 0
+\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& 0\\ 0 & 1 & 0  &\vdots& 0
-\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\begin{bmatrix}
+1 & 0 &- 1 &\vdots& 0\\ 0 & 1 & 0  &\vdots& 0\\ 0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \]
 Hence, $x_1 =x_3$ and  $x_2 = 0$, so the eigenvectors are all scalar
 multiples of
@@ -3057,13 +3038,17 @@ We  now find a second solution of  \eqref{eq:10.5.11}  in the form
 where ${\bf u}$ satisfies $(A-2I){\bf u=x}_1$.
 The  augmented matrix  of this system is
 \[
-\left[\begin{array}{rrrcr} -1 & 1 & 1 &\vdots & 1\\
-1& 1 & -1 &\vdots & 0\\ 0 & 2 & 0 &
-\vdots & 1\end{array}\right], \]
+\begin{bmatrix}
+-1 & 1 & 1 &\vdots & 1\\1& 1 & -1 &\vdots & 0\\ 0 & 2 & 0 &\vdots & 1
+\end{bmatrix},
+\]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& -\frac{1}{2}\\ 0 & 1 & 0
-&\vdots& \frac{1}{2}\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\begin{bmatrix}
+1 & 0 &- 1 &\vdots& -\frac{1}{2}\\
+0 & 1 & 0&\vdots& \frac{1}{2}\\
+0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \]
 Letting $u_3=0$ yields $u_1=-1/2$ and $u_2=1/2$; hence,
 \[
@@ -3083,13 +3068,19 @@ v}e^{2t}+\threecol{-1}10\frac{te^{2t}}{2}+\threecol101\frac{t^2e^{2t}}{2}
 where ${\bf v}$ satisfies $(A-2I){\bf v}={\bf u}$.
 The  augmented matrix  of this system is
 \[
-\left[\begin{array}{rrrcr} -1 & 1 & 1 &\vdots &-\frac{1}{2}\\
-1& 1 & -1 &\vdots & \frac{1}{2}\\ 0 & 2 & 0 &
-\vdots & 0\end{array}\right], \]
+\begin{bmatrix}
+-1 & 1 & 1 &\vdots &-\frac{1}{2}\\
+1& 1 & -1 &\vdots & \frac{1}{2}\\
+0 & 2 & 0 &\vdots & 0
+\end{bmatrix},
+\]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& \frac{1}{2}\\ 0 & 1 & 0
-&\vdots& 0\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\begin{bmatrix}
+1 & 0 &- 1 &\vdots& \frac{1}{2}\\
+0 & 1 & 0&\vdots& 0\\
+0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \]
 Letting $v_3=0$ yields $v_1=1/2$ and $v_2=0$; hence,
 \[
@@ -3106,10 +3097,10 @@ form a fundamental set of solutions of \eqref{eq:10.5.11}. Therefore the
 general solution of \eqref{eq:10.5.11} is
 \[
 {\bf y}
-=\dst{c_1\threecol101e^{2t}
-+c_2\left(\threecol{-1}10\frac{e^{2t}}{2}+\threecol101te^{2t}\right)}
-+c_3\dst{\left(\threecol100\frac{e^{2t}}{2}+
-\threecol{-1}10\frac{te^{2t}}{2}+\threecol101\frac{t^2e^{2t}}{2}\right)}.
+=c_1\threecol101e^{2t}
++c_2\left(\threecol{-1}10\frac{e^{2t}}{2}+\threecol101te^{2t}\right)
++c_3\left(\threecol100\frac{e^{2t}}{2}+
+\threecol{-1}10\frac{te^{2t}}{2}+\threecol101\frac{t^2e^{2t}}{2}\right).
 \]
 
 
@@ -3152,22 +3143,28 @@ Use \zcref{thmtype:10.5.3} to find the general solution of
 \solution  The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.15} is
 \[
-\left|\begin{array}{ccc} -\lambda & 0 & 1\\ -1 & 1-\lambda &
-1\\ -1 & 0 & 2-\lambda\end{array}\right| =-(\lambda-1)^3.
+\begin{vmatrix}
+-\lambda & 0 & 1\\ -1 & 1-\lambda &1\\ -1 & 0 & 2-\lambda
+\end{vmatrix} =-(\lambda-1)^3.
 \]
 Hence,  $\lambda_1=1$ is
 an eigenvalue of multiplicity $3$.  The associated eigenvectors
 satisfy $(A-I){\bf x=0}$. The  augmented
 matrix of this system is
 \[
-\left[\begin{array}{rrrcr} -1 & 0 & 1 &\vdots & 0\\
--1& 0 & 1 &\vdots & 0\\ -1 & 0 & 1 &
-\vdots & 0\end{array}\right],
+\begin{bmatrix}
+-1 & 0 & 1 &\vdots & 0\\
+-1& 0 & 1 &\vdots & 0\\
+-1 & 0 & 1 &\vdots & 0
+\end{bmatrix},
  \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& 0\\ 0 & 0 & 0  &\vdots& 0
-\\ 0 & 0 & 0 &\vdots&0\end{array}\right].
+\begin{bmatrix}
+1 & 0 &- 1 &\vdots& 0\\
+0 & 0 & 0  &\vdots& 0\\
+0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \]
 Hence, $x_1 =x_3$ and  $x_2$ is arbitrary, so the eigenvectors are  of
 the form
@@ -3192,14 +3189,19 @@ find constants $\alpha$  and $\beta$ (not both zero) such that the system
 \end{equation}
 has a solution ${\bf u}$. The augmented matrix of this system is
 \[
-\left[\begin{array}{rrrcr} -1 & 0 & 1 &\vdots &\alpha\\
--1& 0 & 1 &\vdots &\beta\\ -1 & 0 & 1 &
-\vdots &\alpha\end{array}\right], \]
+\begin{bmatrix}
+-1 & 0 & 1 &\vdots &\alpha\\
+-1& 0 & 1 &\vdots &\beta\\
+-1 & 0 & 1 &\vdots &\alpha
+\end{bmatrix},
+\]
 which is row equivalent to
 \begin{equation}\label{eq:10.5.18}
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& -\alpha\\ 0 & 0 & 0
-&\vdots&\beta-\alpha\\ 0 & 0 & 0 &\vdots&0\end{array}
-\right].
+\begin{bmatrix}
+1 & 0 &- 1 &\vdots& -\alpha\\
+0 & 0 & 0&\vdots&\beta-\alpha\\
+0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \end{equation}
 Therefore  \eqref{eq:10.5.17} has a solution if and only if
 $\beta=\alpha$, where $\alpha$ is arbitrary. If
@@ -3210,9 +3212,11 @@ $\alpha=\beta=1$ then \eqref{eq:10.5.12} and \eqref{eq:10.5.16} yield
 \]
 and the augmented matrix \eqref{eq:10.5.18}  becomes
 \[
-\left[\begin{array}{rrrcr} 1 & 0 &- 1 &\vdots& -1\\ 0 & 0 & 0
-&\vdots& 0\\ 0 & 0 & 0 &\vdots&0\end{array}
-\right].
+\begin{bmatrix}
+1 & 0 &- 1 &\vdots& -1\\
+0 & 0 & 0&\vdots& 0\\
+0 & 0 & 0 &\vdots&0
+\end{bmatrix}.
 \]
 This implies that $u_1=-1+u_3$, while  $u_2$  and $u_3$ are arbitrary.
 Choosing $u_2=u_3=0$  yields
@@ -3239,13 +3243,13 @@ Therefore the general solution of \eqref{eq:10.5.15} is
 We'll now  consider the geometric properties of solutions of a
 $2\times2$ constant coefficient system
 \begin{equation} \label{eq:10.5.19}
-\twocol{y_1'}{y_2'}=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]\twocol{y_1}{y_2}
+\twocol{y_1'}{y_2'}=\begin{bmatrix}
+a_{11}&a_{12}\\a_{21}&a_{22}
+\end{bmatrix}\twocol{y_1}{y_2}
 \end{equation}
 under the assumptions of this section; that is, when the matrix
 \[
-A=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]
+A=\begin{bmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
 \]
 has a repeated eigenvalue $\lambda_1$ and the associated eigenspace is
 one-dimensional. In this case we know from \zcref{thmtype:10.5.1}
@@ -3383,75 +3387,75 @@ solution.
 
 \begin{exerciselist}
 
-\item(1)\label{exer:10.5.1}$\dst{{\bf y}'=\twobytwo34{-1}7{\bf y}}$%&
-\item(1)\label{exer:10.5.2}$\dst{{\bf y}'=\twobytwo0{-1}1{-2}{\bf y}}$
-\item(1)\label{exer:10.5.3}$\dst{{\bf y}'=\twobytwo{-7}4{-1}{-11}{\bf y}}$
-\item(1)\label{exer:10.5.4}$\dst{{\bf y}'=\twobytwo31{-1}1{\bf y}}$
-\item(1)\label{exer:10.5.5}$\dst{{\bf y}'=\twobytwo4{12}{-3}{-8}{\bf y}}$
-\item(1)\label{exer:10.5.6}$\dst{{\bf y'}=\twobytwo{-10}9{-4}2{\bf y}}$
-\item(1)\label{exer:10.5.7}$\dst{{\bf y'}=\twobytwo{-13}{16}{-9}{11}{\bf y}}$
-\item(1)\label{exer:10.5.8}$\dst{{\bf y'}=\threebythree021{-4}61042{\bf y}}$
-\item(1)\label{exer:10.5.9}$\dst{{\bf y}' =\frac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10{\bf y}}$
-\item(1)\label{exer:10.5.10}$\dst{{\bf y}'=\threebythree{-1}1{-1}{-2}02{-1}3{-1}{\bf y}}$
-\item(1)\label{exer:10.5.11}$\dst{{\bf y}'=\threebythree4{-2}{-2}{-2}3{-1}2{-1}3{\bf y}}$
-\item(1)\label{exer:10.5.12}$\dst{{\bf y}'=
-\threebythree6{-5}32{-1}3211{\bf y}}$
+\item(1)\label{exer:10.5.1}${\bf y}'=\twobytwo34{-1}7{\bf y}$
+\item(1)\label{exer:10.5.2}${\bf y}'=\twobytwo0{-1}1{-2}{\bf y}$
+\item(1)\label{exer:10.5.3}${\bf y}'=\twobytwo{-7}4{-1}{-11}{\bf y}$
+\item(1)\label{exer:10.5.4}${\bf y}'=\twobytwo31{-1}1{\bf y}$
+\item(1)\label{exer:10.5.5}${\bf y}'=\twobytwo4{12}{-3}{-8}{\bf y}$
+\item(1)\label{exer:10.5.6}${\bf y'}=\twobytwo{-10}9{-4}2{\bf y}$
+\item(1)\label{exer:10.5.7}${\bf y'}=\twobytwo{-13}{16}{-9}{11}{\bf y}$
+\item(1)\label{exer:10.5.8}${\bf y'}=\threebythree021{-4}61042{\bf y}$
+\item(1)\label{exer:10.5.9}${\bf y}' =\dfrac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10{\bf y}$
+\item(1)\label{exer:10.5.10}${\bf y}'=\threebythree{-1}1{-1}{-2}02{-1}3{-1}{\bf y}$
+\item(1)\label{exer:10.5.11}${\bf y}'=\threebythree4{-2}{-2}{-2}3{-1}2{-1}3{\bf y}$
+\item(1)\label{exer:10.5.12}${\bf y}'=
+\threebythree6{-5}32{-1}3211{\bf y}$
 
 \exercisetext{In \zcref[range]{exer:10.5.13,exer:10.5.23}
 solve the initial value problem.}
 
-\item\label{exer:10.5.13}$\dst{{\bf
-y}'=\twobytwo{-11}8{-2}{-3}{\bf y} ,\quad{\bf y}(0)=\twocol62}$
+\item\label{exer:10.5.13}${\bf
+y}'=\twobytwo{-11}8{-2}{-3}{\bf y} ,\quad{\bf y}(0)=\twocol62$
 
-\item\label{exer:10.5.14}$\dst{{\bf
-y}'=\twobytwo{15}{-9}{16}{-9}{\bf y} ,\quad{\bf y}(0)=\twocol58}$
+\item\label{exer:10.5.14}${\bf
+y}'=\twobytwo{15}{-9}{16}{-9}{\bf y} ,\quad{\bf y}(0)=\twocol58$
 
-\item\label{exer:10.5.15}$\dst{{\bf y}'=\twobytwo{-3}{-4}1{-7}{\bf
-y},\quad{\bf y}(0)=\twocol23}$
+\item\label{exer:10.5.15}${\bf y}'=\twobytwo{-3}{-4}1{-7}{\bf
+y},\quad{\bf y}(0)=\twocol23$
 
-\item\label{exer:10.5.16}$\dst{{\bf
-y}'=\twobytwo{-7}{24}{-6}{17}{\bf y} ,\quad{\bf y}(0)=\twocol31}$
+\item\label{exer:10.5.16}${\bf
+y}'=\twobytwo{-7}{24}{-6}{17}{\bf y} ,\quad{\bf y}(0)=\twocol31$
 
-\item\label{exer:10.5.17}$\dst{{\bf y}'=\twobytwo{-7}3{-3}{-1}{\bf
-y} ,\quad{\bf y}(0)=\twocol02}$
+\item\label{exer:10.5.17}${\bf y}'=\twobytwo{-7}3{-3}{-1}{\bf
+y} ,\quad{\bf y}(0)=\twocol02$
 
-\item\label{exer:10.5.18}$\dst{{\bf y}'
+\item\label{exer:10.5.18}${\bf y}'
 =\threebythree{-1}101{-1}{-2}{-1}{-1}{-1}{\bf y},\quad
-{\bf y}(0)=\threecol65{-7}}$
+{\bf y}(0)=\threecol65{-7}$
 
-\item\label{exer:10.5.19}$\dst{{\bf y}'
+\item\label{exer:10.5.19}${\bf y}'
 =\threebythree{-2}21{-2}21{-3}32{\bf y},\quad
-{\bf y}(0)=\threecol{-6}{-2}0}$
+{\bf y}(0)=\threecol{-6}{-2}0$
 
-\item\label{exer:10.5.20}$\dst{{\bf y}'
+\item\label{exer:10.5.20}${\bf y}'
 =\threebythree{-7}{-4}4{-1}01{-9}{-5}6{\bf y},\quad\bf
-{\bf y}(0)=\threecol{-6}9{-1}}$
+{\bf y}(0)=\threecol{-6}9{-1}$
 
-\item\label{exer:10.5.21}$\dst{{\bf y}'
+\item\label{exer:10.5.21}${\bf y}'
 =\threebythree{-1}{-4}{-1}361{-3}{-2}3\bf y,\quad\bf
-y(0)=\threecol{-2}13}$
+y(0)=\threecol{-2}13$
 
-\item\label{exer:10.5.22}$\dst{{\bf y}'
+\item\label{exer:10.5.22}${\bf y}'
 =\threebythree4{-8}{-4}{-3}{-1}{-3}1{-1}9{\bf y},\quad
-{\bf y}(0)=\threecol{-4}1{-3}}$
+{\bf y}(0)=\threecol{-4}1{-3}$
 
-\item\label{exer:10.5.23}$\dst{{\bf y}'=
+\item\label{exer:10.5.23}${\bf y}'=
 \threebythree{-5}{-1}{11}{-7}1{13}{-4}08{\bf y},\quad
-{\bf y}(0)=\threecol022}$
+{\bf y}(0)=\threecol022$
 
 \exercisetext{The coefficient matrices in
 \zcref[range]{exer:10.5.24,exer:10.5.32}
 have eigenvalues of multiplicity $3$. Find the
 general solution.}
 
-\item(1)\label{exer:10.5.24}$\dst{{\bf y}'=\threebythree5{-1}1{-1}9{-3}{-2}24{\bf y}}$
-\item(1)\label{exer:10.5.25}$\dst{{\bf y}'=\threebythree1{10}{-12}2232{-1}6{\bf y}}$
-\item(1)\label{exer:10.5.26}$\dst{{\bf y}'=\threebythree{-6}{-4}{-4}2{-1}1231{\bf y}}$
-\item(1)\label{exer:10.5.27}$\dst{{\bf y}'=\threebythree02{-2}{-1}5{-3}111{\bf y}}$
-\item(1)\label{exer:10.5.28}$\dst{{\bf y}'=\threebythree{-2}{-12}{10}2{-24}{11}2{-24}8{\bf y}}$
-\item(1)\label{exer:10.5.29}$\dst{{\bf y}'=\threebythree{-1}{-12}81{-9}41{-6}1{\bf y}}$
-\item(1)\label{exer:10.5.30}$\dst{{\bf y}'=\threebythree{-4}0{-1}{-1}{-3}{-1}10{-2}{\bf y}}$
-\item(1)\label{exer:10.5.31}$\dst{{\bf y}'=\threebythree{-3}{-3}445{-8}23{-5}\bf y}$
+\item(1)\label{exer:10.5.24}${\bf y}'=\threebythree5{-1}1{-1}9{-3}{-2}24{\bf y}$
+\item(1)\label{exer:10.5.25}${\bf y}'=\threebythree1{10}{-12}2232{-1}6{\bf y}$
+\item(1)\label{exer:10.5.26}${\bf y}'=\threebythree{-6}{-4}{-4}2{-1}1231{\bf y}$
+\item(1)\label{exer:10.5.27}${\bf y}'=\threebythree02{-2}{-1}5{-3}111{\bf y}$
+\item(1)\label{exer:10.5.28}${\bf y}'=\threebythree{-2}{-12}{10}2{-24}{11}2{-24}8{\bf y}$
+\item(1)\label{exer:10.5.29}${\bf y}'=\threebythree{-1}{-12}81{-9}41{-6}1{\bf y}$
+\item(1)\label{exer:10.5.30}${\bf y}'=\threebythree{-4}0{-1}{-1}{-3}{-1}10{-2}{\bf y}$
+\item(1)\label{exer:10.5.31}${\bf y}'=\threebythree{-3}{-3}445{-8}23{-5}\bf y$
 
 \item\label{exer:10.5.32}${\bf y}'={\threebythree{-3}{-1}01{-1}0{-1}{-1}{-2}}{\bf y}$
 
@@ -3483,8 +3487,7 @@ that $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is linearly independent.
 
 \item\label{exer:10.5.35}Suppose the matrix
 \[
-A=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]
+A=\begin{bmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
 \]
 has a repeated eigenvalue $\lambda_1$ and the associated eigenspace is
 one-dimensional. Let
@@ -3501,24 +3504,16 @@ negative half-planes with respect to the line $L$
 \exercisetext{In \zcref[range]{exer:10.5.36,exer:10.5.45}
  plot trajectories of the given system.}
 
-\item(1)\label{exer:10.5.36}\CGex\, ${\bf y}'=\dst{\twobytwo{-3}{-1}41}{\bf
-y}$
-\item(1)\label{exer:10.5.37}\CGex\,  ${\bf y}'=\dst{\twobytwo2{-1}10}{\bf y}$
-\item(1)\label{exer:10.5.38}\CGex\, ${\bf y}'=\dst{\twobytwo{-1}{-3}35}{\bf
-y}$
-\item(1)\label{exer:10.5.39}\CGex\,  ${\bf y}'=\dst{\twobytwo{-5}3{-3}1}{\bf
-y}$
-\item(1)\label{exer:10.5.40}\CGex\,  ${\bf y}'=\dst{\twobytwo{-2}{-3}34}{\bf
-y}$
-\item(1)\label{exer:10.5.41}\CGex\,  ${\bf y}'=\dst{\twobytwo{-4}{-3}32}{\bf
-y}$
-\item(1)\label{exer:10.5.42}\CGex\,  ${\bf y}'=\dst{\twobytwo0{-1}1{-2}}{\bf
-y}$
-\item(1)\label{exer:10.5.43}\CGex\,  ${\bf y}'=\dst{\twobytwo01{-1}2}{\bf y}$
-\item(1)\label{exer:10.5.44}\CGex\,  ${\bf y}'=\dst{\twobytwo{-2}1{-1}0}{\bf
-y}$
-\item(1)\label{exer:10.5.45}\CGex\, ${\bf y}'=\dst{\twobytwo0{-4}1{-4}}{\bf
-y}$
+\item(1)\label{exer:10.5.36}\CGex\, ${\bf y}'=\twobytwo{-3}{-1}41{\bf y}$
+\item(1)\label{exer:10.5.37}\CGex\,  ${\bf y}'=\twobytwo2{-1}10{\bf y}$
+\item(1)\label{exer:10.5.38}\CGex\, ${\bf y}'=\twobytwo{-1}{-3}35{\bf y}$
+\item(1)\label{exer:10.5.39}\CGex\,  ${\bf y}'=\twobytwo{-5}3{-3}1{\bf y}$
+\item(1)\label{exer:10.5.40}\CGex\,  ${\bf y}'=\twobytwo{-2}{-3}34{\bf y}$
+\item(1)\label{exer:10.5.41}\CGex\,  ${\bf y}'=\twobytwo{-4}{-3}32{\bf y}$
+\item(1)\label{exer:10.5.42}\CGex\,  ${\bf y}'=\twobytwo0{-1}1{-2}{\bf y}$
+\item(1)\label{exer:10.5.43}\CGex\,  ${\bf y}'=\twobytwo01{-1}2{\bf y}$
+\item(1)\label{exer:10.5.44}\CGex\,  ${\bf y}'=\twobytwo{-2}1{-1}0{\bf y}$
+\item(1)\label{exer:10.5.45}\CGex\, ${\bf y}'=\twobytwo0{-4}1{-4}{\bf y}$
 
 \end{exerciselist}
 
@@ -3594,12 +3589,10 @@ A({\bf u}+i{\bf v})=(\alpha{\bf u}-\beta{\bf v})+i(\alpha{\bf v}+\beta{\bf
 u}).
 \]
 Equating real and imaginary parts on the two sides of this equation yields
-\[
-\begin{array}{rcl}
-A{\bf u}&=&\alpha{\bf u}-\beta{\bf v}\\
-A{\bf v}&=&\alpha{\bf v}+\beta{\bf u}.
-\end{array}
-\]
+\begin{align*}
+A{\bf u}&=\alpha{\bf u}-\beta{\bf v}\\
+A{\bf v}&=\alpha{\bf v}+\beta{\bf u}.
+\end{align*}
 We leave it to you (\zcref{exer:10.6.25}) to show from this that
 ${\bf u}$ and
 ${\bf v}$ are both nonzero.
@@ -3611,25 +3604,23 @@ f_1'{\bf u}+f_2'{\bf v}
 \end{align*}
 This is true if
 \[
-\begin{array}{rcr}
-f_1'&=&\alpha f_1+\beta f_2\phantom{,}\\
-f_2'&=&-\beta f_1+\alpha f_2,
-\end{array}
+\begin{aligned}
+f_1'&=\alpha f_1+\beta f_2\phantom{,}\\
+f_2'&=-\beta f_1+\alpha f_2,
+\end{aligned}
 \mbox{\quad or, equivalently,\quad}
-\begin{array}{rcr}
-f_1'-\alpha f_1&=&\phantom{-}\beta f_2\phantom{.}\\
-f_2'-\alpha f_2&=&-\beta f_1.
-\end{array}
+\begin{aligned}
+f_1'-\alpha f_1&=\phantom{-}\beta f_2\phantom{.}\\
+f_2'-\alpha f_2&=-\beta f_1.
+\end{aligned}
 \]
 If we let $f_1=g_1e^{\alpha t}$ and $f_2=g_2e^{\alpha t}$, where
 $g_1$ and $g_2$ are to be determined, then the last two equations
 become
-\[
-\begin{array}{rcr}
-g_1'&=&\beta g_2\phantom{.}\\
-g_2'&=&-\beta g_1,
-\end{array}
-\]
+\begin{align*}
+g_1'&=\beta g_2\phantom{.}\\
+g_2'&=-\beta g_1,
+\end{align*}
 which implies that
 \[
 g_1''=\beta g_2'=-\beta^2 g_1,
@@ -3653,12 +3644,12 @@ f_2&=e^{\alpha t}(-c_1\sin\beta t+c_2\cos\beta t).
 \end{align*}
 Substituting these into \eqref{eq:10.6.2} shows that
 \begin{equation} \label{eq:10.6.5}
-\begin{array}{rcl}
-{\bf y}&=&e^{\alpha t}\left[(c_1\cos\beta t+c_2\sin\beta t){\bf u}
+\begin{aligned}
+{\bf y}&=e^{\alpha t}\left[(c_1\cos\beta t+c_2\sin\beta t){\bf u}
 +(-c_1\sin\beta t+c_2\cos\beta t){\bf v}\right]\\
-&=&c_1e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)
+&=c_1e^{\alpha t}({\bf u}\cos\beta t-{\bf v}\sin\beta t)
 +c_2e^{\alpha t}({\bf u}\sin\beta t+{\bf v}\cos\beta t)
-\end{array}
+\end{aligned}
 \end{equation}
 is a solution of ${\bf y}'=A{\bf y}$ for any choice of the constants
 $c_1$ and $c_2$. In particular, by first taking $c_1=1$ and $c_2=0$
@@ -3679,44 +3670,38 @@ independent (\zcref{exer:10.6.27}).
 \solution The characteristic polynomial of the coefficient matrix $A$
 in \eqref{eq:10.6.6} is
 \[
-\left|\begin{array}{cc} 4-\lambda&-5\\ 5&-2-\lambda
-\end{array}\right|=(\lambda-1)^2+16.
+\begin{vmatrix}4-\lambda&-5\\ 5&-2-\lambda\end{vmatrix}=(\lambda-1)^2+16.
 \]
 Hence, $\lambda=1+4i$ is an eigenvalue of $A$. The associated
 eigenvectors satisfy $\left(A-\left(1+4i\right)I\right){\bf x}={\bf
 0}$. The augmented matrix of this system is
 \[
-\left[\begin{array}{cccr} 3-4i&-5&\vdots&0\\
-5&-3-4i&\vdots&0  \end{array}\right],
+\begin{bmatrix}3-4i&-5&\vdots&0\\5&-3-4i&\vdots&0\end{bmatrix},
  \]
 which is row equivalent to
 \[
-\left[\begin{array}{cccr} 1&-\frac{3+4i}{5}&\vdots&0\\ 0&0&\vdots&0
-\end{array}\right].
+\begin{bmatrix}1&-\frac{3+4i}{5}&\vdots&0\\ 0&0&\vdots&0\end{bmatrix}.
 \]
 Therefore $x_1=(3+4i)x_2/5$. Taking $x_2=5$ yields $x_1=3+4i$, so
 \[
-{\bf x}=\left[\begin{array}{c}3+4i\\5\end{array}\right]
+{\bf x}=\begin{bmatrix}3+4i\\5\end{bmatrix}
 \]
 is an eigenvector.  The real and imaginary parts of
 \[
-e^t(\cos4t+i\sin4t)\left[\begin{array}{c}3+4i\\5\end{array}\right]
+e^t(\cos4t+i\sin4t)\begin{bmatrix}3+4i\\5\end{bmatrix}
 \]
  are
 \[
-{\bf y}_1=e^t\left[\begin{array}{c}3\cos4t-4\sin
-4t\\5\cos4t\end{array}\right]\quad\mbox{ and }\quad
-{\bf y}_2=e^t\left[\begin{array}{c}3\sin4t+4\cos4t\\5\sin
-4t\end{array}\right],
+{\bf y}_1=e^t\begin{bmatrix}3\cos4t-4\sin4t\\5\cos4t\end{bmatrix}
+\quad\mbox{ and }\quad
+{\bf y}_2=e^t\begin{bmatrix}3\sin4t+4\cos4t\\5\sin4t\end{bmatrix},
 \]
 which are linearly independent solutions of  \eqref{eq:10.6.6}.
 The general solution of \eqref{eq:10.6.6} is
 \[
 {\bf y}=
-c_1e^t\left[\begin{array}{c}3\cos4t-4\sin
-4t\\5\cos4t\end{array}\right]+
-c_2e^t\left[\begin{array}{c}3\sin4t+4\cos4t\\5\sin
-4t\end{array}\right].
+c_1e^t\begin{bmatrix}3\cos4t-4\sin4t\\5\cos4t\end{bmatrix}+
+c_2e^t\begin{bmatrix}3\sin4t+4\cos4t\\5\sin4t\end{bmatrix}.
 \]
 
 \begin{example}\label{example:10.6.2} \rm
@@ -3729,43 +3714,37 @@ c_2e^t\left[\begin{array}{c}3\sin4t+4\cos4t\\5\sin
 \solution The characteristic polynomial of the coefficient matrix $A$
 in \eqref{eq:10.6.7} is
 \[
-\left|\begin{array}{cc}-14-\lambda&39\\-6&16-\lambda
-\end{array}\right|=(\lambda-1)^2+9.
+\begin{vmatrix}-14-\lambda&39\\-6&16-\lambda\end{vmatrix}=(\lambda-1)^2+9.
 \]
 Hence, $\lambda=1+3i$ is an eigenvalue of $A$. The associated
 eigenvectors satisfy $\left(A-(1+3i)I\right){\bf x}={\bf 0}$. The
 augmented augmented matrix of this system is
 \[
-\left[\begin{array}{cccr}-15-3i&39&\vdots&0\\
--6&15-3i&\vdots&0  \end{array}\right],
+\begin{bmatrix}-15-3i&39&\vdots&0\\-6&15-3i&\vdots&0\end{bmatrix},
  \]
 which is row equivalent to
 \[
-\left[\begin{array}{cccr} 1&\frac{-5+i}{2}&\vdots&0\\ 0&0&\vdots&0
-\end{array}\right].
+\begin{bmatrix}1&\frac{-5+i}{2}&\vdots&0\\ 0&0&\vdots&0\end{bmatrix}.
 \]
 Therefore $x_1=(5-i)/2$. Taking $x_2=2$ yields $x_1=5-i$, so
 \[
-{\bf x}=\left[\begin{array}{c}5-i\\2\end{array}\right]
+{\bf x}=\begin{bmatrix}5-i\\2\end{bmatrix}
 \]
 is an eigenvector. The real and imaginary parts of
 \[
-e^t(\cos3t+i\sin3t)\left[\begin{array}{c}5-i\\2\end{array}\right]
+e^t(\cos3t+i\sin3t)\begin{bmatrix}5-i\\2\end{bmatrix}
 \]
  are
 \[
-{\bf y}_1=e^t\left[\begin{array}{c}\sin3t+5\cos3t\\2\cos
-3t\end{array}\right]\quad\mbox{ and }\quad
-{\bf y}_2=e^t\left[\begin{array}{c}-\cos3t+5\sin3t\\2\sin
-3t\end{array}\right],
+{\bf y}_1=e^t\begin{bmatrix}\sin3t+5\cos3t\\2\cos3t\end{bmatrix}
+\quad\mbox{ and }\quad
+{\bf y}_2=e^t\begin{bmatrix}-\cos3t+5\sin3t\\2\sin3t\end{bmatrix},
  \]
 which are  linearly independent solutions of  \eqref{eq:10.6.7}.
 The general solution of \eqref{eq:10.6.7} is
 \[
-{\bf y}=c_1e^t\left[\begin{array}{c}\sin3t+5\cos3t\\2\cos
-3t\end{array}\right]+
-c_2e^t\left[\begin{array}{c}-\cos3t+5\sin3t\\2\sin
-3t\end{array}\right].
+{\bf y}=c_1e^t\begin{bmatrix}\sin3t+5\cos3t\\2\cos3t\end{bmatrix}+
+c_2e^t\begin{bmatrix}-\cos3t+5\sin3t\\2\sin3t\end{bmatrix}.
 \]
 
 \begin{example}\label{example:10.6.3}  \rm
@@ -3778,22 +3757,19 @@ c_2e^t\left[\begin{array}{c}-\cos3t+5\sin3t\\2\sin
 \solution  The characteristic
 polynomial of the  coefficient matrix $A$ in  \eqref{eq:10.6.8} is
 \[
-\left|\begin{array}{ccc}-5-\lambda&5&4\\-8&7-\lambda&
-6\\ \phantom{-}1
-&0&-\lambda\end{array}\right|=-(\lambda-2)(\lambda^2+1).
+\begin{vmatrix}
+-5-\lambda&5&4\\-8&7-\lambda&6\\ \phantom{-}1&0&-\lambda
+\end{vmatrix}=-(\lambda-2)(\lambda^2+1).
 \]
 Hence, the eigenvalues of $A$ are $\lambda_1=2$, $\lambda_2=i$, and
 $\lambda_3=-i$.
 The augmented matrix of $(A-2I){\bf x=0}$ is
 \[
-\left[\begin{array}{rrrcr}-7&5&4&\vdots&0\\-8&
-5&6&\vdots&0\\ 1&0&-2&\vdots&0
-\end{array}\right],
+\begin{bmatrix}-7&5&4&\vdots&0\\-8&5&6&\vdots&0\\ 1&0&-2&\vdots&0\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1&0&-2&\vdots&0\\ 0&1&-2&
-\vdots&0\\ 0&0&0&\vdots&0\end{array}\right].
+\begin{bmatrix}1&0&-2&\vdots&0\\ 0&1&-2&\vdots&0\\ 0&0&0&\vdots&0\end{bmatrix}.
 \]
 Therefore $x_1=x_2=2x_3$.  Taking $x_3=1$ yields
 \[
@@ -3807,48 +3783,47 @@ is a solution of  \eqref{eq:10.6.8}.
 
 The augmented  matrix of $(A-iI){\bf x=0}$ is
 \[
-\left[\begin{array}{ccrccc}-5-i&5&4&\vdots&0\\-8&
-7-i&6&\vdots&0\\ \phantom{-}1&0&-i&\vdots&0
-\end{array}\right],
+\begin{bmatrix}
+-5-i&5&4&\vdots&0\\
+-8&7-i&6&\vdots&0\\
+\phantom{-}1&0&-i&\vdots&0
+\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{ccccc} 1&0&-i&\vdots&0\\ 0&1&1-i&
-\vdots&0\\ 0&0&0&\vdots&0\end{array}\right].
+\begin{bmatrix}
+1&0&-i&\vdots&0\\ 0&1&1-i&\vdots&0\\ 0&0&0&\vdots&0
+\end{bmatrix}.
 \]
 Therefore $x_1=ix_3$ and $x_2=-(1-i)x_3$. Taking $x_3=1$ yields
 the eigenvector
 \[
-{\bf x}_2=\left[\begin{array}{c} i\\-1+i\\ 1\end{array}
-\right].
+{\bf x}_2=\begin{bmatrix}i\\-1+i\\ 1\end{bmatrix}.
 \]
 The real and imaginary parts of
 \[
-(\cos t+i\sin t)\left[\begin{array}{c}i\\-1+i\\1\end{array}\right]
+(\cos t+i\sin t)\begin{bmatrix}i\\-1+i\\1\end{bmatrix}
 \]
  are
 \[
 {\bf y}_2=
-\left[\begin{array}{c}-\sin t\\-\cos t-\sin t\\\cos t\end{array}\right]
+\begin{bmatrix}-\sin t\\-\cos t-\sin t\\\cos t\end{bmatrix}
 \quad\mbox{ and }\quad
-{\bf y}_3=\left[\begin{array}{c}\cos t\\\cos t-\sin t\\\sin
-t\end{array}\right],
+{\bf y}_3=\begin{bmatrix}\cos t\\\cos t-\sin t\\\sin t\end{bmatrix},
  \]
 which are solutions of  \eqref{eq:10.6.8}.
 Since the  Wronskian of $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$
 at $t=0$  is
 \[
-\left|\begin{array}{rrr}
-2&0&1\\2&-1&1\\1&1&0\end{array}\right|=1,
+\begin{vmatrix}2&0&1\\2&-1&1\\1&1&0\end{vmatrix}=1,
 \]
  $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is a
 fundamental set of solutions of \eqref{eq:10.6.8}. The general solution of
 \eqref{eq:10.6.8} is
 \[
 {\bf y}=c_1 \threecol221e^{2t}
-+c_2\left[\begin{array}{c}-\sin t\\-\cos t-\sin t\\\cos t\end{array}\right]
-+c_3\left[\begin{array}{c}\cos t\\\cos t-\sin t\\\sin
-t\end{array}\right].
++c_2\begin{bmatrix}-\sin t\\-\cos t-\sin t\\\cos t\end{bmatrix}
++c_3\begin{bmatrix}\cos t\\\cos t-\sin t\\\sin t\end{bmatrix}.
 \]
 
 \begin{example}\label{example:10.6.4}  \rm
@@ -3861,23 +3836,22 @@ t\end{array}\right].
 \solution The characteristic
 polynomial of the  coefficient matrix $A$ in  \eqref{eq:10.6.9} is
 \[
-\left|\begin{array}{ccc} 1-\lambda&-1&-2\\ 1&3-\lambda&
-\phantom{-}2\\ 1
-&-1&2-\lambda\end{array}\right|=
+\begin{vmatrix}
+1-\lambda&-1&-2\\ 1&3-\lambda&\phantom{-}2\\ 1&-1&2-\lambda
+\end{vmatrix}=
 -(\lambda-2)\left((\lambda-2)^2+4\right).
  \]
 Hence, the eigenvalues of $A$ are $\lambda_1=2$, $\lambda_2=2+2i$,
 and $\lambda_3=2-2i$.
 The augmented matrix of $(A-2I){\bf x=0}$ is
 \[
-\left[\begin{array}{rrrcr}-1&-1&-2&\vdots&0\\1&
-1&2&\vdots&0\\ 1&-1&0&\vdots&0
-\end{array}\right],
+\begin{bmatrix}
+-1&-1&-2&\vdots&0\\1&1&2&\vdots&0\\ 1&-1&0&\vdots&0
+\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1&0&1&\vdots&0\\ 0&1&1&
-\vdots&0\\ 0&0&0&\vdots&0\end{array}\right].
+\begin{bmatrix}1&0&1&\vdots&0\\ 0&1&1&\vdots&0\\ 0&0&0&\vdots&0\end{bmatrix}.
 \]
 Therefore $x_1=x_2=-x_3$.  Taking $x_3=1$ yields
 \[
@@ -3891,14 +3865,13 @@ is a solution of  \eqref{eq:10.6.9}.
 
 The augmented  matrix of $\left(A-(2+2i)I\right){\bf x=0}$ is
 \[
-\left[\begin{array}{ccrcc}-1-2i&-1&-2&\vdots&0\\ 1&
-1-2i&\phantom{-}2&\vdots&0\\ 1&-1&-2i&\vdots&0
-\end{array}\right],
+\begin{bmatrix}
+-1-2i&-1&-2&\vdots&0\\ 1&1-2i&\phantom{-}2&\vdots&0\\ 1&-1&-2i&\vdots&0
+\end{bmatrix},
 \]
 which is row equivalent to
 \[
-\left[\begin{array}{rrrcr} 1&0&-i&\vdots&0\\ 0&1&i&
-\vdots&0\\ 0&0&0&\vdots&0\end{array}\right].
+\begin{bmatrix}1&0&-i&\vdots&0\\ 0&1&i&\vdots&0\\ 0&0&0&\vdots&0\end{bmatrix}.
 \]
 Therefore $x_1=ix_3$ and $x_2=-ix_3$. Taking $x_3=1$ yields
 the eigenvector
@@ -3911,26 +3884,22 @@ e^{2t}(\cos2t+i\sin2t)\threecol i{-i}1
 \]
 are
 \[
-{\bf y}_2=e^{2t}\left[\begin{array}{r}-\sin2t\\\sin2t\\\cos
-2t\end{array}\right]\quad\mbox{ and }\quad
-{\bf y}_2=e^{2t}\left[\begin{array}{r}\cos2t\\-\cos2t\\\sin
-2t\end{array}\right],
+{\bf y}_2=e^{2t}\begin{bmatrix}-\sin2t\\\sin2t\\\cos2t\end{bmatrix}
+\quad\mbox{ and }\quad
+{\bf y}_2=e^{2t}\begin{bmatrix}\cos2t\\-\cos2t\\\sin2t\end{bmatrix},
 \]
 which are solutions of  \eqref{eq:10.6.9}.
 Since  the Wronskian of $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$
 at $t=0$ is
 \[
-\left|\begin{array}{rrr}
--1&0&1\\-1&0&-1\\1&1&0\end{array}\right|=-2,
+\begin{vmatrix}-1&0&1\\-1&0&-1\\1&1&0\end{vmatrix}=-2,
 \]
 $\{{\bf y}_1,{\bf y}_2,{\bf y}_3\}$ is a fundamental set of solutions
 of \eqref{eq:10.6.9}.  The general solution of \eqref{eq:10.6.9} is
 \[
 {\bf y}=c_1\threecol{-1}{-1}1e^{2t}+
-c_2e^{2t}\left[\begin{array}{r}-\sin2t\\\sin2t\\\cos
-2t\end{array}\right]+
-c_3e^{2t}\left[\begin{array}{r}\cos2t\\-\cos2t\\\sin
-2t\end{array}\right].
+c_2e^{2t}\begin{bmatrix}-\sin2t\\\sin2t\\\cos2t\end{bmatrix}+
+c_3e^{2t}\begin{bmatrix}\cos2t\\-\cos2t\\\sin2t\end{bmatrix}.
 \]
 
 
@@ -3939,13 +3908,12 @@ c_3e^{2t}\left[\begin{array}{r}\cos2t\\-\cos2t\\\sin
 We'll now  consider the geometric properties of solutions of a
 $2\times2$ constant coefficient system
 \begin{equation} \label{eq:10.6.10}
-\twocol{y_1'}{y_2'}=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]\twocol{y_1}{y_2}
+\twocol{y_1'}{y_2'}=\begin{bmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
+\twocol{y_1}{y_2}
 \end{equation}
 under the assumptions of this section; that is, when the matrix
 \[
-A=\left[\begin{array}{cc}a_{11}&a_{12}\\a_{21}&a_{22}
-\end{array}\right]
+A=\begin{bmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
 \]
 has a complex eigenvalue $\lambda=\alpha+i\beta$
 {\rm(}$\beta\ne0${\rm}) and ${\bf x}={\bf u}+i{\bf v}$ is an
@@ -3993,7 +3961,7 @@ we found the eigenvector
 \[
 {\bf x}=\ctwocol{3+4i}5=\twocol35+i\twocol40
 \]
-for the matrix of the system \eqref{eq:10.6.6}. Here ${\bf u}=\dst{\twocol35}$
+for the matrix of the system \eqref{eq:10.6.6}. Here ${\bf u}=\twocol35$
 and ${\bf v}=\twocol40$ are not orthogonal, since $({\bf u},{\bf
 v})=12$. Since $\|{\bf v}\|^2-\|{\bf u}\|^2=-18$, \eqref{eq:10.6.12} is
 equivalent to
@@ -4141,50 +4109,50 @@ solution.
 
 \begin{exerciselist}
 
-\item(1)\label{exer:10.6.1}$\dst{{\bf y}'=\twobytwo{-1}2{-5}5{\bf y}}$
-\item(1)\label{exer:10.6.2}$\dst{{\bf y}'=\twobytwo{-11}4{-26}9{\bf y}}$
-\item(1)\label{exer:10.6.3}$\dst{{\bf y}'=\twobytwo12{-4}5{\bf y}}$
-\item(1)\label{exer:10.6.4}$\dst{{\bf y}'=\twobytwo5{-6}3{-1}{\bf y}}$
-\item(1)\label{exer:10.6.5}$\dst{{\bf y}'=\threebythree3{-3}1022511{\bf y}}$
-\item(1)\label{exer:10.6.6}$\dst{{\bf y}'=\threebythree{-3}311{-5}{-3}{-3}73{\bf y}}$
-\item(1)\label{exer:10.6.7}$\dst{{\bf y}'=\threebythree21{-1}011101{\bf y}}$
-\item(1)\label{exer:10.6.8}$\dst{{\bf y}'=\threebythree{-3}1{-3}4{-1}24{-2}3{\bf y}}$
-\item(1)\label{exer:10.6.9}$\dst{{\bf y}'=\twobytwo5{-4}{10}1{\bf y}}$
-\item(1)\label{exer:10.6.10}$\dst{{\bf y}'=\frac{1}{3}\twobytwo7{-5}25{\bf y}}$
-\item(1)\label{exer:10.6.11}$\dst{{\bf y}'=\twobytwo32{-5}1{\bf y}}$
-\item(1)\label{exer:10.6.12}$\dst{{\bf y}'=\twobytwo{34}{52}{-20}{-30}{\bf y}}$
-\item(1)\label{exer:10.6.13}$\dst{{\bf y}'=\threebythree11210{-1}{-1}{-2}{-1}{\bf y}}$
-\item(1)\label{exer:10.6.14}$\dst{{\bf y}'=\threebythree3{-4}{-2}{-5}7{-8}{-10}{13}{-8}{\bf y}}$
-\item(1)\label{exer:10.6.15}$\dst{{\bf y}'=\threebythree60{-3}{-3}331{-2}6{\bf y}'}$
-\item(1)\label{exer:10.6.16}$\dst{{\bf y}'=\threebythree12{-2}02{-1}100{\bf y}'}$
+\item(1)\label{exer:10.6.1}${\bf y}'=\twobytwo{-1}2{-5}5{\bf y}$
+\item(1)\label{exer:10.6.2}${\bf y}'=\twobytwo{-11}4{-26}9{\bf y}$
+\item(1)\label{exer:10.6.3}${\bf y}'=\twobytwo12{-4}5{\bf y}$
+\item(1)\label{exer:10.6.4}${\bf y}'=\twobytwo5{-6}3{-1}{\bf y}$
+\item(1)\label{exer:10.6.5}${\bf y}'=\threebythree3{-3}1022511{\bf y}$
+\item(1)\label{exer:10.6.6}${\bf y}'=\threebythree{-3}311{-5}{-3}{-3}73{\bf y}$
+\item(1)\label{exer:10.6.7}${\bf y}'=\threebythree21{-1}011101{\bf y}$
+\item(1)\label{exer:10.6.8}${\bf y}'=\threebythree{-3}1{-3}4{-1}24{-2}3{\bf y}$
+\item(1)\label{exer:10.6.9}${\bf y}'=\twobytwo5{-4}{10}1{\bf y}$
+\item(1)\label{exer:10.6.10}${\bf y}'=\dfrac{1}{3}\twobytwo7{-5}25{\bf y}$
+\item(1)\label{exer:10.6.11}${\bf y}'=\twobytwo32{-5}1{\bf y}$
+\item(1)\label{exer:10.6.12}${\bf y}'=\twobytwo{34}{52}{-20}{-30}{\bf y}$
+\item(1)\label{exer:10.6.13}${\bf y}'=\threebythree11210{-1}{-1}{-2}{-1}{\bf y}$
+\item(1)\label{exer:10.6.14}${\bf y}'=\threebythree3{-4}{-2}{-5}7{-8}{-10}{13}{-8}{\bf y}$
+\item(1)\label{exer:10.6.15}${\bf y}'=\threebythree60{-3}{-3}331{-2}6{\bf y}$
+\item(1)\label{exer:10.6.16}${\bf y}'=\threebythree12{-2}02{-1}100{\bf y}$
 
 \exercisetext{In \zcref[range]{exer:10.6.17,exer:10.6.24}
 solve the initial value problem.}
 
-\item\label{exer:10.6.17}$\dst{{\bf y}'=\twobytwo4{-6}3{-2}{\bf y},\quad {\bf
-y}(0)=\twocol52}$
+\item\label{exer:10.6.17}${\bf y}'=\twobytwo4{-6}3{-2}{\bf y},\quad {\bf
+y}(0)=\twocol52$
 
-\item\label{exer:10.6.18}$\dst{{\bf y}'=\twobytwo7{15}{-3}1{\bf y},\quad {\bf
-y}(0)=\twocol51}$
+\item\label{exer:10.6.18}${\bf y}'=\twobytwo7{15}{-3}1{\bf y},\quad {\bf
+y}(0)=\twocol51$
 
-\item\label{exer:10.6.19}$\dst{{\bf y}'=\twobytwo7{-15}3{-5}{\bf y},\quad {\bf
-y}(0)=\twocol{17}7}$
+\item\label{exer:10.6.19}${\bf y}'=\twobytwo7{-15}3{-5}{\bf y},\quad {\bf
+y}(0)=\twocol{17}7$
 
-\item\label{exer:10.6.20}$\dst{{\bf y}'=\frac{1}{6}\twobytwo4{-2}52{\bf y},\quad {\bf
-y}(0)=\twocol1{-1}}$
+\item\label{exer:10.6.20}${\bf y}'=\frac{1}{6}\twobytwo4{-2}52{\bf y},\quad {\bf
+y}(0)=\twocol1{-1}$
 
-\item\label{exer:10.6.21}$\dst{{\bf y}'=\threebythree52{-1}{-3}22132{\bf y},\quad {\bf
-y}(0)=\threecol406}$
+\item\label{exer:10.6.21}${\bf y}'=\threebythree52{-1}{-3}22132{\bf y},\quad {\bf
+y}(0)=\threecol406$
 
-\item\label{exer:10.6.22}$\dst{{\bf y}'=\threebythree4408{10}{-20}23{-2}{\bf y},\quad {\bf
-y}(0)=\threecol865}$
+\item\label{exer:10.6.22}${\bf y}'=\threebythree4408{10}{-20}23{-2}{\bf y},\quad {\bf
+y}(0)=\threecol865$
 
-\item\label{exer:10.6.23}$\dst{{\bf
+\item\label{exer:10.6.23}${\bf
 y}'=\threebythree1{15}{-15}{-6}{18}{-22}{-3}{11}{-15}{\bf
-y},\quad {\bf y}(0)=\threecol{15}{17}{10}}$
+y},\quad {\bf y}(0)=\threecol{15}{17}{10}$
 
-\item\label{exer:10.6.24}$\dst{{\bf y}'=\threebythree4{-4}4{-10}3{15}2{-3}1{\bf y},\quad
-{\bf y}(0)=\threecol{16}{14}6}$
+\item\label{exer:10.6.24}${\bf y}'=\threebythree4{-4}4{-10}3{15}2{-3}1{\bf y},\quad
+{\bf y}(0)=\threecol{16}{14}6$
 
 \item\label{exer:10.6.25}Suppose an $n\times n$ matrix $A$ with
 real entries has a complex eigenvalue $\lambda=\alpha+i\beta$
@@ -4218,8 +4186,8 @@ independent, and {\rm(ii)}
 the linear independence of $\{\cos\beta t,\sin\beta t\}$
 on every interval.}
 
-\item\label{exer:10.6.28}Suppose ${\bf u}=\dst{\twocol{u_1}{u_2}}$ and ${\bf
-v}=\dst{\twocol{v_1}{v_2}}$ are not orthogonal; that is, $({\bf
+\item\label{exer:10.6.28}Suppose ${\bf u}=\twocol{u_1}{u_2}$ and ${\bf
+v}=\twocol{v_1}{v_2}$ are not orthogonal; that is, $({\bf
 u},{\bf v})\ne0$.
 \begin{alist}
 \item % (a)
@@ -4254,23 +4222,23 @@ $-\pi/2$.
 ${\bf U}$ and ${\bf V}$ parallel to the axes of symmetry of the
 trajectories, and plot some typical trajectories.}
 
-\item(1)\label{exer:10.6.29}\CGex\, $\dst{{\bf y}'=\twobytwo3{-5}5{-3}{\bf y}}$
-\item(1)\label{exer:10.6.30}\CGex\,  $\dst{{\bf y}'=\twobytwo{-15}{10}{-25}{15}{\bf y}}$
-\item(1)\label{exer:10.6.31}\CGex\,  $\dst{{\bf y}'=\twobytwo{-4}8{-4}4{\bf y}}$
-\item(1)\label{exer:10.6.32}\CGex\,  $\dst{{\bf y}'=\twobytwo{-3}{-15}33{\bf y}}$
+\item(1)\label{exer:10.6.29}\CGex\, ${\bf y}'=\twobytwo3{-5}5{-3}{\bf y}$
+\item(1)\label{exer:10.6.30}\CGex\,  ${\bf y}'=\twobytwo{-15}{10}{-25}{15}{\bf y}$
+\item(1)\label{exer:10.6.31}\CGex\,  ${\bf y}'=\twobytwo{-4}8{-4}4{\bf y}$
+\item(1)\label{exer:10.6.32}\CGex\,  ${\bf y}'=\twobytwo{-3}{-15}33{\bf y}$
 
 \exercisetext{In \zcref[range]{exer:10.6.33,exer:10.6.40} find vectors
 ${\bf U}$ and ${\bf V}$ parallel to the axes of symmetry of the shadow
 trajectories, and plot a typical trajectory.}
 
-\item(1)\label{exer:10.6.33}\CGex\,  $\dst{{\bf y}'=\twobytwo{-5}6{-12}7{\bf y}}$
-\item(1)\label{exer:10.6.34}\CGex\,  $\dst{{\bf y}'=\twobytwo5{-12}6{-7}{\bf y}}$
-\item(1)\label{exer:10.6.35}\CGex\,  $\dst{{\bf y}'=\twobytwo4{-5}9{-2}{\bf y}}$
-\item(1)\label{exer:10.6.36}\CGex\,  $\dst{{\bf y}'=\twobytwo{-4}9{-5}2{\bf y}}$
-\item(1)\label{exer:10.6.37}\CGex\,  $\dst{{\bf y}'=\twobytwo{-1}{10}{-10}{-1}{\bf y}}$
-\item(1)\label{exer:10.6.38}\CGex\,  $\dst{{\bf y}'=\twobytwo{-1}{-5}{20}{-1}{\bf y}}$
-\item(1)\label{exer:10.6.39}\CGex\,  $\dst{{\bf y}'=\twobytwo{-7}{10}{-10}9{\bf y}}$
-\item(1)\label{exer:10.6.40}\CGex\,  $\dst{{\bf y}'=\twobytwo{-7}6{-12}5{\bf y}}$
+\item(1)\label{exer:10.6.33}\CGex\,  ${\bf y}'=\twobytwo{-5}6{-12}7{\bf y}$
+\item(1)\label{exer:10.6.34}\CGex\,  ${\bf y}'=\twobytwo5{-12}6{-7}{\bf y}$
+\item(1)\label{exer:10.6.35}\CGex\,  ${\bf y}'=\twobytwo4{-5}9{-2}{\bf y}$
+\item(1)\label{exer:10.6.36}\CGex\,  ${\bf y}'=\twobytwo{-4}9{-5}2{\bf y}$
+\item(1)\label{exer:10.6.37}\CGex\,  ${\bf y}'=\twobytwo{-1}{10}{-10}{-1}{\bf y}$
+\item(1)\label{exer:10.6.38}\CGex\,  ${\bf y}'=\twobytwo{-1}{-5}{20}{-1}{\bf y}$
+\item(1)\label{exer:10.6.39}\CGex\,  ${\bf y}'=\twobytwo{-7}{10}{-10}9{\bf y}$
+\item(1)\label{exer:10.6.40}\CGex\,  ${\bf y}'=\twobytwo{-7}6{-12}5{\bf y}$
 
 \end{exerciselist}
 
@@ -4318,21 +4286,19 @@ y}+{\bf f}(t)$ provided that we know a fundamental matrix for the
 complementary system. To derive the method, suppose $Y$ is a
 fundamental matrix for the complementary system; that is,
 \[
-Y=\left[\begin{array}{cccc}
+Y=\begin{bmatrix}
 y_{11}&y_{12}&\cdots&y_{1n} \\
 y_{21}&y_{22}&\cdots&y_{2n}\\
 \vdots&\vdots&\ddots&\vdots \\
 y_{n1}&y_{n2}&\cdots&y_{nn} \\
-\end{array} \right],
+\end{bmatrix},
 \]
 where
 \[
-{\bf y}_1=\left[\begin{array}{c}y_{11}\\y_{21}\\ \vdots\\
-y_{n1}\end{array}\right],\quad
-{\bf y}_2=\left[\begin{array}{c}y_{12}\\y_{22}\\ \vdots\\
-y_{n2}\end{array}\right],\quad \cdots,\quad
-{\bf y}_n=\left[\begin{array}{c}y_{1n}\\y_{2n}\\ \vdots\\
-y_{nn}\end{array}\right]
+{\bf y}_1=\begin{bmatrix}y_{11}\\y_{21}\\ \vdots\\y_{n1}\end{bmatrix},\quad
+{\bf y}_2=\begin{bmatrix}y_{12}\\y_{22}\\ \vdots\\y_{n2}\end{bmatrix},
+\quad \cdots,\quad
+{\bf y}_n=\begin{bmatrix}y_{1n}\\y_{2n}\\ \vdots\\y_{nn}\end{bmatrix}
 \]
 is a fundamental set of solutions of the complementary system.
 In \zcref{sec:system_theory} we saw that $Y'=A(t)Y$. We seek a
@@ -4370,8 +4336,7 @@ equations.
 \item % (a)
 Find a particular solution of the system
 \begin{equation} \label{eq:10.7.3}
-{\bf y}'=\twobytwo1221{\bf y}+\left[\begin{array}{c}2e^{4t}\\e^{4t}
-\end{array}\right],
+{\bf y}'=\twobytwo1221{\bf y}+\begin{bmatrix}2e^{4t}\\e^{4t}\end{bmatrix},
 \end{equation}
 which we considered in \zcref{example:10.2.1}.
 \item % (b)
@@ -4386,63 +4351,61 @@ Find the general solution of  \eqref{eq:10.7.3}.
 \end{equation}
 The characteristic polynomial of the coefficient matrix is
 \[
-\left|\begin{array}{cc}1-\lambda&2\\2&1-\lambda\end{array}\right|=
+\begin{vmatrix}1-\lambda&2\\2&1-\lambda\end{vmatrix}=
 (\lambda+1)(\lambda-3).
 \]
 Using the method of \zcref{sec:system_const_coeff_i}, we find that
 \[
-{\bf y}_1=\left[\begin{array}{r}e^{3t}\\e^{3t}\end{array}\right]
+{\bf y}_1=\begin{bmatrix}e^{3t}\\e^{3t}\end{bmatrix}
 \quad\text{and}\quad 
-{\bf y}_2=\left[\begin{array}{r}e^{-t}\\-e^{-t}\end{array}\right]
+{\bf y}_2=\begin{bmatrix}e^{-t}\\-e^{-t}\end{bmatrix}
 \]
 are linearly independent solutions of \eqref{eq:10.7.4}.
 Therefore
 \[
-Y=\left[\begin{array}{rr}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{array}\right]
+Y=\begin{bmatrix}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{bmatrix}
 \]
 is a fundamental matrix for \eqref{eq:10.7.4}. We seek a particular
 solution ${\bf y}_p=Y{\bf u}$ of \eqref{eq:10.7.3}, where $Y{\bf u}'={\bf
 f}$; that is,
 \[
-\left[\begin{array}{rr}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{array}\right]
+\begin{bmatrix}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{bmatrix}
 \twocol{u_1'}{u_2'}
-=\left[\begin{array}{c}2e^{4t}\\e^{4t}\end{array}\right].
+=\begin{bmatrix}2e^{4t}\\e^{4t}\end{bmatrix}.
 \]
 The determinant of $Y$ is the Wronskian
 \[
-\left|\begin{array}{rr}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{array}\right|
+\begin{vmatrix}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{vmatrix}
 =-2e^{2t}.
 \]
 By Cramer's rule,
-\[
-\begin{array}{ccccccl}
-u_1'&=&-\dst\frac{1}{2e^{2t}}
-\left|\begin{array}{cr}2e^{4t}&e^{-t}\\e^{4t}&-e^{-t}
-\end{array}\right|&=&\dst\frac{3e^{3t}}{2e^{2t}}&=
-&\dst\frac{3}{2}e^t,\\[4\jot]
-u_2'&=&-\dst\frac{1}{2e^{2t}}
-\left|\begin{array}{rr}e^{3t}&2e^{4t}\\e^{3t}&e^{4t}
-\end{array}\right|&=&\dst\frac{e^{7t}}{2e^{2t}}&=&\dst\frac{1}{2}e^{5t}.
-\end{array}
-\]
+\begin{alignat*}{2}
+u_1'&=-\dfrac{1}{2e^{2t}}
+\begin{vmatrix}2e^{4t}&e^{-t}\\e^{4t}&-e^{-t}\end{vmatrix}
+&{}=\dfrac{3e^{3t}}{2e^{2t}}
+&=\dfrac{3}{2}e^t,\\
+u_2'&=-\dfrac{1}{2e^{2t}}
+\begin{vmatrix}e^{3t}&2e^{4t}\\e^{3t}&e^{4t}\end{vmatrix}
+&=\dfrac{e^{7t}}{2e^{2t}}
+&=\dfrac{1}{2}e^{5t}.
+\end{alignat*}
  Therefore
 \[
 {\bf
-u}'=\frac{1}{2}\left[\begin{array}{c}3e^t\\e^{5t}\end{array}\right].
+u}'=\frac{1}{2}\begin{bmatrix}3e^t\\e^{5t}\end{bmatrix}.
 \]
 Integrating and taking the constants of integration to be zero yields
 \[
 {\bf
-u}=\frac{1}{10}\left[\begin{array}{c}15e^t\\e^{5t}\end{array}\right],
+u}=\frac{1}{10}\begin{bmatrix}15e^t\\e^{5t}\end{bmatrix},
 \]
 so
 \[
 {\bf y}_p=Y{\bf u}=
-\dst\frac{1}{10}\left[\begin{array}{rr}e^{3t}&e^{-t}\\[2\jot]
-e^{3t}&-e^{-t}\end{array}\right]
-\left[\begin{array}{c}15e^t\\e^{5t}\end{array}\right]
+\dfrac{1}{10}\begin{bmatrix}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{bmatrix}
+\begin{bmatrix}15e^t\\e^{5t}\end{bmatrix}
 =\phantom{0}
-\dst\frac{1}{5}\left[\begin{array}{c}8e^{4t}\\7e^{4t}\end{array}\right]
+\dfrac{1}{5}\begin{bmatrix}8e^{4t}\\7e^{4t}\end{bmatrix}
 \]
 is a particular solution of  \eqref{eq:10.7.3}.
 
@@ -4450,15 +4413,15 @@ is a particular solution of  \eqref{eq:10.7.3}.
 \eqref{eq:10.7.3} is
 \begin{equation} \label{eq:10.7.5}
 {\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2=
-\frac{1}{5}\left[\begin{array}{c}8e^{4t}\\7e^{4t}\end{array}\right]
-+c_1\left[\begin{array}{r}e^{3t}\\e^{3t}\end{array}\right]
-+c_2\left[\begin{array}{r}e^{-t}\\-e^{-t}\end{array}\right],
+\frac{1}{5}\begin{bmatrix}8e^{4t}\\7e^{4t}\end{bmatrix}
++c_1\begin{bmatrix}e^{3t}\\e^{3t}\end{bmatrix}
++c_2\begin{bmatrix}e^{-t}\\-e^{-t}\end{bmatrix},
 \end{equation}
 which can also be written as
 \[
 {\bf y}=
-\frac{1}{5}\left[\begin{array}{c}8e^{4t}\\7e^{4t}\end{array}\right]
-+\left[\begin{array}{rr}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{array}\right]
+\frac{1}{5}\begin{bmatrix}8e^{4t}\\7e^{4t}\end{bmatrix}
++\begin{bmatrix}e^{3t}&e^{-t}\\e^{3t}&-e^{-t}\end{bmatrix}
 {\bf c},
 \]
 where ${\bf c}$ is an arbitrary constant vector.
@@ -4484,12 +4447,12 @@ were obtained.
 \begin{example}\label{example:10.7.2} \rm
 Find a particular solution of
 \begin{equation} \label{eq:10.7.6}
-{\bf y}'=\left[\begin{array}{cc}2&2e^{-2t}\\2e^{2t}&4\end{array}\right]{\bf
-y}+\twocol11,
+{\bf y}'=\begin{bmatrix}2&2e^{-2t}\\2e^{2t}&4\end{bmatrix}
+{\bf y}+\twocol11,
 \end{equation}
 given that
 \[
-Y=\left[\begin{array}{cc} e^{4t}&-1\\e^{6t}&e^{2t}\end{array}\right]
+Y=\begin{bmatrix}e^{4t}&-1\\e^{6t}&e^{2t}\end{bmatrix}
 \]
 is  a fundamental matrix for the complementary system.
 \end{example}
@@ -4499,41 +4462,40 @@ We seek a particular solution
 ${\bf y}_p=Y{\bf u}$ of \eqref{eq:10.7.6} where
  $Y{\bf u}'={\bf f}$; that is,
 \[
-\left[\begin{array}{cc} e^{4t}&-1\\e^{6t}&e^{2t}\end{array}\right]
+\begin{bmatrix}e^{4t}&-1\\e^{6t}&e^{2t}\end{bmatrix}
 \twocol{u_1'}{u_2'}=\twocol11.
 \]
 The determinant of $Y$ is the Wronskian
 \[
-\left|\begin{array}{cc}
-e^{4t}&-1\\e^{6t}&e^{2t}\end{array}\right|=2e^{6t}.
+\begin{vmatrix}e^{4t}&-1\\e^{6t}&e^{2t}\end{vmatrix}=2e^{6t}.
 \]
 By Cramer's rule,
-\[
-\begin{array}{cccccll}
-u_1'&=&\dst\frac{1}{2e^{6t}}\left|\begin{array}{cc}1&-1\\1&e^{2t}
-\end{array}\right|&=&\dst\frac{e^{2t}+1}{2e^{6t}}&=&\dst\frac{e^{-4t}+e^{-6t}}{2}
-\\[4\jot]
-u_2'&=&\dst\frac{1}{2e^{6t}}\left|\begin{array}{cc}e^{4t}&1\\e^{6t}&1
-\end{array}\right|&=&\dst\frac{e^{4t}-e^{6t}}{2e^{6t}}&=&\dst\frac{e^{-2t}-1}{2}.
-\end{array}
-\]
+\begin{alignat*}{3}
+u_1'&=\dfrac{1}{2e^{6t}}
+\begin{vmatrix}1&-1\\1&e^{2t}\end{vmatrix}
+&&=\dfrac{e^{2t}+1}{2e^{6t}}
+&&=\dfrac{e^{-4t}+e^{-6t}}{2}\\
+u_2'&=\dfrac{1}{2e^{6t}}
+\begin{vmatrix}e^{4t}&1\\e^{6t}&1\end{vmatrix}
+&&=\dfrac{e^{4t}-e^{6t}}{2e^{6t}}
+&&=\dfrac{e^{-2t}-1}{2}.
+\end{alignat*}
 Therefore
 \[
 {\bf
-u}'=\frac{1}{2}\left[\begin{array}{c}e^{-4t}+e^{-6t}\\e^{-2t}-1\end{array}\right].
+u}'=\frac{1}{2}\begin{bmatrix}e^{-4t}+e^{-6t}\\e^{-2t}-1\end{bmatrix}.
 \]
 Integrating  and taking the constants of integration to be zero yields
 \[
 {\bf
-u}=-\frac{1}{24}\left[\begin{array}{c}3e^{-4t}+2e^{-6t}\\6e^{-2t}+12t
-\end{array}\right],
+u}=-\frac{1}{24}\begin{bmatrix}3e^{-4t}+2e^{-6t}\\6e^{-2t}+12t\end{bmatrix},
 \]
 so
 \[
 {\bf y}_p=Y{\bf u}=
--\displaystyle\frac{1}{24}\left[\begin{array}{cc}e^{4t}&-1\\e^{6t}&e^{2t}\end{array}\right]
-\left[\begin{array}{c}3e^{-4t}+2e^{-6t}\\6e^{-2t}+12t\end{array}\right]
-=\displaystyle\frac{1}{24}\left[\begin{array}{c}4e^{-2t}+12t-3\\-3e^{2t}(4t+1)-8\end{array}\right]
+-\frac{1}{24}\begin{bmatrix}e^{4t}&-1\\e^{6t}&e^{2t}\end{bmatrix}
+\begin{bmatrix}3e^{-4t}+2e^{-6t}\\6e^{-2t}+12t\end{bmatrix}
+=\frac{1}{24}\begin{bmatrix}4e^{-2t}+12t-3\\-3e^{2t}(4t+1)-8\end{bmatrix}
 \]
 is a particular solution of  \eqref{eq:10.7.6}.
 
@@ -4541,12 +4503,12 @@ is a particular solution of  \eqref{eq:10.7.6}.
 Find a particular solution of
 \begin{equation} \label{eq:10.7.7}
 {\bf y}'=-\frac{2}{t^2
-}\left[\begin{array}{cc}t&-3t^2\\1&-2t\end{array}\right]{\bf y}
+}\begin{bmatrix}t&-3t^2\\1&-2t\end{bmatrix}{\bf y}
 +t^2\twocol11,
 \end{equation}
 given that
 \[
-Y=\left[\begin{array}{cc}2t&3t^2\\1&2t\end{array}\right]
+Y=\begin{bmatrix}2t&3t^2\\1&2t\end{bmatrix}
 \]
 is a fundamental matrix for the complementary system on $(-\infty,0)$
 and $(0,\infty)$.
@@ -4556,40 +4518,42 @@ and $(0,\infty)$.
 We seek a particular solution ${\bf y}_p=Y{\bf u}$ of \eqref{eq:10.7.7}
 where $Y{\bf u}'={\bf f}$; that is,
 \[
-\left[\begin{array}{cc}2t&3t^2\\1&2t\end{array}\right]\twocol{u_1'}{u_2'}
+\begin{bmatrix}2t&3t^2\\1&2t\end{bmatrix}\twocol{u_1'}{u_2'}
 =\twocol{t^2}{t^2}.
 \]
 The determinant of $Y$  is the Wronskian
 \[
-\left|\begin{array}{cc}2t&3t^2\\1&2t\end{array}\right|=t^2.
+\begin{vmatrix}2t&3t^2\\1&2t\end{vmatrix}=t^2.
 \]
 By Cramer's rule,
-\[
-\begin{array}{ccccccl}
-u_1'&=&\dst\frac{1}{t^2}\left|\begin{array}{cc}t^2&3t^2\\t^2&2t
-\end{array}\right|&=&\dst\frac{2t^3-3t^4}{t^2}&=&2t-3t^2,
-\\[4\jot]
-u_2'&=&\dst\frac{1}{t^2}\left|\begin{array}{cc}2t&t^2\\1&t^2
-\end{array}\right|&=&\dst\frac{2t^3-t^2}{t^2}&=&2t-1.
-\end{array}
-\]
+\begin{alignat*}{3}
+u_1'
+&=\dfrac{1}{t^2}
+\begin{vmatrix}t^2&3t^2\\t^2&2t\end{vmatrix}
+&&=\dfrac{2t^3-3t^4}{t^2}
+&&=2t-3t^2,
+\\
+u_2'
+&=\dfrac{1}{t^2}
+\begin{vmatrix}2t&t^2\\1&t^2\end{vmatrix}
+&&=\dfrac{2t^3-t^2}{t^2}
+&&=2t-1.
+\end{alignat*}
 Therefore
 \[
 {\bf
-u}'=\left[\begin{array}{c}2t-3t^2\\2t-1\end{array}\right].
+u}'=\begin{bmatrix}2t-3t^2\\2t-1\end{bmatrix}.
 \]
 Integrating  and taking the constants of integration to be zero yields
 \[
-{\bf
-u}=\left[\begin{array}{c}t^2-t^3\\t^2-t
-\end{array}\right],
+{\bf u}=\begin{bmatrix}t^2-t^3\\t^2-t\end{bmatrix},
 \]
 so
 \[
 {\bf y}_p=Y{\bf u}=
-\left[\begin{array}{cc}2t&3t^2\\1&2t\end{array}\right]
-\left[\begin{array}{c}t^2-t^3\\t^2-t\end{array}\right]
-=\left[\begin{array}{c}t^3(t-1)\\t^2(t-1)\end{array}\right]
+\begin{bmatrix}2t&3t^2\\1&2t\end{bmatrix}
+\begin{bmatrix}t^2-t^3\\t^2-t\end{bmatrix}
+=\begin{bmatrix}t^3(t-1)\\t^2(t-1)\end{bmatrix}
 \]
 is a particular solution of  \eqref{eq:10.7.7}.
 
@@ -4599,8 +4563,7 @@ is a particular solution of  \eqref{eq:10.7.7}.
 Find a particular solution of
 \begin{equation} \label{eq:10.7.8}
 {\bf y}'=\threebythree2{-1}{-1}10{-1}1{-1}0{\bf
-y}+\left[\begin{array}{c}e^{t}\\0\\e^{-t}
-\end{array}\right].
+y}+\begin{bmatrix}e^{t}\\0\\e^{-t}\end{bmatrix}.
 \end{equation}
 \item % (b)
 Find the general solution of  \eqref{eq:10.7.8}.
@@ -4614,66 +4577,70 @@ Find the general solution of  \eqref{eq:10.7.8}.
 \end{equation}
 The characteristic polynomial of the coefficient matrix is
 \[
-\left|\begin{array}{ccc}2-\lambda&-1&-1\\1&-\lambda&-1\\1&-1&-\lambda
-\end{array}\right|=
+\begin{vmatrix}2-\lambda&-1&-1\\1&-\lambda&-1\\1&-1&-\lambda\end{vmatrix}=
 -\lambda(\lambda-1)^2.
 \]
 Using the method of \zcref{sec:system_const_coeff_i}, we find that
 \[
-{\bf y}_1=\left[\begin{array}{c}1\\1\\1\end{array}\right],\quad
-{\bf y}_2=\left[\begin{array}{c}e^t\\e^t\\0\end{array}\right],
+{\bf y}_1=\begin{bmatrix}1\\1\\1\end{bmatrix},\quad
+{\bf y}_2=\begin{bmatrix}e^t\\e^t\\0\end{bmatrix},
 \quad\text{and}\quad 
-{\bf y}_3=\left[\begin{array}{c}e^t\\0\\e^t\end{array}\right]
+{\bf y}_3=\begin{bmatrix}e^t\\0\\e^t\end{bmatrix}
 \]
 are linearly independent solutions of \eqref{eq:10.7.9}.
 Therefore
 \[
-Y=\left[\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{array}\right]
+Y=\begin{bmatrix}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{bmatrix}
 \]
 is a fundamental matrix for  \eqref{eq:10.7.9}.
 We seek a particular solution  ${\bf y}_p=Y{\bf u}$ of
 \eqref{eq:10.7.8}, where
 $Y{\bf u}'={\bf f}$; that is,
 \[
-\left[\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{array}\right]
+\begin{bmatrix}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{bmatrix}
 \threecol{u_1'}{u_2'}{u_3'}=
-\left[\begin{array}{c}e^t\\0\\e^{-t}\end{array}\right].
+\begin{bmatrix}e^t\\0\\e^{-t}\end{bmatrix}.
 \]
 The determinant of $Y$  is the Wronskian
 \[
-\left|\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{array}\right|
+\begin{vmatrix}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{vmatrix}
 =-e^{2t}.
 \]
 Thus, by Cramer's rule,
-\[
-\begin{array}{cccccll}
-u_1'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}e^t&e^t&e^t\\0&e^t&0\\e^{-t}&0&e^t
-\end{array}\right|&=&-\dst\frac{e^{3t}-e^t}{
-e^{2t}}&=&e^{-t}-e^t\\[6\jot] u_2'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&0&0\\1&e^{-t}&e^t
-\end{array}\right|&=&-\dst\frac{1-e^{2t}}{e^{2t}}&=&1-e^{-2t}\\[6\jot]
-u_3'&=&-\dst\frac{1}{e^{2t}}\left|\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^{-t}
-\end{array}\right|&=&\dst\frac{e^{2t}}{e^{2t}}&=&1.
-\end{array}
-\]
+\begin{alignat*}{3}
+u_1'
+&=-\dfrac{1}{e^{2t}}
+\begin{vmatrix}e^t&e^t&e^t\\0&e^t&0\\e^{-t}&0&e^t\end{vmatrix}
+&&=-\dfrac{e^{3t}-e^t}{e^{2t}}
+&&=e^{-t}-e^t\\
+u_2'
+&=-\dfrac{1}{e^{2t}}
+\begin{vmatrix}1&e^t&e^t\\1&0&0\\1&e^{-t}&e^t\end{vmatrix}
+&&=-\dfrac{1-e^{2t}}{e^{2t}}
+&&=1-e^{-2t}\\
+u_3'
+&=-\dfrac{1}{e^{2t}}
+\begin{vmatrix}1&e^t&e^t\\1&e^t&0\\1&0&e^{-t}\end{vmatrix}
+&&=\dfrac{e^{2t}}{e^{2t}}
+&&=1.
+\end{alignat*}
  Therefore
 \[
-{\bf u}'=\left[\begin{array}{c}e^{-t}-e^t\\1-e^{-2t}\\1\end{array}\right].
+{\bf u}'=\begin{bmatrix}e^{-t}-e^t\\1-e^{-2t}\\1\end{bmatrix}.
 \]
 Integrating and taking the constants of integration to be zero yields
 \[
 {\bf
-u}=\left[\begin{array}{c}-e^t-e^{-t}\\\dst\frac{e^{-2t}}{2}+t
-\\t\end{array}\right],
+u}=\begin{bmatrix}-e^t-e^{-t}\\\dfrac{e^{-2t}}{2}+t\\t\end{bmatrix},
 \]
 so
 \[
-\begin{array}{ccccl}
-{\bf y}_p=Y{\bf u}&=&
-\left[\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{array}\right]
-\left[\begin{array}{c}-e^t-e^{-t}\\\dst\frac{e^{-2t}}{2}+t\\t\end{array}\right]
-&=&\left[\begin{array}{c}e^t(2t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst{e^{-t}}
-\end{array}\right]
-\end{array}
+{\bf y}_p=Y{\bf u}=
+\begin{bmatrix}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{bmatrix}
+\begin{bmatrix}-e^t-e^{-t}\\\dfrac{e^{-2t}}{2}+t\\t\end{bmatrix}
+=\begin{bmatrix}
+e^t(2t-1)-\dfrac{e^{-t}}{2}\\e^t(t-1)-\dfrac{e^{-t}}{2}\\e^t(t-1)-e^{-t}
+\end{bmatrix}
 \]
 is a particular solution of  \eqref{eq:10.7.8}.
 
@@ -4681,18 +4648,20 @@ is a particular solution of  \eqref{eq:10.7.8}.
 \eqref{eq:10.7.8} is
 \[
 {\bf y}={\bf y}_p+c_1{\bf y}_1+c_2{\bf y}_2+c_3{\bf y}_3=
-\left[\begin{array}{c}e^t(2t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst{e^{-t}}
-\end{array}\right]+
-c_1\left[\begin{array}{c}1\\1\\1\end{array}\right]+
-c_2\left[\begin{array}{c}e^t\\e^t\\0\end{array}\right]
-+c_3\left[\begin{array}{c}e^t\\0\\e^t\end{array}\right],
+\begin{bmatrix}
+e^t(2t-1)-\dfrac{e^{-t}}{2}\\e^t(t-1)-\dfrac{e^{-t}}{2}\\e^t(t-1)-e^{-t}
+\end{bmatrix}+
+c_1\begin{bmatrix}1\\1\\1\end{bmatrix}+
+c_2\begin{bmatrix}e^t\\e^t\\0\end{bmatrix}
++c_3\begin{bmatrix}e^t\\0\\e^t\end{bmatrix},
 \]
 which can  be written as
 \[
 {\bf y}={\bf y}_p+Y{\bf c}=
-\left[\begin{array}{c}e^t(2t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst\frac{e^{-t}}{2}\\[5pt]e^t(t-1)-\dst{e^{-t}} \end{array}\right]+
-\left[\begin{array}{ccc}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{array}\right]{\bf
-c}
+\begin{bmatrix}
+e^t(2t-1)-\dfrac{e^{-t}}{2}\\e^t(t-1)-\dfrac{e^{-t}}{2}\\e^t(t-1)-e^{-t}
+\end{bmatrix}+
+\begin{bmatrix}1&e^t&e^t\\1&e^t&0\\1&0&e^t\end{bmatrix}{\bf c}
 \]
 where ${\bf c}$ is an arbitrary constant vector.
 \end{alistSolution}
@@ -4702,13 +4671,12 @@ Find a particular solution of
 \begin{equation} \label{eq:10.7.10}
 {\bf
 y}'=\frac{1}{2}
-\left[\begin{array}{ccc}3&e^{-t}&-e^{2t}\\0&6&0\\-e^{-2t}&e^{-3t}&-1\end{array}\right]
-{\bf y}+\left[\begin{array}{c}1\\e^t\\e^{-t}\end{array}\right],
+\begin{bmatrix}3&e^{-t}&-e^{2t}\\0&6&0\\-e^{-2t}&e^{-3t}&-1\end{bmatrix}
+{\bf y}+\begin{bmatrix}1\\e^t\\e^{-t}\end{bmatrix},
 \end{equation}
 given that
 \[
-Y=\left[\begin{array}{ccc}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0
-\end{array}\right]
+Y=\begin{bmatrix}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0\end{bmatrix}
 \]
 is a fundamental matrix for the complementary system.
 \end{example}
@@ -4717,49 +4685,49 @@ is a fundamental matrix for the complementary system.
 We seek a particular solution of  \eqref{eq:10.7.10} in the form
 ${\bf y}_p=Y{\bf u}$, where $Y{\bf u}'={\bf f}$; that is,
 \[
-\left[\begin{array}{ccc}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0
-\end{array}\right]\threecol{u_1'}{u_2'}{u_3'}=
-\left[\begin{array}{c}1\\e^t\\e^{-t}\end{array}\right].
+\begin{bmatrix}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0\end{bmatrix}
+\threecol{u_1'}{u_2'}{u_3'}=
+\begin{bmatrix}1\\e^t\\e^{-t}\end{bmatrix}.
 \]
 The determinant of $Y$  is the Wronskian
 \[
-\left|\begin{array}{ccc}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0
-\end{array}\right|=-2e^{4t}.
+\begin{vmatrix}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0\end{vmatrix}=-2e^{4t}.
 \]
 By Cramer's rule,
-\[
-\begin{array}{ccccccl}
-u_1'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}1&0&e^{2t}\\e^t&e^{3t}&e^{3t}
-\\e^{-t}&1&0
-\end{array}\right|&=&\dst\frac{e^{4t}}{2e^{4t}}&=&\dst\frac{1}{2}
-\\[6\jot]
-u_2'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}e^t&1&e^{2t}\\0&e^t&e^{3t}
-\\e^{-t}&e^{-t}&0
-\end{array}\right|&=&\dst\frac{e^{3t}}{2e^{4t}}&=&\dst\frac{1}{2}e^{-t}\\[6\jot]
-u_3'&=&-\dst\frac{1}{2e^{4t}}\left|\begin{array}{ccc}e^t&0&1\\0&e^{3t}&e^t
-\\e^{-t}&1&e^{-t}
-\end{array}\right|&=&-\dst\frac{e^{3t}-2e^{2t}}{2e^{4t}}&=&\dst\frac{2e^{-2t}-e^{-t}}{2}.
-\end{array}
-\]
+\begin{alignat*}{3}
+u_1'
+&=-\dfrac{1}{2e^{4t}}
+\begin{vmatrix}1&0&e^{2t}\\e^t&e^{3t}&e^{3t}\\e^{-t}&1&0\end{vmatrix}
+&&=\dfrac{e^{4t}}{2e^{4t}}
+&&=\dfrac{1}{2}\\
+u_2'
+&=-\dfrac{1}{2e^{4t}}
+\begin{vmatrix}e^t&1&e^{2t}\\0&e^t&e^{3t}\\e^{-t}&e^{-t}&0\end{vmatrix}
+&&=\dfrac{e^{3t}}{2e^{4t}}
+&&=\dfrac{1}{2}e^{-t}\\
+u_3'
+&=-\dfrac{1}{2e^{4t}}
+\begin{vmatrix}e^t&0&1\\0&e^{3t}&e^t\\e^{-t}&1&e^{-t}\end{vmatrix}
+&&=-\dfrac{e^{3t}-2e^{2t}}{2e^{4t}}
+&&=\dfrac{2e^{-2t}-e^{-t}}{2}.
+\end{alignat*}
 Therefore
 \[
 {\bf
-u}'=\frac{1}{2}\left[\begin{array}{c}1\\e^{-t}\\2e^{-2t}-e^{-t}\end{array}\right].
+u}'=\frac{1}{2}\begin{bmatrix}1\\e^{-t}\\2e^{-2t}-e^{-t}\end{bmatrix}.
 \]
 Integrating  and taking the constants of integration to be zero yields
 \[
 {\bf
-u}=\frac{1}{2}\left[\begin{array}{c}t\\-e^{-t}\\e^{-t}-e^{-2t}
-\end{array}\right],
+u}=\frac{1}{2}\begin{bmatrix}t\\-e^{-t}\\e^{-t}-e^{-2t}\end{bmatrix},
 \]
 so
 \[
 {\bf y}_p=Y{\bf u}=
-\frac{1}{2}\left[\begin{array}{ccc}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0
-\end{array}\right]
-\left[\begin{array}{c}t\\-e^{-t}\\e^{-t}-e^{-2t}
-\end{array}\right]=\dst\frac{1}{2}\left[\begin{array}{c}e^t(t+1)-1\\
--e^t\\e^{-t}(t-1)\end{array}\right]
+\frac{1}{2}
+\begin{bmatrix}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0\end{bmatrix}
+\begin{bmatrix}t\\-e^{-t}\\e^{-t}-e^{-2t}\end{bmatrix}
+=\dfrac{1}{2}\begin{bmatrix}e^t(t+1)-1\\-e^t\\e^{-t}(t-1)\end{bmatrix}
 \]
 is a particular solution of  \eqref{eq:10.7.10}.
 
@@ -4769,106 +4737,100 @@ solution.
 
 \begin{exerciselist}
 
-\item(1)\label{exer:10.7.1}$\dst{{\bf y}'=\twobytwo{-1}{-4}{-1}{-1}{\bf
-y}+\left[\begin{array}{cc}21e^{4t}\\8e^{-3t}\end{array}\right]}$
+\item(1)\label{exer:10.7.1}${\bf y}'=\twobytwo{-1}{-4}{-1}{-1}{\bf
+y}+\begin{bmatrix}21e^{4t}\\8e^{-3t}\end{bmatrix}$
 
-\item(1)\label{exer:10.7.2}$\dst{{\bf y}'
-=\frac{1}{5}\twobytwo{-4}3{-2}{-11}{\bf y}
-+\left[\begin{array}{cc}50e^{3t}\\10e^{-3t}\end{array}\right]}$
+\item(1)\label{exer:10.7.2}${\bf y}'
+=\dfrac{1}{5}\twobytwo{-4}3{-2}{-11}{\bf y}
++\begin{bmatrix}50e^{3t}\\10e^{-3t}\end{bmatrix}$
 
-\item(1)\label{exer:10.7.3}$\dst{{\bf y}'=\twobytwo1221{\bf
-y}+\left[\begin{array}{cc}1\\t\end{array}\right]}$
+\item(1)\label{exer:10.7.3}${\bf y}'=\twobytwo1221{\bf
+y}+\begin{bmatrix}1\\t\end{bmatrix}$
 
-\item(1)\label{exer:10.7.4}$\dst{{\bf y}'=\twobytwo{-4}{-3}65{\bf
-y}+\left[\begin{array}{cc}2\\-2e^t\end{array}\right]}$
+\item(1)\label{exer:10.7.4}${\bf y}'=\twobytwo{-4}{-3}65{\bf
+y}+\begin{bmatrix}2\\-2e^t\end{bmatrix}$
 
-\item(1)\label{exer:10.7.5}$\dst{{\bf y}'=\twobytwo{-6}{-3}1{-2}{\bf
-y}+\left[\begin{array}{cc}4e^{-3t}\\4e^{-5t}\end{array}\right]}$
+\item(1)\label{exer:10.7.5}${\bf y}'=\twobytwo{-6}{-3}1{-2}{\bf
+y}+\begin{bmatrix}4e^{-3t}\\4e^{-5t}\end{bmatrix}$
 
-\item(1)\label{exer:10.7.6}$\dst{{\bf y}'=\twobytwo01{-1}0{\bf
-y}+\left[\begin{array}{cc}1\\t\end{array}\right]}$
+\item(1)\label{exer:10.7.6}${\bf y}'=\twobytwo01{-1}0{\bf
+y}+\begin{bmatrix}1\\t\end{bmatrix}$
 
-\item(1)\label{exer:10.7.7}$\dst{{\bf y}'=\threebythree31{-1}351{-6}24{\bf
-y}+\left[\begin{array}{cc}3\\6\\3\end{array}\right]}$
+\item(1)\label{exer:10.7.7}${\bf y}'=\threebythree31{-1}351{-6}24{\bf
+y}+\begin{bmatrix}3\\6\\3\end{bmatrix}$
 
-\item(1)\label{exer:10.7.8}$\dst{{\bf y}'
+\item(1)\label{exer:10.7.8}${\bf y}'
 =\threebythree3{-1}{-1}{-2}324{-1}{-2}{\bf y}
-+\left[\begin{array}{cc}1\\e^t\\e^t\end{array}\right]}$
++\begin{bmatrix}1\\e^t\\e^t\end{bmatrix}$
 
-\item\label{exer:10.7.9}$\dst{{\bf y}'=\threebythree{-3}222{-3}222{-3}{\bf
-y}+\left[\begin{array}{cc}e^t\\e^{-5t}\\e^t\end{array}\right]}$
+\item\label{exer:10.7.9}${\bf y}'=\threebythree{-3}222{-3}222{-3}{\bf
+y}+\begin{bmatrix}e^t\\e^{-5t}\\e^t\end{bmatrix}$
 
-\item\label{exer:10.7.10}$\dst{{\bf
-y}'=\frac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10{\bf
-y}+\left[\begin{array}{cc}e^t\\e^t\\e^t\end{array}\right]}$
+\item\label{exer:10.7.10}${\bf
+y}'=\dfrac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10{\bf
+y}+\begin{bmatrix}e^t\\e^t\\e^t\end{bmatrix}$
 
 \exercisetext{In \zcref[range]{exer:10.7.11,exer:10.7.20} find a
 particular solution, given that $Y$ is a fundamental matrix for the
 complementary system.}
 
-\item\label{exer:10.7.11}$\dst{{\bf y}'=\frac{1}{t}\left[\begin{array}{rc}1&t\\-t&1\end{array}\right]{\bf y}
-+t\left[\begin{array}{cc}
-\cos t\\\sin t\end{array}\right];  \quad Y=t\left[\begin{array}{rc}\cos
-t&\sin t\\-\sin t&\cos t
-\end{array}\right]}$
+\item\label{exer:10.7.11}${\bf y}'
+=\dfrac{1}{t}\begin{bmatrix}1&t\\-t&1\end{bmatrix}{\bf y}
++t\begin{bmatrix}\cos t\\\sin t\end{bmatrix};  \quad Y
+=t\begin{bmatrix}\cos t&\sin t\\-\sin t&\cos t\end{bmatrix}$
 
-\item\label{exer:10.7.12}$\dst{{\bf y}'=\frac{1}{t}\left[\begin{array}{cc}1&t\\t&1\end{array}\right]{\bf y}
-+\left[\begin{array}{c}
-t\\t^2\end{array}\right];  \quad Y=t\left[\begin{array}{cr}
-e^t&e^{-t}\\e^t&-e^{-t}
-\end{array}\right]}$
+\item\label{exer:10.7.12}${\bf y}'
+=\dfrac{1}{t}\begin{bmatrix}1&t\\t&1\end{bmatrix}{\bf y}
++\begin{bmatrix}t\\t^2\end{bmatrix};  \quad Y
+=t\begin{bmatrix}e^t&e^{-t}\\e^t&-e^{-t}\end{bmatrix}$
 
-\item\label{exer:10.7.13}$\dst{{\bf y}'=\frac{1}{t^2-1}\left[\begin{array}{rr}t&-1\\-1&t\end{array}\right]{\bf y}+
-t\left[\begin{array}{r}
-1\\-1\end{array}\right];  \quad Y=\left[\begin{array}{cc}
-t&1\\1&t
-\end{array}\right]}$
+\item\label{exer:10.7.13}${\bf y}'
+=\dfrac{1}{t^2-1}\begin{bmatrix}t&-1\\-1&t\end{bmatrix}{\bf y}+
+t\begin{bmatrix}1\\-1\end{bmatrix};  \quad
+Y=\begin{bmatrix}t&1\\1&t\end{bmatrix}$
 
-\item\label{exer:10.7.14}$\dst{{\bf y}'=\frac{1}{3}\left[\begin{array}{cc}1&-2e^{-t}\\2e^t&-1\end{array}\right]{\bf y}+
-\left[\begin{array}{c}e^{2t}
-\\e^{-2t}\end{array}\right];  \quad Y=\left[\begin{array}{cc}
-2&e^{-t}\\e^t&2
-\end{array}\right]}$
+\item\label{exer:10.7.14}${\bf y}'
+=\dfrac{1}{3}\begin{bmatrix}1&-2e^{-t}\\2e^t&-1\end{bmatrix}{\bf y}+
+\begin{bmatrix}e^{2t}\\e^{-2t}\end{bmatrix};  \quad
+Y=\begin{bmatrix}2&e^{-t}\\e^t&2\end{bmatrix}$
 
-\item\label{exer:10.7.15}$\dst{{\bf y}'=\frac{1}{2t^4}\left[\begin{array}{cc}3t^3&t^6\\1&-3t^3\end{array}\right]{\bf y}+
-\frac{1}{t}\left[\begin{array}{c}
-t^2\\1\end{array}\right];  \quad Y=\frac{1}{t^2}\left[\begin{array}{rc}
-t^3&t^4\\-1&t
-\end{array}\right]}$
+\item\label{exer:10.7.15}${\bf y}'
+=\dfrac{1}{2t^4}\begin{bmatrix}3t^3&t^6\\1&-3t^3\end{bmatrix}{\bf y}+
+\dfrac{1}{t}\begin{bmatrix}t^2\\1\end{bmatrix};  \quad
+Y=\dfrac{1}{t^2}\begin{bmatrix}t^3&t^4\\-1&t\end{bmatrix}$
 
-\item\label{exer:10.7.16}$\dst{{\bf y}'=
-\left[\begin{array}{cc}\dst\frac{1}{t-1}
-&-\dst\frac{e^{-t}}{t-1}\\[2\jot]\dst\frac{e^t}{t+1}&\dst\frac{1}{t+1}\end{array}\right]{\bf y}+\left[\begin{array}{c}
-t^2-1\\t^2-1\end{array}\right];  \quad Y=\left[\begin{array}{cc}
-t&e^{-t}\\e^t&t
-\end{array}\right]}$
+\item\label{exer:10.7.16}${\bf y}'=
+\begin{bmatrix}
+\dfrac{1}{t-1}&-\dfrac{e^{-t}}{t-1}\\\dfrac{e^t}{t+1}&\dfrac{1}{t+1}
+\end{bmatrix}{\bf y}
++\begin{bmatrix}t^2-1\\t^2-1\end{bmatrix};  \quad
+Y=\begin{bmatrix}t&e^{-t}\\e^t&t\end{bmatrix}$
 
-\item\label{exer:10.7.17}$\dst{{\bf y}'=\frac{1}{t}\threebythree110021{-2}22{\bf y}
+\item\label{exer:10.7.17}${\bf y}'=\dfrac{1}{t}\threebythree110021{-2}22{\bf y}
 +\threecol121
-\quad Y=\left[\begin{array}{ccr}
-t^2&t^3&1\\t^2&2t^3&-1\\0&2t^3&2
-\end{array}\right]}$
+\quad Y=\begin{bmatrix}t^2&t^3&1\\t^2&2t^3&-1\\0&2t^3&2\end{bmatrix}$
 
-\item\label{exer:10.7.18}$\dst{{\bf y}'=
-\left[\begin{array}{ccc}3&e^t&e^{2t}\\e^{-t}&2&e^t\\e^{-2t}&e^{-t}&1\end{array}\right]{\bf
-y}
-+\left[\begin{array}{c}
-e^{3t}\\0 \\ 0\end{array}\right];  \quad Y=\left[\begin{array}{crr}
-e^{5t}&e^{2t}&0\\e^{4t}&0&e^t\\e^{3t}&-1&-1
-\end{array}\right]}$
+\item\label{exer:10.7.18}${\bf y}'=
+\begin{bmatrix}
+3&e^t&e^{2t}\\e^{-t}&2&e^t\\e^{-2t}&e^{-t}&1
+\end{bmatrix}{\bf y}
++\begin{bmatrix}e^{3t}\\0 \\ 0\end{bmatrix};  \quad
+Y=\begin{bmatrix}e^{5t}&e^{2t}&0\\e^{4t}&0&e^t\\e^{3t}&-1&-1\end{bmatrix}$
 
-\item\label{exer:10.7.19}$\dst{{\bf y}'=\frac{1}{t}\left[\begin{array}{crc}1&t&0\\0&1&t\\0&-t&1\end{array}\right]{\bf y}
-+\left[\begin{array}{c}
-t\\t \\t \end{array}\right];  \quad Y=t\left[\begin{array}{crr}
+\item\label{exer:10.7.19}${\bf y}'
+=\frac{1}{t}\begin{bmatrix}1&t&0\\0&1&t\\0&-t&1\end{bmatrix}{\bf y}
++\begin{bmatrix}t\\t \\t\end{bmatrix};  \quad
+Y=t\begin{bmatrix}
 1&\cos t&\sin t \\0&-\sin t&\cos t\\0&-\cos t&-\sin t
-\end{array}\right]}$
+\end{bmatrix}$
 
-\item\label{exer:10.7.20}$\dst{{\bf y}'=-\frac{1}{t}\left[\begin{array}{crr}e^{-t}&-t&1-e^{-t}\\e^{-t}&1&-t-e^{-t}\\e^{-t}&-t
-&1-e^{-t}\end{array}\right]{\bf
-y}
-+\frac{1}{t}\left[\begin{array}{c}
-e^t\\0 \\e^t \end{array}\right];  \quad Y=\frac{1}{t}\left[\begin{array}{crc} e^t&e^{-t}&t\\e^t&-e^{-t}&e^{-t}\\e^t&e^{-t}&0
-\end{array}\right]}$
+\item\label{exer:10.7.20}${\bf y}'=-\frac{1}{t}\begin{bmatrix}
+e^{-t}&-t&1-e^{-t}\\e^{-t}&1&-t-e^{-t}\\e^{-t}&-t&1-e^{-t}
+\end{bmatrix}{\bf y}
++\frac{1}{t}\begin{bmatrix}e^t\\0 \\e^t\end{bmatrix};  \quad
+Y=\frac{1}{t}\begin{bmatrix}
+e^t&e^{-t}&t\\e^t&-e^{-t}&e^{-t}\\e^t&e^{-t}&0
+\end{bmatrix}$
 
 \item\label{exer:10.7.21}Prove \zcref{thmtype:10.7.1}.
 
@@ -4903,7 +4865,7 @@ y=c_1y_1+c_2y_2+\cdots+c_ny_n
 is a solution of  (C) if and only if
 ${\bf y}=Y{\bf c}$ with
 \[
-{\bf c}=\left[\begin{array}{c}c_1\\c_2\\\vdots\\c_n\end{array}\right]
+{\bf c}=\begin{bmatrix}c_1\\c_2\\\vdots\\c_n\end{bmatrix}
 \]
 is a solution of  (D).
 \item % (c)
@@ -4911,7 +4873,7 @@ Let $y_p=u_1y_1+u_1y_2+\cdots+u_ny_n$ be a particular solution of
  (A), obtained by the method of variation of parameters for scalar
 equations as given in \zcref{sec:higher_variation_param}, and define
 \[
-{\bf u}=\left[\begin{array}{c}u_1\\u_2\\\vdots\\u_n\end{array}\right].
+{\bf u}=\begin{bmatrix}u_1\\u_2\\\vdots\\u_n\end{bmatrix}.
 \]
 Show that ${\bf y}_p=Y{\bf u}$ is a  solution of  (B).
 \item % (d)
