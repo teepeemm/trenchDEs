@@ -1519,8 +1519,8 @@ and
 [y_{21}\quad y_{22}].
 \]
 \item % (c)
- Use  properties of determinants to deduce from (a) and (a)
- that
+% TODO this was: (a) and (a)
+ Use  properties of determinants to deduce from (a) and (b) that
 \[
 \begin{vmatrix}y'_{11}&y'_{12}\\y_{21}&y_{22}\end{vmatrix}
 =a_{11}W\quad\text{and}\quad 
@@ -2298,7 +2298,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig100402}
 eigenvalue}
 \label{figure:10.4.2}
 \tagstructend
-\end{minipage}
+\end{minipage}\smallskip
 
 
 
@@ -3271,7 +3271,8 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig100502}
 \hfill
 \begin{minipage}{0.49\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={The previous figure, but reflected across the line L.},
+\includegraphics[alt={Figure \ref*{figure:10.5.2}, but reflected across the line L.},
+% zcref is not expandable enough to be used here
 width=\linewidth,height=2.44in,keepaspectratio]{fig100503}
 \captionof{figure}{Positive eigenvalue; motion away from the origin}
 \label{figure:10.5.3}
@@ -3281,7 +3282,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig100503}
 \noindent
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={The previous previous figure, but with vector field arrows and the u vector reversed.  The x vector is the same.},
+\includegraphics[alt={Figure \ref*{figure:10.5.2}, but with vector field arrows and the u vector reversed.  The x vector is the same.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig100504}
 \captionof{figure}{Negative eigenvalue; motion toward the origin}
 \label{figure:10.5.4}
@@ -3290,7 +3291,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig100504}
 \hfill
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={The previous previous figure, but with vector field arrows and the u vector reversed.  The x vector is the same.},
+\includegraphics[alt={Figure \ref*{figure:10.5.3}, but with vector field arrows and the u vector reversed.  The x vector is the same.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig100505}
 \captionof{figure}{Negative eigenvalue; motion toward the origin}
 \label{figure:10.5.5}
@@ -3968,7 +3969,7 @@ the relative orientation of $\vect{u}$ and $\vect{v}$, as shown in
 \noindent
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={Similar to the previous previous figure, but now solution curves spiral outward.},
+\includegraphics[alt={Similar Figure \ref*{figure:10.6.1}, but now solution curves spiral outward.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig010603}
 \captionof{figure}{$\alpha>0$; shadow trajectory spiraling outward}
 \label{figure:10.6.3}
@@ -3977,7 +3978,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig010603}
 \hfill
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={Similar to the previous previous figure, but now solution curves spiral outward.},
+\includegraphics[alt={Similar Figure \ref*{figure:10.6.2}, but now solution curves spiral outward.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig010604}
 \captionof{figure}{$\alpha>0$; shadow trajectory spiraling outward}
 \label{figure:10.6.4}
@@ -3987,7 +3988,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig010604}
 \noindent
 \begin{minipage}{0.49\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={Similar to the previous previous figure, but now solution curves spiral inward.},
+\includegraphics[alt={Similar Figure \ref*{figure:10.6.3}, but now solution curves spiral inward.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig010605}
 \captionof{figure}{$\alpha<0$; shadow trajectory spiraling inward}
 \label{figure:10.6.5}
@@ -3996,7 +3997,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig010605}
 \hfill
 \begin{minipage}{0.49\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={Similar to the previous previous figure, but now solution curves spiral inward.},
+\includegraphics[alt={Similar Figure \ref*{figure:10.6.4}, but now solution curves spiral inward.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig100606}
 \captionof{figure}{$\alpha<0$; shadow trajectory spiraling inward}
 \label{figure:10.6.6}
@@ -4694,7 +4695,7 @@ e^t&e^{-t}&t\\e^t&-e^{-t}&e^{-t}\\e^t&e^{-t}&0
 
 \item\label{exer:10.7.21}Prove \zcref{thmtype:10.7.1}.
 
-\item\label{exer:10.7.22}\begin{alist}
+\item\label{exer:10.7.22}\begin{alist}[above=-\baselineskip]
 \item % (a)
 Convert the scalar equation
 \[
