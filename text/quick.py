@@ -5,12 +5,12 @@ from glob import glob
 def replace_over(content: str) -> str:
   content = re.sub(r'''{
                     ([ a-zA-Z0-9^_\\+!.'-]+)  # a simple group (no parentheses or grouping)
-                    \\over(\s*|(?=\W))''',  # watch out for \overline
+                    \\over(\s+|(?=\W))''',  # watch out for \overline
                     r'\\frac{\1}{', content, flags=re.VERBOSE)
   # but \left(...\right) forms its own group
   content = re.sub(r'''(?<=\\left[({[|])  # left ({[|
                     ([ a-zA-Z0-9^_\\+!.'-]+)  # a simple group
-                    \\over\s*
+                    \\over(\s+|(?=\W))
                     ([ a-zA-Z0-9^_\\+!.'-]+)  # a simple group
                     (?=\\right[)}\]|])''',  # right )}]|
                     r'\\frac{\1}{\2}', content, flags=re.VERBOSE)
@@ -30,24 +30,26 @@ def change_graphics_height(content: str) -> str:
   return content
 
 def respace(content: str) -> str:
-  content = content.replace(r'\mbox{\quad and \quad}', r'\quad\text{and}\quad ')
+  content = content.replace(r'\mbox{\quad and ?\quad}', r'\quad\text{and}\quad ')
   return content
 
 def addtag(content: str) -> str:
-  content = re.sub(r'\\eqno\{\\rm \((\w)\)\}', r'\\tag{\1}', content)
+  content = re.sub(r'\\eqno\{\\rm ?\((\w)\)\}', r'\\tag{\1}', content)
   return content
 
 for texfile in glob('*.tex'):
   with open(texfile) as tex:
     mathopen = False
     content = tex.read()
-  content = addtag(content)
+  content = respace(content)
   with open(texfile,'w') as tex:
     tex.write(content)
 
 '''
-mbox, ref, eqnarray, cases, part, solutionpart, scalebox
+mbox, ref, eqnarray, cases, part, solutionpart, scalebox, noindent, dst, jot, eqno, over
 bf, it, rm
-Section, Chapter, Figure, Table, Exercise, Example, Equation, Eqn
+Section, Chapter, Figure, Table, Exercise, Example, Equation, Eqn, Theorem
+TODO
 units
+tabular, array, enlargethispage, $,$, $.$
 '''
