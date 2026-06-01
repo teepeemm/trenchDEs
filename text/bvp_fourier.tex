@@ -1,6 +1,8 @@
 % !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
+% THIS FILE STILL NEEDS ALT TEXT RELATING TO GIBBS PHENOMENA
+
 \chapter{Boundary Value Problems and Fourier Expansions}\label{ch:bvp_fourier}
 
 \textsc{In this chapter} we develop series representations of functions
@@ -60,10 +62,7 @@ Note that the boundary conditions in Problem~5, unlike those in
 Problems~1--4, don't require that $y$ or $y'$ be zero at the boundary
 points, but only that $y$ have the same value at $x=\pm L$ , and that
 $y'$ have the same value at $x=\pm L$. We say that the boundary
-conditions in Problem~5 are {\color{blue}\it periodic\/}.
-
-
-
+conditions in Problem~5 are \emph{\color{blue}periodic}.
 
 Obviously, $y\equiv0$ (the trivial solution) is a solution of
 Problems~1--5 for any value of $\lambda$. For most values of $\lambda$,
@@ -92,7 +91,7 @@ eigenfunction $y_0=1$, but $\lambda=0$ isn't  an eigenvalue of
 Problems~1, 3, or 4.
 \end{theorem}
 
-\proof
+\begin{proof}
 We  consider Problems 1--4, and leave Problem 5 to you
 (\zcref{exer:11.1.1}). If
 $y''+\lambda y=0$, then
@@ -106,11 +105,11 @@ $y(y''+\lambda y)=0$, so
 \end{equation}
 Integration by parts yields
 \begin{equation} \label{eq:11.1.2}
-\begin{array}{rcl}
-\dst\int_0^L y(x)y''(x)\, dx&=&\dst y(x)y'(x)\lims 0L-\int_0^L
-(y'(x))^2\,dx\\
-&=&\dst y(L)y'(L)-y(0)y'(0)-\int_0^L (y'(x))^2\,dx.
-\end{array}
+\begin{aligned}
+\int_0^L y(x)y''(x)\, dx
+&=y(x)y'(x)\lims 0L-\int_0^L(y'(x))^2\,dx\\
+&=y(L)y'(L)-y(0)y'(0)-\int_0^L (y'(x))^2\,dx.
+\end{aligned}
 \end{equation}
 However, if $y$ satisfies any of the boundary conditions of Problems
 1-4, then
@@ -132,10 +131,9 @@ function is an associated eigenfunction. However, the only constant
 function that satisfies the boundary conditions of Problems $1$, $3$, or
 $4$ is $y\equiv0$. Therefore $\lambda=0$ isn't  an eigenvalue of any of
 these problems.
+\end{proof}
 
-
-
-\begin{example}[Problem 1] \label{example:11.1.1} \rm
+\begin{example}[Problem 1]\label{example:11.1.1}
 Solve the  eigenvalue problem
 \begin{equation} \label{eq:11.1.3}
 y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0.
@@ -161,7 +159,6 @@ is an associated eigenfunction.
 
 For future reference, we state the result of \zcref{example:11.1.1}
 as a theorem.
-
 
 \begin{theorem}\color{blue}\label{thmtype:11.1.2}
 The eigenvalue problem
@@ -199,7 +196,8 @@ y_n=\cos \frac{n\pi x}{L}, n=1,2,3\dots.
 There are no other eigenvalues.
 \end{theorem}
 
-\begin{example}[Problem 3] \label{example:11.1.2} \rm Solve the
+\begin{example}[Problem 3] \label{example:11.1.2}
+Solve the
 eigenvalue problem
 \begin{equation} \label{eq:11.1.4}
 y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0.
@@ -232,7 +230,7 @@ For future reference, we state the result of \zcref{example:11.1.2}
 as a theorem.
 
 
-\begin{theorem}\color{blue}\label{thmtype:11.1.4}
+\begin{theorem}\label{thmtype:11.1.4}
 The eigenvalue problem
 \[
 y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0
@@ -250,7 +248,7 @@ an argument like that of \zcref{example:11.1.2}
 (\zcref{exer:11.1.18}).
 
 
-\begin{theorem}\color{blue}\label{thmtype:11.1.5}
+\begin{theorem}\label{thmtype:11.1.5}
 The eigenvalue problem
 \[
 y''+\lambda y=0,\quad y'(0)=0,\quad y(L)=0
@@ -263,7 +261,7 @@ y_n=\cos\frac{(2n-1)\pi x}{2L},\quad n=1,2,3,\dots.
 There are no other eigenvalues.
 \end{theorem}
 
-\begin{example}[Problem 5] \label{example:11.1.3} \rm
+\begin{example}[Problem 5]\label{example:11.1.3}
 Solve the eigenvalue  problem
 \begin{equation} \label{eq:11.1.5}
 y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L).
@@ -284,8 +282,7 @@ c_1\cos(-\sqrt\lambda\,L)+c_2\sin(-\sqrt\lambda\,L)=c_1\cos \sqrt\lambda\,L+c_2\
 \end{equation}
 Since
 \begin{equation} \label{eq:11.1.8}
-\cos(-\sqrt\lambda\,L)=\cos \sqrt\lambda\,L\mbox
-{\quad and \quad}\sin(-\sqrt\lambda\,L)=-\sin \sqrt\lambda\,L,
+\cos(-\sqrt\lambda\,L)=\cos \sqrt\lambda\,L\quad\text{and}\quad\sin(-\sqrt\lambda\,L)=-\sin \sqrt\lambda\,L,
 \end{equation}
 \eqref{eq:11.1.7} implies that
 \begin{equation} \label{eq:11.1.9}
@@ -305,7 +302,7 @@ and  \eqref{eq:11.1.8} implies that
 c_1\sin \sqrt\lambda\,L=0.
 \end{equation}
 
-Eqns.~\eqref{eq:11.1.9} and \eqref{eq:11.1.10} imply that $c_1=c_2=0$ unless
+\zcref{eq:11.1.9,eq:11.1.10} imply that $c_1=c_2=0$ unless
 $\sqrt\lambda =n\pi /L$, where $n$ is a positive integer. In this  case
 \eqref{eq:11.1.9} and \eqref{eq:11.1.10} both hold for arbitrary $c_1$ and
 $c_2$. The eigenvalue determined in this way is
@@ -313,9 +310,9 @@ $\lambda_n=n^2\pi^2/L^2$, and each such eigenvalue has the linearly
 independent associated eigenfunctions
 \[
 \cos \frac{n\pi x}{L}
-\mbox{\quad and \quad}
+\quad\text{and}\quad
   \sin\frac{ n\pi x}{L}.
-\eqno{\bbox}
+\qquad\qquad\hfil\bbox
 \]
 \end{example}
 
@@ -323,7 +320,7 @@ For future reference we state the result of \zcref{example:11.1.3} as
 a theorem.
 
 
-\begin{theorem}\color{blue}\label{thmtype:11.1.6}
+\begin{theorem}\label{thmtype:11.1.6}
 The eigenvalue problem
 \[
 y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L),
@@ -334,20 +331,17 @@ $\lambda_n=n^2\pi^2/L^2,$
 with associated eigenfunctions
 \[
 y_{1n}=\cos \frac{n\pi x}{L}
-\mbox{\quad and \quad}
+\quad\text{and}\quad
 y_{2n}=\sin \frac{n\pi x}{L},\quad n=1,2,3,\dots.
 \]
 There are no other eigenvalues.
 \end{theorem}
 
 
-
 \boxit{Orthogonality}
 
-
-\noindent
-We say that two integrable functions $f$ and $g$ are {\color{blue}\it
-orthogonal\/} on an interval $[a,b]$ if
+We say that two integrable functions $f$ and $g$ are
+\emph{\color{blue}orthogonal} on an interval $[a,b]$ if
 \[
 \int_a^bf(x)g(x)\,dx=0.
 \]
@@ -355,14 +349,14 @@ More generally, we say that the functions $\phi_1$, $\phi_2$, \dots,
 $\phi_n$, \dots (finitely or infinitely many) are orthogonal
 on $[a,b]$  if
 \[
-\int_a^b\phi_i(x)\phi_j(x)\,dx=0\mbox{\quad whenever \quad}
+\int_a^b\phi_i(x)\phi_j(x)\,dx=0\quad\text{whenever}\quad
 i\ne j.
 \]
 The  importance of orthogonality will become clear when we study
 Fourier
  series in the next two sections.
 
-\begin{example}\label{example:11.1.4} \rm
+\begin{example}\label{example:11.1.4}
 Show that the eigenfunctions
 \begin{equation} \label{eq:11.1.11}
 1,\, \cos\frac{\pi x}{L},\, \sin\frac{\pi x}{L},
@@ -444,17 +438,12 @@ about $x=0$.
 
 
 \zcref[S,range]{exer:11.1.19,exer:11.1.22} ask you to verify
- that the eigenfunctions of Problems~1-4  are orthogonal
+ that the eigenfunctions of Problems~1--4  are orthogonal
 on $[0,L]$. However, this also follows from a general theorem that we'll
  prove in Chapter~13.
 
 
-%\end{comment}
-
 \exercises
-
-
-
 
 \begin{exerciselist}
 \item\label{exer:11.1.1}Prove that $\lambda=0$ is an eigenvalue of Problem~5 with associated
@@ -462,73 +451,49 @@ eigenfunction $y_0=1$, and that any other eigenvalues  must be
 positive.
 \hint{See the proof of \zcref{thmtype:11.1.1}.}
 
-\exercisetext{In Exercises 2-16 solve the eigenvalue problem.}
-
+\exercisetext{In \zcref[range]{exer:11.1.2,exer:11.1.16} solve the eigenvalue problem.}
 
 \item\label{exer:11.1.2}$y''+\lambda y=0,\quad y(0)=0,\quad y(\pi)=0$
 
-
 \item\label{exer:11.1.3}$y''+\lambda y=0,\quad y'(0)=0,\quad y'(\pi)=0$
-
 
 \item\label{exer:11.1.4}$y''+\lambda y=0$,\quad $y(0)=0$,\quad $y'(\pi)=0$
 
-
-
 \item\label{exer:11.1.5}$y''+\lambda y=0$,\quad $y'(0)=0$,\quad $y(\pi)=0$
-
 
 \item\label{exer:11.1.6}$y''+\lambda y=0,\quad y(-\pi)= y(\pi), \quad y'(-\pi)=y'(\pi)$
 
-
 \item\label{exer:11.1.7}$y''+\lambda y=0,\quad y'(0)=0,\quad y'(1)=0$
-
-
 
 \item\label{exer:11.1.8}$y''+\lambda y=0$,\quad $y'(0)=0$,\quad $y(1)=0$
 
-
 \item\label{exer:11.1.9}$y''+\lambda y=0,\quad y(0)=0,\quad y(1)=0$
-
-
 
 \item\label{exer:11.1.10}$y''+\lambda y=0,\quad y(-1)= y(1), \quad y'(-1)=y'(1)$
 
-
 \item\label{exer:11.1.11}$y''+\lambda y=0$,\quad $y(0)=0$,\quad $y'(1)=0$
 
-
 \item\label{exer:11.1.12}$y''+\lambda y=0,\quad y(-2)= y(2), \quad y'(-2)=y'(2)$
-
 
 \item\label{exer:11.1.13}$y''+\lambda y=0,\quad y(0)=0,\quad y(2)=0$
 
 \item\label{exer:11.1.14}$y''+\lambda y=0$,\quad $y'(0)=0$,\quad $y(3)=0$
 
-
 \item\label{exer:11.1.15}$y''+\lambda y=0$,\quad $y(0)=0$,\quad $y'(1/2)=0$
-
 
 \item\label{exer:11.1.16}$y''+\lambda y=0,\quad y'(0)=0,\quad y'(5)=0$
 
-
-
 \item\label{exer:11.1.17}Prove \zcref{thmtype:11.1.3}.
-
 
 \item\label{exer:11.1.18}Prove \zcref{thmtype:11.1.5}.
 
-\item\label{exer:11.1.19}Verify  that the eigenfunctions
+\item\label{exer:11.1.19}Verify that the eigenfunctions
 \[
 \sin\frac{\pi x}{L},
 \, \sin\frac{2\pi x}{L},\dots,
  \, \sin\frac{n\pi x}{L},\dots
 \]
- of Problem~1
-are orthogonal on $[0,L]$.
-
-
-
+ of Problem~1 are orthogonal on $[0,L]$.
 
 \item\label{exer:11.1.20}Verify  that the eigenfunctions
 \[
@@ -536,10 +501,7 @@ are orthogonal on $[0,L]$.
 \, \cos\frac{2\pi x}{L},\dots,
  \, \cos\frac{n\pi x}{L},\dots
 \]
-of Problem~2
-are orthogonal on $[0,L]$.
-
-
+of Problem~2 are orthogonal on $[0,L]$.
 
 \item\label{exer:11.1.21}Verify that  the eigenfunctions
 \[
@@ -547,11 +509,7 @@ are orthogonal on $[0,L]$.
 \, \sin\frac{3\pi x}{2L},\dots,
  \, \sin\frac{(2n-1)\pi x}{2L},\dots
 \]
-of Problem~3
-are orthogonal on $[0,L]$.
-
-
-
+of Problem~3 are orthogonal on $[0,L]$.
 
 \item\label{exer:11.1.22}Verify  that the eigenfunctions
 \[
@@ -559,14 +517,10 @@ are orthogonal on $[0,L]$.
 \, \cos\frac{3\pi x}{2L},\dots,
  \, \cos\frac{(2n-1)\pi x}{2L},\dots
 \]
-of Problem~4
-are orthogonal on $[0,L]$.
-
-
+of Problem~4 are orthogonal on $[0,L]$.
 
 \exercisetext{In \zcref[range]{exer:11.1.23,exer:11.1.26}
- solve the
-eigenvalue problem.}
+ solve the eigenvalue problem.}
 
 \item\label{exer:11.1.23}$y''+\lambda y=0,\quad y(0)=0,\quad \dst\int_0^Ly(x)\,dx=0$
 
@@ -592,9 +546,9 @@ We'll use these expansions  to solve partial differential equations in
 Chapter~12.
 
 
-\begin{theorem}\color{blue} \label{thmtype:11.2.1}
-Suppose the functions  $\phi_1,$ $\phi_2,$
-$\phi_3,$ \dots, are orthogonal on $[a,b]$ and
+\begin{theorem}\label{thmtype:11.2.1}
+Suppose the functions  $\phi_1$, $\phi_2$,
+$\phi_3$, \dots, are orthogonal on $[a,b]$ and
 \begin{equation} \label{eq:11.2.1}
 \int_a^b\phi_n^2(x)\,dx\ne0,\quad n=1,2,3,\dots.
 \end{equation}
@@ -616,7 +570,8 @@ n=1,2,3,\dots.
 \end{equation}
 \end{theorem}
 
-\proof Multiplying \eqref{eq:11.2.2} by $\phi_n$ and
+\begin{proof}
+Multiplying \eqref{eq:11.2.2} by $\phi_n$ and
 integrating yields
 \begin{equation} \label{eq:11.2.4}
 \int_a^b f(x)\phi_n(x)\,dx=\int_a^b
@@ -633,19 +588,20 @@ on the right of \eqref{eq:11.2.4}, and rewrite \eqref{eq:11.2.4} as
 \end{equation}
 (This isn't  easy to prove.) Since
 \[
-\int_a^b\phi_n(x)\phi_m(x)\,dx=0\mbox{\quad if \quad}m\ne n,
+\int_a^b\phi_n(x)\phi_m(x)\,dx=0\quad\text{if }m\ne n,
 \]
 \eqref{eq:11.2.5} reduces to
 \[
 \int_a^bf(x) \phi_n(x)\,dx=c_n\int_a^b\phi_n^2(x)\,dx.
 \]
-Now  \eqref{eq:11.2.1} implies \eqref{eq:11.2.3}.\bbox
+Now  \eqref{eq:11.2.1} implies \eqref{eq:11.2.3}.
+\end{proof}
 
 \zcref[S]{thmtype:11.2.1} motivates the next definition.
 
-\begin{definition}\color{blue}\label{thmtype:11.2.2} \rm
+\begin{definition}\label{thmtype:11.2.2}
 Suppose
-$\phi_1,$ $\phi_2$, \dots, $\phi_n$,\dots are
+$\phi_1$, $\phi_2$, \dots, $\phi_n$,\dots are
 orthogonal on $[a,b]$ and
 $\int_a^b\phi_n^2(x)\,dx\ne0$, $n=1$, $2$, $3$, \dots. Let
 $f$ be integrable on $[a,b],$ and define
@@ -654,11 +610,11 @@ c_n=\frac{\dst\int_a^bf(x)\phi_n(x)\,dx}{\dst\int_a^b\phi_n^2(x)\,dx},\quad
 n=1,2,3,\dots.
 \end{equation}
 Then the infinite series
-$\sum_{n=1}^\infty c_n\phi_n(x)$ is called the {\color{blue}\it
+$\sum_{n=1}^\infty c_n\phi_n(x)$ is called the {\color{blue}\itshape
 Fourier expansion of $f$ in terms
-of the orthogonal set\/} $\{\phi_n\}_{n=1}^\infty$, and
+of the orthogonal set} $\{\phi_n\}_{n=1}^\infty$, and
 $c_1$, $c_2$, \dots, $c_n$, \dots
-are called the {\color{blue}\it Fourier coefficients of $f$\/ with respect to\/}
+are called the \emph{\color{blue}Fourier coefficients of $f$ with respect to}
 $\{\phi_n\}_{n=1}^\infty$. We indicate the relationship between $f$
 and its Fourier
  expansion by
@@ -681,12 +637,8 @@ of the coefficients $\{c_n\}$, and we'll indicate
 this association informally as in \eqref{eq:11.2.7}.
 
 
-\newpage
 \boxit{Fourier Series}
 
-
-
-\noindent
 We'll now study Fourier expansions in terms
  of the eigenfunctions
 \[
@@ -720,7 +672,7 @@ where
 \begin{gather*}
 a_0=\frac{1}{2L}\int_{-L}^L f(x)\,dx,\\
 a_n= \frac{1}{L}\int_{-L}^L f(x)\cos\frac{n\pi
-x}{L}\,dx,\mbox{\quad and \quad}
+x}{L}\,dx,\quad\text{and}\quad
 b_n=\frac{1}{L}\int_{-L}^L f(x)\sin\frac{n\pi x}{L}\,dx,\,n\ge1.
 \end{gather*}
 
@@ -728,23 +680,21 @@ Note that
 $a_0$ is the average value of $f$ on $[-L,L]$, while $a_n$ and $b_n$
 (for $n\ge1$) are twice the average values of
 \[
-f(x)\cos\frac{n\pi x}{L}\quad\mbox{ and }\quad f(x)\sin\frac{n\pi x}{L}
+f(x)\cos\frac{n\pi x}{L}\quad\text{and}\quad f(x)\sin\frac{n\pi x}{L}
 \]
 on $[-L,L]$, respectively.
 
 
 \boxit{Convergence of Fourier Series}
 
-
-\noindent
 The  question of convergence of Fourier series for arbitrary
 integrable functions is beyond the scope of this book. However, we can
 state a theorem that settles this question for most functions that
 arise in applications.
 
-\begin{definition}\color{blue} \label{thmtype:11.2.3}\rm
+\begin{definition}\label{thmtype:11.2.3}
 A function  $f$ is said to be
-  {\color{blue}\it piecewise smooth\/} on $[a,b]$ if:
+\emph{\color{blue}piecewise smooth} on $[a,b]$ if:
 \begin{alist}
 \item % (a)
 $f$ has at most finitely many points of discontinuity in $(a,b)$;
@@ -764,15 +714,15 @@ Since $f$ and $f'$ are required to be continuous at all but
 finitely many points in $[a,b]$,
  $f(x_0+)=f(x_0-)$
 and $f'(x_0+)=f'(x_0-)$ for all but finitely many
-values of $x_0$ in $(a,b)$. Recall from Section~8.1 that
-$f$ is said to have a {\color{blue}\it jump discontinuity\/} at $x_0$
+values of $x_0$ in $(a,b)$. Recall from \zcref{sec:laplace_intro} that
+$f$ is said to have a \emph{\color{blue}jump discontinuity} at $x_0$
 if $f(x_0+)\ne f(x_0-)$.
 
 The next theorem gives sufficient conditions for convergence of a
 Fourier series. The  proof is beyond the scope of this book.
 
 
-\begin{theorem}\color{blue} \label{thmtype:11.2.4}
+\begin{theorem}\label{thmtype:11.2.4}
 If $f$ is piecewise smooth on $[-L,L]$, then the Fourier series
 \begin{equation} \label{eq:11.2.8}
 F(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi
@@ -782,12 +732,12 @@ of $f$
 on $[-L,L]$ converges for all $x$ in $[-L,L];$ moreover,
 \[
 F(x)=
-\left\{\begin{array}{cl}
-f(x)&\mbox{if $-L<x<L$ and $f$ is continuous at $x$  }\\[2\jot]
-\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $-L<x<L$ and $f$ is discontinuous at
-$x$  }\\[2\jot]
-\dst\frac{f(-L+)+f(L-)}{2}&\mbox{if $x=L$ or $x=-L$.}
-\end{array}\right.
+\begin{cases}
+f(x)&\text{if $-L<x<L$ and $f$ is continuous at $x$}\\
+\dfrac{f(x-)+f(x+)}{2}&\text{if $-L<x<L$ and $f$ is discontinuous at
+$x$}\\
+\dfrac{f(-L+)+f(L-)}{2}&\text{if $x=L$ or $x=-L$.}
+\end{cases}
 \]
 \end{theorem}
 
@@ -796,8 +746,8 @@ Since $f(x+)=f(x-)$ if $f$ is continuous at $x$, we can also say that
 \[
 F(x)=
 \begin{cases}
-\dst\frac{f(x+)+f(x-)}{2}&\mbox{if }-L<x<L,\\
-\dst\frac{f(L-)+f(-L+)}{2}&\mbox{if }x=\pm L.
+\dfrac{f(x+)+f(x-)}{2}&\text{if }-L<x<L,\\
+\dfrac{f(L-)+f(-L+)}{2}&\text{if }x=\pm L.
 \end{cases}
 \]
 
@@ -831,7 +781,7 @@ respectively, such that
 \]
 and
 \[
-E_N(u_N)\approx .09|f(\alpha-)-f(\alpha+)|\mbox{\quad and \quad}
+E_N(u_N)\approx .09|f(\alpha-)-f(\alpha+)|\quad\text{and}\quad
 E_N(v_N)\approx .09|f(\alpha-)-f(\alpha+)|.
 \]
 Thus, the maximum value of the error $E_N(x)$ near $\alpha$ does not
@@ -846,45 +796,42 @@ such that
 \begin{gather*}
 \lim_{N\to\infty}u_N=-L,\quad
 \lim_{N\to\infty}v_N=L,\\
-E_N(u_N)\approx .09|f(-L+)-f(L-)|\mbox{\quad and \quad}
+E_N(u_N)\approx .09|f(-L+)-f(L-)|\quad\text{and}\quad
 E_N(v_N)\approx .09|f(-L+)-f(L-)|.
 \end{gather*}}
 
-
-
 This  is the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Gibbs.html}
-{\color{blue}\it Gibbs
- phenomenon\/}. Having been alerted to
+{\color{blue}\itshape Gibbs
+ phenomenon}. Having been alerted to
 it, you may see it in \zcref[range]{figure:11.2.2,figure:11.2.4},
  below;
 however, we'll give a  specific example at the end of this section.
 
-
-\begin{example}\label{example:11.2.1} \rm
+\begin{example}\label{example:11.2.1}
 Find the Fourier series of the piecewise smooth function
 \[
 f(x)=
-\left\{\begin{array}{rlr}
--x,&-2< x<0,
-\\\frac{1}{2},&\phantom{-}0<x<2
-\end{array}\right.
+\begin{cases}
+-x,&-2< x<0,\\
+\frac{1}{2},&\phantom{-}0<x<2
+\end{cases}
 \]
 on $[-2,2]$ (\zcref{figure:11.2.1}). Determine the sum of
 the Fourier series  for $-2\le x\le 2$.
 \end{example}
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110201}
+  \includegraphics[alt={A graph of the function in Example \ref*{example:11.2.1}},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110201}
 \caption{}
   \label{figure:11.2.1}
 \end{figure}
 
 
 \solution
-Note that wen't bothered to define $f(-2)$, $f(0)$, and
+Note that we haven't bothered to define $f(-2)$, $f(0)$, and
 $f(2)$.
  No matter
 how they may be defined, $f$ is piecewise smooth on $[-2,2]$, and
@@ -907,13 +854,13 @@ F(0)=\frac{f(0-)+f(0+)}{2}=\frac{1}{2}\left(0+\frac{1}{2}\right)=\frac{1}{4}.
 To summarize,
 \[
 F(x)=
-\left\{\begin{array}{rl}
-\frac{5}{4},&\phantom{-}x=-2\\[2\jot]
--x,&-2<x<0,\\[2\jot]
- \frac{1}{4},&\phantom{-}x=0,\\[2\jot]
-\frac{1}{2},&\phantom{-}0<x<2,\\[2\jot]
+\begin{cases}
+\frac{5}{4},&\phantom{-}x=-2\\
+-x,&-2<x<0,\\
+ \frac{1}{4},&\phantom{-}x=0,\\
+\frac{1}{2},&\phantom{-}0<x<2,\\
 \frac{5}{4},&\phantom{-}x=2.
-\end{array}\right.
+\end{cases}
 \]
 
 We compute the Fourier coefficients as follows:
@@ -949,20 +896,17 @@ n\pi}{n}\sin\frac{n\pi x}{2}
 approximates $f(x)$ for $m=5$ (dotted curve), $m=10$  (dashed curve),
 and $m=15$ (solid curve).
 
-
-
-\begin{figure}[H]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110202}
+  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110202}
 \caption{}
   \label{figure:11.2.2}
 \end{figure}
 
-\newpage
+
 \boxit{Even and Odd Functions}
 
-
-\noindent
 Computing the Fourier coefficients of a  function  $f$
  can be tedious;     however,  the computation
 can often be simplified by exploiting symmetries
@@ -972,10 +916,10 @@ we recall some concepts that you studied in calculus.
 Let $u$ and $v$ be defined on $[-L,L]$ and suppose
 that
 \[
-u(-x)=u(x)\quad\mbox{ and }\quad v(-x)=-v(x),\quad -L\le x\le L.
+u(-x)=u(x)\quad\text{and}\quad v(-x)=-v(x),\quad -L\le x\le L.
 \]
-Then we say that $u$ is an {\color{blue}\it even\/} function and $v$  is an
-{\color{blue}\it odd function\/}. Note that:
+Then we say that $u$ is an \emph{\color{blue}even} function and $v$  is an
+\emph{\color{blue}odd function}. Note that:
 \begin{itemize}
 \item
 The product of two even functions is even.
@@ -985,7 +929,7 @@ The product of two odd functions is even.
 The product of an even  function and an odd function  is odd.
 \end{itemize}
 
-\begin{example}\label{example:11.2.2} \rm
+\begin{example}\label{example:11.2.2}
 The functions $u(x)=\cos \omega x$ and $u(x)=x^2$  are even, while
 $v(x)=\sin \omega x$ and $v(x)=x^3$ are odd. The function $w(x)=e^x$
 is neither even nor odd.
@@ -993,30 +937,26 @@ is neither even nor odd.
 
 
 
-You learned parts \part{a} and \part{b} of the  next theorem in
+You learned parts (a) and (b) of the  next theorem in
 calculus, and the other parts follow from them
 (\zcref{exer:11.2.1}).
 
 
-\begin{theorem}\color{blue}\label{thmtype:11.2.5}
-Suppose $u$ is even and $v$ is odd on $[-L,L].$ Then$:$
-\begin{gather*}
-\mbox{\part{a}\quad} \int_{-L}^L u(x)\,dx=2\int_0^Lu(x) \,dx,
-\mbox{\quad  \part{b}\quad}
-\int_{-L}^L v(x)\,dx=0,\\
-\mbox{\part{c}\quad} \int_{-L}^L
-u(x)\cos\frac{n\pi x}{L}\,dx=2\int_0^Lu(x)\cos\frac{n\pi x}{L} \,dx,\\
-\mbox{\part{d}\quad}
-\int_{-L}^L v(x)\sin\frac{n\pi x}{L}\,dx=
-2\int_0^L v(x)\sin\frac{n\pi x}{L}\,dx,\\
-\mbox{\part{e}\quad} \int_{-L}^L
-u(x)\sin\frac{n\pi x}{L}\,dx=0
-\mbox{\quad and \quad\part{f}\quad}
-\int_{-L}^L v(x)\cos\frac{n\pi x}{L}\,dx=0.
-\end{gather*}
+\begin{theorem}\label{thmtype:11.2.5}
+Suppose $u$ is even and $v$ is odd on $[-L,L]$. Then:
+\begin{enumext*}[label=\alph*,wrap-label={(#1)},columns=2,labelwidth=2em]
+\item $\dst\int_{-L}^L u(x)\,dx=2\int_0^Lu(x) \,dx,$
+\item $\dst\int_{-L}^L v(x)\,dx=0,$
+\item(2) $\dst\int_{-L}^L u(x)\cos\frac{n\pi x}{L}\,dx
+=2\int_0^Lu(x)\cos\frac{n\pi x}{L} \,dx,$
+\item(2) $\dst\int_{-L}^L v(x)\sin\frac{n\pi x}{L}\,dx=
+2\int_0^L v(x)\sin\frac{n\pi x}{L}\,dx,$
+\item $\dst\int_{-L}^L u(x)\sin\frac{n\pi x}{L}\,dx=0$\qquad and
+\item $\dst\int_{-L}^L v(x)\cos\frac{n\pi x}{L}\,dx=0.$
+\end{enumext*}
 \end{theorem}
 
-\begin{example}\label{example:11.2.3} \rm
+\begin{example}\label{example:11.2.3}
 Find the Fourier series of $f(x)=x^2-x$ on $[-2,2]$, and determine
 its sum for $-2\le x\le 2$.
 \end{example}
@@ -1071,9 +1011,11 @@ F(x)=\frac{4}{3}+\frac{16}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^n}{n^2}
 \zcref[S]{thmtype:11.2.4} implies that
 \[
 F(x)=
-\left\{\begin{array}{cl}
-4,&\phantom{-}x=-2,\\ x^2-x,&-2<x<2,\\4,&\phantom{-}x=2.
-\end{array}\right.
+\begin{cases}
+4,&\phantom{-}x=-2,\\
+x^2-x,&-2<x<2,\\
+4,&\phantom{-}x=2.
+\end{cases}
 \]
 \zcref[S]{figure:11.2.3} shows how the partial sum
 \[
@@ -1085,13 +1027,11 @@ approximates $f(x)$ for $m=5$ (dotted curve), $m=10$  (dashed curve),
 and $m=15$ (solid curve).
 \bbox
 
-
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110203}
-\caption{ Approximation of $f(x)=x^2-x$ by partial
+  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110203}
+\caption{Approximation of $f(x)=x^2-x$ by partial
 sums of its Fourier series on $[-2,2]$}
   \label{figure:11.2.3}
 \end{figure}
@@ -1101,7 +1041,7 @@ sums of its Fourier series on $[-2,2]$}
 the next theorem follows.
 
 
-\begin{theorem}\color{blue} \label{thmtype:11.2.6}
+\begin{theorem}\label{thmtype:11.2.6}
 Suppose   $f$ is integrable on $[-L,L].$
 \begin{alist}
 \item % (a)
@@ -1111,7 +1051,7 @@ F(x)=a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 \]
 where
 \[
-a_0=\frac{1}{L}\int_0^Lf(x) \,dx \mbox{\quad and \quad}
+a_0=\frac{1}{L}\int_0^Lf(x) \,dx \quad\text{and}\quad
 a_n=\frac{2}{L}\int_0^L f(x)\cos\frac{n\pi x}{L}\,dx,\quad n\ge1.
 \]
 \item % (b)
@@ -1129,7 +1069,7 @@ b_n=\frac{2}{L}\int_0^L f(x)\sin\frac{n\pi x}{L}\,dx.
 
 
 
-\begin{example}\label{example:11.2.4} \rm
+\begin{example}\label{example:11.2.4}
 Find the Fourier series of $f(x)=x$ on $[-\pi,\pi]$, and determine
 its sum for $-\pi\le x\le \pi$.
 \end{example}
@@ -1153,9 +1093,11 @@ F(x)=-2\sum_{n=1}^\infty\frac{(-1)^n}{n}\sin nx.
 \zcref[S]{thmtype:11.2.4} implies that
 \[
 F(x)=
-\left\{\begin{array}{cl}
-0,&\phantom{-}x=-\pi,\\ x,&-\pi<x<\pi,\\0,&\phantom{-}x=\pi.
-\end{array}\right.
+\begin{cases}
+0,&\phantom{-}x=-\pi,\\
+x,&-\pi<x<\pi,\\
+0,&\phantom{-}x=\pi.
+\end{cases}
 \]
 \zcref[S]{figure:11.2.4} shows how the partial sum
 \[
@@ -1164,17 +1106,16 @@ F_m(x)=-2\sum_{n=1}^m\frac{(-1)^n}{n}\sin nx
 approximates $f(x)$ for $m=5$ (dotted curve), $m=10$  (dashed curve),
 and $m=15$ (solid curve).
 
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110204}
+  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110204}
 \caption{Approximation of $f(x)=x$ by partial sums
 of its Fourier series on $[-\pi,\pi]$}
   \label{figure:11.2.4}
 \end{figure}
 
-\begin{example}\label{example:11.2.5} \rm
+\begin{example}\label{example:11.2.5}
 Find the Fourier series of $f(x)=|x|$ on $[-\pi,\pi]$ and
 determine its sum for\\ $-\pi\le x\le\pi$.
 \end{example}
@@ -1202,9 +1143,10 @@ F(x)=\frac{\pi}{2}+\frac{2}{\pi}\sum_{n=0}\frac{(-1)^n-1}{n^2}\cos nx.
 However, since
 \[
 (-1)^n-1=
-\left\{\begin{array}{rl} 0&\mbox{ if }n=2m,\\
--2&\mbox{ if }n=2m+1,
-\end{array}\right.
+\begin{cases}
+0&\text{ if }n=2m,\\
+-2&\text{ if }n=2m+1,
+\end{cases}
 \]
 the terms in  \eqref{eq:11.2.12} for which $n=2m$ are all zeros.
 Therefore we only to include the terms for which $n=2m+1$;
@@ -1224,7 +1166,7 @@ Since $|x|$ is continuous for all $x$ and $|-\pi|=|\pi|$,
 all $x$ in $[-\pi,\pi]$.
 
 
-\begin{example}\label{example:11.2.6} \rm
+\begin{example}\label{example:11.2.6}
 Find the Fourier series of $f(x)=x(x^2-L^2)$  on $[-L,L]$,
 and determine its sum for $-L\le x\le L$.
 
@@ -1253,14 +1195,14 @@ x}{L}.
 \zcref[S]{thmtype:11.2.4} implies that $F(x)=x(x^2-L^2)$ for all $x$
 in $[-L,L]$.
 
-\begin{example}[Gibbs Phenomenon]\label{example:11.2.7}\rm
+\begin{example}[Gibbs Phenomenon]\label{example:11.2.7}
 The Fourier series of
 \[
-f(x)=\left\{\begin{array}{cl}
+f(x)=\begin{cases}
 0,&-1<x<-\frac{1}{2},\\
-1,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+1,&-\frac{1}{2}<x<\frac{1}{2},\\
 0,&\phantom{-}\frac{1}{2}<x<1
-\end{array}\right.
+\end{cases}
 \]
 on $[-1,1]$ is
 \[
@@ -1269,13 +1211,13 @@ F(x)=\frac{1}{2}+\frac{2}{\pi}\sum_{n=1}^\infty
 \]
 (Verify.) According to \zcref{thmtype:11.2.4},
 \[
-F(x)=\left\{\begin{array}{cl}
+F(x)=\begin{cases}
 0,&-1\le x<-\frac{1}{2},\\
 \frac{1}{2},& x=-\frac{1}{2},\\
 1,&-\frac{1}{2}<x<\frac{1}{2},\\
 \frac{1}{2},& x=\frac{1}{2},\\
 0,&\frac{1}{2}<x\le 1;
-\end{array}\right.
+\end{cases}
 \]
 thus, $F$ (as well as $f$) has unit jump discontinuities
 at $x=\pm\frac{1}{2}$.
@@ -1293,34 +1235,37 @@ discontinuities $x=\pm\frac{1}{2}$ as $N$ increases.
 \end{example}
 
 
-\begin{figure}[H]
+\begin{figure}
+\centering
 \color{blue}
-  \begin{minipage}[b]{0.5\linewidth}
+\begin{minipage}{0.48\linewidth}
     \centering
-   \scalebox{.65}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110205}}
-  \label{figure:11.2.5}
-\caption{The Gibbs Phenomenon:
-\zcref{example:11.2.7}, $N=10$}
-\end{minipage}
-  \begin{minipage}[b]{0.5\linewidth}
+\tagstructbegin{tag=Sect}
+  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  width=\linewidth,height=2.2in,keepaspectratio]{fig110205}
+\caption{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=10$}
+\label{figure:11.2.5}
+\tagstructend
+\end{minipage}\hfill
+\begin{minipage}{0.48\linewidth}
     \centering
-   \scalebox{.65}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110206}}
-\caption{The Gibbs Phenomenon:
-\zcref{example:11.2.7}, $N=20$}
-  \label{figure:11.2.6}
-\end{minipage}
-\end{figure}
-
-\newpage
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110207}
-\caption{The Gibbs Phenomenon:
-\zcref{example:11.2.7}, $N=30$}
+\tagstructbegin{tag=Sect}
+  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  width=\linewidth,height=2.2in,keepaspectratio]{fig110206}
+\caption{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=20$}
+\label{figure:11.2.6}
+\tagstructend
+\end{minipage}\smallskip
+%\end{figure}
+%
+%\begin{figure}
+%  \centering
+\tagstructbegin{tag=Sect}
+  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110207}
+\caption{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=30$}
   \label{figure:11.2.7}
+\tagstructend
 \end{figure}
 
 
@@ -1357,9 +1302,7 @@ F_m(x)=a_0+\sum_{n=1}^m\left(a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi x}{L}\rig
 \]
 on the same axes for various values of $m$.}
 
-\item\label{exer:11.2.2}\Cex
-$L=1$;  \quad $f(x)=2-x$
-
+\item\label{exer:11.2.2}\Cex $L=1$;  \quad $f(x)=2-x$
 
 \item\label{exer:11.2.3}$L=\pi$;  \quad$f(x)=2x-3x^2$
 
@@ -1367,103 +1310,93 @@ $L=1$;  \quad $f(x)=2-x$
 
 \item\label{exer:11.2.5}$L=\pi$;  \quad$f(x)=|\sin x|$
 
-
-\item\label{exer:11.2.6}\Cex
-$L=\pi$;  \quad$f(x)=x\cos x$
+\item\label{exer:11.2.6}\Cex $L=\pi$;  \quad$f(x)=x\cos x$
 
 \item\label{exer:11.2.7}$L=\pi$;  \quad$f(x)=|x|\cos x$
 
-\item\label{exer:11.2.8}\Cex
-$L=\pi$;  \quad$f(x)=x\sin x$
+\item\label{exer:11.2.8}\Cex $L=\pi$;  \quad$f(x)=x\sin x$
 
 \item\label{exer:11.2.9}$L=\pi$;  \quad$f(x)=|x|\sin x$
 
-
 \item\label{exer:11.2.10}$L=1$;  \quad$f(x)=
-\left\{\begin{array}{cl}
-0,&-1<x<\frac{1}{2},\\[2\jot]
-\cos\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+\begin{cases}
+0,&-1<x<\frac{1}{2},\\
+\cos\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\
 0,&\phantom{-}\frac{1}{2}<x<1
-\end{array}\right.$
+\end{cases}$
 
 \item\label{exer:11.2.11}$L=1$;  \quad$f(x)=
-\left\{\begin{array}{cl}
-0,&-1<x<\frac{1}{2},\\[2\jot]
-x\cos\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+\begin{cases}
+0,&-1<x<\frac{1}{2},\\
+x\cos\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\
 0,&\phantom{-}\frac{1}{2}<x<1
-\end{array}\right.$
-
+\end{cases}$
 
 \item\label{exer:11.2.12}$L=1$;  \quad$f(x)=
-\left\{\begin{array}{cl}
-0,&-1<x<\frac{1}{2},\\[2\jot]
-\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+\begin{cases}
+0,&-1<x<\frac{1}{2},\\
+\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\
 0,&\phantom{-}\frac{1}{2}<x<1
-\end{array}\right.$
+\end{cases}$
 
 \item\label{exer:11.2.13}$L=1$;  \quad$f(x)=
-\left\{\begin{array}{cl}
-0,&-1<x<\frac{1}{2},\\[2\jot]
-|\sin\pi x|,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+\begin{cases}
+0,&-1<x<\frac{1}{2},\\
+|\sin\pi x|,&-\frac{1}{2}<x<\frac{1}{2},\\
 0,&\phantom{-}\frac{1}{2}<x<1
-\end{array}\right.$
+\end{cases}$
 
 \item\label{exer:11.2.14}$L=1$;  \quad$f(x)=
-\left\{\begin{array}{cl}
-0,&-1<x<\frac{1}{2},\\[2\jot]
-x\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+\begin{cases}
+0,&-1<x<\frac{1}{2},\\
+x\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\
 0,&\phantom{-}\frac{1}{2}<x<1
-\end{array}\right.$
-
-
-
+\end{cases}$
 
 \item\label{exer:11.2.15}\Cex
 $L=4$;  \quad
 $f(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 0,&-4<x<0,\\x,&\phantom{-}0<x<4
-\end{array}\right.$
+\end{cases}$
 
 \item\label{exer:11.2.16}\Cex
 $L=1$;  \quad $f(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 x^2,&-1< x<0,
 \\1-x^2,&\phantom{-}0<x<1
-\end{array}\right.$
-
+\end{cases}$
 
 \item\label{exer:11.2.17}\Lex Verify the Gibbs phenomenon for
 \quad $f(x)=
-\left\{\begin{array}{rl}
-2,&-2< x<
--1,\\1,&-1<x<1,\\-1,&\phantom{-}1< x<2.
-\end{array}\right.$
-
+\begin{cases}
+2,&-2< x<-1,\\
+1,&-1<x<1,\\
+-1,&\phantom{-}1< x<2.
+\end{cases}$
 
 \item\label{exer:11.2.18}\Lex Verify the Gibbs phenomenon for
 \quad $f(x)=
-\left\{\begin{array}{rl}
-2,&-3< x<
--2,\\3,&-2<x<2,\\1,&\phantom{-}2< x<3.
-\end{array}\right.$
+\begin{cases}
+2,&-3< x<-2,\\
+3,&-2<x<2,\\
+1,&\phantom{-}2< x<3.
+\end{cases}$
 
 \item\label{exer:11.2.19}Deduce from \zcref{example:11.2.5} that
 \[
 \sum_{n=0}^\infty\frac{1}{(2n+1)^2}=\frac{\pi^2}{8}.
 \]
 
-
-
-\item\label{exer:11.2.20}\begin{alist}
+\item\label{exer:11.2.20}\begin{alist}[above=-\baselineskip]
 \item % (a)
 Find the Fourier series of $f(x)=e^x$ on $[-\pi,\pi]$.
 \item % (b)
-Deduce from  \part{a}  that
+Deduce from  (a)  that
 \[
 \sum_{n=0}^\infty\frac{1}{n^2+1}=\frac{\pi\coth\pi-1}{2}.
 \]
- \end{alist}
+\end{alist}
 
 \item\label{exer:11.2.21}Find the Fourier series of $f(x)=(x-\pi)\cos x$ on $[-\pi,\pi]$.
 
@@ -1472,30 +1405,29 @@ Deduce from  \part{a}  that
 \item\label{exer:11.2.23}Find the Fourier series  of $f(x)=\sin kx$ ($k\ne$
 integer) on $[-\pi,\pi]$.
 
-
 \item\label{exer:11.2.24}Find the Fourier series  of $f(x)=\cos kx$ ($k\ne$
 integer) on $[-\pi,\pi]$.
 
-\item\label{exer:11.2.25}\begin{alist}
+\item\label{exer:11.2.25}\begin{alist}[above=-\baselineskip]
 \item % (a)
 Suppose $g'$ is continuous on $[a,b]$ and $\omega\ne0$.
 Use integration by parts to show that there's a constant $M$ such
 that
 \[
 \left|\int_a^bg(x)\cos\omega x\,dx\right|\le\frac{M}{\omega}
-\mbox{\quad and \quad}
+\quad\text{and}\quad
 \left|\int_a^bg(x)\sin\omega x\,dx\right|\le\frac{M}{\omega},\quad
 \omega>0.
 \]
 \item % (b)
-Show that the conclusion of \part{a} also holds if $g$
+Show that the conclusion of (a) also holds if $g$
 is piecewise smooth on $[a,b]$.  (This is a special case
 of
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Riemann.html}
-{\color{blue}\it Riemann's Lemma}.
+{\color{blue}\itshape Riemann's Lemma}.
 \item % (c)
-We say that a sequence $\{\alpha_n\}_{n=1}^\infty$  is {\color{blue}\it of
-order $n^{-k}$\/} and write
+We say that a sequence $\{\alpha_n\}_{n=1}^\infty$  is \emph{\color{blue}of
+order $n^{-k}$} and write
 $\alpha_n=O(1/n^k)$
 if  there's a constant $M$ such that
 \[
@@ -1503,10 +1435,10 @@ if  there's a constant $M$ such that
 \]
 Let $\{a_n\}_{n=1}^\infty$ and $\{b_n\}_{n=1}^\infty$
 be the Fourier coefficients of a piecewise smooth function.
-Conclude from \part{b} that $a_n=O(1/n)$  and $b_n=O(1/n)$.
+Conclude from (b) that $a_n=O(1/n)$  and $b_n=O(1/n)$.
 \end{alist}
 
-\item\label{exer:11.2.26}\begin{alist}
+\item\label{exer:11.2.26}\begin{alist}[above=-\baselineskip]
 \item % (a)
 Suppose $f(-L)=f(L)$, $f'(-L)=f'(L)$,  $f'$ is continuous,
 and $f''$ is piecewise continuous
@@ -1520,19 +1452,17 @@ with
 \begin{gather*}
 a_0=\frac{1}{2L}\int_{-L}^L f(x)\,dx,\\
 a_n= -\frac{L}{n^2\pi^2}\int_{-L}^L f''(x)\cos\frac{n\pi
-x}{L}\,dx,\mbox{\quad and \quad}
+x}{L}\,dx,\quad\text{and}\quad
 b_n=-\frac{L}{n^2\pi^2}\int_{-L}^L f''(x)\sin\frac{n\pi x}{L}\,dx,\,n\ge1.
 \end{gather*}
 \item % (b)
-Show that if, in addition to the  assumptions in \part{a},  $f''$ is
+Show that if, in addition to the  assumptions in (a),  $f''$ is
 continuous and $f'''$ is piecewise continuous on
 $[-L,L]$, then
 \[
 a_n=\frac{L^2}{n^3\pi^3}\int_{-L}^Lf'''(x)\sin\frac{n\pi x}{L}\,dx.
 \]
 \end{alist}
-
-
 
 \item\label{exer:11.2.27}Show that if $f$ is integrable on $[-L,L]$ and
 \[
@@ -1554,26 +1484,27 @@ B_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{2n\pi x}{L}\,dx,\quad
 n=1,2,3,\dots.
 \]
 
-
-\begin{figure}[H]
-\color{blue}
-  \begin{minipage}[b]{0.5\linewidth}
+%\begin{figure}
+%\color{blue}
+  \begin{minipage}{0.48\linewidth}
     \centering
-   \scalebox{.65}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110208}}
-\caption{ $y=f(x)$, where $f(x+L)=f(x)$,\, $-L<x<0$}
+\tagstructbegin{tag=Sect}
+  \includegraphics[alt={A function on -L<x<L that is the same on -L<x<0 and 0<x<L..},
+  width=\linewidth,height=2.2in,keepaspectratio]{fig110208}
+\captionof{figure}{$y=f(x)$, where $f(x+L)=f(x)$,\, $-L<x<0$}
   \label{figure:11.2.8}
-\end{minipage}
-  \begin{minipage}[b]{0.5\linewidth}
+\tagstructend
+\end{minipage}\hfill
+  \begin{minipage}{0.48\linewidth}
     \centering
-   \scalebox{.65}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110209}}
-\caption{ $y=f(x)$, where $f(x+L)=-f(x)$,
-$-L<x<0$}
+\tagstructbegin{tag=Sect}
+  \includegraphics[alt={A function on -L<x<L where the part on -L<x<0 is the negative of the part on 0<x<L.},
+  width=\linewidth,height=2.2in,keepaspectratio]{fig110209}
+\captionof{figure}{$y=f(x)$, where $f(x+L)=-f(x)$, $-L<x<0$}
   \label{figure:11.2.9}
-\end{minipage}
-\end{figure}
-
+\tagstructend
+\end{minipage}\smallskip
+%\end{figure}
 
 \item\label{exer:11.2.28}Show that if $f$ is integrable on $[-L,L]$ and
 \[
@@ -1632,7 +1563,7 @@ Show that
 \phi_n^2\,dx.
 \]
 \item % (d)
-Conclude from \part{c} that
+Conclude from (c) that
 \[
 \sum_{n=1}^m c_n^2\int_a^b\phi_n^2(x)\,dx\le \int_a^bf^2(x)\,dx.
 \]
@@ -1643,7 +1574,7 @@ are arbitrary constants we say that
 \[
 P_m(x)=A_0+\sum_{n=1}^m\left(A_n\cos\frac{n\pi x}{L}+B_n\sin\frac{n\pi x}{L}\right)
 \]
-is a {\color{blue}\it trigonometric polynomial of degree $\le m$\/}.
+is a \emph{\color{blue}trigonometric polynomial of degree $\le m$}.
 
 Now let
 \[
@@ -1657,7 +1588,7 @@ a_0+\sum_{n=1}^m\left(a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi x}{L}\right).
 \]
 \begin{alist}
 \item % (a)
-Conclude from \zcref{exer:11.2.29}\part{b} that
+Conclude from \zcref{exer:11.2.29}(b) that
 \[
 \int_{-L}^L(f(x)-F_m(x))^2\,dx\le
 \int_{-L}^L(f(x)-P_m(x))^2\,dx,
@@ -1665,13 +1596,13 @@ Conclude from \zcref{exer:11.2.29}\part{b} that
 with equality if and only if $A_n=a_n$, $n=0$, $1$, \dots, $m$, and
 $B_n=b_n$, $n=1$, $2$, \dots, $m$.
 \item % (b)
-Conclude from \zcref{exer:11.2.29}\part{d} that
+Conclude from \zcref{exer:11.2.29}(d) that
 \[
 2a_0^2+\sum_{n=1}^m(a_n^2+b_n^2)\le\frac{1}{L}\int_{-L}^Lf^2(x)\,dx
 \]
 for every $m\ge0$.
 \item % (c)
-Conclude from \part{b}  that
+Conclude from (b) that
 $\lim_{n\to\infty}a_n=\lim_{n\to\infty}b_n=0$.
 \end{alist}
 
@@ -1683,11 +1614,10 @@ $\lim_{n\to\infty}a_n=\lim_{n\to\infty}b_n=0$.
 In this section we discuss Fourier expansions in terms of the
 eigenfunctions of Problems~1-4 for Section~{\color{red}11.1}.
 
+
 \boxit{Fourier Cosine Series}
 
-
-\noindent
-From  {Exercise 11.1.\zcref[noname]{exer:11.1.20}}, the eigenfunctions
+From {Exercise 11.1.\zcref[noname]{exer:11.1.20}}, the eigenfunctions
 \[
 1,\, \cos\frac{\pi x}{L},
 \, \cos\frac{2\pi x}{L},\dots,
@@ -1700,7 +1630,7 @@ y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0
 (Problem~2)  are orthogonal on $[0,L]$.
  If $f $ is integrable on $[0,L]$ then the
 Fourier expansion of $f$ in terms of these functions is called the
-{\color{blue}\it Fourier cosine series of $f$ on $[0,L]$\/}. This series is
+\emph{\color{blue}Fourier cosine series of $f$ on $[0,L]$}. This series is
 \[
 a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 \]
@@ -1714,36 +1644,31 @@ a_n=\frac{\dst\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx}{\dst\int_0^L
 \cos^2\frac{n\pi x}{L}\,dx}=\frac{2}{L}\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots.
 \]
 Comparing this definition with
-\zcref{exer:11.2.6}\part{a} shows that the Fourier cosine
+\zcref{exer:11.2.6}(a) shows that the Fourier cosine
 series of $f$ on $[0,L]$ is  the Fourier series of
  the  function
 \[
 f_1(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 f(-x),&-L<x<0,\\f(x),&\phantom{-}0\le x\le L,
-\end{array}\right.
+\end{cases}
 \]
 obtained by extending  $f$ over $[-L,L]$ as an even
 function (\zcref{figure:11.3.1}).
 
-
-
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110301}
+  \includegraphics[alt={A function for 0<x<L.  The portion for -L<x<0 is dashed, and is a mirror image across the y axis of the portion for 0<x<L.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110301}
   \caption{}
   \label{figure:11.3.1}
 \end{figure}
-
-
 
 Applying
 \zcref{thmtype:11.2.4} to $f_1$ yields the next
 theorem.
 
-\begin{theorem}\color{blue} \label{thmtype:11.3.1}
+\begin{theorem}\label{thmtype:11.3.1}
 If $f$ is piecewise smooth on $[0,L]$, then the Fourier cosine series
 \[
 C(x)=a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L}
@@ -1753,23 +1678,23 @@ on $[0,L]$,
 with
 \[
 a_0=\frac{1}{L}\int_0^Lf(x)\,dx
-\mbox{\quad and \quad}
+\quad\text{and}\quad
 a_n=\frac{2}{L}\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots,
 \]
  converges for all $x$ in $[0,L];$     moreover,
 \[
 C(x)=
 \begin{cases}
-f(0+)&\mbox{if }x=0  \\
-f(x)&\mbox{if $0<x<L$ and $f$ is continuous at $x  $}\\[2\jot]
-\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
-$x  $}\\[2\jot]
-f(L-)&\mbox{if }x=L.
+f(0+)&\text{ if }x=0  \\
+f(x)&\text{ if $0<x<L$ and $f$ is continuous at $x  $}\\
+\dfrac{f(x-)+f(x+)}{2}&\text{ if $0<x<L$ and $f$ is discontinuous at
+$x  $}\\
+f(L-)&\text{ if }x=L.
 \end{cases}
 \]
 \end{theorem}
 
-\begin{example}\label{example:11.3.1} \rm
+\begin{example}\label{example:11.3.1}
 Find the Fourier cosine series of $f(x)=x$ on $[0,L]$.
 \end{example}
 
@@ -1790,13 +1715,13 @@ a_n&=\frac{2}{L}\int_0^Lx\cos\frac{n\pi x}{L}\,dx
 =\frac{2L}{n^2\pi^2}\cos\frac{n\pi x}{L}\lims0L
 =\frac{2L}{n^2\pi^2}[(-1)^n-1]\\
 &=\begin{cases}
-\dst-\frac{4L}{(2m-1)^2\pi^2}&\mbox{if  $n=2m-1$},\\
-0&\mbox{if $n=2m$}.
+\dst-\frac{4L}{(2m-1)^2\pi^2}&\text{ if  $n=2m-1$},\\
+0&\text{ if $n=2m$}.
 \end{cases}
 \end{align*}
 Therefore
 \[
-C(x)=\dst\frac{L}{2}-\frac{4L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
+C(x)=\frac{L}{2}-\frac{4L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos\frac{(2n-1)\pi x}{L}.
 \]
 \zcref[S]{thmtype:11.3.1} implies that
@@ -1807,8 +1732,6 @@ C(x)=x,\quad 0\le x\le L.
 
 \boxit{Fourier Sine Series}
 
-
-\noindent
 From   {Exercise 11.1.\zcref[noname]{exer:11.1.19}},  the eigenfunctions
 \[
 \sin\frac{\pi x}{L},
@@ -1822,7 +1745,7 @@ y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0
 (Problem~1)  are orthogonal on $[0,L]$.
  If $f$ is integrable on $[0,L]$ then the
 Fourier expansion of $f$ in terms of these functions is called the
-{\color{blue}\it Fourier sine series of $f$ on $[0,L]$\/}. This series is
+\emph{\color{blue}Fourier sine series of $f$ on $[0,L]$}. This series is
 \[
 \sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L},
 \]
@@ -1832,62 +1755,54 @@ b_n=\frac{\dst\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx}{\dst\int_0^L
 \sin^2\frac{n\pi x}{L}\,dx}=\frac{2}{L}\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots.
 \]
 Comparing this definition with
-\zcref{exer:11.2.6}\part{b} shows that the Fourier sine
+\zcref{exer:11.2.6}(b) shows that the Fourier sine
 series of $f$ on $[0,L]$ is the Fourier series of
  the  function
 \[
 f_2(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 -f(-x),&-L<x<0,\\f(x),&\phantom{-}0\le x\le L,
-\end{array}\right.
+\end{cases}
 \]
 obtained by extending  $f$ over $[-L,L]$ as an odd
 function  (\zcref{figure:11.3.2}).
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110302}
+  \includegraphics[alt={A function for 0<x<L.  The portion for -L<x<0 is dashed, and is a mirror image across the origin of the portion for 0<x<L.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110302}
   \caption{}
   \label{figure:11.3.2}
 \end{figure}
 
+Applying \zcref{thmtype:11.2.4} to $f_2$ yields the next theorem.
 
-
-
-Applying
-Theorem~11.2.4 to $f_2$ yields the next
-theorem.
-
-\begin{theorem}\color{blue} \label{thmtype:11.3.2}
+\begin{theorem}\label{thmtype:11.3.2}
 If $f$ is piecewise smooth on $[0,L]$, then the Fourier sine series
 \[
 S(x)=\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L}
 \]
-of $f$
-on $[0,L]$,
-with
+of $f$ on $[0,L]$, with
 \[
 b_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx,
 \]
  converges for all $x$ in $[0,L];$ moreover,
 \[
 S(x)=
-\left\{\begin{array}{cl}
-0&\mbox{if }x=0  \\
-f(x)&\mbox{if $0<x<L$ and $f$ is continuous at $x  $}\\[2\jot]
-\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
-$x  $}\\[2\jot]
-0&\mbox{if }x=L.
-\end{array}\right.
+\begin{cases}
+0&\text{ if }x=0  \\
+f(x)&\text{ if $0<x<L$ and $f$ is continuous at $x  $}\\
+\dfrac{f(x-)+f(x+)}{2}&\text{ if $0<x<L$ and $f$ is discontinuous at
+$x  $}\\
+0&\text{ if }x=L.
+\end{cases}
 \]
 \end{theorem}
 
 
-\begin{example}\label{example:11.3.2} \rm
+\begin{example}\label{example:11.3.2}
 Find the Fourier sine series of $f(x)=x$ on $[0,L]$.
 \end{example}
-
 
 \solution
  The coefficients are
@@ -1900,22 +1815,21 @@ b_n&=\frac{2}{L}\int_0^Lx\sin\frac{n\pi x}{L}\,dx
 \end{align*}
 Therefore
 \[
-S(x)=\dst-\frac{2L}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{n}
+S(x)=-\frac{2L}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{n}
 \sin\frac{n\pi x}{L}.
 \]
 \zcref[S]{thmtype:11.3.2} implies that
 \[
 S(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 x,&0\le x< L,\\0,& x=L.
-\end{array}\right.
+\end{cases}
 \]
 \end{example}
 
+
 \boxit{Mixed Fourier Cosine Series}
 
-
-\noindent
 From {Exercise 11.1.\zcref[noname]{exer:11.1.22}}, the eigenfunctions
 \[
  \cos\frac{\pi x}{2L},
@@ -1939,8 +1853,8 @@ c_n=\frac{\dst\int_0^Lf(x)\cos\frac{(2n-1)\pi x}{2L}\,dx}{\dst\int_0^L
 x}{2L}\,dx.
 \]
 
-We'll  call this expansion the  {\color{blue}\it mixed Fourier cosine
-series\/} of $f$ on $[0,L]$, because the boundary conditions
+We'll  call this expansion the \emph{\color{blue}mixed Fourier cosine
+series} of $f$ on $[0,L]$, because the boundary conditions
 of \eqref{eq:11.3.2} are ``mixed'' in that they require $y$
 to be zero at
  one boundary point and $y'$ to be  zero at the other. By contrast,
@@ -1955,16 +1869,16 @@ is simply the restriction to  $[0,L]$ of the Fourier
 cosine series  of
 \[
 f_3(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 f(x),&0\le x\le L,\\-f(2L-x),&L< x\le 2L
-\end{array}\right.
+\end{cases}
 \]
 on $[0,2L]$ (\zcref{figure:11.3.3}).
 
-
-\begin{figure}[H]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110303}
+  \includegraphics[alt={A function for 0<x<L.  The portion for L<x<2L is dashed, and is a mirror image across the point (L,0) of the portion for 0<x<L.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110303}
   \caption{}
   \label{figure:11.3.3}
 \end{figure}
@@ -1974,7 +1888,7 @@ replaced by $2L$ yields the next theorem.
 
 
 
-\begin{theorem}\color{blue} \label{thmtype:11.3.3}
+\begin{theorem}\label{thmtype:11.3.3}
 If  $f$ is piecewise smooth on $[0,L]$, then
 the mixed Fourier cosine series
 \[
@@ -1988,20 +1902,20 @@ c_n=\frac{2}{L}\int_0^Lf(x)\cos\frac{(2n-1)\pi x}{2L}\,dx,
  converges for all $x$ in $[0,L];    $ moreover,
 \[
 C_M(x)=
-\left\{\begin{array}{cl}
-f(0+)&\mbox{if $x=0$}  \\
-f(x)&\mbox{if $0<x<L$ and $f$ is continuous at $x$  }\\[2\jot]
-\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
-$x$  }\\[2\jot]
-0&\mbox{if $x=L$.}
-\end{array}\right.
+\begin{cases}
+f(0+)&\text{ if $x=0$}  \\
+f(x)&\text{ if $0<x<L$ and $f$ is continuous at $x$  }\\
+\dfrac{f(x-)+f(x+)}{2}&\text{ if $0<x<L$ and $f$ is discontinuous at
+$x$}\\
+0&\text{ if $x=L$.}
+\end{cases}
 \]
 \end{theorem}
 
 
 
 
-\begin{example}\label{example:11.3.3} \rm
+\begin{example}\label{example:11.3.3}
 Find  the mixed Fourier cosine series of
 $f(x)=x-L$ on $[0,L]$.
 \end{example}
@@ -2027,15 +1941,8 @@ C_M(x)= x-L,\quad 0\le x\le L.
 \]
 
 
-
-
-
-
-
 \boxit{Mixed Fourier Sine Series}
 
-
-\noindent
 From  {Exercise 11.1.\zcref[noname]{exer:11.1.21}},  the eigenfunctions
 \[
  \sin\frac{\pi x}{2L},
@@ -2059,8 +1966,8 @@ d_n=\frac{\dst\int_0^Lf(x)\sin\frac{(2n-1)\pi x}{2L}\,dx}{\dst\int_0^L
 \sin^2\frac{(2n-1)\pi x}{2L}\,dx}=\frac{2}{L}\int_0^Lf(x)\sin\frac{(2n-1)\pi
 x}{2L}\,dx.
 \]
-We'll  call this expansion the  {\color{blue}\it mixed Fourier sine
-series\/} of $f$ on $[0,L]$.
+We'll  call this expansion the \emph{\color{blue}mixed Fourier sine
+series} of $f$ on $[0,L]$.
 
 
 It can be shown (\zcref{exer:11.3.58}) that
@@ -2070,17 +1977,16 @@ is simply the restriction to  $[0,L]$ of the Fourier
 sine series of
 \[
 f_4(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 f(x),&0\le x\le L,\\f(2L-x),&L< x\le 2L,
-\end{array}\right.
+\end{cases}
 \]
 on $[0,2L]$ (\zcref{figure:11.3.4}).
 
-
-
-\begin{figure}[H]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig110304}
+  \includegraphics[alt={A function for 0<x<L.  The portion for L<x<2L is dashed, and is a mirror image across the line x=L of the portion for 0<x<L.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig110304}
   \caption{}
   \label{figure:11.3.4}
 \end{figure}
@@ -2102,18 +2008,17 @@ d_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{(2n-1)\pi x}{2L}\,dx,
  converges for all $x$ in $[0,L];    $ moreover,
 \[
 S_M(x)=
-\left\{\begin{array}{cl}
-0&\mbox{if $x=0$}  \\
-f(x)&\mbox{if $0<x<L$ and $f$ is continuous at $x$  }\\[2\jot]
-\dst\frac{f(x-)+f(x+)}{2}&\mbox{if $0<x<L$ and $f$ is discontinuous at
-$x$  }\\[2\jot]
-f(L-)&\mbox{if $x=L$.}
-\end{array}\right.
+\begin{cases}
+0&\text{ if $x=0$}  \\
+f(x)&\text{ if $0<x<L$ and $f$ is continuous at $x$  }\\
+\dfrac{f(x-)+f(x+)}{2}&\text{ if $0<x<L$ and $f$ is discontinuous at $x$}\\
+f(L-)&\text{ if $x=L$.}
+\end{cases}
 \]
 \end{theorem}
 
 
-\begin{example}\label{example:11.3.4} \rm
+\begin{example}\label{example:11.3.4}
 Find the mixed Fourier sine series of $f(x)=x$ on $[0,L]$.
 \end{example}
 
@@ -2142,11 +2047,8 @@ S_M(x)=x,\quad 0\le x\le L.
 \]
 
 
-
 \boxit{A Useful Observation}
 
-
-\noindent
 In applications involving expansions in
 terms of the eigenfunctions of Problems~1-4, the functions being
 expanded
@@ -2156,10 +2058,8 @@ presents an
  efficient way  to obtain the
 coefficients in the expansion.
 
-\begin{theorem}\color{blue}  \label{thmtype:11.3.5}
-\mbox{}\\
-
-\part{a}
+\begin{theorem}\label{thmtype:11.3.5}\begin{alist}[above=-\baselineskip]
+\item
 If $f'(0)=f'(L)=0$, $f''$ is continuous, and $f'''$ is piecewise
 continuous  on $[0,L],$ then
 \begin{equation} \label{eq:11.3.3}
@@ -2168,7 +2068,7 @@ f(x)=a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 \end{equation}
 with
 \begin{equation} \label{eq:11.3.4}
-a_0=\frac{1}{L}\int_0^L f(x)\,dx \mbox{\quad and \quad}
+a_0=\frac{1}{L}\int_0^L f(x)\,dx \quad\text{and}\quad
 a_n= \frac{2L^2}{n^3\pi^3}\int_0^L f'''(x)\sin\frac{n\pi
 x}{L}\,dx,
 \quad n\ge1.
@@ -2177,7 +2077,7 @@ x}{L}\,dx,
 Now suppose $f'$ is continuous and $f''$ is piecewise
 continuous on $[0,L].$
 
-\part{b}
+\item
 If  $f(0)=f(L)=0$, then
 \[
 f(x)=\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L},
@@ -2189,7 +2089,7 @@ b_n=-\frac{2L}{n^2\pi^2}\int_0^L f''(x)\sin\frac{n\pi
 x}{L}\,dx.
 \end{equation}
 
-\part{c}
+\item
 If  $f'(0)=f(L)=0$, then
 \[
 f(x)=
@@ -2202,7 +2102,7 @@ c_n=-\frac{8L}{(2n-1)^2\pi^2}\int_0^L f''(x)\cos\frac{(2n-1)\pi x}{2L}
 \,dx.
 \end{equation}
 
-\part{d}
+\item
 If  $f(0)=f'(L)=0$, then
 \[
 f(x)=
@@ -2214,10 +2114,11 @@ with
 d_n=-\frac{8L}{(2n-1)^2\pi^2}\int_0^L f''(x)\sin\frac{(2n-1)\pi x}{2L}
 \,dx.
 \end{equation}
+\end{alist}
 \end{theorem}
 
 
-\proof  We'll prove \part{a} and leave the rest to you
+\proof  We'll prove (a) and leave the rest to you
 (\zcref{exer:11.3.35,exer:11.3.42,exer:11.3.50}).  Since
 $f$ is continuous on
 $[0,L]$, \zcref{thmtype:11.3.1} implies \eqref{eq:11.3.3} with $a_0$,
@@ -2231,16 +2132,16 @@ a_n&=\frac{2}{L}\int_0^L f(x)\cos\frac{n\pi x}{L}\,dx\\
 -\int_0^Lf'(x)\sin\frac{n\pi x}{L}\,dx\right]\\
 &=-\frac{2}{n\pi}
 \int_0^Lf'(x)\sin\frac{n\pi x}{L}\,dx
-\mbox{ (since $\sin0=\sin n\pi=0$)}\\
+\qquad\text{(since $\sin0=\sin n\pi=0$)}\\
 &=\frac{2L}{n^2\pi^2}\left[f'(x)\cos\frac{n\pi x}{L}\lims0L
 -\int_0^Lf''(x)\cos\frac{n\pi x}{L}\right]\,dx\\
 &=-\frac{2L}{n^2\pi^2}\int_0^Lf''(x)\cos\frac{n\pi x}{L}\,dx
-\mbox{ (since $f'(0)=f'(L)=0$)}\\
+\qquad\text{(since $f'(0)=f'(L)=0$)}\\
 &=-\frac{2L^2}{n^3\pi^3}\left[f''(x)\sin\frac{n\pi x}{L}\lims0L
 -\int_0^Lf'''(x)\sin\frac{n\pi x}{L}\,dx\right]\\
 &=
 \frac{2L^2}{n^3\pi^3}\int_0^Lf'''(x)\sin\frac{n\pi x}{L}\,dx
-\mbox{ (since $\sin0=\sin n\pi=0$).}
+\qquad\text{(since $\sin0=\sin n\pi=0$).}
 \end{align*}
 (By an argument similar to one used in the proof of Theorem~8.3.1,
  the last integration by parts is legitimate
@@ -2250,7 +2151,7 @@ This completes the proof.
 
 
 
-\begin{example}\label{example:11.3.5} \rm
+\begin{example}\label{example:11.3.5}
 Find the Fourier cosine expansion of $f(x)=x^2(3L-2x)$
 on $[0,L]$.
 \end{example}
@@ -2273,8 +2174,8 @@ a_n&=-\frac{24L^2}{n^3\pi^3}\int_0^L\sin\frac{n\pi x}{L}\,dx
 =\frac{24L^3}{n^4\pi^4}\cos\frac{n\pi x}{L}\lims0L=\frac{24L^3}{n^4\pi^4}[(-1)^n-1]\\
 &=
 \begin{cases}
-\dst-\frac{48L^3}{(2m-1)^4\pi^4}&\mbox{if  $n=2m-1$},\\
-0&\mbox{if $n=2m$.}
+-\dfrac{48L^3}{(2m-1)^4\pi^4}&\text{ if  $n=2m-1$},\\
+0&\text{ if $n=2m$.}
 \end{cases}
 \end{align*}
 Therefore
@@ -2283,7 +2184,7 @@ C(x)=\frac{L^3}{2}-\frac{48L^3}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\cos\fr
 \]
 
 
-\begin{example}\label{example:11.3.6} \rm
+\begin{example}\label{example:11.3.6}
 Find the Fourier sine expansion of
 $f(x)=x(x^2-3Lx+2L^2)$
 on $[0,L]$.
@@ -2302,12 +2203,12 @@ x}{L}\lims0L\right]
 \end{align*}
 Therefore
 \[
-S(x)=\dst\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
+S(x)=\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
 \sin\frac{n\pi x}{L}.
 \]
 
 
-\begin{example}\label{example:11.3.7} \rm
+\begin{example}\label{example:11.3.7}
 Find  the mixed Fourier cosine expansion of
 $f(x)=3x^3-4Lx^2+L^3$
 on $[0,L]$.
@@ -2330,12 +2231,12 @@ c_n&=
 \end{align*}
 Therefore
 \[
-C_M(x)=\dst\frac{32L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
+C_M(x)=\frac{32L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n5+\frac{18}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2L}.
 \]
 
-\begin{example}\label{example:11.3.8} \rm
+\begin{example}\label{example:11.3.8}
 Find  the mixed Fourier  sine expansion of
 \[
 f(x)=x(2x^2-9Lx+12L^2)
@@ -2347,29 +2248,28 @@ on $[0,L]$.
 Since $f(0)=f'(L)=0$, and $f''(x)=6(2x-3L)$, we see from \eqref{eq:11.3.7}
 that
 \begin{align*}
-d_n&=-\dst\frac{48L}{(2n-1)^2\pi^2}\int_0^L(2x-3L)
+d_n&=-\frac{48L}{(2n-1)^2\pi^2}\int_0^L(2x-3L)
 \sin\frac{(2n-1)\pi x}{2L}\,dx\\
-&=\dst\frac{96L^2}{(2n-1)^3\pi^3}\left[(2x-3L)\cos\frac{(2n-1)\pi
+&=\frac{96L^2}{(2n-1)^3\pi^3}\left[(2x-3L)\cos\frac{(2n-1)\pi
 x}{2L}\lims0L-2\int_0^L\cos\frac{(2n-1)\pi x}{2L}\,dx\right]\\
-&=\dst\frac{96L^2}{(2n-1)^3\pi^3}\left[3L-\frac{4L}{(2n-1)\pi}
+&=\frac{96L^2}{(2n-1)^3\pi^3}\left[3L-\frac{4L}{(2n-1)\pi}
 \sin\frac{(2n-1)\pi x}{2L}\lims0L\right]\\
-&=\dst\frac{96L^3}{(2n-1)^3\pi^3}\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right].
+&=\frac{96L^3}{(2n-1)^3\pi^3}\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right].
 \end{align*}
 Therefore
 \[
 S_M(x)
-=\dst\frac{96L^3}{\pi^3}\sum_{n=1}^\infty
+=\frac{96L^3}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
 x}{2L}.
 \]
 
 \exercises
-\noindent
+
 In exercises marked by \Cex\, graph $f$
 and some partial sums of the required series. If the interval
 is $[0,L]$, choose a specific value of $L$ for the graph.
 
-\noindent
 \emph{In \zcref[range]{exer:11.3.1,exer:11.3.10} find the Fourier
 cosine series.}
 
@@ -2386,9 +2286,9 @@ $f(x)=x^2-2Lx$;   \quad $[0,L]$
 
 \item\label{exer:11.3.5}\Cex
 $f(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
-\end{array}\right.$ \quad $[0,L]$
+\end{cases}$ \quad $[0,L]$
 
 \item\label{exer:11.3.6}$f(x)=x^2-L^2$;   \quad $[0,L]$
 
@@ -2423,16 +2323,16 @@ $f(x)=1$;  \quad$[0,L]$
 
 \item\label{exer:11.3.14}\Cex
 $f(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
-\end{array}\right.$ \quad $[0,L]$
+\end{cases}$ \quad $[0,L]$
 
 
 \item\label{exer:11.3.15}\Cex
 $f(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 x,&0\le x\le\frac{L}{2},\\L-x,&\frac{L}{2}\le x\le L;
-\end{array}\right.$
+\end{cases}$
 \quad $[0,L]$.
 
 
@@ -2461,9 +2361,9 @@ $f(x)=1$;  \quad$[0,L]$
 
 \item\label{exer:11.3.21}\Cex
 $f(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
-\end{array}\right.$ \quad $[0,L]$
+\end{cases}$ \quad $[0,L]$
 
 
 \item\label{exer:11.3.22}$f(x)=\cos x$;   \quad $[0,\pi]$
@@ -2489,9 +2389,9 @@ $f(x)=1$;  \quad$[0,L]$
 
 \item\label{exer:11.3.27}\Cex
 $f(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
-\end{array}\right.$\quad  $[0,L]$
+\end{cases}$\quad  $[0,L]$
 
 \item\label{exer:11.3.28}$f(x)=\cos x$;   \quad $[0,\pi]$
 
@@ -2505,7 +2405,7 @@ $f(x)=x(L-x)$;  \quad $[0,L]$.
 
 
 \exercisetext{In \zcref[range]{exer:11.3.31,exer:11.3.34}
-use \zcref{thmtype:11.3.5}\part{a} to find the  Fourier
+use \zcref{thmtype:11.3.5}(a) to find the  Fourier
 cosine series of $f$ on~$[0,L]$.}
 
 \item\label{exer:11.3.31}$f(x)=3x^2(x^2-2L^2)$
@@ -2516,11 +2416,11 @@ cosine series of $f$ on~$[0,L]$.}
 
 \item\label{exer:11.3.34}$f(x)=x^2(x-L)^2$
 
-\item\label{exer:11.3.35}\begin{alist}
+\item\label{exer:11.3.35}\begin{alist}[above=-\baselineskip]
 \item % (a)
-Prove \zcref{thmtype:11.3.5}\part{b}.
+Prove \zcref{thmtype:11.3.5}(b).
 \item % (b)
-In addition to the assumptions of \zcref{thmtype:11.3.5}\part{b},
+In addition to the assumptions of \zcref{thmtype:11.3.5}(b),
 suppose  $f''(0)=f''(L)=0$, $f'''$ is continuous,  and $f^{(4)}$
 is piecewise continuous on $[0,L]$.
 Show that
@@ -2533,9 +2433,9 @@ x}{L}\,dx,
 
 \exercisetext{
 In \zcref[range]{exer:11.3.36,exer:11.3.41}
-use \zcref{thmtype:11.3.5}\part{b}
+use \zcref{thmtype:11.3.5}(b)
 or, where applicable,
-{Exercise 11.1.\zcref[noname]{exer:11.3.35}\part{b}},
+{Exercise 11.1.\zcref[noname]{exer:11.3.35}(b)},
 to find the Fourier sine series of $f$  on $[0,L]$.}
 
 \item\label{exer:11.3.36}\Cex $f(x)=x(L-x)$
@@ -2550,11 +2450,11 @@ to find the Fourier sine series of $f$  on $[0,L]$.}
 
 \item\label{exer:11.3.41}$f(x)=x(3x^4-5Lx^3+2L^4)$
 
-\item\label{exer:11.3.42}\begin{alist}
+\item\label{exer:11.3.42}\begin{alist}[above=-\baselineskip]
 \item % (a)
-Prove \zcref{thmtype:11.3.5}\part{c}.
+Prove \zcref{thmtype:11.3.5}(c).
 \item % (b)
-In addition to the assumptions of \zcref{thmtype:11.3.5}\part{c},
+In addition to the assumptions of \zcref{thmtype:11.3.5}(c),
 suppose
 $f''(L)=0$, $f''$ is continuous, and $f'''$ is piecewise continuous on
 $[0,L]$. Show that
@@ -2567,9 +2467,9 @@ c_n=\frac{16L^2}{(2n-1)^3\pi^3}\int_0^L f'''(x)\sin\frac{(2n-1)\pi x}{2L}
 
 \exercisetext{
 In \zcref[range]{exer:11.3.43,exer:11.3.49}
-use \zcref{thmtype:11.3.5}\part{c}
+use \zcref{thmtype:11.3.5}(c)
 or, where applicable,
-{Exercise 11.1.\zcref[noname]{exer:11.3.42}\part{b}},
+{Exercise 11.1.\zcref[noname]{exer:11.3.42}(b)},
 to find the mixed Fourier
 cosine series of $f$ on $[0,L]$.}
 
@@ -2588,11 +2488,11 @@ cosine series of $f$ on $[0,L]$.}
 
 \item\label{exer:11.3.49}$f(x)=x^4-4Lx^3+6L^2x^2-3L^4$
 
-\item\label{exer:11.3.50}\begin{alist}
+\item\label{exer:11.3.50}\begin{alist}[above=-\baselineskip]
 \item % (a)
-Prove \zcref{thmtype:11.3.5}\part{d}.
+Prove \zcref{thmtype:11.3.5}(d).
 \item % (b)
-In addition to the assumptions of \zcref{thmtype:11.3.5}\part{d},
+In addition to the assumptions of \zcref{thmtype:11.3.5}(d),
 suppose
 $f''(0)=0$, $f''$ is continuous, and $f'''$ is piecewise continuous on
 $[0,L]$. Show that
@@ -2603,15 +2503,10 @@ d_n=-\frac{16L^2}{(2n-1)^3\pi^3}\int_0^L f'''(x)\cos\frac{(2n-1)\pi x}{2L}
 \end{alist}
 
 
-
-
-
-
 \exercisetext{In \zcref[range]{exer:11.3.51,exer:11.3.56}
-use \zcref{thmtype:11.3.5}\part{d} or, where applicable,
-\zcref{exer:11.3.50}\part{b}, to find the mixed Fourier sine series
+use \zcref{thmtype:11.3.5}(d) or, where applicable,
+\zcref{exer:11.3.50}(b), to find the mixed Fourier sine series
 of the $f$ on $[0,L]$.}
-
 
 \item\label{exer:11.3.51}$f(x)=x(2L -x)$
 
@@ -2630,9 +2525,9 @@ of the $f$ on $[0,L]$.}
 restriction to $[0,L]$ of the Fourier cosine series of
 \[
 f_3(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 f(x),&0\le x\le L,\\-f(2L-x),&L< x\le 2L
-\end{array}\right.
+\end{cases}
 \]
 on $[0,2L]$.  Use this to prove \zcref{thmtype:11.3.3}.
 
@@ -2640,9 +2535,9 @@ on $[0,2L]$.  Use this to prove \zcref{thmtype:11.3.3}.
 restriction to $[0,L]$ of the Fourier sine series of
 \[
 f_4(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 f(x),&0\le x\le L,\\f(2L-x),&L< x\le 2L
-\end{array}\right.
+\end{cases}
 \]
 on $[0,2L]$.  Use this to prove \zcref{thmtype:11.3.4}.
 
@@ -2651,9 +2546,9 @@ on $[0,2L]$.  Use this to prove \zcref{thmtype:11.3.4}.
 to $[0,L]$ of the Fourier sine series of
 \[
 f_3(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 f(x),&0\le x\le L,\\-f(2L-x),&L< x\le 2L
-\end{array}\right.
+\end{cases}
 \]
 on $[0,2L]$.
 
@@ -2663,9 +2558,9 @@ of $f$ on $[0,L]$
 to $[0,L]$ of the Fourier cosine series of
 \[
 f_4(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 f(x),&0\le x\le L,\\f(2L-x),&L< x\le 2L
-\end{array}\right.
+\end{cases}
 \]
 on  $[0,2L]$.
 
