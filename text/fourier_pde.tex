@@ -143,7 +143,7 @@ XT'=a^2X''T,
 $$
 which we rewrite as
 $$
-{T'\over a^2T}={X''\over X}.
+\frac{T'}{a^2T}=\frac{X''}{X}.
 $$
 Since the expression on the left is independent of $x$ while
 the one on the right is independent of $t$, this equation
@@ -153,7 +153,7 @@ we  call  a {\color{blue}\it separation constant\/}, and write it
  as $-\lambda$;
  thus,
 $$
-{X''\over X}={T'\over a^2T}=-\lambda.
+\frac{X''}{X}=\frac{T'}{a^2T}=-\lambda.
 $$
 This is equivalent to
 $$
@@ -175,7 +175,7 @@ and $X$ must be a $\lambda$-eigenfunction.
 are $\lambda_n=n^2\pi^2/L^2$, with
 associated eigenfunctions
 $$
-X_n=\sin{n\pi x\over L}, \quad n=1,2,3,\dots.
+X_n=\sin\frac{n\pi x}{L}, \quad n=1,2,3,\dots.
 $$
 Substituting $\lambda=n^2\pi^2/L^2$  into
 \eqref{eq:12.1.2} yields
@@ -188,23 +188,23 @@ $$
 $$
 Now let
 $$
-v_n(x,t)=X_n(x)T_n(t)=e^{-n^2\pi^2a^2t/L^2}\sin{n\pi x\over L},\quad
+v_n(x,t)=X_n(x)T_n(t)=e^{-n^2\pi^2a^2t/L^2}\sin\frac{n\pi x}{L},\quad
 n=1,2,3,\dots
 $$
 Since
 $$
-v_n(x,0)=\sin{n\pi x\over L},
+v_n(x,0)=\sin\frac{n\pi x}{L},
 $$
  $v_n$ satisfies \eqref{eq:12.1.1} with $f(x)=\sin n\pi
 x/L$.
 More generally, if $\alpha_1,\dots,\alpha_m$ are constants and
 $$
 u_m(x,t)=
-\sum_{n=1}^m \alpha_ne^{-n^2\pi^2a^2t/L^2}\sin{n\pi x\over L},
+\sum_{n=1}^m \alpha_ne^{-n^2\pi^2a^2t/L^2}\sin\frac{n\pi x}{L},
 $$
 then $u_m$ satisfies \eqref{eq:12.1.1} with
 $$
-f(x)=\sum_{n=1}^m \alpha_n\sin{n\pi x\over L}.
+f(x)=\sum_{n=1}^m \alpha_n\sin\frac{n\pi x}{L}.
 $$
 This motivates the next definition.
 
@@ -221,16 +221,16 @@ u(x,0)=f(x),\quad 0\le x\le L
 \end{equation}
 is
 \begin{equation} \label{eq:12.1.5}
-u(x,t)=\sum_{n=1}^\infty \alpha_ne^{-n^2\pi^2a^2t/L^2}\sin{n\pi x\over L},
+u(x,t)=\sum_{n=1}^\infty \alpha_ne^{-n^2\pi^2a^2t/L^2}\sin\frac{n\pi x}{L},
 \end{equation}
 where
 $$
-S(x)=\sum_{n=1}^\infty \alpha_n\sin{n\pi x\over L}
+S(x)=\sum_{n=1}^\infty \alpha_n\sin\frac{n\pi x}{L}
 $$
 is the Fourier sine series of $f$ on $[0,L]$;
 that is,
 $$
-\alpha_n={2\over L}\int_0^Lf(x)\sin{n\pi x\over L}\,dx.
+\alpha_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx.
 $$
 \end{definition}
 
@@ -305,13 +305,13 @@ $f(x)=x(x^2-3Lx+2L^2)$.
 sine series of
 $f$ on $[0,L]$ is
 $$
-S(x)=\dst{12L^3\over\pi^3}\sum_{n=1}^\infty{1\over n^3}
-\sin{n\pi x\over L}.
+S(x)=\dst\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
+\sin\frac{n\pi x}{L}.
 $$
 Therefore
 $$
-u(x,t)=\dst{12L^3\over\pi^3}\sum_{n=1}^\infty{1\over n^3}
-e^{-n^2\pi^2a^2t/L^2}\sin{n\pi x\over L}.
+u(x,t)=\dst\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
+e^{-n^2\pi^2a^2t/L^2}\sin\frac{n\pi x}{L}.
 \eqno{\bbox}
 $$
 
@@ -342,17 +342,17 @@ u(x,0)=f(x),\quad 0\le x\le L
 is
 $$
 u(x,t)=\alpha_0+\sum_{n=1}^\infty \alpha_ne^{-n^2\pi^2
-a^2t/L^2}\cos{n\pi x\over L},
+a^2t/L^2}\cos\frac{n\pi x}{L},
 $$
 where
 $$
-C(x)=\alpha_0+\sum_{n=1}^\infty \alpha_n\cos{n\pi x\over L}
+C(x)=\alpha_0+\sum_{n=1}^\infty \alpha_n\cos\frac{n\pi x}{L}
 $$
 is the Fourier cosine series of $f$ on $[0,L];$ that is$,$
 $$
-\alpha_0={1\over L}\int_0^Lf(x)\,dx
+\alpha_0=\frac{1}{L}\int_0^Lf(x)\,dx
 \mbox{\quad and \quad}
-\alpha_n={2\over L}\int_0^Lf(x)\cos{n\pi x\over L}\,dx,\quad
+\alpha_n=\frac{2}{L}\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx,\quad
 n=1,2,3,\dots.
 $$
 \end{definition}
@@ -367,13 +367,13 @@ Solve \eqref{eq:12.1.6} with $f(x)=x$.
 cosine series of
 $f$ on $[0,L]$ is
 $$
-C(x)=\dst{L\over2}-{4L\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
+C(x)=\dst\frac{L}{2}-\frac{4L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos{(2n-1)\pi x\over L}.
 $$
 Therefore
 $$
-u(x,t)={L\over2}-{4L\over\pi^2}\sum_{n=1}^\infty
-{1\over(2n-1)^2}
+u(x,t)=\frac{L}{2}-\frac{4L}{\pi^2}\sum_{n=1}^\infty
+\frac{1}{(2n-1)^2}
 e^{-(2n-1)^2\pi^2a^2t/L^2}\cos{(2n-1)\pi x\over L}.
 \eqno{\bbox}
 $$
@@ -404,7 +404,7 @@ S_M(x)=\sum_{n=1}^\infty \alpha_n\sin{(2n-1)\pi x\over2L}
 $$
 is the mixed Fourier sine series of $f$ on $[0,L];$ that is$,$
 $$
-\alpha_n={2\over L}\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx.
+\alpha_n=\frac{2}{L}\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx.
 $$
 \end{definition}
 
@@ -419,12 +419,12 @@ Solve \eqref{eq:12.1.7} with $f(x)=x$.
 Fourier sine series of
 $f$ on $[0,L]$ is
 $$
-S_M(x)=-{8L\over\pi^2}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^2}
+S_M(x)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^2}
 \sin{(2n-1)\pi x\over2L}.
 $$
 Therefore
 $$
-u(x,t)=-{8L\over\pi^2}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^2}
+u(x,t)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^2}
 e^{-(2n-1)^2\pi^2a^2t/4L^2}\sin{(2n-1)\pi x\over2L}.
 \eqno{\bbox}
 $$
@@ -470,7 +470,7 @@ C_M(x)=\sum_{n=1}^\infty \alpha_n\cos{(2n-1)\pi x\over2L}
 $$
 is the mixed Fourier cosine series of $f$ on $[0,L]$; that is,
 $$
-\alpha_n={2\over L}\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx.
+\alpha_n=\frac{2}{L}\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx.
 $$
 \end{definition}
 
@@ -485,12 +485,12 @@ Solve \eqref{eq:12.1.8} with $f(x)=x-L$.
 Fourier cosine series of
 $f$ on $[0,L]$ is
 $$
-C_M(x)=-{8L\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
+C_M(x)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos{(2n-1)\pi x\over2L}.
 $$
 Therefore
 $$
-u(x,t)=-{8L\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
+u(x,t)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 e^{-(2n-1)^2\pi^2a^2t/4L^2}\cos{(2n-1)\pi x\over2L}.
 $$
 
@@ -581,13 +581,13 @@ $$
 From Example~\ref{example:12.1.1} with  $a=1$ and $L=1$,
 $$
 v(x,t)=
-{12\over\pi^3}\sum_{n=1}^\infty{1\over n^3}
+\frac{12}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
 e^{-n^2\pi^2t}\sin n\pi x.
 $$
 Therefore
 $$
 u(x,t)=x^2+x-1+
-{12\over\pi^3}\sum_{n=1}^\infty{1\over n^3}
+\frac{12}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
 e^{-n^2\pi^2t}\sin n\pi x.
 \eqno{\bbox}
 $$
@@ -615,19 +615,17 @@ solutions of initial-boundary value problems.
 To be specific, consider
  the formal solution
 $$
-u(x,t)=\sum_{n=1}^\infty \alpha_ne^{-n^2\pi^2a^2t/L^2}\sin{n\pi x\over
-L},
+u(x,t)=\sum_{n=1}^\infty \alpha_ne^{-n^2\pi^2a^2t/L^2}\sin\frac{n\pi x}{L},
 $$
 of \eqref{eq:12.1.4},
 where
 $$
-S(x)=\sum_{n=1}^\infty \alpha_n \sin{n\pi x \over L}
+S(x)=\sum_{n=1}^\infty \alpha_n \sin\frac{n\pi x }{L}
 $$
 is the  Fourier sine series of $f$ on $[0,L]$.
 Consider the $m$-th partial sum
 \begin{equation} \label{eq:12.1.12}
-u_m(x,t)=\sum_{n=1}^m \alpha_ne^{-n^2\pi^2a^2t/L^2}\sin{n\pi x\over
-L}.
+u_m(x,t)=\sum_{n=1}^m \alpha_ne^{-n^2\pi^2a^2t/L^2}\sin\frac{n\pi x}{L}.
 \end{equation}
 For several fixed values of $t$ (including $t=0$), graph
 $u_m(x,t)$ versus $t$.
@@ -643,12 +641,11 @@ $t$. However, keep in mind that the meanings of  ``small'' and ``large''
 A good way to handle this is to rewrite \eqref{eq:12.1.12}
 as
 $$
-u_m(x,t)=\sum_{n=1}^m \alpha_ne^{-n^2\tau}\sin{n\pi x\over
-L},
+u_m(x,t)=\sum_{n=1}^m \alpha_ne^{-n^2\tau}\sin\frac{n\pi x}{L},
 $$
 where
 \begin{equation} \label{eq:12.1.13}
-\tau={\pi^2a^2t\over L^2},
+\tau=\frac{\pi^2a^2t}{L^2},
 \end{equation}
 and graph $u_m$ versus $x$ for selected values of $\tau$.
 
@@ -656,7 +653,7 @@ These comments also apply to the situations considered
 in Definitions~\ref{thmtype:12.1.3}-\ref{thmtype:12.1.5}, except
 that \eqref{eq:12.1.13} should be replaced by
 $$
-\tau={\pi^2a^2t\over 4L^2},
+\tau=\frac{\pi^2a^2t}{4L^2},
 $$
  in Definitions~\ref{thmtype:12.1.4} and \ref{thmtype:12.1.5}.
 
@@ -909,7 +906,7 @@ $u_t=a^2u_{xx},\quad 0<x<L,\quad t>0$,\\
 $u_x(0,t)=0,\quad u_x(L,t)=0,\quad t>0$,\\
 $u(x,0)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2},\\0,&{L\over2}<x<L
+1,&0\le x\le\frac{L}{2},\\0,&\frac{L}{2}<x<L
 \end{array}\right.$
 
 
@@ -918,7 +915,7 @@ $u_t=a^2u_{xx},\quad 0<x<L,\quad t>0$,\\
 $u(0,t)=0,\quad u(L,t)=0,\quad t>0$,\\
 $u(x,0)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2},\\0,&{L\over2}<x<L
+1,&0\le x\le\frac{L}{2},\\0,&\frac{L}{2}<x<L
 \end{array}\right.$
 
 \item\label{exer:12.1.45}    \Cex
@@ -926,7 +923,7 @@ $u_t=a^2u_{xx},\quad 0<x<L,\quad t>0$,\\
 $u_x(0,t)=0,\quad u(L,t)=0,\quad t>0$,\\
 $u(x,0)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2},\\0,&{L\over2}<x<L
+1,&0\le x\le\frac{L}{2},\\0,&\frac{L}{2}<x<L
 \end{array}\right.$
 
 \item\label{exer:12.1.46}    \Cex
@@ -934,7 +931,7 @@ $u_t=a^2u_{xx},\quad 0<x<L,\quad t>0$,\\
 $u(0,t)=0,\quad u_x(L,t)=0,\quad t>0$,\\
 $u(x,0)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2},\\0,&{L\over2}<x<L
+1,&0\le x\le\frac{L}{2},\\0,&\frac{L}{2}<x<L
 \end{array}\right.$
 
 \item\label{exer:12.1.47}
@@ -996,11 +993,11 @@ series.
 Let
 $$
 u(x,t)=\sum_{n=1}^\infty \alpha_n e^{-n^2\pi^2
-a^2t/L^2}\sin{n\pi x\over L}
+a^2t/L^2}\sin\frac{n\pi x}{L}
 $$
 where
 $$
-\alpha_n={2\over L}\int_0^L f(x)\sin{n\pi x\over L}\,dx
+\alpha_n=\frac{2}{L}\int_0^L f(x)\sin\frac{n\pi x}{L}\,dx
 $$
 and $f$ is piecewise smooth on $[0,L]$.
 
@@ -1014,24 +1011,24 @@ For fixed $t>0$,
 use Theorem~\ref{thmtype:12.1.2} with $z=x$
  to show that
 $$
-u_x(x,t)={\pi\over L}\sum_{n=1}^\infty n\alpha_n e^{-n^2\pi^2
-a^2t/L^2}\cos{n\pi x\over L},\quad -\infty<x<\infty.
+u_x(x,t)=\frac{\pi}{L}\sum_{n=1}^\infty n\alpha_n e^{-n^2\pi^2
+a^2t/L^2}\cos\frac{n\pi x}{L},\quad -\infty<x<\infty.
 $$
 \item % (c)
 Starting from the result of \part{a},
 use Theorem~\ref{thmtype:12.1.2} with $z=x$
  to show that, for a fixed $t>0$,
 $$
-u_{xx}(x,t)=-{\pi^2\over L^2}\sum_{n=1}^\infty n^2\alpha_n
-e^{-n^2\pi^2 a^2t/L^2}\sin{n\pi x\over L},\quad-\infty<x<\infty.
+u_{xx}(x,t)=-\frac{\pi^2}{L^2}\sum_{n=1}^\infty n^2\alpha_n
+e^{-n^2\pi^2 a^2t/L^2}\sin\frac{n\pi x}{L},\quad-\infty<x<\infty.
 $$
 \item % (d)
 For fixed but arbitrary $x$,
 use Theorem~\ref{thmtype:12.1.2} with $z=t$
  to show that
 $$
-u_t(x,t)=-{\pi^2a^2\over L^2}\sum_{n=1}^\infty n^2\alpha_n
-e^{-n^2\pi^2 a^2t/L^2}\sin{n\pi x\over L},
+u_t(x,t)=-\frac{\pi^2a^2}{L^2}\sum_{n=1}^\infty n^2\alpha_n
+e^{-n^2\pi^2 a^2t/L^2}\sin\frac{n\pi x}{L},
 $$
 if $t>t_0>0$, where $t_0$ is an arbitrary positive number.
  Then argue that since $t_0$ is arbitrary,
@@ -1204,19 +1201,19 @@ u_{tt}(\overline x,t).
 $$
 Recalling \eqref{eq:12.2.3}, we divide  by $T$    to obtain
 \begin{equation} \label{eq:12.2.5}
-{\tan\theta_2-\tan\theta_1\over\Delta x}=
-{\rho\over T}u_{tt}(\overline x,t).
+\frac{\tan\theta_2-\tan\theta_1}{\Delta x}=
+\frac{\rho}{T}u_{tt}(\overline x,t).
 \end{equation}
 Since
 $\tan\theta_1=u_x(x,t)$ and $\tan\theta_2=u_x(x+\Delta x,t)$,
 \eqref{eq:12.2.5} is equivalent to
 $$
 {u_x(x+\Delta x)-u_x(x,t)\over \Delta x}=
-{\rho\over T}u_{tt}(\overline x,t).
+\frac{\rho}{T}u_{tt}(\overline x,t).
 $$
 Letting $\Delta x\to 0$  yields
 $$
-u_{xx}(x,t)={\rho\over T}u_{tt}(x,t),
+u_{xx}(x,t)=\frac{\rho}{T}u_{tt}(x,t),
 $$
 which we rewrite as $u_{tt}=a^2u_{xx}$, with $a^2=T/\rho$.
 
@@ -1247,13 +1244,13 @@ XT''=a^2X''T,
 $$
 which we rewrite as
 $$
-{T''\over a^2T}={X''\over X}.
+\frac{T''}{a^2T}=\frac{X''}{X}.
 $$
 For this  to hold for all $(x,t)$,
  the two sides must equal the same constant;
 thus,
 $$
-{X''\over X}={T''\over a^2T}=-\lambda,
+\frac{X''}{X}=\frac{T''}{a^2T}=-\lambda,
 $$
 which is equivalent to
 $$
@@ -1275,7 +1272,7 @@ and $X$ must be a $\lambda$-eigenfunction.
 are $\lambda_n=n^2\pi^2/L^2$, with
 associated eigenfunctions
 $$
-X_n=\sin{n\pi x\over L}, \quad n=1,2,3,\dots.
+X_n=\sin\frac{n\pi x}{L}, \quad n=1,2,3,\dots.
 $$
 Substituting $\lambda=n^2\pi^2/L^2$  into
 \eqref{eq:12.2.6} yields
@@ -1284,42 +1281,41 @@ T''+(n^2\pi^2a^2/L^2)T=0,
 $$
 which has the general solution
 $$
-T_n=\alpha_n\cos{n\pi at\over L}+{\beta_nL\over n\pi a}\sin{n\pi
+T_n=\alpha_n\cos\frac{n\pi at}{L}+\frac{\beta_nL}{n\pi a}\sin{n\pi
 at\over L},
 $$
 where $\alpha_n$  and $\beta_n$ are constants. Now let
 $$
-v_n(x,t)=X_n(x)T_n(t)=\left(\alpha_n\cos{n\pi at\over L}+
-{\beta_nL\over n\pi a}\sin{n\pi at\over L}\right)
-\sin{n\pi x\over L}.
+v_n(x,t)=X_n(x)T_n(t)=\left(\alpha_n\cos\frac{n\pi at}{L}+
+\frac{\beta_nL}{n\pi a}\sin\frac{n\pi at}{L}\right)
+\sin\frac{n\pi x}{L}.
 $$
 Then
 $$
-{\partial v_n\over\partial t}(x,t)=
-\left(-{n\pi a \over L}\alpha_n\sin{n\pi at\over L}
-+\beta_n\cos{n\pi at\over L}\right)\sin{n\pi x\over L},
+\frac{\partial v_n}{\partial t}(x,t)=
+\left(-\frac{n\pi a }{L}\alpha_n\sin\frac{n\pi at}{L}
++\beta_n\cos\frac{n\pi at}{L}\right)\sin\frac{n\pi x}{L},
 $$
 so
 $$
-v_n(x,0)=\alpha_n\sin{n\pi x\over L}
+v_n(x,0)=\alpha_n\sin\frac{n\pi x}{L}
 \mbox{\quad and \quad}
-{\partial v_n\over\partial t}(x,0)=\beta_n
-\sin{n\pi x\over L}.
+\frac{\partial v_n}{\partial t}(x,0)=\beta_n
+\sin\frac{n\pi x}{L}.
 $$
 Therefore $v_n$ satisfies \eqref{eq:12.2.1} with
 $f(x)=\alpha_n \sin n\pi x/L$ and  $g(x)=\beta_n\cos n\pi x/L$.
 More generally, if $\alpha_1$,  $\alpha_2$, \dots, $\alpha_m$
 and $\beta_1$, $\beta_2$,\dots, $\beta_m$ are constants and
 $$
-u_m(x,t)=\sum_{n=1}^m\left(\alpha_n\cos{n\pi at\over
-L}+{\beta_nL\over n\pi a}\sin{n\pi at\over L}\right)
-\sin{n\pi x\over L},
+u_m(x,t)=\sum_{n=1}^m\left(\alpha_n\cos\frac{n\pi at}{L}+\frac{\beta_nL}{n\pi a}\sin\frac{n\pi at}{L}\right)
+\sin\frac{n\pi x}{L},
 $$
 then $u_m$ satisfies \eqref{eq:12.2.1} with
 $$
-f(x)=\sum_{n=1}^m \alpha_n\sin{n\pi x\over L}
+f(x)=\sum_{n=1}^m \alpha_n\sin\frac{n\pi x}{L}
 \mbox{\quad and \quad}
-g(x)=\sum_{n=1}^m \beta_n\sin{n\pi x\over L}.
+g(x)=\sum_{n=1}^m \beta_n\sin\frac{n\pi x}{L}.
 $$
  This motivates the next definition.
 
@@ -1328,21 +1324,20 @@ If $f$ and $g$ are piecewise smooth of $[0,L]$, then
 the  formal solution of  \eqref{eq:12.2.1}
 is
 \begin{equation} \label{eq:12.2.8}
-u(x,t)=\sum_{n=1}^\infty\left(\alpha_n\cos{n\pi at\over
-L}+{\beta_nL\over n\pi a}\sin{n\pi at\over L}\right)
-\sin{n\pi x\over L},
+u(x,t)=\sum_{n=1}^\infty\left(\alpha_n\cos\frac{n\pi at}{L}+\frac{\beta_nL}{n\pi a}\sin\frac{n\pi at}{L}\right)
+\sin\frac{n\pi x}{L},
 \end{equation}
 where
 $$
-S_f(x)=\sum_{n=1}^\infty \alpha_n\sin{n\pi x\over L}
+S_f(x)=\sum_{n=1}^\infty \alpha_n\sin\frac{n\pi x}{L}
 \mbox{\quad and \quad}
-S_{g}(x)=\sum_{n=1}^\infty \beta_n\sin{n\pi x\over L}
+S_{g}(x)=\sum_{n=1}^\infty \beta_n\sin\frac{n\pi x}{L}
 $$
 are the   Fourier sine series of $f$ and $g$ on $[0,L]$; that is,
 $$
-\alpha_n={2\over L}\int_0^Lf(x)\sin{n\pi x\over L}\,dx
+\alpha_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx
 \mbox{\quad and \quad}
-\beta_n={2\over L}\int_0^Lg(x)\sin{n\pi x\over L}\,dx.
+\beta_n=\frac{2}{L}\int_0^Lg(x)\sin\frac{n\pi x}{L}\,dx.
 $$
 \end{definition}
 
@@ -1364,8 +1359,8 @@ If $f$ and $g$ are pieceswise smooth on $[0,L]$, then
 $u$ in $\eqref{eq:12.2.1}$ converges for all $(x,t),$
 and can be written as
 \begin{equation} \label{eq:12.2.9}
-u(x,t)={1\over2}[S_f(x+at)+S_f(x-at)]+
-{1\over2a}\int_{x-at}^{x+at}S_g(\tau)\,d\tau.
+u(x,t)=\frac{1}{2}[S_f(x+at)+S_f(x-at)]+
+\frac{1}{2a}\int_{x-at}^{x+at}S_g(\tau)\,d\tau.
 \end{equation}
 \end{theorem}
 
@@ -1373,37 +1368,36 @@ u(x,t)={1\over2}[S_f(x+at)+S_f(x-at)]+
 \proof
 Setting $A=n\pi x/L$ and $B=n\pi at/L$ in the  identities
 $$
-\sin A\cos B=\phantom{-}{1\over2}[\sin(A+B)+\sin(A-B)]
+\sin A\cos B=\phantom{-}\frac{1}{2}[\sin(A+B)+\sin(A-B)]
 $$
 and
 $$
-\sin A\sin B=-{1\over2}[\cos(A+B)-\cos(A-B)]
+\sin A\sin B=-\frac{1}{2}[\cos(A+B)-\cos(A-B)]
 $$
 yields
 \begin{equation} \label{eq:12.2.10}
-\cos{n\pi at\over L}\sin{n\pi x\over L}
-={1\over2}\left[\sin{n\pi(x+at)\over
+\cos\frac{n\pi at}{L}\sin\frac{n\pi x}{L}
+=\frac{1}{2}\left[\sin{n\pi(x+at)\over
 L}+\sin{n\pi(x-at)\over L}\right]
 \end{equation}
 and
 \begin{equation} \label{eq:12.2.11}
 \begin{array}{rcl}
-\dst \sin{n\pi at\over L}\sin{n\pi x\over L}
-&=&-\dst{1\over2}\left[\cos{n\pi(x+at)\over
+\dst \sin\frac{n\pi at}{L}\sin\frac{n\pi x}{L}
+&=&-\dst\frac{1}{2}\left[\cos{n\pi(x+at)\over
 L}-\cos{n\pi(x-at)\over
-L}\right]\\&=&\dst{n\pi\over2L}\int_{x-at}^{x+at}
-\sin{n\pi\tau\over L}\,d\tau.
+L}\right]\\&=&\dst\frac{n\pi}{2L}\int_{x-at}^{x+at}
+\sin\frac{n\pi\tau}{L}\,d\tau.
 \end{array}
 \end{equation}
 From  \eqref{eq:12.2.10},
 \begin{equation} \label{eq:12.2.12}
 \begin{array}{rcl}
-\dst\sum_{n=1}^\infty\alpha_n \cos{n\pi at\over L}\sin{n\pi x\over
-L}&=&
-\dst{1\over2}\sum_{n=1}^\infty\alpha_n\left(\sin{n\pi(x+at)\over
+\dst\sum_{n=1}^\infty\alpha_n \cos\frac{n\pi at}{L}\sin\frac{n\pi x}{L}&=&
+\dst\frac{1}{2}\sum_{n=1}^\infty\alpha_n\left(\sin{n\pi(x+at)\over
 L}
 +\sin{n\pi(x-at)\over L}\right)\\
-&=&\dst{1\over2}[S_f(x+at)+S_f(x-at)].
+&=&\dst\frac{1}{2}[S_f(x+at)+S_f(x-at)].
 \end{array}
 \end{equation}
 Since it can be shown that a Fourier sine series can be integrated
@@ -1411,14 +1405,14 @@ term by term between any two limits,
 \eqref{eq:12.2.11} implies that
 $$
 \begin{array}{rcl}
-\dst\sum_{n=1}^\infty{\beta_nL\over n\pi a}
-\sin{n\pi at\over L}\sin{n\pi x\over L}&=&
-\dst{1\over2a}\sum_{n=1}^\infty \beta_n\int_{x-at}^{x+at}
-\sin{n\pi\tau\over L}\,d\tau\\
-&=&\dst{1\over2a}\int_{x-at}^{x+at}\left(\sum_{n=1}^\infty \beta_n
-\sin{n\pi\tau\over L}\right)\,d\tau\\
+\dst\sum_{n=1}^\infty\frac{\beta_nL}{n\pi a}
+\sin\frac{n\pi at}{L}\sin\frac{n\pi x}{L}&=&
+\dst\frac{1}{2a}\sum_{n=1}^\infty \beta_n\int_{x-at}^{x+at}
+\sin\frac{n\pi\tau}{L}\,d\tau\\
+&=&\dst\frac{1}{2a}\int_{x-at}^{x+at}\left(\sum_{n=1}^\infty \beta_n
+\sin\frac{n\pi\tau}{L}\right)\,d\tau\\
 &=&
-\dst{1\over2a}\int_{x-at}^{x+at}S_g(\tau)\,d\tau.
+\dst\frac{1}{2a}\int_{x-at}^{x+at}S_g(\tau)\,d\tau.
 \end{array}
 $$
 This and  \eqref{eq:12.2.12} imply \eqref{eq:12.2.9},
@@ -1605,21 +1599,21 @@ $S_f''$ exists on $(-\infty,\infty)$.
 Now we can differentiate \eqref{eq:12.2.9} twice with respect to $x$
 and $t$:
 $$
-u_x(x,t)={1\over2}[S_f'(x+at)+S_f'(x-at)]+
-{1\over2a}[S_g(x+at)-S_g(x-at)],
+u_x(x,t)=\frac{1}{2}[S_f'(x+at)+S_f'(x-at)]+
+\frac{1}{2a}[S_g(x+at)-S_g(x-at)],
 $$
 \begin{equation} \label{eq:12.2.18}
-u_{xx}(x,t)={1\over2}[S_f''(x+at)+S_f''(x-at)]+
-{1\over2a}[S_g'(x+at)-S_g'(x-at)],
+u_{xx}(x,t)=\frac{1}{2}[S_f''(x+at)+S_f''(x-at)]+
+\frac{1}{2a}[S_g'(x+at)-S_g'(x-at)],
 \end{equation}
 \begin{equation} \label{eq:12.2.19}
-u_t(x,t)={a\over2}[S_f'(x+at)-S_f'(x-at)]+
-{1\over2}[S_g(x+at)+S_g(x-at)],
+u_t(x,t)=\frac{a}{2}[S_f'(x+at)-S_f'(x-at)]+
+\frac{1}{2}[S_g(x+at)+S_g(x-at)],
 \end{equation}
 and
 \begin{equation} \label{eq:12.2.20}
-u_{tt}(x,t)={a^2\over2}[S_f''(x+at)-S_f''(x-at)]+
-{a\over2}[S_g'(x+at)-S_g'(x-at)].
+u_{tt}(x,t)=\frac{a^2}{2}[S_f''(x+at)-S_f''(x-at)]+
+\frac{a}{2}[S_g'(x+at)-S_g'(x-at)].
 \end{equation}
 Comparing \eqref{eq:12.2.18}  and \eqref{eq:12.2.20} shows that
 $u_{tt}(x,t)=a^2u_{xx}(x,t)$ for all $(x,t)$.
@@ -1666,21 +1660,21 @@ of Theorem~\ref{thmtype:12.2.4}.
 
 From Exercise~11.3.~\hspace*{-3pt}\ref{exer:11.3.39},
 $$
-S_f(x)={96L^4\over\pi^5}\sum_{n=1}^\infty{1\over(2n-1)^5}\sin{(2n-1)\pi
+S_f(x)=\frac{96L^4}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}\sin{(2n-1)\pi
 x\over L}.
 $$
 From Exercise~11.3.~\hspace*{-3pt}\ref{exer:11.3.36},
 $$
-S_g(x)={8L^2\over\pi^3}\sum_{n=1}^\infty{1\over(2n-1)^3}\sin{(2n-1)\pi
+S_g(x)=\frac{8L^2}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\sin{(2n-1)\pi
 x\over L}.
 $$
 From \eqref{eq:12.2.8},
 $$
 \begin{array}{rcl}
 u(x,t)&=&
-\dst{96L^4\over\pi^5}\sum_{n=1}^\infty{1\over(2n-1)^5}
+\dst\frac{96L^4}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}
 \cos{(2n-1)\pi a t\over L}\sin{(2n-1)\pi x\over L}\\&&+
-\dst{8L^3\over a\pi^4}\sum_{n=1}^\infty{1\over(2n-1)^4}
+\dst\frac{8L^3}{a\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \sin{(2n-1)\pi a t\over L}\sin{(2n-1)\pi x\over L}.
 \end{array}
 $$
@@ -1728,7 +1722,7 @@ We'll now consider the initial-boundary value problem
 \begin{equation} \label{eq:12.2.21}
 f(x)=
 \left\{\begin{array}{cl}
-x,&0\le x\le{L\over2},\\L-x,&{L\over2}\le x\le L
+x,&0\le x\le\frac{L}{2},\\L-x,&\frac{L}{2}\le x\le L
 \end{array}\right.
 \end{equation}
 and $g\equiv0$.
@@ -1760,19 +1754,19 @@ series
 of
 $f$ on $[0,L]$ is
 $$
-S_f(x)=\dst{4L\over\pi^2}\sum_{n=1}^\infty{(-1)^{n+1}\over(2n-1)^2}
+S_f(x)=\dst\frac{4L}{\pi^2}\sum_{n=1}^\infty{(-1)^{n+1}\over(2n-1)^2}
 \sin{(2n-1)\pi x\over L},
 $$
 which converges to $f$ for all $x$ in $[0,L]$, by
 Theorem~\ref{thmtype:11.3.2}. Therefore
 \begin{equation} \label{eq:12.2.22}
-u(x,t)=\dst{4L\over\pi^2}\sum_{n=1}^\infty{(-1)^{n+1}\over(2n-1)^2}
+u(x,t)=\dst\frac{4L}{\pi^2}\sum_{n=1}^\infty{(-1)^{n+1}\over(2n-1)^2}
 \cos{(2n-1)\pi at\over L}\sin{(2n-1)\pi x\over L}.
 \end{equation}
 This series converges absolutely for all $(x,t)$ by the comparison
 test, since the series
 $$
-\sum_{n=1}^\infty{1\over(2n-1)^2}
+\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 $$
  converges. Moreover, \eqref{eq:12.2.22} satisfies the boundary
 conditions
@@ -1790,7 +1784,7 @@ term by term produces a series that diverges for all $(x,t)$.
  we use
  d'Alembert's form
 \begin{equation} \label{eq:12.2.23}
-u(x,t)={1\over2}[S_f(x+at)+S_f(x-at)]
+u(x,t)=\frac{1}{2}[S_f(x+at)+S_f(x-at)]
 \end{equation}
 for $u$ to study its derivatives.
 Figure~\ref{figure:12.2.8} shows the graph of $S_f$, which is  the
@@ -1856,16 +1850,16 @@ From Figure~\ref{figure:12.2.10},
 $$
 S_f(x-at)=
 \left\{\begin{array}{cl}
-x-at,&0\le x\le {L\over2}+at,\\[2\jot]
-L-x+at,&{L\over2}+at\le x\le L
+x-at,&0\le x\le \frac{L}{2}+at,\\[2\jot]
+L-x+at,&\frac{L}{2}+at\le x\le L
 \end{array}\right.
 $$
 and
 $$
 S_f(x+at)=
 \left\{\begin{array}{cl}
-x+at,&0\le x\le {L\over2}-at,\\[2\jot]
-L-x-at,&{L\over2}-at\le x\le L
+x+at,&0\le x\le \frac{L}{2}-at,\\[2\jot]
+L-x-at,&\frac{L}{2}-at\le x\le L
 \end{array}\right.
 $$
 if $(x,t)$ satisfies \eqref{eq:12.2.24}.
@@ -1882,9 +1876,9 @@ Therefore, from \eqref{eq:12.2.23},
 $$
 u(x,t)=
 \left\{\begin{array}{cl}
-x,&0\le x\le{L\over2}-at,\\[2\jot]
-{L\over2}-at,&{L\over2}-at\le x\le{L\over2}+at,\\[2\jot]
-L-x,&{L\over2}-at\le x\le L
+x,&0\le x\le\frac{L}{2}-at,\\[2\jot]
+\frac{L}{2}-at,&\frac{L}{2}-at\le x\le\frac{L}{2}+at,\\[2\jot]
+L-x,&\frac{L}{2}-at\le x\le L
 \end{array}\right.
 $$
 if $(x,t)$ satisfies \eqref{eq:12.2.24}. Figure~\ref{figure:12.2.11}
@@ -1920,9 +1914,8 @@ $(0,L/2a)$}
 
 Although the formal solution
 $$
-u(x,t)=\sum_{n=1}^\infty\left(\alpha_n\cos{n\pi at\over
-L}+{\beta_nL\over n\pi a}\sin{n\pi at\over L}\right)
-\sin{n\pi x\over L}
+u(x,t)=\sum_{n=1}^\infty\left(\alpha_n\cos\frac{n\pi at}{L}+\frac{\beta_nL}{n\pi a}\sin\frac{n\pi at}{L}\right)
+\sin\frac{n\pi x}{L}
 $$
 of \eqref{eq:12.2.1} is defined for all $(x,t)$, we're mainly interested
 in its behavior for $0\le x\le L$ and $t\ge0$. In fact, it's
@@ -1938,14 +1931,13 @@ by performing the following numerical experiment.
 
 Let $m$  and $k$ be positive integers. Let
 $$
-t_j={2Lj\over ka},\quad j=0,1,\dots k;
+t_j=\frac{2Lj}{ka},\quad j=0,1,\dots k;
 $$
 thus, $t_0$, $t_1$, \dots $t_k$ are equally spaced points in $[0,2L/a]$.
 For each $j=0$, $1$ ,$2$, \dots $k$, graph the partial sum
 $$
-u_m(x,t_j)=\sum_{n=1}^m\left(\alpha_n\cos{n\pi at_j\over
-L}+{\beta_nL\over n\pi a}\sin{n\pi at_j\over L}\right)
-\sin{n\pi x\over L}
+u_m(x,t_j)=\sum_{n=1}^m\left(\alpha_n\cos\frac{n\pi at_j}{L}+\frac{\beta_nL}{n\pi a}\sin\frac{n\pi at_j}{L}\right)
+\sin\frac{n\pi x}{L}
 $$
 on $[0,L]$ as a function of $x$.  Write your program so that
 each graph remains displayed on the monitor for a short time,
@@ -1985,7 +1977,7 @@ $u(0,t)=0,\quad u(1,t)=0,\quad t>0$,\\
 $u(x,0)=0,\quad
  u_t(x,0)=
 \left\{\begin{array}{cl}
-x,&0\le x\le{1\over2},\\1-x,&{1\over2}\le x\le1
+x,&0\le x\le\frac{1}{2},\\1-x,&\frac{1}{2}\le x\le1
 \end{array}\right.,\quad0\le x\le1$
 
 
@@ -2086,7 +2078,7 @@ We saw
 that the displacement of the plucked string is,
 on the one hand,
 $$
-u(x,t)=\dst{4L\over\pi^2}\sum_{n=1}^\infty{(-1)^{n+1}\over(2n-1)^2}
+u(x,t)=\dst\frac{4L}{\pi^2}\sum_{n=1}^\infty{(-1)^{n+1}\over(2n-1)^2}
 \cos{(2n-1)\pi at\over L}\sin{(2n-1)\pi x\over L},\; 0\le x\le
 L,\; t\ge 0,
 \tag{A}
@@ -2095,9 +2087,9 @@ and, on the other hand,
 $$
 u(x,\tau)=
 \left\{\begin{array}{cl}
-x,&0\le x\le{L\over2}-a\tau,\\[2\jot]
-{L\over2}-a\tau,&{L\over2}-a\tau\le x\le{L\over2}+a\tau,\\[2\jot]
-L-x,&{L\over2}-a\tau\le x\le L.
+x,&0\le x\le\frac{L}{2}-a\tau,\\[2\jot]
+\frac{L}{2}-a\tau,&\frac{L}{2}-a\tau\le x\le\frac{L}{2}+a\tau,\\[2\jot]
+L-x,&\frac{L}{2}-a\tau\le x\le L.
 \end{array}\right.
 \tag{B}
 $$
@@ -2109,7 +2101,7 @@ to compute $u(x,t)$ for  $0\le x\le L$ and all $t>0$.
 Show that if $t>0$,  there's a nonnegative integer
 $m$ such that either
 $$
-\mbox{\bf(i)}\quad t={mL\over a}+\tau\mbox{\quad or \quad}
+\mbox{\bf(i)}\quad t=\frac{mL}{a}+\tau\mbox{\quad or \quad}
 \mbox{\bf(ii)}\quad t={(m+1)L\over a}-\tau,
 $$
 where $0\le \tau\le L/2a$.
@@ -2121,7 +2113,7 @@ holds, while $u(x,t)=(-1)^{m+1}u(x,\tau)$ if \part{ii} holds.
 of $L$ and $a$ and various values of $m$ and $k$:
  Let
 $$
-t_j={Lj\over 2ka},\quad j=0,1,\dots k;
+t_j=\frac{Lj}{2ka},\quad j=0,1,\dots k;
 $$
 thus, $t_0$, $t_1$, \dots, $t_k$ are equally spaced points in $[0,L/2a]$.
 For each $j=0$, $1$ , $2$,\dots, $k$, graph the $m$th partial sum
@@ -2147,7 +2139,7 @@ Justify defining the formal solution of (A) to be
 $$
 u(x,t)=\sum_{n=1}^\infty
 \left(\alpha_n\cos{(2n-1)\pi a
-t\over2L}+{2L\beta_n\over(2n-1)\pi a}\sin{(2n-1)\pi
+t\over2L}+\frac{2L\beta_n}{(2n-1)\pi a}\sin{(2n-1)\pi
 at\over2L}\right)
 \cos{(2n-1)\pi
 x\over2L},
@@ -2161,9 +2153,9 @@ $$
 are the mixed Fourier cosine series of $f$ and $g$
 on $[0,L]$; that is,
 $$
-\alpha_n={2\over L}\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx
+\alpha_n=\frac{2}{L}\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx
 \mbox{\quad and \quad}
-\beta_n={2\over L}\int_0^Lg(x)\cos{(2n-1)\pi x\over2L}\,dx.
+\beta_n=\frac{2}{L}\int_0^Lg(x)\cos{(2n-1)\pi x\over2L}\,dx.
 $$
 
 
@@ -2291,7 +2283,7 @@ to be
 $$
 u(x,t)=\sum_{n=1}^\infty
 \left(\alpha_n\cos{(2n-1)\pi a
-t\over2L}+{2L\beta_n\over(2n-1)\pi a}\sin{(2n-1)\pi
+t\over2L}+\frac{2L\beta_n}{(2n-1)\pi a}\sin{(2n-1)\pi
 at\over2L}\right)
 \sin{(2n-1)\pi x\over2L},
 $$
@@ -2304,9 +2296,9 @@ $$
 are the mixed Fourier sine series of $f$ and $g$
 on $[0,L]$; that is,
 $$
-\alpha_n={2\over L}\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx
+\alpha_n=\frac{2}{L}\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx
 \mbox{\quad and \quad}
-\beta_n={2\over L}\int_0^Lg(x)\sin{(2n-1)\pi x\over2L}\,dx.
+\beta_n=\frac{2}{L}\int_0^Lg(x)\sin{(2n-1)\pi x\over2L}\,dx.
 $$
 
 
@@ -2421,26 +2413,26 @@ $$
 to be
 $$
 u(x,t)=\alpha_0+\beta_0t+\sum_{n=1}^\infty
-\left(\alpha_n\cos{n\pi at\over L}+{L\beta_n\over n\pi
-a}\sin{n\pi at\over L}\right)
-\cos{n\pi x\over L},
+\left(\alpha_n\cos\frac{n\pi at}{L}+\frac{L\beta_n}{n\pi
+a}\sin\frac{n\pi at}{L}\right)
+\cos\frac{n\pi x}{L},
 $$
 where
 $$
-C_f(x)=\alpha_0+\sum_{n=1}^\infty\alpha_n\cos{n\pi x\over L}
+C_f(x)=\alpha_0+\sum_{n=1}^\infty\alpha_n\cos\frac{n\pi x}{L}
 \mbox{\quad and \quad}
-C_g(x)=\beta_0+\sum_{n=1}^\infty\beta_n\cos{n\pi x\over L}
+C_g(x)=\beta_0+\sum_{n=1}^\infty\beta_n\cos\frac{n\pi x}{L}
 $$
 are the Fourier cosine series of $f$ and $g$
 on $[0,L]$; that is,
 $$
-\alpha_0={1\over L}\int_0^Lf(x)\,dx,\quad
-\beta_0={1\over L}\int_0^Lg(x)\,dx,
+\alpha_0=\frac{1}{L}\int_0^Lf(x)\,dx,\quad
+\beta_0=\frac{1}{L}\int_0^Lg(x)\,dx,
 $$
 $$
-\alpha_n={2\over L}\int_0^Lf(x)\cos{n\pi x\over L}\,dx,
+\alpha_n=\frac{2}{L}\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx,
 \mbox{\quad and \quad}
-\beta_n={2\over L}\int_0^Lg(x)\cos{n\pi x\over L}\,dx,\quad
+\beta_n=\frac{2}{L}\int_0^Lg(x)\cos\frac{n\pi x}{L}\,dx,\quad
 n=1,2,3,\dots.
 $$
 
@@ -2565,9 +2557,8 @@ Suppose  $\sum_{n=1}^\infty n^2|\alpha_n|$ and
 $\sum_{n=1}^\infty n|\beta_n|$ both converge.
 Show that the formal solution
 $$
-u(x,t)=\sum_{n=1}^\infty\left(\alpha_n\cos{n\pi at\over
-L}+{\beta_nL\over n\pi a}\sin{n\pi at\over L}\right)
-\sin{n\pi x\over L}
+u(x,t)=\sum_{n=1}^\infty\left(\alpha_n\cos\frac{n\pi at}{L}+\frac{\beta_nL}{n\pi a}\sin\frac{n\pi at}{L}\right)
+\sin\frac{n\pi x}{L}
 $$
 of Equation~\ref{eq:12.2.1} satisfies
 $u_{tt}=a^2u_{xx}$ for all
@@ -2582,29 +2573,29 @@ Suppose $g$ is differentiable and $f$ is twice differentiable on
 $(-\infty,\infty)$, and let
 $$
 u_0(x,t)={f(x+at)+f(x-at)\over2}\mbox{\quad and \quad}
-u_1(x,t)={1\over2a}\int_{x-at}^{x+at}g(u)\,du.
+u_1(x,t)=\frac{1}{2a}\int_{x-at}^{x+at}g(u)\,du.
 $$
 \begin{alist}
 \item % (a)
 Show that
 $$
-{\partial^2 u_0\over\partial t^2}=a^2{\partial^2u_0\over\partial
+\frac{\partial^2 u_0}{\partial t^2}=a^2\frac{\partial^2u_0}{\partial
 x^2},\quad-\infty<x<\infty,\quad t>0,
 $$
 and
 $$
-u_0(x,0)=f(x),\quad  {\partial u_0\over\partial t}(x,0)=0,\quad
+u_0(x,0)=f(x),\quad  \frac{\partial u_0}{\partial t}(x,0)=0,\quad
 -\infty<x<\infty.
 $$
 \item % (b)
 Show that
 $$
-{\partial^2 u_1\over\partial t^2}=a^2{\partial^2u_1\over\partial
+\frac{\partial^2 u_1}{\partial t^2}=a^2\frac{\partial^2u_1}{\partial
 x^2},\quad-\infty<x<\infty,\quad t>0,
 $$
 and
 $$
-u_1(x,0)=0,\quad  {\partial u_1\over\partial t}(x,0)=g(x),\quad
+u_1(x,0)=0,\quad  \frac{\partial u_1}{\partial t}(x,0)=g(x),\quad
 -\infty<x<\infty.
 $$
 \item % (c)
@@ -2801,7 +2792,7 @@ all 64 cases, we'll restrict our attention in the text to
 just four.  Others are discussed in the exercises.
 
 If $v(x,y)=X(x)Y(y)$ then $$ v_{xx}+v_{yy}=X''Y+XY''=0 $$ for all
-$(x,y)$ if and only if $$ {X''\over X}=-{Y''\over Y}=k $$ for all
+$(x,y)$ if and only if $$ \frac{X''}{X}=-\frac{Y''}{Y}=k $$ for all
 $(x,y)$, where $k$ is a separation constant. This equation is
 equivalent to
 \begin{equation} \label{eq:12.3.3}
@@ -2847,7 +2838,7 @@ Y''-\lambda Y=0,\quad Y(b)=0.
 are $\lambda_n=n^2\pi^2/a^2$, with
 associated eigenfunctions
 $$
-X_n=\sin{n\pi x\over a}, \quad n=1,2,3,\dots.
+X_n=\sin\frac{n\pi x}{a}, \quad n=1,2,3,\dots.
 $$
 Substituting $\lambda=n^2\pi^2/a^2$  into
 \eqref{eq:12.3.6} yields
@@ -2879,26 +2870,26 @@ then
 $$
 u_m(x,y)=\sum_{n=1}^m\alpha_n
 {\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a}
+\sin\frac{n\pi x}{a}
 $$
 satisfies \eqref{eq:12.3.4} with
 $$
-f(x)=\sum_{n=1}^m\alpha_n\sin{n\pi x\over L}.
+f(x)=\sum_{n=1}^m\alpha_n\sin\frac{n\pi x}{L}.
 $$
 Therefore, if $f$ is an arbitrary piecewise smooth function on
 $[0,a]$,  we define the formal solution of \eqref{eq:12.3.4} to be
 \begin{equation} \label{eq:12.3.8}
 u(x,y)=\sum_{n=1}^\infty \alpha_n
 {\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a},
+\sin\frac{n\pi x}{a},
 \end{equation}
 where
 $$
-S(x)=\sum_{n=1}^\infty \alpha_n\sin{n\pi x\over a}
+S(x)=\sum_{n=1}^\infty \alpha_n\sin\frac{n\pi x}{a}
 $$
 is the Fourier sine series of $f$ on $[0,a]$; that is,
 $$
-\alpha_n={2\over a}\int_0^af(x)\sin{n\pi x\over a}\,dx,\quad
+\alpha_n=\frac{2}{a}\int_0^af(x)\sin\frac{n\pi x}{a}\,dx,\quad
 n=1,2,3,\dots.
 \eqno{\bbox}
 $$
@@ -2937,22 +2928,22 @@ Solve \eqref{eq:12.3.4} with $f(x)=x(x^2-3ax+2a^2)$.
 
 \solution  From Example~\ref{example:11.3.6},
 $$
-S(x)={12a^3\over\pi^3}\sum_{n=1}^\infty{1\over n^3}\sin{n\pi
+S(x)=\frac{12a^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}\sin{n\pi
 x\over a}.
 $$
 Therefore
 \begin{equation} \label{eq:12.3.10}
-u(x,y)={12a^3\over\pi^3}\sum_{n=1}^\infty{\sinh n\pi(b-y)/a\over
+u(x,y)=\frac{12a^3}{\pi^3}\sum_{n=1}^\infty{\sinh n\pi(b-y)/a\over
 n^3\sinh n\pi b/a}
-\sin{n\pi x\over a}.
+\sin\frac{n\pi x}{a}.
 \end{equation}
 
 To compute approximate values of $u(x,y)$, we must use partial sums of
 the form
 $$
-u_m(x,y)={12a^3\over\pi^3}\sum_{n=1}^m{\sinh n\pi(b-y)/a\over
+u_m(x,y)=\frac{12a^3}{\pi^3}\sum_{n=1}^m{\sinh n\pi(b-y)/a\over
 n^3\sinh n\pi b/a}
-\sin{n\pi x\over a}.
+\sin\frac{n\pi x}{a}.
 $$
 Because of \eqref{eq:12.3.9}, small values of $m$
 provide  sufficient accuracy for most applications if $0<y<b$.
@@ -3031,7 +3022,7 @@ are $\lambda=0$, with associated
 eigenfunction $X_0=1$, and $\lambda_n=n^2\pi^2/a^2$, with
 associated eigenfunctions
 $$
-X_n=\cos{n\pi x\over a}, \quad n=1,2,3,\dots.
+X_n=\cos\frac{n\pi x}{a}, \quad n=1,2,3,\dots.
 $$
 Since $Y_0=y$ satisfies \eqref{eq:12.3.13} with $\lambda=0$,
 we take $v_0(x,y)=X_0(x)Y_0(y)= y$.
@@ -3042,7 +3033,7 @@ Y''-(n^2\pi^2/a^2)Y=0,\quad Y(0)=0,
 $$
 so we could take
 \begin{equation} \label{eq:12.3.14}
-Y_n=\sinh{n\pi y\over a}.
+Y_n=\sinh\frac{n\pi y}{a}.
 \end{equation}
 However, because of the nonhomogeneous Neumann condition at $y=b$, it's
 better to require that
@@ -3055,11 +3046,11 @@ $$
 Then
 $$
 v_n(x,y)=X_n(x)Y_n(y)=
-{a\sinh n\pi y/a\over n\pi\cosh n\pi b/a}\cos{n\pi x\over a},
+{a\sinh n\pi y/a\over n\pi\cosh n\pi b/a}\cos\frac{n\pi x}{a},
 $$
 so
 $$
-{\partial v_n\over \partial y}(x,b)=\cos{n\pi x\over a}.
+\frac{\partial v_n}{\partial y}(x,b)=\cos\frac{n\pi x}{a}.
 $$
 Therefore
  $v_n$ satisfies \eqref{eq:12.3.11} with $f(x)=\cos n\pi x/a$. More
@@ -3067,30 +3058,30 @@ generally,
  if $\alpha_0$, \dots, $\alpha_m$ are arbitrary constants
 then
 $$
-u_m(x,y)=\alpha_0y+{a\over\pi}\sum_{n=1}^m\alpha_n
+u_m(x,y)=\alpha_0y+\frac{a}{\pi}\sum_{n=1}^m\alpha_n
 {\sinh n\pi y/a\over n\cosh n\pi b/a}
-\cos{n\pi x\over a}
+\cos\frac{n\pi x}{a}
 $$
 satisfies \eqref{eq:12.3.11} with
 $$
-f(x)=\alpha_0+\sum_{n=1}^m\alpha_n\cos{n\pi x\over L}.
+f(x)=\alpha_0+\sum_{n=1}^m\alpha_n\cos\frac{n\pi x}{L}.
 $$
 Therefore, if $f$ is an arbitrary piecewise smooth function on
 $[0,a]$  we define the formal solution of \eqref{eq:12.3.11} to be
 $$
-u(x,y)=\alpha_0y+{a\over\pi}\sum_{n=1}^\infty \alpha_n
+u(x,y)=\alpha_0y+\frac{a}{\pi}\sum_{n=1}^\infty \alpha_n
 {\sinh n\pi y/a\over n\cosh n\pi b/a}
-\cos{n\pi x\over a},
+\cos\frac{n\pi x}{a},
 $$
 where
 $$
-C(x)=\alpha_0+\sum_{n=1}^\infty \alpha_n\cos{n\pi x\over a}
+C(x)=\alpha_0+\sum_{n=1}^\infty \alpha_n\cos\frac{n\pi x}{a}
 $$
 is the Fourier cosine series of $f$ on $[0,a]$; that is,
 $$
-\alpha_0={1\over a}\int_0^af(x)\,dx
+\alpha_0=\frac{1}{a}\int_0^af(x)\,dx
 \mbox{\quad and \quad}
-\alpha_n={2\over a}\int_0^af(x)\cos{n\pi x\over a}\,dx,\quad
+\alpha_n=\frac{2}{a}\int_0^af(x)\cos\frac{n\pi x}{a}\,dx,\quad
 n=1,2,3,\dots.
 $$
 
@@ -3100,12 +3091,12 @@ Solve \eqref{eq:12.3.11} with $f(x)=x$.
 
 \solution From Example~\ref{example:11.3.1},
 $$
-C(x)=\dst{a\over2}-{4a\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
+C(x)=\dst\frac{a}{2}-\frac{4a}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos{(2n-1)\pi x\over a}.
 $$
 Therefore
 \begin{equation} \label{eq:12.3.15}
-u(x,y)=\dst{ay\over2}-{4a^2\over\pi^3}\sum_{n=1}^\infty
+u(x,y)=\dst\frac{ay}{2}-\frac{4a^2}{\pi^3}\sum_{n=1}^\infty
 {\sinh(2n-1)\pi y/a\over(2n-1)^3\cosh(2n-1)\pi b/a}
 \cos{(2n-1)\pi x\over a}.
 \end{equation}
@@ -3238,7 +3229,7 @@ $$
  is the mixed Fourier sine series of $g$ on $[0,b]$;
 that is,
 $$
-\alpha_n={2\over b}\int_0^bg(y)\sin{(2n-1)\pi y\over2b}\,dy.
+\alpha_n=\frac{2}{b}\int_0^bg(y)\sin{(2n-1)\pi y\over2b}\,dy.
 $$
 
 \begin{example}\label{example:12.3.6} \rm
@@ -3248,16 +3239,16 @@ Solve \eqref{eq:12.3.16} with $g(y)=y(2y^2-9by+12b^2)$.
 \solution  From Example~\ref{example:11.3.8},
 $$
 S_M(y)
-=\dst{96b^3\over\pi^3}\sum_{n=1}^\infty
-{1\over(2n-1)^3}\left[3+(-1)^n{4\over(2n-1)\pi}\right]\sin{(2n-1)\pi
+=\dst\frac{96b^3}{\pi^3}\sum_{n=1}^\infty
+\frac{1}{(2n-1)^3}\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin{(2n-1)\pi
 y\over2b}.
 $$
 Therefore
 $$
 u(x,y)
-=\dst{96b^3\over\pi^3}\sum_{n=1}^\infty
+=\dst\frac{96b^3}{\pi^3}\sum_{n=1}^\infty
 {\cosh(2n-1)\pi(x-a)/2b\over(2n-1)^3\cosh(2n-1)\pi a/2b}
-\left[3+(-1)^n{4\over(2n-1)\pi}\right]\sin{(2n-1)\pi
+\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin{(2n-1)\pi
 y\over2b}.
 $$
 
@@ -3327,7 +3318,7 @@ y\over2b},
 $$
 so
 $$
-{\partial v_n\over\partial x}(a,y)=\cos{(2n-1)\pi y\over2b}.
+\frac{\partial v_n}{\partial x}(a,y)=\cos{(2n-1)\pi y\over2b}.
 $$
 Therefore
  $v_n$ satisfies \eqref{eq:12.3.20} with $g(y)=\cos(2n-1)\pi y/2b$. More
@@ -3335,7 +3326,7 @@ generally,
  if $\alpha_1$, \dots, $\alpha_m$ are arbitrary constants
 then
 $$
-u_m(x,y)={2b\over\pi}\sum_{n=1}^m \alpha_n
+u_m(x,y)=\frac{2b}{\pi}\sum_{n=1}^m \alpha_n
 {\cosh(2n-1)\pi x/2b\over(2n-1)\sinh(2n-1)\pi a/2b}\cos{(2n-1)\pi y\over 2b}
 $$
 satisfies \eqref{eq:12.3.20} with
@@ -3346,7 +3337,7 @@ $$
 Therefore, if $g$ is an arbitrary piecewise smooth function on
 $[0,b]$,  we define the formal solution of \eqref{eq:12.3.20} to be
 $$
-u(x,y)={2b\over\pi}\sum_{n=1}^\infty \alpha_n
+u(x,y)=\frac{2b}{\pi}\sum_{n=1}^\infty \alpha_n
 {\cosh(2n-1)\pi x/2b\over(2n-1)\sinh(2n-1)\pi a/2b}\cos{(2n-1)\pi y\over 2b},
 $$
 where
@@ -3357,7 +3348,7 @@ $$
  is the mixed Fourier cosine series of $g$ on $[0,b]$;
 that is,
 $$
-\alpha_n={2\over b}\int_0^bg(y)\cos{(2n-1)\pi y\over2b}\,dy.
+\alpha_n=\frac{2}{b}\int_0^bg(y)\cos{(2n-1)\pi y\over2b}\,dy.
 $$
 
 \begin{example}\label{example:12.3.8}    \rm
@@ -3366,12 +3357,12 @@ Solve \eqref{eq:12.3.20} with $g(y)=y-b$.
 
 \solution  From Example~\ref{example:11.3.3},
 $$
-C_M(y)=-{8b\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
+C_M(y)=-\frac{8b}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos{(2n-1)\pi y\over2b}.
 $$
 Therefore
 $$
-u(x,y)=-{16b^2\over\pi^3}\sum_{n=1}^\infty{
+u(x,y)=-\frac{16b^2}{\pi^3}\sum_{n=1}^\infty{
 \cosh(2n-1)\pi x/2b\over(2n-1)^3\sinh(2n-1)\pi a/2b}
 \cos{(2n-1)\pi y\over2b}.
 \eqno{\bbox}
@@ -3413,7 +3404,7 @@ determine
 $u$, for if $u_0=u_0(x,y)$ is a solution
 and $K$ is a constant then
 $$
-u_1(x,y)=u_0(x,y)+K\sin{\pi x\over a}\sinh{\pi y\over a}.
+u_1(x,y)=u_0(x,y)+K\sin\frac{\pi x}{a}\sinh\frac{\pi y}{a}.
 $$
 is also a solution. (Verify.) However, if we also require ---
 on physical grounds --- that the solution remain bounded
@@ -3429,7 +3420,7 @@ Define the bounded formal solution of
 \solution Proceeding as in the solution of Example~\ref{example:12.3.1},
 we find that the building block functions are of the form
 $$
-v_n(x,y)=Y_n(y)\sin{n\pi x\over a},
+v_n(x,y)=Y_n(y)\sin\frac{n\pi x}{a},
 $$
 where
 $$
@@ -3444,15 +3435,15 @@ Although the boundary conditions in \eqref{eq:12.3.24}  don't restrict
 $c_1$, and $c_2$, we must set $c_1=0$ to ensure that $Y_n$ is bounded.
 Letting $c_2=1$ yields
 $$
-v_n(x,y)=e^{-n\pi y/a}\sin{n\pi x\over a},
+v_n(x,y)=e^{-n\pi y/a}\sin\frac{n\pi x}{a},
 $$
 and we define the bounded formal solution of \eqref{eq:12.3.24} to be
 $$
-u(x,y)=\sum_{n=1}^\infty b_ne^{-n\pi y/a}\sin{n\pi x\over a},
+u(x,y)=\sum_{n=1}^\infty b_ne^{-n\pi y/a}\sin\frac{n\pi x}{a},
 $$
 where
 $$
-S(x)=\sum_{n=1}^\infty b_n\sin{n\pi x\over a}
+S(x)=\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{a}
 $$
 is the Fourier sine series of $f$ on $[0,a]$.
 \bbox
@@ -3608,7 +3599,7 @@ u(0,y)=0,\quad u(a,y)=0,\quad 0<y<b$  \\
 $a=\pi$,\quad  $b=1$,\quad
 $f(x)=
 \left\{\begin{array}{cl}
-x,&0\le x\le{\pi\over2},\\\pi-x,&{\pi\over2}\le x\le \pi
+x,&0\le x\le\frac{\pi}{2},\\\pi-x,&\frac{\pi}{2}\le x\le \pi
 \end{array}\right.$
 
 \item\label{exer:12.3.24}
@@ -3720,11 +3711,11 @@ Let
 $$
 u(x,y)=\sum_{n=1}^\infty \alpha_n
 {\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a},
+\sin\frac{n\pi x}{a},
 $$
 where
 $$
-\alpha_n={2\over a}\int_0^a f(x)\sin{n\pi x\over a}\,dx
+\alpha_n=\frac{2}{a}\int_0^a f(x)\sin\frac{n\pi x}{a}\,dx
 $$
 and $f$ is piecewise smooth on $[0,a]$.
 
@@ -3751,27 +3742,27 @@ For fixed $y$ in $(0,b)$,
 use (A) and Theorem~\ref{thmtype:12.1.2} with $z=x$
  to show that
 $$
-u_x(x,y)={\pi\over a}\sum_{n=1}^\infty n\alpha_n
+u_x(x,y)=\frac{\pi}{a}\sum_{n=1}^\infty n\alpha_n
 {\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\cos{n\pi x\over a},\quad -\infty<x< \infty.
+\cos\frac{n\pi x}{a},\quad -\infty<x< \infty.
 $$
 \item % (d)
 Starting from the result of \part{b},
 use (A) and Theorem~\ref{thmtype:12.1.2} with $z=x$
  to show that, for a fixed $y$ in $(0,b)$,
 $$
-u_{xx}(x,y)=-{\pi^2\over a^2}\sum_{n=1}^\infty n^2\alpha_n
+u_{xx}(x,y)=-\frac{\pi^2}{a^2}\sum_{n=1}^\infty n^2\alpha_n
 {\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a},\quad -\infty<x< \infty.
+\sin\frac{n\pi x}{a},\quad -\infty<x< \infty.
 $$
 \item % (e)
 For fixed but arbitrary $x$,
 use (B) and Theorem~\ref{thmtype:12.1.2} with $z=y$
  to show that
 $$
-u_y(x,y)=-{\pi\over a}\sum_{n=1}^\infty n\alpha_n
+u_y(x,y)=-\frac{\pi}{a}\sum_{n=1}^\infty n\alpha_n
 {\cosh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a}
+\sin\frac{n\pi x}{a}
 $$
 if $0<y_0<y<b$, where $y_0$ is an  arbitrary
 number in $(0,b)$.
@@ -3781,9 +3772,9 @@ the conclusion holds for all $y$ in $(0,b)$.
 Starting from the result of \part{e}, use (A) and
 Theorem~\ref{thmtype:12.1.2} to show that
 $$
-u_{yy}(x,y)={\pi^2\over a^2}\sum_{n=1}^\infty n^2\alpha_n
+u_{yy}(x,y)=\frac{\pi^2}{a^2}\sum_{n=1}^\infty n^2\alpha_n
 {\sinh n\pi(b-y)/a\over\sinh n\pi b/a}
-\sin{n\pi x\over a},\quad 0<y<b.
+\sin\frac{n\pi x}{a},\quad 0<y<b.
 $$
 \item % (g)
 Conclude that $u$ satisfies Laplace's equation for all $(x,y)$

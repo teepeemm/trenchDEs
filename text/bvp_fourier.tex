@@ -172,7 +172,7 @@ To make $c_2\sin\sqrt\lambda\, L=0$ with $c_2\ne0$, we must choose
 $\sqrt\lambda=n\pi/L$, where $n$ is a positive integer. Therefore
 $\lambda_n=n^2\pi^2/L^2$ is an eigenvalue and
 $$
-y_n=\sin{n\pi x\over L}
+y_n=\sin\frac{n\pi x}{L}
 $$
 is an associated eigenfunction.
 \bbox\end{example}
@@ -190,7 +190,7 @@ has infinitely many positive eigenvalues
 $\lambda_n=n^2\pi^2/L^2$,
 with associated eigenfunctions
 $$
-y_n=\sin {n\pi x\over L},\quad
+y_n=\sin \frac{n\pi x}{L},\quad
 n=1,2,3,\dots.
 $$
 There are no other eigenvalues.
@@ -212,7 +212,7 @@ has the eigenvalue $\lambda_0=0$, with associated eigenfunction
 $y_0=1$, and infinitely many positive eigenvalues
 $\lambda_n=n^2\pi^2/L^2$, with associated eigenfunctions
 $$
-y_n=\cos {n\pi x\over L}, n=1,2,3\dots.
+y_n=\cos \frac{n\pi x}{L}, n=1,2,3\dots.
 $$
 There are no other eigenvalues.
 \end{theorem}
@@ -331,9 +331,9 @@ $c_2$. The eigenvalue determined in this way is
 $\lambda_n=n^2\pi^2/L^2$, and each such eigenvalue has the linearly
 independent associated eigenfunctions
 $$
-\cos {n\pi x\over L}
+\cos \frac{n\pi x}{L}
 \mbox{\quad and \quad}
-  \sin{ n\pi x\over L}.
+  \sin\frac{ n\pi x}{L}.
 \eqno{\bbox}
 $$
 \end{example}
@@ -352,9 +352,9 @@ and  infinitely many positive eigenvalues
 $\lambda_n=n^2\pi^2/L^2,$
 with associated eigenfunctions
 $$
-y_{1n}=\cos {n\pi x\over L}
+y_{1n}=\cos \frac{n\pi x}{L}
 \mbox{\quad and \quad}
-y_{2n}=\sin {n\pi x\over L},\quad n=1,2,3,\dots.
+y_{2n}=\sin \frac{n\pi x}{L},\quad n=1,2,3,\dots.
 $$
 There are no other eigenvalues.
 \end{theorem}
@@ -384,9 +384,9 @@ Fourier
 \begin{example}\label{example:11.1.4} \rm
 Show that the eigenfunctions
 \begin{equation} \label{eq:11.1.11}
-1,\, \cos{\pi x\over L},\, \sin{\pi x\over L},
-\, \cos{2\pi x\over L}, \, \sin{2\pi x\over L},\dots,
-\cos{n\pi x\over L}, \, \sin{n\pi x\over L},\dots
+1,\, \cos\frac{\pi x}{L},\, \sin\frac{\pi x}{L},
+\, \cos\frac{2\pi x}{L}, \, \sin\frac{2\pi x}{L},\dots,
+\cos\frac{n\pi x}{L}, \, \sin\frac{n\pi x}{L},\dots
 \end{equation}
 of Problem 5
 are orthogonal on $[-L,L]$.
@@ -400,13 +400,13 @@ are orthogonal on $[-L,L]$.
 whenever $f$ and $g$ are distinct functions from \eqref{eq:11.1.11}.
 If $r$ is any nonzero integer, then
 \begin{equation} \label{eq:11.1.13}
-\int_{-L}^L\cos{r\pi x\over L}\,dx
-={L\over r\pi}\sin{r\pi x\over L}\bigg|_{-L}^L=0.
+\int_{-L}^L\cos\frac{r\pi x}{L}\,dx
+=\frac{L}{r\pi}\sin\frac{r\pi x}{L}\bigg|_{-L}^L=0.
 \end{equation}
 and
 $$
-\int_{-L}^L\sin{r\pi x\over L}\,dx
-=-{L\over r\pi}\cos{r\pi x\over L}\bigg|_{-L}^L=0.
+\int_{-L}^L\sin\frac{r\pi x}{L}\,dx
+=-\frac{L}{r\pi}\cos\frac{r\pi x}{L}\bigg|_{-L}^L=0.
 $$
 Therefore \eqref{eq:11.1.12} holds  if $f\equiv1$
 and $g$ is any other function in \eqref{eq:11.1.11}.
@@ -414,17 +414,17 @@ and $g$ is any other function in \eqref{eq:11.1.11}.
 If $f(x)=\cos m\pi x/L$ and $g(x)=\cos n\pi x/L$ where $m$
 and $n$ are distinct positive integers, then
 \begin{equation} \label{eq:11.1.14}
-\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\cos{m\pi x\over L}
-\cos{n\pi x\over L}\,dx.
+\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\cos\frac{m\pi x}{L}
+\cos\frac{n\pi x}{L}\,dx.
 \end{equation}
 To evaluate this integral, we use the identity
 $$
-\cos A\cos B={1\over2}[\cos(A-B)+\cos(A+B)]
+\cos A\cos B=\frac{1}{2}[\cos(A-B)+\cos(A+B)]
 $$
 with $A=m\pi x/L$ and $B=n\pi x/L$.  Then \eqref{eq:11.1.14} becomes
 $$
 \int_{-L}^L
-f(x)g(x)\,dx={1\over2}\left[\int_{-L}^L\cos{(m-n)\pi x\over L}\,dx
+f(x)g(x)\,dx=\frac{1}{2}\left[\int_{-L}^L\cos{(m-n)\pi x\over L}\,dx
 +\int_{-L}^L\cos{(m+n)\pi x\over L}\,dx\right].
 $$
 Since $m-n$ and $m+n$ are both nonzero integers, \eqref{eq:11.1.13}
@@ -435,17 +435,17 @@ implies that the  integrals on the right are both zero. Therefore
 If $f(x)=\sin m\pi x/L$ and $g(x)=\sin n\pi x/L$ where $m$
 and $n$ are distinct positive integers, then
 \begin{equation} \label{eq:11.1.15}
-\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\sin{m\pi x\over L}
-\sin{n\pi x\over L}\,dx.
+\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\sin\frac{m\pi x}{L}
+\sin\frac{n\pi x}{L}\,dx.
 \end{equation}
 To evaluate this integral, we use the  identity
 $$
-\sin A\sin B={1\over2}[\cos(A-B)-\cos(A+B)]
+\sin A\sin B=\frac{1}{2}[\cos(A-B)-\cos(A+B)]
 $$
 with $A=m\pi x/L$ and $B=n\pi x/L$.  Then \eqref{eq:11.1.15} becomes
 $$
 \int_{-L}^L
-f(x)g(x)\,dx={1\over2}\left[\int_{-L}^L\cos{(m-n)\pi x\over L}\,dx
+f(x)g(x)\,dx=\frac{1}{2}\left[\int_{-L}^L\cos{(m-n)\pi x\over L}\,dx
 -\int_{-L}^L\cos{(m+n)\pi x\over L}\,dx\right]=0.
 $$
 
@@ -454,8 +454,8 @@ If $f(x)=\sin m\pi x/L$ and $g(x)=\cos n\pi x/L$ where $m$
 and $n$ are   positive integers (not necessarily distinct),
 then
 $$
-\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\sin{m\pi x\over L}
-\cos{n\pi x\over L}\,dx=0
+\int_{-L}^L f(x)g(x)\,dx=\int_{-L}^L\sin\frac{m\pi x}{L}
+\cos\frac{n\pi x}{L}\,dx=0
 $$
 because the integrand is an odd function and the limits are symmetric
 about $x=0$.
@@ -558,9 +558,9 @@ Prove Theorem~\ref{thmtype:11.1.5}.
 \item\label{exer:11.1.19}
 Verify  that the eigenfunctions
 $$
-\sin{\pi x\over L},
-\, \sin{2\pi x\over L},\dots,
- \, \sin{n\pi x\over L},\dots
+\sin\frac{\pi x}{L},
+\, \sin\frac{2\pi x}{L},\dots,
+ \, \sin\frac{n\pi x}{L},\dots
 $$
  of Problem~1
 are orthogonal on $[0,L]$.
@@ -571,9 +571,9 @@ are orthogonal on $[0,L]$.
 \item\label{exer:11.1.20}
 Verify  that the eigenfunctions
 $$
-1,\, \cos{\pi x\over L},
-\, \cos{2\pi x\over L},\dots,
- \, \cos{n\pi x\over L},\dots
+1,\, \cos\frac{\pi x}{L},
+\, \cos\frac{2\pi x}{L},\dots,
+ \, \cos\frac{n\pi x}{L},\dots
 $$
 of Problem~2
 are orthogonal on $[0,L]$.
@@ -583,8 +583,8 @@ are orthogonal on $[0,L]$.
 \item\label{exer:11.1.21}
 Verify that  the eigenfunctions
 $$
-\sin{\pi x\over 2L},
-\, \sin{3\pi x\over 2L},\dots,
+\sin\frac{\pi x}{2L},
+\, \sin\frac{3\pi x}{2L},\dots,
  \, \sin{(2n-1)\pi x\over 2L},\dots
 $$
 of Problem~3
@@ -596,8 +596,8 @@ are orthogonal on $[0,L]$.
 \item\label{exer:11.1.22}
 Verify  that the eigenfunctions
 $$
-\cos{\pi x\over 2L},
-\, \cos{3\pi x\over 2L},\dots,
+\cos\frac{\pi x}{2L},
+\, \cos\frac{3\pi x}{2L},\dots,
  \, \cos{(2n-1)\pi x\over 2L},\dots
 $$
 of Problem~4
@@ -746,9 +746,9 @@ this association informally as in \eqref{eq:11.2.7}.
 We'll now study Fourier expansions in terms
  of the eigenfunctions
 $$
-1,\, \cos{\pi x\over L},\, \sin{\pi x\over L},
-\, \cos{2\pi x\over L}, \, \sin{2\pi x\over L},\dots,
-\cos{n\pi x\over L}, \, \sin{n\pi x\over L},\dots.
+1,\, \cos\frac{\pi x}{L},\, \sin\frac{\pi x}{L},
+\, \cos\frac{2\pi x}{L}, \, \sin\frac{2\pi x}{L},\dots,
+\cos\frac{n\pi x}{L}, \, \sin\frac{n\pi x}{L},\dots.
 $$
 of Problem~5.
  If $f$ is integrable on $[-L,L]$,  its
@@ -758,38 +758,37 @@ $$
 \int_{-L}^L 1^2\,dx=2L,
 $$
 $$
-\int_{-L}^L\cos^2{n\pi x\over L}\,dx =
-{1\over2}\int_{-L}^L\left(1+\cos{2n\pi x\over L}\right)\,dx=
-{1\over2}\left(x+{L\over2n\pi}\sin{2n\pi x\over L}\right)
+\int_{-L}^L\cos^2\frac{n\pi x}{L}\,dx =
+\frac{1}{2}\int_{-L}^L\left(1+\cos\frac{2n\pi x}{L}\right)\,dx=
+\frac{1}{2}\left(x+\frac{L}{2n\pi}\sin\frac{2n\pi x}{L}\right)
 \lims{-L}L=L,
 $$
 and
 $$
-\int_{-L}^L\sin^2{n\pi x\over L}\,dx =
-{1\over2}\int_{-L}^L\left(1-\cos{2n\pi x\over L}\right)\,dx=
-{1\over2}\left(x-{L\over2n\pi}\sin{2n\pi x\over L}\right),
+\int_{-L}^L\sin^2\frac{n\pi x}{L}\,dx =
+\frac{1}{2}\int_{-L}^L\left(1-\cos\frac{2n\pi x}{L}\right)\,dx=
+\frac{1}{2}\left(x-\frac{L}{2n\pi}\sin\frac{2n\pi x}{L}\right),
 \lims{-L}L=L,
 $$
 we see from \eqref{eq:11.2.6} that the Fourier series of $f$ on $[-L,L]$ is
 $$
- a_0+\sum_{n=1}^\infty \left(a_n\cos{n\pi x\over
-L}+b_n\sin{n\pi x\over L}\right),
+ a_0+\sum_{n=1}^\infty \left(a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi x}{L}\right),
 $$
 where
 $$
-a_0={1\over 2L}\int_{-L}^L f(x)\,dx,
+a_0=\frac{1}{2L}\int_{-L}^L f(x)\,dx,
 $$
 $$
-a_n= {1\over L}\int_{-L}^L f(x)\cos{n\pi
+a_n= \frac{1}{L}\int_{-L}^L f(x)\cos{n\pi
 x\over L}\,dx,\mbox{\quad and \quad}
-b_n={1\over L}\int_{-L}^L f(x)\sin{n\pi x\over L}\,dx,\,n\ge1.
+b_n=\frac{1}{L}\int_{-L}^L f(x)\sin\frac{n\pi x}{L}\,dx,\,n\ge1.
 $$
 
 Note that
 $a_0$ is the average value of $f$ on $[-L,L]$, while $a_n$ and $b_n$
 (for $n\ge1$) are twice the average values of
 $$
-f(x)\cos{n\pi x\over L}\quad\mbox{ and }\quad f(x)\sin{n\pi x\over L}
+f(x)\cos\frac{n\pi x}{L}\quad\mbox{ and }\quad f(x)\sin\frac{n\pi x}{L}
 $$
 on $[-L,L]$, respectively.
 
@@ -836,7 +835,7 @@ Fourier series. The  proof is beyond the scope of this book.
 \begin{theorem}\color{blue} \label{thmtype:11.2.4}
 If $f$ is piecewise smooth on $[-L,L]$, then the Fourier series
 \begin{equation} \label{eq:11.2.8}
-F(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos{n\pi x\over L}+b_n\sin{n\pi
+F(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos\frac{n\pi x}{L}+b_n\sin{n\pi
 x\over L}\right)
 \end{equation}
 of $f$
@@ -873,7 +872,7 @@ infer
  that the error
 $$
 E_N(x)=
-\left|F(x)-a_0-\sum_{n=1}^N\left(a_n\cos{n\pi x\over L}+b_n\sin{n\pi
+\left|F(x)-a_0-\sum_{n=1}^N\left(a_n\cos\frac{n\pi x}{L}+b_n\sin{n\pi
 x\over L}\right)\right|
 $$
 can be made as small as we please  for all $x$ in $[-L,L]$
@@ -930,7 +929,7 @@ $$
 f(x)=
 \left\{\begin{array}{rlr}
 -x,&-2< x<0,
-\\{1\over2},&\phantom{-}0<x<2
+\\\frac{1}{2},&\phantom{-}0<x<2
 \end{array}\right.
 $$
 on $[-2,2]$ (Figure~\ref{figure:11.2.1}). Determine the sum of
@@ -954,62 +953,59 @@ how they may be defined, $f$ is piecewise smooth on $[-2,2]$, and
 the coefficients in the Fourier series
 $$
 F(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos{n\pi
-x\over2}+b_n\sin{n\pi x\over2}\right)
+x\over2}+b_n\sin\frac{n\pi x}{2}\right)
 $$
 are not affected by them. In any case,
 Theorem~\ref{thmtype:11.2.4} implies that $F(x)=f(x)$ in $(-2,0)$
 and $(0,2)$, where $f$ is continuous, while
 $$
 F(-2)=F(2)={f(-2+)+f(2-)\over2}=
-{1\over2}\left(2+{1\over2}\right)={5\over4}
+\frac{1}{2}\left(2+\frac{1}{2}\right)=\frac{5}{4}
 $$
 and
 $$
-F(0)={f(0-)+f(0+)\over2}={1\over2}\left(0+{1\over2}\right)={1\over4}.
+F(0)={f(0-)+f(0+)\over2}=\frac{1}{2}\left(0+\frac{1}{2}\right)=\frac{1}{4}.
 $$
 To summarize,
 $$
 F(x)=
 \left\{\begin{array}{rl}
-{5\over4},&\phantom{-}x=-2\\[2\jot]
+\frac{5}{4},&\phantom{-}x=-2\\[2\jot]
 -x,&-2<x<0,\\[2\jot]
- {1\over4},&\phantom{-}x=0,\\[2\jot]
-{1\over2},&\phantom{-}0<x<2,\\[2\jot]
-{5\over4},&\phantom{-}x=2.
+ \frac{1}{4},&\phantom{-}x=0,\\[2\jot]
+\frac{1}{2},&\phantom{-}0<x<2,\\[2\jot]
+\frac{5}{4},&\phantom{-}x=2.
 \end{array}\right.
 $$
 
 We compute the Fourier coefficients as follows:
 $$
-a_0={1\over4}\int_{-2}^2f(x)\,dx={1\over4}\left[\int_{-2}^0(-x)\,dx
-+\int_0^2{1\over2}\,dx\right]
-={3\over4}.
+a_0=\frac{1}{4}\int_{-2}^2f(x)\,dx=\frac{1}{4}\left[\int_{-2}^0(-x)\,dx
++\int_0^2\frac{1}{2}\,dx\right]
+=\frac{3}{4}.
 $$
 If $n\ge1$, then
 \begin{eqnarray*}
-a_n&=&{1\over2}\int_{-2}^2f(x)\cos{n\pi
-x\over2}\,dx={1\over2}\left[\int_{-2}^0(-x)\cos{n\pi x\over2}\,dx
-+\int_0^2{1\over2}\cos{n\pi x\over2}\,dx\right]\\&=&{2\over
-n^2\pi^2}(\cos n\pi-1),
+a_n&=&\frac{1}{2}\int_{-2}^2f(x)\cos{n\pi
+x\over2}\,dx=\frac{1}{2}\left[\int_{-2}^0(-x)\cos\frac{n\pi x}{2}\,dx
++\int_0^2\frac{1}{2}\cos\frac{n\pi x}{2}\,dx\right]\\&=&\frac{2}{n^2\pi^2}(\cos n\pi-1),
 \end{eqnarray*}
 and
 \begin{eqnarray*}
-b_n&=&{1\over2}\int_{-2}^2f(x)\sin{n\pi
-x\over2}\,dx={1\over2}\left[\int_{-2}^0(-x)\sin{n\pi x\over2}\,dx
-+\int_0^2{1\over2}\sin{n\pi x\over2}\,dx\right]\\
-&=&{1\over2n\pi}(1+3\cos n\pi).
+b_n&=&\frac{1}{2}\int_{-2}^2f(x)\sin{n\pi
+x\over2}\,dx=\frac{1}{2}\left[\int_{-2}^0(-x)\sin\frac{n\pi x}{2}\,dx
++\int_0^2\frac{1}{2}\sin\frac{n\pi x}{2}\,dx\right]\\
+&=&\frac{1}{2n\pi}(1+3\cos n\pi).
 \end{eqnarray*}
 Therefore
 $$
-F(x)={3\over4}+{2\over\pi^2}\sum_{n=1}^\infty{\cos n\pi-1\over
-n^2}\cos{n\pi x\over2}+{1\over2\pi}\sum_{n=1}^\infty{1+3\cos
-n\pi\over n}\sin{n\pi x\over2}.
+F(x)=\frac{3}{4}+\frac{2}{\pi^2}\sum_{n=1}^\infty\frac{\cos n\pi-1}{n^2}\cos\frac{n\pi x}{2}+\frac{1}{2\pi}\sum_{n=1}^\infty{1+3\cos
+n\pi\over n}\sin\frac{n\pi x}{2}.
 $$
 Figure~\ref{figure:11.2.2} shows how the partial sum
 $$
-F_m(x)={3\over4}+{2\over\pi^2}\sum_{n=1}^m{\cos n\pi-1\over
-n^2}\cos{n\pi x\over2}+{1\over2\pi}\sum_{n=1}^m{1+3\cos
-n\pi\over n}\sin{n\pi x\over2}
+F_m(x)=\frac{3}{4}+\frac{2}{\pi^2}\sum_{n=1}^m\frac{\cos n\pi-1}{n^2}\cos\frac{n\pi x}{2}+\frac{1}{2\pi}\sum_{n=1}^m{1+3\cos
+n\pi\over n}\sin\frac{n\pi x}{2}
 $$
 approximates $f(x)$ for $m=5$ (dotted curve), $m=10$  (dashed curve),
 and $m=15$ (solid curve).
@@ -1072,18 +1068,18 @@ $$
 $$
 $$
 \mbox{\part{c}\quad} \int_{-L}^L
-u(x)\cos{n\pi x\over L}\,dx=2\int_0^Lu(x)\cos{n\pi x\over L} \,dx,
+u(x)\cos\frac{n\pi x}{L}\,dx=2\int_0^Lu(x)\cos\frac{n\pi x}{L} \,dx,
 $$
 $$
 \mbox{\part{d}\quad}
-\int_{-L}^L v(x)\sin{n\pi x\over L}\,dx=
-2\int_0^L v(x)\sin{n\pi x\over L}\,dx,
+\int_{-L}^L v(x)\sin\frac{n\pi x}{L}\,dx=
+2\int_0^L v(x)\sin\frac{n\pi x}{L}\,dx,
 $$
 $$
 \mbox{\part{e}\quad} \int_{-L}^L
-u(x)\sin{n\pi x\over L}\,dx=0
+u(x)\sin\frac{n\pi x}{L}\,dx=0
 \mbox{\quad and \quad\part{f}\quad}
-\int_{-L}^L v(x)\cos{n\pi x\over L}\,dx=0.
+\int_{-L}^L v(x)\cos\frac{n\pi x}{L}\,dx=0.
 $$
 \end{theorem}
 
@@ -1095,51 +1091,50 @@ its sum for $-2\le x\le 2$.
 \solution Since $L=2$,
 $$
 F(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos{n\pi
-x\over2}+b_n\sin{n\pi x\over2}\right)
+x\over2}+b_n\sin\frac{n\pi x}{2}\right)
 $$
 where
 \begin{equation} \label{eq:11.2.9}
-a_0={1\over4}\int_{-2}^2(x^2-x)\,dx,
+a_0=\frac{1}{4}\int_{-2}^2(x^2-x)\,dx,
 \end{equation}
 \begin{equation} \label{eq:11.2.10}
-a_n={1\over2}\int_{-2}^2(x^2-x)\cos{n\pi x\over2}\,dx,\quad
+a_n=\frac{1}{2}\int_{-2}^2(x^2-x)\cos\frac{n\pi x}{2}\,dx,\quad
 n=1,2,3,\dots,
 \end{equation}
 and
 \begin{equation} \label{eq:11.2.11}
-b_n={1\over2}\int_{-2}^2(x^2-x)\sin{n\pi x\over2}\,dx,\quad
+b_n=\frac{1}{2}\int_{-2}^2(x^2-x)\sin\frac{n\pi x}{2}\,dx,\quad
 n=1,2,3,\dots.
 \end{equation}
 We simplify the evaluation of these integrals by using
 Theorem~\ref{thmtype:11.2.5}   with $u(x)=x^2$ and $v(x)=x$;
 thus, from \eqref{eq:11.2.9},
 $$
-a_0={1\over2}\int_0^2x^2\,dx={x^3\over6}\lims02={4\over3}.
+a_0=\frac{1}{2}\int_0^2x^2\,dx=\frac{x^3}{6}\lims02=\frac{4}{3}.
 $$
 From \eqref{eq:11.2.10},
 \begin{eqnarray*}
-a_n&=&\int_0^2x^2\cos{n\pi x\over2}\,dx=
-{2\over n\pi}\left[x^2\sin{n\pi x\over2}\lims02-
-2\int_0^2x\sin{n\pi x\over2}\,dx\right]\\
-&=&{8\over n^2\pi^2}\left[x\cos{n\pi x\over2}\lims02-
-\int_0^2\cos{n\pi x\over2}\,dx\right]\\
-&=&{8\over n^2\pi^2}\left[2\cos n\pi-{2\over n\pi}\sin{n\pi
+a_n&=&\int_0^2x^2\cos\frac{n\pi x}{2}\,dx=
+\frac{2}{n\pi}\left[x^2\sin\frac{n\pi x}{2}\lims02-
+2\int_0^2x\sin\frac{n\pi x}{2}\,dx\right]\\
+&=&\frac{8}{n^2\pi^2}\left[x\cos\frac{n\pi x}{2}\lims02-
+\int_0^2\cos\frac{n\pi x}{2}\,dx\right]\\
+&=&\frac{8}{n^2\pi^2}\left[2\cos n\pi-\frac{2}{n\pi}\sin{n\pi
 x\over2}\lims02\right]
-=(-1)^n{16\over n^2\pi^2}.
+=(-1)^n\frac{16}{n^2\pi^2}.
 \end{eqnarray*}
 From \eqref{eq:11.2.11},
 \begin{eqnarray*}
-b_n&=&-\int_0^2x\sin{n\pi x\over2}\,dx
-={2\over n\pi}\left[x\cos{n\pi x\over2}\lims02-
-\int_0^2\cos{n\pi x\over2}\,dx\right]\\
-&=&{2\over n\pi}\left[2\cos n\pi-{2\over
-n\pi}\sin{n\pi x\over2}\lims02\right]=(-1)^n{4\over n\pi}.
+b_n&=&-\int_0^2x\sin\frac{n\pi x}{2}\,dx
+=\frac{2}{n\pi}\left[x\cos\frac{n\pi x}{2}\lims02-
+\int_0^2\cos\frac{n\pi x}{2}\,dx\right]\\
+&=&\frac{2}{n\pi}\left[2\cos n\pi-\frac{2}{n\pi}\sin\frac{n\pi x}{2}\lims02\right]=(-1)^n\frac{4}{n\pi}.
 \end{eqnarray*}
 Therefore
 $$
-F(x)={4\over3}+{16\over\pi^2}\sum_{n=1}^\infty{(-1)^n\over n^2}
-\cos{n\pi x\over2}+{4\over\pi}\sum_{n=1}^\infty
-{(-1)^n\over n}\sin{n\pi x\over2}.
+F(x)=\frac{4}{3}+\frac{16}{\pi^2}\sum_{n=1}^\infty{(-1)^n\over n^2}
+\cos\frac{n\pi x}{2}+\frac{4}{\pi}\sum_{n=1}^\infty
+{(-1)^n\over n}\sin\frac{n\pi x}{2}.
 $$
 Theorem~\ref{thmtype:11.2.4} implies that
 $$
@@ -1150,9 +1145,9 @@ F(x)=
 $$
 Figure~\ref{figure:11.2.3} shows how the partial sum
 $$
-F_m(x)={4\over3}+{16\over\pi^2}\sum_{n=1}^m{(-1)^n\over n^2}
-\cos{n\pi x\over2}+{4\over\pi}\sum_{n=1}^m
-{(-1)^n\over n}\sin{n\pi x\over2}
+F_m(x)=\frac{4}{3}+\frac{16}{\pi^2}\sum_{n=1}^m{(-1)^n\over n^2}
+\cos\frac{n\pi x}{2}+\frac{4}{\pi}\sum_{n=1}^m
+{(-1)^n\over n}\sin\frac{n\pi x}{2}
 $$
 approximates $f(x)$ for $m=5$ (dotted curve), $m=10$  (dashed curve),
 and $m=15$ (solid curve).
@@ -1180,21 +1175,21 @@ Suppose   $f$ is integrable on $[-L,L].$
 \item % (a)
 If $f$ is even$,$  the Fourier series of $f$ on $[-L,L]$ is
 $$
-F(x)=a_0+\sum_{n=1}^\infty a_n\cos{n\pi x\over L},
+F(x)=a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 $$
 where
 $$
-a_0={1\over L}\int_0^Lf(x) \,dx \mbox{\quad and \quad}
-a_n={2\over L}\int_0^L f(x)\cos{n\pi x\over L}\,dx,\quad n\ge1.
+a_0=\frac{1}{L}\int_0^Lf(x) \,dx \mbox{\quad and \quad}
+a_n=\frac{2}{L}\int_0^L f(x)\cos\frac{n\pi x}{L}\,dx,\quad n\ge1.
 $$
 \item % (b)
 If $f$ is odd$,$  the Fourier series of $f$ on $[-L,L]$ is
 $$
-F(x)= \sum_{n=1}^\infty b_n \sin{n\pi x\over L},
+F(x)= \sum_{n=1}^\infty b_n \sin\frac{n\pi x}{L},
 $$
 where
 $$
-b_n={2\over L}\int_0^L f(x)\sin{n\pi x\over L}\,dx.
+b_n=\frac{2}{L}\int_0^L f(x)\sin\frac{n\pi x}{L}\,dx.
 $$
 \end{alist}
 \end{theorem}
@@ -1214,11 +1209,10 @@ F(x)=\sum_{n=1}^\infty b_n\sin nx
 $$
 where
 \begin{eqnarray*}
-b_n&=&{2\over\pi}\int_0^\pi x\sin nx\,dx=-{2\over
-n\pi}\left[x\cos
+b_n&=&\frac{2}{\pi}\int_0^\pi x\sin nx\,dx=-\frac{2}{n\pi}\left[x\cos
 nx\lims0\pi-\int_0^\pi\cos nx\,dx\right]\\
-&=&-{2\over n}\cos n\pi+{2\over n^2\pi}\sin nx\lims0\pi=(-1)^{n+1}
-{2\over n}.
+&=&-\frac{2}{n}\cos n\pi+\frac{2}{n^2\pi}\sin nx\lims0\pi=(-1)^{n+1}
+\frac{2}{n}.
 \end{eqnarray*}
 Therefore
 $$
@@ -1260,18 +1254,18 @@ F(x)=a_0+\sum_{n=1}^\infty a_n\cos nx.
 $$
 Since $f(x)=x$ if $x\ge0$,
 $$
-a_0={1\over\pi}\int_0^\pi x\,dx={x^2\over2\pi}\lims0\pi={\pi\over2}
+a_0=\frac{1}{\pi}\int_0^\pi x\,dx=\frac{x^2}{2\pi}\lims0\pi=\frac{\pi}{2}
 $$
 and, if $n\ge1$,
 \begin{eqnarray*}
-a_n&=&{2\over\pi}\int_0^\pi x\cos nx\,dx={2\over n\pi}\left[x\sin
+a_n&=&\frac{2}{\pi}\int_0^\pi x\cos nx\,dx=\frac{2}{n\pi}\left[x\sin
 nx\lims0\pi-\int_0^\pi\sin nx\,dx\right]\\
-&=&{2\over n^2\pi}\cos
-nx\lims0\pi=\frac{2}{n^2\pi}(\cos n\pi-1)={2\over n^2\pi}[(-1)^n-1].
+&=&\frac{2}{n^2\pi}\cos
+nx\lims0\pi=\frac{2}{n^2\pi}(\cos n\pi-1)=\frac{2}{n^2\pi}[(-1)^n-1].
 \end{eqnarray*}
 Therefore
 \begin{equation} \label{eq:11.2.12}
-F(x)={\pi\over2}+{2\over\pi}\sum_{n=0}{(-1)^n-1\over n^2}\cos nx.
+F(x)=\frac{\pi}{2}+\frac{2}{\pi}\sum_{n=0}{(-1)^n-1\over n^2}\cos nx.
 \end{equation}
 However, since
 $$
@@ -1284,13 +1278,13 @@ the terms in  \eqref{eq:11.2.12} for which $n=2m$ are all zeros.
 Therefore we only to include the terms for which $n=2m+1$;
 that is, we can rewrite \eqref{eq:11.2.12} as
 $$
-F(x)={\pi\over2}-{4\over\pi}\sum_{m=0}^\infty {1\over(2m+1)^2}
+F(x)=\frac{\pi}{2}-\frac{4}{\pi}\sum_{m=0}^\infty \frac{1}{(2m+1)^2}
 \cos(2m+1)x.
 $$
 However, since the name of the index of summation doesn't matter,
 we prefer to replace $m$ by $n$, and write
 $$
-F(x)={\pi\over2}-{4\over\pi}\sum_{n=0}^\infty {1\over(2n+1)^2}
+F(x)=\frac{\pi}{2}-\frac{4}{\pi}\sum_{n=0}^\infty \frac{1}{(2n+1)^2}
 \cos(2n+1)x.
 $$
 Since $|x|$ is continuous for all $x$ and $|-\pi|=|\pi|$,
@@ -1309,20 +1303,19 @@ F(x)=\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L},
 $$
 where
 \begin{eqnarray*}
-b_n&=&{2\over L}\int_0^Lx(x^2-L^2)\sin{n\pi x\over L}\,dx\\
-&=&-{2\over n\pi}\left[x(x^2-L^2)\cos{n\pi x\over L}\lims0L-
+b_n&=&\frac{2}{L}\int_0^Lx(x^2-L^2)\sin\frac{n\pi x}{L}\,dx\\
+&=&-\frac{2}{n\pi}\left[x(x^2-L^2)\cos\frac{n\pi x}{L}\lims0L-
 \int_0^L
-(3x^2-L^2)\cos{n\pi x\over L}\,dx\right]\\
-&=&{2L\over n^2\pi^2}\left[(3x^2-L^2)\sin{n\pi x\over
-L}\lims0L-6
-\int_0^Lx\sin{n\pi x\over L}\,dx\right]\\
-&=&{12L^2\over n^3\pi^3}\left[x\cos{n\pi x\over L}\lims0L-
-\int_0^L\cos{n\pi x\over L}\,dx\right]
-=(-1)^n{12L^3\over n^3\pi^3}.
+(3x^2-L^2)\cos\frac{n\pi x}{L}\,dx\right]\\
+&=&\frac{2L}{n^2\pi^2}\left[(3x^2-L^2)\sin\frac{n\pi x}{L}\lims0L-6
+\int_0^Lx\sin\frac{n\pi x}{L}\,dx\right]\\
+&=&\frac{12L^2}{n^3\pi^3}\left[x\cos\frac{n\pi x}{L}\lims0L-
+\int_0^L\cos\frac{n\pi x}{L}\,dx\right]
+=(-1)^n\frac{12L^3}{n^3\pi^3}.
 \end{eqnarray*}
 Therefore
 $$
-F(x)={12L^3\over\pi^3}\sum_{n=1}^\infty{(-1)^n\over n^3}\sin{n\pi
+F(x)=\frac{12L^3}{\pi^3}\sum_{n=1}^\infty{(-1)^n\over n^3}\sin{n\pi
 x\over L}.
 $$
 Theorem~\ref{thmtype:11.2.4} implies that $F(x)=x(x^2-L^2)$ for all $x$
@@ -1332,24 +1325,24 @@ in $[-L,L]$.
 The Fourier series of
 $$
 f(x)=\left\{\begin{array}{cl}
-0,&-1<x<-{1\over2},\\
-1,&-{1\over2}<x<{1\over2},\\[2\jot]
-0,&\phantom{-}{1\over2}<x<1
+0,&-1<x<-\frac{1}{2},\\
+1,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+0,&\phantom{-}\frac{1}{2}<x<1
 \end{array}\right.
 $$
 on $[-1,1]$ is
 $$
-F(x)={1\over2}+{2\over\pi}\sum_{n=1}^\infty
+F(x)=\frac{1}{2}+\frac{2}{\pi}\sum_{n=1}^\infty
 {(-1)^{n-1}\over2n-1}\cos(2n-1)\pi x.
 $$
 (Verify.) According to Theorem~\ref{thmtype:11.2.4},
 $$
 F(x)=\left\{\begin{array}{cl}
-0,&-1\le x<-{1\over2},\\
-{1\over2},& x=-{1\over2},\\
-1,&-{1\over2}<x<{1\over2},\\
-{1\over2},& x={1\over2},\\
-0,&{1\over2}<x\le 1;
+0,&-1\le x<-\frac{1}{2},\\
+\frac{1}{2},& x=-\frac{1}{2},\\
+1,&-\frac{1}{2}<x<\frac{1}{2},\\
+\frac{1}{2},& x=\frac{1}{2},\\
+0,&\frac{1}{2}<x\le 1;
 \end{array}\right.
 $$
 thus, $F$ (as well as $f$) has unit jump discontinuities
@@ -1358,7 +1351,7 @@ Figures~\ref{figure:11.2.5}-\ref{figure:11.2.7} show the graphs
 of $y=f(x)$ and
 $$
 y=F_{2N-1}(x)=\frac{1}{2}+
-{2\over\pi}\sum_{n=1}^N {(-1)^{n-1}\over2n-1}\cos(2n-1)\pi x
+\frac{2}{\pi}\sum_{n=1}^N {(-1)^{n-1}\over2n-1}\cos(2n-1)\pi x
 $$
 for $N=10$, $20$, and $30$. You can see that although $F_{2N-1}$
 approximates $F$ (and therefore $f$) well on larger intervals as $N$
@@ -1429,8 +1422,7 @@ series of $f$ on  $[-L,L]$ and determine its sum for $-L\le x\le L$.
 Where indicated by \Cex,
  graph $f$ and
 $$
-F_m(x)=a_0+\sum_{n=1}^m\left(a_n\cos{n\pi x\over
-L}+b_n\sin{n\pi x\over L}\right)
+F_m(x)=a_0+\sum_{n=1}^m\left(a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi x}{L}\right)
 $$
 on the same axes for various values of $m$.}
 
@@ -1464,42 +1456,42 @@ $L=\pi$;  \quad$f(x)=|x|\sin x$
 \item\label{exer:11.2.10}
 $L=1$;  \quad$f(x)=
 \left\{\begin{array}{cl}
-0,&-1<x<{1\over2},\\[2\jot]
-\cos\pi x,&-{1\over2}<x<{1\over2},\\[2\jot]
-0,&\phantom{-}{1\over2}<x<1
+0,&-1<x<\frac{1}{2},\\[2\jot]
+\cos\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+0,&\phantom{-}\frac{1}{2}<x<1
 \end{array}\right.$
 
 \item\label{exer:11.2.11}
 $L=1$;  \quad$f(x)=
 \left\{\begin{array}{cl}
-0,&-1<x<{1\over2},\\[2\jot]
-x\cos\pi x,&-{1\over2}<x<{1\over2},\\[2\jot]
-0,&\phantom{-}{1\over2}<x<1
+0,&-1<x<\frac{1}{2},\\[2\jot]
+x\cos\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+0,&\phantom{-}\frac{1}{2}<x<1
 \end{array}\right.$
 
 
 \item\label{exer:11.2.12}
 $L=1$;  \quad$f(x)=
 \left\{\begin{array}{cl}
-0,&-1<x<{1\over2},\\[2\jot]
-\sin\pi x,&-{1\over2}<x<{1\over2},\\[2\jot]
-0,&\phantom{-}{1\over2}<x<1
+0,&-1<x<\frac{1}{2},\\[2\jot]
+\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+0,&\phantom{-}\frac{1}{2}<x<1
 \end{array}\right.$
 
 \item\label{exer:11.2.13}
 $L=1$;  \quad$f(x)=
 \left\{\begin{array}{cl}
-0,&-1<x<{1\over2},\\[2\jot]
-|\sin\pi x|,&-{1\over2}<x<{1\over2},\\[2\jot]
-0,&\phantom{-}{1\over2}<x<1
+0,&-1<x<\frac{1}{2},\\[2\jot]
+|\sin\pi x|,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+0,&\phantom{-}\frac{1}{2}<x<1
 \end{array}\right.$
 
 \item\label{exer:11.2.14}
 $L=1$;  \quad$f(x)=
 \left\{\begin{array}{cl}
-0,&-1<x<{1\over2},\\[2\jot]
-x\sin\pi x,&-{1\over2}<x<{1\over2},\\[2\jot]
-0,&\phantom{-}{1\over2}<x<1
+0,&-1<x<\frac{1}{2},\\[2\jot]
+x\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\[2\jot]
+0,&\phantom{-}\frac{1}{2}<x<1
 \end{array}\right.$
 
 
@@ -1538,7 +1530,7 @@ x^2,&-1< x<0,
 \item\label{exer:11.2.19}
 Deduce from  Example~\ref{example:11.2.5} that
 $$
-\sum_{n=0}^\infty{1\over(2n+1)^2}={\pi^2\over 8}.
+\sum_{n=0}^\infty\frac{1}{(2n+1)^2}=\frac{\pi^2}{8}.
 $$
 
 
@@ -1550,7 +1542,7 @@ Find the Fourier series of $f(x)=e^x$ on $[-\pi,\pi]$.
 \item % (b)
 Deduce from  \part{a}  that
 $$
-\sum_{n=0}^\infty{1\over n^2+1}={\pi\coth\pi-1\over2}.
+\sum_{n=0}^\infty\frac{1}{n^2+1}=\frac{\pi\coth\pi-1}{2}.
 $$
  \end{alist}
 
@@ -1576,9 +1568,9 @@ Suppose $g'$ is continuous on $[a,b]$ and $\omega\ne0$.
 Use integration by parts to show that there's a constant $M$ such
 that
 $$
-\left|\int_a^bg(x)\cos\omega x\,dx\right|\le{M\over\omega}
+\left|\int_a^bg(x)\cos\omega x\,dx\right|\le\frac{M}{\omega}
 \mbox{\quad and \quad}
-\left|\int_a^bg(x)\sin\omega x\,dx\right|\le{M\over\omega},\quad
+\left|\int_a^bg(x)\sin\omega x\,dx\right|\le\frac{M}{\omega},\quad
 \omega>0.
 $$
 \item % (b)
@@ -1593,7 +1585,7 @@ order $n^{-k}$\/} and write
 $\alpha_n=O(1/n^k)$
 if  there's a constant $M$ such that
 $$
-|\alpha_n|<{M\over n^k},\quad n=1,2,3,\dots.
+|\alpha_n|<\frac{M}{n^k},\quad n=1,2,3,\dots.
 $$
 Let $\{a_n\}_{n=1}^\infty$ and $\{b_n\}_{n=1}^\infty$
 be the Fourier coefficients of a piecewise smooth function.
@@ -1608,25 +1600,24 @@ and $f''$ is piecewise continuous
 on $[-L,L]$.
 Use Theorem~\ref{thmtype:11.2.4} and integration by parts to show that
 $$
-f(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos{n\pi x\over L}+b_n\sin{n\pi
+f(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos\frac{n\pi x}{L}+b_n\sin{n\pi
 x\over L}\right),\quad -L\le x\le L,
 $$
 with
 $$
-a_0={1\over 2L}\int_{-L}^L f(x)\,dx,
+a_0=\frac{1}{2L}\int_{-L}^L f(x)\,dx,
 $$
 $$
-a_n= -{L\over n^2\pi^2}\int_{-L}^L f''(x)\cos{n\pi
+a_n= -\frac{L}{n^2\pi^2}\int_{-L}^L f''(x)\cos{n\pi
 x\over L}\,dx,\mbox{\quad and \quad}
-b_n=-{L\over n^2\pi^2}\int_{-L}^L f''(x)\sin{n\pi x\over
-L}\,dx,\,n\ge1.
+b_n=-\frac{L}{n^2\pi^2}\int_{-L}^L f''(x)\sin\frac{n\pi x}{L}\,dx,\,n\ge1.
 $$
 \item % (b)
 Show that if, in addition to the  assumptions in \part{a},  $f''$ is
 continuous and $f'''$ is piecewise continuous on
 $[-L,L]$, then
 $$
-a_n={L^2\over n^3\pi^3}\int_{-L}^Lf'''(x)\sin{n\pi x\over L}\,dx.
+a_n=\frac{L^2}{n^3\pi^3}\int_{-L}^Lf'''(x)\sin\frac{n\pi x}{L}\,dx.
 $$
 \end{alist}
 
@@ -1640,17 +1631,16 @@ $$
 (Figure~\ref{figure:11.2.8}), then the Fourier series of $f$ on $[-L,L]$
 has the form
 $$
-A_0+\sum_{n=1}^\infty\left(A_n\cos{2n\pi\over
-L}+B_n\sin{2n\pi\over L}\right)
+A_0+\sum_{n=1}^\infty\left(A_n\cos\frac{2n\pi}{L}+B_n\sin\frac{2n\pi}{L}\right)
 $$
 where
 $$
-A_0={1\over L}\int_0^Lf(x)\,dx,
+A_0=\frac{1}{L}\int_0^Lf(x)\,dx,
 $$
 and
 $$
-A_n={2\over L}\int_0^Lf(x)\cos{2n\pi x\over L}\,dx, \quad
-B_n={2\over L}\int_0^Lf(x)\sin{2n\pi x\over L}\,dx,\quad
+A_n=\frac{2}{L}\int_0^Lf(x)\cos\frac{2n\pi x}{L}\,dx, \quad
+B_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{2n\pi x}{L}\,dx,\quad
 n=1,2,3,\dots.
 $$
 
@@ -1688,9 +1678,9 @@ L}+B_n\sin{(2n-1)\pi x\over L}\right),
 $$
 where
 $$
-A_n={2\over L}\int_0^Lf(x)\cos{(2n-1)\pi x\over L}\,dx
+A_n=\frac{2}{L}\int_0^Lf(x)\cos{(2n-1)\pi x\over L}\,dx
 \text{\quad and \quad }
-B_n={2\over L}\int_0^Lf(x)\sin{(2n-1)\pi x\over L}\,dx,\quad
+B_n=\frac{2}{L}\int_0^Lf(x)\sin{(2n-1)\pi x\over L}\,dx,\quad
 n=1,2,3,\dots.
 $$
 
@@ -1745,19 +1735,19 @@ $$
 If $A_0$, $A_1$, \dots, $A_m$ and $B_1$, $B_2$, \dots, $B_m$
 are arbitrary constants we say that
 $$
-P_m(x)=A_0+\sum_{n=1}^m\left(A_n\cos{n\pi x\over L}+B_n\sin{n\pi x\over L}\right)
+P_m(x)=A_0+\sum_{n=1}^m\left(A_n\cos\frac{n\pi x}{L}+B_n\sin\frac{n\pi x}{L}\right)
 $$
 is a {\color{blue}\it trigonometric polynomial of degree $\le m$\/}.
 
 Now let
 $$
-a_0+\sum_{n=1}^\infty\left(a_n\cos{n\pi x\over L}+b_n\sin{n\pi x\over L}\right)
+a_0+\sum_{n=1}^\infty\left(a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi x}{L}\right)
 $$
 be the Fourier series of an integrable function $f$ on $[-L,L]$,
 and let
 $$
 F_m(x)=
-a_0+\sum_{n=1}^m\left(a_n\cos{n\pi x\over L}+b_n\sin{n\pi x\over L}\right).
+a_0+\sum_{n=1}^m\left(a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi x}{L}\right).
 $$
 \begin{alist}
 \item % (a)
@@ -1771,7 +1761,7 @@ $B_n=b_n$, $n=1$, $2$, \dots, $m$.
 \item % (b)
 Conclude from Exercise~\ref{exer:11.2.29}\part{d} that
 $$
-2a_0^2+\sum_{n=1}^m(a_n^2+b_n^2)\le{1\over L}\int_{-L}^Lf^2(x)\,dx
+2a_0^2+\sum_{n=1}^m(a_n^2+b_n^2)\le\frac{1}{L}\int_{-L}^Lf^2(x)\,dx
 $$
 for every $m\ge0$.
 \item % (c)
@@ -1800,9 +1790,9 @@ eigenfunctions of Problems~1-4 for Section~{\color{red}11.1}.
 \noindent
 From  Exercise~11.1.~\hspace*{-3pt}\ref{exer:11.1.20}, the eigenfunctions
 $$
-1,\, \cos{\pi x\over L},
-\, \cos{2\pi x\over L},\dots,
- \, \cos{n\pi x\over L},\dots
+1,\, \cos\frac{\pi x}{L},
+\, \cos\frac{2\pi x}{L},\dots,
+ \, \cos\frac{n\pi x}{L},\dots
 $$
  of the boundary value problem
 \begin{equation} \label{eq:11.3.1}
@@ -1813,18 +1803,16 @@ y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0
 Fourier expansion of $f$ in terms of these functions is called the
 {\color{blue}\it Fourier cosine series of $f$ on $[0,L]$\/}. This series is
 $$
-a_0+\sum_{n=1}^\infty a_n\cos{n\pi x\over L},
+a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 $$
 where
 $$
-a_0={\dst\int_0^Lf(x)\,dx\over\dst\int_0^L\,dx}={1\over
-L}\int_0^Lf(x)\,dx
+a_0={\dst\int_0^Lf(x)\,dx\over\dst\int_0^L\,dx}=\frac{1}{L}\int_0^Lf(x)\,dx
 $$
 and
 $$
-a_n={\dst\int_0^Lf(x)\cos{n\pi x\over L}\,dx\over\dst\int_0^L
-\cos^2{n\pi x\over L}\,dx}={2\over L}\int_0^Lf(x)\cos{n\pi x\over
-L}\,dx,\quad n=1,2,3,\dots.
+a_n={\dst\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx\over\dst\int_0^L
+\cos^2\frac{n\pi x}{L}\,dx}=\frac{2}{L}\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots.
 $$
 Comparing this definition with
 Theorem~\ref{exer:11.2.6}\part{a} shows that the Fourier cosine
@@ -1859,15 +1847,15 @@ theorem.
 \begin{theorem}\color{blue} \label{thmtype:11.3.1}
 If $f$ is piecewise smooth on $[0,L]$, then the Fourier cosine series
 $$
-C(x)=a_0+\sum_{n=1}^\infty a_n\cos{n\pi x\over L}
+C(x)=a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L}
 $$
 of $f$
 on $[0,L]$,
 with
 $$
-a_0={1\over L}\int_0^Lf(x)\,dx
+a_0=\frac{1}{L}\int_0^Lf(x)\,dx
 \mbox{\quad and \quad}
-a_n={2\over L}\int_0^Lf(x)\cos{n\pi x\over L}\,dx,\quad n=1,2,3,\dots,
+a_n=\frac{2}{L}\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots,
 $$
  converges for all $x$ in $[0,L];$     moreover$,$
 $$
@@ -1889,30 +1877,28 @@ Find the Fourier cosine series of $f(x)=x$ on $[0,L]$.
 \solution
  The coefficients are
 $$
-a_0={1\over L}\int_0^Lx\,dx={1\over
-L}{x^2\over2}
-\lims0L={L\over2}
+a_0=\frac{1}{L}\int_0^Lx\,dx=\frac{1}{L}\frac{x^2}{2}
+\lims0L=\frac{L}{2}
 $$
 and, if $n\ge1$
 \begin{eqnarray*}
-a_n&=&{2\over L}\int_0^Lx\cos{n\pi x\over L}\,dx
-={2\over n\pi}\left[x\sin{n\pi x\over L}\lims0L-
+a_n&=&\frac{2}{L}\int_0^Lx\cos\frac{n\pi x}{L}\,dx
+=\frac{2}{n\pi}\left[x\sin\frac{n\pi x}{L}\lims0L-
 \int_0^L
-\sin{n\pi x\over L}\,dx\right]\\
-&=&-{2\over n\pi}\int_0^L
-\sin{n\pi x\over L}\,dx
-={2L\over n^2\pi^2}\cos{n\pi x\over L}\lims0L
-={2L\over
-n^2\pi^2}[(-1)^n-1]\\
+\sin\frac{n\pi x}{L}\,dx\right]\\
+&=&-\frac{2}{n\pi}\int_0^L
+\sin\frac{n\pi x}{L}\,dx
+=\frac{2L}{n^2\pi^2}\cos\frac{n\pi x}{L}\lims0L
+=\frac{2L}{n^2\pi^2}[(-1)^n-1]\\
 &=&
 \left\{\begin{array}{cl}
-\dst-{4L\over(2m-1)^2\pi^2}&\mbox{if  $n=2m-1$},\\
+\dst-\frac{4L}{(2m-1)^2\pi^2}&\mbox{if  $n=2m-1$},\\
 0&\mbox{if $n=2m$}.
 \end{array}\right.
 \end{eqnarray*}
 Therefore
 $$
-C(x)=\dst{L\over2}-{4L\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
+C(x)=\dst\frac{L}{2}-\frac{4L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos{(2n-1)\pi x\over L}.
 $$
 Theorem~\ref{thmtype:11.3.1} implies that
@@ -1927,9 +1913,9 @@ $$
 \noindent
 From   Exercise~11.1.~\hspace*{-3pt}\ref{exer:11.1.19},  the eigenfunctions
 $$
-\sin{\pi x\over L},
-\, \sin{2\pi x\over L},\dots,
- \, \sin{n\pi x\over L},\dots
+\sin\frac{\pi x}{L},
+\, \sin\frac{2\pi x}{L},\dots,
+ \, \sin\frac{n\pi x}{L},\dots
 $$
  of the boundary value problem
 $$
@@ -1940,13 +1926,12 @@ $$
 Fourier expansion of $f$ in terms of these functions is called the
 {\color{blue}\it Fourier sine series of $f$ on $[0,L]$\/}. This series is
 $$
-\sum_{n=1}^\infty b_n\sin{n\pi x\over L},
+\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L},
 $$
 where
 $$
-b_n={\dst\int_0^Lf(x)\sin{n\pi x\over L}\,dx\over\dst\int_0^L
-\sin^2{n\pi x\over L}\,dx}={2\over L}\int_0^Lf(x)\sin{n\pi x\over
-L}\,dx,\quad n=1,2,3,\dots.
+b_n={\dst\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx\over\dst\int_0^L
+\sin^2\frac{n\pi x}{L}\,dx}=\frac{2}{L}\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots.
 $$
 Comparing this definition with
 Theorem~\ref{exer:11.2.6}\part{b} shows that the Fourier sine
@@ -1979,13 +1964,13 @@ theorem.
 \begin{theorem}\color{blue} \label{thmtype:11.3.2}
 If $f$ is piecewise smooth on $[0,L]$, then the Fourier sine series
 $$
-S(x)=\sum_{n=1}^\infty b_n\sin{n\pi x\over L}
+S(x)=\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L}
 $$
 of $f$
 on $[0,L]$,
 with
 $$
-b_n={2\over L}\int_0^Lf(x)\sin{n\pi x\over L}\,dx,
+b_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx,
 $$
  converges for all $x$ in $[0,L];$ moreover$,$
 $$
@@ -2009,17 +1994,16 @@ Find the Fourier sine series of $f(x)=x$ on $[0,L]$.
 \solution
  The coefficients are
 \begin{eqnarray*}
-b_n&=&{2\over L}\int_0^Lx\sin{n\pi x\over L}\,dx
-=-{2\over n\pi}\left[x\cos{n\pi x\over L}\lims0L-
+b_n&=&\frac{2}{L}\int_0^Lx\sin\frac{n\pi x}{L}\,dx
+=-\frac{2}{n\pi}\left[x\cos\frac{n\pi x}{L}\lims0L-
 \int_0^L
-\cos{n\pi x\over L}\,dx\right]\\
-&=& (-1)^{n+1}{2L\over n\pi}+{2L\over n^2\pi^2}\sin{n\pi x\over
-L}\lims0L =(-1)^{n+1}{2L\over n\pi}.
+\cos\frac{n\pi x}{L}\,dx\right]\\
+&=& (-1)^{n+1}\frac{2L}{n\pi}+\frac{2L}{n^2\pi^2}\sin\frac{n\pi x}{L}\lims0L =(-1)^{n+1}\frac{2L}{n\pi}.
 \end{eqnarray*}
 Therefore
 $$
-S(x)=\dst-{2L\over\pi}\sum_{n=1}^\infty{(-1)^n\over n}
-\sin{n\pi x\over L}.
+S(x)=\dst-\frac{2L}{\pi}\sum_{n=1}^\infty{(-1)^n\over n}
+\sin\frac{n\pi x}{L}.
 $$
 Theorem~\ref{thmtype:11.3.2} implies that
 $$
@@ -2036,8 +2020,8 @@ $$
 \noindent
 From Exercise~11.1.~\hspace*{-3pt}\ref{exer:11.1.22}, the eigenfunctions
 $$
- \cos{\pi x\over 2L},
-\, \cos{3\pi x\over 2L},\dots,
+ \cos\frac{\pi x}{2L},
+\, \cos\frac{3\pi x}{2L},\dots,
  \, \cos{(2n-1)\pi x\over 2L},\dots
 $$
  of the boundary value problem
@@ -2053,7 +2037,7 @@ $$
 where
 $$
 c_n={\dst\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx\over\dst\int_0^L
-\cos^2{(2n-1)\pi x\over L}\,dx}={2\over L}\int_0^Lf(x)\cos{(2n-1)\pi
+\cos^2{(2n-1)\pi x\over L}\,dx}=\frac{2}{L}\int_0^Lf(x)\cos{(2n-1)\pi
 x\over2L}\,dx.
 $$
 
@@ -2101,7 +2085,7 @@ $$
 of $f$ on $[0,L]$,
 with
 $$
-c_n={2\over L}\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx,
+c_n=\frac{2}{L}\int_0^Lf(x)\cos{(2n-1)\pi x\over2L}\,dx,
 $$
  converges for all $x$ in $[0,L];    $ moreover$,$
 $$
@@ -2127,17 +2111,17 @@ $f(x)=x-L$ on $[0,L]$.
 \solution
  The coefficients are
 \begin{eqnarray*}
-c_n&=&{2\over L}\int_0^L(x-L)\cos{(2n-1)\pi x\over2L}\,dx\\
-&=&{4\over(2n-1)\pi}\left[(x-L)\sin{(2n-1)\pi
+c_n&=&\frac{2}{L}\int_0^L(x-L)\cos{(2n-1)\pi x\over2L}\,dx\\
+&=&\frac{4}{(2n-1)\pi}\left[(x-L)\sin{(2n-1)\pi
 x\over2L}\lims0L-\int_0^L
 \sin{(2n-1)\pi x\over2L}\,dx\right]\\
-&=&{8L\over(2n-1)^2\pi^2}
+&=&\frac{8L}{(2n-1)^2\pi^2}
 \cos{(2n-1)\pi x\over2L}\lims0L
-=-{8L\over(2n-1)^2\pi^2}.
+=-\frac{8L}{(2n-1)^2\pi^2}.
 \end{eqnarray*}
 Therefore
 $$
-C_M(x)=-{8L\over\pi^2}\sum_{n=1}^\infty{1\over(2n-1)^2}
+C_M(x)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos{(2n-1)\pi x\over2L}.
 $$
 Theorem~\ref{thmtype:11.3.3} implies that
@@ -2157,8 +2141,8 @@ $$
 \noindent
 From  Exercise~11.1.~\hspace*{-3pt}\ref{exer:11.1.21},  the eigenfunctions
 $$
- \sin{\pi x\over 2L},
-\, \sin{3\pi x\over 2L},\dots,
+ \sin\frac{\pi x}{2L},
+\, \sin\frac{3\pi x}{2L},\dots,
  \, \sin{(2n-1)\pi x\over 2L},\dots
 $$
 of the boundary value problem
@@ -2175,7 +2159,7 @@ $$
 where
 $$
 d_n={\dst\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx\over\dst\int_0^L
-\sin^2{(2n-1)\pi x\over2L}\,dx}={2\over L}\int_0^Lf(x)\sin{(2n-1)\pi
+\sin^2{(2n-1)\pi x\over2L}\,dx}=\frac{2}{L}\int_0^Lf(x)\sin{(2n-1)\pi
 x\over2L}\,dx.
 $$
 We'll  call this expansion the  {\color{blue}\it mixed Fourier sine
@@ -2216,7 +2200,7 @@ S_M(x)=\sum_{n=1}^\infty d_n\sin{(2n-1)\pi x\over2L}
 $$
 of $f$ on $[0,L]$, with
 $$
-d_n={2\over L}\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx,
+d_n=\frac{2}{L}\int_0^Lf(x)\sin{(2n-1)\pi x\over2L}\,dx,
 $$
  converges for all $x$ in $[0,L];    $ moreover$,$
 $$
@@ -2241,20 +2225,20 @@ Find the mixed Fourier sine series of $f(x)=x$ on $[0,L]$.
 \solution
  The coefficients are
 \begin{eqnarray*}
-d_n&=&{2\over L}\int_0^Lx\sin{(2n-1)\pi x\over2L}\,dx\\
-&=&-{4\over(2n-1)\pi}\left[x\cos{(2n-1)\pi
+d_n&=&\frac{2}{L}\int_0^Lx\sin{(2n-1)\pi x\over2L}\,dx\\
+&=&-\frac{4}{(2n-1)\pi}\left[x\cos{(2n-1)\pi
 x\over2L}\lims0L-
 \int_0^L
 \cos{(2n-1)\pi x\over2L}\,dx\right]\\
-&=&{4\over(2n-1)\pi}
+&=&\frac{4}{(2n-1)\pi}
 \int_0^L
 \cos{(2n-1)\pi x\over2L}\,dx\\
-&=&{8L\over(2n-1)^2\pi^2}\sin{(2n-1)\pi
-x\over2L}\lims0L=(-1)^{n+1}{8L\over(2n-1)^2\pi^2}.
+&=&\frac{8L}{(2n-1)^2\pi^2}\sin{(2n-1)\pi
+x\over2L}\lims0L=(-1)^{n+1}\frac{8L}{(2n-1)^2\pi^2}.
 \end{eqnarray*}
 Therefore
 $$
-S_M(x)=-{8L\over\pi^2}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^2}
+S_M(x)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^2}
 \sin{(2n-1)\pi x\over2L}.
 $$
 Theorem~\ref{thmtype:11.3.4} implies that
@@ -2284,13 +2268,13 @@ coefficients in the expansion.
 If $f'(0)=f'(L)=0$, $f''$ is continuous$,$ and $f'''$ is piecewise
 continuous  on $[0,L],$ then
 \begin{equation} \label{eq:11.3.3}
-f(x)=a_0+\sum_{n=1}^\infty a_n\cos{n\pi x\over L},
+f(x)=a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 \quad 0\le x\le L,
 \end{equation}
 with
 \begin{equation} \label{eq:11.3.4}
-a_0={1\over L}\int_0^L f(x)\,dx \mbox{\quad and \quad}
-a_n= {2L^2\over n^3\pi^3}\int_0^L f'''(x)\sin{n\pi
+a_0=\frac{1}{L}\int_0^L f(x)\,dx \mbox{\quad and \quad}
+a_n= \frac{2L^2}{n^3\pi^3}\int_0^L f'''(x)\sin{n\pi
 x\over L}\,dx,
 \quad n\ge1.
 \end{equation}
@@ -2301,12 +2285,12 @@ continuous on $[0,L].$
 \part{b}
 If  $f(0)=f(L)=0$, then
 $$
-f(x)=\sum_{n=1}^\infty b_n\sin{n\pi x\over L},
+f(x)=\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L},
 \quad 0\le x\le L,
 $$
 with
 \begin{equation} \label{eq:11.3.5}
-b_n=-{2L\over n^2\pi^2}\int_0^L f''(x)\sin{n\pi
+b_n=-\frac{2L}{n^2\pi^2}\int_0^L f''(x)\sin{n\pi
 x\over L}\,dx.
 \end{equation}
 
@@ -2319,7 +2303,7 @@ f(x)=
 $$
 with
 \begin{equation} \label{eq:11.3.6}
-c_n=-{8L\over(2n-1)^2\pi^2}\int_0^L f''(x)\cos{(2n-1)\pi x\over2L}
+c_n=-\frac{8L}{(2n-1)^2\pi^2}\int_0^L f''(x)\cos{(2n-1)\pi x\over2L}
 \,dx.
 \end{equation}
 
@@ -2332,7 +2316,7 @@ f(x)=
 $$
 with
 \begin{equation} \label{eq:11.3.7}
-d_n=-{8L\over(2n-1)^2\pi^2}\int_0^L f''(x)\sin{(2n-1)\pi x\over2L}
+d_n=-\frac{8L}{(2n-1)^2\pi^2}\int_0^L f''(x)\sin{(2n-1)\pi x\over2L}
 \,dx.
 \end{equation}
 \end{theorem}
@@ -2347,21 +2331,21 @@ know that
 $a_0$ is as in
 (\ref{eq:11.3.4}). If  $n\ge1$, integrating twice by parts yields
 \begin{eqnarray*}
-a_n&=& {2\over L}\int_0^L f(x)\cos{n\pi x\over L}\,dx\\
-&=&{2\over n\pi}\left[f(x)\sin{n\pi x\over L}\lims0L
--\int_0^Lf'(x)\sin{n\pi x\over L}\,dx\right]\\
-&=&-{2\over n\pi}
-\int_0^Lf'(x)\sin{n\pi x\over L}\,dx
+a_n&=& \frac{2}{L}\int_0^L f(x)\cos\frac{n\pi x}{L}\,dx\\
+&=&\frac{2}{n\pi}\left[f(x)\sin\frac{n\pi x}{L}\lims0L
+-\int_0^Lf'(x)\sin\frac{n\pi x}{L}\,dx\right]\\
+&=&-\frac{2}{n\pi}
+\int_0^Lf'(x)\sin\frac{n\pi x}{L}\,dx
 \mbox{ (since $\sin0=\sin n\pi=0$)}\\
-&=&{2L\over n^2\pi^2}\left[f'(x)\cos{n\pi x\over L}\lims0L
--\int_0^Lf''(x)\cos{n\pi x\over L}\right]\,dx\\
+&=&\frac{2L}{n^2\pi^2}\left[f'(x)\cos\frac{n\pi x}{L}\lims0L
+-\int_0^Lf''(x)\cos\frac{n\pi x}{L}\right]\,dx\\
 &=&
--{2L\over n^2\pi^2}\int_0^Lf''(x)\cos{n\pi x\over L}\,dx
+-\frac{2L}{n^2\pi^2}\int_0^Lf''(x)\cos\frac{n\pi x}{L}\,dx
 \mbox{ (since $f'(0)=f'(L)=0$)}\\
-&=&-{2L^2\over n^3\pi^3}\left[f''(x)\sin{n\pi x\over L}\lims0L
--\int_0^Lf'''(x)\sin{n\pi x\over L}\,dx\right]\\
+&=&-\frac{2L^2}{n^3\pi^3}\left[f''(x)\sin\frac{n\pi x}{L}\lims0L
+-\int_0^Lf'''(x)\sin\frac{n\pi x}{L}\,dx\right]\\
 &=&
-{2L^2\over n^3\pi^3}\int_0^Lf'''(x)\sin{n\pi x\over L}\,dx
+\frac{2L^2}{n^3\pi^3}\int_0^Lf'''(x)\sin\frac{n\pi x}{L}\,dx
 \mbox{ (since $\sin0=\sin n\pi=0$).}
 \end{eqnarray*}
 (By an argument similar to one used in the proof of Theorem~8.3.1,
@@ -2380,31 +2364,28 @@ on $[0,L]$.
 \solution
 Here
 $$
-a_0={1\over L}\int_0^L(3Lx^2-2x^3)\,dx={1\over
-L}\left(Lx^3-{x^4\over2}
-\right)\lims0L={L^3\over2}
+a_0=\frac{1}{L}\int_0^L(3Lx^2-2x^3)\,dx=\frac{1}{L}\left(Lx^3-\frac{x^4}{2}
+\right)\lims0L=\frac{L^3}{2}
 $$
 and
 $$
-a_n={2\over L}\int_0^L(3Lx^2-2x^3)\cos{n\pi x\over L}\,dx,\quad n\ge1.
+a_n=\frac{2}{L}\int_0^L(3Lx^2-2x^3)\cos\frac{n\pi x}{L}\,dx,\quad n\ge1.
 $$
 Evaluating this integral directly is laborious.
 However, since $f'(x)=6Lx-6x^2$, we see that $f'(0)=f'(L)=0$.
 Since $f'''(x)=-12$, we see from (\ref{eq:11.3.4}) that if $n\ge1$ then
 \begin{eqnarray*}
-a_n&=&-{24L^2\over n^3\pi^3}\int_0^L\sin{n\pi x\over L}\,dx
-={24L^3\over n^4\pi^4}\cos{n\pi x\over L}\lims0L={24L^3\over
-n^4\pi^4}[(-1)^n-1]\\
+a_n&=&-\frac{24L^2}{n^3\pi^3}\int_0^L\sin\frac{n\pi x}{L}\,dx
+=\frac{24L^3}{n^4\pi^4}\cos\frac{n\pi x}{L}\lims0L=\frac{24L^3}{n^4\pi^4}[(-1)^n-1]\\
 &=&
 \left\{\begin{array}{cl}
-\dst-{48L^3\over(2m-1)^4\pi^4}&\mbox{if  $n=2m-1$},\\
+\dst-\frac{48L^3}{(2m-1)^4\pi^4}&\mbox{if  $n=2m-1$},\\
 0&\mbox{if $n=2m$.}
 \end{array}\right.
 \end{eqnarray*}
 Therefore
 $$
-C(x)={L^3\over2}-{48L^3\over\pi^4}\sum_{n=1}^\infty{1\over
-(2n-1)^4}\cos{(2n-1)\pi x\over L}.
+C(x)=\frac{L^3}{2}-\frac{48L^3}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\cos{(2n-1)\pi x\over L}.
 $$
 
 
@@ -2419,18 +2400,17 @@ Since $f(0)=f(L)=0$ and $f''(x)=6(x-L)$, we see from (\ref{eq:11.3.5})
 that
 \begin{eqnarray*}
 b_n&=&-
-{12L\over n^2\pi^2}\int_0^L(x-L)\sin{n\pi x\over L}\,dx\\
-&=&{12L^2\over n^3\pi^3}\left[(x-L)\cos{n\pi x\over L}\lims0L
--\int_0^L\cos{n\pi x\over L}\,dx\right]\\
-&=&{12L^2\over n^3\pi^3}\left[L-\frac{L}{n\pi}\sin\frac{n\pi
+\frac{12L}{n^2\pi^2}\int_0^L(x-L)\sin\frac{n\pi x}{L}\,dx\\
+&=&\frac{12L^2}{n^3\pi^3}\left[(x-L)\cos\frac{n\pi x}{L}\lims0L
+-\int_0^L\cos\frac{n\pi x}{L}\,dx\right]\\
+&=&\frac{12L^2}{n^3\pi^3}\left[L-\frac{L}{n\pi}\sin\frac{n\pi
 x}{L}\lims0L\right]
-={12L^3\over
-n^3\pi^3}.
+=\frac{12L^3}{n^3\pi^3}.
 \end{eqnarray*}
 Therefore
 $$
-S(x)=\dst{12L^3\over\pi^3}\sum_{n=1}^\infty{1\over n^3}
-\sin{n\pi x\over L}.
+S(x)=\dst\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
+\sin\frac{n\pi x}{L}.
 $$
 
 
@@ -2445,20 +2425,20 @@ Since $f'(0)=f(L)=0$ and $f''(x)=2(9x-4L)$, we see from (\ref{eq:11.3.6})
 that
 \begin{eqnarray*}
 c_n&=&
--{16L\over(2n-1)^2\pi^2}
+-\frac{16L}{(2n-1)^2\pi^2}
 \int_0^L(9x-4L)\cos{(2n-1)\pi x\over2L}\,dx\\
-&=&-{32L^2\over(2n-1)^3\pi^3}\left[(9x-4L)\sin{(2n-1)\pi x\over2L}
+&=&-\frac{32L^2}{(2n-1)^3\pi^3}\left[(9x-4L)\sin{(2n-1)\pi x\over2L}
 \lims0L-9\int_0^L\sin{(2n-1)\pi x\over2L}\right]\,dx\\
-&=&-{32L^2\over(2n-1)^3\pi^3}
-\left[(-1)^{n+1}5L+{18L\over(2n-1)\pi}\cos{(2n-1)\pi x\over2L}
+&=&-\frac{32L^2}{(2n-1)^3\pi^3}
+\left[(-1)^{n+1}5L+\frac{18L}{(2n-1)\pi}\cos{(2n-1)\pi x\over2L}
 \lims0L\right] \\
-&=&{32L^3\over(2n-1)^3\pi^3}
-\left[(-1)^n5+{18\over(2n-1)\pi}\right].
+&=&\frac{32L^3}{(2n-1)^3\pi^3}
+\left[(-1)^n5+\frac{18}{(2n-1)\pi}\right].
 \end{eqnarray*}
 Therefore
 $$
-C_M(x)=\dst{32L^3\over\pi^3}\sum_{n=1}^\infty{1\over(2n-1)^3}\left[
-(-1)^n5+{18\over(2n-1)\pi}\right]\cos{(2n-1)\pi
+C_M(x)=\dst\frac{32L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
+(-1)^n5+\frac{18}{(2n-1)\pi}\right]\cos{(2n-1)\pi
 x\over2L}.
 $$
 
@@ -2474,19 +2454,19 @@ on $[0,L]$.
 Since $f(0)=f'(L)=0$, and $f''(x)=6(2x-3L)$, we see from (\ref{eq:11.3.7})
 that
 \begin{eqnarray*}
-d_n&=&-\dst{48L\over(2n-1)^2\pi^2}\int_0^L(2x-3L)
+d_n&=&-\dst\frac{48L}{(2n-1)^2\pi^2}\int_0^L(2x-3L)
 \sin{(2n-1)\pi x\over2L}\,dx\\
-&=&\dst{96L^2\over(2n-1)^3\pi^3}\left[(2x-3L)\cos{(2n-1)\pi
+&=&\dst\frac{96L^2}{(2n-1)^3\pi^3}\left[(2x-3L)\cos{(2n-1)\pi
 x\over2L}\lims0L-2\int_0^L\cos{(2n-1)\pi x\over2L}\,dx\right]\\
-&=&\dst{96L^2\over(2n-1)^3\pi^3}\left[3L-{4L\over(2n-1)\pi}
+&=&\dst\frac{96L^2}{(2n-1)^3\pi^3}\left[3L-\frac{4L}{(2n-1)\pi}
 \sin{(2n-1)\pi x\over2L}\lims0L\right]\\
-&=&\dst{96L^3\over(2n-1)^3\pi^3}\left[3+(-1)^n{4\over(2n-1)\pi}\right].
+&=&\dst\frac{96L^3}{(2n-1)^3\pi^3}\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right].
 \end{eqnarray*}
 Therefore
 $$
 S_M(x)
-=\dst{96L^3\over\pi^3}\sum_{n=1}^\infty
-{1\over(2n-1)^3}\left[3+(-1)^n{4\over(2n-1)\pi}\right]\sin{(2n-1)\pi
+=\dst\frac{96L^3}{\pi^3}\sum_{n=1}^\infty
+\frac{1}{(2n-1)^3}\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin{(2n-1)\pi
 x\over2L}.
 $$
 
@@ -2517,7 +2497,7 @@ $f(x)=\sin kx$\, ($k\ne$ integer);\quad    $[0,\pi]$
 \item\label{exer:11.3.5} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2}\\0,&{L\over2}<x<L;
+1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
 \end{array}\right.$ \quad $[0,L]$
 
 \item\label{exer:11.3.6}
@@ -2559,14 +2539,14 @@ $f(x)=\cos kx$\, ($k\ne$ integer);  \quad $[0,\pi]$
 \item\label{exer:11.3.14} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2}\\0,&{L\over2}<x<L;
+1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
 \end{array}\right.$ \quad $[0,L]$
 
 
 \item\label{exer:11.3.15} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-x,&0\le x\le{L\over2},\\L-x,&{L\over2}\le x\le L;
+x,&0\le x\le\frac{L}{2},\\L-x,&\frac{L}{2}\le x\le L;
 \end{array}\right.$
 \quad $[0,L]$.
 
@@ -2600,7 +2580,7 @@ $f(x)=x^2$;  \quad $[0,L]$
 \item\label{exer:11.3.21} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2}\\0,&{L\over2}<x<L;
+1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
 \end{array}\right.$ \quad $[0,L]$
 
 
@@ -2631,7 +2611,7 @@ $f(x)=x^2$;  \quad $[0,L]$
 \item\label{exer:11.3.27} \Cex
 $f(x)=
 \left\{\begin{array}{cl}
-1,&0\le x\le{L\over2}\\0,&{L\over2}<x<L;
+1,&0\le x\le\frac{L}{2}\\0,&\frac{L}{2}<x<L;
 \end{array}\right.$\quad  $[0,L]$
 
 \item\label{exer:11.3.28}
@@ -2673,7 +2653,7 @@ suppose  $f''(0)=f''(L)=0$, $f'''$ is continuous,  and $f^{(4)}$
 is piecewise continuous on $[0,L]$.
 Show that
 $$
-b_n={2L^3\over n^4\pi^4}\int_0^L f^{(4)}(x)\sin{n\pi
+b_n=\frac{2L^3}{n^4\pi^4}\int_0^L f^{(4)}(x)\sin{n\pi
 x\over L}\,dx,
 \quad n\ge1.
 $$
@@ -2714,7 +2694,7 @@ suppose
 $f''(L)=0$, $f''$ is continuous, and $f'''$ is piecewise continuous on
 $[0,L]$. Show that
 $$
-c_n={16L^2\over(2n-1)^3\pi^3}\int_0^L f'''(x)\sin{(2n-1)\pi x\over2L}
+c_n=\frac{16L^2}{(2n-1)^3\pi^3}\int_0^L f'''(x)\sin{(2n-1)\pi x\over2L}
 \,dx,\quad n\ge1.
 $$
 \end{alist}
@@ -2760,7 +2740,7 @@ suppose
 $f''(0)=0$, $f''$ is continuous, and $f'''$ is piecewise continuous on
 $[0,L]$. Show that
 $$
-d_n=-{16L^2\over(2n-1)^3\pi^3}\int_0^L f'''(x)\cos{(2n-1)\pi x\over2L}
+d_n=-\frac{16L^2}{(2n-1)^3\pi^3}\int_0^L f'''(x)\cos{(2n-1)\pi x\over2L}
 \,dx,\quad n\ge1.
 $$
 \end{alist}
