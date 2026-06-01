@@ -62,6 +62,14 @@ filecolor = blue,
 
 \newcommand{\laplace}{{\mathcal L}}
 
+\newcommand{\amatrix}[2]{
+ \left[
+  \begin{matrix}#1\end{matrix}
+ \hspace{\tabcolsep}\middle|\hspace{\tabcolsep}
+  \begin{matrix}#2\end{matrix}
+ \right]
+}
+
 \ExplSyntaxOn
 % TODO?
 \keys_define:nn { zref-clever/reference }
