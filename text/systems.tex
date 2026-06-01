@@ -52,11 +52,11 @@ solutions, respectively. Salt solutions are simultaneously added to
 both tanks from external sources, pumped from each tank to the other,
 and drained from both tanks (\zcref{figure:10.1.1}). A solution with
 $1$ pound of salt per gallon is pumped into $T_1$ from an external source
-at $5$~gal/min, and a solution with $2$ pounds of salt per gallon is
-pumped into $T_2$ from an external source at $4$~gal/min. The solution
-from $T_1$ is pumped into $T_2$ at 2 gal/min, and the solution from
-$T_2$ is pumped into $T_1$ at $3$ gal/min. $T_1$ is drained at $6$~gal/min
-and $T_2$ is drained at 3~gal/min. Let $Q_1(t)$ and $Q_2(t)$ be the
+at \qty{5}{\gallon\per\minute}, and a solution with $2$ pounds of salt per gallon is
+pumped into $T_2$ from an external source at \qty{4}{\gallon\per\minute}. The solution
+from $T_1$ is pumped into $T_2$ at \qty{2}{\gallon\per\minute}, and the solution from
+$T_2$ is pumped into $T_1$ at \qty{3}{\gallon\per\minute}. $T_1$ is drained at \qty{6}{\gallon\per\minute}
+and $T_2$ is drained at \qty{3}{\gallon\per\minute}. Let $Q_1(t)$ and $Q_2(t)$ be the
 number of pounds of salt in $T_1$ and $T_2$, respectively, at time
 $t>0$. Derive a system of differential equations for $Q_1$ and $Q_2$.
 Assume that both mixtures are well stirred.
@@ -73,7 +73,7 @@ Assume that both mixtures are well stirred.
 
 \solution
 As in \zcref{sec:cooling_mixing}, let \emph{\color{blue}rate in} and
-\emph{\color{blue}rate out} denote the rates (lb/min) at which salt enters and
+\emph{\color{blue}rate out} denote the rates (\unit{\pound\per\minute}) at which salt enters and
 leaves a tank; thus,
 \begin{align*}
 Q_1'&=(\text{rate in})_1-(\text{rate out})_1,\\
@@ -96,8 +96,8 @@ Therefore
 \begin{equation} \label{eq:10.1.1}
 \textrm{(rate in)}_1= 5+\frac{1}{100}Q_2.
 \end{equation}
-Solution leaves $T_1$  at the rate of 8~gal/min, since 6~gal/min are
-drained and 2~gal/min are pumped to $T_2$; hence,
+Solution leaves $T_1$  at the rate of \qty{8}{\gallon\per\minute}, since \qty{6}{\gallon\per\minute} are
+drained and \qty{2}{\gallon\per\minute} are pumped to $T_2$; hence,
 \begin{equation} \label{eq:10.1.2}
 (\textrm{rate out})_1
 =(\unit{\pound\per\gallon}\text{ in }T_1)\times \qty{8}{\gallon\per\minute}
@@ -479,24 +479,24 @@ h=\frac{b-t_0}{n}.
 \]
 We'll denote the approximate values of $y_1$ and $y_2$ at these
 points
-by $y_{10},y_{11},\dots,y_{1n}$ and
- $y_{20},y_{21},\dots,y_{2n}$.
+by $y_{1,0},y_{1,1},\dots,y_{1,n}$ and
+ $y_{2,0},y_{2,1},\dots,y_{2,n}$.
 The Runge-Kutta method computes these approximate values as follows:
-given $y_{1i}$ and $y_{2i}$, compute
+given $y_{1,i}$ and $y_{2,i}$, compute
 \begin{align*}
-I_{1i}&=g_1(t_i,y_{1i},y_{2i}),\\
-J_{1i}&=g_2(t_i,y_{1i},y_{2i}),\\
-I_{2i}&=g_1\left(t_i+\frac{h}{2},y_{1i}+\frac{h}{2}I_{1i},y_{2i}+\frac{h}{2}J_{1i}\right),\\
-J_{2i}&=g_2\left(t_i+\frac{h}{2},y_{1i}+\frac{h}{2}I_{1i},y_{2i}+\frac{h}{2}J_{1i}\right),\\
-I_{3i}&=g_1\left(t_i+\frac{h}{2},y_{1i}+\frac{h}{2}I_{2i},y_{2i}+\frac{h}{2}J_{2i}\right),\\
-J_{3i}&=g_2\left(t_i+\frac{h}{2},y_{1i}+\frac{h}{2}I_{2i},y_{2i}+\frac{h}{2}J_{2i}\right),\\
-I_{4i}&=g_1(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),\\
-J_{4i}&=g_2(t_i+h,y_{1i}+hI_{3i},y_{2i}+hJ_{3i}),
+I_{1,i}&=g_1(t_i,y_{1,i},y_{2,i}),\\
+J_{1,i}&=g_2(t_i,y_{1,i},y_{2,i}),\\
+I_{2,i}&=g_1\left(t_i+\frac{h}{2},y_{1,i}+\frac{h}{2}I_{1,i},y_{2,i}+\frac{h}{2}J_{1,i}\right),\\
+J_{2,i}&=g_2\left(t_i+\frac{h}{2},y_{1,i}+\frac{h}{2}I_{1,i},y_{2,i}+\frac{h}{2}J_{1,i}\right),\\
+I_{3,i}&=g_1\left(t_i+\frac{h}{2},y_{1,i}+\frac{h}{2}I_{2,i},y_{2,i}+\frac{h}{2}J_{2,i}\right),\\
+J_{3,i}&=g_2\left(t_i+\frac{h}{2},y_{1,i}+\frac{h}{2}I_{2,i},y_{2,i}+\frac{h}{2}J_{2,i}\right),\\
+I_{4,i}&=g_1(t_i+h,y_{1,i}+hI_{3,i},y_{2,i}+hJ_{3,i}),\\
+J_{4,i}&=g_2(t_i+h,y_{1,i}+hI_{3,i},y_{2,i}+hJ_{3,i}),
 \end{align*}
 and
 \begin{align*}
-y_{1,i+1}&=y_{1i}+\frac{h}{6}(I_{1i}+2I_{2i}+2I_{3i}+I_{4i}),\\
-y_{2,i+1}&=y_{2i}+\frac{h}{6}(J_{1i}+2J_{2i}+2J_{3i}+J_{4i})
+y_{1,i+1}&=y_{1,i}+\frac{h}{6}(I_{1,i}+2I_{2,i}+2I_{3,i}+I_{4,i}),\\
+y_{2,i+1}&=y_{2,i}+\frac{h}{6}(J_{1,i}+2J_{2,i}+2J_{3,i}+J_{4,i})
 \end{align*}
 for $i=0$, \dots, $n-1$. Under appropriate conditions on $g_1$ and $g_2$,
 it can be shown that the global truncation error for the Runge-Kutta
@@ -509,12 +509,12 @@ method is $O(h^4)$, as in the scalar case considered in
 
 \item\label{exer:10.1.1}Tanks $T_1$ and $T_2$ contain 50 gallons and 100 gallons of salt
 solutions, respectively. A solution with 2 pounds of salt per gallon
-is pumped into $T_1$ from an external source at $1$~gal/min, and a
+is pumped into $T_1$ from an external source at \qty{1}{\gallon\per\minute}, and a
 solution with $3$ pounds of salt per gallon is pumped into $T_2$ from an
-external source at $2$~gal/min. The solution from $T_1$ is pumped into
-$T_2$ at $3$ gal/min, and the solution from $T_2$ is pumped into $T_1$
-at $4$ gal/min. $T_1$ is drained at $2$~gal/min and $T_2$ is drained at
-$1$~gal/min. Let $Q_1(t)$ and $Q_2(t)$ be the number of pounds of salt
+external source at \qty{2}{\gallon\per\minute}. The solution from $T_1$ is pumped into
+$T_2$ at \qty{3}{\gallon\per\minute}, and the solution from $T_2$ is pumped into $T_1$
+at \qty{4}{\gallon\per\minute}. $T_1$ is drained at \qty{2}{\gallon\per\minute} and $T_2$ is drained at
+\qty{1}{\gallon\per\minute}. Let $Q_1(t)$ and $Q_2(t)$ be the number of pounds of salt
 in $T_1$ and $T_2$, respectively, at time $t>0$. Derive a system of
 differential equations for $Q_1$ and $Q_2$. Assume that both mixtures
 are well stirred.
@@ -522,11 +522,11 @@ are well stirred.
 
 \item\label{exer:10.1.2}Two 500 gallon tanks $T_1$ and $T_2$ initially contain 100
 gallons each of salt solution. A solution with $2$ pounds of salt per
-gallon is pumped into $T_1$ from an external source at $6$~gal/min, and
+gallon is pumped into $T_1$ from an external source at \qty{6}{\gallon\per\minute}, and
 a solution with $1$ pound of salt per gallon is pumped into $T_2$ from
-an external source at $5$~gal/min. The solution from $T_1$ is pumped
-into $T_2$ at $2$ gal/min, and the solution from $T_2$ is pumped into
-$T_1$ at $1$ gal/min. Both tanks are drained at $3$~gal/min. Let $Q_1(t)$
+an external source at \qty{5}{\gallon\per\minute}. The solution from $T_1$ is pumped
+into $T_2$ at \qty{2}{\gallon\per\minute}, and the solution from $T_2$ is pumped into
+$T_1$ at \qty{1}{\gallon\per\minute}. Both tanks are drained at \qty{3}{\gallon\per\minute}. Let $Q_1(t)$
 and $Q_2(t)$ be the number of pounds of salt in $T_1$ and $T_2$,
 respectively, at time $t>0$. Derive a system of differential equations
 for $Q_1$ and $Q_2$ that's valid until a tank is about to overflow.
@@ -2073,13 +2073,11 @@ To find the  eigenvectors, we must solve the system
 with $\lambda=2$, $3$, $-1$.  With $\lambda=2$, the augmented matrix of
 \eqref{eq:10.4.14} is
 \[
-\begin{bmatrix}
-1&-1&-1&\vdots&0\\-2&1&2&\vdots&0\\4&-1&-4&\vdots&0
-\end{bmatrix},
+\amatrix{1&-1&-1\\-2&1&2\\4&-1&-4}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&0&-1&\vdots&0\\0&1&0&\vdots&0\\0&0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&0&-1\\0&1&0\\0&0&0}{0\\0\\0}.
 \]
 Hence,  $x_1=x_3$ and $x_2=0$.  Taking $x_3=1$ yields
 \[
@@ -2088,13 +2086,11 @@ Hence,  $x_1=x_3$ and $x_2=0$.  Taking $x_3=1$ yields
 as a solution of  \eqref{eq:10.4.12}.  With $\lambda=3$, the augmented
 matrix of  \eqref{eq:10.4.14} is
 \[
-\begin{bmatrix}
-0&-1&-1&\vdots&0\\-2&0& 2&\vdots&0\\4&-1&-5&\vdots&0
-\end{bmatrix},
+\amatrix{0&-1&-1\\-2&0& 2\\4&-1&-5}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&0&-1&\vdots&0\\0&1&1&\vdots&0\\0&0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&0&-1\\0&1&1\\0&0&0}{0\\0\\0}.
 \]
 Hence,  $x_1=x_3$ and $x_2=-x_3$. Taking $x_3=1$ yields
 \[
@@ -2103,15 +2099,11 @@ Hence,  $x_1=x_3$ and $x_2=-x_3$. Taking $x_3=1$ yields
 as a solution of  \eqref{eq:10.4.12}.  With $\lambda=-1$, the augmented
 matrix of  \eqref{eq:10.4.14} is
 \[
-\begin{bmatrix}
-4&-1&-1&\vdots&0\\-2&4&2&\vdots&0\\4&-1&-1&\vdots&0
-\end{bmatrix},
+\amatrix{4&-1&-1\\-2&4&2\\4&-1&-1}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1&0&-\frac{1}{7}&\vdots&0\\0&1&\frac{3}{7}&\vdots&0\\0&0&0&\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-\frac{1}{7}\\0&1&\frac{3}{7}\\0&0&0}{0\\0\\0}.
 \]
 Hence, $x_1=x_3/7$ and $x_2=-3x_3/7$.  Taking $x_3=7$ yields
 \[
@@ -2175,13 +2167,11 @@ $\lambda_2=-5$ is an eigenvalue of multiplicity $2$. Eigenvectors
 associated with $\lambda_1=1$ are solutions of the system with
 augmented matrix
 \[
-\begin{bmatrix}-4&2&2&\vdots&0\\2&-4&2&\vdots&0\\2&2&-4&\vdots&0\end{bmatrix},
+\amatrix{-4&2&2\\2&-4&2\\2&2&-4}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1&0&-1&\vdots& 0\\0&1&-1 &\vdots& 0\\0&0&0&\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-1\\0&1&-1\\0&0&0}{0\\0\\0}.
 \]
 Hence, $x_1=x_2=x_3$, and we choose $x_3=1$ to obtain the solution
 \begin{equation}\label{eq:10.4.17}
@@ -2191,9 +2181,7 @@ of  \eqref{eq:10.4.16}.  Eigenvectors associated with $\lambda_2=-5$
 are solutions of the system
 with  augmented matrix
 \[
-\begin{bmatrix}
-2&2&2&\vdots&0\\2&2&2&\vdots&0\\2&2&2&\vdots&0
-\end{bmatrix}.
+\amatrix{2&2&2\\2&2&2\\2&2&2}{0\\0\\0}.
 \]
 Hence, the components of these eigenvectors need only satisfy the single
 condition
@@ -2293,15 +2281,19 @@ and the next figures an arrow through a point indicates the
 direction of motion along the trajectory through the point.)
 
 \noindent
-\begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100401}
+\begin{minipage}{0.48\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={A vector field in the y1 y2 plane with all arrows directed away from the origin. Several half lines begin at the origin.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100401}
 \captionof{figure}{Trajectories of a $2\times2$ system with a repeated positive eigenvalue}
 \label{figure:10.4.1}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100402}
+\begin{minipage}{0.48\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={A vector field in the y1 y2 plane with all arrows directed towards the origin. Several half lines end at the origin.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100402}
 \captionof{figure}{Trajectories of a $2\times2$ system with a repeated negative
 eigenvalue}
 \label{figure:10.4.2}
@@ -2364,15 +2356,18 @@ Henceforth $\|\vect{u}\|$  denote the length of the vector
 $\vect{u}$.
 
 \noindent
-\begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100403}
+\begin{minipage}{0.48\linewidth}
+\tagstructbegin{tag=Sect}\includegraphics[alt={The dashed lines L1 and L2 determine whether c2 and c1 are positive or negative.  The vectors x1 and x2 point along L1 and L2, respectively.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100403}
 \captionof{figure}{Four open sectors bounded by $L_1$ and $L_2$}
 \label{figure:10.4.3}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100404}
+\begin{minipage}{0.48\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={In the y1 y2 plane, the line L2 is where y1=y2, while Y1 is approximately given by 3y1+y2=0.  Vector field arrows point away from the origin, but tend to curve away from L1 to point parallel to L2.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100404}
 \captionof{figure}{Two positive eigenvalues; motion away from
 origin}
 \label{figure:10.4.4}
@@ -2414,14 +2409,18 @@ The direction of motion along each trajectory is toward the origin.
 
 \noindent
 \begin{minipage}[t]{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100405}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={In the y1 y2 plane, the line L2 is where y1=y2, while Y1 is approximately given by 3y1+y2=0.  Vector field arrows point toward the origin, but tend to curve to be parallel to L2 as they approach the origin.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100405}
 \captionof{figure}{Two negative eigenvalues; motion toward the origin}
 \label{figure:10.4.5}
 \tagstructend
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100406}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={In the y1 y2 plane, the line L2 is where y1=y2, while Y1 is approximately given by 3y1+y2=0.  Vector field arrows point towards the origin along L2 and away from the origin along L1, smoothly curving between the two.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100406}
 \captionof{figure}{Eigenvalues of different signs}
 \label{figure:10.4.6}
 \tagstructend
@@ -2680,14 +2679,11 @@ linearly independent eigenvectors.
 Hence, $\lambda=1$ is the only eigenvalue of $A$. The augmented
 matrix of the system $(A-I)\vect{X}=\vect{0}$ is
 \[
-\begin{bmatrix}
-10&-25&\vdots&0\\
-4&-10&\vdots&0
-\end{bmatrix},
+\amatrix{10&-25\\4&-10}{0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&-\dfrac{5}{2}&\vdots&0\\0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&-\frac52\\0&0}{0\\0}.
 \]
 Hence, $x_1=5x_2/2$ where $x_2$ is arbitrary. Therefore all
 eigenvectors of $A$ are scalar multiples of $\vect{x}_1=\twocol52$,
@@ -2791,11 +2787,11 @@ is a solution of \eqref{eq:10.5.6}. From \zcref{thmtype:10.5.1}, a second
 solution is given by $\vect{y}_2=\vect{u}e^t+\vect{X}te^t$, where
 $(A-I)\vect{u}=\vect{X}$. The augmented matrix of this system is
 \[
-\begin{bmatrix}10&-25&\vdots&5\\4&-10&\vdots&2\end{bmatrix},
+\amatrix{10&-25\\4&-10}{5\\2},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&-\frac{5}{2}&\vdots&\frac12\\0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&-\frac52\\0&0}{\frac12\\0}.
 \]
 Therefore the components of $\vect{u}$ must satisfy
 \[
@@ -2840,15 +2836,11 @@ $\lambda_2=-1$ with  multiplicity~$2$.
 
 Eigenvectors associated with $\lambda_1=1$ must satisfy $(A-I)\vect{x}=\vect{0}$. The augmented matrix of this system is
 \[
-\begin{bmatrix}
-2 & 4 & -10 &\vdots & 0\\2& 0 & -2 &\vdots & 0\\2 & 2 & -6 & \vdots & 0
-\end{bmatrix},
+\amatrix{2&4&-10\\2&0&-2\\2&2&-6}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1 & 0 & -1 &\vdots& 0\\  0 & 1 & -2&\vdots& 0\\ 0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-1\\0&1&-2\\0&0&0}{0\\0\\0}.
 \]
 Hence, $x_1 =x_3$ and  $x_2 =2 x_3$, where $x_3$ is arbitrary.
 Choosing $x_3=1$ yields the eigenvector
@@ -2863,15 +2855,11 @@ is a solution of  \eqref{eq:10.5.7}.
 
 Eigenvectors associated with $\lambda_2 =-1$ satisfy $(A+I)\vect{x}=\vect{0}$. The  augmented matrix of this system is
 \[
-\begin{bmatrix}
-4 & 4 & -10 &\vdots & 0\\ 2 & 2 & -2 &\vdots & 0\\2 & 2 & -4 &\vdots & 0
-\end{bmatrix},
+\amatrix{4&4&-10\\2&2&-2\\2&2&-4}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1 & 1 & 0 &\vdots& 0\\ 0 & 0 & 1&\vdots& 0\\ 0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&1&0\\0&0&1\\0&0&0}{0\\0\\0}.
 \]
 Hence, $x_3=0$ and $x_1 =-x_2$, where $x_2$ is
 arbitrary. Choosing $x_2=1$  yields the eigenvector
@@ -2893,15 +2881,11 @@ find a third solution of \eqref{eq:10.5.7} in the form
 where $\vect{u}$ is a solution of $(A+I)\vect{u}=\vect{x}_2$.
 The  augmented matrix  of this system is
 \[
-\begin{bmatrix}
-4 & 4 & -10 &\vdots & -1\\ 2 & 2 & -2 &\vdots & 1\\ 2 & 2 & -4 &\vdots & 0
-\end{bmatrix},
+\amatrix{4&4&-10\\2&2&-2\\2&2&-4}{-1\\1\\0},
 \]
-which is  row equivalent to
+which is row equivalent to
 \[
-\begin{bmatrix}
-1 & 1 & 0 &\vdots& 1\\ 0 & 0 & 1&\vdots& \frac{1}{2}\\ 0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&1&0\\0&0&1\\0&0&0}{1\\\frac12\\0}.
 \]
 Hence, $u_3=1/2$ and $u_1 =1-u_2$, where $u_2$  is
 arbitrary. Choosing $u_2=0$ yields
@@ -2979,15 +2963,11 @@ Hence, $\lambda_1=2$ is an eigenvalue of multiplicity $3$. The
 associated eigenvectors satisfy $(A-2I)\vect{x}=\vect{0}$. The augmented
 matrix of this system is
 \[
-\begin{bmatrix}
--1 & 1 & 1 &\vdots & 0\\1& 1 & -1 &\vdots & 0\\ 0 & 2 & 0 &\vdots & 0
-\end{bmatrix},
+\amatrix{-1&1&1\\1&1&-1\\0&2&0}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1 & 0 &- 1 &\vdots& 0\\ 0 & 1 & 0  &\vdots& 0\\ 0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-1\\0&1&0\\0&0&0}{0\\0\\0}.
 \]
 Hence, $x_1 =x_3$ and  $x_2 = 0$, so the eigenvectors are all scalar
 multiples of
@@ -3007,17 +2987,11 @@ We  now find a second solution of  \eqref{eq:10.5.11}  in the form
 where $\vect{u}$ satisfies $(A-2I)\vect{u}=\vect{x}_1$.
 The  augmented matrix  of this system is
 \[
-\begin{bmatrix}
--1 & 1 & 1 &\vdots & 1\\1& 1 & -1 &\vdots & 0\\ 0 & 2 & 0 &\vdots & 1
-\end{bmatrix},
+\amatrix{-1&1&1\\1&1&-1\\0&2&0}{1\\0\\1},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1 & 0 &- 1 &\vdots& -\frac{1}{2}\\
-0 & 1 & 0&\vdots& \frac{1}{2}\\
-0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-1\\0&1&0\\0&0&0}{-\frac12\\\frac12\\0}.
 \]
 Letting $u_3=0$ yields $u_1=-1/2$ and $u_2=1/2$; hence,
 \[
@@ -3036,19 +3010,11 @@ We  now find a third solution of  \eqref{eq:10.5.11}  in the form
 where $\vect{v}$ satisfies $(A-2I)\vect{v}=\vect{u}$.
 The  augmented matrix  of this system is
 \[
-\begin{bmatrix}
--1 & 1 & 1 &\vdots &-\frac{1}{2}\\
-1& 1 & -1 &\vdots & \frac{1}{2}\\
-0 & 2 & 0 &\vdots & 0
-\end{bmatrix},
+\amatrix{-1&1&1\\1&1&-1\\0&2&0}{-\frac12\\\frac12\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1 & 0 &- 1 &\vdots& \frac{1}{2}\\
-0 & 1 & 0&\vdots& 0\\
-0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-1\\0&1&0\\0&0&0}{\frac12\\0\\0}.
 \]
 Letting $v_3=0$ yields $v_1=1/2$ and $v_2=0$; hence,
 \[
@@ -3120,19 +3086,11 @@ an eigenvalue of multiplicity $3$.  The associated eigenvectors
 satisfy $(A-I)\vect{x}=\vect{0}$. The  augmented
 matrix of this system is
 \[
-\begin{bmatrix}
--1 & 0 & 1 &\vdots & 0\\
--1& 0 & 1 &\vdots & 0\\
--1 & 0 & 1 &\vdots & 0
-\end{bmatrix},
+\amatrix{-1&0&1\\-1&0&1\\-1&0&1}{0\\0\\0},
  \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1 & 0 &- 1 &\vdots& 0\\
-0 & 0 & 0  &\vdots& 0\\
-0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-1\\0&0&0\\0&0&0}{0\\0\\0}.
 \]
 Hence, $x_1 =x_3$ and  $x_2$ is arbitrary, so the eigenvectors are  of
 the form
@@ -3157,21 +3115,13 @@ find constants $\alpha$  and $\beta$ (not both zero) such that the system
 \end{equation}
 has a solution $\vect{u}$. The augmented matrix of this system is
 \[
-\begin{bmatrix}
--1 & 0 & 1 &\vdots &\alpha\\
--1& 0 & 1 &\vdots &\beta\\
--1 & 0 & 1 &\vdots &\alpha
-\end{bmatrix},
+\amatrix{-1&0&1\\-1&0&1\\-1&0&1}{\alpha\\\beta\\\alpha},
 \]
 which is row equivalent to
 \begin{equation}\label{eq:10.5.18}
-\begin{bmatrix}
-1 & 0 &- 1 &\vdots& -\alpha\\
-0 & 0 & 0&\vdots&\beta-\alpha\\
-0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-1\\0&0&0\\0&0&0}{-\alpha\\\beta-\alpha\\0}.
 \end{equation}
-Therefore  \eqref{eq:10.5.17} has a solution if and only if
+Therefore \eqref{eq:10.5.17} has a solution if and only if
 $\beta=\alpha$, where $\alpha$ is arbitrary. If
 $\alpha=\beta=1$ then \eqref{eq:10.5.12} and \eqref{eq:10.5.16} yield
 \[
@@ -3180,11 +3130,7 @@ $\alpha=\beta=1$ then \eqref{eq:10.5.12} and \eqref{eq:10.5.16} yield
 \]
 and the augmented matrix \eqref{eq:10.5.18}  becomes
 \[
-\begin{bmatrix}
-1 & 0 &- 1 &\vdots& -1\\
-0 & 0 & 0&\vdots& 0\\
-0 & 0 & 0 &\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-1\\0&0&0\\0&0&0}{-1\\0\\0}.
 \]
 This implies that $u_1=-1+u_3$, while  $u_2$  and $u_3$ are arbitrary.
 Choosing $u_2=u_3=0$  yields
@@ -3231,14 +3177,6 @@ the infinitely many solutions of
 \end{equation}
 We assume that $\lambda_1\ne0$.
 
-\begin{figure}[H]
-  \centering
-  \scalebox{.8}{
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig100501}}
-\caption{Positive and negative half-planes}
-  \label{figure:10.5.1}
-\end{figure}
-
 Let $L$ denote the line through the origin parallel to $\vect{X}$. By a
 \emph{\color{blue}half-line} of $L$ we mean either of the rays obtained by
 removing the origin from $L$. \zcref[S]{eq:10.5.20} is a parametric
@@ -3256,9 +3194,18 @@ $(y_1(0),y_2(0))$ defined by $\vect{y}(0)=c_1\vect{X}_1+c_2\vect{u}$ is
 on the trajectory, we can determine which half-plane contains the
 trajectory from the sign of $c_2$, as shown in
 \zcref{figure:10.5.1}.
+%
+\begin{figure}
+  \centering
+  \includegraphics[alt={A dashed line L and a vector x parallel to L.  A vector u has the same origin as x but points in a different direction.  On the "positive half-plane" where u points, c2 is positive.  On the "negative half-plane" where u does not point, c2 is negative.}
+  width=4.5in,height=2.6in,keepaspectratio]{fig100501}
+\caption{Positive and negative half-planes}
+  \label{figure:10.5.1}
+\end{figure}
+%
 For convenience we'll call the half-plane where $c_2>0$ the
-{\color{blue}\it
-positive half-plane\/}. Similarly, the-half plane where $c_2<0$ is
+{\color{blue}\itshape
+positive half-plane}. Similarly, the-half plane where $c_2<0$ is
 the \emph{\color{blue}negative half-plane}. You should convince yourself
 (\zcref{exer:10.5.35}) that even though there are infinitely
 many vectors $\vect{u}$ that satisfy \eqref{eq:10.5.21}, they all define
@@ -3315,29 +3262,36 @@ and the direction of $-\vect{X}$ as $\|\vect{y}\|\to\infty$.}
 \noindent
 \begin{minipage}{0.49\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100502}
+\includegraphics[alt={In the y1 y2 plane, the line L is approximately y2=3y1, with vector x parallel to L pointing up and right, and vector u perpendicular to L pointing down and right.  In the positive half-plane (with u), vector field arrows mostly go up and right.  In the negative half-plane, vector field arrows mostly go down and left.  Vectors point away from the origin along L and are continuously changing so that just counterclockwise of L the arrows still point away from the origin before quickly turning further counterclockwise to align with the rest of their half-plane.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100502}
 \captionof{figure}{Positive eigenvalue; motion away from the origin}
 \label{figure:10.5.2}
 \tagstructend
 \end{minipage}%
 \hfill
 \begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100503}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={The previous figure, but reflected across the line L.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100503}
 \captionof{figure}{Positive eigenvalue; motion away from the origin}
 \label{figure:10.5.3}
 \tagstructend
 \end{minipage}
 
 \noindent
-\begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100504}
+\begin{minipage}{0.48\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={The previous previous figure, but with vector field arrows and the u vector reversed.  The x vector is the same.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100504}
 \captionof{figure}{Negative eigenvalue; motion toward the origin}
 \label{figure:10.5.4}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100505}
+\begin{minipage}{0.48\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={The previous previous figure, but with vector field arrows and the u vector reversed.  The x vector is the same.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100505}
 \captionof{figure}{Negative eigenvalue; motion toward the origin}
 \label{figure:10.5.5}
 \tagstructend
@@ -3627,11 +3581,11 @@ in \eqref{eq:10.6.6} is
 Hence, $\lambda=1+4i$ is an eigenvalue of $A$. The associated
 eigenvectors satisfy $\left(A-\left(1+4i\right)I\right)\vect{X}=\vect{0}$. The augmented matrix of this system is
 \[
-\begin{bmatrix}3-4i&-5&\vdots&0\\5&-3-4i&\vdots&0\end{bmatrix},
+\amatrix{3-4i&-5\\5&-3-4i}{0\\0},
  \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&-\frac{3+4i}{5}&\vdots&0\\ 0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&-\frac{3+4i}{5}\\0&0}{0\\0}.
 \]
 Therefore $x_1=(3+4i)x_2/5$. Taking $x_2=5$ yields $x_1=3+4i$, so
 \[
@@ -3671,11 +3625,11 @@ Hence, $\lambda=1+3i$ is an eigenvalue of $A$. The associated
 eigenvectors satisfy $\left(A-(1+3i)I\right)\vect{X}=\vect{0}$. The
 augmented augmented matrix of this system is
 \[
-\begin{bmatrix}-15-3i&39&\vdots&0\\-6&15-3i&\vdots&0\end{bmatrix},
+\amatrix{-15-3i&39\\-6&15-3i}{0\\0},
  \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&\frac{-5+i}{2}&\vdots&0\\ 0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&\frac{-5+i}{2}\\0&0}{0\\0}.
 \]
 Therefore $x_1=(5-i)/2$. Taking $x_2=2$ yields $x_1=5-i$, so
 \[
@@ -3716,11 +3670,11 @@ Hence, the eigenvalues of $A$ are $\lambda_1=2$, $\lambda_2=i$, and
 $\lambda_3=-i$.
 The augmented matrix of $(A-2I)\vect{x}=\vect{0}$ is
 \[
-\begin{bmatrix}-7&5&4&\vdots&0\\-8&5&6&\vdots&0\\ 1&0&-2&\vdots&0\end{bmatrix},
+\amatrix{-7&5&4\\-8&5&6\\1&0&-2}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&0&-2&\vdots&0\\ 0&1&-2&\vdots&0\\ 0&0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&0&-2\\0&1&-2\\0&0&0}{0\\0\\0}.
 \]
 Therefore $x_1=x_2=2x_3$.  Taking $x_3=1$ yields
 \[
@@ -3734,17 +3688,11 @@ is a solution of  \eqref{eq:10.6.8}.
 
 The augmented  matrix of $(A-iI)\vect{x}=\vect{0}$ is
 \[
-\begin{bmatrix}
--5-i&5&4&\vdots&0\\
--8&7-i&6&\vdots&0\\
-\phantom{-}1&0&-i&\vdots&0
-\end{bmatrix},
+\amatrix{-5-i&5&4\\-8&7-i&6\\1&0&-i}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}
-1&0&-i&\vdots&0\\ 0&1&1-i&\vdots&0\\ 0&0&0&\vdots&0
-\end{bmatrix}.
+\amatrix{1&0&-i\\0&1&1-i\\0&0&0}{0\\0\\0}.
 \]
 Therefore $x_1=ix_3$ and $x_2=-(1-i)x_3$. Taking $x_3=1$ yields
 the eigenvector
@@ -3796,13 +3744,11 @@ Hence, the eigenvalues of $A$ are $\lambda_1=2$, $\lambda_2=2+2i$,
 and $\lambda_3=2-2i$.
 The augmented matrix of $(A-2I)\vect{x}=\vect{0}$ is
 \[
-\begin{bmatrix}
--1&-1&-2&\vdots&0\\1&1&2&\vdots&0\\ 1&-1&0&\vdots&0
-\end{bmatrix},
+\amatrix{-1&-1&-2\\1&1&2\\1&-1&0}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&0&1&\vdots&0\\ 0&1&1&\vdots&0\\ 0&0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&0&1\\0&1&1\\0&0&0}{0\\0\\0}.
 \]
 Therefore $x_1=x_2=-x_3$.  Taking $x_3=1$ yields
 \[
@@ -3816,13 +3762,11 @@ is a solution of  \eqref{eq:10.6.9}.
 
 The augmented  matrix of $\left(A-(2+2i)I\right)\vect{x}=\vect{0}$ is
 \[
-\begin{bmatrix}
--1-2i&-1&-2&\vdots&0\\ 1&1-2i&\phantom{-}2&\vdots&0\\ 1&-1&-2i&\vdots&0
-\end{bmatrix},
+\amatrix{-1-2i&-1&-2\\1&1-2i&2\\1&-1&-2i}{0\\0\\0},
 \]
 which is row equivalent to
 \[
-\begin{bmatrix}1&0&-i&\vdots&0\\ 0&1&i&\vdots&0\\ 0&0&0&\vdots&0\end{bmatrix}.
+\amatrix{1&0&-i\\0&1&i\\0&0&0}{0\\0\\0}.
 \]
 Therefore $x_1=ix_3$ and $x_2=-ix_3$. Taking $x_3=1$ yields
 the eigenvector
@@ -3974,17 +3918,19 @@ that $\vect{v}$ would have to be rotated by $\pi/2$ radians to bring it
 into coincidence with $\vect{u}$ (\zcref{figure:10.6.1,figure:10.6.2}).
 
 \noindent
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100601}
+\includegraphics[alt={A vector field in the y1 y2 plane circling clockwise around the origin. Solution curves form ellipses with a major radius twice as long as the minor radius, with the major axes pointing in the direction of u which is parallel to (1,2).  The vector v, parallel to (-2,1), is parallel to the minor axes.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100601}
 \captionof{figure}{Shadow trajectories traversed clockwise}
 \label{figure:10.6.1}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
+\begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100602}
+\includegraphics[alt={A vector field in the y1 y2 plane circling counterclockwise around the origin. Solution curves form ellipses with a major radius twice as long as the minor radius, with the minor axes pointing in the direction of u which is parallel to (1,2).  The vector v, parallel to (2,-1), is parallel to the major axes.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100602}
 \captionof{figure}{Shadow trajectories traversed counterclockwise}
 \label{figure:10.6.2}
 \tagstructend
@@ -4020,15 +3966,19 @@ the relative orientation of $\vect{u}$ and $\vect{v}$, as shown in
 \zcref{figure:10.6.5,figure:10.6.6}.
 
 \noindent
-\begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010603}
+\begin{minipage}{0.48\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={Similar to the previous previous figure, but now solution curves spiral outward.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig010603}
 \captionof{figure}{$\alpha>0$; shadow trajectory spiraling outward}
 \label{figure:10.6.3}
 \tagstructend
 \end{minipage}%
 \hfill
-\begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010604}
+\begin{minipage}{0.48\linewidth}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={Similar to the previous previous figure, but now solution curves spiral outward.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig010604}
 \captionof{figure}{$\alpha>0$; shadow trajectory spiraling outward}
 \label{figure:10.6.4}
 \tagstructend
@@ -4036,14 +3986,18 @@ the relative orientation of $\vect{u}$ and $\vect{v}$, as shown in
 
 \noindent
 \begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig010605}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={Similar to the previous previous figure, but now solution curves spiral inward.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig010605}
 \captionof{figure}{$\alpha<0$; shadow trajectory spiraling inward}
 \label{figure:10.6.5}
 \tagstructend
 \end{minipage}%
 \hfill
 \begin{minipage}{0.49\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[width=\linewidth,height=2.44in,keepaspectratio]{fig100606}
+\tagstructbegin{tag=Sect}
+\includegraphics[alt={Similar to the previous previous figure, but now solution curves spiral inward.},
+width=\linewidth,height=2.44in,keepaspectratio]{fig100606}
 \captionof{figure}{$\alpha<0$; shadow trajectory spiraling inward}
 \label{figure:10.6.6}
 \tagstructend
@@ -4208,7 +4162,7 @@ where $c_1,$ $c_2,$ \dots, $c_n$  are constants.
 
 We now discuss an extension of the method of variation of parameters
 to linear nonhomogeneous systems. This method will produce a
-particular solution of a nonhomogenous system $\vect{y}'=A(t)\vect{y}+\vect{F}(t)$ provided that we know a fundamental matrix for the
+particular solution of a nonhomogeneous system $\vect{y}'=A(t)\vect{y}+\vect{F}(t)$ provided that we know a fundamental matrix for the
 complementary system. To derive the method, suppose $Y$ is a
 fundamental matrix for the complementary system; that is,
 \[
