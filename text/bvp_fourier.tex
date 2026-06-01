@@ -2043,11 +2043,11 @@ $$
 
 We'll  call this expansion the  {\color{blue}\it mixed Fourier cosine
 series\/} of $f$ on $[0,L]$, because the boundary conditions
-of (\ref{eq:11.3.2}) are ``mixed'' in that they require $y$
+of \eqref{eq:11.3.2} are ``mixed'' in that they require $y$
 to be zero at
  one boundary point and $y'$ to be  zero at the other. By contrast,
 the ``ordinary'' Fourier cosine series is associated with
-(\ref{eq:11.3.1}), where the boundary conditions require that $y'$
+\eqref{eq:11.3.1}, where the boundary conditions require that $y'$
 be zero at both endpoints.
 
 It can be shown (Exercise~\ref{exer:11.3.57}) that
@@ -2325,11 +2325,11 @@ d_n=-\frac{8L}{(2n-1)^2\pi^2}\int_0^L f''(x)\sin{(2n-1)\pi x\over2L}
 \proof  We'll prove \part{a} and leave the rest to you
 (Exercises~\ref{exer:11.3.35}, \ref{exer:11.3.42}, and \ref{exer:11.3.50}).  Since
 $f$ is continuous on
-$[0,L]$, Theorem~\ref{thmtype:11.3.1} implies (\ref{eq:11.3.3}) with $a_0$,
+$[0,L]$, Theorem~\ref{thmtype:11.3.1} implies \eqref{eq:11.3.3} with $a_0$,
 $a_1$, $a_2$,... as defined in Theorem~\ref{thmtype:11.3.1}. We already
 know that
 $a_0$ is as in
-(\ref{eq:11.3.4}). If  $n\ge1$, integrating twice by parts yields
+\eqref{eq:11.3.4}. If  $n\ge1$, integrating twice by parts yields
 \begin{eqnarray*}
 a_n&=& \frac{2}{L}\int_0^L f(x)\cos\frac{n\pi x}{L}\,dx\\
 &=&\frac{2}{n\pi}\left[f(x)\sin\frac{n\pi x}{L}\lims0L
@@ -2373,7 +2373,7 @@ a_n=\frac{2}{L}\int_0^L(3Lx^2-2x^3)\cos\frac{n\pi x}{L}\,dx,\quad n\ge1.
 $$
 Evaluating this integral directly is laborious.
 However, since $f'(x)=6Lx-6x^2$, we see that $f'(0)=f'(L)=0$.
-Since $f'''(x)=-12$, we see from (\ref{eq:11.3.4}) that if $n\ge1$ then
+Since $f'''(x)=-12$, we see from \eqref{eq:11.3.4} that if $n\ge1$ then
 \begin{eqnarray*}
 a_n&=&-\frac{24L^2}{n^3\pi^3}\int_0^L\sin\frac{n\pi x}{L}\,dx
 =\frac{24L^3}{n^4\pi^4}\cos\frac{n\pi x}{L}\lims0L=\frac{24L^3}{n^4\pi^4}[(-1)^n-1]\\
@@ -2396,7 +2396,7 @@ on $[0,L]$.
 \end{example}
 
 \solution
-Since $f(0)=f(L)=0$ and $f''(x)=6(x-L)$, we see from (\ref{eq:11.3.5})
+Since $f(0)=f(L)=0$ and $f''(x)=6(x-L)$, we see from \eqref{eq:11.3.5}
 that
 \begin{eqnarray*}
 b_n&=&-
@@ -2421,7 +2421,7 @@ on $[0,L]$.
 \end{example}
 
 \solution
-Since $f'(0)=f(L)=0$ and $f''(x)=2(9x-4L)$, we see from (\ref{eq:11.3.6})
+Since $f'(0)=f(L)=0$ and $f''(x)=2(9x-4L)$, we see from \eqref{eq:11.3.6}
 that
 \begin{eqnarray*}
 c_n&=&
@@ -2451,7 +2451,7 @@ on $[0,L]$.
 \end{example}
 
 \solution
-Since $f(0)=f'(L)=0$, and $f''(x)=6(2x-3L)$, we see from (\ref{eq:11.3.7})
+Since $f(0)=f'(L)=0$, and $f''(x)=6(2x-3L)$, we see from \eqref{eq:11.3.7}
 that
 \begin{eqnarray*}
 d_n&=&-\dst\frac{48L}{(2n-1)^2\pi^2}\int_0^L(2x-3L)
