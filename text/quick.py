@@ -46,7 +46,7 @@ for texfile in glob('*.tex'):
     tex.write(content)
 
 '''
-mbox, ref, eqnarray, cases, part, solutionpart, scalebox, noindent, dst, jot, eqno, over
+mbox, ref, eqnarray, cases, part, solutionpart, scalebox, noindent, dst, jot, eqno, over, $$
 bf, it, rm
 Section, Chapter, Figure, Table, Exercise, Example, Equation, Eqn, Theorem
 TODO
