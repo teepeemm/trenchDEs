@@ -1,11 +1,12 @@
 % !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
-\chapter*{Answers to Selected Exercises}
+\chapter*[Answers to Selected Exercises]{Answers to Selected Exercises}
 
-\medskip{\bf Section~1.2 Answers,
-pp.~\pageref{exer:1.2.1}--\pageref{exer:1.2.10}}\medskip
+\newcommand{\sectionanswers}[1]{\medskip
+{\bfseries Section #1 Answers, pp.~\pageref{exer:#1.1}ff}\medskip}
 
+\sectionanswers{1.2}
 
 \answer{1.2.1}
 \part{a}\;   $3$ \,\part{b}\;   $2$ \, \part{c}\;   $1$\, \part{d}\;   $2$
@@ -44,7 +45,7 @@ $y=\dst{-\frac{47}{15}-\frac{37}{5}(x-2)+\frac{x^{5}}{30}}$
 -\frac{26}{3}(x-2)-\frac{5}{3}}$
 
 \answer{1.2.7}
-\part{a}\;   $576$ ft \,\part{b}\;   $10$ s
+\part{a}\;   \qty{576}{\feet} \,\part{b}\;   $10$ s
 \answer{1.2.8} \part{b}\;   $y=0$
 \answer{1.2.10} \part{a}\;   $(-2c-2,\infty)$\,
   $(-\infty,\infty)$
@@ -52,8 +53,7 @@ $y=\dst{-\frac{47}{15}-\frac{37}{5}(x-2)+\frac{x^{5}}{30}}$
 
 
 
-\medskip{\bf Section~2.1 Answers,
-pp.~\pageref{exer:2.1.1}--\pageref{exer:2.1.48}}\medskip
+\sectionanswers{2.1}
 
 \answer{2.1.1}   $y=e^{-ax}$
 \answer{2.1.2}   $y=ce^{-x^3}$
@@ -132,22 +132,21 @@ $\dst{y=\frac{1}{x}\left(2e^{-(x-1)}+e^{-x}
 $G=\dst{\frac{r}{\lambda}+\left(G_0-\frac{r}{\lambda}\right)e^{-\lambda
 t}}$\; $\lim_{t\to\infty}G(t)=\dst\frac{r}{\lambda}$
 \answer{2.1.45}
-{\bf  (a)}  $\dst{y=y_0 e^{-a(x-x_0)}+ e^{-ax}
+{\bfseries  (a)}  $\dst{y=y_0 e^{-a(x-x_0)}+ e^{-ax}
 \int^x_{x_0} e^{at}f(t)\, dt}$
 
 
 \answer{2.1.48}
-{\bf  (a)} $\dst{y=\tan^{-1}\left(\frac{1}{3} + ce^{3x}\right)}$
-\quad {\bf  (b)}
+{\bfseries  (a)} $\dst{y=\tan^{-1}\left(\frac{1}{3} + ce^{3x}\right)}$
+\quad {\bfseries  (b)}
 $y=\pm\dst{\left[\ln\left(\dst\frac{1}{x}+\dst\frac{c}{x^2}\right)\right]^{1/2}}$
 
-\quad \quad {\bf  (c)} $\dst{y=\exp\left(x^2 + \frac{c}{x^2}\right)}$
-\quad  {\bf  (d)} $\dst{y=-1 + \frac{x}{c + 3\ln |x|}}$
+\quad \quad {\bfseries  (c)} $\dst{y=\exp\left(x^2 + \frac{c}{x^2}\right)}$
+\quad  {\bfseries  (d)} $\dst{y=-1 + \frac{x}{c + 3\ln |x|}}$
 
 
 
-\medskip{\bf Section~2.2 Answers,
-pp.~\pageref{exer:2.2.1}--\pageref{exer:2.2.39}}\medskip
+\sectionanswers{2.2}
 
 \rm
 \answer{2.2.1} $y=2\pm\sqrt{2(x^3+x^2+x+c)}$
@@ -221,16 +220,15 @@ $f=ap, \quad \mbox{where $a$=constant}$
 
 \answer{2.2.38}  $y=e^{2x}(1\pm\sqrt{c-x^2})$
 \answer{2.2.39}
-{\bf (a)} $y_1=1/x$;  \quad $g(x)=h(x)$
+{\bfseries (a)} $y_1=1/x$;  \quad $g(x)=h(x)$
 
-\quad \quad  {\bf (b)} $y_1=x$;  \quad $g(x)=h(x)/x^2$
-\;  {\bf (c)} $y_1=e^{-x}$;   $g(x)=e^xh(x)$
+\quad \quad  {\bfseries (b)} $y_1=x$;  \quad $g(x)=h(x)/x^2$
+\;  {\bfseries (c)} $y_1=e^{-x}$;   $g(x)=e^xh(x)$
 
-\quad \quad  {\bf (d)} $y_1=x^{-r}$;\;   $g(x)=x^{r-1}h(x)$
-\;    {\bf (e)}\;    $y_1=1/v(x)$;\;   $g(x)=v(x)h(x)$
+\quad \quad  {\bfseries (d)} $y_1=x^{-r}$;\;   $g(x)=x^{r-1}h(x)$
+\;    {\bfseries (e)}\;    $y_1=1/v(x)$;\;   $g(x)=v(x)h(x)$
 
-\medskip{\bf Section~2.3 Answers,
-pp.~\pageref{exer:2.3.1}--\pageref{exer:2.3.21}}\medskip
+\sectionanswers{2.3}
 
 \answer{2.3.1} \part{a},\, \part{b} $x_0\ne k \pi$ ($k=$ integer)
 \answer{2.3.2}  \part{a}, \,\part{b} $(x_0,y_0)\ne(0,0)$
@@ -345,8 +343,7 @@ y= \left\{
 are also solutions of (A)  on $(-\infty,\infty)$.
 
 
-\medskip{\bf Section~2.4 Answers,
-pp.~\pageref{exer:2.4.1}--\pageref{exer:2.4.59}}\medskip
+\sectionanswers{2.4}
 
 \answer{2.4.1} $y=\dst\frac{1}{1-ce^x}$
 \answer{2.4.2} $y=x^{2/7}(c-\ln|x|)^{1/7}$
@@ -447,8 +444,7 @@ x)^4\right)}{1-c(\ln x)^4};\quad y=-2\ln x$
  \answer{2.4.59} $y=x-\dst\frac{2x}{x^2+c}$
 
 
-{\bf Section~2.5 Answers,
-pp.~\pageref{exer:2.5.1}--\pageref{exer:2.5.44}}\medskip
+\sectionanswers{2.5}
 
  \answer{2.5.1}   $2x^3y^2=c$
  \answer{2.5.2}   $3y\sin x+2x^2e^x+3y=c$
@@ -485,26 +481,26 @@ pp.~\pageref{exer:2.5.1}--\pageref{exer:2.5.44}}\medskip
 \answer{2.5.24}  $(x^4y^2+1)e^x+y^2=c$
 
 \answer{2.5.29}
-{\bf (a)} $M(x,y)=2xy+f(x)$  {\bf (b)}
+{\bfseries (a)} $M(x,y)=2xy+f(x)$  {\bfseries (b)}
  $M(x,y)=2(\sin x+x\cos x)
 (y\sin y+\cos y)+f(x)$
 
-\quad\;    {\bf (c)}
+\quad\;    {\bfseries (c)}
  $M(x,y)=ye^x-e^y\cos x+f(x)$
 
 \answer{2.5.30}
-{\bf (a)}  $N(x,y)=\dst\frac{x^4y}{2}+x^2+6xy+g(y)$
-{\bf (b)} $N(x,y)=\dst\frac{x}{y}+2y\sin x+g(y)$
+{\bfseries (a)}  $N(x,y)=\dst\frac{x^4y}{2}+x^2+6xy+g(y)$
+{\bfseries (b)} $N(x,y)=\dst\frac{x}{y}+2y\sin x+g(y)$
 
-\quad\quad  {\bf (c)}   $N(x,y)=x(\sin y+y\cos y)+g(y)$
+\quad\quad  {\bfseries (c)}   $N(x,y)=x(\sin y+y\cos y)+g(y)$
 
 \answer{2.5.33}   $B=C$
 \answer{2.5.34}   $B=2D,\quad E=2C$
 
 \answer{2.5.37}
-{\bf (a)}  $2x^2+x^4y^4+y^2=c$
-{\bf (b)}  $x^3+3xy^2=c$
-{\bf (c)}  $x^3+y^2+2xy=c$
+{\bfseries (a)}  $2x^2+x^4y^4+y^2=c$
+{\bfseries (b)}  $x^3+3xy^2=c$
+{\bfseries (c)}  $x^3+y^2+2xy=c$
 
 \answer{2.5.38} $y=-1-\dst\frac{1}{x^2}$
 \answer{2.5.39} $y=x^3\dst{\left(\frac{-3(x^2+1)+\sqrt{9x^4+34x^2+21}}{2}\right)}$
@@ -512,18 +508,17 @@ pp.~\pageref{exer:2.5.1}--\pageref{exer:2.5.44}}\medskip
 \answer{2.5.40} $y=-e^{-x^2}\dst{\left(\frac{2x+\sqrt{9-5x^2}}{3}\right)}$.
 
 \answer{2.5.44}
-{\bf (a)}  $G(x,y)=2xy+c$
-{\bf (b)}  $G(x,y)=e^x\sin y+c$
+{\bfseries (a)}  $G(x,y)=2xy+c$
+{\bfseries (b)}  $G(x,y)=e^x\sin y+c$
 \begin{quote}
-{\bf (c)}  $G(x,y)=3x^2y-y^3+c$
-{\bf (d)}  $G(x,y)=-\sin x\sinh y+c$
+{\bfseries (c)}  $G(x,y)=3x^2y-y^3+c$
+{\bfseries (d)}  $G(x,y)=-\sin x\sinh y+c$
 
-{\bf (e)}  $G(x,y)=\cos x\sinh y+c$
+{\bfseries (e)}  $G(x,y)=\cos x\sinh y+c$
 \end{quote}
 
 
-\medskip{\bf Section~2.6 Answers,
-pp.~\pageref{exer:2.6.1}--\pageref{exer:2.6.30}}\medskip
+\sectionanswers{2.6}
 
 \answer{2.6.3} $\mu(x)=1/x^2$;\; $y=cx$ and $\mu(y)=1/y^2$;    $x=cy$
 
@@ -574,8 +569,7 @@ $y\equiv0$
 \bigskip
 
 
-\medskip{\bf Section~3.1 Answers,
-pp.~\pageref{exer:3.1.1}--\pageref{exer:3.1.23}}\medskip
+\sectionanswers{3.1}
 
 \answer{3.1.1}
 $y_1=1.450000000,\; y_2=2.085625000,\; y_3= 3.079099746$
@@ -1031,8 +1025,7 @@ problem\end{quote}.
 \hline
 \end{tabular}}
 
-\medskip{\bf Section~3.2 Answers,
-pp.~\pageref{exer:3.2.1}--\pageref{exer:3.1.23}}\medskip
+\sectionanswers{3.2}
 
 \answer{3.2.1}
 $y_1=1.542812500,\; y_2=2.421622101,\; y_3=4.208020541$
@@ -1616,8 +1609,7 @@ the given problem.\end{quote}
 \hline
 \end{tabular}}
 
-\medskip{\bf Section~3.3 Answers,
-pp.~\pageref{exer:3.3.1}--\pageref{exer:3.3.28}}\medskip
+\sectionanswers{3.3}
 
 \answer{3.3.1}
 $y_1=1.550598190,\; y_2=2.469649729$
@@ -2120,8 +2112,7 @@ solution of the given problem. \end{quote}
 \bigskip
 
 
-\medskip{\bf Section~4.1 Answers,
-pp.~\pageref{exer:4.1.1}--\pageref{exer:4.1.27}}\medskip
+\sectionanswers{4.1}
 
 
 \answer{4.1.1} $Q=20e^{-(t\ln2)/3200}$ g
@@ -2188,17 +2179,16 @@ $P_0=\left\{\begin{array}{cl}\dst\frac{S_0(1-e^{(a-r)T})}{r-a}
 \mbox{ if }a\ne r,\\[6pt] S_0T \mbox{ if }a=r.\end{array}\right. $
 
 
-\medskip{\bf Section~4.2 Answers,
-pp.~\pageref{exer:4.2.1}--\pageref{exer:4.2.23}}\medskip
+\sectionanswers{4.2}
 
 \answer{4.2.1} $\approx15.15^\circ$F
 \answer{4.2.2} $\dst {T= -10+110 e^{-t \ln \frac{11}{9}}}$
 \answer{4.2.3}  $\approx 24.33^\circ$F
 
-\answer{4.2.4} {\bf (a)}  $91.30^\circ$F
-{\bf (b)} 8.99 minutes after being placed outside {\bf (c)} never
+\answer{4.2.4} {\bfseries (a)}  $91.30^\circ$F
+{\bfseries (b)} 8.99 minutes after being placed outside {\bfseries (c)} never
 
-\answer{4.2.5} {\bf (a)} 12:11:32 {\bf (b) }12:47:33
+\answer{4.2.5} {\bfseries (a)} 12:11:32 {\bfseries (b) }12:47:33
 \answer{4.2.6}  $\dst {(85/3)^\circ C}$
 \answer{4.2.7}  $32^\circ$F
 \answer{4.2.8}  $\dst {Q(t) = 40(1-e^{-3 t/40})}$
@@ -2214,24 +2204,24 @@ pp.~\pageref{exer:4.2.1}--\pageref{exer:4.2.23}}\medskip
 \quad 0 \le t \le 300}$
 
 \answer{4.2.15}
-{\bf (a)} $\dst{Q'+\frac{2}{25}Q=6-2e^{-t/25}}$
-{\bf (b)} $Q=75-50e^{-t/25}-25e^{-2t/25}$ {\bf (c)} 75
+{\bfseries (a)} $\dst{Q'+\frac{2}{25}Q=6-2e^{-t/25}}$
+{\bfseries (b)} $Q=75-50e^{-t/25}-25e^{-2t/25}$ {\bfseries (c)} 75
 
 \answer{4.2.16}
-{\bf (a)}
+{\bfseries (a)}
 $T=T_m+(T_0-T_m)e^{-kt}+\dst\frac{k(S_0-T_m)}{(k-k_m)}\left(e^{-k_mt}-e^{-kt}\right)$
 
-\quad \quad {\bf (b)}
+\quad \quad {\bfseries (b)}
 $T=T_m+k(S_0-T_m)te^{-kt}+(T_0-T_m)e^{-kt}$
- \quad {\bf (c)} $\lim_{t\to\infty}T(t)=\lim_{t\to\infty}S(t)=T_m$
+ \quad {\bfseries (c)} $\lim_{t\to\infty}T(t)=\lim_{t\to\infty}S(t)=T_m$
 
 \answer{4.2.17}
- {\bf (a)} $T'=\dst{-k\left(1+\frac{a}{a_m}\right)T
+ {\bfseries (a)} $T'=\dst{-k\left(1+\frac{a}{a_m}\right)T
 +k\left(T_{m0}+\frac{a}{a_m}T_0\right)}$ \;
- {\bf (b)} $\dst{T=\frac{aT_0+a_mT_{m0}}{a+a_m}+\frac{a_m(T_0-T_{m0})}{a+a_m}e^{-k(1+a/a_m)t}}$,
+ {\bfseries (b)} $\dst{T=\frac{aT_0+a_mT_{m0}}{a+a_m}+\frac{a_m(T_0-T_{m0})}{a+a_m}e^{-k(1+a/a_m)t}}$,
 
 \quad \quad   $\dst{T_m=\frac{aT_0+a_mT_{m0}}{a+a_m}+\frac{a(T_{m0}-T_0)}{a+a_m}e^{-k(1+a/a_m)t}}$;
-{\bf (c)} $\lim_{t\to\infty}T(t)=
+{\bfseries (c)} $\lim_{t\to\infty}T(t)=
  \lim_{t\to\infty}T_m(t) =\dst\frac{aT_0+a_mT_{m0}}{a+a_m}$
 
 \answer{4.2.18}
@@ -2243,36 +2233,35 @@ $c_1=c\left(1-e^{-rt/W}\right)$,
 $c_2=c\dst{\left(1-e^{-rt/W}-\frac{r}{W}te^{-rt/W}\right)}$.
 
 \answer{4.2.20}
-{\bf (a)} $\dst{c_n=c\left(1-e^{-rt/W}\sum_{j=0}^{n-1}\frac{1}{j!}\left(\frac{rt}{W}\right)^j\right)}$
-{\bf (b)} $c$  {\bf (c)}  $0$
+{\bfseries (a)} $\dst{c_n=c\left(1-e^{-rt/W}\sum_{j=0}^{n-1}\frac{1}{j!}\left(\frac{rt}{W}\right)^j\right)}$
+{\bfseries (b)} $c$  {\bfseries (c)}  $0$
 
 \answer{4.2.21}
 Let $c_\infty=\dst\frac{c_1W_1+c_2W_2}{W_1+W_2}$,
 $\alpha=\dst\frac{c_2W_2^2-c_1W_1^2}{W_1+W_2}$, and
 $\beta=\dst\frac{W_1+W_2}{W_1W_2}$. Then:
 
-\quad \quad {\bf (a)} $c_1(t)=c_\infty+\dst\frac{\alpha}{W_1}e^{-r\beta t}$,
+\quad \quad {\bfseries (a)} $c_1(t)=c_\infty+\dst\frac{\alpha}{W_1}e^{-r\beta t}$,
  $c_2(t)=c_\infty-\dst\frac{\alpha}{W_2}e^{-r\beta t}$
 
-\quad \quad {\bf (b)}
+\quad \quad {\bfseries (b)}
 $\lim_{t\to\infty}c_1(t)=\lim_{t\to\infty}c_2(t)=c_\infty$
 
 \medskip
 
-\medskip{\bf Section~4.3 Answers,
-pp.~\pageref{exer:4.3.1}--\pageref{exer:4.3.20}}\medskip
+\sectionanswers{4.3}
 
 \answer{4.3.1}
  $v=-\dst\frac{384}{5}\left(1-e^{-5t/12}\right);\;
--\dst\frac{384}{5}$ ft/s
+-\dst\frac{384}{5}$ \unit{\feet\per\second}
 \answer{4.3.2} $k=12;   \quad v=-16(1-e^{-2t})$
 
-\answer{4.3.3}  $v=25(1-e^{-t});   $25 ft/s
+\answer{4.3.3}  $v=25(1-e^{-t})$;   \qty{25}{\feet\per\second}
 \answer{4.3.4}  $v=20-27e^{-t/40}$
-\answer{4.3.5}  $\approx 17.10$ ft
+\answer{4.3.5}  $\approx \qty{17.10}{\feet}$
 
 \answer{4.3.6}
- $v=-\dst\frac{40(13+3e^{-4t/5})}{13-3e^{-4t/5}}$;   -40 ft/s
+ $v=-\dst\frac{40(13+3e^{-4t/5})}{13-3e^{-4t/5}}$;   \qty{-40}{\feet\per\second}
 \answer{4.3.7}  $v=-128(1-e^{-t/4})$
 
 \answer{4.3.9}
@@ -2280,7 +2269,7 @@ $T=\dst{\frac{m}{k}\ln\left(1+\frac{v_0k}{mg}
 \right)};   \quad y_m=y_0+\dst{\frac{m}{k}\left[v_0-\frac{mg}{k}\ln\left(1+\frac{v_0k}{mg}\right)\right]}$
 
 \answer{4.3.10}  $v=-\dst\frac{64(1-e^{-t})}{1+e^{-t}}$;
--64 ft/s
+\qty{-64}{\feet\per\second}
 
 \answer{4.3.11}
 $v=\alpha\dst\frac{v_0(1+e^{-\beta t})-\alpha(1-e^{-\beta
@@ -2297,27 +2286,26 @@ $v=-\dst{\sqrt{\frac{mg}{k}}; \,
 
 \answer{4.3.13}
 $s'=mg-\dst\frac{as}{s+1}$;   $a_0=mg$.
-\answer{4.3.14} {\bf (a)} $ms'=mg-f(s)$
+\answer{4.3.14} {\bfseries (a)} $ms'=mg-f(s)$
 
 \answer{4.3.15}
-{\bf (a)} $v'=-9.8+v^4/81$   {\bf (b)}
+{\bfseries (a)} $v'=-9.8+v^4/81$   {\bfseries (b)}
 $v_T\approx-5.308$ m/s
 
 \answer{4.3.16}
-{\bf (a)} $v'=-32+8\sqrt{|v|}$;\;  $v_T=-16$ ft/s
-{\bf (b)} From Exercise~4.3.~\hspace*{-3pt}\ref{exer:4.3.14}\part{c},
+{\bfseries (a)} $v'=-32+8\sqrt{|v|}$;\;  $v_T=\qty{-16}{\feet\per\second}$
+{\bfseries (b)} From {Exercise 4.3.\ref{exer:4.3.14}}\part{c},
 $v_T$ is the
 negative
 
-\quad \quad number such that $-32+8\sqrt{|v_T|}=0$; thus, $v_T=-16$ ft/s.
+\quad \quad number such that $-32+8\sqrt{|v_T|}=0$; thus, $v_T=\qty{-16}{\feet\per\second}$.
 
 \answer{4.3.17}  $\approx 6.76$ miles/s
 \answer{4.3.18}  $\approx 1.47$ miles/s
 \answer{4.3.20}  $\alpha=\dst\frac{gR^2}{(y_m+R)^2}$
 
 
-\medskip{\bf Section~4.4 Answers,
-pp.~\pageref{exer:4.4.1}--\pageref{exer:4.4.20}}\medskip
+\sectionanswers{4.4}
 
 \answer{4.4.1}
 $\overline y=0$ is a stable equilibrium;
@@ -2395,8 +2383,7 @@ $\sqrt{(y(t)-\overline y)^2+v^2(t)}\ge\epsilon$ for some $t>0$.
 \end{quote}
 
 
-\medskip{\bf Section~4.5 Answers,
-pp.~\pageref{exer:4.5.1}--\pageref{exer:4.5.34}}\medskip
+\sectionanswers{4.5}
 
 \answer{4.5.1}  $\dst{y'=-\frac{2xy}{x^2+3y^2}}$
 \answer{4.5.2}
@@ -2417,30 +2404,30 @@ $y'=-\dst\frac{y(x^2+y^2-2x^2\ln|xy|)}{x(x^2+y^2-2y^2\ln|xy|)}$.
 \answer{4.5.13} $2x(y-1)y'-y^2+x^2+2y=0$
 
 \answer{4.5.14}
-{\bf (a)} $y=-81+18x, (9,81)   \quad y=-1+2x, (1,1)$
+{\bfseries (a)} $y=-81+18x, (9,81)   \quad y=-1+2x, (1,1)$
 
-\quad\;  \;   {\bf (b) }$y=-121+22x, (11,121)   \quad y=-1+2x, (1,1)$
+\quad\;  \;   {\bfseries (b) }$y=-121+22x, (11,121)   \quad y=-1+2x, (1,1)$
 
-\quad\;  \;   {\bf (c)} $y=-100-20x, (-10,100)   \quad y=-4-4x, (-2,4)$
+\quad\;  \;   {\bfseries (c)} $y=-100-20x, (-10,100)   \quad y=-4-4x, (-2,4)$
 
-\quad\;  \;   {\bf (d)} $y=-25-10x, (-5,25)   \quad y=-1-2x, (-1,1)$
+\quad\;  \;   {\bfseries (d)} $y=-25-10x, (-5,25)   \quad y=-1-2x, (-1,1)$
 
 \answer{4.5.15}
-{\bf (e)}
+{\bfseries (e)}
 $y=\dst\frac{5+3x}{4}$, $(-3/5,4/5)$
 $y=-\dst\frac{5-4x}{3}$, $(4/5,-3/5)$
 
 \answer{4.5.17}
-{\bf (a)} $\dst{y=-\frac{1}{2}(1+x), (1,-1);   \quad y=
+{\bfseries (a)} $\dst{y=-\frac{1}{2}(1+x), (1,-1);   \quad y=
 \frac{5}{2}+\frac{x}{10}, (25,5)}$\\
 
-\quad\;  \;  {\bf (b)} $\dst{y=\frac{1}{4}(4+x), (4,2)   \quad y
+\quad\;  \;  {\bfseries (b)} $\dst{y=\frac{1}{4}(4+x), (4,2)   \quad y
 =-\frac{1}{4} (4+x), (4,-2)}$;\\
 
-\quad\;  \;  {\bf (c)} $\dst{y=\frac{1}{2}(1+x), (1,1)   \quad y=
+\quad\;  \;  {\bfseries (c)} $\dst{y=\frac{1}{2}(1+x), (1,1)   \quad y=
 \frac{7}{2}+\frac{x}{14}, (49,7)}$\\
 
-\quad\;  \;  {\bf (d)} $\dst{y=-\frac{1}{2}(1+x), (1,-1)   \quad y=
+\quad\;  \;  {\bfseries (d)} $\dst{y=-\frac{1}{2}(1+x), (1,-1)   \quad y=
 -\frac{5}{2}-\frac{x}{10}, (25,-5)}$
 
 \answer{4.5.18}  $y=2x^2$
@@ -2467,30 +2454,29 @@ $y=-\dst\frac{5-4x}{3}$, $(4/5,-3/5)$
 $\dst{\frac{1}{2}\ln (x^2+y^2)+(\tan\alpha)\tan^{-1}\frac{y}{x}=k}$
 
 
-\medskip{\bf Section~5.1 Answers,
-pp.~\pageref{exer:5.1.1}--\pageref{exer:5.1.44}}\medskip
+\sectionanswers{5.1}
 
-\answer{5.1.1}{\bf (c)}  $y=-2e^{2x}+e^{5x}$
-{\bf (d)} $y=(5k_0-k_1)\dst\frac{e^{2x}}{3}+(k_1-2k_0)\dst\frac{e^{5x}}{3}$.
+\answer{5.1.1}{\bfseries (c)}  $y=-2e^{2x}+e^{5x}$
+{\bfseries (d)} $y=(5k_0-k_1)\dst\frac{e^{2x}}{3}+(k_1-2k_0)\dst\frac{e^{5x}}{3}$.
 
-\answer{5.1.2}{\bf (c)} $y=e^x(3\cos x-5\sin x)$
-{\bf (d)} $y=e^x\left(k_0\cos x+(k_1-k_0)\sin x\right)$
+\answer{5.1.2}{\bfseries (c)} $y=e^x(3\cos x-5\sin x)$
+{\bfseries (d)} $y=e^x\left(k_0\cos x+(k_1-k_0)\sin x\right)$
 
-\answer{5.1.3}{\bf (c)} $y=e^x(7-3x)$
-{\bf (d)} $y=e^x\left(k_0+(k_1-k_0)x\right)$
+\answer{5.1.3}{\bfseries (c)} $y=e^x(7-3x)$
+{\bfseries (d)} $y=e^x\left(k_0+(k_1-k_0)x\right)$
 
 \answer{5.1.4}
 (a) $y=\dst\frac{c_1}{x-1}+\dst\frac{c_2}{x+1}$
 (b) $y=\dst{\frac{2}{x-1}-\frac{3}{x+1}};\; (-1,1)$
 
 \answer{5.1.5}
-{\bf (a)} $e^x$
- {\bf (b)} $e^{2x}\cos x$
-{\bf (c)} $x^2+2x-2$
- {\bf (d)} $\displaystyle{-\frac{5}{6}x^{-5/6}}$
-{\bf (e)} $\displaystyle{-\frac{1}{x^2}}$
- {\bf (f)} $(x\ln|x|)^2$
-{\bf (g)} $\dst\frac{e^{2x}}{2\sqrt x}$
+{\bfseries (a)} $e^x$
+ {\bfseries (b)} $e^{2x}\cos x$
+{\bfseries (c)} $x^2+2x-2$
+ {\bfseries (d)} $\displaystyle{-\frac{5}{6}x^{-5/6}}$
+{\bfseries (e)} $\displaystyle{-\frac{1}{x^2}}$
+ {\bfseries (f)} $(x\ln|x|)^2$
+{\bfseries (g)} $\dst\frac{e^{2x}}{2\sqrt x}$
 
 \answer{5.1.6}   $0$
 \answer{5.1.7} $W(x)=(1-x^2)^{-1}$
@@ -2514,15 +2500,15 @@ $\displaystyle{W(x)=\frac{1}{x}}$
 
 \answer{5.1.23} $y_2=x^2$
 \answer{5.1.35}
-{\bf (a)} $y''-2y'+5y=0$
- {\bf (b)} $(2x-1)y''-4xy'+4y=0$
-{\bf (c)} $x^2y''-xy'+y=0$
+{\bfseries (a)} $y''-2y'+5y=0$
+ {\bfseries (b)} $(2x-1)y''-4xy'+4y=0$
+{\bfseries (c)} $x^2y''-xy'+y=0$
 
-\quad\;  \;   {\bf (d)} $x^2y''+xy'+y=0$
-{\bf (e)} $y''-y=0$
- {\bf (f)} $xy''-y'=0$
+\quad\;  \;   {\bfseries (d)} $x^2y''+xy'+y=0$
+{\bfseries (e)} $y''-y=0$
+ {\bfseries (f)} $xy''-y'=0$
 
-\answer{5.1.37}{\bf (c)} $y=k_0y_1+k_1y_2$
+\answer{5.1.37}{\bfseries (c)} $y=k_0y_1+k_1y_2$
 \answer{5.1.38} $y_1=1$,  $y_2=x-x_0$;    $y=k_0+k_1(x-x_0)$
 
 \answer{5.1.39}
@@ -2540,29 +2526,28 @@ $y_1=\dst\frac{1}{1-x^2}$,\; $y_2=\dst\frac{x}{1-x^2}$
 $y=\dst\frac{k_0+k_1x}{1-x^2}$
 
 \answer{5.1.42}
-{\bf (c)}  $k_0=k_1=0$;
+{\bfseries (c)}  $k_0=k_1=0$;
 $y=\dst{\left\{\begin{array}{rr}
 c_1x^2+c_2x^3,x\ge 0,\\
 c_1x^2+c_3x^3,x<0
 \end{array}\right.}$\;
 
-\quad\;  \;  {\bf (d)}  $(0,\infty)$ if $x_0>0$, $(-\infty,0)$ if $x_0<0$
+\quad\;  \;  {\bfseries (d)}  $(0,\infty)$ if $x_0>0$, $(-\infty,0)$ if $x_0<0$
 
 \answer{5.1.43}
-{\bf (c)}  $k_0=0$, $k_1$ arbitrary\; $y=k_1x+c_2x^2$
+{\bfseries (c)}  $k_0=0$, $k_1$ arbitrary\; $y=k_1x+c_2x^2$
 
 \answer{5.1.44}
-{\bf (c)}  $k_0=k_1=0$
+{\bfseries (c)}  $k_0=k_1=0$
 $y=\dst{\left\{\begin{array}{rr}
 a_1x^3+a_2x^4,x\ge 0,\\
 b_1x^3+b_2x^4,x<0
 \end{array}\right.}$\;
 
-\quad\;  \;  {\bf (d)}  $(0,\infty)$ if $x_0>0$, $(-\infty,0)$ if $x_0<0$
+\quad\;  \;  {\bfseries (d)}  $(0,\infty)$ if $x_0>0$, $(-\infty,0)$ if $x_0<0$
 
 
-\medskip{\bf Section~5.2 Answers,
-pp.~\pageref{exer:5.2.1}--\pageref{exer:5.2.34}}\medskip
+\sectionanswers{5.2}
 
 \answer{5.2.1} $y=c_1e^{-6x}+c_2e^{x}$
 \answer{5.2.2}  $y=e^{2x}(c_1 \cos x+c_2 \sin x)$
@@ -2620,8 +2605,7 @@ $y=\dst{e^{\lambda(x-x_0)}\left[k_0\cos\omega(x-x_0)+\left(\frac{k_1-\lambda
 k_0}{\omega}\right)\sin\omega(x-x_0)\right]}$
 
 
-\medskip{\bf Section~5.3 Answers,
-pp.~\pageref{exer:5.3.1}--\pageref{exer:5.3.40}}\medskip
+\sectionanswers{5.3}
 
 \answer{5.3.1} $y_p=-1+2x+3x^2$;    $y=-1+2x+3x^2+c_1e^{-6x}+c_2e^{x}$
 
@@ -2709,8 +2693,7 @@ $y=2x+x^3+\dst\frac{4}{45}e^{x/2}+e^{-x}(c_1\cos3x+c_2\sin3x)$
 $y_p=1+2x+e^{-3x}$;   $y=1+2x+e^{-3x}(1+c_1\cos x+c_2\sin x)$
 
 
-\medskip{\bf Section~5.4 Answers,
-pp.~\pageref{exer:5.4.1}--\pageref{exer:5.4.40}}\medskip
+\sectionanswers{5.4}
 
 \answer{5.4.1} $y_p=\dst{e^{3x}\left(-\frac{1}{4}+\frac{x}{2}\right)}$
 \answer{5.4.2} $y_p=\dst{e^{-3x}\left(1-\frac{x}{4}\right)}$
@@ -2780,8 +2763,7 @@ x-3)+c_1x+c_2\right]}$
 
 \answer{5.4.40} $\dst{\frac{(-1)^kk!e^{\alpha x}}{\alpha^{k+1}}\sum_{r=0}^k\frac{(-\alpha x)^r}{r!}+c}$
 
-\medskip{\bf Section~5.5 Answers,
-pp.~\pageref{exer:5.5.1}--\pageref{exer:5.5.40}}\medskip
+\sectionanswers{5.5}
 
 \answer{5.5.1} $y_p=\cos x+2\sin x$
 \answer{5.5.2} $y_p=\cos x+(2-2x)\sin x$
@@ -2866,8 +2848,7 @@ x\right]+c$
 \part{g} $e^{-x}\left[x\cos x+x(1+x)\sin x\right]+c$
 
 
-\medskip{\bf Section~5.6 Answers,
-pp.~\pageref{exer:5.6.1}--\pageref{exer:5.6.40}}\medskip
+\sectionanswers{5.6}
 
 \answer{5.6.1} $y=1-2x+c_1e^{-x}+c_2xe^x$;\;
 $\{e^{-x},xe^x\}$
@@ -2975,8 +2956,7 @@ $y=\dst{\frac{2c_1+c_2e^{-3x}(1-x)}{c_1+c_2xe^{-3x}}}$
 \;  \part{f}  $y=\dst\frac{c_1+7c_2x^6}{x(c_1+c_2x^6)}$
 
 
-\medskip{\bf Section~5.7 Answers,
-pp.~\pageref{exer:5.7.1}--\pageref{exer:5.7.39}}\medskip
+\sectionanswers{5.7}
 
 \answer{5.7.1}  $y_p=\dst\frac{-\cos 3x\ln|\sec 3x+\tan 3x|}{9}$
 \answer{5.7.2}  $y_p=\dst{-\frac{\sin 2x\ln|\cos 2x|}{4}
@@ -3041,18 +3021,17 @@ pp.~\pageref{exer:5.7.1}--\pageref{exer:5.7.39}}\medskip
 f(t)\,dt$
 
 
-\medskip{\bf Section~6.1 Answers,
-pp.~\pageref{exer:6.1.1}--\pageref{exer:6.1.21}}\medskip
+\sectionanswers{6.1}
 
 
-\answer{6.1.1}   $y=\dst{3 \cos4\sqrt{6}t-\frac{1}{2\sqrt{6}} \sin 4\sqrt{6} t}$ ft
-\answer{6.1.2}  $y=\dst{ -\frac{1}{4}\cos8\sqrt{5}t-\frac{1}{4\sqrt{5}}\sin8\sqrt{5}t}$ ft
+\answer{6.1.1}   $y=\dst{3 \cos4\sqrt{6}t-\frac{1}{2\sqrt{6}} \sin 4\sqrt{6} t}$ \unit{\feet}
+\answer{6.1.2}  $y=\dst{ -\frac{1}{4}\cos8\sqrt{5}t-\frac{1}{4\sqrt{5}}\sin8\sqrt{5}t}$ \unit{\feet}
 
-\answer{6.1.3}  $y=1.5\cos14\sqrt{10}t$ cm
+\answer{6.1.3}  $y=1.5\cos14\sqrt{10}t$ \unit{\centi\meter}
 
 \answer{6.1.4}
-$y=\dst{\frac{1}{4}\cos8t-\frac{1}{16}\sin8t}$ ft;\;
-$R=\dst\frac{\sqrt{17}}{16}$ ft;\; $\omega_0=8$ rad/s;\; $T=\pi/4$ s;
+$y=\dst{\frac{1}{4}\cos8t-\frac{1}{16}\sin8t}$ \unit{\feet};\;
+$R=\dst\frac{\sqrt{17}}{16}$ \unit{\feet};\; $\omega_0=8$ rad/s;\; $T=\pi/4$ s;
 
 \quad\;  \;    $\phi\approx-.245\mbox{ rad}\approx -14.04^\circ$;
 
@@ -3069,24 +3048,24 @@ $y=\dst{-\frac{1}{4}\cos\sqrt{70}\;  t+\frac{2}{\sqrt{70}}\sin\sqrt{70}\;   t}$ 
 \quad\;  \;   $T=2\pi/\sqrt{70}$ s;\;
 $\phi\approx 2.38\mbox{ rad}\approx 136.28^\circ$
 
-\answer{6.1.7} $y=\dst{\frac{2}{3}\cos16t-\frac{1}{4}\sin16t\mbox{ ft}}$
-\answer{6.1.8} $y=\dst{\frac{1}{2}\cos8t-\frac{3}{8}\sin8t}$ ft
+\answer{6.1.7} $y=\dst{\frac{2}{3}\cos16t-\frac{1}{4}\sin16t \unit{\feet}}$
+\answer{6.1.8} $y=\dst{\frac{1}{2}\cos8t-\frac{3}{8}\sin8t}$ \unit{\feet}
  \answer{6.1.9} $.72\mbox{ m}$
 
-\answer{6.1.10}  $y=\dst{\frac{1}{3}\sin t +\frac{1}{2}\cos2t+\frac{5}{6}\sin2t}$ ft
+\answer{6.1.10}  $y=\dst{\frac{1}{3}\sin t +\frac{1}{2}\cos2t+\frac{5}{6}\sin2t}$ \unit{\feet}
 \answer{6.1.11}
 $y=\dst{\frac{16}{5}\left(4\sin \frac{t}{4}-\sin t\right)}$
 
 \answer{6.1.12} $y=\dst{-\frac{1}{16} \sin8t+\frac{1}{3}\cos4\sqrt2 t -\frac{1}{8\sqrt2}\sin4\sqrt2 t}$
 
-\answer{6.1.13} $y=\dst{-t\cos8t-\frac{1}{6}\cos8t+\frac{1}{8} \sin8t}$ ft
+\answer{6.1.13} $y=\dst{-t\cos8t-\frac{1}{6}\cos8t+\frac{1}{8} \sin8t}$ \unit{\feet}
 \answer{6.1.14}  $T=4\sqrt{2}$ s
 
 \answer{6.1.15} $\omega=8$ rad/s
-$y=-\dst{\frac{t}{16}(-\cos8t+2\sin 8t)+\frac{1}{128}\sin 8t}$ ft
+$y=-\dst{\frac{t}{16}(-\cos8t+2\sin 8t)+\frac{1}{128}\sin 8t}$ \unit{\feet}
 
 \answer{6.1.16} $\dst{\omega=4\sqrt6\mbox{ rad/s};  \quad y=-\frac{t}{\sqrt{6}}\left[\frac{8}{3}\cos4\sqrt{6}t+4\sin
-4\sqrt{6}t\right]+\frac{1}{9}\sin 4\sqrt{6} t}$ ft
+4\sqrt{6}t\right]+\frac{1}{9}\sin 4\sqrt{6} t}$ \unit{\feet}
 
 \answer{6.1.17} $y=\dst{\frac{t}{2}\cos2t-\frac{t}{4}\sin2t+3\cos2t+2\sin2t}$ m
 
@@ -3106,54 +3085,53 @@ object.
 system with the shorter period.
 
 
-\medskip{\bf Section~6.2 Answers,
-pp.~\pageref{exer:6.2.1}--\pageref{exer:6.2.26}}\medskip
+\sectionanswers{6.2}
 
-\answer{6.2.1}  $y=\dst{\frac{e^{-2t}}{2}(3\cos2t-\sin2t)\mbox{ ft};
-\;  \sqrt{\frac{5}{2}} e^{-2t}}$ ft
+\answer{6.2.1}  $y=\dst{\frac{e^{-2t}}{2}(3\cos2t-\sin2t) \unit{\feet};
+\;  \sqrt{\frac{5}{2}} e^{-2t}}$ \unit{\feet}
 
 \answer{6.2.2}  $y=\dst{-e^{-t}\left(3\cos3t+\frac{1}{3}\sin
-3t\right)\mbox{ ft}\;  \frac{\sqrt{82}}{3}e^{-t}}$ ft
+3t\right) \unit{\feet}\;  \frac{\sqrt{82}}{3}e^{-t}}$ \unit{\feet}
 
 
 
-\answer{6.2.3}  $y=\dst{e^{-16t}\left(\frac{1}{4}+10t\right)}$ ft
-\answer{6.2.4}  $y=\dst{-\frac{e^{-3t}}{4}(5\cos t+63\sin t)}$ ft
+\answer{6.2.3}  $y=\dst{e^{-16t}\left(\frac{1}{4}+10t\right)}$ \unit{\feet}
+\answer{6.2.4}  $y=\dst{-\frac{e^{-3t}}{4}(5\cos t+63\sin t)}$ \unit{\feet}
 
-\answer{6.2.5}  $0\le c<8$ lb-sec/ft
-\answer{6.2.6}  $y=\dst{\frac{1}{2}e^{-3t}\left(\cos\sqrt{91}t+\frac{11}{\sqrt{91}}\sin\sqrt{91}t\right)}$ ft
+\answer{6.2.5}  $0\le c<8$ \unit{\pound\second\per\foot}
+\answer{6.2.6}  $y=\dst{\frac{1}{2}e^{-3t}\left(\cos\sqrt{91}t+\frac{11}{\sqrt{91}}\sin\sqrt{91}t\right)}$ \unit{\feet}
 
-\answer{6.2.7}  $y=-\dst{\frac{e^{-4t}}{3} (2+8t)}$ ft
-\answer{6.2.8}  $y=\dst{e^{-10t}\left(9\cos4\sqrt{6}t+\frac{45}{2\sqrt{6}}\sin4\sqrt{6} t\right)}$ cm
+\answer{6.2.7}  $y=-\dst{\frac{e^{-4t}}{3} (2+8t)}$ \unit{\feet}
+\answer{6.2.8}  $y=\dst{e^{-10t}\left(9\cos4\sqrt{6}t+\frac{45}{2\sqrt{6}}\sin4\sqrt{6} t\right)}$ \unit{\centi\meter}
 
 \answer{6.2.9}  $\dst{y=e^{-3t/2}\left(\frac{3}{2}\cos\frac{\sqrt{41}}{2}t
-+\frac{9}{2\sqrt{41}}\sin\frac{\sqrt{41}}{2}t\right)}$ ft
++\frac{9}{2\sqrt{41}}\sin\frac{\sqrt{41}}{2}t\right)}$ \unit{\feet}
 
 \answer{6.2.10}  $y=\dst{e^{-\frac{3}{2}t}\left(\frac{1}{2}\cos
-\frac{\sqrt{119}}{2} t-\frac{9}{2\sqrt{119}}\sin\frac{\sqrt{119}}{2}t\right)}$ ft
+\frac{\sqrt{119}}{2} t-\frac{9}{2\sqrt{119}}\sin\frac{\sqrt{119}}{2}t\right)}$ \unit{\feet}
 
-\answer{6.2.11}  $\dst{y=e^{-8t}\left(\frac{1}{4}\cos8\sqrt{2}t-\frac{1}{4\sqrt{2}}\sin8\sqrt{2}t\right)}$ ft
+\answer{6.2.11}  $\dst{y=e^{-8t}\left(\frac{1}{4}\cos8\sqrt{2}t-\frac{1}{4\sqrt{2}}\sin8\sqrt{2}t\right)}$ \unit{\feet}
 
 \answer{6.2.12}  $\dst{y=e^{-t}\left(-\frac{1}{3}\cos3\sqrt{11} t+
-\frac{14}{9\sqrt{11}}\sin3\sqrt{11}t\right)}$ ft
+\frac{14}{9\sqrt{11}}\sin3\sqrt{11}t\right)}$ \unit{\feet}
 
 
-\answer{6.2.13} $\dst{y_p=\frac{22}{61}\cos2t+\frac{2}{61}\sin2t}$ ft
+\answer{6.2.13} $\dst{y_p=\frac{22}{61}\cos2t+\frac{2}{61}\sin2t}$ \unit{\feet}
 \answer{6.2.14} $y=-\dst\frac{2}{3}(e^{-8t}-2e^{-4t})$
 
 \answer{6.2.15}  $y=\dst{e^{-2t}\left(\frac{1}{10}\cos
-4t-\frac{1}{5}\sin4t\right)}$ m
-\answer{6.2.16} $y=e^{-3t}(10\cos t-70\sin t)$ cm
+4t-\frac{1}{5}\sin4t\right)}$ \unit{\meter}
+\answer{6.2.16} $y=e^{-3t}(10\cos t-70\sin t)$ \unit{\centi\meter}
 
-\answer{6.2.17}  $\dst{y_p=-\frac{2}{15}\cos3t+\frac{1}{15}\sin3t}$ ft
-
-
-
-\answer{6.2.18}  $y_p=\dst{\frac{11}{100}\cos4t+\frac{27}{100}\sin4t}$ cm
-\answer{6.2.19}  $\dst{y_p=\frac{42}{73}\cos t+\frac{39}{73}\sin t}$ ft
+\answer{6.2.17}  $\dst{y_p=-\frac{2}{15}\cos3t+\frac{1}{15}\sin3t}$ \unit{\feet}
 
 
-\answer{6.2.20} $y=\dst{-\frac{1}{2}\cos2t+\frac{1}{4}\sin2t}$ m
+
+\answer{6.2.18}  $y_p=\dst{\frac{11}{100}\cos4t+\frac{27}{100}\sin4t}$ \unit{\centi\meter}
+\answer{6.2.19}  $\dst{y_p=\frac{42}{73}\cos t+\frac{39}{73}\sin t}$ \unit{\feet}
+
+
+\answer{6.2.20} $y=\dst{-\frac{1}{2}\cos2t+\frac{1}{4}\sin2t}$ \unit{\meter}
 \answer{6.2.21}  $\dst{y_p=\frac{1}{c\omega_0}(-\beta\cos\omega_0t+
 \alpha\sin\omega_0t)}$
 
@@ -3165,8 +3143,7 @@ e^{r_1t}+\frac{v_0-r_1y_0}{r_2-r_1}e^{r_2t}}$
 \answer{6.2.26}  $y=e^{r_1t}\dst{\left(y_0+(v_0-r_1y_0)t\right)}$
 
 
-\medskip{\bf Section~6.3 Answers,
-pp.~\pageref{exer:6.3.1}--\pageref{exer:6.3.17}}\medskip
+\sectionanswers{6.3}
 
 
 \answer{6.3.1}
@@ -3189,8 +3166,7 @@ $I=e^{-15t}\dst{\left(2\cos5\sqrt{15}t-\frac{6}{\sqrt{31}}\sin5\sqrt{31}t\right)
 \answer{6.3.12} $\omega_0=1/\sqrt{LC}$  \, maximum amplitude $=\sqrt{U^2+V^2}/R$
 
 
-\medskip{\bf Section~6.4 Answers,
-pp.~\pageref{exer:6.4.1}--\pageref{exer:6.4.6}}\medskip
+\sectionanswers{6.4}
 
 \answer{6.4.1}
  If $e=1$, then
@@ -3213,8 +3189,8 @@ $-\pi\le\alpha<\pi$, $\cos\alpha=\dst{\frac{1}{e}\left(\frac{\rho}{r_0}-1\right)
 \end{quote}
 
 \answer{6.4.3}
-{\bf (a)} $e=\dst\frac{\gamma_2-\gamma_1}{\gamma_1+\gamma_2}$
-{\bf (b)} $r_0=R\gamma_1$,\; $r_0'=0$,\; $\theta_0$ arbitrary,\;
+{\bfseries (a)} $e=\dst\frac{\gamma_2-\gamma_1}{\gamma_1+\gamma_2}$
+{\bfseries (b)} $r_0=R\gamma_1$,\; $r_0'=0$,\; $\theta_0$ arbitrary,\;
 $\theta_0'=\dst{\left[\frac{2g\gamma_2}{R\gamma_1^3(\gamma_1+\gamma_2)}\right]^{1/2}}$
 
 \answer{6.4.4}
@@ -3223,9 +3199,9 @@ $\theta_0'=\dst{\left[\frac{2g\gamma_2}{R\gamma_1^3(\gamma_1+\gamma_2)}\right]^{
 $f(r)=-\dst\frac{mh^2(\gamma^2+1)}{ r^3}$
 
 \answer{6.4.6}
-{\bf (a)} $\dst\frac{d^2u}{d\theta^2}+\left(1-\frac{k}{h^2}\right)u=0,\;
+{\bfseries (a)} $\dst\frac{d^2u}{d\theta^2}+\left(1-\frac{k}{h^2}\right)u=0,\;
 u(\theta_0)=\dst\frac{1}{r_0},\; \dst\frac{du(\theta_0)}{d\theta}=-\dst\frac{r_0'}{h}$.
-{\bf (b)} with $\gamma=$
+{\bfseries (b)} with $\gamma=$
 \vspace*{-.07in} \begin{quote}
 $\left|1-\dst\frac{k}{h^2}\right|^{1/2}$: (i)
 $r=r_0\left( \cosh\gamma(\theta-\theta_0)-\dst\frac{r_0r_0'}{\gamma
@@ -3236,31 +3212,30 @@ h}\sin\gamma(\theta-\theta_0)\right)^{-1}$
 \end{quote}
 
 
-\medskip{\bf Section~7.1 Answers,
-pp.~\pageref{exer:7.1.1}--\pageref{exer:7.1.25}}\medskip
+\sectionanswers{7.1}
 
 \answer{7.1.1}
-{\bf (a)} $R=2$;   $I=(-1,3)$;   {\bf (b)} $R=1/2$;   $I=(3/2,5/2)$
-{\bf (c)}  $R=0$;   {\bf (d)} $R=16$;
+{\bfseries (a)} $R=2$;   $I=(-1,3)$;   {\bfseries (b)} $R=1/2$;   $I=(3/2,5/2)$
+{\bfseries (c)}  $R=0$;   {\bfseries (d)} $R=16$;
 
 \quad\;  \;  $I=(-14,18)$
-{\bf (e)} $R=\infty$;   $I=(-\infty,\infty)$ {\bf (f)} $R=4/3$;
+{\bfseries (e)} $R=\infty$;   $I=(-\infty,\infty)$ {\bfseries (f)} $R=4/3$;
 $I=(-25/3,-17/3)$
 
 \answer{7.1.3}
-{\bf (a)} $R=1$;   $I=(0,2)$   {\bf (b)} $R=\sqrt2$;
-$I=(-2-\sqrt2,-2+\sqrt2)$; {\bf (c)} $R=\infty$;
+{\bfseries (a)} $R=1$;   $I=(0,2)$   {\bfseries (b)} $R=\sqrt2$;
+$I=(-2-\sqrt2,-2+\sqrt2)$; {\bfseries (c)} $R=\infty$;
 
-\quad\;  \;  $I=(-\infty,\infty)$ {\bf (d)} $R=0$ {\bf (e)} $R=\sqrt3$;
-$I=(-\sqrt3,\sqrt3)$ {\bf (f)} $R=1$   $I=(0,2)$
+\quad\;  \;  $I=(-\infty,\infty)$ {\bfseries (d)} $R=0$ {\bfseries (e)} $R=\sqrt3$;
+$I=(-\sqrt3,\sqrt3)$ {\bfseries (f)} $R=1$   $I=(0,2)$
 
 \answer{7.1.5}
-{\bf (a)} $R=3$;   $I=(0,6)$   {\bf (b)} $R=1$;   $I=(-1,1)$
-{\bf (c)} $R=1/\sqrt3$
+{\bfseries (a)} $R=3$;   $I=(0,6)$   {\bfseries (b)} $R=1$;   $I=(-1,1)$
+{\bfseries (c)} $R=1/\sqrt3$
 
-\quad\;  \;  $I=(3-1/\sqrt3,3+1/\sqrt3)$   {\bf (d)}
+\quad\;  \;  $I=(3-1/\sqrt3,3+1/\sqrt3)$   {\bfseries (d)}
 $R=\infty$;
-$I=(-\infty,\infty)$ {\bf (e)} $R=0$   {\bf (f)} $R=2$;
+$I=(-\infty,\infty)$ {\bfseries (e)} $R=0$   {\bfseries (f)} $R=2$;
 
 \quad\;  \;   $I=(-1,3)$
 
@@ -3340,8 +3315,7 @@ $n\ge2$
 
 
 
-\medskip{\bf Section~7.2 Answers,
-pp.~\pageref{exer:7.2.1}--\pageref{exer:7.2.43}}\medskip
+\sectionanswers{7.2}
 
 \answer{7.2.1}
 $y=\dst{a_0\sum^\infty_{m=0}(-1)^m(2m+1)x^{2m}+
@@ -3441,9 +3415,9 @@ $y=\dst{3-4(x-4)+15(x-4)^2-4(x-4)^3+\frac{15}{4}(x-4)^4-\frac{1}{5}(x-4)^5}$%nod
 $y=\dst{3-3(x+1)-30(x+1)^2+\frac{20}{3}(x+1)^3+20(x+1)^4-\frac{4}{3}(x+1)^5-\frac{8}{9}(x+1)^6}$  %nodots
 
 \answer{7.2.27}
-{\bf (a)}$y=\dst{a_0\sum_{m=0}^\infty(-1)^m
+{\bfseries (a)}$y=\dst{a_0\sum_{m=0}^\infty(-1)^m
 x^{2m}+a_1\sum_{m=0}^\infty(-1)^mx^{2m+1}}$
-{\bf (b)}$y=\dst\frac{a_0+a_1x}{1+x^2}$
+{\bfseries (b)}$y=\dst\frac{a_0+a_1x}{1+x^2}$
 
 \answer{7.2.33}$y=\dst{a_0\sum_{m=0}^\infty
 \frac{x^{3m}}{3^mm!\prod_{j=0}^{m-1}(3j+2)}+a_1\sum_{m=0}^\infty
@@ -3494,8 +3468,7 @@ $y=\dst{a_0\sum_{m=0}^\infty(-1)^m\frac{x^{6m}}{\prod_{j=0}^{m-1}(6j+5)}+
 a_1\sum_{m=0}^\infty(-1)^m\frac{x^{6m+1}}{6^mm!}}$
 
 
-\medskip{\bf Section~7.3 Answers,
-pp.~\pageref{exer:7.3.1}--\pageref{exer:7.3.49}}\medskip
+\sectionanswers{7.3}
 
 \answer{7.3.1}
 $y=\dst{2-3x-2x^2+\frac{7}{2}x^3-\frac{55}{12}x^4+\frac{59}{8}x^5-\frac{83}{6}x^6
@@ -3583,13 +3556,13 @@ $y=\dst{-1+2(x+1)-\frac{1}{4}(x+1)^2+\frac{1}{2}(x+1)^3-\frac{65}{96}(x+1)^4
 +\frac{67}{80}(x+1)^5+\cdots}$
 
 \answer{7.3.31}
-{\bf (a)} $y=\dst{\frac{c_1}{1+x}+\frac{c_2}{1+2x}}$
-{\bf (b)} $y=\dst{\frac{c_1}{1-2x}+\frac{c_2}{1-3x}}$
-{\bf (c)} $y=\dst{\frac{c_1}{1-2x}+\frac{c_2x}{(1-2x)^2}}$
+{\bfseries (a)} $y=\dst{\frac{c_1}{1+x}+\frac{c_2}{1+2x}}$
+{\bfseries (b)} $y=\dst{\frac{c_1}{1-2x}+\frac{c_2}{1-3x}}$
+{\bfseries (c)} $y=\dst{\frac{c_1}{1-2x}+\frac{c_2x}{(1-2x)^2}}$
 
 \quad\;  \;
-{\bf (d)} $y=\dst{\frac{c_1}{2+x}+\frac{c_2x}{(2+x)^2}}$
-{\bf (e)} $y=\dst{\frac{c_1}{2+x}+\frac{c_2}{2+3x}}$
+{\bfseries (d)} $y=\dst{\frac{c_1}{2+x}+\frac{c_2x}{(2+x)^2}}$
+{\bfseries (e)} $y=\dst{\frac{c_1}{2+x}+\frac{c_2}{2+3x}}$
 
 \answer{7.3.32}
 $y=\dst{1-2x-\frac{3}{2}x^2+\frac{5}{3}x^3+\frac{17}{24}x^4-\frac{11}{20}x^5+\cdots}$
@@ -3650,8 +3623,7 @@ $y=\dst{1-2(x-3)+\frac{1}{2}(x-3)^2-\frac{1}{6}(x-3)^3+\frac{1}{4}(x-3)^4
 -\frac{1}{6}(x-3)^5+\cdots}$
 
 
-\medskip{\bf Section~7.4 Answers,
-pp.~\pageref{exer:7.4.1}--\pageref{exer:7.4.23}}\medskip
+\sectionanswers{7.4}
 
 \answer{7.4.1} $y=c_1x^{-4}+c_2x^{-2}$
  \answer{7.4.2} $y=c_1x+c_2x^7$
@@ -3687,8 +3659,7 @@ $y=\dst{\frac{1}{x^2}
 \left(\frac{1}{\sqrt{2}} \ln x\right) \right]}$
 
 
-\medskip{\bf Section~7.5 Answers,
-pp.~\pageref{exer:7.5.1}--\pageref{exer:7.5.68}}\medskip
+\sectionanswers{7.5}
 
 \answer{7.5.1}
 $y_1=\dst{x^{1/2}\left(1-\frac{1}{5}x-\frac{2}{35}x^2
@@ -3939,7 +3910,7 @@ $y_2=\dst{x^{-1/2}\left(1-\frac{2}{5}x^2+\frac{36}{65}x^4-
 \frac{408}{455}x^6+\cdots\right)}$
 
 \answer{7.5.53}
-{\bf (a)}
+{\bfseries (a)}
 $y_1=\dst{x^\nu\sum_{m=0}^\infty\frac{(-1)^m}{4^mm!\prod_{j=1}^m(j+\nu)}x^{2m}}$;
 $y_2=\dst{x^{-\nu}\sum_{m=0}^\infty\frac{(-1)^m}{4^mm!\prod_{j=1}^m(j-\nu)}x^{2m}}$
 
@@ -3958,8 +3929,7 @@ $y_1=\dst\frac{\sin x}{\sqrt x}$;   $y_2=\dst\frac{\cos x}{\sqrt x}$
 \answer{7.5.67} $y_1=\dst\frac{x}{(1+x)^2}$;   $y_2=\dst\frac{x^{1/3}}{(1+x)^2}$
 \answer{7.5.68} $y_1=\dst\frac{x}{3+2x+x^2}$;   $y_2=\dst\frac{x^{1/4}}{3+2x+x^2}$
 
-\medskip{\bf Section~7.6 Answers,
-pp.~\pageref{exer:7.6.1}--\pageref{exer:7.6.66}}\medskip
+\sectionanswers{7.6}
 
 \answer{7.6.1}
 $\dst{y_1=x\left(1-x+\frac{3}{4}x^2-\frac{13}{36}x^3+\cdots\right)}$;\;
@@ -4293,8 +4263,7 @@ $\dst{y_2=y_1\ln x-\sum_{m=1}^\infty\frac{(-1)^m}{4^m(m!)^2}\left(\sum_{j=1}^m\f
 \answer{7.6.65} $\dst\frac{x^{1/3}}{1+x+x^2}$;\;   $\dst\frac{x^{1/3}\ln x}{1+x+x^2}$
 
 
-{\bf Section~7.7 Answers,
-pp.~\pageref{exer:7.7.1}--\pageref{exer:7.7.48}}\medskip
+\sectionanswers{7.7}
 
 \answer{7.7.1}
 $\dst{y_1=2x^3\sum_{n=0}^\infty \frac{(-4)^n}{n!(n+2)!}x^n}$;\;
@@ -4537,8 +4506,7 @@ $\dst{y_2=x^{-\nu}\sum_{m=0}^{\nu-1}\frac{(-1)^m}{4^mm!\prod_{j=1}^m(j-\nu)}x^{2
 \bigskip
 
 
-\medskip{\bf Section~8.1 Answers,
-pp.~\pageref{exer:8.1.1}--\pageref{exer:8.1.18}}\medskip
+\sectionanswers{8.1}
 
 \answer{8.1.1}
 \part{a}  $\dst\frac{1}{s^2}$
@@ -4606,8 +4574,7 @@ s>0}$
 \part{d} $\dst\frac{1}{(s^2+1)(1-e^{-\pi s})}$
 
 
-\medskip{\bf Section~8.2 Answers,
-pp.~\pageref{exer:8.2.1}--\pageref{exer:8.2.10}}\medskip
+\sectionanswers{8.2}
 
 \answer{8.2.1}
  \part{a} $\dst{\frac{t^{3}e^{7t}}{2}}$\;
@@ -4756,8 +4723,7 @@ e^{2t}\sin 3t-\frac{5}{9} e^{2t}+e^t}$
  $\dst{\frac{1}{a}e^{\frac{b}{a}t}f\left(\frac{t}{a}\right)}$
 
 
-\medskip{\bf Section~8.3 Answers,
-pp.~\pageref{exer:8.3.1}--\pageref{exer:8.3.38}}\medskip
+\sectionanswers{8.3}
 
 \answer{8.3.1} $y=\dst{\frac{1}{6}e^t-\frac{9}{2}e^{-t}+\frac{16}{3}e^{-2t}}$
 \answer{8.3.2}  $y=\dst{-\frac{1}{3}+\frac{8}{15}e^{3t}+\frac{4}{5}e^{-2t}}$
@@ -4829,8 +4795,7 @@ t+\sin t)}$
 $y=\dst\frac{1}{100}\left(3e^{3t}-e^{t/3}(3+310t)\right)$
 
 
-\medskip{\bf Section~8.4 Answers,
-pp.~\pageref{exer:8.4.1}--\pageref{exer:8.4.36}}\medskip
+\sectionanswers{8.4}
 
 \answer{8.4.1} $ 1+u(t-4)(t-1)$;\;   $\dst{\frac{1}{s}+e^{-4s}\left(\frac{1}{s^2}+\frac{3}{s}\right)}$
 \answer{8.4.2}  $t+u(t-1)(1-t)$;\;
@@ -4942,8 +4907,7 @@ nonzero.}
 \answer{8.4.36}
 $\dst{\sum_{m=1}^\infty(-1)^m(2m-1)u(t-m);\;   \frac{1}{s}\frac{(1-e^s)}{(1+e^s)^2}}$
 
-\medskip{\bf Section~8.5 Answers,
-pp.~\pageref{exer:8.5.1}--\pageref{exer:8.5.26}}\medskip
+\sectionanswers{8.5}
 
 \answer{8.5.1}  $y=3(1-\cos t)-3u(t-\pi)(1+\cos t)$
 
@@ -5036,37 +5000,36 @@ t+(3\pi+1)\sin t
 $y=\dst{\frac{t^2}{2}+\sum_{m=1}^\infty u(t-m)\frac{(t-m)^2}{2}}$
 
 \answer{8.5.22}
-{\bf (a)} $y=\dst{\left\{\begin{array}{cll}2m+1-\cos t,&2m\pi\le
+{\bfseries (a)} $y=\dst{\left\{\begin{array}{cll}2m+1-\cos t,&2m\pi\le
 t<(2m+1)\pi&(m=0,1,\dots)\\[1\jot] 2m,&(2m-1)\pi\le
 t<2m\pi&(m=1,2,\dots)\end{array}\right.}$
 
 \quad\;
-{\bf (b)}
+{\bfseries (b)}
 $y=(m+1)(t-\sin t-m\pi\cos t),\;  2m\pi\le t<(2m+2)\pi\quad
 (m=0,1,\dots)$
 
 \quad\;
-{\bf (c)}
+{\bfseries (c)}
 $y=(-1)^m-(2m+1)\cos t,\;  m\pi\le t<(m+1)\pi\quad(m=0,1,\dots)$
 
 \quad\;
-{\bf (d)}
+{\bfseries (d)}
 $y=\dst{\frac{e^{m+1}-1}{2(e-1)}(e^{t-m}+e^{-t})-m-1,\quad m\le t<m+1
 \;  (m=0,1\dots)}$
 
 \quad\;
-{\bf (e)}
+{\bfseries (e)}
 $y=\dst{\left(m+1-\left(\frac{e^{2(m+1)\pi}-1}{e^{2\pi}-1}\right)e^{-t}\right)\sin
 t\;  2m\pi\le t<2(m+1)\pi\quad (m=0,1,\dots)}$
 
 \quad\;
-{\bf (f)}
+{\bfseries (f)}
 $y=\dst{\frac{m+1}{2}-e^{t-m}\frac{e^{m+1}-1}{e-1}+\frac{1}{2}e^{2(t-m)}\frac{e^{2m+2}-1}{e^2-1},
 \;  m\le t<m+1\quad(m=0,1,\dots)}$
 
 
-{\bf Section~8.6 Answers,
-pp.~\pageref{exer:8.6.1}--\pageref{exer:8.6.14}}\medskip
+\sectionanswers{8.6}
 
 \answer{8.6.1}
 \part{a}  $\dst{\frac{1}{2}\int_0^t\tau\sin 2(t-\tau)\,
@@ -5171,8 +5134,7 @@ e^{-3\tau}f(t-\tau)\,d\tau}$
 \part{e} $\dst\frac{1}{3}(\cos t-\cos 2t)$
 
 
-\medskip{\bf Section~8.7 Answers,
-pp.~\pageref{exer:8.7.1}--\pageref{exer:8.7.30}}\medskip
+\sectionanswers{8.7}
 
 
 
@@ -5305,8 +5267,7 @@ $y=
 -\sin t,& (2m+1)\pi\le t <(2m+2)\pi,
 \end{cases}$ \quad ($m=0$, $1$,\dots)
 
-\medskip{\bf Section~9.1 Answers,
-pp.~\pageref{exer:9.1.1}--\pageref{exer:9.1.24}}\medskip
+\sectionanswers{9.1}
 
 \answer{9.1.2}
 $y=\dst{2x^2-3x^3+\frac{1}{x}}$\;
@@ -5367,8 +5328,7 @@ $xy'''-y''-xy'+y=0$\;
 \part{j} $xy^{(4)}-y'''-4xy''+4y'=0$\;
 
 
-\medskip{\bf Section~9.2 Answers,
-pp.~\pageref{exer:9.2.1}--\pageref{exer:9.2.45}}\medskip
+\sectionanswers{9.2}
 
 \answer{9.2.1}
  $y=e^x(c_1+c_2x+c_3x^2)$\;
@@ -5427,16 +5387,16 @@ $y=e^x(c_1+c_2x+c_3\cos x+c_4\sin x)$
 \answer{9.2.27} $y=2e^{-x/2}+\cos2x-\sin2x$
 
 \answer{9.2.28}
-{\bf (a)} $\{e^x,\,xe^x,\;  e^{2x}\}:\;   1$
-{\bf (b)} $\{\cos2x,\,\sin2x,\,e^{3x}\}: \; 26$
+{\bfseries (a)} $\{e^x,\,xe^x,\;  e^{2x}\}:\;   1$
+{\bfseries (b)} $\{\cos2x,\,\sin2x,\,e^{3x}\}: \; 26$
 
 \quad\;  \;
- {\bf (c)} $\{e^{-x}\cos x,\,e^{-x}\sin x,\,e^x\}: \; 5$
- {\bf (d)} $\{1,\,x,\,x^2,\,e^x\} \; 2e^x$
+ {\bfseries (c)} $\{e^{-x}\cos x,\,e^{-x}\sin x,\,e^x\}: \; 5$
+ {\bfseries (d)} $\{1,\,x,\,x^2,\,e^x\} \; 2e^x$
 
 \quad\;  \;
-{\bf (e)} $\{e^x,\,e^{-x},\,\cos x,\,\sin x\}   \-8$\;
- {\bf (f)} $\{\cos x,\,\sin x,\,e^x\cos x,\,e^x\sin x\}:\; 5$
+{\bfseries (e)} $\{e^x,\,e^{-x},\,\cos x,\,\sin x\}   \-8$\;
+ {\bfseries (f)} $\{\cos x,\,\sin x,\,e^x\cos x,\,e^x\sin x\}:\; 5$
 
 \answer{9.2.29}
  $\{e^{-3x}\cos2x,\,e^{-3x}\sin2x,\,e^{2x},\,xe^{2x},\,1,\,
@@ -5479,33 +5439,33 @@ $x^2\cos(2x/3),\,\sin(2x/3),\,x\sin(2x/3),\,x^2\sin(2x/3)\}$
 \answer{9.2.38}
  $\{e^{-x},\,e^{3x},\,e^x\cos2x,\,e^x\sin2x\}$\;
 \answer{9.2.39}
-{\bf (b)} $\dst{e^{(a_1+a_2+\cdots+a_n)x}\prod_{1\le i<j\le
+{\bfseries (b)} $\dst{e^{(a_1+a_2+\cdots+a_n)x}\prod_{1\le i<j\le
 n}(a_j-a_i)}$
 
-\answer{9.2.43} {\bf (a)}
+\answer{9.2.43} {\bfseries (a)}
 $\dst\left\{e^x,\,e^{-x/2}\cos\left(\frac{\sqrt3}{2}x\right),
 \,e^{-x/2}\sin\left(\frac{\sqrt3}{2}x\right)\right\}$
-{\bf (b)} $\dst\left\{e^{-x},\,e^{x/2}\cos\left(\frac{\sqrt3}{2}x\right),
+{\bfseries (b)} $\dst\left\{e^{-x},\,e^{x/2}\cos\left(\frac{\sqrt3}{2}x\right),
 \,e^{x/2}\sin\left(\frac{\sqrt3}{2}x\right)\right\}$
 
 \quad\;   \,
-{\bf (c)}
+{\bfseries (c)}
 $\{e^{2x}\cos2x,\,e^{2x}\sin2x,\,e^{-2x}\cos2x,\,e^{-2x}\sin2x\}$
 
 \qquad \,
-\hspace*{-5pt}{\bf (d)} $\dst\left\{e^x,\,e^{-x}
+\hspace*{-5pt}{\bfseries (d)} $\dst\left\{e^x,\,e^{-x}
 ,\,e^{x/2}\cos\left(\frac{\sqrt3}{2}x\right),
 \,e^{x/2}\sin\left(\frac{\sqrt3}{2}x\right),
 \,e^{-x/2}\cos\left(\frac{\sqrt3}{2}x\right),
 \,e^{-x/2}\sin\left(\frac{\sqrt3}{2}x\right)\right\}$
 
 \qquad
-{\bf (e)}
+{\bfseries (e)}
  $\{\cos2x,\,\sin2x,\,e^{-\sqrt3x}\cos x,\,e^{-\sqrt3x}\sin x
 ,\,e^{\sqrt3x}\cos x,\,e^{\sqrt3x}\sin x\}$
 
 \qquad
-{\bf (f)}
+{\bfseries (f)}
 $\dst\left\{1,\,e^{2x}
 ,\,e^{3x/2}\cos\left(\frac{\sqrt3}{2}x\right),
 \,e^{3x/2}\sin\left(\frac{\sqrt3}{2}x\right),
@@ -5513,7 +5473,7 @@ $\dst\left\{1,\,e^{2x}
 \,e^{x/2}\sin\left(\frac{\sqrt3}{2}x\right)\right\}$
 
 \qquad
-{\bf (g)}
+{\bfseries (g)}
 $\dst\left\{e^{-x}
 ,\,e^{x/2}\cos\left(\frac{\sqrt3}{2}x\right),
 \,e^{x/2}\sin\left(\frac{\sqrt3}{2}x\right),
@@ -5528,8 +5488,7 @@ $\mbox{distinct});$\;  $y=[c_1+c_2 \ln x+c_3(\ln x)^2]x^{r_1}$;
 \; $y=c_1x^{r_1}+x^\lambda [c_2\cos(\omega \ln  x)+c_3\sin
 (\omega \ln x)]$
 
-\medskip{\bf Section~9.3 Answers,
-pp.~\pageref{exer:9.3.1}--\pageref{exer:9.3.75}}\medskip
+\sectionanswers{9.3}
 
 \answer{9.3.1} $y_p=e^{-x}(2+x-x^2)$
 \answer{9.3.2} $y_p=-\dst\frac{e^{-3x}}{4}(3-x+x^2)$
@@ -5661,8 +5620,7 @@ c_1e^x+e^{-x}(c_2\cos x+c_3\sin x)$
 \answer{9.3.74} $2 +e^x\left[(1+x)\cos x-\sin x-1\right]$
 
 
-\medskip{\bf Section~9.4 Answers,
-pp.~\pageref{exer:9.4.1}--\pageref{exer:9.4.42}}\medskip
+\sectionanswers{9.4}
 
  \answer{9.4.1} $y_p=2x^3$
 \answer{9.4.2} $y_p=\dst\frac{8}{105}x^{7/2} e^{-x^2}$
@@ -5749,8 +5707,7 @@ $y_p=\dst{\int_{x_0}^x
 F(t)\,dt}$
 
 
-\medskip{\bf Section~10.1 Answers,
-pp.~\pageref{exer:10.1.1}--\pageref{exer:10.1.7}}\medskip
+\sectionanswers{10.1}
 
 \answer{10.1.1}
 $\begin{array}{rcl}
@@ -5787,11 +5744,11 @@ $z''=-\dst{\frac{\alpha}{m}z'+\frac{gR^2z}{\left(x^2+y^2+z^2\right)^{3/2}}}$
 
 \answer{10.1.5}
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{{\bf (a)} $\begin{array}{ccl}
+{{\bfseries (a)} $\begin{array}{ccl}
 x_1'&=&x_2\\x_2'&=&x_3\\x_3'&=&f(t,x_1,y_1,y_2)\\y_1'&=
 &y_2\\y_2'&=&g(t,y_1,y_2)
 \end{array}$}&
-{{\bf (b)} $\begin{array}{ccl}
+{{\bfseries (b)} $\begin{array}{ccl}
 u_1'&=&f(t,u_1,v_1,v_2,w_2)\\;
 v_1'&=&v_2\\
 v_2'&=&g(t,u_1,v_1,v_2,w_1)\\
@@ -5801,16 +5758,16 @@ w_2'&=&h(t,u_1,v_1,v_2,w_1,w_2)
 \end{tabular}
 
 \begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}
-{\quad\;   {\bf (c)} $\begin{array}{ccl}
+{\quad\;   {\bfseries (c)} $\begin{array}{ccl}
 y_1'&=&y_2\\y_2'&=&y_3\\y_3'&=&f(t,y_1,y_2,y_3)
 \end{array}$}&
-{\quad \,{\bf (d)} $\begin{array}{ccl}
+{\quad \,{\bfseries (d)} $\begin{array}{ccl}
 y_1'&=&y_2\\y_2'&=&y_3\\y_3'&=&y_4\\y_4'&=&f(t,y_1)
 \end{array}$}
 \end{tabular}
 
 \quad\;
-{\bf (e)}$ \begin{array}{ccl}x_1'&=&x_2\\x_2'&=&f(t,x_1,y_1)\\
+{\bfseries (e)}$ \begin{array}{ccl}x_1'&=&x_2\\x_2'&=&f(t,x_1,y_1)\\
 y_1'&=&y_2\\y_2'&=&g(t,x_1,y_1)\end{array}$
 
 \answer{10.1.6}
@@ -5825,50 +5782,48 @@ y_1'&=&y_2\\y_2'&=&g(t,x_1,y_1)\end{array}$
 \end{tabular}
 
 
-\medskip{\bf Section~10.2 Answers,
-pp.~\pageref{exer:10.2.1}--\pageref{exer:10.2.13}}\medskip
+\sectionanswers{10.2}
 
 \answer{10.2.1}
-{\bf (a)} ${\bf y}'=\twobytwo2442{\bf y}$\;
+{\bfseries (a)} $\vect{y}'=\twobytwo2442\vect{y}$\;
 \qquad
-{\bf (b)} ${\bf
-y}'=\twobytwo{-2}{-2}{-5}1{\bf y}$
+{\bfseries (b)} $\vect{y}'=\twobytwo{-2}{-2}{-5}1\vect{y}$
 
 \quad\;
-{\bf (c)} ${\bf y}'=\twobytwo{-4}{-10}37{\bf y}$\;
-{\bf (d)} ${\bf
-y}'=\twobytwo2112{\bf y}$
+{\bfseries (c)} $\vect{y}'=\twobytwo{-4}{-10}37\vect{y}$\;
+{\bfseries (d)} ${\bf
+y}'=\twobytwo2112\vect{y}$
 
 \answer{10.2.2}
-{\bf (a)} ${\bf y}'=\threebythree{-1}2301600{-2}{\bf y}$
+{\bfseries (a)} $\vect{y}'=\threebythree{-1}2301600{-2}\vect{y}$
 \quad
-{\bf (b)} ${\bf
-y}'=\threebythree022202220{\bf y}$
+{\bfseries (b)} ${\bf
+y}'=\threebythree022202220\vect{y}$
 
 \quad\;
-{\bf (c)} ${\bf y}'=\threebythree{-1}222{-1}222{-1}{\bf y}$
+{\bfseries (c)} $\vect{y}'=\threebythree{-1}222{-1}222{-1}\vect{y}$
 \quad
-{\bf (d)}
-${\bf y}'=\threebythree3{-1}{-1}{-2}324{-1}{-2}{\bf y}$
+{\bfseries (d)}
+$\vect{y}'=\threebythree3{-1}{-1}{-2}324{-1}{-2}\vect{y}$
 
 \answer{10.2.3}
-{\bf (a)} ${\bf y}'=\twobytwo11{-2}4{\bf y},\; {\bf y}(0)=\twocol10$
+{\bfseries (a)} $\vect{y}'=\twobytwo11{-2}4\vect{y},\; \vect{y}(0)=\twocol10$
 \quad
-{\bf (b)} ${\bf y}'=\twobytwo53{-1}1{\bf y},\; {\bf y}(0)=\twocol9{-5}$
+{\bfseries (b)} $\vect{y}'=\twobytwo53{-1}1\vect{y},\; \vect{y}(0)=\twocol9{-5}$
 
 \answer{10.2.4}
-{\bf (a)} ${\bf y}'=\threebythree644{-7}{-2}{-1}743{\bf y},\; {\bf y}(0)
+{\bfseries (a)} $\vect{y}'=\threebythree644{-7}{-2}{-1}743\vect{y},\; \vect{y}(0)
 =\threecol3{-6}4$
 
 \quad\;
-{\bf (b)} ${\bf y}'=\threebythree877{-5}{-6}{-9}57{10}{\bf y},\; {\bf
+{\bfseries (b)} $\vect{y}'=\threebythree877{-5}{-6}{-9}57{10}\vect{y},\; {\bf
 y}(0) =\threecol2{-4}3$
 
 \answer{10.2.5}
-{\bf (a)} ${\bf y}'=\twobytwo{-3}2{-5}3{\bf
+{\bfseries (a)} $\vect{y}'=\twobytwo{-3}2{-5}3{\bf
 }+\twocol{3-2t}{6-3t}$
 \quad
-{\bf (b)} ${\bf y}'=\twobytwo31{-1}1{\bf
+{\bfseries (b)} $\vect{y}'=\twobytwo31{-1}1{\bf
 y}+\left[\begin{array}{c}-5e^t\\e^t\end{array}\right]$
 
 \answer{10.2.10}
@@ -5884,145 +5839,143 @@ Y^rY'Y^{n-r-1}$
 \answer{10.2.13}
 $B=(P'+PA)P^{-1}$.
 
-{\bf Section~10.3 Answers,
-pp.~\pageref{exer:10.3.1}--\pageref{exer:10.3.18}}\medskip
+\sectionanswers{10.3}
 
 \answer{10.3.2}
 $\dst{{\bf
 y}'=\left[\begin{array}{cc}0&1\\[\jot]-\dst\frac{P_2(x)}{P_0(x)
-}&-\dst\frac{P_1(x)}{P_0(x)}\end{array}\right]{\bf y}}$
+}&-\dst\frac{P_1(x)}{P_0(x)}\end{array}\right]\vect{y}}$
 \quad
 \answer{10.3.3}
-${\bf y}'=\left[\begin{array}{cccc}
+$\vect{y}'=\left[\begin{array}{cccc}
 0&1&\cdots&0\\ \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\\[\jot]
 -\dst\frac{P_n(x)}{P_0(x)}&-\dst\frac{P_{n-1}(x)}{P_0(x)}&\cdots&
--\dst\frac{P_1(x)}{P_0(x)}\end{array}\right]{\bf y}$
+-\dst\frac{P_1(x)}{P_0(x)}\end{array}\right]\vect{y}$
 
 \smallskip
 
 \answer{10.3.7}
-{\bf (b)}\;
-${\bf y}=\dst{\left[\begin{array}{c}3e^{6t}-6e^{-2t}\\3e^{6t}+6e^{-2t}
+{\bfseries (b)}\;
+$\vect{y}=\dst{\left[\begin{array}{c}3e^{6t}-6e^{-2t}\\3e^{6t}+6e^{-2t}
 \end{array}\right]}$ \quad
-{\bf (c)}\;
-${\bf y}=
+{\bfseries (c)}\;
+$\vect{y}=
 \dst{\frac{1}{2}\left[\begin{array}{cc}e^{6t}+e^{-2t}&e^{6t}-e^{-2t}
-\\e^{6t}-e^{-2t}&e^{6t}+e^{-2t}\end{array}\right]}{\bf k}$
+\\e^{6t}-e^{-2t}&e^{6t}+e^{-2t}\end{array}\right]}\vect{k}$
 
 \bigskip
 
 \answer{10.3.8}\,
-{\bf (b)}
+{\bfseries (b)}
 ${\bf
 y}=\dst{\left[\begin{array}{c}6e^{-4t}+4e^{3t}\\6e^{-4t}-10e^{3t}
 \end{array}\right]}$\quad\;
 {\bf
-(c)}\, ${\bf y}=
+(c)}\, $\vect{y}=
 \dst{\frac{1}{7}\left[\begin{array}{cc}5e^{-4t}+2e^{3t}&2e^{-4t}-2e^{3t}
-\\5e^{-4t}-5e^{3t}&2e^{-4t}+5e^{3t}\end{array}\right]}{\bf k}$
+\\5e^{-4t}-5e^{3t}&2e^{-4t}+5e^{3t}\end{array}\right]}\vect{k}$
 \medskip
 
 \answer{10.3.9}
-{\bf (b)}
-${\bf y}=\dst{\left[\begin{array}{c}-15e^{2t}-4e^t\\9e^{2t}+2e^t
+{\bfseries (b)}
+$\vect{y}=\dst{\left[\begin{array}{c}-15e^{2t}-4e^t\\9e^{2t}+2e^t
 \end{array}\right]}$
 {\bf
 \qquad (c)} ${\bf
 y}=\dst{\left[\begin{array}{cc}-5e^{2t}+6e^t&-10e^{2t}+10e^t
-\\3e^{2t}-3e^t&6e^{2t}-5e^t\end{array}\right]}{\bf k}$
+\\3e^{2t}-3e^t&6e^{2t}-5e^t\end{array}\right]}\vect{k}$
 
 \medskip
 
 \answer{10.3.10}
-{\bf (b)} ${\bf
+{\bfseries (b)} ${\bf
 y}=\dst{\left[\begin{array}{c}5e^{3t}-3e^t\\5e^{3t}+3e^t
 \end{array}\right]}$  \qquad\; \;
 \part{c}
-$\dst{\bf y}={\frac{1}{2}\left[\begin{array}{cc}e^{3t}+e^t&e^{3t}-e^t
-\\e^{3t}-e^t&e^{3t}+e^t\end{array}\right]}{\bf k}$
+$\dst\vect{y}={\frac{1}{2}\left[\begin{array}{cc}e^{3t}+e^t&e^{3t}-e^t
+\\e^{3t}-e^t&e^{3t}+e^t\end{array}\right]}\vect{k}$
 
 \medskip
 
 \answer{10.3.11}
-{\bf (b)}
-${\bf y
+{\bfseries (b)}
+$\vect{y
 }=\dst{\left[\begin{array}{c}e^{2t}-2e^{3t}+3e^{-t}\\2e^{3t}-9e^{-t}\\
 e^{2t}-2e^{3t}+21e^{-t}\end{array}\right]}$
- \hspace*{10pt} {\bf (c)}
-${\bf y}=
+ \hspace*{10pt} {\bfseries (c)}
+$\vect{y}=
 \dst{\frac{1}{6}\left[\begin{array}{ccc}4e^{2t}+3e^{3t}-e^{-t}&6e^{2t}-6e^{3t}
 &2e^{2t}-3e^{3t}+e^{-t}
 \\-3e^{3t}+3e^{-t}&6e^{3t}&3e^{3t}-3e^{-t}\\
 4e^{2t}+3e^{3t}-7e^{-t}&6e^{2t}-6e^{3t}&2e^{2t}-3e^{3t}+7e^{-t}
-\end{array}\right]}{\bf k}$
+\end{array}\right]}\vect{k}$
 
 \medskip
 
 \answer{10.3.12}
-{\bf (b)}
-${\bf y
+{\bfseries (b)}
+$\vect{y
 }=\dst{\frac{1}{3}\left[\begin{array}{c}-e^{-2t}+e^{4t}\\-10e^{-2t}+e^{4t}\\
 11e^{-2t}+e^{4t}\end{array}\right]}$
- \hspace*{10pt}\quad  {\bf (c)}
-${\bf y}=
+ \hspace*{10pt}\quad  {\bfseries (c)}
+$\vect{y}=
 \dst{\frac{1}{3}\left[\begin{array}{ccc}2e^{-2t}+e^{4t}&-e^{-2t}+e^{4t}
 &-e^{-2t}+e^{4t}
 \\-e^{-2t}+e^{4t}&2e^{-2t}+e^{4t}&-e^{-2t}+e^{4t}\\
 -e^{-2t}+e^{4t}&-e^{-2t}+e^{4t}&2e^{-2t}+e^{4t}
-\end{array}\right]}{\bf k}$
+\end{array}\right]}\vect{k}$
 
 \medskip
 
 \answer{10.3.13}
-{\bf (b)}
-${\bf y
+{\bfseries (b)}
+$\vect{y
 }=\dst{\left[\begin{array}{c}3e^t+3e^{-t}-e^{-2t}\\3e^t+2e^{-2t}\\
 -e^{-2t}\end{array}\right]}$
-\hspace*{10pt}\;   {\bf (c)}
-${\bf y}=\dst{\left[\begin{array}{ccc}e^{-t}&e^t-e^{-t}
+\hspace*{10pt}\;   {\bfseries (c)}
+$\vect{y}=\dst{\left[\begin{array}{ccc}e^{-t}&e^t-e^{-t}
 &2e^t-3e^{-t}+e^{-2t}\\0&e^t&2e^t-2e^{-2t}\\
-0&0&e^{-2t}\end{array}\right]}{\bf k}$
+0&0&e^{-2t}\end{array}\right]}\vect{k}$
 
 
 \answer{10.3.14}
 $YZ^{-1}$  and $ZY^{-1}$
 
-\medskip{\bf Section~10.4 Answers,
-pp.~\pageref{exer:10.4.1}--\pageref{exer:10.4.42}}\medskip
+\sectionanswers{10.4}
 
 \answer{10.4.1}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}1\\1\end{array}
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}1\\1\end{array}
 \right]e^{3t}+c_2\left[\begin{array}{r}1\\-1\end{array}\right]
 e^{-t}}$
 \quad \answer{10.4.2}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}1\\1\end{array}
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}1\\1\end{array}
 \right]e^{-t/2}+c_2\left[\begin{array}{r}-1\\1\end{array}\right]e^{-2t}}$
 
 \smallskip
 
 \answer{10.4.3}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}-3\\1\end{array}
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}-3\\1\end{array}
 \right]e^{-t}+c_2\left[\begin{array}{r}-1\\2\end{array}
 \right]e^{-2t}}$
 \answer{10.4.4}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}2\\1\end{array}
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}2\\1\end{array}
 \right]e^{-3t}+c_2\left[\begin{array}{r}-2\\1\end{array}
 \right]e^t}$
 
 \smallskip
 
 \answer{10.4.5}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}1\\1
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}1\\1
 \end{array}\right]e^{-2t}+c_1\left[\begin{array}{r}-4\\1\end{array}
 \right]e^{3t}}$    \quad
 \answer{10.4.6}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}3\\2\end{array}
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}3\\2\end{array}
 \right]e^{2t}+c_2\left[\begin{array}{r}1\\1\end{array}\right]e^t}$
 
 \smallskip
 
 \answer{10.4.7}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}-3\\1
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}-3\\1
 \end{array}
 \right]e^{-5t}+c_2\left[\begin{array}{r}-1\\1\end{array}
 \right]e^{-3t}}$
@@ -6030,7 +5983,7 @@ e^{-t}}$
 \smallskip
 
 \answer{10.4.8}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}1\\2\\1
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}1\\2\\1
 \end{array}\right]e^{-3t}+c_2\left[\begin{array}{r}-1\\-4\\1
 \end{array}
 \right]e^{-t}+c_3\left[\begin{array}{r}-1\\-1\\1\end{array}
@@ -6039,7 +5992,7 @@ e^{-t}}$
 \smallskip
 
 \answer{10.4.9}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}2\\1\\2
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}2\\1\\2
 \end{array}\right]e^{-16t}+c_2\left[\begin{array}{r}-1\\2\\
  0\end{array}
 \right]e^{2t}+c_3\left[\begin{array}{r}-1\\0\\1
@@ -6047,7 +6000,7 @@ e^{-t}}$
 
 \smallskip
 \answer{10.4.10}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}-2\\-4\\3
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}-2\\-4\\3
 \end{array}\right]e^t+c_2\left[\begin{array}{r}-1\\1\\
  0\end{array}\right]
 e^{-2t}+c_3\left[\begin{array}{r}-7\\-5\\4\end{array}\right]
@@ -6056,7 +6009,7 @@ e^{2t}}$
 \smallskip
 
 \answer{10.4.11}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}-1\\-1\\1
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}-1\\-1\\1
 \end{array}\right]e^{-2t}+c_2\left[\begin{array}{r}-1\\-2\\1
 \end{array}
 \right]e^{-3t}+c_3\left[\begin{array}{r}-2\\-6\\3\end{array}
@@ -6064,21 +6017,21 @@ e^{2t}}$
 
 \smallskip
 \answer{10.4.12}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}11\\\phantom{1}7
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}11\\\phantom{1}7
 \\\phantom{1}1\end{array}\right]e^{3t}+c_2\left[\begin{array}{r}1\\2
 \\1\end{array}\right]e^{-2t}+c_3\left[\begin{array}{r}1\\1\\1
 \end{array}\right]e^{-t}}$
 
 \smallskip
 \answer{10.4.13}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}4\\-1\\1\end{array}
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}4\\-1\\1\end{array}
 \right]e^{-4t}+c_2\left[\begin{array}{r}-1\\-1\\1
 \end{array}\right]e^{6t}+c_3\left[\begin{array}{r}-1\\0\\1
 \end{array}\right]e^{4t}}$
 
 \smallskip
 \answer{10.4.14}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}1\\1\\5
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}1\\1\\5
 \end{array}\right]e^{-5t}+c_2\left[\begin{array}{r}-1\\0\\
  1\end{array}
 \right]e^{5t}+c_3\left[\begin{array}{r}1\\1\\0\end{array}
@@ -6086,7 +6039,7 @@ e^{2t}}$
 
 \smallskip
 \answer{10.4.15}
- ${\bf y}=\dst{c_1\left[\begin{array}{r}1\\
+ $\vect{y}=\dst{c_1\left[\begin{array}{r}1\\
 -1\\2
 \end{array}\right]+c_2\left[\begin{array}{r}-1\\0\\3\end{array}
 \right]e^{6t}+c_3\left[\begin{array}{r}1\\3\\0
@@ -6094,50 +6047,50 @@ e^{2t}}$
 
 \smallskip
 \answer{10.4.16}
-${\bf y}=\dst{-\twocol26e^{5t}+\twocol42e^{-5t}}$
+$\vect{y}=\dst{-\twocol26e^{5t}+\twocol42e^{-5t}}$
 \answer{10.4.17}
-${\bf y}=\dst{\twocol2{-4}e^{t/2}+\twocol{-2}1e^{t}}$
+$\vect{y}=\dst{\twocol2{-4}e^{t/2}+\twocol{-2}1e^{t}}$
 
 \smallskip
 
 \answer{10.4.18}
-${\bf y}=\dst{\twocol77e^{9t}-\twocol24e^{-3t}}$
+$\vect{y}=\dst{\twocol77e^{9t}-\twocol24e^{-3t}}$
 \answer{10.4.19}
-${\bf y}=\dst{\twocol39e^{5t}-\twocol42e^{-5t}}$
+$\vect{y}=\dst{\twocol39e^{5t}-\twocol42e^{-5t}}$
 
 \smallskip
 
 \answer{10.4.20}
-${\bf y}=\dst{\threecol550e^{t/2}+\threecol001e^{t/2}+
+$\vect{y}=\dst{\threecol550e^{t/2}+\threecol001e^{t/2}+
 \threecol{-1}20e^{-t/2}}$
 \quad \answer{10.4.21}
-${\bf y}=\dst{\threecol333e^t+\threecol{-2}{-2}2e^{-t}}$
+$\vect{y}=\dst{\threecol333e^t+\threecol{-2}{-2}2e^{-t}}$
 
 \smallskip
 
 \answer{10.4.22}
-${\bf y}=\dst{\threecol2{-2}2e^t-\threecol303e^{-2t}+\threecol110e^{3t}}$
+$\vect{y}=\dst{\threecol2{-2}2e^t-\threecol303e^{-2t}+\threecol110e^{3t}}$
 
 \smallskip
 \answer{10.4.23}
-${\bf y}=\dst{-\threecol121e^t+\threecol424e^{-t}+\threecol110e^{2t}}$
+$\vect{y}=\dst{-\threecol121e^t+\threecol424e^{-t}+\threecol110e^{2t}}$
 
 \smallskip
 
-\answer{10.4.24} ${\bf y}=\dst{
+\answer{10.4.24} $\vect{y}=\dst{
 \threecol{-2}{-2}2e^{2t}-\threecol030e^{-2t}+
 \threecol4{12}4e^{4t}}$
 
 \smallskip
 
-\answer{10.4.25} ${\bf y}=\dst{
+\answer{10.4.25} $\vect{y}=\dst{
 \threecol{-1}{-1}1e^{-6t}+\threecol2{-2}2e^{2t}+
 \threecol7{-7}{-7}e^{4t}}$
 \smallskip
 
-\answer{10.4.26} ${\bf y}=\dst{
+\answer{10.4.26} $\vect{y}=\dst{
 \threecol144e^{-t}+\threecol66{-2}e^{2t}}$
-\answer{10.4.27} ${\bf y}=\dst{
+\answer{10.4.27} $\vect{y}=\dst{
 \threecol4{-2}2+\threecol3{-9}6e^{4t}+\threecol{-1}1{-1}e^{2t}}$
 
 \medskip
@@ -6269,27 +6222,26 @@ $L_1$.
 \end{quote}
 
 
-\medskip{\bf Section~10.5 Answers,
-pp.~\pageref{exer:10.5.1}--\pageref{exer:10.5.45}}\medskip
+\sectionanswers{10.5}
 
 \answer{10.5.1}
-  ${\bf y}=\dst{c_1\twocol21e^{5t}
+  $\vect{y}=\dst{c_1\twocol21e^{5t}
 +c_2\left(\twocol{-1}{\phantom{-}0}e^{5t}+\twocol21te^{5t}\right)}$.
 
 \smallskip
 \answer{10.5.2}
-${\bf y}=\dst{
+$\vect{y}=\dst{
 c_1\twocol11e^{-t}+c_2\left(\twocol10e^{-t}+\twocol11te^{-t}\right)}$
 
 \smallskip
 \answer{10.5.3}
-${\bf y}=\dst{
+$\vect{y}=\dst{
 c_1\twocol{-2}{\phantom{-}1}e^{-9t}+c_2\left(\twocol{-1}{\phantom{-}0}e^{-9t}
 +\twocol{-2}{\phantom{-}1}te^{-9t}\right)}$
 
 \smallskip
 \answer{10.5.4}
- ${\bf y}=\dst{
+ $\vect{y}=\dst{
 c_1\twocol{-1}{\phantom{-}1}e^{2t}+c_2\left(\twocol{-1}{\phantom{-}0}
 e^{2t}+\twocol{-1}{\phantom{-}1}te^{2t}\right)}$
 
@@ -6312,121 +6264,121 @@ te^{-2t}\right)$
 
 \smallskip
 \answer{10.5.6}
-${\bf y}=\dst{c_1\twocol32e^{-4t}+
+$\vect{y}=\dst{c_1\twocol32e^{-4t}+
 c_2\left(\twocol{-1}{\phantom{-}0}\frac{e^{-4t}}{2}+\twocol32te^{-4t}\right)}$
 
 \smallskip
 \answer{10.5.7}
- ${\bf y}=\dst{c_1\twocol43e^{-t}+
+ $\vect{y}=\dst{c_1\twocol43e^{-t}+
 c_2\left(\twocol{-1}{\phantom{-}0}\frac{e^{-t}}{3}+\twocol43te^{-t}\right)}$
 
 \smallskip
 \answer{10.5.8}
-${\bf y}=\dst{c_1\threecol{-1}{-1}2+c_2\threecol112e^{4t}+
+$\vect{y}=\dst{c_1\threecol{-1}{-1}2+c_2\threecol112e^{4t}+
 c_3\left(\threecol010\frac{e^{4t}}{2}+\threecol112te^{4t}\right)}$
 
 \smallskip
 \answer{10.5.9}
- ${\bf y}=\dst{c_1\threecol{-1}11e^t+c_2\threecol1{-1}1e^{-t}+c_3\left
+ $\vect{y}=\dst{c_1\threecol{-1}11e^t+c_2\threecol1{-1}1e^{-t}+c_3\left
 (\threecol030e^{-t}+\threecol1{-1}1te^{-t}\right)}$.
 
 \smallskip
 \answer{10.5.10}
-${\bf y}=\dst{c_1\threecol011e^{2t}+c_2\threecol101e^{-2t}+c_3\left
+$\vect{y}=\dst{c_1\threecol011e^{2t}+c_2\threecol101e^{-2t}+c_3\left
 (\threecol110\frac{e^{-2t}}{2}+\threecol101te^{-2t}\right)}$
 
 \smallskip
 \answer{10.5.11}
- ${\bf y}=\dst{
+ $\vect{y}=\dst{
 c_1\threecol{-2}{-3}1e^{2t}+c_2\threecol0{-1}1e^{4t}+c_3\left
 (\threecol100\frac{e^{4t}}{2}+\threecol0{-1}1te^{4t}\right)}$
 
 \smallskip
 \answer{10.5.12}
- ${\bf y}=\dst{
+ $\vect{y}=\dst{
 c_1\threecol{-1}{-1}1e^{-2t}+c_2\threecol111e^{4t}+c_3\left
 (\threecol100\frac{e^{4t}}{2}+\threecol111te^{4t}\right)}$.
 
 \smallskip
 \answer{10.5.13}
-${\bf y}=\dst{\twocol62e^{-7t}-\twocol84te^{-7t}}$
+$\vect{y}=\dst{\twocol62e^{-7t}-\twocol84te^{-7t}}$
 \answer{10.5.14}
-${\bf y}=\dst{\twocol58e^{3t}-\twocol{12}{16}te^{3t}}$
+$\vect{y}=\dst{\twocol58e^{3t}-\twocol{12}{16}te^{3t}}$
 
 \smallskip
 \answer{10.5.15}
-${\bf y}=\dst{\twocol23e^{-5t}-\twocol84te^{-5t}}$
+$\vect{y}=\dst{\twocol23e^{-5t}-\twocol84te^{-5t}}$
 \answer{10.5.16}
-${\bf y}=\dst{\twocol31e^{5t}-\twocol{12}6te^{5t}}$
+$\vect{y}=\dst{\twocol31e^{5t}-\twocol{12}6te^{5t}}$
 
 \answer{10.5.17}
-${\bf y}=\dst{\twocol02e^{-4t}+\twocol66te^{-4t}}$
+$\vect{y}=\dst{\twocol02e^{-4t}+\twocol66te^{-4t}}$
 
 \smallskip
 \answer{10.5.18}
-${\bf y}=\dst{\threecol48{-6}e^t+\threecol2{-3}{-1}e^{-2t}+
+$\vect{y}=\dst{\threecol48{-6}e^t+\threecol2{-3}{-1}e^{-2t}+
 \threecol{-1}10te^{-2t}}$
 
 \smallskip
 \answer{10.5.19}
-${\bf y}=\dst{\threecol336e^{2t}-\threecol956+\threecol220t}$
+$\vect{y}=\dst{\threecol336e^{2t}-\threecol956+\threecol220t}$
 
 \smallskip
 \answer{10.5.20}
-${\bf y}=\dst{-\threecol202e^{-3t}+\threecol{-4}91e^t-
+$\vect{y}=\dst{-\threecol202e^{-3t}+\threecol{-4}91e^t-
 \threecol044te^t}$
 
 \smallskip
 \answer{10.5.21}
-${\bf y}=\dst{\threecol{-2}22e^{4t}+\threecol0{-1}1e^{2t}+
+$\vect{y}=\dst{\threecol{-2}22e^{4t}+\threecol0{-1}1e^{2t}+
 \threecol3{-3}3te^{2t}}$
 
 \smallskip
 \answer{10.5.22}
-${\bf y}=\dst{-\threecol110e^{-4t}+\threecol{-3}2{-3}e^{8t}+
+$\vect{y}=\dst{-\threecol110e^{-4t}+\threecol{-3}2{-3}e^{8t}+
 \threecol80{-8}te^{8t}}$
 
 \smallskip
 \answer{10.5.23}
-${\bf y}=\dst{\threecol363e^{4t}-\threecol341+\threecol844t}$
+$\mathbf{y}=\dst{\threecol363e^{4t}-\threecol341+\threecol844t}$
 
 \answer{10.5.24}
-${\bf y}=\dst{c_1\threecol011e^{6t}+
+$\mathbf{y}=\dst{c_1\threecol011e^{6t}+
 c_2\left(\threecol{-1}10\frac{e^{6t}}{4}+\threecol011te^{6t}\right)}$
 \[+c_3\left(\threecol110\frac{e^{6t}}{8}+\threecol{-1}10\frac{t
 e^{6t}}{4}+\threecol011\frac{t^2e^{6t}}{2}\right)\]
 
 \smallskip
 \answer{10.5.25}
- ${\bf y}=\dst{c_1\threecol{-1}11e^{3t}+
+ $\mathbf{y}=\dst{c_1\threecol{-1}11e^{3t}+
 c_2\left(\threecol100\frac{e^{3t}}{2}+\threecol{-1}11te^{3t}\right)}$
 \[+c_3\left(\threecol120\frac{e^{3t}}{36}+\threecol100
 \frac{te^{3t}}{2}+\threecol{-1}11\frac{t^2e^{3t}}{2}\right)\]
 
 \smallskip
 \answer{10.5.26}
-${\bf y}=\dst{c_1\threecol0{-1}1e^{-2t}+
+$\mathbf{y}=\dst{c_1\threecol0{-1}1e^{-2t}+
 c_2\left(\threecol{{-1}}10e^{-2t}+\threecol0{-1}1te^{-2t}\right)}$
 \[+c_3\left(\threecol3{-2}0\frac{e^{-2t}}{4}+\threecol{-1}10t
 e^{-2t}+\threecol0{-1}1\frac{t^2e^{-2t}}{2}\right)\]
 
 \smallskip
 \answer{10.5.27}
- ${\bf y}=\dst{c_1\threecol011e^{2t}+
+ $\mathbf{y}=\dst{c_1\threecol011e^{2t}+
 c_2\left(\threecol110\frac{e^{2t}}{2}+\threecol011te^{2t}\right)}$
 \[+c_3\left(\threecol{-1}10\frac{e^{2t}}{8}+\threecol110\frac{t
 e^{2t}}{2}+\threecol011\frac{t^2e^{2t}}{2}\right)\]
 
 \smallskip
 \answer{10.5.28}
- ${\bf y}=\dst{c_1\threecol{-2}12e^{-6t}+
+ $\mathbf{y}=\dst{c_1\threecol{-2}12e^{-6t}+
 c_2\left(-\threecol610\frac{e^{-6t}}{6}+\threecol{-2}12te^{-6t}\right)}$
 \[+c_3\left(-\threecol{12}10\frac{e^{-6t}}{36}-\threecol610\frac{t
 e^{-6t}}{6}+\threecol{-2}12\frac{t^2e^{-6t}}{2}\right).\]\
 
 \smallskip
 \answer{10.5.29}
- ${\bf y}=\dst{c_1\threecol{-4}01e^{-3t}+c_2\threecol610e^{-3t}+
+ $\mathbf{y}=\dst{c_1\threecol{-4}01e^{-3t}+c_2\threecol610e^{-3t}+
 c_3\left(\threecol100e^{-3t}+\threecol211te^{-3t}\right)}$
 
 \smallskip
@@ -6439,37 +6391,36 @@ y}=\dst{c_1\threecol{-1}01e^{-3t}+c_2\threecol010e^{-3t}+c_3\left
 \smallskip
 
 \answer{10.5.31}
- ${\bf y}=\dst{
+ $\mathbf{y}=\dst{
 c_1\threecol201e^{-t}+c_2\threecol{-3}20e^{-t}+c_3\left
 (\threecol100\frac{e^{-t}}{2}+\threecol{-1}21te^{-t}\right)}$
 
 \smallskip
 \answer{10.5.32}
- ${\bf y}=\dst{
+ $\mathbf{y}=\dst{
 c_1\threecol{-1}10e^{-2t}+c_2\threecol001e^{-2t}+c_3\left
 (\threecol{-1}00e^{-2t}+\threecol1{-1}1te^{-2t}\right)}$
 
 
-\medskip{\bf Section~10.6 Answers,
-pp.~\pageref{exer:10.6.1}--\pageref{exer:10.6.40}}\medskip
+\sectionanswers{10.6}
 
 \answer{10.6.1}
- ${\bf y}=\dst{c_1e^{2t}\ctwocol{3\cos t+\sin t}{5\cos t}
+ $\mathbf{y}=\dst{c_1e^{2t}\ctwocol{3\cos t+\sin t}{5\cos t}
 +c_2e^{2t}\ctwocol{3\sin t-\cos t}{5\sin t}}$.
 
 \smallskip
 \answer{10.6.2}
- ${\bf y}=\dst{c_1e^{-t}\ctwocol{5\cos2t+\sin2t}{13\cos2t}
+ $\mathbf{y}=\dst{c_1e^{-t}\ctwocol{5\cos2t+\sin2t}{13\cos2t}
 +c_2e^{-t}\ctwocol{5\sin2t-\cos2t}{13\sin2t}}$.
 
 \smallskip
 \answer{10.6.3}
- ${\bf y}=\dst{c_1e^{3t}\ctwocol{\cos2t+\sin2t}{2\cos2t}
+ $\mathbf{y}=\dst{c_1e^{3t}\ctwocol{\cos2t+\sin2t}{2\cos2t}
 +c_2e^{3t}\ctwocol{\sin2t-\cos2t}{2\sin2t}}$.
 
 \smallskip
 \answer{10.6.4}
- ${\bf y}=\dst{c_1e^{2t}\ctwocol{\cos3t-\sin3t}{\cos3t}
+ $\mathbf{y}=\dst{c_1e^{2t}\ctwocol{\cos3t-\sin3t}{\cos3t}
 +c_2e^{2t}\ctwocol{\sin3t+\cos3t}{\sin3t}}$.
 
 \smallskip
@@ -6481,53 +6432,53 @@ y}=c_1\threecol{-1}{-1}2e^{-2t}+c_2e^{4t}\cthreecol{\cos2t-\sin
 
 \smallskip
 \answer{10.6.6}
- $\dst{{\bf y}=c_1\threecol{-1}{-1}1e^{-t}+c_2e^{-2t}\cthreecol{\cos2t-\sin
+ $\dst{\mathbf{y}=c_1\threecol{-1}{-1}1e^{-t}+c_2e^{-2t}\cthreecol{\cos2t-\sin
 2t}{-\cos2t-\sin  2t}{2\cos2t}+c_3e^{-2t}\cthreecol
 {\sin2t+\cos2t}{-\sin2t+\cos2t}{2\sin2t}}$
 
 \smallskip
 \answer{10.6.7}
- $\dst{{\bf y}=c_1\threecol111e^{2t}+c_2e^t\threecol{-\sin
+ $\dst{\mathbf{y}=c_1\threecol111e^{2t}+c_2e^t\threecol{-\sin
 t}{\sin  t}{\cos t}+c_3e^t\threecol
 {\cos t}{-\cos t}{\sin t}}$
 
 \smallskip
 \answer{10.6.8}
- $\dst{{\bf y}=c_1\threecol{-1}11e^t+c_2e^{-t}\cthreecol{-\sin
+ $\dst{\mathbf{y}=c_1\threecol{-1}11e^t+c_2e^{-t}\cthreecol{-\sin
 2t-\cos2t}{2\cos2t}{2\cos2t}+c_3e^{-t}\cthreecol
 {\cos2t-\sin2t}{2\sin2t}{2\sin2t}}$
 
 \smallskip
 \answer{10.6.9}
-$\dst{{\bf y}=c_1e^{3t}\left[\begin{array}{c}\cos6t-3\sin6t
+$\dst{\mathbf{y}=c_1e^{3t}\left[\begin{array}{c}\cos6t-3\sin6t
 \\5\cos6t\end{array}\right]+
 c_2e^{3t}\left[\begin{array}{c}
 \sin6t+3\cos6t\\5\sin6t\end{array}\right]}$
 
 \smallskip
 \answer{10.6.10}
-$\dst{{\bf y}=c_1e^{2t}\left[\begin{array}{c}\cos t-3\sin t
+$\dst{\mathbf{y}=c_1e^{2t}\left[\begin{array}{c}\cos t-3\sin t
 \\2\cos t\end{array}\right]+
 c_2e^{2t}\left[\begin{array}{c}
 \sin t+3\cos t\\ 2\sin t\end{array}\right]}$
 
 \smallskip
 \answer{10.6.11}
-$\dst{{\bf y}=c_1e^{2t}\left[\begin{array}{c}3\sin3t-\cos3t
+$\dst{\mathbf{y}=c_1e^{2t}\left[\begin{array}{c}3\sin3t-\cos3t
 \\ 5\cos3t\end{array}\right]+
 c_2e^{2t}\left[\begin{array}{c}
 -3\cos3t-\sin3t\\  5\sin3t\end{array}\right]}$
 
 \smallskip
 \answer{10.6.12}
-$\dst{{\bf y}=c_1e^{2t}\left[\begin{array}{c}\sin4t-8\cos4t
+$\dst{\mathbf{y}=c_1e^{2t}\left[\begin{array}{c}\sin4t-8\cos4t
 \\ 5\cos4t\end{array}\right]+
 c_2e^{2t}\left[\begin{array}{c}
 -\cos4t-8\sin4t\\ 5\sin4t\end{array}\right]}$
 
 \smallskip
 \answer{10.6.13}
-$\dst{{\bf y}=c_1\left[\begin{array}{r}-1\\1\\1
+$\dst{\mathbf{y}=c_1\left[\begin{array}{r}-1\\1\\1
 \end{array}\right]e^{-2t}+c_2e^t\left[\begin{array}{r}\sin t\\-\cos
 t\\\cos t \end{array}\right]+c_3e^t\left[\begin{array}{r}-\cos t
 \\-\sin t\\\sin t
@@ -6535,7 +6486,7 @@ t\\\cos t \end{array}\right]+c_3e^t\left[\begin{array}{r}-\cos t
 
 \smallskip
 \answer{10.6.14}
-$\dst{{\bf y}=c_1\left[\begin{array}{c} 2\\ 2\\1
+$\dst{\mathbf{y}=c_1\left[\begin{array}{c} 2\\ 2\\1
 \end{array}\right]e^{-2t}+
 c_2e^{2t}\left[\begin{array}{c}-\cos3t-\sin3t\\-\sin3t\\
 \cos3t\end{array}\right]+c_3e^{2t}\left[\begin{array}{c}
@@ -6543,7 +6494,7 @@ c_2e^{2t}\left[\begin{array}{c}-\cos3t-\sin3t\\-\sin3t\\
 
 \smallskip
 \answer{10.6.15}
-$\dst{{\bf y}=c_1\left[\begin{array}{r}1\\2\\1
+$\dst{\mathbf{y}=c_1\left[\begin{array}{r}1\\2\\1
 \end{array}\right]e^{3t}+c_2e^{6t}\left[\begin{array}{r}-\sin3t
 \\\sin3t\\\cos3t \end{array}\right]+
 c_3e^{6t}\left[\begin{array}{r}\cos3t
@@ -6551,7 +6502,7 @@ c_3e^{6t}\left[\begin{array}{r}\cos3t
 
 \smallskip
 \answer{10.6.16}
-$\dst{{\bf y}=c_1\left[\begin{array}{c} 1\\1\\1
+$\dst{\mathbf{y}=c_1\left[\begin{array}{c} 1\\1\\1
 \end{array}\right]e^t+
 c_2e^t\left[\begin{array}{c} 2\cos t-2\sin t
 \\\cos t-\sin t\\ 2\cos t\end{array}\right]+
@@ -6560,7 +6511,7 @@ c_3e^t\left[\begin{array}{ccc} 2\sin t+2\cos t\\\cos t+\sin t\\
 
 \smallskip
 \answer{10.6.17}
-$\dst{{\bf y}=e^t\left[\begin{array}{c}
+$\dst{\mathbf{y}=e^t\left[\begin{array}{c}
 5\cos3t+\sin3t\\2\cos3t+3\sin3t\end{array}\right]}$
 \answer{10.6.18}
 $\dst{{\bf
@@ -6573,92 +6524,91 @@ $\dst{{\bf
 y}=e^t\left[\begin{array}{c}17\cos3t-\sin3t\\7\cos3t+3\sin3t
 \end{array}\right]}$
 \answer{10.6.20}
-${\bf y}=\dst{e^{t/2}\left[\begin{array}{c}\cos(t/2)+
+$\mathbf{y}=\dst{e^{t/2}\left[\begin{array}{c}\cos(t/2)+
 \sin(t/2)\\-\cos(t/2)+2\sin(t/2)
 \end{array}\right]}$
 
 \smallskip
 \answer{10.6.21}
-$\dst{{\bf y}=\threecol1{-1}2e^t
+$\dst{\mathbf{y}=\threecol1{-1}2e^t
 +e^{4t}\left[\begin{array}{c}3\cos t+\sin t\\\cos
 t-3\sin t\\4\cos t-2\sin t\end{array}\right]}$
 
 \smallskip
 \answer{10.6.22}
-$\dst{{\bf y}=\threecol442e^{8t}
+$\dst{\mathbf{y}=\threecol442e^{8t}
 +e^{2t}\left[\begin{array}{c}4\cos2t+8\sin2t\\-6\sin2t+2\cos2t\\3\cos2t+\sin2t
 \end{array}\right]}$
 
 \smallskip
 \answer{10.6.23}
-$\dst{{\bf y}=\threecol033e^{-4t}
+$\dst{\mathbf{y}=\threecol033e^{-4t}
 +e^{4t}\left[\begin{array}{c}15\cos6t
 +10\sin6t\\14\cos6t-8\sin6t\\7\cos6t-4\sin6
 t\end{array}\right]}$
 
 \smallskip
 \answer{10.6.24}
-$\dst{{\bf y}=\threecol6{-3}3e^{8t}
+$\dst{\mathbf{y}=\threecol6{-3}3e^{8t}
 +\left[\begin{array}{c}10\cos4t-4\sin4t\\17\cos4t-\sin4t\\3\cos4t-7\sin4t
 \end{array}\right]}$
 
 \smallskip
 \answer{10.6.29}
- ${\bf U}=\dst{\frac{1}{\sqrt2}\twocol{-1}1}$,
-${\bf V}=\dst{\frac{1}{\sqrt2}\twocol11}$\;
+ $\mathbf{U}=\dst{\frac{1}{\sqrt2}\twocol{-1}1}$,
+$\mathbf{V}=\dst{\frac{1}{\sqrt2}\twocol11}$\;
 
 \answer{10.6.30}
- ${\bf U}\approx\dst{\twocol{.5257}{.8507}}$,
-${\bf V}\approx\dst{\twocol{-.8507}{\phantom{-}.5257}}$
+ $\mathbf{U}\approx\dst{\twocol{.5257}{.8507}}$,
+$\mathbf{V}\approx\dst{\twocol{-.8507}{\phantom{-}.5257}}$
 
 
 \smallskip
 \answer{10.6.31}
- ${\bf U}\approx\dst{\twocol{.8507}{.5257}}$,
+ $\mathbf{U}\approx\dst{\twocol{.8507}{.5257}}$,
 
-${\bf V}\approx\dst{\twocol{-.5257}{\phantom{-}.8507}}$\quad
+$\mathbf{V}\approx\dst{\twocol{-.5257}{\phantom{-}.8507}}$\quad
 \answer{10.6.32}
- ${\bf U}\approx\dst{\twocol{-.9732}{\phantom{-}.2298}}$,
-${\bf V}\approx\dst{\twocol{.2298}{.9732}}$
+ $\mathbf{U}\approx\dst{\twocol{-.9732}{\phantom{-}.2298}}$,
+$\mathbf{V}\approx\dst{\twocol{.2298}{.9732}}$
 
 \smallskip
 \answer{10.6.33}
- ${\bf U}\approx\dst{\twocol{\phantom{-}.5257}{.8507}}$,
-${\bf V}\approx\dst{\twocol{-.8507}{.5257}}$\,
+ $\mathbf{U}\approx\dst{\twocol{\phantom{-}.5257}{.8507}}$,
+$\mathbf{V}\approx\dst{\twocol{-.8507}{.5257}}$\,
 
 \answer{10.6.34}
- ${\bf U}\approx\dst{\twocol{-.5257}{\phantom{-}.8507}}$,
-${\bf V}\approx\dst{\twocol{.8507}{.5257}}$
+ $\mathbf{U}\approx\dst{\twocol{-.5257}{\phantom{-}.8507}}$,
+$\mathbf{V}\approx\dst{\twocol{.8507}{.5257}}$
 
 \smallskip
 \answer{10.6.35}
- ${\bf U}\approx\dst{\twocol{-.8817}{\phantom{-}.4719}}$,
-${\bf V}\approx\dst{\twocol{.4719}{.8817}}$  \quad
+ $\mathbf{U}\approx\dst{\twocol{-.8817}{\phantom{-}.4719}}$,
+$\mathbf{V}\approx\dst{\twocol{.4719}{.8817}}$  \quad
 
 \answer{10.6.36}
- ${\bf U}\approx\dst{\twocol{.8817}{.4719}}$,
-${\bf V}\approx\dst{\twocol{-.4719}{\phantom{-}.8817}}$
+ $\mathbf{U}\approx\dst{\twocol{.8817}{.4719}}$,
+$\mathbf{V}\approx\dst{\twocol{-.4719}{\phantom{-}.8817}}$
 
 \smallskip
 
 \answer{10.6.37}
- ${\bf U}=\dst{\twocol01}$, ${\bf V}=\dst{\twocol{-1}0}$ \quad \quad\quad
+ $\mathbf{U}=\dst{\twocol01}$, $\mathbf{V}=\dst{\twocol{-1}0}$ \quad \quad\quad
 \;  \, \quad
 \answer{10.6.38}
-${\bf U}=\dst{\twocol01}$, ${\bf V}=\dst{\twocol10}$
+$\mathbf{U}=\dst{\twocol01}$, $\mathbf{V}=\dst{\twocol10}$
 
 \smallskip
 
 \answer{10.6.39}
- ${\bf U}=\dst{\frac{1}{\sqrt2}\twocol11}$,
-${\bf V}=\dst{\frac{1}{\sqrt2}\twocol{-1}{\phantom{-}1}}$  \quad\;
+ $\mathbf{U}=\dst{\frac{1}{\sqrt2}\twocol11}$,
+$\mathbf{V}=\dst{\frac{1}{\sqrt2}\twocol{-1}{\phantom{-}1}}$  \quad\;
 \answer{10.6.40}
- ${\bf U}\approx\dst{\twocol{.5257}{.8507}}$,
-${\bf V}\approx\dst{\twocol{-.8507}{\phantom{-}.5257}}$
+ $\mathbf{U}\approx\dst{\twocol{.5257}{.8507}}$,
+$\mathbf{V}\approx\dst{\twocol{-.8507}{\phantom{-}.5257}}$
 
 
-\medskip{\bf Section~10.7 Answers,
-pp.~\pageref{exer:10.7.1}--\pageref{exer:10.7.23}}\medskip
+\sectionanswers{10.7}
 
 \answer{10.7.1} $\dst{\left[\begin{array}{c}5e^{4t}+e^{-3t}(2+8t)\\
 -e^{4t}-e^{-3t}(1-4t)\end{array}\right]}$
@@ -6729,14 +6679,14 @@ $\dst{\frac{e^t}{4t}\left[\begin{array}{c}2t+1\\2t-1\\2t+1
 
 
  \answer{10.7.22}
- {\bf (a)} $\dst{{\bf y}'=
+ {\bfseries (a)} $\dst{\mathbf{y}'=
 \left[\begin{array}{cccc} 0&1&\cdots&0\\0&0&\cdots&0\\
 \vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1\\
 -P_n(t)/P_0(t)&-P_{n-1}/P_0(t)&
-\cdots&-P_1(t)/P_0(t)\end{array} \right]{\bf y}+
+\cdots&-P_1(t)/P_0(t)\end{array} \right]\mathbf{y}+
 \left[\begin{array}{c} 0\\0\\\vdots\\F(t)/P_0(t)\end{array}\right].}$
 
-{\bf (b)} ${\dst{\left[\begin{array}{cccc}
+{\bfseries (b)} ${\dst{\left[\begin{array}{cccc}
 y_1&y_2&\cdots&y_n\\y_1'&y_2'&\cdots&y_n'\\
 \vdots&\vdots&\ddots&\vdots\\y_1^{(n-1)}&y_2^{(n-1)}&\cdots&y_n^{(n-1)}
 \end{array}\right]}}$
