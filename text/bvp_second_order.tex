@@ -35,7 +35,7 @@ $(a,b)$ and  $k_{1}$ and $k_{2}$ are arbitrary real numbers then
 and $y'(x_{0})=k_{2}$. Now we consider a different problem for
 \eqref{eq:13.1.1}.
 
-{\bf PROBLEM}\quad
+{\bfseries PROBLEM}\quad
 Suppose $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are  continous and  $P_{0}$
 has no zeros on a closed interval $[a,b]$. Let $\alpha$, $\beta$,
 $\rho$, and $\delta$ be real numbers such that
@@ -116,7 +116,7 @@ The next three examples show that the question of existence and uniqueness
 for solutions of boundary value problems is more complicated than
  for initial value problems.
 
-\begin{example}\label{example:13.1.1}    \rm
+\begin{example}\label{example:13.1.1}
 Consider the boundary value problem
 \[
 y''+y=1,\quad y(0)=0, \quad y(\pi/2)=0.
@@ -133,7 +133,7 @@ if and only if $c_{1}=-1$. Therefore
 is the unique solution of the boundary value problem.
 \end{example}
 
-\begin{example}\label{example:13.1.2}    \rm
+\begin{example}\label{example:13.1.2}
 Consider the boundary value problem
 \[
 y''+y=1,\quad y(0)=0, \quad y(\pi)=0.
@@ -146,7 +146,7 @@ so $y(0)=0$ if  and only if $c_{2}=-1$, but $y(\pi)=0$ if and only if
 $c_{2}=1$. Therefore the boundary value problem has no solution.
 \end{example}
 
-\begin{example}\label{example:13.1.3}    \rm
+\begin{example}\label{example:13.1.3}
 Consider the boundary value problem
 \[
 y''+y=\sin 2x,\quad y(0)=0, \quad y(\pi)=0.
@@ -167,7 +167,7 @@ where $c_{1}$  is arbitrary.
 \end{example}
 
 
-\begin{theorem}\color{blue} \label{thmtype:13.1.1}
+\begin{theorem}\label{thmtype:13.1.1}
 If $z_{1}$ and $z_{2}$ are solutions of $Ly=0$  such that either
 $B_{1}(z_{1})=B_{1}(z_{2})=0$ or
 $B_{2}(z_{1})=B_{2}(z_{2})=0,$  then $\{z_{1},z_{2}\}$  is linearly
@@ -179,8 +179,7 @@ B_{2}^{2}(z_{1})+B_{2}^{2}(z_{2})\ne 0.
 \]
 \end{theorem}
 
-\medskip
-\proof
+\begin{proof}
 Recall that $B_{1}(z)=\alpha z(a)+\beta z'(a)$ and
 $\alpha^{2}+\beta^{2}\ne0$.
 Therefore, if $B_{1}(z_{1})=B_{1}(z_{2})=0$ then $(\alpha,\beta)$
@@ -189,7 +188,7 @@ is a nontrivial solution of  the system
 \alpha z_{1}(a)+\beta z_{1}'(a)&= 0\\
 \alpha z_{2}(a)+\beta z_{}'(a)&= 0.
 \end{align*}
-This  implies that
+This implies that
 \[
 z_{1}(a)z_{2}'(a)-z_{1}'(a)z_{2}(a)=0,
 \]
@@ -197,9 +196,9 @@ so $\{z_{1},z_{2}\}$ is linearly dependent, by
 \zcref{thmtype:5.1.6}. We leave it to you to show
 that $\{z_{1},z_{2}\}$ is linearly dependent   if
 $B_{2}(z_{1})=B_{2}(z_{2})=0$.
+\end{proof}
 
-
-\begin{theorem}\color{blue} \label{thmtype:13.1.2}
+\begin{theorem}\label{thmtype:13.1.2}
 The following statements are equivalent; that is, they are either
 all true or all false.
 \begin{alist}
@@ -235,18 +234,11 @@ $z_{1}$ and $z_{2}$ such that $B_{1}(z_{1})=0$ and $B_{2}(z_{2})=0.$
 
 
 
-\proof
-We'll show that
-\[
-\part{a}\implies
-\part{b}\implies
-\part{c}\implies
-\part{d}\implies
-\part{e}\implies
-\part{a}.
-\]
+\begin{proof}
+We'll show that (a)\textRightarrow(b)\textRightarrow(c)\textRightarrow(d)\textRightarrow(e)\textRightarrow(a).
 
-\part{a} $\implies$ \part{b}:
+\begin{description}
+\item[(a)\textRightarrow(b):]
 Since $\{z_{1},z_{2}\}$ is a fundamental set of solutions for $Ly=0$,
 there are
 constants
@@ -259,9 +251,9 @@ y_{2} &=b_{1}z_{1}+b_{2}z_{2}.
 \end{equation}
 Moreover,
 \begin{equation} \label{eq:13.1.12}
-\left|\begin{array}{ccccccc}
+\begin{vmatrix}
 a_{1}&a_{2}\\b_{1}&b_{2}
-\end{array}\right|\ne0.
+\end{vmatrix}\ne0.
 \end{equation}
 because if this determinant were zero, its rows would be linearly
 dependent and therefore
@@ -269,23 +261,22 @@ $\{y_{1},y_{2}\}$ would be linearly dependent, contrary to our assumption
 that  $\{y_{1},y_{2}\}$  is a fundamental set of solutions of $Ly=0$.
 From \eqref{eq:13.1.7} and \eqref{eq:13.1.11},
 \[
-\left[\begin{array}{ccccccc}
+\begin{bmatrix}
 B_{1}(y_{1})&B_{2}(y_{1})\\B_{1}(y_{2})&B_{2}(y_{2})
-\end{array}\right]=
-\left[\begin{array}{ccccccc}
+\end{bmatrix}=
+\begin{bmatrix}
 a_{1}&a_{2}\\b_{1}&b_{2}
-\end{array}\right]
-\left[\begin{array}{ccccccc}
+\end{bmatrix}
+\begin{bmatrix}
 B_{1}(z_{1})&B_{2}(z_{1})\\
 B_{1}(z_{2})&B_{2}(z_{2})
-\end{array}\right].
+\end{bmatrix}.
 \]
 Since the determinant of a product of matrices is the product of the
 determinants of the matrices, \eqref{eq:13.1.8} and \eqref{eq:13.1.12} imply
 \eqref{eq:13.1.9}.
 
-
-\part{b} $\implies$ \part{c}:
+\item[(b)\textRightarrow(c):]
 Since $\{y_{1},y_{2}\}$ is a fundamental set of solutions of
 $Ly=0$, the general solution of  $Ly=F$ is
 \[
@@ -309,14 +300,14 @@ c_{1}B_{2}(y_{1})+c_{2}B_{2}(2_{2}) &= k_{2}-B_{2}(y_{p}).
 From  \eqref{eq:13.1.9}, this system always has a  unique solution
  $(c_{1},c_{2})$.
 
-\part {c} $\implies$ \part{d}: Obviously, $y=0$ is a solution of
-\eqref{eq:13.1.10}. From \part{c} with $F=0$ and $k_{1}=k_{2}=0$, it's the only
+\item[(c)\textRightarrow(d):] Obviously, $y=0$ is a solution of
+\eqref{eq:13.1.10}. From (c) with $F=0$ and $k_{1}=k_{2}=0$, it's the only
 solution.
 
-\part{d} $\implies$ \part{e}: Let  $\{y_{1},y_{2}\}$ be a fundamental
+\item[(d)\textRightarrow(e):] Let  $\{y_{1},y_{2}\}$ be a fundamental
 system for $Ly=0$ and  let
 \[
-z_{1}=B_{1}(y_{2})y_{1}-B_{1}(y_{1})y_{2}\text{\;    and\; \;  }
+z_{1}=B_{1}(y_{2})y_{1}-B_{1}(y_{1})y_{2}\qquad\text{and}\qquad
 z_{2}=B_{2}(y_{2})y_{1}-B_{2}(y_{1})y_{2}.
 \]
 Then $B_{1}(z_{1})=0$  and $B_{2}(z_{2})=0$. To see
@@ -331,42 +322,41 @@ a_{2}[B_{2}(y_{2})y_{1}-B_{2}(y_{1})y_{2}]\\
 Therefore, since $y_{1}$ and $y_{2}$ are linearly independent,
 $a_{1}z_{1}+a_{2}z_{2}=0$ if and only if
 \[
-\left[\begin{array}{ccccccc}
+\begin{bmatrix}
 B_{1}(y_{1})&B_{2}(y_{1})\\
 B_{1}(y_{2})&B_{2}(y_{2})
-\end{array}\right]
-\left[\begin{array}{ccccccc}
+\end{bmatrix}
+\begin{bmatrix}
 a_{1}\\a_{2}
-\end{array}\right]=
-\left[\begin{array}{ccccccc}
+\end{bmatrix}=
+\begin{bmatrix}
 0\\0
-\end{array}\right].
+\end{bmatrix}.
 \]
 If this system has a nontrivial solution then so does the system
 \[
-\left[\begin{array}{ccccccc}
+\begin{bmatrix}
 B_{1}(y_{1})&B_{1}(y_{2})\\
 B_{2}(y_{1})&B_{2}(y_{2})
-\end{array}\right]
-\left[\begin{array}{ccccccc}
+\end{bmatrix}
+\begin{bmatrix}
 c_{1} \\c_{2}
-\end{array}\right]=
-\left[\begin{array}{ccccccc}
+\end{bmatrix}=
+\begin{bmatrix}
 0\\0
-\end{array}\right].
+\end{bmatrix}.
 \]
 This and \eqref{eq:13.1.7} imply that $y=c_{1}z_{1}+c_{2}z_{2}$ is
-a nontrivial solution of \eqref{eq:13.1.10}, which contradicts~\part{d}.
+a nontrivial solution of \eqref{eq:13.1.10}, which contradicts~(d).
 
-
-\part{e} $\implies$ \part{a}.
+\item[(e)\textRightarrow(a):]
 \zcref[S]{thmtype:13.1.1} implies that if  $B_{1}(z_{1})=0$  and
 $B_{2}(z_{2})=0$ then $B_{1}(z_{2})\ne0$ and $B_{2}(z_{1})\ne0$.
-This implies~\eqref{eq:13.1.8}, which completes the proof.
+This implies~\eqref{eq:13.1.8}, which completes the proof.\qedhere
+\end{description}
+\end{proof}
 
-
-
-\begin{example}\label{example:13.1.4} \rm
+\begin{example}\label{example:13.1.4}
 Solve the boundary value problem
 \begin{equation} \label{eq:13.1.13}
 x^{2}y''-2xy'+2y-2x^{3}=0,\quad y(1)=4,\quad y'(2)=3,
@@ -376,7 +366,7 @@ of the complementary equation
 \end{example}
 
 \solution
-Using variation of parameters (Section~5.7), you can show
+Using variation of parameters (\zcref{sec:variation_param}), you can show
 that
 $y_{p}=x^{3}$ is a solution of the complementary equation
 \[
@@ -403,7 +393,7 @@ y=x^{3}+7x-4x^{2}
 \]
 is the unique solution of \eqref{eq:13.1.13}
 
-\begin{example}\label{example:13.1.5} \rm
+\begin{example}\label{example:13.1.5}
 Solve the boundary value problem
 \[
 y''-7y'+12y=4e^{2x},\quad y(0)=3,\quad y(1)=5e^{2}.
@@ -425,7 +415,7 @@ and determine $c_{1}$ and $c_{2}$ by imposing the boundary conditions.
 However, this would lead to some tedious algebra, and the form of the
 solution would be very unappealing. (Try it!) In this case it's convenient
 to use the fundamental system $\{z_{1},z_{2}\}$ mentioned in
-\zcref{thmtype:13.1.2}\part{e}; that is, we choose
+\zcref{thmtype:13.1.2}(e); that is, we choose
 $\{z_{1},z_{2}\}$ so that $B_{1}(z_{1})=z_{1}(0)=0$ and
 $B_{2}(z_{2})=z_{2}(1)=0$. It is easy to see that
 \[
@@ -455,7 +445,7 @@ y=2e^{2x}+\frac{3}{e(1-e)}(e^{3x}-e^{4x})+
 Sometimes  it's useful to have a formula for the solution of a general
 boundary problem. Our next theorem addresses this question.
 
-\begin{theorem}\color{blue} \label{thmtype:13.1.3}
+\begin{theorem}\label{thmtype:13.1.3}
 Suppose the homogeneous boundary value problem
 \begin{equation} \label{eq:13.1.15}
 Ly=0,\quad B_{1}(y)=0,\quad B_{2}(y)=0
@@ -477,8 +467,7 @@ y_{2}(x)\int_{a}^{x}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt.
 \end{equation}
 \end{theorem}
 
-\medskip
-\proof In Section~5.7  we saw that if
+\begin{proof} In \zcref{sec:variation_param}  we saw that if
 \begin{equation} \label{eq:13.1.18}
 y=u_{1}y_{1}+u_{2}y_{2}
 \end{equation}
@@ -514,6 +503,7 @@ B_{2}(y)=B_{2}(y_{2})\int_{a}^{b}\frac{F(t)y_{1}(t)}{P_{0}(t)W(t)}\,dt=0
 \]
 because $B_{2}(y_{2})=0$. Hence, $y$  satisfies \eqref{eq:13.1.16}.
 This completes the proof.
+\end{proof}
 
 We  can rewrite \eqref{eq:13.1.17} as
 \begin{equation} \label{eq:13.1.20}
@@ -523,8 +513,8 @@ where
 \[
 G(x,t)=
 \begin{cases}
-\dst{\frac{y_{1}(t)y_{2}(x)}{P_{0}(t)W(t)}}&,\quad a\le t\le x,\\[.1in]
-\dst{\frac{y_{1}(x)y_{2}(t)}{P_{0}(t)W(t)}} &,\quad x\le t\le b.
+\dfrac{y_{1}(t)y_{2}(x)}{P_{0}(t)W(t)}&a\le t\le x,\\\addlinespace
+\dfrac{y_{1}(x)y_{2}(t)}{P_{0}(t)W(t)}&x\le t\le b.
 \end{cases}.
 \]
 
@@ -557,7 +547,7 @@ y(x)=\int_{a}^{b}G(x,t)F(t)\,dt +\frac{k_{2}}{B_{2}(y_{1})}y_{1}+
 \frac{k_{1}}{B_{1}(y_{2})}y_{2}.
 \]
 
-\begin{example}\label{example:13.1.6}\rm
+\begin{example}\label{example:13.1.6}
 Solve the boundary value problem
 \begin{equation} \label{eq:13.1.21}
 y''+y=F(x).\quad y(0)+y'(0)=0,\quad y(\pi)-y'(\pi)=0,
@@ -598,10 +588,10 @@ Then $B_{1}(y_{1})=0$, $B_{2}(y_{2})=0$, and the Wronskian of
 $\{y_{1},y_{2}\}$ is
 \[
 W(x)=
-\left|\begin{array}{rrccccc}
+\begin{vmatrix}
 \cos x-\sin x& \cos x+ \sin x\\
 -\sin x-\cos x&-\sin x+\cos x
-\end{array}\right|=2.
+\end{vmatrix}=2.
 \]
 Since $P_{0}=1$, \eqref{eq:13.1.17} yields the solution
 \begin{align*}
@@ -620,7 +610,7 @@ x,\\[.1in]
 
 We'll now consider the situation not covered by \zcref{thmtype:13.1.3}.
 
-\begin{theorem}\color{blue} \label{thmtype:13.1.4}
+\begin{theorem}\label{thmtype:13.1.4}
 Suppose the homogeneous boundary value problem
 \begin{equation} \label{eq:13.1.22}
 Ly=0,\quad B_{1}(y)=0,\quad B_{2}(y)=0
@@ -650,7 +640,7 @@ and $c_{1}$ is a constant. If
 then \eqref{eq:13.1.24}  has no solution.
 \end{theorem}
 
-\proof
+\begin{proof}
 From the proof of \zcref{thmtype:13.1.3}, $y_{p}$ is a particular solution
 of $Ly=F$,
 and
@@ -683,11 +673,9 @@ since $B_{2}(y_{1})=0$.  From \zcref{thmtype:13.1.1},
 $B_{2}(y_{2})\ne0$ (since $B_{2}(y_{1}=0$).
 Therefore $Ly=0$   if and only if  \eqref{eq:13.1.23} holds.
 This completes the proof.
+\end{proof}
 
-
-
-
-\begin{example}\label{example:13.1.7} \rm
+\begin{example}\label{example:13.1.7}
 Applying \zcref{thmtype:13.1.4} to the boundary value problem
 \begin{equation} \label{eq:13.1.25}
 y''+y=F(x),\quad y(0)=0,\quad y(\pi)=0
@@ -698,9 +686,9 @@ $y_{1}=\sin x$ and $y_{2}=\cos x$, and $y_{1}$ satisfies both boundary
 conditions. Since $P_{0}=1$ and
 \[
 W=
-\left|\begin{array}{crccccc}
+\begin{vmatrix}
 \sin x&\cos x \\\cos x&-\sin x
-\end{array}\right|=-1,
+\end{vmatrix}=-1,
 \]
 \eqref{eq:13.1.23} reduces to
 \[
@@ -772,7 +760,7 @@ has a unique solution for every continuous $F$, and find the solution
 by the method used to prove \zcref{thmtype:13.1.3}
 \item % (b)
 In the case where $a$ and $b$ don't satisfy the condition you gave for
-\part{a}, state necessary and sufficient     on $F$ such that (A) has
+(a), state necessary and sufficient     on $F$ such that (A) has
 a solution, and find all solutions by the method used to prove
 \zcref{thmtype:13.1.4}.
 \end{alist}
@@ -851,7 +839,8 @@ $y''=F(x)$, \quad $y'(a)=0$,\quad $y'(b)=0$
 y''=F(x), \quad y(0)-2y'(0)=0, \quad y(1)+2y'(1)=0.   \tag{A}
 \end{equation}
 Then  use the Green's function to solve (A) with
-\part{a} $F(x)=1$, \part{b} $F(x)=x$, and \part{c} $F(x)=x^{2}$.
+% TODO convert to enumext*
+(a) $F(x)=1$, (b) $F(x)=x$, and (c) $F(x)=x^{2}$.
 
 \item\label{exer:13.1.23}Find the Green's function  for the boundary value problem
 \begin{equation}
@@ -859,12 +848,12 @@ x^{2}y''+xy'+(x^{2}-1/4)y=F(x), \quad y(\pi/2)=0,\quad y(\pi)=0,   \tag{A}
 \end{equation}
 given that
 \[
-y_{1}(x)=\frac{\cos x}{\sqrt{x}}
-\text{\;    and\; \;  }
+y_{1}(x)=\frac{\cos x}{\sqrt{x}}\qquad\text{and}\qquad
 y_{2}(x)=\frac{\sin x}{\sqrt{x}}
 \]
 are solutions of the complementary equation. Then use the Green's function
-to solve  (A) with \part{a} $F(x)=x^{3/2}$  and \part{b} $F(x)=x^{5/2}$.
+to solve  (A) with (a) $F(x)=x^{3/2}$  and (b) $F(x)=x^{5/2}$.
+% TODO convert to enumext*
 
 \item\label{exer:13.1.24}Find the Green's function  for the boundary value problem
 \begin{equation}
@@ -873,7 +862,8 @@ x^{2}y''-2xy'+2y=F(x), \quad y(1)=0,\quad y(2)=0,   \tag{A}
 given that  $\{x,x^{2}\}$ is a fundamental set of solutions
 of the complementary equation.
 Then use the Green's function
-to solve  (A) with \part{a} $F(x)=2x^{3}$  and \part{b} $F(x)~=~6x^{4}$.
+to solve  (A) with (a) $F(x)=2x^{3}$  and (b) $F(x)=6x^{4}$.
+% TODO convert to enumext*
 
 
 \item\label{exer:13.1.25}Find the Green's function  for the boundary value problem
@@ -883,8 +873,9 @@ x^{2}y''+xy'-y=F(x), \quad y(1)-2y'(1)=0,\quad y'(2)=0,   \tag{A}
 given that  $\{x,1/x\}$ is a fundamental set of solutions
 of the complementary equation.
 Then use the Green's function
-to solve  (A) with \part{a} $F(x)=1$,   \part{b} $F(x)=x^{2}$, and
-\part{c} $F(x)=x^{3}$.
+to solve  (A) with (a) $F(x)=1$,   (b) $F(x)=x^{2}$, and
+(c) $F(x)=x^{3}$.
+% TODO convert to enumext*
 
 \exercisetext{In \zcref[range]{exer:13.1.26,exer:13.1.30} find
 necessary and sufficient conditions on $\alpha$, $\beta$, $\rho$,
@@ -940,13 +931,13 @@ B_{2}(y)=0,
 \end{equation}
 where
 \[
-B_{1}(y)=\alpha y(a)+\beta y'(a) \text{\quad and\quad}
+B_{1}(y)=\alpha y(a)+\beta y'(a) \quad\text{and}\quad
 B_{2}(y)=\rho y(b)+\delta y'(b).
 \]
-As in Section~13.1,  $\alpha$, $\beta$, $\rho$, and $\delta$
+As in \zcref{sec:twopoint_bvp},  $\alpha$, $\beta$, $\rho$, and $\delta$
 are real numbers, with
 \[
-\alpha^{2}+\beta^{2}>0\text{\;    and\; \;  } \rho^{2}+\delta^{2}>0,
+\alpha^{2}+\beta^{2}>0\qquad\text{and}\qquad\rho^{2}+\delta^{2}>0,
 \]
 $P_{0}$, $P_{1}$, $P_{2}$, and $R$ are continuous, and $P_{0}$ and $R$
 are positive on $[a,b]$.
@@ -963,7 +954,7 @@ problem means finding all eigenvalues and associated eigenfunctions
 of \eqref{eq:13.2.1}.
 
 
-\begin{example}\label{example:13.2.1} \rm
+\begin{example}\label{example:13.2.1}
 Solve the eigenvalue problem
 \begin{equation} \label{eq:13.2.2}
 y'+3y'+2y+\lambda y=0,\quad  y(0)=0,\quad y(1)=0.
@@ -1028,7 +1019,7 @@ y_{n}=e^{-3x/2}\sin n\pi x,\quad  n=1,2,3,\dots.
 \]
 
 
-\begin{example} \label{example:13.2.2} \rm
+\begin{example} \label{example:13.2.2}
 Solve the eigenvalue problem
 \begin{equation} \label{eq:13.2.4}
 x^{2}y''+xy'+\lambda y=0,\quad y(1)=0,\quad y(2)=0.
@@ -1091,7 +1082,7 @@ y_{n}=\sin\left(\frac{n\pi}{\ln2}\ln x\right),\quad n=1,2,3,\dots.
 For theoretical purposes, it's useful to rewrite the differential equation
 in \eqref{eq:13.2.1} in a different form, provided by the next theorem.
 
-\begin{theorem}\color{blue} \label{thmtype:13.2.1}
+\begin{theorem}\label{thmtype:13.2.1}
 If $P_{0},$ $P_{1},$ $P_{2},$ and $R$ are continuous and $P_{0}$ and $R$
 are positive on a closed interval $[a,b],$ then the equation
 \begin{equation} \label{eq:13.2.5}
@@ -1105,7 +1096,7 @@ where $p$, $p'$, $q$ and $r$ are continuous and $p$ and $r$ are positive
 on $[a,b].$
 \end{theorem}
 
-\proof
+\begin{proof}
 We begin by rewriting \eqref{eq:13.2.5} as
 \begin{equation} \label{eq:13.2.7}
 y''+u(x)y'+v(x)y+\lambda R_{1}(x)y=0,
@@ -1128,6 +1119,7 @@ Since $p$ is positive on $[a,b]$, this equation has the same solutions as
 \]
 so \eqref{eq:13.2.9} can be rewritten as in \eqref{eq:13.2.6}, with $q(x)=p(x)v(x)$
 and $r(x)=p(x)R_{1}(x)$. This completes the proof.
+\end{proof}
 
 It is to be understood throughout the rest of this section that $p$, $q$,
 and $r$ have the properties stated in \zcref{thmtype:13.2.1}. Moreover,
@@ -1138,8 +1130,8 @@ Ly=(p(x)y')'+q(x)y.
 
 The differential equation \eqref{eq:13.2.6} is called a
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Sturm.html}
-{\color{blue}\it Sturm}--\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Liouville.html}
-{\color{blue}\it Liouville  equation}, and the
+{\color{blue}\itshape Sturm}-\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Liouville.html}
+{\color{blue}\itshape Liouville equation}, and the
 eigenvalue problem
 \begin{equation} \label{eq:13.2.10}
 (p(x)y')'+q(x)y+\lambda r(x)y=0,\quad B_{1}(y)=0,\quad
@@ -1147,10 +1139,10 @@ B_{2}(y)=0,
 \end{equation}
 which is equivalent to \eqref{eq:13.2.1}, is called a
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Sturm.html}
-{\color{blue}\it Sturm-Liouville
+{\color{blue}\itshape Sturm-Liouville
 problem}.
 
-\begin{example}\label{example:13.2.3} \rm
+\begin{example}\label{example:13.2.3}
 Rewrite the eigenvalue problem
 \begin{equation} \label{eq:13.2.11}
 y''+3y'+(2+\lambda)y=0,\quad y(0)=0,\quad y(1)=0
@@ -1175,7 +1167,7 @@ e^{3x}(y''+3y')=(e^{3x}y')',
 \end{equation}
 
 
-\begin{example}\label{example:13.2.4} \rm
+\begin{example}\label{example:13.2.4}
 Rewrite the eigenvalue problem
 \begin{equation} \label{eq:13.2.13}
 x^{2}y''+xy'+\lambda y=0,\quad y(1)=0,\quad y(2)=0
@@ -1208,9 +1200,9 @@ xy''+y'=(xy')',
 Problems 1--4 of Section~11.1  are Sturm-Liouville problems.
 (Problem~5 isn't , although some authors use a definition of
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Sturm.html}
-{\color{blue}\it Sturm-Liouville problem}
+{\color{blue}\itshape Sturm-Liouville problem}
 that does include it.)  We were able to find
-the eigenvalues of Problems 1-4  explicitly because in each problem the
+the eigenvalues of Problems 1--4  explicitly because in each problem the
 coefficients in the boundary conditions satisfy $\alpha\beta=0$ and
 $\rho\delta=0$; that is, each boundary condition  involves either $y$
 or $y'$, but not both. If this isn't true then the eigenvalues can't in
@@ -1223,7 +1215,7 @@ must be used to determine approximate locations of the zeros of these
 determinants. Then the zeros can be computed accurately by
 numerical methods.
 
-\begin{example}  \label{example:13.2.5} \rm
+\begin{example}  \label{example:13.2.5}
 Solve the Sturm-Liouville problem
 \begin{equation} \label{eq:13.2.15}
 y''+\lambda y=0, \quad y(0)+y'(0)=0,\quad y(1)+3y'(1)=0.
@@ -1285,10 +1277,10 @@ Newton's to compute $k_{0}$  more accurately. We computed $k_{0}\approx
 y_{0}=k_{0}\cosh k_{0}x-\sinh k_{0}x.
 \]
 
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig130201}
+  \includegraphics[alt={Two curves for 0<k,u<4.  One curve begins at the origin and increases to a horizontal asymptote u=1.  The other begins at a vertical asymptote of positive infinity when k≈0.6 and decreases to a horizontal asymptote u=0.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig130201}
 \caption{$u=\tanh k$  and $u=-2k/(1-3k^2)$}
   \label{figure:13.2.1}
 \end{figure}
@@ -1350,12 +1342,11 @@ y_{n}=k_{n}\cos k_{n}x-\sin k_{n}x
 \]
 is an eigenfunction associated with $\lambda_{n}$  \bbox
 
-
-
-\begin{figure}[tbp]
+\begin{figure}
   \centering\color{blue}
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.3in,keepaspectratio]{fig130202}
-\caption{$u=\tan k$ and $u=-2k/(1+k)$}
+  \includegraphics[alt={A graph of 0<k<4π and -1<u<1 with four periods of u=tan k.  A second function begins at the origin, bottoms out near (0.6,-0.6), and increases to a horizontal asymptote of u=0.},
+  width=5.67in,height=3.3in,keepaspectratio]{fig130202}
+\caption{$u=\tan k$ and $u=-2k/(1+3k^2)$}
   \label{figure:13.2.2}
 \end{figure}
 
@@ -1383,7 +1374,7 @@ the boundary conditions $B_{1}(y)=0$ and $B_{2}(y)=0,$  then
 \end{equation}
 \end{theorem}
 
-\proof
+\begin{proof}
 Integration by parts yields
 \begin{align*}
 \int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx&=
@@ -1400,13 +1391,13 @@ By assumption, $B_{1}(u)=B_{1}(v)=0$ and $B_{2}(u)=B_{2}(v)=0$. Therefore
 \[
 \begin{aligned}
 \alpha u(a)+\beta u'(a)&=0\\
-\alpha v(a)+\beta v'(a)&=0\\
+\alpha v(a)+\beta v'(a)&=0
 \end{aligned}
-\quad \text{\quad   and\quad}\quad
-\begin{gathered}
-\rho u(b)+\delta u'(b)=0\phantom{.}\\
-\rho v(b)+\delta v'(b)=0.
-\end{gathered}
+\qquad\text{and}\qquad
+\begin{aligned}
+\rho u(b)+\delta u'(b)&=0\\
+\rho v(b)+\delta v'(b)&=0.
+\end{aligned}
 \]
 Since $\alpha^{2}+\beta^{2}>0$ and $\rho^{2}+\delta^{2}>0$, the
 determinants of these two systems must both be zero; that is,
@@ -1415,11 +1406,12 @@ u(a)v'(a)-u'(a)v(a)=u(b)v'(b)-u'(b)v(b)=0.
 \]
 This and \eqref{eq:13.2.22} imply \eqref{eq:13.2.21}, which completes the
 proof.
+\end{proof}
 
 The next theorem shows that a Sturm-Liouville problem has no complex
 eigenvalues.
 
-\begin{theorem}\color{blue} \label{thmtype:13.2.3}
+\begin{theorem}\label{thmtype:13.2.3}
 If $\lambda=p+qi$ with $q\ne0$  then the boundary value problem
 \[
 Ly+\lambda r(x)y=0,\quad B_{1}(y)=0,\quad B_{2}(y)=0
@@ -1427,7 +1419,8 @@ Ly+\lambda r(x)y=0,\quad B_{1}(y)=0,\quad B_{2}(y)=0
 has only the trivial solution.
 \end{theorem}
 
-\proof For this theorem to make sense, we must consider complex-valued
+\begin{proof}
+For this theorem to make sense, we must consider complex-valued
 solutions  of
 \begin{equation} \label{eq:13.2.23}
 Ly+(p+iq)r(x,y)y=0.
@@ -1482,8 +1475,9 @@ q\int_{a}^{b}r(x)[u^{2}(x)+v^{2}(x)]\,dx =0.
 Since $r$ is positive on $[a,b]$  and $q\ne0$ by assumption, this implies
 that $u\equiv0$ and $v\equiv0$ on $[a,b]$. Therefore $y\equiv0$ on
 $[a,b]$, which completes the proof.
+\end{proof}
 
-\begin{theorem}\color{blue} \label{thmtype:13.2.4}
+\begin{theorem}\label{thmtype:13.2.4}
 If $\lambda_{1}$ and $\lambda_{2}$ are distinct eigenvalues of the
 Sturm-Liouville  problem
 \begin{equation} \label{eq:13.2.25}
@@ -1495,8 +1489,8 @@ with associated eigenfunctions $u$ and $v$ respectively, then
 \end{equation}
 \end{theorem}
 
-
-\proof Since $u$ and $v$ satisfy the boundary conditions in \eqref{eq:13.2.25},
+\begin{proof}
+Since $u$ and $v$ satisfy the boundary conditions in \eqref{eq:13.2.25},
 \zcref{thmtype:13.2.2} implies that
 \[
 \int_{a}^{b}[u(x)Lv(x)-v(x)Lu(x)]\,dx=0.
@@ -1507,6 +1501,7 @@ Since $Lu=-\lambda_{1}ru$ and $Lv=-\lambda_{2}rv$, this implies that
 \]
 Since $\lambda_{1}\ne\lambda_{2}$, this implies \eqref{eq:13.2.26}, which
 completes the proof.
+\end{proof}
 
 If $u$  and $v$ are any integrable functions on $[a,b]$ and
 \[
@@ -1559,15 +1554,15 @@ respect to  $r=r(x);$    that is,
 In conclusion, we mention the next theorem. The proof is beyond the
 scope of this book.
 
-\begin{theorem}\color{blue} \label{thmtype:13.2.7}
+\begin{theorem}\label{thmtype:13.2.7}
 Let $\lambda_{1}<\lambda_{2}<\cdots<\lambda_{n}<\cdots$  be the eigenvalues
 of the Sturm-Liouville problem
 \[
 Ly+\lambda r(x)y=0,\quad B_{1}(y)=0,\quad B_{2}(y)=0,
 \]
-with associated eigenvectors $y_{1},$  $y_{2},$ \dots, $y_{n},$ \dots.
+with associated eigenvectors $y_{1}$,  $y_{2},$ \dots, $y_{n}$, \dots.
  Suppose $f$  is piecewise smooth
-(\zcref{thmtype:11.2.3})$ on $[a,b].$  For each $n,$ let
+(\zcref{thmtype:11.2.3}) on $[a,b]$.  For each $n$, let
 \[
 c_{n}=\frac{\dst{\int_{a}^{b}}r(x)f(x)y_{n}(x)\,dx}
 {\dst{\int_{a}^{b}}r(x)y_{n}^{2}(x)\,dx}.
@@ -1576,7 +1571,7 @@ Then
 \[
 \frac{f(x-)+f(x+)}{2}=\sum_{n=1}^{\infty}c_{n}y_{n}(x)
 \]
-for all $x$ in the open interval $(a,b).$
+for all $x$ in the open interval $(a,b)$.
 \end{theorem}
 
 \exercises
@@ -1632,16 +1627,15 @@ y''+2y'+y+\lambda y=0,\quad y'(0)=0, \quad y'(1)=0.
 
 \exercisetext{
 In \zcref[range]{exer:13.2.11,exer:13.2.20}:
-\part{a} Determine whether $\lambda=0$ is an eigenvalue. If it is, find an
+\begin{alist}
+\item Determine whether $\lambda=0$ is an eigenvalue. If it is, find an
  associated eigenfunction.
-
-\part{b}  Compute the negative eigenvalues with  errors not greater than
+\item Compute the negative eigenvalues with  errors not greater than
 $5\times 10^{-8}$.  State the form of the associated eigenfunctions.
-
-
-\part{c}  Compute the first four positive eigenvalues with  errors not
+\item Compute the first four positive eigenvalues with  errors not
 greater than
-$5\times 10^{-8.}$  State the form of the associated eigenfunctions.}
+$5\times 10^{-8.}$  State the form of the associated eigenfunctions.
+\end{alist}}
 
  \item\label{exer:13.2.11}\Cex
 $y''+\lambda y=0$, \quad  $y(0)+2y'(0)=0$,\quad $y(2)=0$
@@ -1724,8 +1718,7 @@ Find the first five eigenvalues of
 x^{2}y''-2xy'+2y+\lambda x^{2}y=0, \quad y'(1)=0,\quad y(2)=0
 \]
 with errors no greater than $5\times 10^{-8}$. State the form of the
-associated eienfunctions.
-
+associated eigenfunctions.
 
 \item\label{exer:13.2.24}\Cex
 Find the first five eigenvalues of
@@ -1733,36 +1726,30 @@ Find the first five eigenvalues of
 x^{2}y''-2xy'+2y+\lambda x^{2}y=0, \quad y(1)=0,\quad y'(2)=0
 \]
 with errors no greater than $5\times 10^{-8}$. State the form of the
-associated eienfunctions.
-
-
-
-
+associated eigenfunctions.
 
 \item\label{exer:13.2.25}Consider the Sturm-Liouville problem
 \begin{equation}   \tag{A}
 y''+\lambda y=0,\quad y(0)=0,\quad y(L)+\delta y'(L)=0.
 \end{equation}
 
-\part{a} Show that (A)  can't have more than one negative eigenvalue,
+\begin{alist}
+\item Show that (A)  can't have more than one negative eigenvalue,
 and find the values of $\delta$ for which it has one.
-
-\part{b} Find all values of $\delta$ such that $\lambda=0$ is an eigenvalue
+\item Find all values of $\delta$ such that $\lambda=0$ is an eigenvalue
 of (A).
-
-\part{c} Show that $\lambda=k^{2}$ with $k>0$ is an eigenvalue of (A)
+\item Show that $\lambda=k^{2}$ with $k>0$ is an eigenvalue of (A)
 if and only if
 \begin{equation} \tag{B}
 \tan kL=-\delta k.
 \end{equation}
-
-\part{d}
+\item
 For
  $n=1$, $2$, \dots, let $y_{n}$  be an eigenfunction  associated with
 $\lambda_{n}=k_{n}^{2}$. From \zcref{thmtype:13.2.4}, $y_{m}$  and
 $y_{n}$ are orthogonal over $[0,L]$ if $m\ne n$. Verify this  directly.
 \hint{Integrate by parts twice and use} (B).
-
+\end{alist}
 
 \item\label{exer:13.2.26}Solve the Sturm-Liouville problem
 \[
@@ -1778,17 +1765,15 @@ Consider the Sturm-Liouville problem
 y''+\lambda y=0,\quad y(0)+\alpha y'(0)=0,\quad y(1)+(\alpha-1) y'(1)=0,
 \end{equation}
 where $0<\alpha<1$.
-
-\part{a} Show that $\lambda=0$  is an eigenvalue of   (A),
+\begin{alist}
+\item Show that $\lambda=0$  is an eigenvalue of   (A),
 and find an associated eigenfunction.
-
-
-\part{b} Show that  (A)   has a negative eigenvalue,
+\item Show that  (A)   has a negative eigenvalue,
 and find the form of an associated eigenfunction.
-
-\part{c}   Give a graphical argument to show that (A) has infinitely many
+\item Give a graphical argument to show that (A) has infinitely many
 positive eigenvalues $\lambda_{1} < \lambda_{2}<\cdots
 <\lambda_{n}<\cdots$, and state the form of the associated eigenfunctions.
+\end{alist}
 
 \exercisetext{
 \zcref[range]{exer:13.2.28,exer:13.2.30}  deal with the Sturm-Liouville
@@ -1809,21 +1794,19 @@ where $\alpha^{2}+\beta^{2}>0$  and  $\rho^{2}+\delta^{2}>0$.}
 \item\label{exer:13.2.29}\Lex
 The point of this exercise is that (SL) can't have more than two negative
 eigenvalues.
-
-\part{a} Show that $\lambda$ is a negative eigenvalue of (SL)
+\begin{alist}
+\item Show that $\lambda$ is a negative eigenvalue of (SL)
 if and only if $\lambda=-k^{2}$, where $k$  is a positive solution of
 \[
 (\alpha\rho-\beta\delta k^{2})\sinh kL+k(\alpha\delta-\beta\rho)\cosh kL.
 \]
-
-\part{b}  Suppose $\alpha\delta-\beta\rho=0$.  Show that (SL)
+\item Suppose $\alpha\delta-\beta\rho=0$.  Show that (SL)
 has a negative eigenvalue if and only if $\alpha\rho$ and $\beta\delta$
 are both nonzero. Find the negative eigenvalue and an associated
 eigenfunction. \hint{Show that in this case $\rho=p\alpha$ and
 $s=q\beta$, where $q\ne0$.}
-
-\part{c}  Suppose $\beta\rho-\alpha\delta\ne0$. We know from
-Section~11.1 that (SL) has no negative eigenvalues
+\item Suppose $\beta\rho-\alpha\delta\ne0$. We know from
+\zcref{sec:eig_probs} that (SL) has no negative eigenvalues
 if $\alpha\rho=0$ and $\beta\delta=0$. Assume that either $\alpha\rho\ne0$
 or $\beta\delta\ne0$. Then we can rewrite (A) as
 \[
@@ -1833,28 +1816,22 @@ or $\beta\delta\ne0$. Then we can rewrite (A) as
 By graphing both sides of this equation on the same axes (there are
 several possibilities for the right side), show that it has at most
 two positive solutions, so (SL) has at most two negative eigenvalues.
-
+\end{alist}
 
 \item\label{exer:13.2.30}\Lex
 The point of this exercise is that (SL) has infinitely many positive
 eigenvalues $\lambda_{1}<\lambda_{2}<\cdots<\lambda_{n}<\cdots$, and
 that $\lim_{n\to\infty}\lambda_{n}=\infty$.
-
-
-
-
-\part{a} Show that $\lambda$ is a positive eigenvalue of (SL)
+\begin{alist}
+\item Show that $\lambda$ is a positive eigenvalue of (SL)
 if and only if $\lambda=k^{2}$, where $k$ is a positive solution of
 \begin{equation} \tag{A}
 (\alpha\rho+\beta\delta k^{2})\sin kL+k(\alpha\delta-\beta\rho)\cos kL=0.
 \end{equation}
-
-
-
-\part{b} Suppose $\alpha\delta-\beta\rho=0$. Show that the positive
+\item Suppose $\alpha\delta-\beta\rho=0$. Show that the positive
 eigenvalues
  of (SL) are $\lambda_{n}=(n\pi/L)^{2}$, $n=1$, $2$, $3$, \dots.
-\hint{Recall the hint in \zcref{exer:13.2.29}\part{b}.}
+\hint{Recall the hint in \zcref{exer:13.2.29}(b).}
 
 Now suppose $\alpha\delta-\beta\rho\ne0$. From
 Section~11.1,  if $\alpha\rho=0$ and $\beta\delta=0$,
@@ -1873,9 +1850,7 @@ as
 By graphing both sides of this equation on the same axes
 (there are several possibilities for the right side), convince yourself of
 the following:
-
-
-\part{c} If $\beta\delta=0$, there's a positive integer $N$ such that (B)
+\item If $\beta\delta=0$, there's a positive integer $N$ such that (B)
 has one solution $k_{n}$ in each of the intervals
 \begin{equation} \tag{C}
 \left((2n-1)\pi/L, (2n+1)\pi/L)\right),\quad n=N,N+1,N+2,\dots,
@@ -1886,38 +1861,31 @@ and either
 \text{\quad or\quad}
 \lim_{n\to\infty}\left(k_{n}-\frac{(2n+1)\pi}{2L}\right)=0.
 \]
-
-
-\part{d}
+\item
 If $\beta\delta\ne0$, there's a positive integer $N$  such that (B) has
 one solution $k_{n}$ in each of the intervals (C) and
 \[
 \lim_{n\to\infty}\left(k_{n}-\frac{n\pi}{N}\right)=0.
 \]
+\end{alist}
 
 \item\label{exer:13.2.31}The following Sturm-Liouville problems are generalizations of Problems
-1--4 of Section~11.1.
-
-\quad  Problem 1:   \quad $(p(x)y')'+\lambda r(x)y=0$,\quad
+1--4 of \zcref{sec:eig_probs}.
+\begin{enumext}[label=\arabic*,wrap-label={Problem #1:},labelwidth=5em]
+\item $(p(x)y')'+\lambda r(x)y=0$,\quad
 $y(a)=0$,\quad  $y(b)=0$
-
-
-\quad  Problem 2:   \quad $(p(x)y')'+\lambda r(x)y=0$,\quad
+\item $(p(x)y')'+\lambda r(x)y=0$,\quad
 $y'(a)=0$,\quad  $y'(b)=0$
-
-
-\quad  Problem 3:   \quad $(p(x)y')'+\lambda r(x)y=0$,\quad
+\item $(p(x)y')'+\lambda r(x)y=0$,\quad
 $y(a)=0$,\quad  $y'(b)=0$
-
-
-\quad Problem 4:   \quad $(p(x)y')'+\lambda r(x)y=0$,\quad
+\item $(p(x)y')'+\lambda r(x)y=0$,\quad
 $y'(a)=0$,\quad  $y(b)=0$
+\end{enumext}
 
 Prove: Problems~1--4  have no negative eigenvalues. Moreover, $\lambda=0$
 is an eigenvalue of Problem~2 with associated eigenfunction $y_{0}=1$,
 but $\lambda=0$ isn't  an eigenvalue of Problems 1, 3, and 4.
 \hint{See the proof of \zcref{thmtype:11.1.1}.}
-
 
 \item\label{exer:13.2.32}Show that the eigenvalues of the Sturm-Liouville
 problem
@@ -1927,7 +1895,5 @@ problem
 \]
 are all positive if $\alpha\beta\le 0$, \,  $\rho\delta\ge 0$, and
 $(\alpha\beta)^{2}+(\rho\delta)^{2}>0$.
-
-
 
 \end{exerciselist}
