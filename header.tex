@@ -44,7 +44,6 @@ filecolor = blue,
   cap
 }
 
-%\ShowInstanceValues{heading}{section}
 \EditInstance{heading}{section}{title-decls=\raggedright}
 
 \DeclareMathOperator{\tr}{tr}
@@ -62,7 +61,7 @@ filecolor = blue,
 
 \newcommand{\laplace}{{\mathcal L}}
 
-\newcommand{\textRightarrow}{\(\Rightarrow\)}
+\DeclareTextCommandDefault{\textRightarrow}{\ensuremath{\Rightarrow}}
 
 \newcommand{\amatrix}[2]{
  \left[
