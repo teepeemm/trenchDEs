@@ -5,12 +5,12 @@ from glob import glob
 def replace_over(content: str) -> str:
   content = re.sub(r'''{
                     ([ a-zA-Z0-9^_\\+!.'-]+)  # a simple group (no parentheses or grouping)
-                    \\over(\s+|(?=\W))''',  # watch out for \overline
+                    \\over(?=[^a-zA-Z])''',  # watch out for \overline
                     r'\\frac{\1}{', content, flags=re.VERBOSE)
   # but \left(...\right) forms its own group
   content = re.sub(r'''(?<=\\left[({[|])  # left ({[|
                     ([ a-zA-Z0-9^_\\+!.'-]+)  # a simple group
-                    \\over(\s+|(?=\W))
+                    \\over(?=[^a-zA-Z])
                     ([ a-zA-Z0-9^_\\+!.'-]+)  # a simple group
                     (?=\\right[)}\]|])''',  # right )}]|
                     r'\\frac{\1}{\2}', content, flags=re.VERBOSE)
