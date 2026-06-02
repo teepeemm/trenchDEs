@@ -41,7 +41,7 @@ for texfile in glob('*.tex'):
   with open(texfile) as tex:
     mathopen = False
     content = tex.read()
-  content = respace(content)
+  content = replace_over(content)
   with open(texfile,'w') as tex:
     tex.write(content)
 

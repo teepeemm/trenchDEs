@@ -1,6 +1,7 @@
 % !TEX TS-program = LuaLaTeX-dev
 % !TEX root = TRENCH_DIFFEQ.tex
 
+\usepackage{mathtools}
 \usepackage{unicode-math}
 \usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
 %\usepackage[T1]{fontenc}
@@ -9,7 +10,6 @@
 %\usepackage[scaled=0.92]{helvet}
 \usepackage[psamsfonts]{amsfonts}
 \usepackage{amsmath, amsbsy}
-\usepackage{mathtools}
 \usepackage{calc}
 \usepackage{booktabs}
 \usepackage[per-mode = symbol]{siunitx}
@@ -169,6 +169,19 @@ TECHNOLOGY}\par}
 \kern5pt\strut}\kern5pt}}}
 \newenvironment{newtable}[1]{ \begin{quote}
 Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
+
+\DeclareInstanceCopy{heading}{answersection}{section}
+\EditInstance{heading}{answersection}{
+  heading-decls = \normalfont\normalsize\bfseries,
+  after-vspace = \medskipamount,
+  before-vspace = \medskipamount
+}
+\newcommand{\sectionanswers}[1]{%
+ \ParseLaTeXeHeading{answersection}{\BooleanTrue}{
+  toc = {Section #1 Answers},
+  running = {Section #1 Answers}
+ }{Section #1 Answers, pp.~\pageref{exer:#1.1}ff}%
+}
 
 \setlength{\oddsidemargin}{15.5pt}
 \setlength{\evensidemargin}{15.5pt}
