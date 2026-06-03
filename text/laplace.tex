@@ -135,7 +135,7 @@ If $s\ne 0$ then
 Therefore
 \begin{equation}\label{eq:8.1.4}
 \lim_{T\to\infty}\int_0^T e^{-st}dt=\begin{cases}
-\dst\frac{1}{s}, &   s>0,\\
+\dfrac{1}{s}, &   s>0,\\
 \infty, &  s<0.
 \end{cases}
 \end{equation}
@@ -410,14 +410,14 @@ listed on the right are obtained  by applying
 \renewcommand{\arraystretch}{1.8}
 \begin{tabular}{c@{\qquad}c}\toprule
 $f(t)\leftrightarrow F(s)$ & $e^{at}f(t)\leftrightarrow F(s-a)$ \\\midrule
-$1\leftrightarrow\dst\frac{1}{s},\quad s>0$ &
- $e^{at}\leftrightarrow\dst\frac{1}{(s-a)},\quad s>a$\\
-  $t\leftrightarrow\dst{\frac{1}{s^2}},\quad s>0$ &
-$te^{at}\leftrightarrow\dst{\frac{1}{(s-a)^2}},\quad s>a$\\
-$\sin\omega t\leftrightarrow\dst{\frac{\omega}{s^2+\omega^2}},\quad s>0$&
-$e^{\lambda t}\sin\omega t\leftrightarrow\dst{\frac{\omega}{(s-\lambda)^2+\omega^2}},\,s>\lambda$\\
-$\cos\omega t\leftrightarrow\dst{\frac{s}{s^2+\omega^2}},\quad s>0$ &
-$e^{\lambda t}\sin\omega t\leftrightarrow\dst{\frac{s-\lambda}{(s-\lambda)^2+\omega^2}},\,s>\lambda$\\\bottomrule
+$1\leftrightarrow\dfrac{1}{s},\quad s>0$ &
+ $e^{at}\leftrightarrow\dfrac{1}{(s-a)},\quad s>a$\\
+  $t\leftrightarrow\dfrac{1}{s^2},\quad s>0$ &
+$te^{at}\leftrightarrow\dfrac{1}{(s-a)^2},\quad s>a$\\
+$\sin\omega t\leftrightarrow\dfrac{\omega}{s^2+\omega^2},\quad s>0$&
+$e^{\lambda t}\sin\omega t\leftrightarrow\dfrac{\omega}{(s-\lambda)^2+\omega^2},\,s>\lambda$\\
+$\cos\omega t\leftrightarrow\dfrac{s}{s^2+\omega^2},\quad s>0$ &
+$e^{\lambda t}\sin\omega t\leftrightarrow\dfrac{s-\lambda}{(s-\lambda)^2+\omega^2},\,s>\lambda$\\\bottomrule
 \end{tabular}
 \end{center}
 
@@ -651,7 +651,7 @@ e^{-st}(-3e^{-t})\,dt.
 Since
 \[
 \int_0^1e^{-st}\,dt=\begin{cases}
-\dst{\frac{1-e^{-s}}{s}},&\quad s\ne0,\\
+\dfrac{1-e^{-s}}{s},&\quad s\ne0,\\
 1,&\quad s=0,
 \end{cases}
 \]
@@ -663,8 +663,8 @@ e^{-(s+1)t}\,dt=-\frac{3e^{-(s+1)}}{s+1},\quad s>-1,
 it follows that
 \[
 F(s)=\begin{cases}
-\dst{\frac{1-e^{-s}}{s}-3\frac{e^{-(s+1)}}{s+1}},&s>-1,\,s\ne0,\\
-\dst{1-\frac{3}{e}},&s=0.
+\dfrac{1-e^{-s}}{s}-3\dfrac{e^{-(s+1)}}{s+1},&s>-1,\,s\ne0,\\
+1-\dfrac{3}{e},&s=0.
 \end{cases}
 \]
 This is consistent with \zcref{thmtype:8.1.6}, since
@@ -724,7 +724,7 @@ find the Laplace transforms of the following functions.
 \item $\cosh^2 t$
 \item $t\sinh 2t$
 \item $\sin t\cos t$
-\item $\dst{\sin\left(t+\frac{\pi}{4}\right)}$
+\item $\sin\left(t+\dfrac{\pi}{4}\right)$
 \item $\cos 2t -\cos 3t$
 \item $\sin 2t +\cos 4t$
 \end{alist}
@@ -872,11 +872,11 @@ functions.
 
 \begin{alist}[columns=3]
 % TODO was horizontal
-\item $\dst{\frac{\sin\omega t}{t}\quad(\omega>0)}$
-\item $\dst{\frac{\cos\omega t-1}{t}}\quad (\omega>0)$
-\item $\dst{\frac{e^{at}-e^{bt}}{t}}$
-\item $\dst{\frac{\cosh t-1}{t}}$
-\item $\dst{\frac{\sinh^2 t}{t}}$
+\item $\dfrac{\sin\omega t}{t}\quad(\omega>0)$
+\item $\dfrac{\cos\omega t-1}{t}\quad (\omega>0)$
+\item $\dfrac{e^{at}-e^{bt}}{t}$
+\item $\dfrac{\cosh t-1}{t}$
+\item $\dfrac{\sinh^2 t}{t}$
 \end{alist}
 
 \item\label{exer:8.1.16}The \emph{\color{blue}gamma function} is defined by
@@ -1420,15 +1420,15 @@ transform.
 
 \begin{alist}[columns=3]
 % TODO was horizontal
-\item $\dst\frac{3}{(s-7)^4}$
-\item $\dst\frac{2s-4}{s^2-4s+13}$
-\item $\dst\frac{1}{s^2+4s+20}$
-\item $\dst\frac{2}{s^2+9}$
-\item $\dst\frac{s^2-1}{(s^2+1)^2}$
-\item $\dst\frac{1}{(s-2)^2-4}$
-\item $\dst\frac{12s-24}{(s^2-4s+85)^2}$
-\item $\dst\frac{2}{(s-3)^2-9}$
-\item $\dst\frac{s^2-4s+3}{(s^2-4s+5)^2}$
+\item $\dfrac{3}{(s-7)^4}$
+\item $\dfrac{2s-4}{s^2-4s+13}$
+\item $\dfrac{1}{s^2+4s+20}$
+\item $\dfrac{2}{s^2+9}$
+\item $\dfrac{s^2-1}{(s^2+1)^2}$
+\item $\dfrac{1}{(s-2)^2-4}$
+\item $\dfrac{12s-24}{(s^2-4s+85)^2}$
+\item $\dfrac{2}{(s-3)^2-9}$
+\item $\dfrac{s^2-4s+3}{(s^2-4s+5)^2}$
 \end{alist}
 
 \item\label{exer:8.2.2}Use \zcref{thmtype:8.2.1} and the table of Laplace transforms
@@ -1436,53 +1436,53 @@ transform.
 
 \begin{alist}[columns=3]
 % TODO was horizontal
-\item $\dst\frac{2s+3}{(s-7)^4}$
-\item $\dst\frac{s^2-1}{(s-2)^6}$
-\item $\dst\frac{s+5}{s^2+6s+18}$
-\item $\dst\frac{2s+1}{s^2+9}$
-\item $\dst\frac{s}{s^2+2s+1}$
-\item $\dst\frac{s+1}{s^2-9}$
-\item $\dst\frac{s^3+2s^2-s-3}{(s+1)^4}$
-\item $\dst\frac{2s+3}{(s-1)^2+4}$
-\item $\dst\frac{1}{s}-\frac{s}{s^2+1}$
-\item $\dst\frac{3s+4}{s^2-1}$
-\item $\dst\frac{3}{s-1}+\frac{4s+1}{s^2+9}$
-\item $\dst\frac{3}{(s+2)^2}-\frac{2s+6}{s^2+4}$
+\item $\dfrac{2s+3}{(s-7)^4}$
+\item $\dfrac{s^2-1}{(s-2)^6}$
+\item $\dfrac{s+5}{s^2+6s+18}$
+\item $\dfrac{2s+1}{s^2+9}$
+\item $\dfrac{s}{s^2+2s+1}$
+\item $\dfrac{s+1}{s^2-9}$
+\item $\dfrac{s^3+2s^2-s-3}{(s+1)^4}$
+\item $\dfrac{2s+3}{(s-1)^2+4}$
+\item $\dfrac{1}{s}-\dfrac{s}{s^2+1}$
+\item $\dfrac{3s+4}{s^2-1}$
+\item $\dfrac{3}{s-1}+\dfrac{4s+1}{s^2+9}$
+\item $\dfrac{3}{(s+2)^2}-\dfrac{2s+6}{s^2+4}$
 \end{alist}
 
 \item\label{exer:8.2.3}Use Heaviside's method to find the inverse Laplace transform.
 
 \begin{alist}[columns=2]
 % TODO was horizontal
-\item $\dst\frac{3-(s+1)(s-2)}{(s+1)(s+2)(s-2)}$
-\item $\dst\frac{7+(s+4)(18-3s)}{(s-3)(s-1)(s+4)}$
-\item $\dst\frac{2+(s-2)(3-2s)}{(s-2)(s+2)(s-3)}$
-\item $\dst\frac{3-(s-1)(s+1)}{(s+4)(s-2)(s-1)}$
-\item $\dst\frac{3+(s-2)(10-2s-s^2)}{(s-2)(s+2)(s-1)(s+3)}$
-\item $\dst\frac{3+(s-3)(2s^2+s-21)}{(s-3)(s-1)(s+4)(s-2)}$
+\item $\dfrac{3-(s+1)(s-2)}{(s+1)(s+2)(s-2)}$
+\item $\dfrac{7+(s+4)(18-3s)}{(s-3)(s-1)(s+4)}$
+\item $\dfrac{2+(s-2)(3-2s)}{(s-2)(s+2)(s-3)}$
+\item $\dfrac{3-(s-1)(s+1)}{(s+4)(s-2)(s-1)}$
+\item $\dfrac{3+(s-2)(10-2s-s^2)}{(s-2)(s+2)(s-1)(s+3)}$
+\item $\dfrac{3+(s-3)(2s^2+s-21)}{(s-3)(s-1)(s+4)(s-2)}$
 \end{alist}
 
 \item\label{exer:8.2.4}Find the inverse Laplace transform.
 
 \begin{alist}[columns=2]
-\item $\dst\frac{2+3s}{(s^2+1)(s+2)(s+1)}$
-\item $\dst\frac{3s^2+2s+1}{(s^2+1)(s^2+2s+2)}$
-\item $\dst\frac{3s+2}{(s-2)(s^2+2s+5)}$
-\item $\dst\frac{3s^2+2s+1}{(s-1)^2(s+2)(s+3)}$
-\item $\dst\frac{2s^2+s+3}{(s-1)^2(s+2)^2}$
-\item $\dst\frac{3s+2}{(s^2+1)(s-1)^2}$
+\item $\dfrac{2+3s}{(s^2+1)(s+2)(s+1)}$
+\item $\dfrac{3s^2+2s+1}{(s^2+1)(s^2+2s+2)}$
+\item $\dfrac{3s+2}{(s-2)(s^2+2s+5)}$
+\item $\dfrac{3s^2+2s+1}{(s-1)^2(s+2)(s+3)}$
+\item $\dfrac{2s^2+s+3}{(s-1)^2(s+2)^2}$
+\item $\dfrac{3s+2}{(s^2+1)(s-1)^2}$
 \end{alist}
 
 \item\label{exer:8.2.5}Use the method of \zcref{example:8.2.9}  to find the inverse Laplace transform.
 
 \begin{alist}[columns=3]
 % TODO was horizontal
-\item $\dst\frac{3s+2}{(s^2+4)(s^2+9)}$
-\item $\dst\frac{-4s+1}{(s^2+1)(s^2+16)}$
-\item $\dst\frac{5s+3}{(s^2+1)(s^2+4)}$
-\item $\dst\frac{-s+1}{(4s^2+1)(s^2+1)}$
-\item $\dst\frac{17s-34}{(s^2+16)(16s^2+1)}$
-\item $\dst\frac{2s-1}{(4s^2+1)(9s^2+1)}$
+\item $\dfrac{3s+2}{(s^2+4)(s^2+9)}$
+\item $\dfrac{-4s+1}{(s^2+1)(s^2+16)}$
+\item $\dfrac{5s+3}{(s^2+1)(s^2+4)}$
+\item $\dfrac{-s+1}{(4s^2+1)(s^2+1)}$
+\item $\dfrac{17s-34}{(s^2+16)(16s^2+1)}$
+\item $\dfrac{2s-1}{(4s^2+1)(9s^2+1)}$
 \end{alist}
 
 
@@ -1490,36 +1490,36 @@ transform.
 
 \begin{alist}[columns=2]
 % TODO was horinzontal
-\item $\dst\frac{17 s-15}{(s^2-2s+5)(s^2+2s+10)}$
-\item $\dst\frac{8s+56}{(s^2-6s+13)(s^2+2s+5)}$
-\item $\dst\frac{s+9}{(s^2+4s+5)(s^2-4s+13)}$
-\item $\dst\frac{3s-2}{(s^2-4s+5)(s^2-6s+13)}$
-\item $\dst\frac{3s-1}{(s^2-2s+2)(s^2+2s+5)}$
-\item $\dst\frac{20s+40}{(4s^2-4s+5)(4s^2+4s+5)}$
+\item $\dfrac{17 s-15}{(s^2-2s+5)(s^2+2s+10)}$
+\item $\dfrac{8s+56}{(s^2-6s+13)(s^2+2s+5)}$
+\item $\dfrac{s+9}{(s^2+4s+5)(s^2-4s+13)}$
+\item $\dfrac{3s-2}{(s^2-4s+5)(s^2-6s+13)}$
+\item $\dfrac{3s-1}{(s^2-2s+2)(s^2+2s+5)}$
+\item $\dfrac{20s+40}{(4s^2-4s+5)(4s^2+4s+5)}$
 \end{alist}
 
 \item\label{exer:8.2.7}Find the inverse Laplace transform.
 
 \begin{alist}[columns=2]
 % TODO was horizontal
-\item $\dst\frac{1}{s(s^2+1)}$
-\item $\dst\frac{1}{(s-1)(s^2-2s+17)}$
-\item $\dst\frac{3s+2}{(s-2)(s^2+2s+10)}$
-\item $\dst\frac{34-17s}{(2s-1)(s^2-2s+5)}$
-\item $\dst\frac{s+2}{(s-3)(s^2+2s+5)}$
-\item $\dst\frac{2s-2}{(s-2)(s^2+2s+10)}$
+\item $\dfrac{1}{s(s^2+1)}$
+\item $\dfrac{1}{(s-1)(s^2-2s+17)}$
+\item $\dfrac{3s+2}{(s-2)(s^2+2s+10)}$
+\item $\dfrac{34-17s}{(2s-1)(s^2-2s+5)}$
+\item $\dfrac{s+2}{(s-3)(s^2+2s+5)}$
+\item $\dfrac{2s-2}{(s-2)(s^2+2s+10)}$
 \end{alist}
 
 \item\label{exer:8.2.8}Find the inverse Laplace transform.
 
 \begin{alist}[columns=2]
 % TODO was horizontal
-\item $\dst\frac{2s+1}{(s^2+1)(s-1)(s-3)}$
-\item $\dst\frac{s+2}{(s^2+2s+2)(s^2-1)}$
-\item $\dst\frac{2s-1}{(s^2-2s+2)(s+1)(s-2)}$
-\item $\dst\frac{s-6}{(s^2-1)(s^2+4)}$
-\item $\dst\frac{2s-3}{s(s-2)(s^2-2s+5)}$
-\item $\dst\frac{5s-15}{(s^2-4s+13)(s-2)(s-1)}$
+\item $\dfrac{2s+1}{(s^2+1)(s-1)(s-3)}$
+\item $\dfrac{s+2}{(s^2+2s+2)(s^2-1)}$
+\item $\dfrac{2s-1}{(s^2-2s+2)(s+1)(s-2)}$
+\item $\dfrac{s-6}{(s^2-1)(s^2+4)}$
+\item $\dfrac{2s-3}{s(s-2)(s^2-2s+5)}$
+\item $\dfrac{5s-15}{(s^2-4s+13)(s-2)(s-1)}$
 \end{alist}
 
 \item\label{exer:8.2.9}Given that $f(t)\leftrightarrow F(s)$, find the inverse
@@ -1838,7 +1838,7 @@ y=\laplace^{-1}(Y(s))=\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={A solution curve for 0<t<7 and -4<y<1 that begins at (0,-4), crosses the t axis near t=3.5, and converges to a horizontal asymptote of y=0.},
   width=\linewidth,height=2.44in,keepaspectratio]{fig080301}
-\captionof{figure}{$y=\dst{\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}}$}
+\captionof{figure}{$y=\dfrac{4}{3}e^{-t/2}-8e^{-t}+\dfrac{8}{3}e^{-2t}$}
   \label{figure:8.3.1}
 \tagstructend
 \end{minipage}%
@@ -1847,7 +1847,7 @@ y=\laplace^{-1}(Y(s))=\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={A solution curve for 0<t<7 and -4<y<1 that begins at (0,-3), crosses the t axis near t=1.5, converges to a horizontal asymptote of y=0.5, but also crosses that asymptote near (2,0.5).},
 width=\linewidth,height=2.44in,keepaspectratio]{fig080302}
-\captionof{figure}{$y=\dst{\frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t}$}
+\captionof{figure}{$y=\dfrac{1}{2}-\dfrac{7}{2}e^{-t}\cos t-\dfrac{5}{2}e^{-t}\sin t$}
 \label{figure:8.3.2}
 \tagstructend
 \end{minipage}
@@ -2275,8 +2275,8 @@ example.
  Find the Laplace transform of
 \begin{equation} \label{eq:8.4.10}
 f(t)=\begin{cases}
-\sin t,&0\le t<\dst\frac{\pi}{2},\\
-\cos t-3\sin t,&\dst\frac{\pi}{2}\le t<\pi,\\
+\sin t,&0\le t<\dfrac{\pi}{2},\\
+\cos t-3\sin t,&\dfrac{\pi}{2}\le t<\pi,\\
  3\cos t,&t\ge\pi
 \end{cases}
 \end{equation}
@@ -2547,28 +2547,28 @@ transforms on the appropriate intervals, as in
 \zcref{example:8.4.7}.
 Where indicated by \CGex, graph the inverse transform.}
 
-\item(1)\label{exer:8.4.19}$\dst{H(s)=\frac{e^{-2s}}{s-2}}$%&
-\item(1)\label{exer:8.4.20}$\dst{H(s)=\frac{e^{-s}}{s(s+1)}}$
+\item(1)\label{exer:8.4.19}$H(s)=\dfrac{e^{-2s}}{s-2}$%&
+\item(1)\label{exer:8.4.20}$H(s)=\dfrac{e^{-s}}{s(s+1)}}$
 
-\item\label{exer:8.4.21}\CGex $\dst{H(s)=\frac{e^{-s}}{s^3}+
-\frac{e^{-2s}}{s^2}}$
+\item\label{exer:8.4.21}\CGex $H(s)=\dfrac{e^{-s}}{s^3}+
+\dfrac{e^{-2s}}{s^2}$
 
-\item\label{exer:8.4.22}\CGex $\dst{H(s)=\left(\frac{2}{s}+\frac{1}{s^2}\right)
-+e^{-s}\left(\frac{3}{s}-\frac{1}{s^2}\right)+e^{-3s}\left(\frac{1}{s}+\frac{1}{s^2}\right)}$
+\item\label{exer:8.4.22}\CGex $H(s)=\left(\dfrac{2}{s}+\dfrac{1}{s^2}\right)
++e^{-s}\left(\dfrac{3}{s}-\dfrac{1}{s^2}\right)+e^{-3s}\left(\dfrac{1}{s}+\dfrac{1}{s^2}\right)$
 
-\item\label{exer:8.4.23}$\dst{H(s)=\left(\frac{5}{s}-\frac{1}{s^2}\right)
-+e^{-3s}\left(\frac{6}{s}+\frac{7}{s^2}\right)+\frac{3e^{-6s}}{s^3}}$
+\item\label{exer:8.4.23}$H(s)=\left(\dfrac{5}{s}-\dfrac{1}{s^2}\right)
++e^{-3s}\left(\dfrac{6}{s}+\dfrac{7}{s^2}\right)+\dfrac{3e^{-6s}}{s^3}$
 
-\item\label{exer:8.4.24}$\dst{H(s)=\frac{e^{-\pi s} (1-2s)}{s^2+4s+5}}$
+\item\label{exer:8.4.24}$H(s)=\dfrac{e^{-\pi s} (1-2s)}{s^2+4s+5}$
 
-\item\label{exer:8.4.25}\CGex $\dst{H(s)=\left(\frac{1}{s}-\frac{s}{s^2+1}\right)+e^{-\frac{\pi}{2}s}\left(\frac{3s-1}{s^2+1}\right)}$
+\item\label{exer:8.4.25}\CGex $H(s)=\left(\dfrac{1}{s}-\dfrac{s}{s^2+1}\right)+e^{-\dfrac{\pi}{2}s}\left(\dfrac{3s-1}{s^2+1}\right)$
 
-\item\label{exer:8.4.26}$\dst{H(s)=
-e^{-2s}\left[\frac{3(s-3)}{(s+1)(s-2)}-\frac{s+1}{(s-1)(s-2)}\right]}$
+\item\label{exer:8.4.26}$H(s)=
+e^{-2s}\left[\dfrac{3(s-3)}{(s+1)(s-2)}-\dfrac{s+1}{(s-1)(s-2)}\right]$
 
-\item\label{exer:8.4.27}$\dst{H(s)=\frac{1}{s}+\frac{1}{s^2}+e^{-s}\left(\frac{3}{s}+\frac{2}{s^2}\right) +e^{-3s}\left(\frac{4}{s}+\frac{3}{s^2}\right)}$
+\item\label{exer:8.4.27}$H(s)=\dfrac{1}{s}+\dfrac{1}{s^2}+e^{-s}\left(\dfrac{3}{s}+\dfrac{2}{s^2}\right) +e^{-3s}\left(\dfrac{4}{s}+\dfrac{3}{s^2}\right)$
 
-\item\label{exer:8.4.28}$\dst{H(s)=\frac{1}{s}-\frac{2}{s^3}+e^{-2s}\left(\frac{3}{s}-\frac{1}{s^3}\right) +\frac{e^{-4s}}{s^2}}$
+\item\label{exer:8.4.28}$H(s)=\dfrac{1}{s}-\dfrac{2}{s^3}+e^{-2s}\left(\dfrac{3}{s}-\dfrac{1}{s^3}\right) +\dfrac{e^{-4s}}{s^2}$
 
 \item\label{exer:8.4.29}Find $\laplace\left(u(t-\tau)\right)$.
 
@@ -3487,9 +3487,9 @@ We first compute
 (f\ast g)(t)
 &=\dst\int_0^t e^{a\tau}e^{b(t-\tau)}\,d\tau
 &&=\dst e^{bt}\int_0^t e^{(a-b)\tau} d\tau\\
-&=\dst{e^{bt}\frac{e^{(a-b)\tau}}{a-b}\,\bigg|^t_0}
-&&=\dst\frac{e^{bt}\left[e^{(a-b)t}-1\right]}{a-b}\\
-&=\dst\frac{e^{at}-e^{bt}}{a-b}.
+&=e^{bt}\dfrac{e^{(a-b)\tau}}{a-b}\,\bigg|^t_0
+&&=\dfrac{e^{bt}\left[e^{(a-b)t}-1\right]}{a-b}\\
+&=\dfrac{e^{at}-e^{bt}}{a-b}.
 \end{alignat*}
 Since
 \[
@@ -3898,20 +3898,20 @@ complex conjugates, respectively.
 
 \begin{alist}[columns=2]
 % TODO horizontally
-\item $\dst\frac{1}{s^2(s^2+4)}$
-\item $\dst\frac{s}{(s+2)(s^2+9)}$
-\item $\dst\frac{s}{(s^2+4)(s^2+9)}$
-\item $\dst\frac{s}{(s^2+1)^2}$
-\item $\dst\frac{1}{s(s-a)}$
-\item $\dst\frac{1}{(s+1)(s^2+2s+2)}$
-\item $\dst\frac{1}{(s+1)^2(s^2+4s+5)}$
-\item $\dst\frac{1}{(s-1)^3(s+2)^2}$
-\item $\dst\frac{s-1}{s^2(s^2-2s+2)}$
-\item $\dst\frac{s(s+3)}{(s^2+4)(s^2+6s+10)}$
-\item $\dst\frac{1}{(s-3)^5s^6}$
-\item $\dst\frac{1}{(s-1)^3(s^2+4)}$
-\item $\dst\frac{1}{s^2(s-2)^3}$
-\item $\dst\frac{1}{s^7(s-2)^6}$
+\item $\dfrac{1}{s^2(s^2+4)}$
+\item $\dfrac{s}{(s+2)(s^2+9)}$
+\item $\dfrac{s}{(s^2+4)(s^2+9)}$
+\item $\dfrac{s}{(s^2+1)^2}$
+\item $\dfrac{1}{s(s-a)}$
+\item $\dfrac{1}{(s+1)(s^2+2s+2)}$
+\item $\dfrac{1}{(s+1)^2(s^2+4s+5)}$
+\item $\dfrac{1}{(s-1)^3(s+2)^2}$
+\item $\dfrac{s-1}{s^2(s^2-2s+2)}$
+\item $\dfrac{s(s+3)}{(s^2+4)(s^2+6s+10)}$
+\item $\dfrac{1}{(s-3)^5s^6}$
+\item $\dfrac{1}{(s-1)^3(s^2+4)}$
+\item $\dfrac{1}{s^2(s-2)^3}$
+\item $\dfrac{1}{s^7(s-2)^6}$
 \end{alist}
 
 \item\label{exer:8.6.2}Find the Laplace transform.
