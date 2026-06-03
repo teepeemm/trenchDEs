@@ -1,4 +1,5 @@
-
+% !TEX TS-program = LuaLaTeX-dev
+% !TEX root = ../TRENCH_DIFFEQ.tex
 
 \sectionanswers{11.1}
 
@@ -74,8 +75,8 @@ $n=1$, $2$, $3$, \dots
 
 
 \answer{11.1.14}
-$\lambda_n=\dst{(2n-1)^2\pi^2\over36}$,
-$y_n=\dst\cos{(2n-1)\pi x\over6}$,
+$\lambda_n=\dst\frac{(2n-1)^2\pi^2}{36}$,
+$y_n=\dst\cos\frac{(2n-1)\pi x}{6}$,
 $n=1$, $2$, $3$, \dots
 
 
@@ -104,29 +105,28 @@ $\lambda_n=4n^2\pi^2/L^2$    $y_n=\dst\sin\frac{2n\pi x}{L}$,
 $n=1$, $2$, $3$, \dots
 
 \answer{11.1.26}
-$\lambda_n=n^2\pi^2/L^2$    $y_n=\dst\cos {n\pi
-x\over L}$, $n=1$, $2$, $3$, \dots.
+$\lambda_n=n^2\pi^2/L^2$    $y_n=\dst\cos\frac{n\pi
+x}{L}$, $n=1$, $2$, $3$, \dots.
 
 
 \sectionanswers{11.2}
 
 \answer{11.2.2}
-$F(x)=\dst2+\frac{2}{\pi}\sum_{n=1}^\infty{(-1)^n\over
-n}\sin n\pi x$;  \quad
+$F(x)=\dst2+\frac{2}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{n}\sin n\pi x$;  \quad
 $F(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 2,&\phantom{-}x=-1,\\2-x,&-1<x<1,\\2,&\phantom{-}x=1
-\end{array}\right.$
+\end{cases}$
 
 \answer{11.2.3}
-$F(x)=\dst-\pi^2-12\sum_{n=1}^\infty{(-1)^n\over n^2}\cos nx
--4\sum_{n=1}^\infty{(-1)^n\over n}\sin nx$;  \quad
+$F(x)=\dst-\pi^2-12\sum_{n=1}^\infty\frac{(-1)^n}{n^2}\cos nx
+-4\sum_{n=1}^\infty\frac{(-1)^n}{n}\sin nx$;  \quad
 
 \quad $F(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 -3\pi^2,&\phantom{-}x=-\pi,\\2x-3x^2,&-\pi<x<\pi,\\
 -3\pi^2,&\phantom{-}x=\pi
-\end{array}\right.$
+\end{cases}$
 
 \answer{11.2.4}
 $F(x)=-\dst\frac{12}{\pi^2}\sum_{n=1}^\infty(-1)^n\frac{\cos n\pi x}{n^2}$;  \quad $F(x)=1-3x^2$\quad$-1\le x\le 1$
@@ -147,7 +147,7 @@ $F(x)=\dst-\frac{2}{\pi}+\frac{\pi}{2}\cos x-\frac{4}{\pi}
 \quad\,  $F(x)=|x|\cos x$, $-\pi\le x\le\pi$
 
 \answer{11.2.8}
-$F(x)=\dst1-\frac{1}{2}\cos x-2\sum_{n=2}^\infty {(-1)^n\over n^2-1}\cos
+$F(x)=\dst1-\frac{1}{2}\cos x-2\sum_{n=2}^\infty\frac{(-1)^n}{n^2-1}\cos
 nx$;  \quad $F(x)=x\sin x$, $-\pi\le x\le\pi$
 
 \answer{11.2.9}
@@ -157,7 +157,7 @@ $F(x)=\dst\frac{\pi}{2}\sin x-\frac{16}{\pi}
 
 \answer{11.2.10}
 $F(x)=\dst\frac{1}{\pi}+\frac{1}{2}\cos\pi x-\frac{2}{\pi}\sum_{n=1}^\infty
-{(-1)^n\over4n^2-1}\cos2n\pi x$;
+\frac{(-1)^n}{4n^2-1}\cos2n\pi x$;
 \quad $F(x)=f(x)$, $-1\le x\le1$
 
 \answer{11.2.11}
@@ -165,20 +165,20 @@ $F(x)=\dst{\frac{1}{4\pi}\sin\pi x-\frac{8}{\pi^2}\sum_{n=1}^\infty
 (-1)^n\frac{n}{(4n^2-1)^2}\sin2n\pi x}$;
 
 \;  \qquad \qquad $\dst{-\frac{1}{4\pi}\sum_{n=1}^\infty
- {(-1)^n\over n(n+1)}\sin(2n+1)\pi x}$   \quad
+\frac{(-1)^n}{n(n+1)}\sin(2n+1)\pi x}$   \quad
 $F(x)=f(x)$, $-1\le x\le1$
 
 \answer{11.2.12}
 $F(x)=\dst\frac{1}{2}\sin\pi x-\frac{4}{\pi}\sum_{n=1}^\infty
 (-1)^n\frac{n}{4n^2-1}\sin2n\pi x$;  \quad
 $F(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 \phantom{-}0,&-1\le x<\frac{1}{2},\\
 -\frac{1}{2},&\phantom{-}x=-\frac{1}{2},\\
 \phantom{-}\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\
 \phantom{-}\frac{1}{2},&\phantom{-}x=\frac{1}{2},\\
 \phantom{-}0,&\phantom{-}\frac{1}{2}<x\le1\\
-\end{array}\right.$
+\end{cases}$
 
 \answer{11.2.13}
 $F(x)=\dst\frac{1}{\pi}+\frac{1}{\pi}\cos\pi x-\frac{2}{\pi}
@@ -186,13 +186,13 @@ $F(x)=\dst\frac{1}{\pi}+\frac{1}{\pi}\cos\pi x-\frac{2}{\pi}
 \cos n\pi x$;
 
 \quad \qquad $F(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 0,&-1\le x<\frac{1}{2},\\
 \frac{1}{2},&\phantom{-}x=-1,\\
 |\sin\pi x|,&-\frac{1}{2}<x<\frac{1}{2},\\
 \frac{1}{2},&\phantom{-}x=1,\\
 0,&\phantom{-}\frac{1}{2}<x\le1
-\end{array}\right.$
+\end{cases}$
 
 \answer{11.2.14}
 $F(x)=\dst\frac{1}{\pi^2}+\frac{1}{4\pi}\cos\pi
@@ -203,40 +203,40 @@ x+\frac{2}{\pi^2}\sum_{n=1}^\infty
 (-1)^n\frac{2n+1}{n(n+1)}\cos(2n+1)\pi x}$;
 
 \qquad\qquad $F(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 0,&-1\le x<\frac{1}{2},\\
 \frac{1}{4},&\phantom{-}x=-\frac{1}{2},\\
 x\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\
 \frac{1}{4},&\phantom{-}x=\frac{1}{2},\\
 0,&\phantom{-}\frac{1}{2}<x\le1,\\
-\end{array}\right.$
+\end{cases}$
 
 \answer{11.2.15}
 $\dst
-F(x)=1-\frac{8}{\pi^2}\sum_{n=0}^\infty\frac{1}{(2n+1)^2}\cos{(2n+1)\pi
-x\over4} -\frac{4}{\pi}\sum_{n=1}^\infty{(-1)^n\over n}\sin{n\pi
-x\over4}$;
+F(x)=1-\frac{8}{\pi^2}\sum_{n=0}^\infty\frac{1}{(2n+1)^2}\cos\frac{(2n+1)\pi
+x}{4} -\frac{4}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{n}\sin\frac{n\pi
+x}{4}$;
 
 \qquad $F(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 2,&\phantom{-}x=-4,\\
 0,&-4<x<0,\\
 x,&\phantom{-}0\le x<4,\\
 2,&\phantom{-}x=4
-\end{array}\right.$
+\end{cases}$
 
 \answer{11.2.16}
 $F(x)=\dst\frac{1}{2}+\frac{1}{\pi}\sum_{n=1}^\infty\frac{1}{n}\sin2n\pi x
 +\frac{8}{\pi^3}\sum_{n=0}^\infty\frac{1}{(2n+1)^3}\sin(2n+1)\pi x$;
 
  \qquad $F(x)=
-\left\{\begin{array}{cl}
+\begin{cases}
 \frac{1}{2},&\phantom{-}x=-1,\\
 x^2,&-1< x<0,\\
 \frac{1}{2},&\phantom{-}x=0,\\
 1-x^2,&\phantom{-}0<x<1,\\
 \frac{1}{2},&\phantom{-}x=1
-\end{array}\right.$
+\end{cases}$
 
 \answer{11.2.17}
 $F(x)=\dst\frac{3}{4}+\frac{1}{\pi}\sum_{n=1}^\infty
@@ -252,8 +252,8 @@ n\pi-\cos\frac{2n\pi}{3}\right)\sin\frac{n\pi x}{3}$
 
 \answer{11.2.20}
  $F(x)=\dst\frac{\sinh\pi}{\pi}\left(
-1+2\sum_{n=1}^\infty{(-1)^n\over n^2+1}\cos
-nx-2\sum_{n=1}^\infty{(-1)^nn\over n^2+1}\sin nx\right)$
+1+2\sum_{n=1}^\infty\frac{(-1)^n}{n^2+1}\cos
+nx-2\sum_{n=1}^\infty\frac{(-1)^nn}{n^2+1}\sin nx\right)$
 
 \answer{11.2.21}
 $F(x)=\dst-\pi\cos x-\frac{1}{2}\sin x+2\sum_{n=2}^\infty
@@ -261,22 +261,20 @@ $F(x)=\dst-\pi\cos x-\frac{1}{2}\sin x+2\sum_{n=2}^\infty
 
 \answer{11.2.22}
 $F(x)=\dst1-\frac{1}{2}\cos x-\pi\sin x-2\sum_{n=2}^\infty
-{(-1)^n\over n^2-1}\cos nx$
+\frac{(-1)^n}{n^2-1}\cos nx$
 
 \answer{11.2.23}
 $F(x)=-\dst\frac{2\sin k\pi}{\pi}\sum_{n=1}^\infty(-1)^n\frac{n}{n^2-k^2}\sin nx$
 
 \answer{11.2.24}
-$F(x)=\dst{\sin
-k\pi\over\pi}\left[\frac{1}{k}-2k\sum_{n=1}^\infty{(-1)^n\over
-n^2-k^2}\cos nx\right]$
+$F(x)=\dst\frac{\sin
+k\pi}{\pi}\left[\frac{1}{k}-2k\sum_{n=1}^\infty\frac{(-1)^n}{n^2-k^2}\cos nx\right]$
 
 
 \sectionanswers{11.3}
 
 \answer{11.3.1}
-$C(x)=\dst\frac{L^2}{3}+\frac{4L^2}{\pi^2}\sum_{n=1}^\infty{(-1)^n\over
-n^2}\cos\frac{n\pi x}{L}$
+$C(x)=\dst\frac{L^2}{3}+\frac{4L^2}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^n}{n^2}\cos\frac{n\pi x}{L}$
 
 \answer{11.3.2}
 $C(x)=\dst\frac{1}{2}+\frac{4}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
@@ -288,15 +286,14 @@ $C(x)=\dst-\frac{2L^2}{3}+\frac{4L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{n^2}\cos\f
 
 \answer{11.3.4}
 $C(x)=\dst\frac{1-\cos k\pi}{k\pi}-\frac{2k}{\pi}\sum_{n=1}^\infty
-{[1-(-1)^n\cos k\pi]\over n^2-k^2}\cos nx$.
+\frac{[1-(-1)^n\cos k\pi]}{n^2-k^2}\cos nx$.
 
 \answer{11.3.5}
  $C(x)=\dst\frac{1}{2}-\frac{2}{\pi}\sum_{n=1}^\infty
-{(-1)^n\over2n-1}\cos{(2n-1)\pi x\over L}$
+\frac{(-1)^n}{2n-1}\cos\frac{(2n-1)\pi x}{L}$
 
 \answer{11.3.6}
-$C(x)=\dst-\frac{2L^2}{3}+\frac{4L^2}{\pi^2}\sum_{n=1}^\infty{(-1)^n\over
-n^2}\cos\frac{n\pi x}{L}$
+$C(x)=\dst-\frac{2L^2}{3}+\frac{4L^2}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^n}{n^2}\cos\frac{n\pi x}{L}$
 
 
 \answer{11.3.7}
@@ -306,7 +303,7 @@ n\pi x$
 
 \answer{11.3.8}
 $C(x)=\dst\frac{e^\pi-1}{\pi}+\frac{2}{\pi}\sum_{n=1}^\infty
-{[(-1)^ne^\pi-1]\over(n^2+1)}\cos nx$
+\frac{[(-1)^ne^\pi-1]}{(n^2+1)}\cos nx$
 
 
 \answer{11.3.9}
@@ -317,7 +314,7 @@ $C(x)=\dst-\frac{2L^2}{3}+\frac{4L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{n^2}\cos\f
 
 \answer{11.3.11}
 $S(x)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)}
-\sin{(2n-1)\pi x\over L}$
+\sin\frac{(2n-1)\pi x}{L}$
 
 
 \answer{11.3.12}
@@ -336,8 +333,8 @@ $S(x)=\dst\frac{2}{\pi}\sum_{n=1}^\infty\frac{1}{n}
 
 
 \answer{11.3.15}
-$S(x)=\dst\frac{4L}{\pi^2}\sum_{n=1}^\infty{(-1)^{n+1}\over(2n-1)^2}
-\sin{(2n-1)\pi x\over L}$
+$S(x)=\dst\frac{4L}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^{n+1}}{(2n-1)^2}
+\sin\frac{(2n-1)\pi x}{L}$
 
 
 \answer{11.3.16}
@@ -347,63 +344,63 @@ x-\frac{16}{\pi}\sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}\sin2nx$
 
 \answer{11.3.17}
 $S(x)=\dst-\frac{2}{\pi}\sum_{n=1}^\infty
-{n[(-1)^ne^\pi-1]\over(n^2+1)}\sin nx$
+\frac{n[(-1)^ne^\pi-1]}{(n^2+1)}\sin nx$
 
 \answer{11.3.18}
-$C_M(x)=\dst-\frac{4}{\pi}\sum_{n=1}^\infty{(-1)^n\over2n-1}
-\cos{(2n-1)\pi x\over2L}$
+$C_M(x)=\dst-\frac{4}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}
+\cos\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.19}
-$C_M(x)=\dst-\frac{4L^2}{\pi}\sum_{n=1}^\infty{(-1)^n\over2n-1}\left[
-1-\frac{8}{(2n-1)^2\pi^2}\right]\cos{(2n-1)\pi x\over2L}$
+$C_M(x)=\dst-\frac{4L^2}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}\left[
+1-\frac{8}{(2n-1)^2\pi^2}\right]\cos\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.20}
 $C_M(x)=
 -\dst\frac{4}{\pi}\sum_{n=1}^\infty\left[(-1)^n+\frac{2}{(2n-1)\pi}\right]
-\cos{(2n-1)\pi x\over2}$.
+\cos\frac{(2n-1)\pi x}{2}$.
 
 \answer{11.3.21}
-$C_M(x)=\dst-\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{2n-1}\cos{(2n+1)\pi\over4}
-\cos{(2n-1)\pi x\over 2L}$
+$C_M(x)=\dst-\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{2n-1}\cos\frac{(2n+1)\pi}{4}
+\cos\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.22}
  $C_M(x)=
 \dst\frac{4}{\pi}\sum_{n=1}^\infty(-1)^n\frac{2n-1}{(2n-3)(2n+1)}
-\cos{(2n-1) x\over2}$
+\cos\frac{(2n-1) x}{2}$
 
 \answer{11.3.23}
 $C_M(x)=
 -\dst\frac{8}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-3)(2n+1)}
-\cos{(2n-1) x\over2}$
+\cos\frac{(2n-1) x}{2}$
 
 
 \answer{11.3.24}
 $C_M(x)=-\dst\frac{8L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
-1+{4(-1)^n\over(2n-1)\pi}\right]\cos{(2n-1)\pi
-x\over2L}$
+1+\frac{4(-1)^n}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
+x}{2L}$
 
 
 \answer{11.3.25}
 $S_M(x)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)}
-\sin{(2n-1)\pi x\over2L}$
+\sin\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.26}
 $S_M(x)=\dst-\frac{16L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
-(-1)^n+\frac{2}{(2n-1)\pi}\right]\sin{(2n-1)\pi x\over2L}$
+(-1)^n+\frac{2}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.27}
 $S_M(x)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{2n-1}
-\left[1-\cos{(2n-1)\pi)\over4}\right]
-\sin{(2n-1)\pi x\over 2L}$
+\left[1-\cos\frac{(2n-1)\pi)}{4}\right]
+\sin\frac{(2n-1)\pi x}{ 2L}$
 
 \answer{11.3.28}
-$S_M(x)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{2n-1}{(2n-3)(2n+1)}\sin{(2n-1)
-x\over2}$
+$S_M(x)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{2n-1}{(2n-3)(2n+1)}\sin\frac{(2n-1)
+x}{2}$
 
 
 \answer{11.3.29}
-$S_M(x)=\dst\frac{8}{\pi}\sum_{n=1}^\infty{(-1)^n\over(2n-3)(2n+1)}\sin{(2n-1)
-x\over2}$
+$S_M(x)=\dst\frac{8}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-3)(2n+1)}\sin\frac{(2n-1)
+x}{2}$
 
 
 
@@ -411,19 +408,19 @@ x\over2}$
 
 \answer{11.3.30}
 $S_M(x)=\dst\frac{8L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
-(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin{(2n-1)\pi
-x\over2L}$
+(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
+x}{2L}$
 
 \answer{11.3.31}
-$C(x)=\dst-\frac{7L^4}{5}-\frac{144L^4}{\pi^4}\sum_{n=1}^\infty{(-1)^n\over
+$C(x)=\dst-\frac{7L^4}{5}-\frac{144L^4}{\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{
 n^4}\cos\frac{n\pi x}{L}$
 
 \answer{11.3.32}
-$C(x)=\dst-\frac{2L^4}{5}-\frac{48L^4}{\pi^4}\sum_{n=1}^\infty{1+(-1)^n2\over
+$C(x)=\dst-\frac{2L^4}{5}-\frac{48L^4}{\pi^4}\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^4}\cos\frac{n\pi x}{L}$
 
 \answer{11.3.33}
-$C(x)=\dst\frac{3L^4}{5}-\frac{48L^4}{\pi^4}\sum_{n=1}^\infty{2+(-1)^n\over
+$C(x)=\dst\frac{3L^4}{5}-\frac{48L^4}{\pi^4}\sum_{n=1}^\infty\frac{2+(-1)^n}{
 n^4}\cos\frac{n\pi x}{L}$
 
 \answer{11.3.34}
@@ -431,93 +428,93 @@ $\dst C(x)=\frac{L^4}{30}-\frac{3L^4}{\pi^4}\sum_{n=1}^\infty\frac{1}{n^4}\cos\f
 
 \answer{11.3.36}
 $S(x)=\dst\frac{8L^2}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}
-\sin{(2n-1)\pi x\over L}$
+\sin\frac{(2n-1)\pi x}{L}$
 
 
 \answer{11.3.37}
-$S(x)=\dst-\frac{4L^3}{\pi^3}\sum_{n=1}^\infty{(1+(-1)^n2)\over n^3}
+$S(x)=\dst-\frac{4L^3}{\pi^3}\sum_{n=1}^\infty\frac{(1+(-1)^n2)}{n^3}
 \sin\frac{n\pi x}{L}$
 
 \answer{11.3.38}
-$S(x)=\dst-\frac{12L^3}{\pi^3}\sum_{n=1}^\infty{(-1)^n\over n^3}
+$S(x)=\dst-\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{n^3}
 \sin\frac{n\pi x}{L}$
 
 
 \answer{11.3.39}
-$S(x)=\dst\frac{96L^4}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}\sin{(2n-1)\pi
-x\over L}$
+$S(x)=\dst\frac{96L^4}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}\sin\frac{(2n-1)\pi
+x}{L}$
 
 \answer{11.3.40}
-$S(x)=\dst-\frac{720L^5}{\pi^5}\sum_{n=1}^\infty{(-1)^n\over n^5}\sin{n\pi
-x\over L}$
+$S(x)=\dst-\frac{720L^5}{\pi^5}\sum_{n=1}^\infty\frac{(-1)^n}{n^5}\sin\frac{n\pi
+x}{L}$
 
 \answer{11.3.41}
-$S(x)=\dst-\frac{240L^5}{\pi^5}\sum_{n=1}^\infty{1+(-1)^n2\over n^5}\sin{n\pi
-x\over L}$
+$S(x)=\dst-\frac{240L^5}{\pi^5}\sum_{n=1}^\infty\frac{1+(-1)^n2}{n^5}\sin\frac{n\pi
+x}{L}$
 
 \answer{11.3.43}
 $C_M(x)=-\dst\frac{64L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n+\frac{3}{(2n-1)\pi}\right]\cos{(2n-1)\pi
-x\over2L}$
+(-1)^n+\frac{3}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
+x}{2L}$
 
 
 \answer{11.3.44}
 $C_M(x)=-\dst
-\frac{32L^2}{\pi^3}\sum_{n=1}^\infty{(-1)^n\over
-(2n-1)^3}\cos{(2n-1)\pi x\over2L}$
+\frac{32L^2}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
+(2n-1)^3}\cos\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.45}
 $C_M(x)=-\dst\frac{96L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n+\frac{2}{(2n-1)\pi}\right]\cos{(2n-1)\pi
-x\over2L}$
+(-1)^n+\frac{2}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
+x}{2L}$
 
 \answer{11.3.46}
 $C_M(x)=\dst\frac{96L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos{(2n-1)\pi
-x\over2L}$
+(-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
+x}{2L}$
 
 \answer{11.3.47}
 $C_M(x)=\dst\frac{96L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n5+\frac{8}{(2n-1)\pi}\right]\cos{(2n-1)\pi
-x\over2L}$
+(-1)^n5+\frac{8}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
+x}{2L}$
 
 \answer{11.3.48}
 $C_M(x)=-\dst\frac{384L^4}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-1+{(-1)^n4\over(2n-1)\pi}\right]\cos{(2n-1)\pi
-x\over2L}$
+1+\frac{(-1)^n4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
+x}{2L}$
 
 \answer{11.3.49}
 $C_M(x)=-\dst\frac{768L^4}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-1+{(-1)^n2\over(2n-1)\pi}\right]\cos{(2n-1)\pi
-x\over2L}$
+1+\frac{(-1)^n2}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
+x}{2L}$
 
 \answer{11.3.51}
 $S_M(x)=\dst
-\frac{32L^2}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\sin{(2n-1)\pi x\over2L}$
+\frac{32L^2}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\sin\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.52}
 $S_M(x)
 =\dst-\frac{96L^3}{\pi^3}\sum_{n=1}^\infty
-\frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin{(2n-1)\pi x
-\over2L}$
+\frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x
+}{2L}$
 
 \answer{11.3.53}
 $S_M(x)
 =\dst\frac{96L^3}{\pi^3}\sum_{n=1}^\infty
-\frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{2}{(2n-1)\pi}\right]\sin{(2n-1)\pi
-x\over2L}$
+\frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{2}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
+x}{2L}$
 
 \answer{11.3.54}
-$S_M(x)=\dst\frac{192L^3}{\pi^4}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^4}
-\sin{(2n-1)\pi x\over2L}$
+$S_M(x)=\dst\frac{192L^3}{\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
+\sin\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.55}
 $S_M(x)=\dst\frac{1536L^4}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
-\left[(-1)^n+\frac{3}{(2n-1)\pi}\right]\sin{(2n-1)\pi x\over2L}$
+\left[(-1)^n+\frac{3}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2L}$
 
 \answer{11.3.56}
 $S_M(x)=\dst\frac{384L^4}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
-\left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin{(2n-1)\pi x\over2L}$
+\left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2L}$
 
 
 \sectionanswers{12.1}
@@ -529,7 +526,7 @@ e^{-(2n-1)^2\pi^2t}\sin(2n-1)\pi x$
 
 \answer{12.1.9}
 $u(x,t)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)}
-e^{-9(2n-1)^2\pi^2t/16}\sin{(2n-1)\pi x\over 4}$
+e^{-9(2n-1)^2\pi^2t/16}\sin\frac{(2n-1)\pi x}{4}$
 
 
 \answer{12.1.10}
@@ -539,22 +536,20 @@ x-\frac{16}{\pi}\sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}e^{-12n^2t}\sin2nx$
 
 \answer{12.1.11}
 $u(x,t)=\dst-\frac{32}{\pi^3}\sum_{n=1}^\infty
-{(1+(-1)^n2)\over n^3}
+\frac{(1+(-1)^n2)}{n^3}
 e^{-9n^2\pi^2t/4}\sin\frac{n\pi x}{2}$
 
 \answer{12.1.12}
-$u(x,t)=\dst-\frac{324}{\pi^3}\sum_{n=1}^\infty{(-1)^n\over
-n^3}
+$u(x,t)=\dst-\frac{324}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{n^3}
 e^{-4n^2\pi^2t/9}\sin\frac{n\pi x}{3}$
 
 \answer{12.1.13}
-$u(x,t)=\dst\frac{8}{\pi^2}\sum_{n=1}^\infty{(-1)^{n+1}\over(2n-1)^2}
-e^{-(2n-1)^2\pi^2t}\sin{(2n-1)\pi x\over 2}$
+$u(x,t)=\dst\frac{8}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^{n+1}}{(2n-1)^2}
+e^{-(2n-1)^2\pi^2t}\sin\frac{(2n-1)\pi x}{2}$
 
 
 \answer{12.1.14}
-$u(x,t)=\dst-\frac{720}{\pi^5}\sum_{n=1}^\infty{(-1)^n\over
-n^5}e^{-7n^2\pi^2t}\sin n\pi x$
+$u(x,t)=\dst-\frac{720}{\pi^5}\sum_{n=1}^\infty\frac{(-1)^n}{n^5}e^{-7n^2\pi^2t}\sin n\pi x$
 
 \answer{12.1.15}
 $u(x,t)=\dst\frac{96}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}
@@ -562,12 +557,10 @@ e^{-5(2n-1)^2\pi^2t}\sin(2n-1)\pi x$
 
 
 \answer{12.1.16}
-$u(x,t)=\dst-\frac{240}{\pi^5}\sum_{n=1}^\infty{1+(-1)^n2\over
-n^5}e^{-2n^2\pi^2t}\sin n\pi x$.
+$u(x,t)=\dst-\frac{240}{\pi^5}\sum_{n=1}^\infty\frac{1+(-1)^n2}{n^5}e^{-2n^2\pi^2t}\sin n\pi x$.
 
 \answer{12.1.17}
-$u(x,t)=\dst\frac{16}{3}+\frac{64}{\pi^2}\sum_{n=1}^\infty{(-1)^n\over
-n^2} e^{-9\pi^2n^2t/16}\cos\frac{n\pi x}{4}$
+$u(x,t)=\dst\frac{16}{3}+\frac{64}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^n}{n^2} e^{-9\pi^2n^2t/16}\cos\frac{n\pi x}{4}$
 
 \answer{12.1.18}
 $u(x,t)=\dst-\frac{8}{3}+\frac{16}{\pi^2}\sum_{n=1}^\infty\frac{1}{n^2}e^{-n^2\pi^2t}\cos\frac{n\pi x}{2}$
@@ -577,19 +570,16 @@ $u(x,t)=\dst\frac{1}{6}-\frac{1}{\pi^2}\sum_{n=1}^\infty\frac{1}{n^2}e^{-36n^2\p
 
 
 \answer{12.1.20}
-$u(x,t)=\dst4-\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}e^{-3(2n-1)^2\pi^2t/4}\cos{(2n-1)\pi x\over 2}$
+$u(x,t)=\dst4-\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}e^{-3(2n-1)^2\pi^2t/4}\cos\frac{(2n-1)\pi x}{2}$
 
 \answer{12.1.21}
-$u(x,y)=\dst-\frac{28}{5}-\frac{576}{\pi^4}\sum_{n=1}^\infty{(-1)^n\over
-n^4}e^{-5n^2\pi^2t/2}\cos\frac{n\pi x}{\sqrt2}$
+$u(x,y)=\dst-\frac{28}{5}-\frac{576}{\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{n^4}e^{-5n^2\pi^2t/2}\cos\frac{n\pi x}{\sqrt2}$
 
 \answer{12.1.22}
-$u(x,t)=\dst-\frac{2}{5}-\frac{48}{\pi^4}\sum_{n=1}^\infty{1+(-1)^n2\over
-n^4}e^{-3n^2\pi^2t}\cos n\pi x$
+$u(x,t)=\dst-\frac{2}{5}-\frac{48}{\pi^4}\sum_{n=1}^\infty\frac{1+(-1)^n2}{n^4}e^{-3n^2\pi^2t}\cos n\pi x$
 
 \answer{12.1.23}
-$u(x,t)=\dst\frac{3}{5}-\frac{48}{\pi^4}\sum_{n=1}^\infty{2+(-1)^n\over
-n^4}e^{-n^2\pi^2t}\cos n\pi x$
+$u(x,t)=\dst\frac{3}{5}-\frac{48}{\pi^4}\sum_{n=1}^\infty\frac{2+(-1)^n}{n^4}e^{-n^2\pi^2t}\cos n\pi x$
 
 \answer{12.1.24}
 $\dst u(x,t)=\frac{\pi^4}{30}-3\sum_{n=1}^\infty\frac{1}{n^4}e^{-4n^2t}\cos2nx$
@@ -597,24 +587,23 @@ $\dst u(x,t)=\frac{\pi^4}{30}-3\sum_{n=1}^\infty\frac{1}{n^4}e^{-4n^2t}\cos2nx$
 
 \answer{12.1.25}
 $u(x,t)=\dst{\frac{8}{\pi} \sum^\infty_{n=1}
-{(-1)^n\over(2n+1)(2n-3)} e^{-(2n-1)^2\pi^2 t/4}\sin{(2n-1)\pi x\over
+\frac{(-1)^n}{(2n+1)(2n-3)} e^{-(2n-1)^2\pi^2 t/4}\sin\frac{(2n-1)\pi x}{
 2}}$
 
 
 \answer{12.1.26}
 $u(x,t)=\dst8\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
-(-1)^n+\frac{4}{(2n-1)\pi}\right]e^{-3(2n-1)^2t/4}\sin{(2n-1) x\over
-2}$
+(-1)^n+\frac{4}{(2n-1)\pi}\right]e^{-3(2n-1)^2t/4}\sin\frac{(2n-1) x}{2}$
 
 \answer{12.1.27}
 $u(x,t)=\dst
-\frac{128}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}e^{-5(2n-1)^2t/16}\sin{(2n-1)\pi x\over4}$
+\frac{128}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}e^{-5(2n-1)^2t/16}\sin\frac{(2n-1)\pi x}{4}$
 
 \answer{12.1.28}
 $u(x,t)
 =\dst-\frac{96}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
-e^{-(2n-1)^2\pi^2t/4}\sin{(2n-1)\pi x\over2}$
+e^{-(2n-1)^2\pi^2t/4}\sin\frac{(2n-1)\pi x}{2}$
 
 
 
@@ -622,84 +611,84 @@ e^{-(2n-1)^2\pi^2t/4}\sin{(2n-1)\pi x\over2}$
 $u(x,t)
 =\dst\frac{96}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{2}{(2n-1)\pi}\right]
-e^{-(2n-1)^2\pi^2t/4}\sin{(2n-1)\pi x\over2}$
+e^{-(2n-1)^2\pi^2t/4}\sin\frac{(2n-1)\pi x}{2}$
 
 
 \answer{12.1.30}
-$u(x,t)=\dst\frac{192}{\pi^4}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^4}
-e^{-(2n-1)^2\pi^2t/4}\sin{(2n-1)\pi x\over2}$
+$u(x,t)=\dst\frac{192}{\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
+e^{-(2n-1)^2\pi^2t/4}\sin\frac{(2n-1)\pi x}{2}$
 
 
 \answer{12.1.31}
 $u(x,t)=\dst\frac{1536}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{3}{(2n-1)\pi}\right]
-e^{-(2n-1)^2\pi^2t/4}\sin{(2n-1)\pi x\over2}$
+e^{-(2n-1)^2\pi^2t/4}\sin\frac{(2n-1)\pi x}{2}$
 
 
 
 \answer{12.1.32}
 $u(x,t)=\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]
-e^{-(2n-1)^2\pi^2t/4}\sin{(2n-1)\pi x\over2}$
+e^{-(2n-1)^2\pi^2t/4}\sin\frac{(2n-1)\pi x}{2}$
 
 
 
 \answer{12.1.33}
-$u(x,t)=-\dst64\sum_{n=1}^\infty{e^{-3(2n-1)^2t/4}\over(2n-1)^3}\left[
-(-1)^n+\frac{3}{(2n-1)\pi}\right]\cos{(2n-1)
-x\over2}$
+$u(x,t)=-\dst64\sum_{n=1}^\infty\frac{e^{-3(2n-1)^2t/4}}{(2n-1)^3}\left[
+(-1)^n+\frac{3}{(2n-1)\pi}\right]\cos\frac{(2n-1)
+x}{2}$
 
 
 \answer{12.1.34}
 $u(x,t)=-\dst\frac{16}{\pi} \sum^\infty_{n=1}
-{(-1)^n\over2n-1} e^{-(2n-1)^2t}\cos{(2n-1)x\over4}$
+\frac{(-1)^n}{2n-1} e^{-(2n-1)^2t}\cos\frac{(2n-1)x}{4}$
 
 \answer{12.1.35}
-$u(x,t)=\dst-\frac{64}{\pi}\sum_{n=1}^\infty{(-1)^n\over2n-1}\left[
-1-\frac{8}{(2n-1)^2\pi^2}\right]e^{-9(2n-1)^2\pi^2 t/64}\cos{(2n-1)\pi
-x\over8}$
+$u(x,t)=\dst-\frac{64}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}\left[
+1-\frac{8}{(2n-1)^2\pi^2}\right]e^{-9(2n-1)^2\pi^2 t/64}\cos\frac{(2n-1)\pi
+x}{8}$
 
 \answer{12.1.36}
 $u(x,t)=
 \dst\frac{8}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 e^{-3(2n-1)^2\pi^2t/4}
-\cos{(2n-1)\pi x\over2}$
+\cos\frac{(2n-1)\pi x}{2}$
 
 
 \answer{12.1.37}
 $u(x,t)=-\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n+\frac{2}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos{(2n-1)\pi
-x\over2}$
+(-1)^n+\frac{2}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.1.38}
 $u(x,t)=-\dst
-\frac{32}{\pi}\sum_{n=1}^\infty{(-1)^n\over
-(2n-1)^3}e^{-7(2n-1)^2t/4}\cos{(2n-1) x\over2}$
+\frac{32}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{
+(2n-1)^3}e^{-7(2n-1)^2t/4}\cos\frac{(2n-1) x}{2}$
 
 \answer{12.1.39}
 $u(x,t)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n5+\frac{8}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos{(2n-1)\pi
-x\over2}$
+(-1)^n5+\frac{8}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.1.40}
 $u(x,t)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n3+\frac{4}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos{(2n-1)\pi
-x\over2}$
+(-1)^n3+\frac{4}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.1.41}
 $u(x,t)=-\dst\frac{768}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-1+{(-1)^n2\over(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos{(2n-1)\pi
-x\over2}$
+1+\frac{(-1)^n2}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.1.42}
 $u(x,t)=-\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-1+{(-1)^n4\over(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos{(2n-1)\pi
-x\over2}$
+1+\frac{(-1)^n4}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos\frac{(2n-1)\pi
+x}{2}$
 
 
 \answer{12.1.43}
 $u(x,t)=\dst\frac{1}{2}-\frac{2}{\pi}\sum_{n=1}^\infty
-{(-1)^n\over2n-1}e^{-(2n-1)^2\pi^2a^2t/L^2}\cos{(2n-1)\pi x\over L}$
+\frac{(-1)^n}{2n-1}e^{-(2n-1)^2\pi^2a^2t/L^2}\cos\frac{(2n-1)\pi x}{L}$
 
 \answer{12.1.44}
 $u(x,t)=\dst\frac{2}{\pi}\sum_{n=1}^\infty\frac{1}{n}
@@ -707,51 +696,49 @@ $u(x,t)=\dst\frac{2}{\pi}\sum_{n=1}^\infty\frac{1}{n}
 
 
 \answer{12.1.45}
-$u(x,t)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{2n-1}\sin{(2n-1)\pi\over4}
-e^{-(2n-1)^2\pi^2a^2t/4L^2}\cos{(2n-1)\pi x\over 2L}$
+$u(x,t)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{2n-1}\sin\frac{(2n-1)\pi}{4}
+e^{-(2n-1)^2\pi^2a^2t/4L^2}\cos\frac{(2n-1)\pi x}{2L}$
 
 \answer{12.1.46}
 $u(x,t)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{2n-1}
-\left[1-\cos{(2n-1)\pi)\over4}\right]
-e^{-(2n-1)^2\pi^2a^2t/4L^2}\sin{(2n-1)\pi x\over 2L}$
+\left[1-\cos\frac{(2n-1)\pi)}{4}\right]
+e^{-(2n-1)^2\pi^2a^2t/4L^2}\sin\frac{(2n-1)\pi x}{2L}$
 
 \answer{12.1.48}
-$u(x,t)=1-x+x^3+\dst\frac{4}{\pi}\sum_{n=1}^\infty{e^{-9\pi^2(2n-1)^2t/16}\over(2n-1)}
-\sin{(2n-1)\pi x\over 4}$
+$u(x,t)=1-x+x^3+\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{e^{-9\pi^2(2n-1)^2t/16}}{(2n-1)}
+\sin\frac{(2n-1)\pi x}{4}$
 
 
 \answer{12.1.49}
 $u(x,t)=\dst1+x+x^2
 -\dst\frac{8}{\pi^3}\sum_{n=1}^\infty
-{e^{-(2n-1)^2\pi^2t}\over(2n-1)^3}
+\frac{e^{-(2n-1)^2\pi^2t}}{(2n-1)^3}
 \sin(2n-1)\pi x$
 
 \answer{12.1.50}
 $u(x,t)=-1-x+x^3+
 \dst\frac{8}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 e^{-3(2n-1)^2\pi^2t/4}
-\cos{(2n-1)\pi x\over2}$
+\cos\frac{(2n-1)\pi x}{2}$
 
 \answer{12.1.51}
-$u(x,t)=x^2-x-2\dst-\frac{64}{\pi}\sum_{n=1}^\infty{(-1)^n\over2n-1}\left[
-1-\frac{8}{(2n-1)^2\pi^2}\right]e^{-9(2n-1)^2\pi^2 t/64}\cos{(2n-1)\pi
-x\over8}$
+$u(x,t)=x^2-x-2\dst-\frac{64}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}\left[
+1-\frac{8}{(2n-1)^2\pi^2}\right]e^{-9(2n-1)^2\pi^2 t/64}\cos\frac{(2n-1)\pi
+x}{8}$
 
 \answer{12.1.52}
 $u(x,t)=\sin\pi x+\dst{\frac{8}{\pi} \sum^\infty_{n=1}
-{(-1)^n\over(2n+1)(2n-3)} e^{-(2n-1)^2\pi^2 t/4}\sin{(2n-1)\pi x\over
-2}}$
+\frac{(-1)^n}{(2n+1)(2n-3)} e^{-(2n-1)^2\pi^2 t/4}\sin\frac{(2n-1)\pi x}{2}}$
 
 \answer{12.1.53}
-$u(x,t)=x^3-x+3+\dst\frac{32}{\pi^3}\sum_{n=1}^\infty{e^{-(2n-1)^2\pi^2t/4}\over
-(2n-1)^3}\sin{(2n-1)\pi x\over2}$
+$u(x,t)=x^3-x+3+\dst\frac{32}{\pi^3}\sum_{n=1}^\infty\frac{e^{-(2n-1)^2\pi^2t/4}}{(2n-1)^3}\sin\frac{(2n-1)\pi x}{2}$
 
 
 \sectionanswers{12.2}
 
 \answer{12.2.1}
 $u(x,t)=\dst\frac{4}{3\pi^3}\sum_{n=1}^\infty
-{(-1)^{n+1}\over(2n-1)^3}\sin3(2n-1)\pi t\sin(2n-1)\pi x$
+\frac{(-1)^{n+1}}{(2n-1)^3}\sin3(2n-1)\pi t\sin(2n-1)\pi x$
 
 \answer{12.2.2}
 $u(x,t)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}
@@ -759,7 +746,7 @@ $u(x,t)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}
 
 
 \answer{12.2.3}
-$u(x,t)=\dst-\frac{4}{\pi^3}\sum_{n=1}^\infty{(1+(-1)^n2)\over n^3}
+$u(x,t)=\dst-\frac{4}{\pi^3}\sum_{n=1}^\infty\frac{(1+(-1)^n2)}{n^3}
 \cos n\sqrt7\,\pi t\,\sin n\pi x$
 
 \answer{12.2.4}
@@ -767,21 +754,18 @@ $u(x,t)=\dst\frac{8}{3\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \sin3(2n-1)\pi t\sin(2n-1)\pi x$
 
 \answer{12.2.5}
-$u(x,t)=\dst-\frac{4}{\sqrt7\,\pi^4}\sum_{n=1}^\infty{(1+(-1)^n2)\over
-n^4}
+$u(x,t)=\dst-\frac{4}{\sqrt7\,\pi^4}\sum_{n=1}^\infty\frac{(1+(-1)^n2)}{n^4}
 \sin n\sqrt7\,\pi t\,\sin n\pi x$
 
 \answer{12.2.6}
-$u(x,t)=\dst\frac{324}{\pi^3}\sum_{n=1}^\infty{(-1)^n\over
-n^3}\cos\frac{8n\pi t}{3}\sin\frac{n\pi x}{3}$
+$u(x,t)=\dst\frac{324}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{n^3}\cos\frac{8n\pi t}{3}\sin\frac{n\pi x}{3}$
 
 \answer{12.2.7}
 $u(x,t)=\dst\frac{96}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}
 \cos2(2n-1)\pi t\sin(2n-1)\pi x$
 
 \answer{12.2.8}
-$u(x,t)=\dst\frac{243}{2\pi^4}\sum_{n=1}^\infty{(-1)^n\over
-n^4}\sin\frac{8n\pi t}{3}\sin\frac{n\pi x}{3}$
+$u(x,t)=\dst\frac{243}{2\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{n^4}\sin\frac{8n\pi t}{3}\sin\frac{n\pi x}{3}$
 
 
 \answer{12.2.9}
@@ -796,7 +780,7 @@ $u(x,t)=\dst\frac{\pi}{2}\cos\sqrt{5}\,t\sin x-\frac{16}{\pi}
 \sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}\cos2n\sqrt5\,t\sin 2nx$
 
 \answer{12.2.11}
-$u(x,t)=\dst-\frac{240}{\pi^5}\sum_{n=1}^\infty{1+(-1)^n2\over n^5}
+$u(x,t)=\dst-\frac{240}{\pi^5}\sum_{n=1}^\infty\frac{1+(-1)^n2}{n^5}
 \cos n\pi t\sin n\pi x$
 
 
@@ -807,17 +791,17 @@ $u(x,t)=\dst\frac{\pi}{2\sqrt5}\sin\sqrt{5}\,t\sin x-\frac{8}{\pi\sqrt5}
 
 
 \answer{12.2.13}
-$u(x,t)=\dst-\frac{240}{\pi^6}\sum_{n=1}^\infty{1+(-1)^n2\over n^6}
+$u(x,t)=\dst-\frac{240}{\pi^6}\sum_{n=1}^\infty\frac{1+(-1)^n2}{n^6}
 \sin n\pi t\sin n\pi x$
 
 
 \answer{12.2.14}
-$u(x,t)=\dst-\frac{720}{\pi^5}\sum_{n=1}^\infty{(-1)^n\over n^5}
+$u(x,t)=\dst-\frac{720}{\pi^5}\sum_{n=1}^\infty\frac{(-1)^n}{n^5}
 \cos3n\pi t\sin n\pi x$
 
 
 \answer{12.2.15}
-$u(x,t)=\dst-\frac{240}{\pi^6}\sum_{n=1}^\infty{(-1)^n\over n^6}
+$u(x,t)=\dst-\frac{240}{\pi^6}\sum_{n=1}^\infty\frac{(-1)^n}{n^6}
 \sin3n\pi t\sin n\pi x$
 
 
@@ -829,78 +813,76 @@ $u(x,t)=\dst-\frac{240}{\pi^6}\sum_{n=1}^\infty{(-1)^n\over n^6}
 
 \answer{12.2.18}
 $u(x,t)=-\dst
-\frac{128}{\pi^3}\sum_{n=1}^\infty{(-1)^n\over
-(2n-1)^3}\cos{3(2n-1)\pi t\over 4}\,\cos{(2n-1)\pi x\over4}$
+\frac{128}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^3}\cos\frac{3(2n-1)\pi t}{4}\,\cos\frac{(2n-1)\pi x}{4}$
 
 
 \answer{12.2.19}
 $u(x,t)=-\dst\frac{64}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n+\frac{3}{(2n-1)\pi}\right]\cos(2n-1)\pi t\,\cos{(2n-1)\pi
-x\over2}$
+(-1)^n+\frac{3}{(2n-1)\pi}\right]\cos(2n-1)\pi t\,\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.2.20}
 $u(x,t)=-\dst
-\frac{512}{3\pi^4}\sum_{n=1}^\infty{(-1)^n\over
-(2n-1)^4}\sin{3(2n-1)\pi t\over 4}\,\cos{(2n-1)\pi x\over4}$
+\frac{512}{3\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}\sin\frac{3(2n-1)\pi t}{4}\,\cos\frac{(2n-1)\pi x}{4}$
 
 \answer{12.2.21}
 $u(x,t)=-\dst\frac{64}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-(-1)^n+\frac{3}{(2n-1)\pi}\right]\sin(2n-1)\pi t\,\cos{(2n-1)\pi
-x\over2}$
+(-1)^n+\frac{3}{(2n-1)\pi}\right]\sin(2n-1)\pi t\,\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.2.22}
 $u(x,t)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos{(2n-1)\sqrt5\,\pi
-t\over2}\cos{(2n-1)\pi x\over2}$
+(-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\sqrt5\,\pi
+t}{2}\cos\frac{(2n-1)\pi x}{2}$
 
 
 \answer{12.2.23}
 $u(x,t)=-\dst96\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n+\frac{2}{(2n-1)\pi}\right]\cos{(2n-1)\sqrt3\, t\over2}\cos{(2n-1)
-x\over2}$
+(-1)^n+\frac{2}{(2n-1)\pi}\right]\cos\frac{(2n-1)\sqrt3\, t}{2}\cos\frac{(2n-1)
+x}{2}$
 
 
 \answer{12.2.24}
 $u(x,t)=\dst\frac{192}{\pi^4\sqrt5}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-(-1)^n3+\frac{4}{(2n-1)\pi}\right]\sin{(2n-1)\sqrt5\,\pi
-t\over2}\cos{(2n-1)\pi x\over2}$
+(-1)^n3+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\sqrt5\,\pi
+t}{2}\cos\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.25}
 $u(x,t)=-\dst\frac{192}{\sqrt3}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-(-1)^n+\frac{2}{(2n-1)\pi}\right]\sin{(2n-1)\sqrt3 t\over2}\sin{(2n-1)
-x\over2}$
+(-1)^n+\frac{2}{(2n-1)\pi}\right]\sin\frac{(2n-1)\sqrt3 t}{2}\sin\frac{(2n-1)
+x}{2}$
 
 
 \answer{12.2.26}
 $u(x,t)=-\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-1+{(-1)^n4\over(2n-1)\pi}\right]\cos{3(2n-1)\pi t\over2}\cos{(2n-1)\pi
-x\over2}$
+1+\frac{(-1)^n4}{(2n-1)\pi}\right]\cos\frac{3(2n-1)\pi t}{2}\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.2.27}
 $u(x,t)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n5+\frac{8}{(2n-1)\pi}\right]\cos{(2n-1)\sqrt7\,\pi
-t\over2}\cos{(2n-1)\pi x\over2}$
+(-1)^n5+\frac{8}{(2n-1)\pi}\right]\cos\frac{(2n-1)\sqrt7\,\pi
+t}{2}\cos\frac{(2n-1)\pi x}{2}$
 
 
 \answer{12.2.28}
 $u(x,t)=-\dst\frac{768}{3\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}\left[
-1+{(-1)^n4\over(2n-1)\pi}\right]\sin{3(2n-1)\pi t\over2}\cos{(2n-1)\pi
-x\over2}$
+1+\frac{(-1)^n4}{(2n-1)\pi}\right]\sin\frac{3(2n-1)\pi t}{2}\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.2.29}
 $u(x,t)=\dst\frac{192}{\pi^4\sqrt7}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-(-1)^n5+\frac{8}{(2n-1)\pi}\right]\sin{(2n-1)\sqrt7\,\pi
-t\over2}\cos{(2n-1)\pi x\over2}$
+(-1)^n5+\frac{8}{(2n-1)\pi}\right]\sin\frac{(2n-1)\sqrt7\,\pi
+t}{2}\cos\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.30}
 $u(x,t)=-\dst\frac{768}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
-1+{(-1)^n2\over(2n-1)\pi}\right]\cos{(2n-1)\pi t\over2}\cos{(2n-1)\pi
-x\over2}$
+1+\frac{(-1)^n2}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi t}{2}\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.2.31}
 $u(x,t)=-\dst\frac{1536}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}\left[
-1+{(-1)^n2\over(2n-1)\pi}\right]\sin{(2n-1)\pi t\over2}\cos{(2n-1)\pi
-x\over2}$
+1+\frac{(-1)^n2}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi t}{2}\cos\frac{(2n-1)\pi
+x}{2}$
 
 \answer{12.2.32}
 $u(x,t)=\dst\frac{1}{2}[C_{M\!f}(x+at)+C_{M\!f}(x-at)]+
@@ -909,17 +891,17 @@ $u(x,t)=\dst\frac{1}{2}[C_{M\!f}(x+at)+C_{M\!f}(x-at)]+
 
 \answer{12.2.35}
 $u(x,t)=\dst
-\frac{32}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\cos4(2n-1)t\,\sin{(2n-1)x\over2}$
+\frac{32}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\cos4(2n-1)t\,\sin\frac{(2n-1)x}{2}$
 
 \answer{12.2.36}
 $u(x,t)
 =\dst-\frac{96}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
-\cos{3(2n-1)\pi t\over2}\sin{(2n-1)\pi x\over2}$
+\cos\frac{3(2n-1)\pi t}{2}\sin\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.37}
 $u(x,t)=\dst
-\frac{8}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\sin4(2n-1)t\,\sin{(2n-1)x\over2}$
+\frac{8}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\sin4(2n-1)t\,\sin\frac{(2n-1)x}{2}$
 
 
 
@@ -927,47 +909,47 @@ $u(x,t)=\dst
 $u(x,t)
 =\dst-\frac{64}{\pi^4}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^4}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
-\sin{3(2n-1)\pi t\over2}\sin{(2n-1)\pi x\over2}$
+\sin\frac{3(2n-1)\pi t}{2}\sin\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.39}
 $u(x,t)
 =\dst\frac{96}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{2}{(2n-1)\pi}\right]
-\cos{3(2n-1)\pi t\over2}
-\sin{(2n-1)\pi x\over2}$
+\cos\frac{3(2n-1)\pi t}{2}
+\sin\frac{(2n-1)\pi x}{2}$
 
 
 \answer{12.2.40}
-$u(x,t)=\dst\frac{192}{\pi}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^4}
-\cos{(2n-1)\sqrt3\,t\over2}\sin{(2n-1) x\over2}$
+$u(x,t)=\dst\frac{192}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
+\cos\frac{(2n-1)\sqrt3\,t}{2}\sin\frac{(2n-1) x}{2}$
 
 \answer{12.2.41}
 $u(x,t)
 =\dst\frac{64}{\pi^4}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^4}\left[1+(-1)^n\frac{2}{(2n-1)\pi}\right]
-\sin{3(2n-1)\pi t\over2}
-\sin{(2n-1)\pi x\over2}$
+\sin\frac{3(2n-1)\pi t}{2}
+\sin\frac{(2n-1)\pi x}{2}$
 
 
 \answer{12.2.42}
-$u(x,t)=\dst\frac{384}{\sqrt3\,\pi}\sum_{n=1}^\infty{(-1)^n\over(2n-1)^5}
-\sin{(2n-1)\sqrt3\,t\over2}\sin{(2n-1) x\over2}$
+$u(x,t)=\dst\frac{384}{\sqrt3\,\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^5}
+\sin\frac{(2n-1)\sqrt3\,t}{2}\sin\frac{(2n-1) x}{2}$
 
 
 \answer{12.2.43}
 $u(x,t)=\dst\frac{1536}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{3}{(2n-1)\pi}\right]
-\cos{(2n-1)\sqrt5\,\pi t\over2}\sin{(2n-1)\pi x\over2}$
+\cos\frac{(2n-1)\sqrt5\,\pi t}{2}\sin\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.44}
 $u(x,t)=\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\cos(2n-1)\pi
-t\sin{(2n-1)\pi x\over2}$
+t\sin\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.45}
 $u(x,t)=\dst\frac{3072}{\sqrt5\,\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}
 \left[(-1)^n+\frac{3}{(2n-1)\pi}\right]
-\sin{(2n-1)\sqrt5\,\pi t\over2}\sin{(2n-1)\pi x\over2}$
+\sin\frac{(2n-1)\sqrt5\,\pi t}{2}\sin\frac{(2n-1)\pi x}{2}$
 
 
 
@@ -975,7 +957,7 @@ $u(x,t)=\dst\frac{3072}{\sqrt5\,\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}
 \answer{12.2.46}
 $u(x,t)=\dst\frac{384}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin(2n-1)\pi
-t\sin{(2n-1)\pi x\over2}$
+t\sin\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.47}
 $\dst u(x,t)=\frac{1}{2}[S_{M\!f}(x+at)+S_{M\!f}(x-at)]+
@@ -983,47 +965,41 @@ $\dst u(x,t)=\frac{1}{2}[S_{M\!f}(x+at)+S_{M\!f}(x-at)]+
 
 
 \answer{12.2.50}
-$u(x,t)=\dst4-\frac{768}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\cos{\sqrt5(2n-1)\pi t\over2}\,\cos{(2n-1)\pi x\over 2}$
+$u(x,t)=\dst4-\frac{768}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\cos\frac{\sqrt5(2n-1)\pi t}{2}\,\cos\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.51}
-$u(x,t)=\dst4t-\frac{1536}{\sqrt5\,\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}\sin{\sqrt5(2n-1)\pi t\over2}\,\cos{(2n-1)\pi x\over 2}$
+$u(x,t)=\dst4t-\frac{1536}{\sqrt5\,\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}\sin\frac{\sqrt5(2n-1)\pi t}{2}\,\cos\frac{(2n-1)\pi x}{2}$
 
 \answer{12.2.52}
-$u(x,t)=\dst-\frac{2\pi^4}{5}-48\sum_{n=1}^\infty{1+(-1)^n2\over
-n^4}\cos2nt\cos nx$
+$u(x,t)=\dst-\frac{2\pi^4}{5}-48\sum_{n=1}^\infty\frac{1+(-1)^n2}{n^4}\cos2nt\cos nx$
 
 \answer{12.2.53}
-$u(x,t)=\dst-\frac{7}{5}-\frac{144}{\pi^4}\sum_{n=1}^\infty{(-1)^n\over
-n^4}\cos n\sqrt7\,\pi t\cos n\pi x$
+$u(x,t)=\dst-\frac{7}{5}-\frac{144}{\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{n^4}\cos n\sqrt7\,\pi t\cos n\pi x$
 
 \answer{12.2.54}
-$u(x,t)=\dst-\frac{2\pi^4t}{5}-24\sum_{n=1}^\infty{1+(-1)^n2\over
-n^5}\sin2n t\cos nx$
+$u(x,t)=\dst-\frac{2\pi^4t}{5}-24\sum_{n=1}^\infty\frac{1+(-1)^n2}{n^5}\sin2n t\cos nx$
 
 \answer{12.2.55}
-$u(x,t)=\dst-\frac{7t}{5}-\frac{144}{\pi^5\sqrt7}\sum_{n=1}^\infty{(-1)^n\over
-n^5}\sin n\sqrt7\,\pi t\cos n\pi x$
+$u(x,t)=\dst-\frac{7t}{5}-\frac{144}{\pi^5\sqrt7}\sum_{n=1}^\infty\frac{(-1)^n}{n^5}\sin n\sqrt7\,\pi t\cos n\pi x$
 
 \answer{12.2.56}
 $u(x,t)=\dst{\frac{\pi^4}{30}-3\sum_{n=1}^\infty\frac{1}{n^4}\cos8nt\cos2nx}$
 
 \answer{12.2.57}
-$u(x,t)=\dst\frac{3}{5}-\frac{48}{\pi^4}\sum_{n=1}^\infty{2+(-1)^n\over
-n^4}\cos n\pi t\cos n\pi x$
+$u(x,t)=\dst\frac{3}{5}-\frac{48}{\pi^4}\sum_{n=1}^\infty\frac{2+(-1)^n}{n^4}\cos n\pi t\cos n\pi x$
 
 \answer{12.2.58}
 $u(x,t)=\dst{\frac{\pi^4t}{30}-\frac{3}{8}\sum_{n=1}^\infty\frac{1}{n^5}\sin8nt\cos2nx}$
 
 \answer{12.2.59}
-$u(x,t)=\dst\frac{3t}{5}-\frac{48}{\pi^5}\sum_{n=1}^\infty{2+(-1)^n\over
-n^5}\sin n\pi t\cos n\pi x$
+$u(x,t)=\dst\frac{3t}{5}-\frac{48}{\pi^5}\sum_{n=1}^\infty\frac{2+(-1)^n}{n^5}\sin n\pi t\cos n\pi x$
 
 \answer{12.2.60}
 $u(x,t)=\frac{1}{2}[C_f(x+at)+C_f(x-at)]+
 \frac{1}{2a}\int_{x-at}^{x+at}C_g(\tau)\,d\tau$
 
 \answer{12.2.63}{\bf (c)}
-$u(x,t)=\dst{f(x+at)+f(x-at)\over2}+
+$u(x,t)=\dst\frac{f(x+at)+f(x-at)}{2}+
 \frac{1}{2a}\int_{x-at}^{x+at}g(u)\,du$
 
 \answer{12.2.64}
@@ -1045,98 +1021,94 @@ $u(x,t)=\dst x\sin x\cos at+at\cos x\sin at+\frac{\sin x\sin at}{a}$
 \sectionanswers{12.3}
 
 \answer{12.3.1}
-$u(x,y)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty{\sinh(2n-1)\pi(1-y)
-\over(2n-1)^3\sinh(2n-1)\pi}
+$u(x,y)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty\frac{\sinh(2n-1)\pi(1-y)
+}{(2n-1)^3\sinh(2n-1)\pi}
 \sin(2n-1)\pi x$
 
 \answer{12.3.2}
-$u(x,y)=\dst-\frac{32}{\pi^3}\sum_{n=1}^\infty{(1+(-1)^n2)\sinh
-n\pi(3-y)/2\over n^3\sinh3n\pi/2}
+$u(x,y)=\dst-\frac{32}{\pi^3}\sum_{n=1}^\infty\frac{(1+(-1)^n2)\sinh
+n\pi(3-y)/2}{n^3\sinh3n\pi/2}
 \sin\frac{n\pi x}{2}$
 
 \answer{12.3.3}
-$u(x,y)=\dst\frac{8}{\pi^2}\sum_{n=1}^\infty(-1)^{n+1}{
-\sinh(2n-1)\pi(1-y/2)\over(2n-1)^2\sinh(2n-1)\pi}
-\sin{(2n-1)\pi x\over 2}$
+$u(x,y)=\dst\frac{8}{\pi^2}\sum_{n=1}^\infty(-1)^{n+1}\frac{
+\sinh(2n-1)\pi(1-y/2)}{(2n-1)^2\sinh(2n-1)\pi}
+\sin\frac{(2n-1)\pi x}{2}$
 
 \answer{12.3.4}
-$u(x,y)=\dst\frac{\pi}{2}{\sinh(1-y)\over\sinh1}\sin
-x-\frac{16}{\pi}\sum_{n=1}^\infty{n\sinh2n(1-y)\over(4n^2-1)^2\sinh2n}\sin2nx$
+$u(x,y)=\dst\frac{\pi}{2}\frac{\sinh(1-y)}{\sinh1}\sin
+x-\frac{16}{\pi}\sum_{n=1}^\infty\frac{n\sinh2n(1-y)}{(4n^2-1)^2\sinh2n}\sin2nx$
 
 \answer{12.3.5}
-$u(x,y)=\dst3y+\frac{108}{\pi^3}\sum_{n=1}^\infty(-1)^n{\sinh n\pi
-y/3\over n^3\cosh2n\pi/3}\cos\frac{n\pi x}{3}$
+$u(x,y)=\dst3y+\frac{108}{\pi^3}\sum_{n=1}^\infty(-1)^n\frac{\sinh n\pi
+y/3}{n^3\cosh2n\pi/3}\cos\frac{n\pi x}{3}$
 
 
 \answer{12.3.6}
-$u(x,y)=\dst\frac{y}{2}+\frac{4}{\pi^3}\sum_{n=1}^\infty{
-\sinh(2n-1)\pi y\over(2n-1)^3\cosh2(2n-1)\pi}
+$u(x,y)=\dst\frac{y}{2}+\frac{4}{\pi^3}\sum_{n=1}^\infty\frac{
+\sinh(2n-1)\pi y}{(2n-1)^3\cosh2(2n-1)\pi}
 \cos(2n-1)\pi x$
 
 \answer{12.3.7}
-$u(x,y)=\dst-\frac{8y}{3}+\frac{32}{\pi^3}\sum_{n=1}^\infty(-1)^n{
-\sinh n\pi y/2\over
-n^3\cosh n\pi}\cos\frac{n\pi x}{2}$
+$u(x,y)=\dst-\frac{8y}{3}+\frac{32}{\pi^3}\sum_{n=1}^\infty(-1)^n\frac{
+\sinh n\pi y/2}{n^3\cosh n\pi}\cos\frac{n\pi x}{2}$
 
 \answer{12.3.8}
 $u(x,y)=\dst\frac{y}{3}+\frac{4}{\pi^3}\sum_{n=1}^\infty\frac{\sinh n\pi y}{n^3\cosh n\pi}\cos n\pi x$
 
 \answer{12.3.9}
 $u(x,y)=\dst
-\frac{128}{\pi^3}\sum_{n=1}^\infty{\cosh(2n-1)\pi(x-3)/4\over
-(2n-1)^3\cosh3(2n-1)\pi/4}
-\sin{(2n-1)\pi y\over4}$
+\frac{128}{\pi^3}\sum_{n=1}^\infty\frac{\cosh(2n-1)\pi(x-3)/4}{(2n-1)^3\cosh3(2n-1)\pi/4}
+\sin\frac{(2n-1)\pi y}{4}$
 
 \answer{12.3.10}
 $u(x,y)
 =\dst-\frac{96}{\pi^3}\sum_{n=1}^\infty
 \left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
-{\cosh(2n-1)\pi(x-2)/2\over(2n-1)^3\cosh(2n-1)\pi}
-\sin{(2n-1)\pi y\over2}$
+\frac{\cosh(2n-1)\pi(x-2)/2}{(2n-1)^3\cosh(2n-1)\pi}
+\sin\frac{(2n-1)\pi y}{2}$
 
 
 \answer{12.3.11}
 $u(x,y)
 =\dst\frac{768}{\pi^3}\sum_{n=1}^\infty
 \left[1+(-1)^n\frac{2}{(2n-1)\pi}\right]
-{\cosh(2n-1)\pi(x-2)/4\over(2n-1)^3\cosh(2n-1)\pi/2}
-\sin{(2n-1)\pi y\over4}$
+\frac{\cosh(2n-1)\pi(x-2)/4}{(2n-1)^3\cosh(2n-1)\pi/2}
+\sin\frac{(2n-1)\pi y}{4}$
 
 \answer{12.3.12}
 $u(x,y)
 =\dst\frac{96}{\pi^3}\sum_{n=1}^\infty
 \left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]
-{\cosh(2n-1)\pi(x-3)/2\over(2n-1)^3\cosh3(2n-1)\pi/2}
-\sin{(2n-1)\pi y\over2}$
+\frac{\cosh(2n-1)\pi(x-3)/2}{(2n-1)^3\cosh3(2n-1)\pi/2}
+\sin\frac{(2n-1)\pi y}{2}$
 
 \answer{12.3.13}
 $u(x,y)=
--\dst\frac{16}{\pi}\sum_{n=1}^\infty{\cosh(2n-1)x/2\over
-(2n-3)(2n+1)(2n-1)\sinh(2n-1)/2}
-\cos{(2n-1) y\over2}$
+-\dst\frac{16}{\pi}\sum_{n=1}^\infty\frac{\cosh(2n-1)x/2}{(2n-3)(2n+1)(2n-1)\sinh(2n-1)/2}
+\cos\frac{(2n-1) y}{2}$
 
 \answer{12.3.14}
 $u(x,y)=-\dst\frac{432}{\pi^3}\sum_{n=1}^\infty
-\left[1+{4(-1)^n\over(2n-1)\pi}\right]
-{\cosh(2n-1)\pi x/6\over(2n-1)^3\sinh(2n-1)\pi/3}
-\cos{(2n-1)\pi
-y\over6}$
+\left[1+\frac{4(-1)^n}{(2n-1)\pi}\right]
+\frac{\cosh(2n-1)\pi x/6}{(2n-1)^3\sinh(2n-1)\pi/3}
+\cos\frac{(2n-1)\pi
+y}{6}$
 
 \answer{12.3.15}
 $u(x,y)=-\dst
-\frac{64}{\pi}\sum_{n=1}^\infty(-1)^n{\cosh(2n-1)x/2\over
-(2n-1)^4\sinh(2n-1)/2}\cos{(2n-1) y\over2}$.
+\frac{64}{\pi}\sum_{n=1}^\infty(-1)^n\frac{\cosh(2n-1)x/2}{(2n-1)^4\sinh(2n-1)/2}\cos\frac{(2n-1) y}{2}$.
 
 \answer{12.3.16}
 $u(x,y)=-\dst\frac{192}{\pi^4}\sum_{n=1}^\infty
-{\cosh(2n-1)\pi x/2\over(2n-1)^4\sinh(2n-1)\pi/2}
+\frac{\cosh(2n-1)\pi x/2}{(2n-1)^4\sinh(2n-1)\pi/2}
 \left[(-1)^n+\frac{2}{(2n-1)\pi}\right]
-\cos{(2n-1)\pi y\over2}$
+\cos\frac{(2n-1)\pi y}{2}$
 
 
 
 \answer{12.3.17}
-$\dst u(x,y)=\sum_{n=1}^\infty\alpha_n{\sinh n\pi y/a\over
+$\dst u(x,y)=\sum_{n=1}^\infty\alpha_n\frac{\sinh n\pi y/a}{
 \sinh n\pi b/a}\sin
 \frac{n\pi x}{a},\quad
 \alpha_n=\frac{2}{a}\int_0^a f(x)\sin
@@ -1145,14 +1117,14 @@ $\dst u(x,y)=\sum_{n=1}^\infty\alpha_n{\sinh n\pi y/a\over
 
 
 \quad \quad $u(x,y)=\dst\frac{72}{\pi^3}\sum_{n=1}^\infty
-{\sinh(2n-1)\pi y/3\over(2n-1)^3\sinh2(2n-1)\pi/3}
-\sin{(2n-1)\pi x\over 3}$
+\frac{\sinh(2n-1)\pi y/3}{(2n-1)^3\sinh2(2n-1)\pi/3}
+\sin\frac{(2n-1)\pi x}{ 3}$
 
 
 \answer{12.3.18}
 $\dst
-u(x,y)=\alpha_0(1-y/b)+\sum_{n=1}^\infty\alpha_n{\sinh n\pi(b-y)/
-a\over\sinh n\pi b/a}\cos
+u(x,y)=\alpha_0(1-y/b)+\sum_{n=1}^\infty\alpha_n\frac{\sinh n\pi(b-y)/
+a}{\sinh n\pi b/a}\cos
 \frac{n\pi x}{a}$, \quad
 $\dst\alpha_0=\frac{1}{a}\int_0^a f(x)\,dx$,
 
@@ -1160,54 +1132,52 @@ $\dst\alpha_0=\frac{1}{a}\int_0^a f(x)\,dx$,
 \frac{n\pi x}{a}\,dx,\quad n\ge1$
 
 
-\quad \quad$\dst u(x,y)={8(1-y)\over15}-\frac{48}{\pi^4}\sum_{n=1}^\infty\frac{1}{n^4}{\sinh n\pi(1-y)\over\sinh n\pi}\cos n\pi x$
+\quad \quad$\dst u(x,y)=\frac{8(1-y)}{15}-\frac{48}{\pi^4}\sum_{n=1}^\infty\frac{1}{n^4}\frac{\sinh n\pi(1-y)}{\sinh n\pi}\cos n\pi x$
 
 
 \answer{12.3.19}
 $\dst
-u(x,y)=\sum_{n=1}^\infty\alpha_n{\sinh(2n-1)\pi(b-y)/2a
-\over\sinh(2n-1)\pi b/2a}\cos
-{(2n-1)\pi x\over2a}$,
+u(x,y)=\sum_{n=1}^\infty\alpha_n\frac{\sinh(2n-1)\pi(b-y)/2a
+}{\sinh(2n-1)\pi b/2a}\cos
+\frac{(2n-1)\pi x}{2a}$,
 
 \quad \quad$\dst\alpha_n=\frac{2}{a}\int_0^a
-f(x)\cos {(2n-1)\pi x\over2a}\,dx$
+f(x)\cos\frac{(2n-1)\pi x}{2a}\,dx$
 
 
 \quad \quad$u(x,y)=\dst
-\frac{288}{\pi^3}\sum_{n=1}^\infty{\sinh(2n-1)\pi(2-y)/6\over
-(2n-1)^3\sinh(2n-1)\pi/3}\sin{(2n-1)\pi x\over6}$
+\frac{288}{\pi^3}\sum_{n=1}^\infty\frac{\sinh(2n-1)\pi(2-y)/6}{
+(2n-1)^3\sinh(2n-1)\pi/3}\sin\frac{(2n-1)\pi x}{6}$
 
 \answer{12.3.20}
 $\dst
-u(x,y)=\sum_{n=1}^\infty\alpha_n{\sinh(2n-1)\pi(b-y)/2a\over
-\sinh(2n-1)\pi b/2a}\sin
-{(2n-1)\pi x\over2a}$,
+u(x,y)=\sum_{n=1}^\infty\alpha_n\frac{\sinh(2n-1)\pi(b-y)/2a}{\sinh(2n-1)\pi b/2a}\sin
+\frac{(2n-1)\pi x}{2a}$,
 
 \quad \quad$\dst\alpha_n=\frac{2}{a}\int_0^a
-f(x)\sin {(2n-1)\pi x\over2a}\,dx$
+f(x)\sin\frac{(2n-1)\pi x}{2a}\,dx$
 
 
 
 \quad \quad$u(x,y)=\dst\frac{32}{\pi^3}\sum_{n=1}^\infty\left[
 (-1)^n5+\frac{18}{(2n-1)\pi}\right]
-{\sinh(2n-1)\pi(2-y)/2\over(2n-1)^3\sinh(2n-1)\pi}
-\cos{(2n-1)\pi x\over2}$.
+\frac{\sinh(2n-1)\pi(2-y)/2}{(2n-1)^3\sinh(2n-1)\pi}
+\cos\frac{(2n-1)\pi x}{2}$.
 
 
 \answer{12.3.21}
-$\dst u(x,y)=\sum_{n=1}^\infty\alpha_n{\cosh n\pi(y-b)/a\over
-\cosh n\pi b/a}\sin
+$\dst u(x,y)=\sum_{n=1}^\infty\alpha_n\frac{\cosh n\pi(y-b)/a}{\cosh n\pi b/a}\sin
 \frac{n\pi x}{a}$, \quad
 $\dst\alpha_n=\frac{2}{a}\int_0^a f(x)\sin
 \frac{n\pi x}{a}\,dx$
 
-\quad \quad$u(x,y)=\dst-12\sum_{n=1}^\infty(-1)^n{\cosh n(y-2)\over n^3\cosh2n}
+\quad \quad$u(x,y)=\dst-12\sum_{n=1}^\infty(-1)^n\frac{\cosh n(y-2)}{n^3\cosh2n}
 \sin nx$
 
 
 \answer{12.3.22}
-$\dst u(x,y)=\alpha_0+\sum_{n=1}^\infty\alpha_n{\cosh n\pi y/a
-\over\cosh n\pi b/a}\cos
+$\dst u(x,y)=\alpha_0+\sum_{n=1}^\infty\alpha_n\frac{\cosh n\pi y/a
+}{\cosh n\pi b/a}\cos
 \frac{n\pi x}{a}$,
 $\dst\alpha_0=\frac{1}{a}\int_0^a f(x)\,dx$,
 
@@ -1218,27 +1188,26 @@ $\dst\alpha_0=\frac{1}{a}\int_0^a f(x)\,dx$,
 
 
 \answer{12.3.23}
-$\dst u(x,y)=\frac{a}{\pi}\sum_{n=1}^\infty\alpha_n{\sinh n\pi
-(y-b)/a\over n\cosh n\pi b/a}\sin
+$\dst u(x,y)=\frac{a}{\pi}\sum_{n=1}^\infty\alpha_n\frac{\sinh n\pi
+(y-b)/a}{n\cosh n\pi b/a}\sin
 \frac{n\pi x}{a}$, \quad
 $\dst\alpha_n=\frac{2}{a}\int_0^a
 f(x)\sin \frac{n\pi x}{a}\,dx$
 
 \quad \quad$u(x,y)=\dst\frac{4}{\pi}\sum_{n=1}^\infty(-1)^{n+1}
-{\sinh(2n-1)(y-1)\over(2n-1)^3\cosh(2n-1)}
+\frac{\sinh(2n-1)(y-1)}{(2n-1)^3\cosh(2n-1)}
 \sin(2n-1)x$
 
 
 \answer{12.3.24}
-$\dst u(x,y)=\sum_{n=1}^\infty\alpha_n{\cosh n\pi x/b\over
-\cosh n\pi a/b}
+$\dst u(x,y)=\sum_{n=1}^\infty\alpha_n\frac{\cosh n\pi x/b}{\cosh n\pi a/b}
 \sin\frac{n\pi y}{b}$,\quad
 $\dst\alpha_n=\frac{2}{b}\int_0^b g(y)\sin
 \frac{n\pi y}{b}\,dy$
 
 
-\quad \quad$u(x,y)=\dst\frac{96}{\pi^5}\sum_{n=1}^\infty{\cosh(2n-1)\pi x
-\over(2n-1)^5\cosh(2n-1)\pi}\sin(2n-1)\pi y$.
+\quad \quad$u(x,y)=\dst\frac{96}{\pi^5}\sum_{n=1}^\infty\frac{\cosh(2n-1)\pi x
+}{(2n-1)^5\cosh(2n-1)\pi}\sin(2n-1)\pi y$.
 
 
 
@@ -1247,60 +1216,59 @@ $\dst\alpha_n=\frac{2}{b}\int_0^b g(y)\sin
 
 
 \answer{12.3.25}
-$\dst u(x,y)=\sum_{n=1}^\infty\alpha_n{\cosh(2n-1)\pi x/2b\over
-\cosh(2n-1)\pi a/2b}
-\cos{(2n-1)\pi y\over2b}$,\quad
+$\dst u(x,y)=\sum_{n=1}^\infty\alpha_n\frac{\cosh(2n-1)\pi x/2b}{\cosh(2n-1)\pi a/2b}
+\cos\frac{(2n-1)\pi y}{2b}$,\quad
 
 \quad \quad$\dst\alpha_n=\frac{2}{b}\int_0^b g(y)\cos
-{(2n-1)\pi y\over2b}\,dy$
+\frac{(2n-1)\pi y}{2b}\,dy$
 
 
 \quad \quad$u(x,y)=-\dst
-\frac{128}{\pi^3}\sum_{n=1}^\infty(-1)^n{\cosh(2n-1)\pi x/4\over
-(2n-1)^3\cosh(2n-1)\pi/2}\cos{(2n-1)\pi y\over4}$.
+\frac{128}{\pi^3}\sum_{n=1}^\infty(-1)^n\frac{\cosh(2n-1)\pi x/4}{
+(2n-1)^3\cosh(2n-1)\pi/2}\cos\frac{(2n-1)\pi y}{4}$.
 
 \answer{12.3.26}
 $\dst u(x,y)=\frac{b}{\pi}\sum_{n=1}^\infty\alpha_n
-{\cosh n\pi x/b\over n \sinh n\pi a/b}
+\frac{\cosh n\pi x/b}{n \sinh n\pi a/b}
 \sin\frac{n\pi y}{b}$,\quad
 $\dst\alpha_n=\frac{2}{b}\int_0^b g(y)\sin
 \frac{n\pi y}{b}\,dy$
 
 
 \quad \quad$u(x,y)=\dst\frac{64}{\pi^3}\sum_{n=1}^\infty(-1)^{n+1}
-{\cosh(2n-1)\pi x/4\over(2n-1)^3\sinh(2n-1)\pi/4}
-\sin{(2n-1)\pi y\over 4}$
+\frac{\cosh(2n-1)\pi x/4}{(2n-1)^3\sinh(2n-1)\pi/4}
+\sin\frac{(2n-1)\pi y}{4}$
 
 
 \answer{12.3.27}
 $\dst
-u(x,y)=-\frac{2b}{\pi}\sum_{n=1}^\infty\alpha_n{\cosh(2n-1)\pi(x-a)/2b
-\over(2n-1)\sinh(2n-1)\pi a/2b}
-\sin{(2n-1) y\over2b}$,\quad
+u(x,y)=-\frac{2b}{\pi}\sum_{n=1}^\infty\alpha_n\frac{\cosh(2n-1)\pi(x-a)/2b
+}{(2n-1)\sinh(2n-1)\pi a/2b}
+\sin\frac{(2n-1) y}{2b}$,\quad
 
 \quad \quad$\dst\alpha_n=\frac{2}{b}\int_0^b g(y)\sin
-{(2n-1)\pi y\over2b}\,dy$
+\frac{(2n-1)\pi y}{2b}\,dy$
 
 
 \quad \quad$u(x,y)=\dst192\sum_{n=1}^\infty
 \left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
-{\cosh(2n-1)(x-1)/2\over(2n-1)^4\sinh(2n-1)/2}
-\sin{(2n-1)y\over2}$.
+\frac{\cosh(2n-1)(x-1)/2}{(2n-1)^4\sinh(2n-1)/2}
+\sin\frac{(2n-1)y}{2}$.
 
 
 \answer{12.3.28}
 $\dst
-u(x,y)=\alpha_0(x-a)+\frac{b}{\pi}\sum_{n=1}^\infty\alpha_n{\sinh
+u(x,y)=\alpha_0(x-a)+\frac{b}{\pi}\sum_{n=1}^\infty\alpha_n\frac{\sinh
 n\pi(x-a)/b
-\over n\cosh n\pi a/b}
+}{ n\cosh n\pi a/b}
 \cos\frac{n\pi y}{b}$,\quad
 $\dst\alpha_0=\frac{1}{b}\int_0^bg(y)\cos\frac{n\pi y}{b}\,dy$,
 
 \quad \quad$\dst\alpha_n=\frac{2}{b}\int_0^b g(y)\cos
 \frac{n\pi y}{b}\,dy$
 
-\quad \quad$u(x,y)=\dst{\pi(x-2)\over2}-\frac{4}{\pi}\sum_{n=1}^\infty
-{\sinh(2n-1)(x-2)\over(2n-1)^3\cosh2(2n-1)}
+\quad \quad$u(x,y)=\dst\frac{\pi(x-2)}{2}-\frac{4}{\pi}\sum_{n=1}^\infty
+\frac{\sinh(2n-1)(x-2)}{(2n-1)^3\cosh2(2n-1)}
 \cos(2n-1)y$.
 
 \answer{12.3.29}
@@ -1316,25 +1284,24 @@ $\alpha_0=\dst\frac{1}{a}\int_0^a f(x)\,dx$,
 
 \answer{12.3.30}
 $u(x,y)=\dst\sum_{n=1}^\infty\alpha_n e^{-(2n-1)\pi y/2a}\cos
-{(2n-1)\pi x\over2a}$,\quad
+\frac{(2n-1)\pi x}{2a}$,\quad
 $\alpha_n=\dst\frac{2}{a}\int_0^a
-f(x)\cos {(2n-1)\pi x\over2a}\,dx$
+f(x)\cos\frac{(2n-1)\pi x}{2a}\,dx$
 
 
 
 \quad \quad$u(x,y)=-\dst
-\frac{288}{\pi^3}\sum_{n=1}^\infty{(-1)^n\over
-(2n-1)^3}e^{-(2n-1)\pi y/6}\cos{(2n-1)\pi x\over6}$
+\frac{288}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^3}e^{-(2n-1)\pi y/6}\cos\frac{(2n-1)\pi x}{6}$
 
 
 \answer{12.3.31}
 $u(x,y)=\dst\sum_{n=1}^\infty\alpha_ne^{-(2n-1)\pi y/2a}\sin
-{(2n-1)\pi x\over2a}$,\quad
+\frac{(2n-1)\pi x}{2a}$,\quad
 $\alpha_n=\dst\frac{2}{a}\int_0^a
-f(x)\sin {(2n-1)\pi x\over2a}\,dx$
+f(x)\sin\frac{(2n-1)\pi x}{2a}\,dx$
 
 \quad \quad$u(x,y)=\dst
-\frac{32}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}e^{-(2n-1)y/2}\sin{(2n-1) x\over2}$.
+\frac{32}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}e^{-(2n-1)y/2}\sin\frac{(2n-1) x}{2}$.
 
 \answer{12.3.32}
 $u(x,y)=-\dst\frac{a}{\pi}\sum_{n=1}^\infty\frac{\alpha_n}{n} e^{-n\pi
@@ -1343,49 +1310,48 @@ y/a}\sin
 $\alpha_n=\dst\frac{2}{a}\int_0^a
 f(x)\sin \frac{n\pi x}{a}\,dx$
 
-\quad \quad$u(x)=\dst4\sum_{n=1}^\infty{(1+(-1)^n2)\over n^4}
+\quad \quad$u(x)=\dst4\sum_{n=1}^\infty\frac{(1+(-1)^n2)}{n^4}
 e^{-ny}\sin nx$
 
 \answer{12.3.33}
 $u(x,y)=-\dst\frac{2a}{\pi}\sum_{n=1}^\infty\frac{\alpha_n}{2n-1}
 e^{-(2n-1)\pi y/2a}\cos
-{(2n-1)\pi x\over2a}$,\quad
+\frac{(2n-1)\pi x}{2a}$,\quad
 $\alpha_n=\dst\frac{2}{a}\int_0^a
-f(x)\cos {(2n-1)\pi x\over2a}\,dx$
+f(x)\cos\frac{(2n-1)\pi x}{2a}\,dx$
 
 \quad \quad$u(x,y)=\dst\frac{5488}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-1+{4(-1)^n\over(2n-1)\pi}\right]e^{-(2n-1)\pi y/14}\cos{(2n-1)\pi
-x\over14}$
+1+\frac{4(-1)^n}{(2n-1)\pi}\right]e^{-(2n-1)\pi y/14}\cos\frac{(2n-1)\pi
+x}{14}$
 
 
 \answer{12.3.34}
 $u(x,y)=\dst-\frac{2a}{\pi}\sum_{n=1}^\infty\frac{\alpha_n}{2n-1}e^{-(2n-1)\pi
 y/2a}\sin
-{(2n-1)\pi x\over2a}$,\quad
+\frac{(2n-1)\pi x}{2a}$,\quad
 $\alpha_n=\dst\frac{2}{a}\int_0^a
-f(x)\sin {(2n-1)\pi x\over2a}\,dx$
+f(x)\sin\frac{(2n-1)\pi x}{2a}\,dx$
 
 
-\quad \quad$u(x,y)=-\dst\frac{2000}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
-(-1)^n+\frac{4}{(2n-1)\pi}\right]e^{-(2n-1)\pi y/10}\sin{(2n-1)\pi
-x\over10}$
-
-
+\quad \quad$u(x,y)=-\dst\frac{2000}{\pi^3}\sum_{n=1}^\infty
+\frac{1}{(2n-1)^3}
+\left[(-1)^n+\frac{4}{(2n-1)\pi}\right]e^{-(2n-1)\pi y/10}
+\sin\frac{(2n-1)\pi x}{10}$
 
 \answer{12.3.35}
 $u(x,y)=\dst
-\sum_{n=1}^\infty{A_n\sinh n\pi(b-y)/a+B_n\sinh n\pi y/a\over \sinh
-n\pi b/a}\sin\frac{n\pi x}{a}\\
-\hspace*{6.25em}+\sum_{n=1}^\infty
-{C_n\sinh n\pi(a-x)/b+D_n\sinh n\pi x/b\over \sinh n\pi a/b}\sin\frac{n\pi y}{b}$
-
+\sum_{n=1}^\infty\frac{A_n\sinh n\pi(b-y)/a+B_n\sinh n\pi y/a}{\sinh
+n\pi b/a}\sin\frac{n\pi x}{a}$\\
+\hspace*{6.25em}$\dst{}+\sum_{n=1}^\infty
+\frac{C_n\sinh n\pi(a-x)/b+D_n\sinh n\pi x/b}{\sinh n\pi a/b}
+\sin\frac{n\pi y}{b}$
 
 \answer{12.3.36}
 $\dst u(x,y)=C+
-\frac{a}{\pi}\sum_{n=1}^\infty{B_n\cosh n\pi y/a-A_n\cosh
-n\pi(y-b)/a\over n\sinh n\pi b/a}\cos\frac{n\pi x}{a}\\
-\hspace*{6.5em}+\frac{b}{\pi}\sum_{n=1}^\infty{D_n\cosh n\pi
-x/b-C_n\cosh n\pi(x-a)/b\over n\sinh n\pi a/b}\cos\frac{n\pi y}{b}$
+\frac{a}{\pi}\sum_{n=1}^\infty\frac{B_n\cosh n\pi y/a-A_n\cosh
+n\pi(y-b)/a}{ n\sinh n\pi b/a}\cos\frac{n\pi x}{a}$\\
+\hspace*{6.5em}$\dst{}+\frac{b}{\pi}\sum_{n=1}^\infty\frac{D_n\cosh n\pi
+x/b-C_n\cosh n\pi(x-a)/b}{ n\sinh n\pi a/b}\cos\frac{n\pi y}{b}$
 
 
 \sectionanswers{12.4}
