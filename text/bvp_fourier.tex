@@ -7,7 +7,7 @@
 
 \textsc{In this chapter} we develop series representations of functions
 that will be used to solve partial differential equations in
-Chapter~12.
+\zcref{ch:fourier_pde}.
 
 
 \medskip\noindent
@@ -17,7 +17,7 @@ for the differential equation
 y''+\lambda y=0.
 \]
 They are related to problems in partial
-differential equations that will be discussed in Chapter~12.
+differential equations that will be discussed in \zcref*{ch:fourier_pde}.
 We define what is meant by eigenvalues and eigenfunctions of
 the boundary value  problems, and  show that  the eigenfunctions have
 a property called \emph{\color{blue}orthogonality}.
@@ -42,7 +42,7 @@ discussed in \zcref*{sec:fourier_i}.
 \section{Eigenvalue Problems for \texorpdfstring{$y''+\lambda y=0$}{y''+𝜆y=0}}
 \label{sec:eig_probs}
 
-In Chapter~12 we'll study partial differential equations
+In \zcref{ch:fourier_pde} we'll study partial differential equations
 that arise in problems of heat conduction, wave propagation, and
 potential theory. The purpose of this chapter is to develop tools
 required to solve these equations. In this section we consider the
@@ -81,7 +81,7 @@ Problems~1--5 are called \emph{\color{blue}eigenvalue problems}. \emph{\color{bl
 an eigenvalue problem means finding all its eigenvalues and associated
 eigenfunctions. We'll take it as given here that all the eigenvalues
 of Problems~1--5 are real numbers. This is proved in a more general
-setting in Section~13.2.
+setting in \zcref{sec:sturm_liouville}.
 
 
 \begin{theorem}\label{thmtype:11.1.1}
@@ -112,7 +112,7 @@ Integration by parts yields
 \end{aligned}
 \end{equation}
 However, if $y$ satisfies any of the boundary conditions of Problems
-1-4, then
+1--4, then
 \[
 y(L)y'(L)-y(0)y'(0)=0;
 \]
@@ -438,9 +438,9 @@ about $x=0$.
 
 
 \zcref[S,range]{exer:11.1.19,exer:11.1.22} ask you to verify
- that the eigenfunctions of Problems~1--4  are orthogonal
+that the eigenfunctions of Problems~1--4  are orthogonal
 on $[0,L]$. However, this also follows from a general theorem that we'll
- prove in Chapter~13.
+prove in \zcref{ch:bvp_second_order}.
 
 
 \exercises
@@ -543,7 +543,7 @@ eigenfunctions of Problems~1--4 are orthogonal on $[0,L]$.
 In this section and the next we introduce some series expansions
 in terms of these eigenfunctions.
 We'll use these expansions  to solve partial differential equations in
-Chapter~12.
+\zcref{ch:fourier_pde}.
 
 
 \begin{theorem}\label{thmtype:11.2.1}
@@ -1613,7 +1613,7 @@ $\lim_{n\to\infty}a_n=\lim_{n\to\infty}b_n=0$.
 \section{Fourier Expansions II}\label{sec:fourier_ii}
 
 In this section we discuss Fourier expansions in terms of the
-eigenfunctions of Problems~1-4 for Section~{\color{red}11.1}.
+eigenfunctions of Problems~1--4 for \zcref{sec:eig_probs}.
 
 
 \boxit{Fourier Cosine Series}
@@ -2051,7 +2051,7 @@ S_M(x)=x,\quad 0\le x\le L.
 \boxit{A Useful Observation}
 
 In applications involving expansions in
-terms of the eigenfunctions of Problems~1-4, the functions being
+terms of the eigenfunctions of Problems~1--4, the functions being
 expanded
  are often  polynomials that  satisfy the boundary conditions
 of the problem under consideration. In this case the next theorem
