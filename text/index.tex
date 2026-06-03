@@ -1,13 +1,10 @@
 
-\pdfbookmark[0]{Index}{index}
-\markboth
-{\hskip1em Index\hfill}
-{\hfill Index\hskip1em}
+\chapter*[Index]{Index}
 
 \begin{tindex}
 
+\newcommand{\alphsep}[1]{\vspace{12pt}\item{\bfseries #1}}
 
-\newcommand{\alphsep}[1]{\vspace{12pt}\item{\bf #1}}
 \alphsep{A}
 
 \item Abel's formula, \pageref{example:5.1.4}--\pageref{thmtype:5.1.6},
@@ -70,7 +67,8 @@
 \item  Beat, \pageref{eq:6.1.21}
 \item  Bernoulli's equation, \pageref{eq:2.4.2}--\pageref{eq:2.4.4}
 \item  Bessel functions of order $\nu$,  \pageref{exer:7.5.53}
-\item  Bessel's equation,  \pageref{exer:5.1.8} {\bf 287},
+\item  Bessel's equation,  \pageref{exer:5.1.8} \textbf{287},
+% TODO fix page reference
 \pageref{eq:7.5.2}
 \subitem  of order $\nu$, \pageref{exer:7.5.53}
 \subitem  of order zero,  \pageref{exer:7.6.56}
