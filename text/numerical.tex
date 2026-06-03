@@ -191,11 +191,11 @@ with the values of the exact solution
 \begin{equation} \label{eq:3.1.6}
 y=\frac{e^{-2x}}{4}(x^4+4),
 \end{equation}
-which can be obtained by the method of Section~2.1. (Verify.)
+which can be obtained by the method of \zcref{sec:linar_first_order}. (Verify.)
 \end{example}
 
 
-\solution \zcref{table:3.1.1} shows the values of the exact solution
+\solution \zcref[S]{table:3.1.1} shows the values of the exact solution
 \eqref{eq:3.1.6} at the specified points, and the approximate values of
 the solution at these points obtained by Euler's method with step
 sizes $h=0.1$, $h=0.05$, and $h=0.025$. In examining this table, keep
@@ -325,11 +325,10 @@ often include a row listing values of the exact solution of the
 initial value problem, even if the directions in the example or
 exercise don't specifically call for it. If  quotation marks are
 included in the heading, the values were obtained by applying the
-Runge-Kutta method in a way that's explained in Section~3.3.
-If quotation marks are not included,  the values were
+Runge-Kutta method in a way that's explained in \zcref{sec:runge_kutta}.
+If quotation marks are not included, the values were
 obtained from a known formula for the solution.
-In either case,
-the shown values are correct.
+In either case, the shown values are correct.
 %the values are exact to eight places to the right of the decimal point.
 
 
@@ -608,7 +607,8 @@ where
 f(x,y)=-p(x)y+h(x,y).
 \]
 However, we can also start by applying variation of parameters to
-\eqref{eq:3.1.20}, as in Sections~2.1\ and 2.4;   thus, we
+\eqref{eq:3.1.20}, as in \zcref{sec:linar_first_order,sec:transform_separable};
+thus, we
 write the solution of \eqref{eq:3.1.20} as $y=uy_1$, where $y_1$ is a
 nontrivial solution of the complementary equation $y'+p(x)y=0$. Then
 $y=uy_1$ is a solution of \eqref{eq:3.1.20} if and only if $u$ is a
@@ -1066,7 +1066,7 @@ y'+3y=7e^{4x},\quad y(0)=2
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with
 the values of the exact solution $y=e^{4x}+e^{-3x}$, which can be
-obtained by the method of Section~2.1. Present your results
+obtained by the method of \zcref{sec:linar_first_order}. Present your results
 in a table like \zcref{table:3.1.1}.
 
 
@@ -1082,7 +1082,7 @@ with the values of the exact solution
 \[
 y=\frac{1}{3x^2}(9\ln x+x^3+2),
 \]
-which can be obtained by the method of Section~2.1. Present
+which can be obtained by the method of \zcref{sec:linar_first_order}. Present
 your results in a table like \zcref{table:3.1.1}.
 
 \item\label{exer:3.1.8}\Cex
@@ -1173,7 +1173,7 @@ y'+3y=7e^{-3x},\quad y(0)=6
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with
 the values of the exact solution $y=e^{-3x}(7x+6)$, which can be
-obtained by the method of Section~2.1. Do you notice anything
+obtained by the method of \zcref{sec:linar_first_order}. Do you notice anything
 special about the results? Explain.
 
 \exercisetext{
@@ -1297,7 +1297,7 @@ and explain what you find.
 \section{The Improved Euler Method and Related Methods}
 \label{sec:improved_euler}
 
- In Section~3.1 we saw that the global truncation error of
+In \zcref{sec:euler_method} we saw that the global truncation error of
 Euler's method is $O(h)$, which would seem to imply that we can
 achieve arbitrarily accurate results with Euler's method by simply
 choosing the step size sufficiently small. However, this
@@ -1894,9 +1894,9 @@ Examples involving the midpoint method and Heun's method are given in
 
 \exercises
 Most of the following numerical exercises involve initial value
-problems considered in the exercises in Section~3.1. You'll
+problems considered in the exercises in \zcref{sec:euler_method}. You'll
 find it instructive to compare the results that you obtain here with
-the corresponding results that you obtained in Section~3.1.
+the corresponding results that you obtained in \zcref{sec:euler_method}.
 
 \emph{In \zcref[range]{exer:3.2.1,exer:3.2.5} use the improved
 Euler method
@@ -1926,7 +1926,7 @@ y'+3y=7e^{4x},\quad y(0)=2
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
 values of the exact solution $y=e^{4x}+e^{-3x}$, which can be obtained
-by the method of Section~2.1. Present your results in a table
+by the method of \zcref{sec:linar_first_order}. Present your results in a table
 like \zcref{table:3.2.2}.
 
 
@@ -1943,7 +1943,7 @@ the values of the exact solution
 \[
 y=\frac{1}{3x^2}(9\ln x+x^3+2)
 \]
-which can be obtained by the method of Section~2.1. Present
+which can be obtained by the method of \zcref{sec:linar_first_order}. Present
 your results in a table like \zcref{table:3.2.2}.
 
 \item\label{exer:3.2.8}\Cex
@@ -2032,7 +2032,7 @@ y'+3y=e^{-3x}(1-2x),\quad y(0)=2,
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
 values of the exact solution $y=e^{-3x}(2+x-x^2)$, which can be
-obtained by the method of Section~2.1. Do you notice
+obtained by the method of \zcref{sec:linar_first_order}. Do you notice
 anything special about the results? Explain.
 
 \exercisetext{The linear initial value problems in
@@ -2174,7 +2174,7 @@ y'=f(x,y),\quad y(x_0)=y_0.
 \end{equation}
 Moreover, it can be shown that a method with local truncation error
 $O(h^{k+1})$ has global truncation error $O(h^k)$. In
-Sections~3.1\ and 3.2 we studied numerical
+\zcref{sec:euler_method,sec:improved_euler} we studied numerical
 methods where
 $k=1$ and $k=2$. We'll skip methods for which $k=3$ and proceed to the
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Runge.html}
@@ -2677,7 +2677,7 @@ y'+3y=7e^{4x},\quad y(0)=2,
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
 values of the exact solution $y=e^{4x}+e^{-3x}$, which can be obtained
-by the method of Section~2.1. Present your results in a table
+by the method of \zcref{sec:linar_first_order}. Present your results in a table
 like \zcref{table:3.3.1}.
 
 
@@ -2694,7 +2694,7 @@ with the values of the exact solution
 \[
 y=\frac{1}{3x^2}(9\ln x+x^3+2),
 \]
-which can be obtained by the method of Section~2.1. Present
+which can be obtained by the method of \zcref{sec:linar_first_order}. Present
 your results in a table like \zcref{table:3.3.1}.
 
 \item\label{exer:3.3.8}\Cex
@@ -2784,7 +2784,7 @@ y'+3y=e^{-3x}(1-4x+3x^2-4x^3),\quad y(0)=-3
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with
 the values of the exact solution $y=-e^{-3x}(3-x+2x^2-x^3+x^4)$, which
-can be obtained by the method of Section~2.1. Do
+can be obtained by the method of \zcref{sec:linar_first_order}. Do
 you notice anything special about the results? Explain.
 
 \exercisetext{
@@ -2894,7 +2894,7 @@ with the values of the exact solution
 y=\frac{7\ln x}{x}+\frac{3x}{2},
 \]
 which can be obtained by the method discussed in
-Section~2.1.
+\zcref{sec:linar_first_order}.
 
 \item\label{exer:3.3.27}\Cex
 Use the Runge-Kutta  method with step sizes $h=0.1$,  $h=0.05$,
@@ -2909,7 +2909,7 @@ with the values of the exact solution
 \[
 y=2x^2-\frac{12}{x^2},
 \]
-which can be obtained by the method discussed in Section~2.1.
+which can be obtained by the method discussed in \zcref{sec:linar_first_order}.
 
 
 \item\label{exer:3.3.28}{\sc Numerical Quadrature} (see

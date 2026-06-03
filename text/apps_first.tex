@@ -2491,7 +2491,7 @@ spring (\zcref{figure:4.4.2}).
 Assume that if the length of the spring is changed by an amount
 $\Delta L$ (positive or negative), then the spring exerts an opposing
 force with magnitude $k|\Delta L|$, where k is a positive constant. In
-Section~6.1 it will be shown that if the mass of the spring
+\zcref{sec:spring_i} it will be shown that if the mass of the spring
 is negligible compared to $m$ and no other forces act on the object then
 Newton's second law of motion implies that
 \begin{equation} \label{eq:4.4.9}
@@ -2499,7 +2499,7 @@ my''=-ky,
 \end{equation}
 which can be written in the form \eqref{eq:4.4.7} with $p(y)=ky/m$. This
 equation can be solved easily by a method that we'll study in
-Section~5.2, but that method isn't available here. Instead,
+\zcref{sec:const_coeff_homog}, but that method isn't available here. Instead,
 we'll consider the phase plane equivalent of \eqref{eq:4.4.9}.
 
 From \eqref{eq:4.4.3}, we can rewrite \eqref{eq:4.4.9} as the separable
@@ -2925,14 +2925,14 @@ exercises call for similar computations. The methods discussed in
  are not suitable for this
 task, since  $p(y)/v$ in \eqref{eq:4.4.25} is undefined on the $y$ axis
 of the Poincaré phase plane. Therefore we're forced to apply
-numerical methods briefly discussed in Section~10.1 to the
+numerical methods briefly discussed in \zcref{sec:systems_intro} to the
 system
 \begin{align*}
 y'&=v\\
 v'&=-q(y,v)v-p(y),
 \end{align*}
 which is equivalent to \eqref{eq:4.4.24} in the sense defined in
-Section~10.1. Fortunately, most differential equation software
+\zcref{sec:systems_intro}. Fortunately, most differential equation software
 packages  enable you to do this painlessly.
 
 In the text we'll confine ourselves to the case where $q$
@@ -2958,14 +2958,14 @@ acting on the object were gravity and the spring's resistance to
 changes in its length. Now we'll assume that some mechanism (for
 example, friction in the spring or atmospheric resistance) opposes the
 motion of the object with a force proportional to its velocity. In
-Section~6.1 it will be shown that in this case Newton's
+\zcref{sec:spring_i} it will be shown that in this case Newton's
 second law of motion implies that
 \begin{equation} \label{eq:4.4.27}
 my''+cy'+ky=0,
 \end{equation}
 where $c>0$ is the \emph{\color{blue}damping constant}. Again, this
 equation can
-be solved easily by a method that we'll study in Section~5.2,
+be solved easily by a method that we'll study in \zcref{sec:const_coeff_homog},
 but that method isn't available here. Instead, we'll consider its
 phase plane equivalent, which can be written in the form \eqref{eq:4.4.25}
 as
@@ -3020,7 +3020,7 @@ Solutions corresponding to the trajectories in
 \zcref{figure:4.4.12} cross the $y$-axis infinitely many times.
 The corresponding solutions are said to be \emph{\color{blue}oscillatory}
 (\zcref{figure:4.4.13}). It is shown in
-Section~6.2 that there's a number $c_1$ such that if $0\le
+\zcref{sec:spring_ii} that there's a number $c_1$ such that if $0\le
 c<c_1$ then  all solutions of \eqref{eq:4.4.27} are oscillatory, while if
 $c\ge c_1$,  no solutions of \eqref{eq:4.4.27} have this property. (In
 fact, no solution not identically zero can have more than two zeros in
@@ -3145,7 +3145,7 @@ The \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Van_der_Pol.html}
 y''-\mu(1-y^2)y'+y=0,\tag{A}
 \]
 where $\mu$ is a positive constant and $y$ is electrical current
-(Section~6.3), arises in the study of an electrical circuit
+(\zcref{sec:rlc}), arises in the study of an electrical circuit
 whose resistive properties depend upon the current. The damping term \\
 $-\mu(1-y^2)y'$ works to reduce $|y|$ if $|y|<1$ or to increase $|y|$
 if
@@ -3395,7 +3395,7 @@ satisfies it if $c=0$. \bbox
 \end{example}
 
 
-Recall from Section~1.2 that the graph of a solution of a
+Recall from \zcref{sec:basic_concepts} that the graph of a solution of a
 differential equation is called an \emph{\color{blue}integral curve} of the
 equation. Solving a first order differential equation usually produces
 a one--parameter family of integral curves of the equation. Here we
@@ -3904,7 +3904,7 @@ y'=\frac{2xy}{x^2-y^2}
 \]
 are orthogonal trajectories of the family \eqref{eq:4.5.19}. This is a
 homogeneous nonlinear equation, which we studied in
-Section~2.4. Substituting $y=ux$ yields
+\zcref{sec:transform_separable}. Substituting $y=ux$ yields
 \[
 u'x+u=\frac{2x(ux)}{x^2-(ux)^2}=\frac{2u}{1-u^2},
 \]
