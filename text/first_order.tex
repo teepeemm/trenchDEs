@@ -211,7 +211,7 @@ interval $I$ on which $y$ has no zeros. We rewrite \eqref{eq:2.1.6} as
 \]
 for $x$ in $I$. Integrating this shows that
 \[
-\ln|y|=ax+k,\mbox{\quad so \quad} |y|=e^ke^{ax},
+\ln|y|=ax+k,\quad\text{so}\quad |y|=e^ke^{ax},
 \]
 where $k$ is an arbitrary constant. Since $e^{ax}$ can never equal
 zero,  $y$ has no zeros, so $y$ is either always
@@ -222,8 +222,8 @@ y=ce^{ax}
 where
 \[
 c=\begin{cases}
-\phantom{-}e^k&\mbox{if } y>0,\\
--e^k&\mbox{if } y<0.
+\phantom{-}e^k&\text{if } y>0,\\
+-e^k&\text{if } y<0.
 \end{cases}
 \]
 This shows that every nontrivial solution of \eqref{eq:2.1.6} is of the
@@ -395,8 +395,8 @@ has no zeros on %$(a,b)$
 $(a,b)$, so we can rewrite the last equation as $y=ce^{-P(x)}$, where
 \[
 c=\begin{cases}
-\phantom{-}e^k&\mbox{if } y>0\mbox{ on }(a,b),\\
--e^k&\mbox{if } y<0\mbox{ on }(a,b).
+\phantom{-}e^k&\text{if $y>0$ on $(a,b)$},\\
+-e^k&\text{if $y<0$ on $(a,b)$}.
 \end{cases}\qedhere
 \]
 \end{proof}
@@ -557,7 +557,7 @@ y'+(\cot x)y
 \end{align}
 Therefore $y$ is a solution of \eqref{eq:2.1.20} if and only if
 \[
-u'/\sin x=x\csc x=x/\sin x\mbox{\quad or, equivalently, \quad} u'=x.
+u'/\sin x=x\csc x=x/\sin x\quad\text{or, equivalently,}\quad u'=x.
 \]
 Integrating this yields
 \begin{equation}\label{eq:2.1.25}
@@ -570,7 +570,7 @@ $\left(r\pi,(r+1)\pi\right)$ ($r=$integer).
 \item
 Imposing the initial condition $y(\pi/2)=1$ in \eqref{eq:2.1.25} yields
 \[
-1=\frac{\pi^2}{8}+c\mbox{\quad or\quad} c=1-\frac{\pi^2}{8}.
+1=\frac{\pi^2}{8}+c\quad\text{or}\quad c=1-\frac{\pi^2}{8}.
 \]
  Thus,
 \[
@@ -678,12 +678,12 @@ $y_1'-2xy_1=0$, which we rewrite as
 Integrating this and taking the constant of integration to be
 zero yields
 \[
-\ln|y_1|=x^2,\mbox{\quad so \quad}|y_1|=e^{x^2}.
+\ln|y_1|=x^2,\quad\text{so}\quad |y_1|=e^{x^2}.
 \]
 We choose $y_1=e^{x^2}$ and seek solutions of
  \eqref{eq:2.1.28} in the form $y=ue^{x^2}$, where
 \[
-u'e^{x^2}=1,\mbox{\quad so \quad} u'=e^{-x^2}.
+u'e^{x^2}=1,\quad\text{so}\quad u'=e^{-x^2}.
 \]
 Therefore
 \[
@@ -700,8 +700,8 @@ e^{-x^2}dx\right). \end{equation}
   Since the initial condition in \eqref{eq:2.1.28}
 is imposed at $x_0=0$, it is convenient to rewrite \eqref{eq:2.1.29} as
 \[
-y=e^{x^2}\left(c+\int^x_0 e^{-t^2} dt\right),\mbox{\quad since
-\quad} \int_0^0e^{-t^2}\,dt=0.
+y=e^{x^2}\left(c+\int^x_0 e^{-t^2} dt\right),\quad\text{since}\quad
+\int_0^0e^{-t^2}\,dt=0.
 \]
  Setting $x=0$ and $y=y_0$ here shows that
 $c=y_0$.  Therefore the solution of the initial value problem is
@@ -795,7 +795,7 @@ on $(a,b)$. From the proof of \zcref{thmtype:2.1.1}, we know that
 $y_1$ has no zeros on $(a,b)$, so the function $u=y/y_1$ is defined
 on $(a,b)$. Moreover, since
 \[
-y'=-py+f\mbox{\quad and\quad}y_1'=-py_1,
+y'=-py+f\quad\text{and}\quad y_1'=-py_1,
 \]
 we have
 \begin{align*}
@@ -1191,8 +1191,7 @@ yy'=-x.
 \]
 Integrating yields
 \[
-\frac{y^2}{2}=-\frac{x^2}{2}+c,\mbox{\quad or,\, equivalently, \quad}
-x^2+y^2=2c.
+\frac{y^2}{2}=-\frac{x^2}{2}+c,\quad\text{or, equivalently,}\quad x^2+y^2=2c.
 \]
 The last equation shows that $c$ must be positive if $y$ is to be a
 solution of \eqref{eq:2.2.4} on an open interval. Therefore we let
@@ -1814,7 +1813,7 @@ Some terminology:
  an \emph{\color{blue}open rectangle $R$}
  is a set of points $(x,y)$ such that
 \[
-a<x<b\mbox{\quad  and \quad}c<y<d
+a<x<b\quad\text{and}\quad c<y<d
 \]
  (\zcref{figure:2.3.1}).  We'll denote this set by
 $R:  \{ a < x < b, c < y < d \}$.
@@ -2396,7 +2395,7 @@ u'y_1+u(y_1'+p(x)y_1)=f(x)(uy_1)^r,
 \]
 which is equivalent to the separable equation
 \[
-u'y_1(x)=f(x)\left(y_1(x)\right)^ru^r\mbox{\quad or \quad}
+u'y_1(x)=f(x)\left(y_1(x)\right)^ru^r\quad\text{or}\quad
 \frac{u'}{u^r}=f(x)\left(y_1(x)\right)^{r-1},
 \]
 since $y_1'+p(x)y_1=0$.
@@ -2412,7 +2411,7 @@ y'-y=xy^2.
 Since $y_1=e^x$ is a solution of $y'-y=0$, we look for solutions of
 \eqref{eq:2.4.3}  in the form $y=ue^x$, where
 \[
-u'e^x=xu^2e^{2x}\mbox{\quad or, equivalently, \quad}
+u'e^x=xu^2e^{2x}\quad\text{or, equivalently,}\quad
 u'=xu^2e^x.
 \]
 Separating variables and integrating yields
@@ -3393,7 +3392,7 @@ y}+\phi'(y).
 \item Equate the right side of this equation to $N$ and solve
 for $\phi'$;    thus,
 \[
-\frac{\partial G(x,y)}{\partial y}+\phi'(y)=N(x,y),\mbox{\quad  so \quad }
+\frac{\partial G(x,y)}{\partial y}+\phi'(y)=N(x,y),\quad\text{so}\quad
 \phi'(y)=N(x,y)-\frac{\partial G(x,y)}{\partial y}.
 \]
 \item Integrate $\phi'$ with respect to $y$, taking the
@@ -3471,7 +3470,7 @@ is not exact, and show  that the procedure for solving exact equations
 
 \solution   Here
 \[
-M_y(x,y)=6x^2y \mbox{\quad  and \quad } N_x(x,y)=18x^2y,
+M_y(x,y)=6x^2y \quad\text{and}\quad N_x(x,y)=18x^2y,
 \]
 so \eqref{eq:2.5.25} isn't  exact. Nevertheless,  let's try to find
 a function $F$ such that
@@ -3828,7 +3827,7 @@ $R$ if $\mu M$, $\mu N$, $(\mu M)_y$, and $(\mu N)_x$ are continuous
 and
 \[
 \frac{\partial}{\partial y}(\mu M)=\frac{\partial}{\partial x}
-(\mu N) \mbox{\quad or, equivalently, \quad}
+(\mu N) \quad\text{or, equivalently,}\quad
 \mu_yM+\mu M_y=\mu_xN+\mu N_x
 \]
 on $R$. It's better to rewrite the last equation as
@@ -3934,7 +3933,7 @@ then
 If $(M_y-N_x)/N$ is independent of $y$, then \eqref{eq:2.6.8}
  holds with $p=(M_y-N_x)/N$ and $q\equiv0$. Therefore
  \[
-P(x)=\pm e^{\int p(x)\,dx}\mbox{\quad and\quad}Q(y)=\pm e^{\int
+P(x)=\pm e^{\int p(x)\,dx}\quad\text{and}\quad Q(y)=\pm e^{\int
 q(y)\,dy}=\pm e^0=\pm1,
  \]
 so \eqref{eq:2.6.10} is an integrating factor for \eqref{eq:2.6.11} on $R$.
@@ -4138,7 +4137,7 @@ xp(x)(2x+9y)-yq(y)(3x+6y)=-x+3y.
  \]
  This will be an identity if
 \begin{equation}\label{eq:2.6.24}
- xp(x)=A\mbox{\quad and\quad} yq(y)=B,
+ xp(x)=A\quad\text{and}\quad yq(y)=B,
 \end{equation}
  where $A$ and $B$ are constants such that
 \[
