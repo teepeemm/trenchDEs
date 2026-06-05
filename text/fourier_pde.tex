@@ -1,4 +1,3 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 % SEVERAL ALT TEXTS STILL NEED "TO BE DETERMINED"
@@ -234,7 +233,7 @@ gives a useful sufficient condition for legitimacy of  term by term
 differentiation of an infinite series. We omit the proof.
 
 
-\begin{theorem}\color{blue}  \label{thmtype:12.1.2}
+\begin{theorem}\label{thmtype:12.1.2}
 A convergent infinite series
 \[
 W(z)=\sum_{n=1}^\infty  w_n(z)
@@ -244,12 +243,12 @@ to obtain
 \[
 W'(z)=\sum_{n=1}^\infty w_n'(z)
 \]
-$($where the derivatives at $z=z_1$ and $z=z_2$ are one-sided$)$
+(where the derivatives at $z=z_1$ and $z=z_2$ are one-sided)
 provided that $w_n'$ is continuous on $[z_1,z_2]$ and
 \[
 |w_n'(z)|\le M_n,\quad z_1\le z\le z_2,\quad n=1,2,3,\dots,
 \]
-where  $M_1,$ $M_2,$ \dots, $M_n,$ \dots, are constants such that the
+where  $M_1$, $M_2$, \dots, $M_n$, \dots, are constants such that the
 series
 $\sum_{n=1}^\infty M_n$ converges.
 \end{theorem}
@@ -323,7 +322,7 @@ where
 \[
 C(x)=\alpha_0+\sum_{n=1}^\infty \alpha_n\cos\frac{n\pi x}{L}
 \]
-is the Fourier cosine series of $f$ on $[0,L];$ that is$,$
+is the Fourier cosine series of $f$ on $[0,L]$; that is,
 \[
 \alpha_0=\frac{1}{L}\int_0^Lf(x)\,dx
 \quad\text{and}\quad
@@ -356,7 +355,7 @@ e^{-(2n-1)^2\pi^2a^2t/L^2}\cos\frac{(2n-1)\pi x}{L}.
 
 
  We  leave it to you (\zcref{exer:12.1.2})
-to use the method of separation of variables and Theorem~11.1.4
+to use the method of separation of variables and \zcref{thmtype:11.1.4}
 to motivate the next definition.
 
 \begin{definition}\label{thmtype:12.1.4}
@@ -377,7 +376,7 @@ where
 \[
 S_M(x)=\sum_{n=1}^\infty \alpha_n\sin\frac{(2n-1)\pi x}{2L}
 \]
-is the mixed Fourier sine series of $f$ on $[0,L];$ that is$,$
+is the mixed Fourier sine series of $f$ on $[0,L]$; that is,
 \[
 \alpha_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{(2n-1)\pi x}{2L}\,dx.
 \]
@@ -907,7 +906,7 @@ $u(x,0)=2x^2-x-2,\quad 0\le x\le 4$
 $u(0,t)=0,\quad u_x(1,t)=-\pi,\quad t>0$,\\
 $u(x,0)=2\sin\pi x,\quad 0\le x\le 1$
 
-\item\label{exer:12.1.53}$u_t=u_{xx}-6x,\quad 0<x<L,\quad t>0,$\\
+\item\label{exer:12.1.53}$u_t=u_{xx}-6x,\quad 0<x<L,\quad t>0$,\\
 $u(0,t)=3,\quad u_x(1,t)=2,\quad t>0$,\\
 $u(x,0)=x^3-x^2+x+3,\quad 0\le x\le 1$
 
@@ -1273,7 +1272,7 @@ and $-\infty<t<\infty$.
 
 \begin{theorem}\color{blue} \label{thmtype:12.2.2}
 If $f$ and $g$ are pieceswise smooth on $[0,L]$, then
-$u$ in $\eqref{eq:12.2.1}$ converges for all $(x,t),$
+$u$ in $\eqref{eq:12.2.1}$ converges for all $(x,t)$,
 and can be written as
 \begin{equation} \label{eq:12.2.9}
 u(x,t)=\frac{1}{2}[S_f(x+at)+S_f(x-at)]+
@@ -1282,7 +1281,7 @@ u(x,t)=\frac{1}{2}[S_f(x+at)+S_f(x-at)]+
 \end{theorem}
 
 
-\proof
+\begin{proof}
 Setting $A=n\pi x/L$ and $B=n\pi at/L$ in the  identities
 \[
 \sin A\cos B=\phantom{-}\frac{1}{2}[\sin(A+B)+\sin(A-B)]
@@ -1327,6 +1326,7 @@ term by term between any two limits,
 \end{align*}
 This and  \eqref{eq:12.2.12} imply \eqref{eq:12.2.9},
 which completes the proof.
+\end{proof}
 
 As we'll see below, if $S_g$ is differentiable and $S_f$
 is twice differentiable on $(-\infty,\infty)$, then
@@ -1337,7 +1337,7 @@ $S_f$ and $S_g$ to have these properties.
 
 \begin{theorem}\label{thmtype:12.2.3}
 Suppose $h$ is differentiable on $[0,L]$; that is,
-$h'(x)$ exists for $0<x<L,$ and the one-sided derivatives
+$h'(x)$ exists for $0<x<L$, and the one-sided derivatives
 \[
 h'_+(0)=\lim_{x\to0+}\frac{h(x)-h(0)}{x}
 \quad\text{and}\quad
@@ -1347,8 +1347,8 @@ both exist.
 
 \begin{alist}
 \item
-Let $p$ be the odd periodic extension of $h$ to $(-\infty,\infty);$
-that is$,$
+Let $p$ be the odd periodic extension of $h$ to $(-\infty,\infty)$;
+that is,
 \[
 p(x)=
 \begin{cases}
@@ -1365,8 +1365,8 @@ h(0)=h(L)=0.
 \end{equation}
 
 \item
-Let $q$ be the even periodic extension of $h$ to $(-\infty,\infty);$
-that is$,$
+Let $q$ be the even periodic extension of $h$ to $(-\infty,\infty)$;
+that is,
 \[
 q(x)=
 \begin{cases}
@@ -1406,26 +1406,26 @@ p'(2kL)=h_+'(0)\quad\text{and}\quad p'((2k-1)L)=h_-'(L)
 for every  $k$;  therefore, $p$ is differentiable on
 $(-\infty,\infty)$.
 
-\begin{figure}
-\color{blue}
+\noindent
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,keepaspectratio]{fig120203}
-\caption{The odd extension of a function that does
+\captionof{figure}{The odd extension of a function that does
 not satisfy \eqref{eq:12.2.13}}
   \label{figure:12.2.3}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,keepaspectratio]{fig120204}
-\caption{The odd extension of a function that satisfies \eqref{eq:12.2.13}}
+\captionof{figure}{The odd extension of a function that satisfies \eqref{eq:12.2.13}}
   \label{figure:12.2.4}
 \tagstructend
 \end{minipage}
-\end{figure}
 
 \item
 From \zcref{figure:12.2.5},
@@ -1441,28 +1441,27 @@ so $q$ is differentiable at $x=(2k-1)L$ if and only if $h'_-(L)=0$.
 Therefore
  $q$  is differentiable on $(-\infty,\infty)$
 if and only if $h'_+(0)=h'_-(L)=0$, as in \zcref{figure:12.2.6}.
-This completes the proof.
+This completes the proof.\\
 %
-\begin{figure}
-\color{blue}
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,keepaspectratio]{fig120205}
-\caption{The even extension of a function that doesn't
+\captionof{figure}{The even extension of a function that doesn't
  satisfy \eqref{eq:12.2.14}}
   \label{figure:12.2.5}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,keepaspectratio]{fig120206}
-\caption{The even extension of a function that satisfies \eqref{eq:12.2.14}}
+\captionof{figure}{The even extension of a function that satisfies \eqref{eq:12.2.14}}
   \label{figure:12.2.6}
 \tagstructend
 \end{minipage}
-\end{figure}
 %
 \end{alist}
 \end{proof}
@@ -1484,7 +1483,7 @@ f''_+(0)=f''_-(L)=0.
 \end{equation}
 \end{theorem}
 
-\proof
+\begin{proof}
 We first show that $S_g$ is differentiable and $S_f$
 is twice differentiable on $(-\infty,\infty)$. We'll then
 differentiate  \eqref{eq:12.2.9} twice with respect to $x$ and $t$
@@ -1508,9 +1507,6 @@ differentiable on $[0,L]$. Because of \eqref{eq:12.2.17},
 \zcref{thmtype:12.2.3}(b) with $h=f'$ and $q=S_f'$ implies that
 $S_f''$ exists on $(-\infty,\infty)$.
 
-
-
-
 Now we can differentiate \eqref{eq:12.2.9} twice with respect to $x$
 and $t$:
 \begin{align}
@@ -1530,7 +1526,6 @@ u_{tt}(x,t)&=\frac{a^2}{2}[S_f''(x+at)-S_f''(x-at)]+
 Comparing \eqref{eq:12.2.18}  and \eqref{eq:12.2.20} shows that
 $u_{tt}(x,t)=a^2u_{xx}(x,t)$ for all $(x,t)$.
 
-
 From \eqref{eq:12.2.8},  $u(0,t)=u(L,t)=0$
 for all $t$. From \eqref{eq:12.2.9},
 $u(x,0)=S_f(x)$ for all $x$, and therefore, in particular,
@@ -1544,7 +1539,7 @@ u_t(x,0)=g(x),\quad 0\le x< L.
 \]
 Therefore $u$ is an actual solution of \eqref{eq:12.2.1}.
 This completes the proof.
-
+\end{proof}
 
 \zcref{eq:12.2.9} is called
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/D'Alembert.html}
@@ -1603,14 +1598,13 @@ value problem.
 
 \medskip
 
-\color{blue}
-\remark
-{In solving a specific initial-boundary value problem \eqref{eq:12.2.1},
+\begin{remark*}
+In solving a specific initial-boundary value problem \eqref{eq:12.2.1},
 it's convenient to solve the problem with $g\equiv0$, then with
 $f\equiv0$, and add the solutions to obtain the solution of the given
 problem. Because of this, either $f\equiv0$ or $g\equiv0$ in all
-the specific initial-boundary value problems in the exercises.}
-\color{black}
+the specific initial-boundary value problems in the exercises.
+\end{remark*}
 
 
 \boxit{The Plucked String}
@@ -1705,26 +1699,26 @@ and only if
 $x$ isn't  an odd multiple of
 $L/2$.
 
-\begin{figure}
-\color{blue}
+\noindent
   \begin{minipage}[t]{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120208}
-\caption{The odd periodic extension of \eqref{eq:12.2.21}}
+\captionof{figure}{The odd periodic extension of \eqref{eq:12.2.21}}
   \label{figure:12.2.8}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}[t]{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120209}
-\caption{Graphs of $y=S_f(x-at)$ (dashed) and $y=S_f(x-at)$ (solid),
+\captionof{figure}{Graphs of $y=S_f(x-at)$ (dashed) and $y=S_f(x-at)$ (solid),
 with $f$ as in \eqref{eq:12.2.21}}
   \label{figure:12.2.9}
 \tagstructend
 \end{minipage}
-\end{figure}
 
 
 In \zcref{figure:12.2.9} the
@@ -1785,26 +1779,27 @@ if $(x,t)$ satisfies \eqref{eq:12.2.24}. \zcref[S]{figure:12.2.11}
 is the graph of this function on $[0,L]$ for a fixed $t$ in
 $(0,L/2a)$.
 
-\begin{figure}
-\color{blue}
+\noindent
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120210}
-\caption{The part of the graph from \zcref{figure:12.2.9} on $[0,L]$}
+\captionof{figure}{The part of the graph from \zcref{figure:12.2.9} on $[0,L]$}
   \label{figure:12.2.10}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120211}
-\caption{The graph of \eqref{eq:12.2.23} on $[0,L]$ for a fixed $t$ in
-$(0,L/2a)$}
+\captionof{figure}{The graph of \eqref{eq:12.2.23} on $[0,L]$ for a fixed $t$
+ in $(0,L/2a)$}
   \label{figure:12.2.11}
 \tagstructend
 \end{minipage}
-\end{figure}
+
 
 
 \technology
@@ -1832,7 +1827,7 @@ Let $m$  and $k$ be positive integers. Let
 t_j=\frac{2Lj}{ka},\quad j=0,1,\dots k;
 \]
 thus, $t_0$, $t_1$, \dots $t_k$ are equally spaced points in $[0,2L/a]$.
-For each $j=0$, $1$ ,$2$, \dots $k$, graph the partial sum
+For each $j=0$, $1$, $2$, \dots $k$, graph the partial sum
 \[
 u_m(x,t_j)=\sum_{n=1}^m\left(\alpha_n\cos\frac{n\pi at_j}{L}+\frac{\beta_nL}{n\pi a}\sin\frac{n\pi at_j}{L}\right)
 \sin\frac{n\pi x}{L}
@@ -2370,7 +2365,7 @@ where $\{k_n\}_{n=1}^\infty$ are constants.
 Show that if $\sum_{n=1}^\infty |k_n|$ converges
 then $u(x,t)$ converges for all $(x,t)$.
 \item % (b)
-Use Theorem~12.1.2 to
+Use \zcref{thmtype:12.1.2} to
 show that if $\sum_{n=1}^\infty n|k_n|$ converges then
 (A) can be differentiated term by term with respect to $x$
 and $t$ for all $(x,t)$; that is,
@@ -2561,25 +2556,25 @@ or a Neumann problem if
 (\zcref{figure:12.3.3}).
 The other 14 problems  are mixed.
 
-\begin{figure}
-\color{blue}
+\noindent
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=1.6in,keepaspectratio]{fig120302}
-\caption{A Dirichlet problem}
+\captionof{figure}{A Dirichlet problem}
   \label{figure:12.3.2}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=1.6in,keepaspectratio]{fig120303}
-\caption{A Neumann problem}
+\captionof{figure}{A Neumann problem}
   \label{figure:12.3.3}
 \tagstructend
 \end{minipage}
-\end{figure}
 
 For given $(\alpha,\beta,\gamma,\delta)$, the sum of
 solutions of
@@ -2786,25 +2781,25 @@ while \zcref{figure:12.3.6}  shows the curves
 u=u(x,0.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.
 \]
 
-\begin{figure}
-\color{blue}
+\noindent
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=1.6in,keepaspectratio]{fig120305}
-  \caption{}
+  \captionof{figure}{}
   \label{figure:12.3.5}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=1.6in,keepaspectratio]{fig120306}
-  \caption{}
+  \captionof{figure}{}
   \label{figure:12.3.6}
 \tagstructend
 \end{minipage}
-\end{figure}
 
 
 \begin{example}\label{example:12.3.3}
@@ -2933,25 +2928,25 @@ while \zcref{figure:12.3.9}  shows the curves
 u=u(x,.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.
 \]
 
-\begin{figure}
-\color{blue}
+\noindent
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120308}
-  \caption{}
+  \captionof{figure}{}
   \label{figure:12.3.8}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
+\color{blue}
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120309}
-  \caption{}
+  \captionof{figure}{}
   \label{figure:12.3.9}
 \tagstructend
 \end{minipage}
-\end{figure}
 
 
 \begin{example}\label{example:12.3.5}
@@ -3271,78 +3266,78 @@ $u=u(x,y)$, $0\le x\le a$, $0\le y\le b$.
 
 \begin{exerciselist}
 
-\item\label{exer:12.3.1}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1,$\\
-$u(x,0)=x(1-x),\quad u(x,1)=0,\quad 0\le x\le 1,$\\
+\item\label{exer:12.3.1}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1$,\\
+$u(x,0)=x(1-x),\quad u(x,1)=0,\quad 0\le x\le 1$,\\
 $u(0,y)=0,\quad u(1,y)=0,\quad 0\le y\le 1$
 
-\item\label{exer:12.3.2}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<3,$\\
-$u(x,0)=x^2(2-x),\quad u(x,3)=0,\quad 0\le x\le 2,$\\
+\item\label{exer:12.3.2}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<3$,\\
+$u(x,0)=x^2(2-x),\quad u(x,3)=0,\quad 0\le x\le 2$,\\
 $u(0,y)=0,\quad u(2,y)=0,\quad 0\le y\le 3$
 
 \item\label{exer:12.3.3}\Cex
-$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2,$\\
+$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2$,\\
 $u(x,0)=
 \begin{cases}
 x,& 0\le x\le 1,\\
 2-x,&1\le x\le2,
 \end{cases}
-\quad u(x,2)=0,\quad 0\le x\le 2,$\\
+\quad u(x,2)=0,\quad 0\le x\le 2$,\\
 $u(0,y)=0,\quad u(2,y)=0,\quad 0\le y\le 2$
 
-\item\label{exer:12.3.4}$u_{xx}+u_{yy}=0,\quad 0<x<\pi,\quad  0<y<1,$\\
-$u(x,0)=x\sin x,\quad u(x,\pi)=0,\quad 0\le x\le \pi,$\\
+\item\label{exer:12.3.4}$u_{xx}+u_{yy}=0,\quad 0<x<\pi,\quad  0<y<1$,\\
+$u(x,0)=x\sin x,\quad u(x,\pi)=0,\quad 0\le x\le \pi$,\\
 $u(0,y)=0,\quad u(\pi,y)=0,\quad 0\le y\le 1$
 
-\item\label{exer:12.3.5}$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<2,$\\
-$u(x,0)=0,\quad u_y(x,2)=x^2,\quad 0\le x\le 3,$\\
+\item\label{exer:12.3.5}$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<2$,\\
+$u(x,0)=0,\quad u_y(x,2)=x^2,\quad 0\le x\le 3$,\\
 $u_x(0,y)=0,\quad u_x(3,y)=0,\quad 0\le y\le 2$
 
-\item\label{exer:12.3.6}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<2,$\\
-$u(x,0)=0,\quad u_y(x,2)=1-x,\quad 0\le x\le 1,$\\
+\item\label{exer:12.3.6}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<2$,\\
+$u(x,0)=0,\quad u_y(x,2)=1-x,\quad 0\le x\le 1$,\\
 $u_x(0,y)=0,\quad u_x(1,y)=0,\quad 0\le y\le 2$
 
 
-\item\label{exer:12.3.7}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2,$\\
-$u(x,0)=0,\quad u_y(x,2)=x^2-4,\quad 0\le x\le 2,$\\
+\item\label{exer:12.3.7}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2$,\\
+$u(x,0)=0,\quad u_y(x,2)=x^2-4,\quad 0\le x\le 2$,\\
 $u_x(0,y)=0,\quad u_x(2,y)=0,\quad 0\le y\le 2$
 
 
-\item\label{exer:12.3.8}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1,$\\
-$u(x,0)=0,\quad u_y(x,1)=(x-1)^2,\quad 0\le x\le 1,$\\
+\item\label{exer:12.3.8}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1$,\\
+$u(x,0)=0,\quad u_y(x,1)=(x-1)^2,\quad 0\le x\le 1$,\\
 $u_x(0,y)=0,\quad u_x(1,y)=0,\quad 0\le y\le 1$
 
 \item\label{exer:12.3.9}\Cex
-$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<2,$\\
-$u(x,0)=0,\quad u_y(x,2)=0,\quad 0\le x\le 3,$\\
+$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<2$,\\
+$u(x,0)=0,\quad u_y(x,2)=0,\quad 0\le x\le 3$,\\
 $u(0,y)=y(4-y),\quad u_x(3,y)=0,\quad 0\le y\le 2$
 
-\item\label{exer:12.3.10}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<1,$\\
-$u(x,0)=0,\quad u_y(x,1)=0,\quad 0\le x\le 2,$\\
+\item\label{exer:12.3.10}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<1$,\\
+$u(x,0)=0,\quad u_y(x,1)=0,\quad 0\le x\le 2$,\\
 $u(0,y)=y^2(3-2y),\quad u_x(2,y)=0,\quad 0\le y\le 1$
 
-\item\label{exer:12.3.11}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2,$\\
-$u(x,0)=0,\quad u_y(x,2)=0,\quad 0\le x\le 2,$\\
+\item\label{exer:12.3.11}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<2$,\\
+$u(x,0)=0,\quad u_y(x,2)=0,\quad 0\le x\le 2$,\\
 $u(0,y)=(y-2)^3+8,\quad u_x(2,y)=0,\quad 0\le y\le 2$
 
-\item\label{exer:12.3.12}$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<1,$\\
-$u(x,0)=0,\quad u_y(x,1)=0,\quad 0\le x\le 3,$\\
+\item\label{exer:12.3.12}$u_{xx}+u_{yy}=0,\quad 0<x<3,\quad  0<y<1$,\\
+$u(x,0)=0,\quad u_y(x,1)=0,\quad 0\le x\le 3$,\\
 $u(0,y)=y(2y^2-9y+12),\quad u_x(3,y)=0,\quad 0\le y\le 1$
 
 \item\label{exer:12.3.13}\Cex
-$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<\pi,$\\
-$u_y(x,0)=0,\quad u(x,\pi)=0,\quad 0\le x\le 1,$\\
+$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<\pi$,\\
+$u_y(x,0)=0,\quad u(x,\pi)=0,\quad 0\le x\le 1$,\\
 $u_x(0,y)=0,\quad u_x(1,y)=\sin y,\quad 0\le y\le \pi$
 
-\item\label{exer:12.3.14}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<3,$\\
-$u_y(x,0)=0,\quad u(x,3)=0,\quad 0\le x\le 2,$\\
+\item\label{exer:12.3.14}$u_{xx}+u_{yy}=0,\quad 0<x<2,\quad  0<y<3$,\\
+$u_y(x,0)=0,\quad u(x,3)=0,\quad 0\le x\le 2$,\\
 $u_x(0,y)=0,\quad u_x(2,y)=y(3-y),\quad 0\le y\le 3$
 
-\item\label{exer:12.3.15}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<\pi,$\\
-$u_y(x,0)=0,\quad u(x,\pi)=0,\quad 0\le x\le 1,$\\
+\item\label{exer:12.3.15}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<\pi$,\\
+$u_y(x,0)=0,\quad u(x,\pi)=0,\quad 0\le x\le 1$,\\
 $u_x(0,y)=0,\quad u_x(1,y)=\pi^2-y^2,\quad 0\le y\le \pi$
 
-\item\label{exer:12.3.16}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1,$\\
-$u_y(x,0)=0,\quad u(x,1)=0,\quad 0\le x\le 1,$\\
+\item\label{exer:12.3.16}$u_{xx}+u_{yy}=0,\quad 0<x<1,\quad  0<y<1$,\\
+$u_y(x,0)=0,\quad u(x,1)=0,\quad 0\le x\le 1$,\\
 $u_x(0,y)=0,\quad u_x(1,y)=1-y^3,\quad 0\le y\le 1$
 
 \exercisetext{In
@@ -3637,7 +3632,7 @@ Since we don't want  $R\Theta$ to be identically zero,
 $\lambda$ must be an eigenvalue of \eqref{eq:12.4.4} and $\Theta$
 must be an associated eigenfunction. From \zcref{thmtype:11.1.6},
 the eigenvalues of \eqref{eq:12.4.4} are $\lambda_0=0$ with
-associated eigenfunctions $\Theta_0=1$ and, for $n=1,2,3,\dots,$
+associated eigenfunctions $\Theta_0=1$ and, for $n=1,2,3,\dots$,
 $\lambda_n=n^2$,
 with associated eigenfunction $\cos n\theta$ and $\sin n\theta$
 therefore,

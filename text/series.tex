@@ -119,7 +119,7 @@ An infinite series of the form
 \begin{equation} \label{eq:7.1.1}
 \sum_{n=0}^\infty a_n(x-x_0)^n,
 \end{equation}
-where $x_0$ and $a_0$, $a_1,$ \dots, $a_n,$ \dots\ are constants, is
+where $x_0$ and $a_0$, $a_1$, \dots, $a_n$, \dots\ are constants, is
 called a
 \emph{\color{blue}power series in} $x-x_0$. We say that the power series
 \eqref{eq:7.1.1} \emph{\color{blue}converges} for a given $x$ if the limit
@@ -128,7 +128,7 @@ called a
 \sum_{n=0}^Na_n(x-x_0)^n
 \]
 exists; otherwise, we say that the power series \emph{\color{blue}diverges}
-for the given $x.$
+for the given $x$.
 \end{definition}
 
 A power series in $x-x_0$ must converge if $x=x_0$, since the positive
@@ -197,9 +197,9 @@ $n\ge N$ and
 \[
 \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=L,
 \]
-where $0\le L\le\infty.$ Then the radius of convergence of
-$\sum_{n=0}^\infty a_n(x-x_0)^n$ is $R=1/ L,$ which should be interpreted
-to mean that $R=0$ if $L=\infty,$ or $R=\infty$ if $L=0.$
+where $0\le L\le\infty$. Then the radius of convergence of
+$\sum_{n=0}^\infty a_n(x-x_0)^n$ is $R=1/ L$, which should be interpreted
+to mean that $R=0$ if $L=\infty$, or $R=\infty$ if $L=0$.
 \end{theorem}
 
 \begin{example} \label{example:7.1.1}
@@ -357,7 +357,7 @@ If
 \[
 \sum_{n=0}^\infty a_n(x-x_0)^n=\sum_{n=0}^\infty b_n(x-x_0)^n
 \]
-for all $x$  in an open interval that contains $x_0,$ then
+for all $x$  in an open interval that contains $x_0$, then
 $a_n=b_n$ for $n=0$, $1$, $2$, \dots.
 \item % (b)
 If
@@ -365,7 +365,7 @@ If
 \sum_{n=0}^\infty a_n(x-x_0)^n=0
 \]
  for all $x$ in
-an open interval that contains $x_0,$ then $a_n=0$ for
+an open interval that contains $x_0$, then $a_n=0$ for
 $n=0$, $1$, $2$, \dots.
 \end{alist}
 \end{theorem}
@@ -995,7 +995,7 @@ We state the next theorem without proof.
 \begin{theorem}\label{thmtype:7.2.1}
 Suppose $P_0$, $P_1$, and $P_2$ are polynomials with no common
 factor and $P_0$ isn't  identically zero. Let $x_0$ be a point such
-that $P_0(x_0)\ne0,$ and let $\rho$ be the distance from $x_0$ to the
+that $P_0(x_0)\ne0$, and let $\rho$ be the distance from $x_0$ to the
 nearest zero of $P_0$ in the complex plane. (If $P_0$ is constant,
 then $\rho=\infty$.) Then every solution of
 \begin{equation}\label{eq:7.2.5}
@@ -1008,7 +1008,7 @@ y=\sum_{n=0}^\infty a_n(x-x_0)^n
 that converges at least on the open interval $(x_0-\rho,x_0+\rho)$.
 (If $P_0$ is nonconstant, so that $\rho$ is necessarily finite,
 then the open interval of convergence of $\eqref{eq:7.2.6}$ may be larger
-than $(x_0-\rho,x_0+\rho).$ If $P_0$ is constant then $\rho=\infty$
+than $(x_0-\rho,x_0+\rho)$. If $P_0$ is constant then $\rho=\infty$
 and $(x_0-\rho,x_0+\rho)=(-\infty,\infty)$.)
 \end{theorem}
 
@@ -2796,7 +2796,7 @@ x^2\frac{d^2y}{dx^2}=\frac{d^2Y}{dt^2}-\frac{dY}{dt}.
 \]
 Substituting this and \eqref{eq:7.4.14} into \eqref{eq:7.4.12} yields
 \eqref{eq:7.4.13}. Since \eqref{eq:7.4.11} is the characteristic equation of
-\eqref{eq:7.4.13}, Theorem~5.2.1 implies that the general solution
+\eqref{eq:7.4.13}, \zcref{thmtype:5.2.1} implies that the general solution
 of \eqref{eq:7.4.13} on $(-\infty,\infty)$ is
 \[
 Y(t)=\begin{cases}
@@ -3056,7 +3056,7 @@ converges on $(0,\rho)$.
 \begin{equation} \label{eq:7.5.4}
 Ly=\sum_{n=0}^\infty b_nx^{n+r}
 \end{equation}
-on $(0,\rho),$
+on $(0,\rho)$,
 where
 \begin{equation} \label{eq:7.5.5}
 \begin{aligned}
@@ -3168,14 +3168,14 @@ Ly=
 x^2(\alpha_0+\alpha_1x+\alpha_2x^2)y''+x(\beta_0+\beta_1x+\beta_2x^2)y'
 +(\gamma_0+\gamma_1x+\gamma_2x^2)y,
 \]
-where $\alpha_0\ne0,$ and define
+where $\alpha_0\ne0$, and define
 \begin{align*}
 p_0(r)&=\alpha_0r(r-1)+\beta_0r+\gamma_0,\\
 p_1(r)&=\alpha_1r(r-1)+\beta_1r+\gamma_1,\\
 p_2(r)&=\alpha_2r(r-1)+\beta_2r+\gamma_2.
 \end{align*}
  Suppose $r$ is a real number such that $p_0(n+r)$ is nonzero
-for all positive integers $n.$ Define
+for all positive integers $n$. Define
 \begin{equation} \label{eq:7.5.12}
 \begin{aligned}
 a_0(r)&=1,\\
@@ -3191,7 +3191,7 @@ converges and satisfies
 \begin{equation} \label{eq:7.5.14}
 Ly(x,r)=p_0(r)x^r
 \end{equation}
-on the interval $(0,\rho),$ where
+on the interval $(0,\rho)$, where
  $\rho$ is the distance from the origin to the
 nearest zero of $A(x)=\alpha_0+\alpha_1 x+\alpha_2 x^2$ in the complex
 plane.
@@ -3205,7 +3205,7 @@ $b_0=p_0(r)$ and $b_n=0$ for $n\ge1$, so \eqref{eq:7.5.4} reduces to
 \eqref{eq:7.5.14}. We omit the proof that the series \eqref{eq:7.5.13}
 converges on  $(0,\rho)$.\bbox
 
-If $\alpha_i=\beta_i=\gamma_i=0$ for $i=1$, $2,$ then $Ly=0$ reduces to
+If $\alpha_i=\beta_i=\gamma_i=0$ for $i=1$, $2$, then $Ly=0$ reduces to
 the Euler equation
 \[
 \alpha_0x^2y''+\beta_0xy'+\gamma_0y=0.
@@ -3224,8 +3224,8 @@ indicial equation has real roots $r_1$ and $r_2$, with $r_1\ge r_2$.
 \begin{theorem}\label{thmtype:7.5.3}
 Let $L$ and $\{a_n(r)\}$ be as in \zcref{thmtype:7.5.2}, and
 suppose the
-indicial equation $p_0(r)=0$ of $Ly=0$ has real roots $r_1$ and $r_2,$
-where $r_1\ge r_2.$ Then
+indicial equation $p_0(r)=0$ of $Ly=0$ has real roots $r_1$ and $r_2$,
+where $r_1\ge r_2$. Then
 \[
 y_1(x)=y(x,r_1)=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n
 \]
@@ -3234,7 +3234,7 @@ integer then
 \[
 y_2(x)=y(x,r_2)=x^{r_2}\sum_{n=0}^\infty a_n(r_2)x^n
 \]
-is also a Frobenius solution of $Ly=0,$
+is also a Frobenius solution of $Ly=0$,
 and $\{y_1,y_2\}$ is a fundamental set of solutions.
 \end{theorem}
 
@@ -3524,8 +3524,7 @@ is a Frobenius solution of \eqref{eq:7.5.25} and $\{y_1,y_2\}$ is a
 fundamental set of solutions.
 
 
-\color{blue}
-\remark{
+\begin{remark*}
 Thus far, we considered only the case where the indicial equation
 has real roots that don't differ by an integer, which allows us to
 apply \zcref{thmtype:7.5.3}. However, for equations of the form
@@ -3536,8 +3535,8 @@ shown (\zcref{exer:7.5.56}) that in this case
 y_1=x^{r_1}\sum_{m=0}^\infty a_{2m}(r_1)x^{2m}\quad\text{and}\quad
 y_2=x^{r_2}\sum_{m=0}^\infty a_{2m}(r_2)x^{2m}
 \]
-form a fundamental set  Frobenius solutions of \eqref{eq:7.5.23}}.
-\color{black}
+form a fundamental set  Frobenius solutions of \eqref{eq:7.5.23}.
+\end{remark*}
 
 \technology
 \medskip
@@ -4277,7 +4276,7 @@ which is equivalent to \eqref{eq:7.6.6}.
 
 \begin{theorem}\label{thmtype:7.6.2}
 Let $L$ be as in \zcref{thmtype:7.6.1} and suppose the
-indicial equation $p_0(r)=0$ has a repeated real root $r_1.$
+indicial equation $p_0(r)=0$ has a repeated real root $r_1$.
 Then
 \[
 y_1(x)=y(x,r_1)=x^{r_1}\sum_{n=0}^\infty a_n(r_1)x^n
@@ -4287,7 +4286,7 @@ and
 y_2(x)=\frac{\partial y}{\partial r}(x,r_1)=y_1(x)\ln
 x+x^{r_1}\sum_{n=1}^\infty a_n'(r_1)x^n
 \end{equation}
-form a fundamental set of solutions of $Ly=0.$
+form a fundamental set of solutions of $Ly=0$.
 \end{theorem}
 
 \begin{proof}
@@ -5112,13 +5111,13 @@ Ly=
 x^2(\alpha_0+\alpha_1x)y''+x(\beta_0+\beta_1x)y'
 +(\gamma_0+\gamma_1x)y,
 \]
-where $\alpha_0\ne0,$ and  define
+where $\alpha_0\ne0$, and  define
 \begin{align*}
 p_0(r)&=\alpha_0r(r-1)+\beta_0r+\gamma_0,\\[5pt]
 p_1(r)&=\alpha_1r(r-1)+\beta_1r+\gamma_1.
 \end{align*}
 Suppose   $r$ is a real number such that $p_0(n+r)$ is nonzero
-for all positive integers $n,$ and  define
+for all positive integers $n$, and  define
 \begin{equation} \label{eq:7.7.2}
 \begin{aligned}
 a_0(r)&=1,\\
@@ -5126,7 +5125,7 @@ a_n(r)&=-\dfrac{p_1(n+r-1)}{p_0(n+r)}a_{n-1}(r),\quad n\ge1.
 \end{aligned}
 \end{equation}
 Let $r_1$ and $r_2$ be the roots of the indicial equation
-$p_0(r)=0,$ and suppose $r_1=r_2+k,$ where $k$ is a positive
+$p_0(r)=0$, and suppose $r_1=r_2+k$, where $k$ is a positive
 integer. Then
 \[
 y_1=x^{r_1}\sum_{n=0}^\infty  a_n(r_1)x^n
@@ -5149,7 +5148,7 @@ then
 y_2=x^{r_2}\sum_{n=0}^{k-1}a_n(r_2)x^n+C\left(y_1\ln
 x+x^{r_1}\sum_{n=1}^\infty a_n'(r_1)x^n\right)
 \end{equation}
-is also a   solution of $Ly=0,$ and $\{y_1,y_2\}$
+is also a   solution of $Ly=0$, and $\{y_1,y_2\}$
 is a fundamental set of  solutions.
 \end{theorem}
 
@@ -5459,13 +5458,13 @@ Ly=
 x^2(\alpha_0+\alpha_2x^2)y''+x(\beta_0+\beta_2x^2)y'
 +(\gamma_0+\gamma_2x^2)y,
 \]
-where $\alpha_0\ne0,$ and  define
+where $\alpha_0\ne0$, and  define
 \begin{align*}
 p_0(r)&=\alpha_0r(r-1)+\beta_0r+\gamma_0,\\[5pt]
 p_2(r)&=\alpha_2r(r-1)+\beta_2r+\gamma_2.
 \end{align*}
 Suppose    $r$ is a real number such that $p_0(2m+r)$ is nonzero
-for all positive integers $m,$ and  define
+for all positive integers $m$, and  define
 \begin{equation} \label{eq:7.7.22}
 \begin{aligned}
 a_0(r)&=1,\\
@@ -5473,7 +5472,7 @@ a_{2m}(r)&=-\dfrac{p_2(2m+r-2)}{p_0(2m+r)}a_{2m-2}(r),\quad m\ge1.
 \end{aligned}
 \end{equation}
 Let $r_1$ and $r_2$ be the roots of the indicial equation
-$p_0(r)=0,$ and suppose   $r_1=r_2+2k,$ where $k$ is a positive
+$p_0(r)=0$, and suppose   $r_1=r_2+2k$, where $k$ is a positive
 integer.  Then
 \[
 y_1=x^{r_1}\sum_{m=0}^\infty  a_{2m}(r_1)x^{2m}
@@ -5494,7 +5493,7 @@ then
 y_2=x^{r_2}\sum_{m=0}^{k-1}a_{2m}(r_2)x^{2m}+C\left(y_1\ln
 x+x^{r_1}\sum_{m=1}^\infty a_{2m}'(r_1)x^{2m}\right)
 \end{equation}
-is also a   solution of $Ly=0,$ and $\{y_1,y_2\}$
+is also a   solution of $Ly=0$, and $\{y_1,y_2\}$
 is a fundamental set of  solutions.
 \end{theorem}
 

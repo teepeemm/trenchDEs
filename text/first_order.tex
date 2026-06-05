@@ -1,4 +1,3 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{First Order Equations}\label{ch:first_order}
@@ -343,7 +342,7 @@ The results in Examples~\ref{example:2.1.3}(a) and \ref{example:2.1.4}(b)
 are special cases of the next theorem.
 
 \begin{theorem}\label{thmtype:2.1.1}
-If $p$ is continuous on $(a,b),$ then the general solution
+If $p$ is continuous on $(a,b)$, then the general solution
 of the homogeneous equation
 \begin{equation}\label{eq:2.1.12}
 y'+p(x)y=0
@@ -356,7 +355,7 @@ where
 \begin{equation}\label{eq:2.1.13}
 P(x)=\int p(x)\,dx
 \end{equation}
-is any antiderivative of $p$ on $(a,b);$ that is$,$
+is any antiderivative of $p$ on $(a,b)$; that is,
 \begin{equation}\label{eq:2.1.14}
 P'(x)=p(x),\quad a<x<b.
 \end{equation}
@@ -401,15 +400,14 @@ c=\begin{cases}
 \]
 \end{proof}
 
-{
-\color{blue}
-\remark{Rewriting a first order differential equation so that one
+\begin{remark*}
+Rewriting a first order differential equation so that one
 side depends only on $y$ and $y'$ and the other depends only on $x$
 is called \emph{\color{blue}separation of variables}. We did this in
 \zcref{example:2.1.3,example:2.1.4}, and in rewriting
 \eqref{eq:2.1.12} as \eqref{eq:2.1.15}. We'll apply this method to nonlinear
-equations in \zcref{sec:separable}.}
-}
+equations in \zcref{sec:separable}.
+\end{remark*}
 
 \boxit{Linear Nonhomogeneous First Order Equations}
 
@@ -591,9 +589,8 @@ $y'+(\cot x)y=x\csc x, y(\pi/2)=1$}
   \label{figure:2.1.4}
 \end{figure}
 
-{
-\color{blue}
-\remark{It wasn't necessary to do the computations
+\begin{remark*}
+It wasn't necessary to do the computations
 \eqref{eq:2.1.23} and \eqref{eq:2.1.24} in
 \zcref{example:2.1.6}, since we showed in the discussion preceding
 \zcref{example:2.1.5} that if $y=uy_1$ where $y_1'+p(x)y_1=0$,
@@ -601,8 +598,8 @@ then
 $y'+p(x)y=u'y_1$. We did these computations so you would see this
 happen in this specific example. We recommend that you include these
 ``unnecessary'' computations in doing exercises, until you're confident
-that you really understand the method. After that, omit them.}
-}
+that you really understand the method. After that, omit them.
+\end{remark*}
 
 \medskip
 
@@ -711,7 +708,7 @@ y=e^{x^2}\left(y_0 +\int^x_0 e^{-t^2}dt\right).
 For a given value of $y_0$ and each fixed $x$, the integral on the
 right can be evaluated by numerical methods. An alternate procedure is
 to apply the numerical integration procedures discussed in
-Chapter~3 directly to the initial value problem
+\zcref{ch:numerical} directly to the initial value problem
 \eqref{eq:2.1.28}.
 \zcref[S]{figure:2.1.5} shows graphs of
  of \eqref{eq:2.1.30} for several values of $y_0$.
@@ -732,7 +729,7 @@ Chapter~3 directly to the initial value problem
 The method of variation of parameters leads to this theorem.
 
 \begin{theorem}\label{thmtype:2.1.2}
-Suppose $p$ and $f$ are continuous on an open interval $(a,b),$  and let $y_1$
+Suppose $p$ and $f$ are continuous on an open interval $(a,b)$,  and let $y_1$
 be any nontrivial solution of the complementary equation
 \[
 y'+p(x)y=0
@@ -750,7 +747,7 @@ y=y_1(x)\left(c +\int f(x)/y_1(x)\,dx\right).
 \end{equation}
 \item % (b)
 If $x_0$ is an arbitrary point in $(a,b)$ and $y_0$ is an arbitrary
-real number$,$ then the initial value problem
+real number, then the initial value problem
 \[
 y'+p(x)y=f(x),\quad y(x_0)=y_0
 \]
@@ -758,7 +755,7 @@ y'+p(x)y=f(x),\quad y(x_0)=y_0
 \[
 y=y_1(x)\left(\frac{y_0}{y_1(x_0)} +\int^x_{x_0} \frac{f(t)}{y_1(t)}\, dt\right)
 \]
-on $(a,b).$
+on $(a,b)$.
 \end{alist}
 \end{theorem}
 
@@ -917,8 +914,8 @@ the initial value problem.}
 
 \exercisetext{In \zcref[range]{exer:2.1.38,exer:2.1.42} solve
 the initial value problem and leave the answer in a form involving a
-definite integral. $($You can solve these problems numerically by
-methods discussed in Chapter~3.$)$}
+definite integral. (You can solve these problems numerically by
+methods discussed in \zcref{ch:numerical}.)}
 
 \item\label{exer:2.1.38}$y'+2xy=x^2,\quad y(0)=3$
 
@@ -1259,15 +1256,15 @@ theorem}.
 
 \begin{theorem}\label{thmtype:2.2.1}
 Suppose $g=g(x)$ is continuous on $(a,b)$ and $h=h(y)$
-are continuous on $(c,d).$ Let $G$ be an antiderivative of
-$g$ on $(a,b)$ and let $H$ be an antiderivative of $h$ on $(c,d).$
-Let $x_0$ be an arbitrary point in $(a,b),$ let $y_0$
-be a point in $(c,d)$ such that $h(y_0)\ne0,$ and define
+are continuous on $(c,d)$. Let $G$ be an antiderivative of
+$g$ on $(a,b)$ and let $H$ be an antiderivative of $h$ on $(c,d)$.
+Let $x_0$ be an arbitrary point in $(a,b)$, let $y_0$
+be a point in $(c,d)$ such that $h(y_0)\ne0$, and define
 \begin{equation} \label{eq:2.2.10}
 c=H(y_0)-G(x_0).
 \end{equation}
 Then there's a function $y=y(x)$ defined on some open interval
-$(a_1,b_1),$ where $a\le a_1<x_0<b_1\le b,$ such that  $y(x_0)=y_0$
+$(a_1,b_1)$, where $a\le a_1<x_0<b_1\le b$, such that  $y(x_0)=y_0$
 and
 \begin{equation} \label{eq:2.2.11}
 H(y)=G(x)+c
@@ -1841,7 +1838,7 @@ then  the initial value problem
 y'=f(x,y), \quad y(x_0)=y_0
 \end{equation}
  has at least one solution  on some open subinterval
-of  $(a,b)$ that contains $x_0.$
+of  $(a,b)$ that contains $x_0$.
 
 \item % (b)
  If  both $f$ and  $f_y$ are
@@ -2224,7 +2221,7 @@ contains $x_0$.}
 y'+p(x)y = q(x), \quad y(x_0)=y_0
 \]
 for a linear equation, and compare the conclusions that can be drawn
-from it to those that follow from Theorem 2.1.2.
+from it to those that follow from \zcref{thmtype:2.1.2}.
 
 \item\label{exer:2.3.15}\begin{alist}[above=-\baselineskip]
 \item %(a)
@@ -3201,7 +3198,7 @@ This motivates the next theorem, which we state without proof.
 \begin{theorem}[The Exactness Condition]\label{thmtype:2.5.2}
 Suppose  $M$ and
 $N$ are continuous and have continuous partial derivatives
-$M_y$ and $N_x$ on an open rectangle $R.$ Then
+$M_y$ and $N_x$ on an open rectangle $R$. Then
 \[
 M(x,y)\,dx+N(x,y)\,dy=0
 \]
@@ -3209,7 +3206,7 @@ is exact on $R$ if and only if
 \begin{equation} \label{eq:2.5.12}
 M_y(x,y)=N_x(x,y)
 \end{equation}
-for all $(x,y)$ in  $R.$.
+for all $(x,y)$ in  $R$.
 \end{theorem}
 
 To help you  remember the exactness condition, observe
@@ -3659,7 +3656,7 @@ $(\ln xy+2y\sin x)\,dx+N(x,y)\,dy=0$
 $(x\sin x+y\sin y)\,dx+N(x,y)\,dy=0$
 \end{alist}
 
-\item\label{exer:2.5.31}Suppose $M,N,$ and their partial derivatives are continuous on
+\item\label{exer:2.5.31}Suppose $M,N$, and their partial derivatives are continuous on
 an open rectangle
 $R$, and $G$ is an antiderivative of $M$ with respect to $x$; that is,
 \[
@@ -3895,8 +3892,8 @@ depends on only one of the independent variables $x$ and $y$, and for
 finding an integrating factor in this case.
 
 \begin{theorem}\label{thmtype:2.6.1}
-Let $M,$ $N,$ $M_y,$ and $N_x$ be continuous on an open rectangle $R.$
-Then$:$
+Let $M$, $N$, $M_y$, and $N_x$ be continuous on an open rectangle $R$.
+Then:
 \begin{alist}
 \item % (a)
  If $(M_y-N_x)/N$ is independent
@@ -3912,7 +3909,7 @@ is an integrating factor for
 \begin{equation}\label{eq:2.6.11}
 M(x,y)\,dx+N(x,y)\,dy=0
 \end{equation}
-on $R.$
+on $R$.
 \item % (b)
 If $(N_x-M_y)/M$ is independent of $x$ on
 $R$ and we define
@@ -3923,7 +3920,7 @@ then
 \begin{equation}\label{eq:2.6.12}
 \mu(y)=\pm e^{\int q(y)\,dy}
 \end{equation}
- is an integrating factor for \eqref{eq:2.6.11} on $R.$
+ is an integrating factor for \eqref{eq:2.6.11} on $R$.
 \end{alist}
 \end{theorem}
 

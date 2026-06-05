@@ -1,4 +1,3 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 % THIS FILE STILL NEEDS ALT TEXT RELATING TO GIBBS PHENOMENA
@@ -236,7 +235,7 @@ The eigenvalue problem
 y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0
 \]
 has infinitely many positive eigenvalues
-$\lambda_n=(2n-1)^2\pi^2/4L^2,$ with associated eigenfunctions
+$\lambda_n=(2n-1)^2\pi^2/4L^2$, with associated eigenfunctions
 \[
 y_n=\sin\frac{(2n-1)\pi x}{2L},\quad n=1,2,3,\dots.
 \]
@@ -254,7 +253,7 @@ The eigenvalue problem
 y''+\lambda y=0,\quad y'(0)=0,\quad y(L)=0
 \]
 has infinitely many positive eigenvalues
-$\lambda_n=(2n-1)^2\pi^2/4L^2,$ with associated eigenfunctions
+$\lambda_n=(2n-1)^2\pi^2/4L^2$, with associated eigenfunctions
 \[
 y_n=\cos\frac{(2n-1)\pi x}{2L},\quad n=1,2,3,\dots.
 \]
@@ -327,7 +326,7 @@ y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L),
 \]
 has the eigenvalue $\lambda_0=0$, with associated eigenfunction $y_0=1$
 and  infinitely many positive eigenvalues
-$\lambda_n=n^2\pi^2/L^2,$
+$\lambda_n=n^2\pi^2/L^2$,
 with associated eigenfunctions
 \[
 y_{1n}=\cos \frac{n\pi x}{L}
@@ -552,12 +551,12 @@ $\phi_3$, \dots, are orthogonal on $[a,b]$ and
 \begin{equation} \label{eq:11.2.1}
 \int_a^b\phi_n^2(x)\,dx\ne0,\quad n=1,2,3,\dots.
 \end{equation}
-Let $c_1,$ $c_2,$ $c_3,$\dots  be constants such that the partial sums
+Let $c_1$, $c_2$, $c_3$,\dots  be constants such that the partial sums
 $f_N(x)=\sum_{m=1}^N c_m\phi_m(x)$ satisfy the inequalities
 \[
 |f_N(x)|\le M,\quad a\le x\le b,\quad N=1,2,3,\dots
 \]
-for some constant $M<\infty.$ Suppose  also that
+for some constant $M<\infty$. Suppose  also that
 the series
 \begin{equation} \label{eq:11.2.2}
 f(x)=\sum_{m=1}^\infty c_m\phi_m(x)
@@ -604,7 +603,7 @@ Suppose
 $\phi_1$, $\phi_2$, \dots, $\phi_n$,\dots are
 orthogonal on $[a,b]$ and
 $\int_a^b\phi_n^2(x)\,dx\ne0$, $n=1$, $2$, $3$, \dots. Let
-$f$ be integrable on $[a,b],$ and define
+$f$ be integrable on $[a,b]$, and define
 \begin{equation} \label{eq:11.2.6}
 c_n=\frac{\dst\int_a^bf(x)\phi_n(x)\,dx}{\dst\int_a^b\phi_n^2(x)\,dx},\quad
 n=1,2,3,\dots.
@@ -729,7 +728,7 @@ F(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos\frac{n\pi x}{L}+b_n\sin\frac{n\pi
 x}{L}\right)
 \end{equation}
 of $f$
-on $[-L,L]$ converges for all $x$ in $[-L,L];$ moreover,
+on $[-L,L]$ converges for all $x$ in $[-L,L]$; moreover,
 \[
 F(x)=
 \begin{cases}
@@ -945,14 +944,14 @@ calculus, and the other parts follow from them
 \begin{theorem}\label{thmtype:11.2.5}
 Suppose $u$ is even and $v$ is odd on $[-L,L]$. Then:
 \begin{enumext*}[label=\alph*,wrap-label={(#1)},columns=2,labelwidth=2em]
-\item $\dst\int_{-L}^L u(x)\,dx=2\int_0^Lu(x) \,dx,$
-\item $\dst\int_{-L}^L v(x)\,dx=0,$
+\item $\dst\int_{-L}^L u(x)\,dx=2\int_0^Lu(x) \,dx$,
+\item $\dst\int_{-L}^L v(x)\,dx=0$,
 \item(2) $\dst\int_{-L}^L u(x)\cos\frac{n\pi x}{L}\,dx
-=2\int_0^Lu(x)\cos\frac{n\pi x}{L} \,dx,$
+=2\int_0^Lu(x)\cos\frac{n\pi x}{L} \,dx$,
 \item(2) $\dst\int_{-L}^L v(x)\sin\frac{n\pi x}{L}\,dx=
-2\int_0^L v(x)\sin\frac{n\pi x}{L}\,dx,$
+2\int_0^L v(x)\sin\frac{n\pi x}{L}\,dx$,
 \item $\dst\int_{-L}^L u(x)\sin\frac{n\pi x}{L}\,dx=0$\qquad and
-\item $\dst\int_{-L}^L v(x)\cos\frac{n\pi x}{L}\,dx=0.$
+\item $\dst\int_{-L}^L v(x)\cos\frac{n\pi x}{L}\,dx=0$.
 \end{enumext*}
 \end{theorem}
 
@@ -1042,7 +1041,7 @@ the next theorem follows.
 
 
 \begin{theorem}\label{thmtype:11.2.6}
-Suppose   $f$ is integrable on $[-L,L].$
+Suppose   $f$ is integrable on $[-L,L]$.
 \begin{alist}
 \item % (a)
 If $f$ is even,  the Fourier series of $f$ on $[-L,L]$ is
@@ -1169,6 +1168,7 @@ all $x$ in $[-\pi,\pi]$.
 \begin{example}\label{example:11.2.6}
 Find the Fourier series of $f(x)=x(x^2-L^2)$  on $[-L,L]$,
 and determine its sum for $-L\le x\le L$.
+\end{example}
 
 \solution
 Since $f$ is odd,
@@ -1234,41 +1234,34 @@ remain approximately equal to $.09$, but occur closer to the
 discontinuities $x=\pm\frac{1}{2}$ as $N$ increases.
 \end{example}
 
-
-\begin{figure}
-\centering
+\begin{center}
 \color{blue}
+\noindent
 \begin{minipage}{0.48\linewidth}
-    \centering
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=2.2in,keepaspectratio]{fig110205}
-\caption{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=10$}
+\captionof{figure}{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=10$}
 \label{figure:11.2.5}
 \tagstructend
 \end{minipage}\hfill
 \begin{minipage}{0.48\linewidth}
-    \centering
 \tagstructbegin{tag=Sect}
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
   width=\linewidth,height=2.2in,keepaspectratio]{fig110206}
-\caption{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=20$}
+\captionof{figure}{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=20$}
 \label{figure:11.2.6}
 \tagstructend
 \end{minipage}\smallskip
-%\end{figure}
-%
-%\begin{figure}
-%  \centering
+
 \tagstructbegin{tag=Sect}
+\noindent
   \includegraphics[alt={ALT TEXT TO BE DETERMINED},
-  width=5.67in,height=3.3in,keepaspectratio]{fig110207}
-\caption{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=30$}
+  width=\linewidth,height=3.3in,keepaspectratio]{fig110207}
+\captionof{figure}{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=30$}
   \label{figure:11.2.7}
 \tagstructend
-\end{figure}
-
-
+\end{center}
 
 
 \technology
@@ -1280,9 +1273,6 @@ recommend that you do some exercises in each section ``by hand,''
 perhaps using the table of integrals at the front of the book.
 However, we encourage you to use your favorite symbolic computation
 software in the more difficult problems.
-
-
-
 
 
 \exercises
@@ -1682,7 +1672,7 @@ a_0=\frac{1}{L}\int_0^Lf(x)\,dx
 \quad\text{and}\quad
 a_n=\frac{2}{L}\int_0^Lf(x)\cos\frac{n\pi x}{L}\,dx,\quad n=1,2,3,\dots,
 \]
- converges for all $x$ in $[0,L];$     moreover,
+ converges for all $x$ in $[0,L]$; moreover,
 \[
 C(x)=
 \begin{cases}
@@ -1787,7 +1777,7 @@ of $f$ on $[0,L]$, with
 \[
 b_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx,
 \]
- converges for all $x$ in $[0,L];$ moreover,
+ converges for all $x$ in $[0,L]$; moreover,
 \[
 S(x)=
 \begin{cases}
@@ -1826,7 +1816,6 @@ S(x)=
 x,&0\le x< L,\\0,& x=L.
 \end{cases}
 \]
-\end{example}
 
 
 \boxit{Mixed Fourier Cosine Series}
@@ -2062,7 +2051,7 @@ coefficients in the expansion.
 \begin{theorem}\label{thmtype:11.3.5}\begin{alist}[above=-\baselineskip]
 \item
 If $f'(0)=f'(L)=0$, $f''$ is continuous, and $f'''$ is piecewise
-continuous  on $[0,L],$ then
+continuous  on $[0,L]$, then
 \begin{equation} \label{eq:11.3.3}
 f(x)=a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 \quad 0\le x\le L,
@@ -2076,7 +2065,7 @@ x}{L}\,dx,
 \end{equation}
 
 Now suppose $f'$ is continuous and $f''$ is piecewise
-continuous on $[0,L].$
+continuous on $[0,L]$.
 
 \item
 If  $f(0)=f(L)=0$, then
@@ -2119,7 +2108,8 @@ d_n=-\frac{8L}{(2n-1)^2\pi^2}\int_0^L f''(x)\sin\frac{(2n-1)\pi x}{2L}
 \end{theorem}
 
 
-\proof  We'll prove (a) and leave the rest to you
+\begin{proof}
+We'll prove (a) and leave the rest to you
 (\zcref{exer:11.3.35,exer:11.3.42,exer:11.3.50}).  Since
 $f$ is continuous on
 $[0,L]$, \zcref{thmtype:11.3.1} implies \eqref{eq:11.3.3} with $a_0$,
@@ -2144,12 +2134,12 @@ a_n&=\frac{2}{L}\int_0^L f(x)\cos\frac{n\pi x}{L}\,dx\\
 \frac{2L^2}{n^3\pi^3}\int_0^Lf'''(x)\sin\frac{n\pi x}{L}\,dx
 \qquad\text{(since $\sin0=\sin n\pi=0$).}
 \end{align*}
-(By an argument similar to one used in the proof of Theorem~8.3.1,
+(By an argument similar to one used in the proof of \zcref{thmtype:8.3.1},
  the last integration by parts is legitimate
 in the case where $f'''$ is undefined at finitely many points in
 $[0,L]$, so long as it's piecewise continuous on $[0,L]$.)
 This completes the proof.
-
+\end{proof}
 
 
 \begin{example}\label{example:11.3.5}
