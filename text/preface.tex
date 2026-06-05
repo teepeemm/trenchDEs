@@ -76,14 +76,15 @@ charges for
 profit beyond reasonable printing costs
 are  prohibited.
 
-\vspace*{.51in}
+%\vspace*{.51in}
 
 \newpage
 
 \noindent
 \thispagestyle{empty}
 \vspace*{3in}
-\centerline{\color{blue}\bfseries\Huge TO BEVERLY}
+
+\begin{center}\color{blue}\bfseries\Huge TO BEVERLY\end{center}
 
 \newpage
 
@@ -188,61 +189,60 @@ exponentials in solving a second order constant coefficient
 homogeneous equation with characteristic polynomials  that have complex
 zeros.
 
-\item In Sections~5.4, 5.5, and 9.3 for the method of undetermined
+\item In \zcref{sec:undetermined_coeffs_i,sec:undetermined_coeffs_ii,sec:higher_undetermined}
+for the method of undetermined
 coefficients. (If the method of annihilators is your preferred
 approach to this problem, compare the labor involved in solving, for
 example, $y''+y'+y=x^4e^x$ by the method of annihilators and the
-method used in Section~5.4.)
+method used in \zcref{sec:undetermined_coeffs_i}.)
 \end{itemize}
 
-Introducing variation of parameters as early as possible (Section~2.1)
+Introducing variation of parameters as early as possible
+(\zcref{sec:linar_first_order})
 prepares the student for the concept when it appears again in more
-complex forms in Section~5.6, where reduction of order is used not
-merely to find a second solution of the complementary equation, but
-also to find the general solution of the nonhomogeneous equation, and
-in Sections~5.7, 9.4, and 10.7, that treat the usual variation of
-parameters problem for second and higher order linear equations and
-for linear systems.
-
+complex forms in \zcref{sec:reduction_order}, where reduction of order is used
+not merely to find a second solution of the complementary equation, but
+also to find the general solution of the nonhomogeneous equation, and in 
+\zcref{sec:variation_param,sec:higher_variation_param,sec:systems_variation_param},
+that treat the usual variation of parameters problem for second and higher
+order linear equations and for linear systems.
 
 You may also find the following to be of interest:
 
 \begin{itemize}
 
-\item Section~2.6 deals with integrating factors of the form
-$\mu=p(x)q(y)$, in addition to those of the form $\mu=p(x)$ and
+\item \zcref[S]{sec:integrating_factors} deals with integrating factors of the
+form $\mu=p(x)q(y)$, in addition to those of the form $\mu=p(x)$ and
 $\mu=q(y)$ discussed in most texts.
 
-\item
-Section~4.4 makes phase plane analysis of nonlinear second order
-autonomous equations accessible to students who have not taken linear
-algebra, since eigenvalues and eigenvectors do not enter into the
+\item \zcref[S]{sec:auto_second_order} makes phase plane analysis of nonlinear
+second order autonomous equations accessible to students who have not taken
+linear algebra, since eigenvalues and eigenvectors do not enter into the
 treatment. Phase plane analysis of constant coefficient linear systems
-is included in Sections~10.4--6.
+is included in
+\zcref[range]{sec:system_const_coeff_i,sec:system_const_coeff_iii}.
 
-\item Section~4.5 presents an extensive discussion of applications
-of differential equations to curves.
+\item \zcref[S]{sec:app_curves} presents an extensive discussion of
+applications of differential equations to curves.
 
-\item Section~6.4 studies motion under a central force,
+\item \zcref[S]{sec:central_force} studies motion under a central force,
 which may be useful to students interested in the mathematics of
 satellite orbits.
 
-\item Sections~7.5--7 present the method of Frobenius in more detail
-than  in most texts. The approach is to systematize the
+\item \zcref[S,range]{sec:frobenius_i,sec:frobenius_iii} present the method of
+Frobenius in more detail than in most texts. The approach is to systematize the
 computations in a way that avoids the necessity of substituting the
 unknown Frobenius series into each equation. This leads to efficiency
 in the computation of the coefficients of the Frobenius solution. It
 also clarifies the case where the roots of the indicial equation
-differ by an integer (Section~7.7).
+differ by an integer (\zcref{sec:frobenius_iii}).
 
 \item The free Student Solutions Manual contains solutions
 of most of the even-numbered exercises.
 
- \item The free  Instructor's Solutions Manual is available by email to
-\href{mailto:wtrench@trinity.edu}
-{wtrench@trinity.edu},
- subject to verification of the requestor's
-faculty status.
+%\item The free Instructor's Solutions Manual is available by email to
+%\href{mailto:wtrench@trinity.edu}{wtrench@trinity.edu},
+%subject to verification of the requestor's faculty status.
 
 \end{itemize}
 
@@ -250,27 +250,29 @@ The following observations may be helpful as you choose your
  syllabus:
 
 \begin{itemize}
-\item Section~2.3  is the only specific prerequisite for Chapter~3.
-To accommodate institutions that offer a separate course
-in numerical analysis,  Chapter~3 is not
+\item \zcref[S]{sec:exist_unique}  is the only specific prerequisite for
+\zcref{ch:numerical}. To accommodate institutions that offer a separate course
+in numerical analysis,  \zcref*{ch:numerical} is not
 a prerequisite for any other section in the text.
 
-\item The sections in Chapter~4 are  independent of each
-other, and  are not prerequisites for any of the later chapters. This
-is also true of the sections in Chapter~6, except that Section~6.1
-is a prerequisite for Section~6.2.
+\item The sections in \zcref{ch:apps_first} are independent of each
+other, and are not prerequisites for any of the later chapters. This
+is also true of the sections in \zcref{ch:apps_second}, except that
+\zcref{sec:spring_i} is a prerequisite for \zcref{sec:spring_ii}.
 
-\item Chapters~7, 8, and 9 can be covered in any order after
-the topics selected  from Chapter~5. For example, you can
-proceed directly from Chapter~5 to Chapter~9.
+\item \zcref[S]{ch:series,ch:laplace,ch:higher_order} can be covered in any
+order after the topics selected  from \zcref{ch:second_order}. For example, you
+can
+proceed directly from \zcref{ch:second_order} to \zcref{ch:higher_order}.
 
-\item The second order Euler equation is discussed in Section~7.4,
-where it sets the stage for the method of Frobenius. As noted at the
-beginning of Section~7.4, if you want to include Euler equations in
+\item The second order Euler equation is discussed in
+\zcref{sec:regular_singular}, where it sets the stage for the method of
+Frobenius. As noted at the beginning of \zcref*{sec:regular_singular}, if you
+want to include Euler equations in
 your syllabus while omitting the method of Frobenius, you can skip the
-introductory paragraphs in Section~7.4 and begin with
-Definition~7.4.2. You can then cover
-Section~7.4 immediately after  Section~5.2.
+introductory paragraphs in \zcref*{sec:regular_singular} and begin with
+\zcref{thmtype:7.4.2}. You can then cover
+\zcref*{sec:regular_singular} immediately after \zcref{sec:const_coeff_homog}.
 
 \end{itemize}
 \medskip
