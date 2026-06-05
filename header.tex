@@ -1,14 +1,13 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = TRENCH_DIFFEQ.tex
 
 \usepackage{mathtools}
-\usepackage{unicode-math}
+\usepackage{lua-unicode-math}
 \usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
 %\usepackage[T1]{fontenc}
 %\usepackage{textcomp}
 %\renewcommand{\rmdefault}{ptm}
 %\usepackage[scaled=0.92]{helvet}
-\usepackage[psamsfonts]{amsfonts}
+%\usepackage[psamsfonts]{amsfonts}
 \usepackage{amsmath, amsbsy}
 \usepackage{calc}
 \usepackage{booktabs}
@@ -17,6 +16,7 @@
 \usepackage{zref-clever}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+
 \usepackage[%dvips,
  bookmarks = true,
  colorlinks=true,
@@ -43,6 +43,7 @@ filecolor = blue,
   rangesep={\textendash},
   cap
 }
+
 
 \EditInstance{heading}{section}{title-decls=\raggedright}
 
@@ -79,6 +80,7 @@ filecolor = blue,
     CAP .default:n = false
   }
 \ExplSyntaxOff
+
 
 %\colorlet{blue}{DarkBlue}
 \colorlet{red}{DarkRed}
@@ -159,7 +161,6 @@ filecolor = blue,
 
 \newcommand{\technology}{\bigskip\noindent\fbox{\color{red}USING
 TECHNOLOGY}\par}
-\newcommand{\remark}[1]{\noindent{\scshape Remark}:\ #1}
 \newcommand{\bigbox}[1]{\vskip10pt\vbox{\hrule\hbox{\vrule\kern5pt
 \vbox{\noindent
 \strut\kern5pt\mbox{}\newline#1\mbox{}\newline
@@ -170,17 +171,15 @@ TECHNOLOGY}\par}
 \newenvironment{newtable}[1]{ \begin{quote}
 Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
 
-\DeclareInstanceCopy{heading}{answersection}{section}
-\EditInstance{heading}{answersection}{
+\newcommand{\sectionanswers}[1]{%
+ \ParseLaTeXeHeading{section}{\BooleanTrue}{
   heading-decls = \normalfont\normalsize\bfseries,
   after-vspace = \medskipamount,
-  before-vspace = \medskipamount
-}
-\newcommand{\sectionanswers}[1]{%
- \ParseLaTeXeHeading{answersection}{\BooleanTrue}{
-  toc = {Section #1 Answers},
+  before-vspace = \medskipamount,
+  bookmark = {Section #1 Answers},
+%  toc = {Section #1 Answers},
   running = {Section #1 Answers}
- }{Section #1 Answers, pp.~\pageref{exer:#1.1}ff}%
+ }{Section #1 Answers, pp.~\pageref{exer:#1.1}\thinspace ff}%
 }
 
 \setlength{\oddsidemargin}{15.5pt}
