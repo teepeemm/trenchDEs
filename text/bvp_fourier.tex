@@ -137,8 +137,9 @@ Solve the  eigenvalue problem
 \begin{equation} \label{eq:11.1.3}
 y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0.
 \end{equation}
+\end{example}
 
-\solution
+\begin{solution}
 From \zcref{thmtype:11.1.1}, any eigenvalues of \eqref{eq:11.1.3} must be
 positive. If $y$ satisfies \eqref{eq:11.1.3} with $\lambda>0$, then
 \[
@@ -154,7 +155,7 @@ $\lambda_n=n^2\pi^2/L^2$ is an eigenvalue and
 y_n=\sin\frac{n\pi x}{L}
 \]
 is an associated eigenfunction.
-\bbox\end{example}
+\end{solution}
 
 For future reference, we state the result of \zcref{example:11.1.1}
 as a theorem.
@@ -201,8 +202,9 @@ eigenvalue problem
 \begin{equation} \label{eq:11.1.4}
 y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0.
 \end{equation}
+\end{example}
 
-\solution
+\begin{solution}
 From \zcref{thmtype:11.1.1},
  any eigenvalues of \eqref{eq:11.1.4} must be  positive.
 If $y$ satisfies \eqref{eq:11.1.4} with  $\lambda>0$, then
@@ -223,7 +225,7 @@ is an eigenvalue and
 y_n=\sin\frac{(2n-1)\pi x}{2L}
 \]
 is an associated eigenfunction.
-\bbox\end{example}
+\end{solution}
 
 For future reference, we state the result of \zcref{example:11.1.2}
 as a theorem.
@@ -265,8 +267,9 @@ Solve the eigenvalue  problem
 \begin{equation} \label{eq:11.1.5}
 y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L).
 \end{equation}
+\end{example}
 
-\solution
+\begin{solution}
 From \zcref{thmtype:11.1.1}, $\lambda=0$ is an eigenvalue of
 \eqref{eq:11.1.5} with associated eigenfunction $y_0=1$, and any other
 eigenvalues must be positive. If $y$ satisfies \eqref{eq:11.1.5} with
@@ -310,10 +313,9 @@ independent associated eigenfunctions
 \[
 \cos \frac{n\pi x}{L}
 \quad\text{and}\quad
-  \sin\frac{ n\pi x}{L}.
-\qquad\qquad\hfil\bbox
+  \sin\frac{ n\pi x}{L}.\qedhere
 \]
-\end{example}
+\end{solution}
 
 For future reference we state the result of \zcref{example:11.1.3} as
 a theorem.
@@ -367,7 +369,8 @@ are orthogonal on $[-L,L]$.
 \end{example}
 
 
-\solution We must show that
+\begin{solution}
+We must show that
 \begin{equation} \label{eq:11.1.12}
 \int_{-L}^L f(x)g(x)\,dx=0
 \end{equation}
@@ -433,7 +436,7 @@ then
 \]
 because the integrand is an odd function and the limits are symmetric
 about $x=0$.
-\bbox
+\end{solution}
 
 
 \zcref[S,range]{exer:11.1.19,exer:11.1.22} ask you to verify
@@ -829,7 +832,7 @@ the Fourier series  for $-2\le x\le 2$.
 \end{figure}
 
 
-\solution
+\begin{solution}
 Note that we haven't bothered to define $f(-2)$, $f(0)$, and
 $f(2)$.
  No matter
@@ -894,6 +897,7 @@ n\pi}{n}\sin\frac{n\pi x}{2}
 \]
 approximates $f(x)$ for $m=5$ (dotted curve), $m=10$  (dashed curve),
 and $m=15$ (solid curve).
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -960,7 +964,8 @@ Find the Fourier series of $f(x)=x^2-x$ on $[-2,2]$, and determine
 its sum for $-2\le x\le 2$.
 \end{example}
 
-\solution Since $L=2$,
+\begin{solution}
+Since $L=2$,
 \[
 F(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos\frac{n\pi
 x}{2}+b_n\sin\frac{n\pi x}{2}\right)
@@ -1024,7 +1029,7 @@ F_m(x)=\frac{4}{3}+\frac{16}{\pi^2}\sum_{n=1}^m\frac{(-1)^n}{n^2}
 \]
 approximates $f(x)$ for $m=5$ (dotted curve), $m=10$  (dashed curve),
 and $m=15$ (solid curve).
-\bbox
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -1073,7 +1078,7 @@ Find the Fourier series of $f(x)=x$ on $[-\pi,\pi]$, and determine
 its sum for $-\pi\le x\le \pi$.
 \end{example}
 
-\solution
+\begin{solution}
 Since $f$ is odd and $L=\pi$,
 \[
 F(x)=\sum_{n=1}^\infty b_n\sin nx
@@ -1104,6 +1109,7 @@ F_m(x)=-2\sum_{n=1}^m\frac{(-1)^n}{n}\sin nx
 \]
 approximates $f(x)$ for $m=5$ (dotted curve), $m=10$  (dashed curve),
 and $m=15$ (solid curve).
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -1119,7 +1125,7 @@ Find the Fourier series of $f(x)=|x|$ on $[-\pi,\pi]$ and
 determine its sum for\\ $-\pi\le x\le\pi$.
 \end{example}
 
-\solution
+\begin{solution}
 Since $f$ is even and $L=\pi$,
 \[
 F(x)=a_0+\sum_{n=1}^\infty a_n\cos nx.
@@ -1163,14 +1169,14 @@ F(x)=\frac{\pi}{2}-\frac{4}{\pi}\sum_{n=0}^\infty \frac{1}{(2n+1)^2}
 Since $|x|$ is continuous for all $x$ and $|-\pi|=|\pi|$,
 \zcref{thmtype:11.2.4} implies that $F(x)=|x|$ for
 all $x$ in $[-\pi,\pi]$.
-
+\end{solution}
 
 \begin{example}\label{example:11.2.6}
 Find the Fourier series of $f(x)=x(x^2-L^2)$  on $[-L,L]$,
 and determine its sum for $-L\le x\le L$.
 \end{example}
 
-\solution
+\begin{solution}
 Since $f$ is odd,
 \[
 F(x)=\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L},
@@ -1194,6 +1200,7 @@ x}{L}.
 \]
 \zcref[S]{thmtype:11.2.4} implies that $F(x)=x(x^2-L^2)$ for all $x$
 in $[-L,L]$.
+\end{solution}
 
 \begin{example}[Gibbs Phenomenon]\label{example:11.2.7}
 The Fourier series of
@@ -1689,7 +1696,7 @@ f(L-)&\text{ if }x=L.
 Find the Fourier cosine series of $f(x)=x$ on $[0,L]$.
 \end{example}
 
-\solution
+\begin{solution}
  The coefficients are
 \[
 a_0=\frac{1}{L}\int_0^Lx\,dx=\frac{1}{L}\frac{x^2}{2}
@@ -1717,13 +1724,14 @@ C(x)=\frac{L}{2}-\frac{4L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \]
 \zcref[S]{thmtype:11.3.1} implies that
 \[
-C(x)=x,\quad 0\le x\le L.
+C(x)=x,\quad 0\le x\le L.\qedhere
 \]
+\end{solution}
 
 
 \boxit{Fourier Sine Series}
 
-From   {Exercise 11.1.\zcref[noname]{exer:11.1.19}},  the eigenfunctions
+From Exercise 11.1.\zcref[noname]{exer:11.1.19}, the eigenfunctions
 \[
 \sin\frac{\pi x}{L},
 \, \sin\frac{2\pi x}{L},\dots,
@@ -1795,7 +1803,7 @@ $x  $}\\
 Find the Fourier sine series of $f(x)=x$ on $[0,L]$.
 \end{example}
 
-\solution
+\begin{solution}
  The coefficients are
 \begin{align*}
 b_n&=\frac{2}{L}\int_0^Lx\sin\frac{n\pi x}{L}\,dx
@@ -1814,8 +1822,9 @@ S(x)=-\frac{2L}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{n}
 S(x)=
 \begin{cases}
 x,&0\le x< L,\\0,& x=L.
-\end{cases}
+\end{cases}\qedhere
 \]
+\end{solution}
 
 
 \boxit{Mixed Fourier Cosine Series}
@@ -1910,7 +1919,7 @@ Find  the mixed Fourier cosine series of
 $f(x)=x-L$ on $[0,L]$.
 \end{example}
 
-\solution
+\begin{solution}
  The coefficients are
 \begin{align*}
 c_n&=\frac{2}{L}\int_0^L(x-L)\cos\frac{(2n-1)\pi x}{2L}\,dx\\
@@ -1927,13 +1936,14 @@ C_M(x)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \]
 \zcref[S]{thmtype:11.3.3} implies that
 \[
-C_M(x)= x-L,\quad 0\le x\le L.
+C_M(x)= x-L,\quad 0\le x\le L.\qedhere
 \]
+\end{solution}
 
 
 \boxit{Mixed Fourier Sine Series}
 
-From  {Exercise 11.1.\zcref[noname]{exer:11.1.21}},  the eigenfunctions
+From Exercise 11.1.\zcref[noname]{exer:11.1.21},  the eigenfunctions
 \[
  \sin\frac{\pi x}{2L},
 \, \sin\frac{3\pi x}{2L},\dots,
@@ -2012,9 +2022,7 @@ f(L-)&\text{ if $x=L$.}
 Find the mixed Fourier sine series of $f(x)=x$ on $[0,L]$.
 \end{example}
 
-
-
-\solution
+\begin{solution}
  The coefficients are
 \begin{align*}
 d_n&=\frac{2}{L}\int_0^Lx\sin\frac{(2n-1)\pi x}{2L}\,dx\\
@@ -2033,8 +2041,9 @@ S_M(x)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^2}
 \]
 \zcref[S]{thmtype:11.3.4} implies that
 \[
-S_M(x)=x,\quad 0\le x\le L.
+S_M(x)=x,\quad 0\le x\le L.\qedhere
 \]
+\end{solution}
 
 
 \boxit{A Useful Observation}
@@ -2147,7 +2156,7 @@ Find the Fourier cosine expansion of $f(x)=x^2(3L-2x)$
 on $[0,L]$.
 \end{example}
 
-\solution
+\begin{solution}
 Here
 \[
 a_0=\frac{1}{L}\int_0^L(3Lx^2-2x^3)\,dx=\frac{1}{L}\left(Lx^3-\frac{x^4}{2}
@@ -2171,9 +2180,9 @@ a_n&=-\frac{24L^2}{n^3\pi^3}\int_0^L\sin\frac{n\pi x}{L}\,dx
 \end{align*}
 Therefore
 \[
-C(x)=\frac{L^3}{2}-\frac{48L^3}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\cos\frac{(2n-1)\pi x}{L}.
+C(x)=\frac{L^3}{2}-\frac{48L^3}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\cos\frac{(2n-1)\pi x}{L}.\qedhere
 \]
-
+\end{solution}
 
 \begin{example}\label{example:11.3.6}
 Find the Fourier sine expansion of
@@ -2181,7 +2190,7 @@ $f(x)=x(x^2-3Lx+2L^2)$
 on $[0,L]$.
 \end{example}
 
-\solution
+\begin{solution}
 Since $f(0)=f(L)=0$ and $f''(x)=6(x-L)$, we see from \eqref{eq:11.3.5}
 that
 \begin{align*}
@@ -2195,9 +2204,9 @@ x}{L}\lims0L\right]
 Therefore
 \[
 S(x)=\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
-\sin\frac{n\pi x}{L}.
+\sin\frac{n\pi x}{L}.\qedhere
 \]
-
+\end{solution}
 
 \begin{example}\label{example:11.3.7}
 Find  the mixed Fourier cosine expansion of
@@ -2205,7 +2214,7 @@ $f(x)=3x^3-4Lx^2+L^3$
 on $[0,L]$.
 \end{example}
 
-\solution
+\begin{solution}
 Since $f'(0)=f(L)=0$ and $f''(x)=2(9x-4L)$, we see from \eqref{eq:11.3.6}
 that
 \begin{align*}
@@ -2224,8 +2233,9 @@ Therefore
 \[
 C_M(x)=\frac{32L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n5+\frac{18}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
-x}{2L}.
+x}{2L}.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:11.3.8}
 Find  the mixed Fourier  sine expansion of
@@ -2235,7 +2245,7 @@ f(x)=x(2x^2-9Lx+12L^2)
 on $[0,L]$.
 \end{example}
 
-\solution
+\begin{solution}
 Since $f(0)=f'(L)=0$, and $f''(x)=6(2x-3L)$, we see from \eqref{eq:11.3.7}
 that
 \begin{align*}
@@ -2252,8 +2262,9 @@ Therefore
 S_M(x)
 =\frac{96L^3}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
-x}{2L}.
+x}{2L}.\qedhere
 \]
+\end{solution}
 
 \exercises
 

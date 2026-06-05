@@ -1,4 +1,3 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Linear Systems of Differential Equations}\label{ch:systems}
@@ -70,8 +69,7 @@ Assume that both mixtures are well stirred.
   \label{figure:10.1.1}
 \end{figure}
 
-
-\solution
+\begin{solution}
 As in \zcref{sec:cooling_mixing}, let \emph{\color{blue}rate in} and
 \emph{\color{blue}rate out} denote the rates (\unit{\pound\per\minute}) at which salt enters and
 leaves a tank; thus,
@@ -139,9 +137,9 @@ We say that \eqref{eq:10.1.3} and \eqref{eq:10.1.6}  form a \emph{\color{blue}sy
 first order equations in two unknowns}, and write them together as
 \begin{align*}
 Q_1'&=5-\frac{2}{25}Q_1+\frac{1}{100}Q_2\\
-Q_2'&=8+\frac{1}{50}Q_1-\frac{1}{50}Q_2. \quad\bbox
+Q_2'&=8+\frac{1}{50}Q_1-\frac{1}{50}Q_2. \qedhere
 \end{align*}
-
+\end{solution}
 
 \begin{example}\label{example:10.1.2}
 A mass $m_1$ is suspended from a rigid support on a spring $S_1$ and a
@@ -158,7 +156,7 @@ negligible and that vertical external forces $F_1$ and $F_2$ also act
 on the objects.
 \end{example}
 
-\solution
+\begin{solution}
 In equilibrium, $S_1$ supports both $m_1$ and $m_2$ and $S_2$ supports
 only $m_2$. Therefore, if $\Delta\ell_1$ and $\Delta\ell_2$ are the
 elongations of the springs in equilibrium then
@@ -247,9 +245,9 @@ Therefore we can rewrite \eqref{eq:10.1.11} and \eqref{eq:10.1.12}
 as
 \begin{align*}
 m_1y_1''&=-(c_1+c_2)y_1'+c_2y_2'-(k_1+k_2)y_1+k_2y_2+F_1\\
-m_2y_2''&=c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2.  \quad\bbox
+m_2y_2''&=c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2.  \qedhere
 \end{align*}
-
+\end{solution}
 
 \begin{example}\label{example:10.1.3}
 Let $\vect{X}=\vect{X}(t)=x(t)\,\ivect+y(t)\,\jvect+z(t)\,\vect{k}$ be
@@ -340,7 +338,7 @@ derived in \zcref{example:10.1.2}  as a system of first order
 equations.
 \end{example}
 
-\solution{}
+\begin{solution}
 If we define $v_1=y_1'$ and $v_2=y_2'$,  then $v_1'=y_1''$ and
 $v_2'=y_2''$,  so \eqref{eq:10.1.16} becomes
 \begin{align*}
@@ -354,10 +352,10 @@ system
 y_1'&=v_1\\
 y_2'&=v_2\\
 v_1'&=\dfrac{1}{m_1}\left[-(c_1+c_2)v_1+c_2v_2-(k_1+k_2)y_1+k_2y_2+F_1\right]\\
-v_2'&=\dfrac{1}{m_2}\left[c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right].
+v_2'&=\dfrac{1}{m_2}\left[c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right].\qedhere
 \end{aligned}
 \end{equation}
-
+\end{solution}
 
 \begin{remark*}
 The difference in form between \eqref{eq:10.1.15} and
@@ -377,7 +375,7 @@ y'''&=g(t,x,x',y,y'y'')
  as a first order system.
 \end{example}
 
-\solution
+\begin{solution}
 We regard $x$, $x'$, $y$, $y'$, and $y''$ as unknown functions, and
 rename them
 \[
@@ -389,8 +387,9 @@ x_1'&=x_2\\
 x_2'&=f(t,x_1,x_2,y_1,y_2,y_3)\\
 y_1'&=y_2\\
 y_2'&=y_3\\
-y_3'&=g(t,x_1,x_2,y_1,y_2,y_3).
+y_3'&=g(t,x_1,x_2,y_1,y_2,y_3).\qedhere
 \end{align*}
+\end{solution}
 
 
 \boxit{Rewriting Scalar Differential Equations as Systems}
@@ -409,7 +408,7 @@ as a $4\times4$ first order system.
 \end{example}
 
 
-\solution
+\begin{solution}
 We regard $y$, $y'$, $y''$, and $y'''$  as unknowns and rename them
 \[
 y=y_1,\quad y'=y_2,\quad y''=y_3,\quad\text{and}\quad  y'''=y_4.
@@ -423,8 +422,9 @@ Therefore $\{y_1,y_2,y_3,y_4\}$ satisfies the system
 y_1'&=y_2\\
 y_2'&=y_3 \\
 y_3'&=y_4\\
-y_4'&=-4y_4-6y_3-4y_2-y_1.\bbox
+y_4'&=-4y_4-6y_3-4y_2-y_1.\qedhere
 \end{align*}
+\end{solution}
 
 \begin{example}\label{example:10.1.7}
  Rewrite
@@ -434,7 +434,7 @@ x'''=f(t,x,x',x'')
 as a system of first order equations.
 \end{example}
 
-\solution
+\begin{solution}
 We regard $x$, $x'$, and $x''$ as unknowns and rename them
 \[
 x=y_1, \quad x'=y_2,\quad\text{and}\quad  x''=y_3.
@@ -447,8 +447,9 @@ Therefore $\{y_1,y_2,y_3\}$ satisfies the first order system
 \begin{align*}
 y_1'&=y_2\\
 y_2'&=y_3\\
-y_3'&=f(t,y_1,y_2,y_3).
+y_3'&=f(t,y_1,y_2,y_3).\qedhere
 \end{align*}
+\end{solution}
 
 Since systems of differential equations involving higher derivatives
 can be rewritten as first order systems by the method used in
@@ -1134,7 +1135,7 @@ Show that the vector functions
 are linearly independent on every interval  $(a,b)$.
 \end{example}
 
-\solution
+\begin{solution}
 Suppose
 \[
 c_1\begin{bmatrix}{c}e^t\\0\\e^{-t}\end{bmatrix}+
@@ -1160,7 +1161,8 @@ of the first row yields
 &=e^t(-e^{3t})+e^{2t}(-e^{2t})=-2e^{4t}.
 \end{align*}
 Since this determinant is never zero,
-$c_1=c_2=c_3=0$. \bbox
+$c_1=c_2=c_3=0$.
+\end{solution}
 
 
 We can use the method in
@@ -1516,7 +1518,6 @@ and
 [y_{21}\quad y_{22}].
 \]
 \item % (c)
-% TODO this was: (a) and (a)
  Use  properties of determinants to deduce from (a) and (b) that
 \[
 \begin{vmatrix}y'_{11}&y'_{12}\\y_{21}&y_{22}\end{vmatrix}
@@ -2153,7 +2154,8 @@ e^{2t}&e^{3t}&7e^{-t}
 \end{equation}
 \end{example}
 
-\solution  The characteristic polynomial of
+\begin{solution}
+The characteristic polynomial of
 the  coefficient matrix $A$ in  \eqref{eq:10.4.16} is
 \[
 \begin{vmatrix}-3-\lambda&2&2\\2&-3-\lambda&2\\2&2&-3-\lambda\end{vmatrix}
@@ -2205,8 +2207,9 @@ that  the general solution of \eqref{eq:10.4.16} is
 \[
 \vect{y}=c_1\begin{bmatrix}1\\1\\1\end{bmatrix}e^t+c_2
 \begin{bmatrix}-1\\0\\1\end{bmatrix}
-e^{-5t}+c_3\begin{bmatrix}-1\\1\\0\end{bmatrix}e^{-5t}.
+e^{-5t}+c_3\begin{bmatrix}-1\\1\\0\end{bmatrix}e^{-5t}.\qedhere
 \]
+\end{solution}
 
 
 \boxit{Geometric Properties of Solutions when  $n=2$}
@@ -2667,7 +2670,8 @@ $\lambda_2$ are eigenvalues of the coefficient matrix $A$ of
 linearly independent eigenvectors.
 \end{example}
 
-\solution   The characteristic polynomial of $A$ is
+\begin{solution}
+The characteristic polynomial of $A$ is
 \begin{align*}
 \twochar{11}{-25}4{-9}
 &=(\lambda-11)(\lambda+9)+100\\
@@ -2685,7 +2689,7 @@ which is row equivalent to
 Hence, $x_1=5x_2/2$ where $x_2$ is arbitrary. Therefore all
 eigenvectors of $A$ are scalar multiples of $\vect{x}_1=\twocol52$,
 so $A$ does not have a set of two linearly independent eigenvectors.
-\bbox
+\end{solution}
 
 From \zcref{example:10.5.1}, we know that all scalar multiples of
 $\vect{y}_1=\twocol52e^t$ are solutions of \eqref{eq:10.5.1};
@@ -2770,7 +2774,8 @@ Use \zcref{thmtype:10.5.1} to find the general solution of the system
 considered in \zcref{example:10.5.1}.
 \end{example}
 
-\solution In \zcref{example:10.5.1} we saw that $\lambda_1=1$ is an
+\begin{solution}
+In \zcref{example:10.5.1} we saw that $\lambda_1=1$ is an
 eigenvalue of multiplicity $2$ of the coefficient matrix $A$ in
 \eqref{eq:10.5.6}, and that all of the eigenvectors of $A$ are multiples of
 \[
@@ -2806,8 +2811,9 @@ Since $\vect{y}_1$ and $\vect{y}_2$ are linearly independent by
 \zcref{thmtype:10.5.1}, they form a fundamental set of solutions of
 \eqref{eq:10.5.6}. Therefore the general solution of \eqref{eq:10.5.6} is
 \[
-\vect{y}=c_1\twocol52e^t+c_2\left(\twocol10\frac{e^t}{2}+\twocol52te^t\right).\bbox
+\vect{y}=c_1\twocol52e^t+c_2\left(\twocol10\frac{e^t}{2}+\twocol52te^t\right).\qedhere
 \]
+\end{solution}
 
 Note that choosing the arbitrary constant $u_2$ to be nonzero is
 equivalent to adding a scalar multiple of $\vect{y}_1$ to the second
@@ -2820,7 +2826,8 @@ solution $\vect{y}_2$ (\zcref{exer:10.5.33}).
 \end{equation}
 \end{example}
 
-\solution  The characteristic polynomial of
+\begin{solution}
+The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.7} is
 \[
 \begin{vmatrix}
@@ -2906,8 +2913,9 @@ of \eqref{eq:10.5.7}. Therefore the general solution of \eqref{eq:10.5.7}
 is
 \[
 \vect{y}=c_1\threecol121e^t+c_2\threecol{-1}10e^{-t}+c_3\left
-(\threecol201\frac{e^{-t}}{2}+\threecol{-1}10te^{-t}\right).
+(\threecol201\frac{e^{-t}}{2}+\threecol{-1}10te^{-t}\right).\qedhere
 \]
+\end{solution}
 
 \begin{theorem}\color{blue}\label{thmtype:10.5.2}
 Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_1$ of
@@ -2948,7 +2956,8 @@ Use \zcref{thmtype:10.5.2} to find the general solution of
 \end{equation}
 \end{example}
 
-\solution  The characteristic polynomial of
+\begin{solution}
+The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.11} is
 \[
 \begin{vmatrix}
@@ -3031,8 +3040,9 @@ general solution of \eqref{eq:10.5.11} is
 =c_1\threecol101e^{2t}
 +c_2\left(\threecol{-1}10\frac{e^{2t}}{2}+\threecol101te^{2t}\right)
 +c_3\left(\threecol100\frac{e^{2t}}{2}+
-\threecol{-1}10\frac{te^{2t}}{2}+\threecol101\frac{t^2e^{2t}}{2}\right).
+\threecol{-1}10\frac{te^{2t}}{2}+\threecol101\frac{t^2e^{2t}}{2}\right).\qedhere
 \]
+\end{solution}
 
 
 \begin{theorem}\label{thmtype:10.5.3}
@@ -3071,7 +3081,8 @@ Use \zcref{thmtype:10.5.3} to find the general solution of
 \end{equation}
 \end{example}
 
-\solution  The characteristic polynomial of
+\begin{solution}
+The characteristic polynomial of
 the coefficient matrix $A$ in  \eqref{eq:10.5.15} is
 \[
 \begin{vmatrix}
@@ -3144,8 +3155,9 @@ they form a fundamental set of solutions for \eqref{eq:10.5.15}.
 Therefore the general solution of \eqref{eq:10.5.15} is
 \[
 \vect{y}=c_1\threecol101e^t+c_2\threecol010e^t
-+c_3\left(\threecol{-1}00e^t+\threecol111te^t\right).\bbox
++c_3\left(\threecol{-1}00e^t+\threecol111te^t\right).\qedhere
 \]
+\end{solution}
 
 
 \boxit{Geometric Properties of Solutions when  $n=2$}
@@ -3571,7 +3583,8 @@ independent (\zcref{exer:10.6.27}).
 \end{equation}
 \end{example}
 
-\solution The characteristic polynomial of the coefficient matrix $A$
+\begin{solution}
+The characteristic polynomial of the coefficient matrix $A$
 in \eqref{eq:10.6.6} is
 \[
 \begin{vmatrix}4-\lambda&-5\\ 5&-2-\lambda\end{vmatrix}=(\lambda-1)^2+16.
@@ -3604,8 +3617,9 @@ The general solution of \eqref{eq:10.6.6} is
 \[
 \vect{y}=
 c_1e^t\begin{bmatrix}3\cos4t-4\sin4t\\5\cos4t\end{bmatrix}+
-c_2e^t\begin{bmatrix}3\sin4t+4\cos4t\\5\sin4t\end{bmatrix}.
+c_2e^t\begin{bmatrix}3\sin4t+4\cos4t\\5\sin4t\end{bmatrix}.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:10.6.2}
  Find  the general solution of
@@ -3614,7 +3628,8 @@ c_2e^t\begin{bmatrix}3\sin4t+4\cos4t\\5\sin4t\end{bmatrix}.
 \end{equation}
 \end{example}
 
-\solution The characteristic polynomial of the coefficient matrix $A$
+\begin{solution}
+The characteristic polynomial of the coefficient matrix $A$
 in \eqref{eq:10.6.7} is
 \[
 \begin{vmatrix}-14-\lambda&39\\-6&16-\lambda\end{vmatrix}=(\lambda-1)^2+9.
@@ -3647,8 +3662,9 @@ which are  linearly independent solutions of  \eqref{eq:10.6.7}.
 The general solution of \eqref{eq:10.6.7} is
 \[
 \vect{y}=c_1e^t\begin{bmatrix}\sin3t+5\cos3t\\2\cos3t\end{bmatrix}+
-c_2e^t\begin{bmatrix}-\cos3t+5\sin3t\\2\sin3t\end{bmatrix}.
+c_2e^t\begin{bmatrix}-\cos3t+5\sin3t\\2\sin3t\end{bmatrix}.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:10.6.3}
  Find the general solution of
@@ -3657,7 +3673,8 @@ c_2e^t\begin{bmatrix}-\cos3t+5\sin3t\\2\sin3t\end{bmatrix}.
 \end{equation}
 \end{example}
 
-\solution  The characteristic
+\begin{solution}
+The characteristic
 polynomial of the  coefficient matrix $A$ in  \eqref{eq:10.6.8} is
 \[
 \begin{vmatrix}
@@ -3720,8 +3737,9 @@ fundamental set of solutions of \eqref{eq:10.6.8}. The general solution of
 \[
 \vect{y}=c_1 \threecol221e^{2t}
 +c_2\begin{bmatrix}-\sin t\\-\cos t-\sin t\\\cos t\end{bmatrix}
-+c_3\begin{bmatrix}\cos t\\\cos t-\sin t\\\sin t\end{bmatrix}.
++c_3\begin{bmatrix}\cos t\\\cos t-\sin t\\\sin t\end{bmatrix}.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:10.6.4}
  Find the general solution of
@@ -3730,7 +3748,8 @@ fundamental set of solutions of \eqref{eq:10.6.8}. The general solution of
 \end{equation}
 \end{example}
 
-\solution The characteristic
+\begin{solution}
+The characteristic
 polynomial of the  coefficient matrix $A$ in  \eqref{eq:10.6.9} is
 \[
 \begin{vmatrix}
@@ -3792,8 +3811,9 @@ of \eqref{eq:10.6.9}.  The general solution of \eqref{eq:10.6.9} is
 \[
 \vect{y}=c_1\threecol{-1}{-1}1e^{2t}+
 c_2e^{2t}\begin{bmatrix}-\sin2t\\\sin2t\\\cos2t\end{bmatrix}+
-c_3e^{2t}\begin{bmatrix}\cos2t\\-\cos2t\\\sin2t\end{bmatrix}.
+c_3e^{2t}\begin{bmatrix}\cos2t\\-\cos2t\\\sin2t\end{bmatrix}.\qedhere
 \]
+\end{solution}
 
 
 \boxit{Geometric Properties of Solutions when  $n=2$}
@@ -3874,7 +3894,7 @@ in \eqref{eq:10.6.11} yields
 \vect{u}_1=\vect{u}+\frac{\vect{v}}{2}=\twocol{5}5\quad\text{and}\quad 
 \vect{v}_1=\vect{v}-\frac{\vect{u}}{2}=\frac{1}{2}\twocol{-5}{\phantom{-}5},
 \]
-and again $(\vect{u}_1,\vect{v}_1)=0$. \bbox
+and again $(\vect{u}_1,\vect{v}_1)=0$.
 \end{example}
 
 (The numbers don't always work out as nicely as in this example.
@@ -4307,7 +4327,6 @@ y_1&=\frac{8}{5}e^{4t}+c_1e^{3t}+c_2e^{-t}\\
 y_2&=\frac{7}{5}e^{4t}+c_1e^{3t}-c_2e^{-t},
 \end{align*}
 so our result is consistent with \zcref{example:10.2.1}.
-\bbox.
 \end{alistSolution}
 
 If $A$ isn't  a constant matrix, it's usually difficult to find a
@@ -4331,7 +4350,7 @@ Y=\begin{bmatrix}e^{4t}&-1\\e^{6t}&e^{2t}\end{bmatrix}
 is  a fundamental matrix for the complementary system.
 \end{example}
 
-\solution
+\begin{solution}
 We seek a particular solution
 $\vect{y}_p=Y\vect{u}$ of \eqref{eq:10.7.6} where
  $Y\vect{u}'=\vect{F}$; that is,
@@ -4370,6 +4389,7 @@ so
 =\frac{1}{24}\begin{bmatrix}4e^{-2t}+12t-3\\-3e^{2t}(4t+1)-8\end{bmatrix}
 \]
 is a particular solution of  \eqref{eq:10.7.6}.
+\end{solution}
 
 \begin{example}\label{example:10.7.3}
 Find a particular solution of
@@ -4386,7 +4406,7 @@ is a fundamental matrix for the complementary system on $(-\infty,0)$
 and $(0,\infty)$.
 \end{example}
 
-\solution
+\begin{solution}
 We seek a particular solution $\vect{y}_p=Y\vect{u}$ of \eqref{eq:10.7.7}
 where $Y\vect{u}'=\vect{F}$; that is,
 \[
@@ -4427,6 +4447,7 @@ so
 =\begin{bmatrix}t^3(t-1)\\t^2(t-1)\end{bmatrix}
 \]
 is a particular solution of  \eqref{eq:10.7.7}.
+\end{solution}
 
 \begin{example}\label{example:10.7.4}
 \begin{alist}
@@ -4549,7 +4570,7 @@ Y=\begin{bmatrix}e^t&0&e^{2t}\\0&e^{3t}&e^{3t}\\e^{-t}&1&0\end{bmatrix}
 is a fundamental matrix for the complementary system.
 \end{example}
 
-\solution
+\begin{solution}
 We seek a particular solution of  \eqref{eq:10.7.10} in the form
 $\vect{y}_p=Y\vect{u}$, where $Y\vect{u}'=\vect{F}$; that is,
 \[
@@ -4596,6 +4617,7 @@ so
 =\dfrac{1}{2}\begin{bmatrix}e^t(t+1)-1\\-e^t\\e^{-t}(t-1)\end{bmatrix}
 \]
 is a particular solution of  \eqref{eq:10.7.10}.
+\end{solution}
 
 \exercises
  In \zcref[range]{exer:10.7.1,exer:10.7.10} find a particular

@@ -1,4 +1,3 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Linear Higher Order Equations}\label{ch:higher_order}
@@ -150,7 +149,7 @@ the general solution of \eqref{eq:9.1.5} on $(-\infty, 0)$ and
 $(0,\infty)$.
 \end{example}
 
-\solution
+\begin{solution}
 Suppose
 \begin{equation} \label{eq:9.1.6}
 c_1x^2+c_2x^3+\frac{c_3}{x}=0
@@ -204,6 +203,7 @@ Since the determinant of this system is
 \]
 it follows that $c_1=c_2=c_3=0$; that is, $\{y_1,y_2,y_3\}$
 is linearly independent on $(-\infty,0)$.
+\end{solution}
 
 \begin{example}\label{example:9.1.2}
 The equation
@@ -216,7 +216,7 @@ $\{y_1,y_2,y_3,y_4\}$ is linearly independent on $(-\infty,\infty)$.
 Then find the general solution of \eqref{eq:9.1.9}.
 \end{example}
 
-\solution
+\begin{solution}
 Suppose   $c_1$, $c_2$, $c_3$, and $c_4$
 are constants such that
 \begin{equation} \label{eq:9.1.10}
@@ -256,6 +256,7 @@ Now \zcref{thmtype:9.1.2} implies that
 y=c_1e^x+c_2e^{-x}+c_3e^{2x}+c_4e^{-3x}
 \]
 is the general solution of \eqref{eq:9.1.9}.
+\end{solution}
 
 
 \boxit{The Wronskian}
@@ -355,11 +356,11 @@ $y_2=x^3$, and $y_3=1/x$ of
 x^3y'''-x^2y''-2xy'+6y=0
 \]
 are linearly independent on $(-\infty,0)$ and $(0,\infty)$. Calculate
-the Wronskian  of $\{y_1,y_2,y_3\}$.
+the Wronskian of $\{y_1,y_2,y_3\}$.
 \end{example}
 
-\solution
-If $x\ne0$,  then
+\begin{solution}
+If $x\ne0$, then
 \[
 W(x)=\begin{vmatrix}
 x^2&\phantom{2}x^3&1/x\\
@@ -386,6 +387,7 @@ W(x)=2x^3\begin{vmatrix}
 =12x.
 \]
 Therefore $W(x)\ne0$ on $(-\infty,0)$ and $(0,\infty)$.
+\end{solution}
 
 \begin{example}\label{example:9.1.4}
 In
@@ -399,7 +401,7 @@ are linearly independent on every open interval.
 Calculate the Wronskian  of $\{y_1,y_2,y_3,y_4\}$.
 \end{example}
 
-\solution
+\begin{solution}
 For all $x$,
 \[
 W(x)=\begin{vmatrix}
@@ -416,6 +418,7 @@ W(x)
 =240e^{-x},
 \]
 from \eqref{eq:9.1.12}.
+\end{solution}
 
 \begin{remark*}
 Under the assumptions of \zcref{thmtype:9.1.4}, it isn't
@@ -964,7 +967,7 @@ solution of \eqref{eq:9.2.4} is
 y=4e^x-e^{2x}+e^{3x}
 \]
 (\zcref{figure:9.2.1}).
-\bbox
+\end{alistSolution}
 
 \begin{figure}
   \centering\color{blue}
@@ -973,7 +976,6 @@ y=4e^x-e^{2x}+e^{3x}
 \caption{$y=4e^x-e^{2x}+e^{3x}$}
   \label{figure:9.2.1}
 \end{figure}
-\end{alistSolution}
 
 Now we consider the case where the characteristic polynomial
 \eqref{eq:9.2.2} does not have $n$ distinct real zeros. For this purpose
@@ -1051,7 +1053,7 @@ y'''-y''+y'-y=0.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 From \eqref{eq:9.2.8}, we can rewrite \eqref{eq:9.2.10} as
 \[
 (D-1)(D^2+1)y=0,
@@ -1059,7 +1061,6 @@ From \eqref{eq:9.2.8}, we can rewrite \eqref{eq:9.2.10} as
 which implies that any solution of $(D^2+1)y=0$ is a solution of
 \eqref{eq:9.2.10}. Therefore $y_1=\cos x$ and $y_2=\sin x$ are solutions
 of \eqref{eq:9.2.10}.
-
 
 From \eqref{eq:9.2.9}, we can rewrite \eqref{eq:9.2.10} as
 \[
@@ -1086,7 +1087,7 @@ and
 y=c_1\cos x+c_2\sin x+c_3e^x
 \]
 is the general solution of \eqref{eq:9.2.10}.
-
+\end{solution}
 
 \begin{example}\label{example:9.2.4}
 Find the general solution of
@@ -1095,7 +1096,8 @@ y^{(4)}-16y=0.
 \end{equation}
 \end{example}
 
-\solution  The characteristic polynomial of
+\begin{solution}
+The characteristic polynomial of
 \eqref{eq:9.2.11} is
 \[
 p(r)=r^4-16=(r^2-4)(r^2+4)=(r-2)(r+2)(r^2+4).
@@ -1143,6 +1145,7 @@ and
 y_1=c_1e^{2x}+c_2e^{-2x}+c_3\cos2x+c_4\sin2x
 \]
 is   the general solution of \eqref{eq:9.2.11}.
+\end{solution}
 
 It is known from algebra that every polynomial
 \[
@@ -1267,7 +1270,8 @@ y'''+3y''+3y'+y=0.
 \end{equation}
 \end{example}
 
-\solution The characteristic polynomial of \eqref{eq:9.2.18} is
+\begin{solution}
+The characteristic polynomial of \eqref{eq:9.2.18} is
 \[
 p(r)=r^3+3r^2+3r+1=(r+1)^3.
 \]
@@ -1278,8 +1282,9 @@ Therefore \eqref{eq:9.2.18} can be written as
 so \zcref{thmtype:9.2.1} implies that the general solution of
 \eqref{eq:9.2.18} is
 \[
-y=e^{-x}(c_1+c_2x+c_3x^2). \bbox
+y=e^{-x}(c_1+c_2x+c_3x^2).\qedhere
 \]
+\end{solution}
 
 The proof of the next theorem is sketched in
 \zcref{exer:9.2.41}.
@@ -1305,7 +1310,8 @@ Find the general solution of
 \end{equation}
 \end{example}
 
-\solution  The characteristic polynomial of \eqref{eq:9.2.19} is
+\begin{solution}
+The characteristic polynomial of \eqref{eq:9.2.19} is
 \[
 p(r)=(r^2+4r+13)^3=\left((r+2)^2+9\right)^3.
 \]
@@ -1319,6 +1325,7 @@ so \zcref{thmtype:9.2.2} implies that the general solution of
 y=(a_1+a_2x+a_3x^2)e^{-2x}\cos3x
 +(b_1+b_2x+b_3x^2)e^{-2x}\sin3x.
 \]
+\end{solution}
 
 \begin{example}\label{example:9.2.7}
 Find the general solution of
@@ -1327,7 +1334,8 @@ y^{(4)}+4y'''+6y''+4y'=0.
 \end{equation}
 \end{example}
 
-\solution  The characteristic polynomial of \eqref{eq:9.2.20} is
+\begin{solution}
+The characteristic polynomial of \eqref{eq:9.2.20} is
 \begin{align*}
 p(r)&=r^4+4r^3+6r^2+4r\\
 &=r(r^3+4r^2+6r+4)\\
@@ -1350,6 +1358,7 @@ respectively. Therefore the general solution of \eqref{eq:9.2.20} is
 \[
 y=e^{-x}(c_1\cos x+c_2\sin x)+c_3e^{-2x}+c_4.
 \]
+\end{solution}
 
 \begin{example}\label{example:9.2.8}
 Find a fundamental set of solutions of
@@ -1358,7 +1367,8 @@ Find a fundamental set of solutions of
 \end{equation}
 \end{example}
 
-\solution A fundamental set of solutions of \eqref{eq:9.2.21} can be
+\begin{solution}
+A fundamental set of solutions of \eqref{eq:9.2.21} can be
 obtained by combining fundamental sets of solutions of
 \[
 \left[(D+1)^2+1\right]^2 y=0,
@@ -1377,6 +1387,7 @@ Fundamental sets of solutions of these equations are given by
 \]
 respectively. These ten functions form a fundamental set of solutions
 of \eqref{eq:9.2.21}.
+\end{solution}
 
  \exercises
  In \zcref[range]{exer:9.2.1,exer:9.2.14} find the general
@@ -1788,7 +1799,8 @@ y'''+3y''+2y'-y=e^x(21+24x+28x^2+5x^3).
 \end{equation}
 \end{example}
 
-\solution Substituting
+\begin{solution}
+Substituting
 \begin{align*}
 y&=ue^x,\\
 y'&=e^x(u'+u),\\
@@ -1843,7 +1855,7 @@ is a particular solution of  \eqref{eq:9.3.3}, so
 y_p=e^xu_p=e^x(1+2x-x^2+x^3)
 \]
 is a particular solution of  \eqref{eq:9.3.2} (\zcref{figure:9.3.1}).
-
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -1861,7 +1873,7 @@ y^{(4)}-y'''-6y''+4y'+8y=e^{2x}(4+19x+6x^2).
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Substituting
 \begin{align*}
 y&=ue^{2x},\\
@@ -1917,6 +1929,7 @@ y_p=e^{2x}u_p=\frac{x^2e^{2x}}{24}(-4+4x+x^2)
 \]
 is a particular solution of  \eqref{eq:9.3.4}.
 (\zcref{figure:9.3.2}).
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -1944,7 +1957,8 @@ y'''+y''-4y'-4y=e^x[(5-5x)\cos x+(2+5x)\sin x].
 \end{equation}
 \end{example}
 
-\solution Substituting
+\begin{solution}
+Substituting
 \begin{align*}
 y&=ue^x,\\
 y'&=e^x(u'+u),\\
@@ -2009,7 +2023,7 @@ is a particular solution of  \eqref{eq:9.3.8}, so
 y_p=e^xu_p=-\frac{e^x}{2}\left[(2-x)\cos x+(1+x)\sin x\right]
 \]
 is a particular  solution of \eqref{eq:9.3.7} (\zcref{figure:9.3.3}).
-
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -2020,9 +2034,6 @@ is a particular  solution of \eqref{eq:9.3.7} (\zcref{figure:9.3.3}).
 \end{figure}
 
 
-
-
-
 \begin{example}\label{example:9.3.4}
 Find a particular solution of
 \begin{equation} \label{eq:9.3.10}
@@ -2031,7 +2042,8 @@ e^{-x}\left[(1-6x)\cos x-(3+2x)\sin x\right].
 \end{equation}
 \end{example}
 
-\solution Substituting
+\begin{solution}
+Substituting
 \begin{align*}
 y&=ue^{-x},\\
 y'&=e^{-x}(u'-u),\\
@@ -2109,7 +2121,7 @@ is a particular solution of  \eqref{eq:9.3.11}, so
 x+(1+x)\sin x\right]
 \]
 (\zcref{figure:9.3.4}) is a particular  solution of \eqref{eq:9.3.10}.
-
+\end{solution}
 
 
 
@@ -2492,7 +2504,7 @@ set of solutions of the complementary equation. Then find the general
 solution of \eqref{eq:9.4.8}.
  \end{example}
 
-\solution
+\begin{solution}
 We seek a particular solution of \eqref{eq:9.4.8} of the form
 \[
 y_p=u_1x+u_2e^x+u_3e^{-x}.
@@ -2552,6 +2564,7 @@ y_p=2xe^x(x-1).
 \[
 y=2xe^x(x-1)+c_1x+c_2e^x+c_3e^{-x}.
 \]
+\end{solution}
 
 
 \boxit{Fourth Order Equations}
@@ -2608,7 +2621,7 @@ the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and
 $(0,\infty)$.
  \end{example}
 
-\solution
+\begin{solution}
 We seek a particular solution of \eqref{eq:9.4.10} of the form
 \[
 y_p=u_1x+u_2x^2+\frac{u_3}{x}+\frac{u_4}{x^2}.
@@ -2685,6 +2698,7 @@ y_p=x^2\ln|x|.
 y=x^2\ln|x|+c_1x+c_2x^2+\frac{c_3}{x}+\frac{c_4}{x^2}
 \]
 is the general solution of \eqref{eq:9.4.10} on $(-\infty,0)$ and $(0,\infty)$.
+\end{solution}
 
 \exercises
 In \zcref[range]{exer:9.4.1,exer:9.4.21} find a particular

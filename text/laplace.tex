@@ -1,4 +1,3 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Laplace Transforms}\label{ch:laplace}
@@ -122,7 +121,7 @@ for all $s>s_0$ (\zcref{exer:8.1.14}(b)).
  Find the Laplace transform of  $f(t)=1$.
 \end{example}
 
-\solution
+\begin{solution}
  From  \eqref{eq:8.1.2} with $f(t)=1$,
 \[
 F(s)=\int_0^\infty e^{-st}\,dt=\lim_{T\to\infty}\int_0^T e^{-st}\,
@@ -154,8 +153,9 @@ This result can be written in operator notation as
 \]
 or as the transform pair
 \[
-1\leftrightarrow\frac{1}{s},\quad s>0.
+1\leftrightarrow\frac{1}{s},\quad s>0.\qedhere
 \]
+\end{solution}
 
 \begin{remark*}
 It is convenient to combine the steps of integrating from $0$ to $T$
@@ -175,7 +175,7 @@ We'll follow this practice throughout this chapter.
  Find the Laplace transform of $f(t)=t$.
 \end{example}
 
-\solution
+\begin{solution}
   From  \eqref{eq:8.1.2} with $f(t)=t$,
 \begin{equation}\label{eq:8.1.5}
 F(s)=\int_0^\infty e^{-st}t\,dt.
@@ -204,14 +204,15 @@ This result can also be written as
 \]
 or as the transform pair
 \[
-t\leftrightarrow\frac{1}{s^2},\quad s>0.
+t\leftrightarrow\frac{1}{s^2},\quad s>0.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:8.1.3}
  Find the Laplace transform of $f(t)=e^{at}$, where $a$ is a constant.
 \end{example}
 
-\solution
+\begin{solution}
 From  \eqref{eq:8.1.2} with $f(t)=e^{at}$,
 \[
 F(s)=\int_0^\infty e^{-st}e^{at}\,dt.
@@ -230,16 +231,18 @@ F(s)=\frac{1}{s-a},\quad s>a.
 \]
 This can also be written as
 \[
-\laplace(e^{at})=\frac{1}{s-a},\quad s>a, \text{\; or \; }
- e^{at}\leftrightarrow\frac{1}{s-a},\quad s>a.
+\laplace(e^{at})=\frac{1}{s-a},\quad s>a, \qquad\text{or}\qquad
+ e^{at}\leftrightarrow\frac{1}{s-a},\quad s>a.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:8.1.4}
 Find the Laplace transforms of $f(t)=\sin\omega t$ and
 $g(t)=\cos\omega t$, where $\omega$ is a constant.
 \end{example}
 
-\solution  Define
+\begin{solution}
+Define
 \begin{equation}\label{eq:8.1.6}
 F(s)=\int_0^\infty e^{-st}\sin\omega t\,dt
 \end{equation}
@@ -275,8 +278,9 @@ G(s)=\frac{s}{s^2+\omega^2},\quad s>0.
 \]
 This and  \eqref{eq:8.1.8} imply that
 \[
-F(s)=\frac{\omega}{s^2+\omega^2},\quad s>0.
+F(s)=\frac{\omega}{s^2+\omega^2},\quad s>0.\qedhere
 \]
+\end{solution}
 
 
 \boxit{Tables of Laplace transforms}
@@ -291,15 +295,17 @@ Use the
 table of Laplace transforms to find  $\laplace(t^3e^{4t})$.
 \end{example}
 
-\solution  The table
+\begin{solution}
+The table
 includes the transform pair
 \[
 t^ne^{at}\leftrightarrow\frac{n!}{(s-a)^{n+1}}.
 \]
 Setting $n=3$  and $a=4$ here yields
 \[
-\laplace(t^3e^{4t})=\frac{3!}{(s-4)^4}=\frac{6}{(s-4)^4}.\bbox
+\laplace(t^3e^{4t})=\frac{3!}{(s-4)^4}=\frac{6}{(s-4)^4}.\qedhere
 \]
+\end{solution}
 
 We'll  sometimes write Laplace transforms of specific functions
 without explicitly stating how they are obtained. In such cases you
@@ -341,7 +347,8 @@ Use  \zcref{thmtype:8.1.2} and the known Laplace transform
  to find $\laplace(\cosh bt)\,(b\ne0)$.
 \end{example}
 
-\solution  By definition,
+\begin{solution}
+By definition,
 \[
 \cosh bt=\frac{e^{bt}+e^{-bt}}{2}.
 \]
@@ -360,8 +367,9 @@ second
 for $s>-b$; hence, both are defined for $s>|b|$.  Simplifying the
 last expression in \eqref{eq:8.1.9} yields
 \[
-\laplace(\cosh bt)=\frac{s}{s^2-b^2},\quad s>|b|.
+\laplace(\cosh bt)=\frac{s}{s^2-b^2},\quad s>|b|.\qedhere
 \]
+\end{solution}
 
 
 \boxit{The First Shifting Theorem}
@@ -399,10 +407,11 @@ transforms of $1$, $t$, $\cos\omega t$, and $\sin\omega t$ to find
 \]
 \end{example}
 
-\solution  In the following table the known
+\begin{solution}
+In the following table the known
 transform pairs  are listed on the left and  the required  transform pairs
 listed on the right are obtained  by applying
-\zcref{thmtype:8.1.3}.
+\zcref{thmtype:8.1.3}.\qedhere
 
 \begin{center}
 \tagpdfsetup{table/header-rows={1}}
@@ -419,7 +428,7 @@ $\cos\omega t\leftrightarrow\dfrac{s}{s^2+\omega^2},\quad s>0$ &
 $e^{\lambda t}\sin\omega t\leftrightarrow\dfrac{s-\lambda}{(s-\lambda)^2+\omega^2},\,s>\lambda$\\\bottomrule
 \end{tabular}
 \end{center}
-
+\end{solution}
 
 \boxit{Existence of Laplace Transforms}
 
@@ -631,7 +640,8 @@ f(t)=\begin{cases}
 \]
 \end{example}
 
-\solution    Since $f$ is defined by different formulas
+\begin{solution}
+Since $f$ is defined by different formulas
 on $[0,1)$ and $[1,\infty)$, we write
 \[
  F(s)=\int_0^\infty e^{-st} f(t)\,dt
@@ -662,6 +672,7 @@ This is consistent with \zcref{thmtype:8.1.6}, since
 |f(t)|\le 3e^{-t},\quad  t\ge 1,
 \]
 and therefore $f$ is of exponential order $s_0=-1$.
+\end{solution}
 
 \begin{remark*}
 In \zcref{sec:unit_step_func} we'll develop a more efficient
@@ -996,7 +1007,7 @@ Setting $\omega=3$ in  the transform pair
 \]
 shows that
 \[
-\laplace^{-1}\left(\frac{s}{s^2+9}\right)=\cos3t.\bbox
+\laplace^{-1}\left(\frac{s}{s^2+9}\right)=\cos3t.\qedhere
 \]
 \end{alistSolution}
 
@@ -1018,7 +1029,7 @@ Find
 \]
 \end{example}
 
-\solution
+\begin{solution}
 From the table of Laplace transforms in \zcref{sec:laplace_table},
 \[
 e^{at}\leftrightarrow \frac{1}{s-a}\quad\text{and}\quad
@@ -1033,8 +1044,9 @@ yields
 +7\laplace^{-1}\left(\frac{1}{s^2+3}\right)\\
 &=8\laplace^{-1}\left(\frac{1}{s+5}\right)
 +\frac{7}{\sqrt3}\laplace^{-1}\left(\frac{\sqrt3}{s^2+3}\right)\\
-&=8e^{-5t}+\frac{7}{\sqrt3}\sin\sqrt3t.
+&=8e^{-5t}+\frac{7}{\sqrt3}\sin\sqrt3t.\qedhere
 \end{align*}
+\end{solution}
 
 \begin{example}\label{example:8.2.3}
 Find
@@ -1043,7 +1055,7 @@ Find
 \]
 \end{example}
 
-\solution
+\begin{solution}
 Completing the square in the denominator yields
 \[
 \frac{3s+8}{s^2+2s+5}=\frac{3s+8}{(s+1)^2+4}.
@@ -1062,8 +1074,9 @@ and write
 +\laplace^{-1}\left(\frac{5}{(s+1)^2+4}\right)\\
 &=3\laplace^{-1}\left(\frac{s+1}{(s+1)^2+4}\right)
 +\frac{5}{2}\laplace^{-1}\left(\frac{2}{(s+1)^2+4}\right)\\
-&=e^{-t}(3\cos 2t+\frac{5}{2}\sin 2t).
+&=e^{-t}(3\cos 2t+\frac{5}{2}\sin 2t).\qedhere
 \end{align*}
+\end{solution}
 
 \begin{remark*}
 We'll often write inverse Laplace transforms of specific
@@ -1149,7 +1162,7 @@ and setting $s=2$ leads to
 \eqref{eq:8.2.5}.  (It isn't necesary to
  write the last two equations. We wrote them  only to justify
 the shortcut procedure indicated in  \eqref{eq:8.2.4} and
-\eqref{eq:8.2.5}.) \bbox
+\eqref{eq:8.2.5}.) \hfill\bbox
 \end{enumext}
 
 The shortcut employed in the second solution of
@@ -1179,7 +1192,7 @@ F(s)=\frac{6+(s+1)(s^2-5s+11)}{s(s-1)(s-2)(s+1)}.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 The partial fraction expansion of  \eqref{eq:8.2.7} is of the form
 \begin{equation}\label{eq:8.2.8}
 F(s)=\frac{A}{s}+\frac{B}{s-1}+\frac{C}{s-2}+\frac{D}{s+1}.
@@ -1211,8 +1224,9 @@ and
 -10\laplace^{-1}\left(\frac{1}{s-1}\right)
 +\frac{7}{2}\laplace^{-1}\left(\frac{1}{s-2}\right)
 -\laplace^{-1}\left(\frac{1}{s+1}\right)\\
-&= \frac{17}{2}-10e^t+\frac{7}{2}e^{2t}-e^{-t}.
+&= \frac{17}{2}-10e^t+\frac{7}{2}e^{2t}-e^{-t}.\qedhere
 \end{align*}
+\end{solution}
 
 \begin{remark*}
 We didn't ``multiply out'' the numerator in
@@ -1228,7 +1242,7 @@ F(s)=\frac{8-(s+2)(4s+10)}{(s+1)(s+2)^2}.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 The  form for the partial fraction expansion  is
 \begin{equation}\label{eq:8.2.10}
 F(s)=\frac{A}{s+1}+\frac{B}{s+2}+\frac{C}{(s+2)^2}.
@@ -1261,8 +1275,9 @@ and
 &=2\laplace^{-1}\left(\frac{1}{s+1}\right)
 -6\laplace^{-1}\left(\frac{1}{s+2}\right)
 -8\laplace^{-1}\left(\frac{1}{(s+2)^2}\right)\\
-&=2e^{-t}-6e^{-2t}-8te^{-2t}.
+&=2e^{-t}-6e^{-2t}-8te^{-2t}.\qedhere
 \end{align*}
+\end{solution}
 
 \begin{example}\label{example:8.2.7}
 Find the inverse Laplace transform of
@@ -1271,7 +1286,7 @@ F(s)=\frac{s^2-5s+7}{(s+2)^3}.
 \]
 \end{example}
 
-\solution
+\begin{solution}
 The form for the partial fraction expansion  is
 \[
 F(s)=\frac{A}{s+2}+\frac{B}{(s+2)^2}+\frac{C}{(s+2)^3}.
@@ -1292,8 +1307,9 @@ and
 &=\laplace^{-1}\left(\frac{1}{s+2}\right)
 -9\laplace^{-1}\left(\frac{1}{(s+2)^2}\right)
 +\frac{21}{2}\laplace^{-1}\left(\frac{2}{(s+2)^3}\right)\\
-&=e^{-2t}\left(1-9t+\frac{21}{2}t^2\right).
+&=e^{-2t}\left(1-9t+\frac{21}{2}t^2\right).\qedhere
 \end{align*}
+\end{solution}
 
 \begin{example}\label{example:8.2.8}
  Find the inverse Laplace transform of
@@ -1302,7 +1318,7 @@ F(s)=\frac{1-s(5+3s)}{s\left[(s+1)^2+1\right]}.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 One  form for the partial fraction expansion of $F$ is
 \begin{equation}\label{eq:8.2.14}
 F(s)=\frac{A}{s}+\frac{Bs+C}{(s+1)^2+1}.
@@ -1351,8 +1367,9 @@ Therefore
 &=\frac{1}{2}\laplace^{-1}\left(\frac{1}{s}\right)
 -\frac{7}{2}\laplace^{-1}\left(\frac{s+1}{(s+1)^2+1}\right)
 -\frac{5}{2} \laplace^{-1}\left(\frac{1}{(s+1)^2+1}\right)\\
-&=\frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t.
+&=\frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t.\qedhere
 \end{align*}
+\end{solution}
 
 \begin{example}\label{example:8.2.9}
 Find the inverse Laplace transform of
@@ -1361,7 +1378,7 @@ F(s)=\frac{8+3s}{(s^2+1)(s^2+4)}.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 The form for the partial fraction expansion is
 \[
 F(s)=\frac{A+Bs}{s^2+1}+\frac{C+Ds}{s^2+4}.
@@ -1387,8 +1404,9 @@ F(s)=\frac{8+3s}{(s^2+1)(s^2+4)}=\frac{1}{3}\left(\frac{8+3s}{s^2+1}-\frac{8+3s}
 \]
 Therefore
 \[
-\laplace^{-1}(F)=\frac{8}{3}\sin t+\cos t-\frac{4}{3}\sin 2t-\cos 2t.
+\laplace^{-1}(F)=\frac{8}{3}\sin t+\cos t-\frac{4}{3}\sin 2t-\cos 2t.\qedhere
 \]
+\end{solution}
 
 \technology
 
@@ -1477,7 +1495,7 @@ transform.
 \item\label{exer:8.2.6}Find the inverse Laplace transform.
 
 \begin{alist}[columns=2]
-% TODO was horinzontal
+% TODO was horizontal
 \item $\dfrac{17 s-15}{(s^2-2s+5)(s^2+2s+10)}$
 \item $\dfrac{8s+56}{(s^2-6s+13)(s^2+2s+5)}$
 \item $\dfrac{s+9}{(s^2+4s+5)(s^2-4s+13)}$
@@ -1617,7 +1635,6 @@ Therefore
 \]
 which agrees with the corresponding  result obtained  in
 \zcref{example:8.1.4}.
-\bbox
 \end{example}
 
 In \zcref{sec:linar_first_order} we showed that the solution of the
@@ -1701,7 +1718,7 @@ y''-6y'+5y=3e^{2t},\quad y(0)=2, \quad   y'(0)=3.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Taking Laplace transforms of both sides of the differential equation
 in \eqref{eq:8.3.6} yields
 \[
@@ -1744,7 +1761,8 @@ and taking the inverse transform of this yields
 \[
 y=-e^{2t}+\frac{1}{2}e^{5t}+\frac{5}{2}e^t
 \]
-as the solution of  \eqref{eq:8.3.6}.\bbox
+as the solution of  \eqref{eq:8.3.6}.
+\end{solution}
 
 It isn't necessary to write all the steps that we used to obtain
 \eqref{eq:8.3.8}. To see how to avoid this, let's apply the method of
@@ -1794,7 +1812,8 @@ initial value problem
 2y''+3y'+y=8e^{-2t}, \quad   y(0)=-4,\;  y'(0)=2.
 \end{equation}
 \end{example}
-\solution
+
+\begin{solution}
 The characteristic polynomial is
 \[
 p(s)=2s^2+3s+1=(2s+1)(s+1)
@@ -1820,6 +1839,7 @@ so the solution of  \eqref{eq:8.3.14} is
 y=\laplace^{-1}(Y(s))=\frac{4}{3}e^{-t/2}-8e^{-t}+\frac{8}{3}e^{-2t}
 \]
 (\zcref{figure:8.3.1}).
+\end{solution}
 
 \noindent
   \begin{minipage}{0.48\linewidth}
@@ -1848,7 +1868,7 @@ y''+2y'+2y=1, \quad   y(0)=-3,\;  y'(0)=1.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 The characteristic polynomial is
 \[
 p(s)=s^2+2s+2=(s+1)^2+1
@@ -1872,7 +1892,7 @@ y=\frac{1}{2}-\frac{7}{2}e^{-t}\cos t-\frac{5}{2}e^{-t}\sin t
 \]
 (\zcref{figure:8.3.2}),
 which is therefore  the solution of  \eqref{eq:8.3.15}.
-
+\end{solution}
 
 
 
@@ -1988,7 +2008,8 @@ f(t)=\begin{cases}
 
 
 
-\solution Since the formula for $f$ changes at $t=2$, we write
+\begin{solution}
+Since the formula for $f$ changes at $t=2$, we write
 \begin{equation}\label{eq:8.4.2}
 \begin{aligned}
 \laplace(f)
@@ -2030,8 +2051,9 @@ This and \eqref{eq:8.4.3} imply that
 \]
 Now we can use the table of Laplace transforms to find that
 \[
-\laplace(f)=\frac{2}{s^2}+\frac{1}{s} +e^{-2s}\left(\frac{1}{s^2}+\frac{1}{s}\right).\bbox
+\laplace(f)=\frac{2}{s^2}+\frac{1}{s} +e^{-2s}\left(\frac{1}{s^2}+\frac{1}{s}\right).\qedhere
 \]
+\end{solution}
 
 
 \noindent
@@ -2140,7 +2162,7 @@ from $x$ to $t$ yields
 \[
 \laplace\left(u(t-\tau)g(t)\right)
 =e^{-s\tau}\int_0^\infty e^{-st} g(t+\tau)\,dt
-=e^{-s\tau}\laplace(g(t+\tau)).%\bbox
+=e^{-s\tau}\laplace(g(t+\tau)).
 \]
 \end{proof}
 
@@ -2151,7 +2173,8 @@ from $x$ to $t$ yields
 \]
 \end{example}
 
-\solution  Here $\tau=1$ and $g(t)=t^2+1$, so
+\begin{solution}
+Here $\tau=1$ and $g(t)=t^2+1$, so
 \[
 g(t+1)=(t+1)^2+1=t^2+2t+2.
 \]
@@ -2161,8 +2184,9 @@ Since
 \]
 \zcref{thmtype:8.4.1} implies that
 \[\laplace\left(u(t-1)(t^2+1)\right)
-=e^{-s}\left(\frac{2}{s^3}+\frac{2}{s^2}+\frac{2}{s}\right).
+=e^{-s}\left(\frac{2}{s^3}+\frac{2}{s^2}+\frac{2}{s}\right).\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:8.4.3}
 Use \zcref{thmtype:8.4.1} to find the Laplace transform of the
@@ -2173,7 +2197,7 @@ f(t)=\begin{cases} 2t+1,&0\le t<2,\\3t,&t\ge2,\end{cases}
 from \zcref{example:8.4.1}.
 \end{example}
 
-\solution
+\begin{solution}
 We first write $f$ in the form \eqref{eq:8.4.6} as
 \[
 f(t)=2t+1+u(t-2)(t-1).
@@ -2185,7 +2209,8 @@ Therefore
 &=\laplace(2t+1)+e^{-2s}\laplace(t+1)\quad\text{(from \zcref{thmtype:8.4.1}})\\
 &=\frac{2}{s^2}+\frac{1}{s}+e^{-2s}\left(\frac{1}{s^2}+\frac{1}{s}\right),
 \end{align*}
-which is the result obtained in \zcref{example:8.4.1}.\bbox
+which is the result obtained in \zcref{example:8.4.1}.
+\end{solution}
 
 Formula \eqref{eq:8.4.6} can be extended to more general piecewise continuous
 functions. For example, we can write
@@ -2224,10 +2249,8 @@ f(t)=\begin{cases}
   \label{figure:8.4.3}
 \end{figure}
 
-
-
-
-\solution  In terms of step functions,
+\begin{solution}
+In terms of step functions,
 \[
 f(t)=1+u(t-2)(-2t+1-1)+u(t-3)(3t+2t-1)
 +u(t-5)(t-1-3t),
@@ -2246,8 +2269,9 @@ Now \zcref{thmtype:8.4.1} implies that
 +e^{-3s}\laplace(5t+14)-e^{-5s}\laplace(2t+11)\\
 &=\frac{1}{s}-2e^{-2s}\left(\frac{1}{s^2}+\frac{2}{s}\right)+
 e^{-3s}\left(\frac{5}{s^2}+\frac{14}{s}\right)
--e^{-5s}\left(\frac{2}{s^2}+\frac{11}{s}\right).\bbox
+-e^{-5s}\left(\frac{2}{s^2}+\frac{11}{s}\right).\qedhere
 \end{align*}
+\end{solution}
 
  The trigonometric identities
 \begin{align}
@@ -2278,11 +2302,8 @@ f(t)=\begin{cases}
   \label{figure:8.4.4}
 \end{figure}
 
-
-
-
-
- \solution In terms of step functions,
+\begin{solution}
+In terms of step functions,
 \[
 f(t)=\sin t+u(t-\pi/2) (\cos t-4\sin t)+u(t-\pi) (2
 \cos t+3\sin t).
@@ -2310,8 +2331,9 @@ we see from \eqref{eq:8.4.11} that
 &=\laplace(\sin t)-e^{-\pi s/2}\laplace(\sin t+4\cos t)
 -e^{-\pi s}\laplace(2\cos t+3\sin t)\\
 &=\frac{1}{s^2+1}-e^{-\frac{\pi}{2}s}\left(\frac{1+4s}{s^2+1}\right)
--e^{-\pi s}\left(\frac{3+2s}{s^2+1}\right).\bbox
+-e^{-\pi s}\left(\frac{3+2s}{s^2+1}\right).\qedhere
 \end{align*}
+\end{solution}
 
 
 \boxit{The Second Shifting Theorem}
@@ -2350,11 +2372,13 @@ argument of the inverse transform by $\tau$ units.
 \]
 \end{example}
 
-\solution  To apply \eqref{eq:8.4.12} we let
+\begin{solution}
+To apply \eqref{eq:8.4.12} we let
 $\tau=2$ and $G(s)=1/s^2$. Then $g(t)=t$ and \eqref{eq:8.4.12} implies that
 \[
-\laplace^{-1}\left(\frac{e^{-2s}}{s^2}\right)=u(t-2)(t-2).\bbox
+\laplace^{-1}\left(\frac{e^{-2s}}{s^2}\right)=u(t-2)(t-2).\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:8.4.7}
  Find the inverse Laplace transform $h$ of
@@ -2365,7 +2389,8 @@ e^{-4s}\left(\frac{4}{s^3}+\frac{1}{s}\right),
 and find distinct formulas for $h$ on appropriate intervals.
 \end{example}
 
-\solution  Let
+\begin{solution}
+Let
 \[
 G_0(s)=\frac{1}{s^2},\quad G_1(s)=\frac{1}{s^2}+\frac{2}{s},\quad
 G_2(s)=\frac{4}{s^3}+\frac{1}{s}.
@@ -2386,8 +2411,9 @@ h(t)=\begin{cases}
  t,&0\le t<1,\\
 -1,&1\le t<4,\\
 2t^2-16t+32,&t\ge4.
-\end{cases}\bbox
+\end{cases}\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:8.4.8}
  Find the inverse transform of
@@ -2397,7 +2423,8 @@ s}\frac{s+1}{s^2+6s+10}.
 \]
 \end{example}
 
-\solution  Let
+\begin{solution}
+Let
 \[
 G_0(s)=\frac{2s}{s^2+4},\quad G_1(s)=-\frac{(3s+1)}{s^2+9},
 \]
@@ -2429,6 +2456,7 @@ h(t)=2\cos 2t&{}+u(t-\pi/2)\left(3\sin 3t-\frac{1}{3}\cos 3t\right)\\
 \end{aligned}
 \end{equation}
 (\zcref{figure:8.4.5}).
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -2440,7 +2468,7 @@ h(t)=2\cos 2t&{}+u(t-\pi/2)\left(3\sin 3t-\frac{1}{3}\cos 3t\right)\\
 \end{figure}
 
 
- \exercises
+\exercises
 In \zcref[range]{exer:8.4.1,exer:8.4.6} find the Laplace transform by
 the method of \zcref{example:8.4.1}. Then express the given function
 $f$ in terms of unit step functions as in \zcref{eq:8.4.6}, and use
@@ -2755,7 +2783,7 @@ f(t)=\begin{cases}
 \]
 \end{example}
 
-\solution
+\begin{solution}
 The  initial value problem in Step 1 is
 \[
 y''+y=1, \quad   y(0)=2,\quad y'(0)=-1.
@@ -2783,6 +2811,7 @@ y=\begin{cases}
 \end{cases}
 \end{equation}
 (\zcref{figure:8.5.1}).
+\end{solution}
 
 
 \begin{figure}
@@ -2816,7 +2845,8 @@ f(t)=\begin{cases}
 \]
 \end{example}
 
-\solution Here
+\begin{solution}
+Here
 \[
 f(t)=1-2u\left(t-\frac{\pi}{2}\right),
 \]
@@ -2875,6 +2905,7 @@ y=\begin{cases}
 \end{cases}
 \]
 which is the result obtained in \zcref{example:8.5.1}.
+\end{solution}
 
 \medskip
 \begin{remark*}
@@ -2903,7 +2934,8 @@ t,&0\le t<1,\\
 \]
 \end{example}
 
-\solution  Here
+\begin{solution}
+Here
 \[
 f(t)=t-u(t-1)(t-1),
 \]
@@ -2947,7 +2979,7 @@ y=3\sinh t-\cosh t-t-u(t-1)\left(\sinh (t-1)-t+1\right)
 We leave it to you to verify that $y$  and $y'$ are continuous and
 $y''$ has limits from the right and left at
 $t_1=1$.
-
+\end{solution}
 
 
 \begin{example}\label{example:8.5.4}
@@ -2965,7 +2997,8 @@ f(t)=\begin{cases}
 \]
 \end{example}
 
-\solution  Here
+\begin{solution}
+Here
 \[
 f(t)=u(t-\pi/4)\cos2t-u(t-\pi)\cos2t,
 \]
@@ -3042,6 +3075,7 @@ y=\begin{cases}
 We leave it to you to verify that $y$ and $y'$ are continuous and
 $y''$ has limits from the right and left at $t_1=\pi/4$ and $t_2=\pi$
 (\zcref{figure:8.5.2}).
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -3050,7 +3084,6 @@ $y''$ has limits from the right and left at $t_1=\pi/4$ and $t_2=\pi$
   \caption{ Graph of \eqref{eq:8.5.16}}
   \label{figure:8.5.2}
 \end{figure}
-
 
 
 \exercises
@@ -3468,7 +3501,7 @@ Verify that $\laplace(f\ast g)=\laplace(f)\laplace(g)$, as
 implied by the convolution theorem.
 \end{example}
 
-\solution
+\begin{solution}
 We first compute
 \begin{alignat*}{2}
 (f\ast g)(t)
@@ -3488,8 +3521,9 @@ it follows that
 \laplace(f\ast g)
 &=\frac{1}{a-b}\left[\frac{1}{s-a}-\frac{1}{s-b}\right]\\
 &=\frac{1}{(s-a)(s-b)}\\
-&=\laplace(e^{at})\laplace(e^{bt})=\laplace(f)\laplace(g).
+&=\laplace(e^{at})\laplace(e^{bt})=\laplace(f)\laplace(g).\qedhere
 \end{align*}
+\end{solution}
 
 
 \boxit{A Formula for the Solution of an Initial Value Problem}
@@ -3506,7 +3540,8 @@ y''-2y'+y=f(t),\quad  y(0)=k_0,\quad y'(0)=k_1.
 \end{equation}
 \end{example}
 
-\solution Taking Laplace transforms in \eqref{eq:8.6.7} yields
+\begin{solution}
+Taking Laplace transforms in \eqref{eq:8.6.7} yields
 \[
 (s^2-2s+1)Y(s)=F(s)+(k_1+k_0s)-2k_0.
 \]
@@ -3534,8 +3569,9 @@ the convolution theorem implies that
 Therefore the solution of  \eqref{eq:8.6.7} is
 \[
 y(t)=e^t\left(k_0+(k_1-k_0)t\right)+\int_0^t\tau e^\tau f(t-\tau)\,
-d\tau.
+d\tau.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:8.6.3}
  Find a formula for the solution of the initial value problem
@@ -3544,7 +3580,8 @@ y''+4y=f(t),\quad y(0)=k_0,\quad y'(0)=k_1.
 \end{equation}
 \end{example}
 
-\solution Taking Laplace transforms in \eqref{eq:8.6.8} yields
+\begin{solution}
+Taking Laplace transforms in \eqref{eq:8.6.8} yields
 \[
 (s^2+4)Y(s) =F(s)+k_1+k_0s.
 \]
@@ -3570,8 +3607,9 @@ d\tau.
 Therefore the solution of  \eqref{eq:8.6.8} is
 \[
 y(t)=k_0\cos 2t+\frac{k_1}{2}\sin 2t+\frac{1}{2}\int_0^tf(t-\tau)\sin
-2\tau\,d\tau.
+2\tau\,d\tau.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:8.6.4}
   Find a formula for the solution of the initial value problem
@@ -3580,7 +3618,8 @@ y''+2y'+2y=f(t),\quad y(0)=k_0,\quad y'(0)=k_1.
 \end{equation}
 \end{example}
 
-\solution Taking Laplace transforms in \eqref{eq:8.6.9} yields
+\begin{solution}
+Taking Laplace transforms in \eqref{eq:8.6.9} yields
 \[
 (s^2+2s+2)Y(s)=F(s)+k_1+k_0s+2k_0.
 \]
@@ -3608,8 +3647,9 @@ the convolution theorem implies that
 Therefore the solution of  \eqref{eq:8.6.9} is
 \begin{equation}\label{eq:8.6.10}
 y(t)=e^{-t}\left((k_1+k_0)\sin t+k_0\cos
-t\right)+\int_0^tf(t-\tau)e^{-\tau}\sin\tau\,d\tau.
+t\right)+\int_0^tf(t-\tau)e^{-\tau}\sin\tau\,d\tau.\qedhere
 \end{equation}
+\end{solution}
 
 
 \boxit{Evaluating Convolution Integrals}
@@ -3626,7 +3666,8 @@ h(t)=\int_0^t(t-\tau)^5\tau^7 d\tau.
 \]
 \end{example}
 
-\solution We could evaluate this integral by expanding
+\begin{solution}
+We could evaluate this integral by expanding
 $(t-\tau)^5$ in powers of $\tau$ and then integrating. However, the
 convolution theorem provides an easier way. The integral is the
 convolution of $f(t)=t^5$ and $g(t)=t^7$. Since
@@ -3645,8 +3686,9 @@ where we have written the second equality because
 \]
 Hence,
 \[
-h(t)=\frac{5!7!}{13!}\, t^{13}.
+h(t)=\frac{5!7!}{13!}\, t^{13}.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:8.6.6}
 Use the convolution theorem and a partial fraction expansion to
@@ -3656,7 +3698,8 @@ h(t)=\int_0^t\sin a(t-\tau)\cos b\tau\,d\tau\quad (|a|\ne |b|).
 \]
 \end{example}
 
-\solution  Since
+\begin{solution}
+Since
 \[
 \sin at\leftrightarrow \frac{a}{s^2+a^2}\quad\text{and}\quad
 \cos bt\leftrightarrow \frac{s}{s^2+b^2},
@@ -3671,8 +3714,9 @@ H(s)=\frac{a}{b^2-a^2}\left[\frac{s}{s^2+a^2}-\frac{s}{s^2+b^2}\right].
 \]
 Therefore
 \[
-h(t)=\frac{a}{b^2-a^2}\left(\cos at-\cos bt\right).
+h(t)=\frac{a}{b^2-a^2}\left(\cos at-\cos bt\right).\qedhere
 \]
+\end{solution}
 
 
 \boxit{Volterra Integral Equations}
@@ -3706,7 +3750,8 @@ y(t)=1+2\int_0^t e^{-2(t-\tau)} y(\tau)\,d\tau.
 \end{equation}
 \end{example}
 
-\solution Taking Laplace transforms in \eqref{eq:8.6.12} yields
+\begin{solution}
+Taking Laplace transforms in \eqref{eq:8.6.12} yields
 \[
 Y(s)=\frac{1}{s}+\frac{2}{s+2} Y(s),
 \]
@@ -3716,8 +3761,9 @@ Y(s)=\frac{1}{s}+\frac{2}{s^2}.
 \]
 Hence,
 \[
-y(t)=1+2t.
+y(t)=1+2t.\qedhere
 \]
+\end{solution}
 
 
 \boxit{Transfer Functions}
@@ -3801,7 +3847,7 @@ Y(s)=k_0Y_1(s)+k_1Y_2(s)+\frac{1}{a}Y_2(s)F(s).
 \]
 Taking inverse transforms and invoking the convolution theorem yields
  \eqref{eq:8.6.14}. Finally,   \eqref{eq:8.6.19} and  \eqref{eq:8.6.21}
-imply  \eqref{eq:8.6.17}.%\bbox
+imply  \eqref{eq:8.6.17}.
 \end{proof}
 
 It is useful to note from \eqref{eq:8.6.14} that $y$ is of the form
@@ -4303,7 +4349,7 @@ are fixed.) Then \eqref{eq:8.7.8} and \eqref{eq:8.7.9} imply that
 \end{equation}
 But $\lim_{h\to0+}M_h=0$, since $w$ is continuous.
 Therefore \eqref{eq:8.7.10} implies \eqref{eq:8.7.6}.
-This and \eqref{eq:8.7.5} imply \eqref{eq:8.7.3}.% \bbox
+This and \eqref{eq:8.7.5} imply \eqref{eq:8.7.3}.
 \end{proof}
 
 \zcref[S]{thmtype:8.7.1} motivates the next definition.
@@ -4404,7 +4450,7 @@ y''-2y'+y=\delta(t-t_0), \quad  y(0)=0,\quad y'(0)=0,
 where $t_0>0$. Then interpret the solution for the case where $t_0=0$.
 \end{example}
 
-\solution
+\begin{solution}
 Here
 \[
 w=\laplace^{-1}\left(\frac{1}{s^2-2s+1}\right)=\laplace^{-1}\left(\frac{1}{(s-1)^2}\right)=te^{-t},
@@ -4423,7 +4469,8 @@ y''-2y'+y=\delta(t), \quad  y(0)=0,\quad y_-'(0)=0.
 \]
 
 The graph of $y=u(t-t_0)(t-t_0)e^{-(t-t_0)}$ is shown in
-\zcref{figure:8.7.3} \bbox
+\zcref{figure:8.7.3}.
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}
@@ -4464,7 +4511,8 @@ y''+6y'+5y=3e^{-2t}+2\delta(t-1),\quad y(0)=-3,\quad y'(0)=2.
 \end{equation}
 \end{example}
 
-\solution  We leave it to you to show that
+\begin{solution}
+We leave it to you to show that
 the solution of
 \[
 y''+6y'+5y=3e^{-2t}, \quad    y(0)=-3,\;   y'(0)=2
@@ -4485,7 +4533,8 @@ the solution of  \eqref{eq:8.7.16} is
 y=-e^{-2t}+\frac{1}{2}e^{-5t}-\frac{5}{2}e^{-t}
 +u(t-1)\frac{e^{-(t-1)}-e^{-5(t-1)}}{2}
 \end{equation}
-(\zcref{figure:8.7.4})\bbox.
+(\zcref{figure:8.7.4}).
+\end{solution}
 
 \noindent
 \begin{minipage}{0.48\linewidth}
@@ -4518,7 +4567,7 @@ y''+y=1+2\delta(t-\pi)-3\delta(t-2\pi), \quad    y(0)=-1,\;   y'(0)=2.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 We leave it to you to show that
 \[
 \hat y= 1-2\cos t+2\sin t
@@ -4544,6 +4593,7 @@ y=\begin{cases} 1-2\cos t+2\sin t,&0\le t<\pi,\\
 \end{cases}
 \end{equation}
 (\zcref{figure:8.7.5}).
+\end{solution}
 
 
 \exercises

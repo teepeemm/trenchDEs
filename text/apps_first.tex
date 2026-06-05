@@ -303,7 +303,8 @@ in a savings account bearing $5\frac{1}{2}$\% annual interest
 compounded continuously. How much must we deposit in the account?
 \end{example}
 
-\solution  The value of the account at time $t$ is
+\begin{solution}
+The value of the account at time $t$ is
 \begin{equation} \label{eq:4.1.9}
 Q(t)=Q_0e^{.055t}.
 \end{equation}
@@ -315,8 +316,9 @@ satisfy the equation
  obtained by setting $t=10$ and $Q(10)=10000$ in
 \eqref{eq:4.1.9}.  Solving \eqref{eq:4.1.10} for $Q_0$ yields
 \[
-Q_0=10000e^{-.55} \approx \$5769.50.
+Q_0=10000e^{-.55} \approx \$5769.50.\qedhere
 \]
+\end{solution}
 
 
 \boxit{Mixed Growth and Decay}
@@ -446,7 +448,8 @@ individuals. Estimate the age of the village and the length of time
 for which it survived.
 \end{example}
 
-\solution Let $Q=Q(t)$ be the quantity of carbon-14 in an individual
+\begin{solution}
+Let $Q=Q(t)$ be the quantity of carbon-14 in an individual
 set of remains $t$ years after death, and let $Q_0$ be the quantity
 that would be present in  live individuals.
 Since carbon-14 decays exponentially with half-life 5570 years, its
@@ -478,6 +481,7 @@ t_2=-5570 \frac{\ln .44}{\ln2} \approx 6597
  years ago.  Therefore it's reasonable to conclude
 that the village was founded about 7000 years ago,
 and lasted for about 400 years.
+\end{solution}
 
 
 \boxit{A Savings Program}
@@ -489,7 +493,8 @@ account at time $t > 0$, assuming that the bank pays 6\%
 interest compounded continuously.
 \end{example}
 
-\solution Observe that $Q$ isn't  continuous, since there are 52
+\begin{solution}
+Observe that $Q$ isn't  continuous, since there are 52
 discrete deposits per year of \$50 each. To construct a mathematical
 model for this problem in the form of a differential equation, we make
 the simplifying assumption that the deposits are made continuously at
@@ -525,7 +530,8 @@ and substituting this into \eqref{eq:4.1.14} yields
 Q=1000e^{.06t}+\frac{2600}{.06}(e^{.06t}-1),%\tag15
 \end{equation}
 where the first term is the value due to the initial deposit and the
-second is due to the subsequent weekly deposits. \bbox
+second is due to the subsequent weekly deposits.
+\end{solution}
 
 Mathematical models must be tested for validity by comparing
 predictions based on them with the actual outcome of experiments.
@@ -897,7 +903,8 @@ temperature of the insulator is \qty{200}{\degreeCelsius}. What is its temperatu
 after 8 minutes?
 \end{example}
 
-\solution Here $T_0=400$ and $T_m=25$, so \eqref{eq:4.2.2} becomes
+\begin{solution}
+Here $T_0=400$ and $T_m=25$, so \eqref{eq:4.2.2} becomes
 \begin{equation} \label{eq:4.2.3}
 T=25+375e^{-kt}.
 \end{equation}
@@ -924,8 +931,9 @@ Therefore the temperature of the insulator after
 \begin{align*}
 T(8) & = 25+375 e^{-2 \ln \dfrac{15}{7}} \\
 & = 25+375 \left(\dfrac{7}{15}\right)^2 \approx
-\qty{107}{\degreeCelsius}.
+\qty{107}{\degreeCelsius}.\qedhere
 \end{align*}
+\end{solution}
 
 \begin{figure}
   \centering
@@ -943,7 +951,8 @@ is \qty{60}{\degreeFahrenheit} and at 11:07 its temperature is \qty{50}{\degreeF
 time was the object placed outside?
 \end{example}
 
-\solution Let $T(t)$ be the temperature of the object at time $t$. For
+\begin{solution}
+Let $T(t)$ be the temperature of the object at time $t$. For
 convenience, we choose the origin $t_0=0$ of the time scale to be
 11:05 so that $T_0=60$. We must determine the time $\tau$ when
 $T(\tau)=72$. Substituting $T_0=60$ and $T_m=-20$ into \eqref{eq:4.2.2}
@@ -991,6 +1000,7 @@ Taking logarithms and solving for $\tau$ yields
 Therefore the object was placed outside
 about 2 minutes and 5 seconds before 11:05; that is,
 at 11:02:55.
+\end{solution}
 
 \begin{figure}
   \centering
@@ -1114,14 +1124,14 @@ the tank.
 \end{alistSolution}
 
 \begin{example}\label{example:4.2.4}
-A 500-liter tank initially contains 10 g of salt dissolved in 200
-liters of water. Starting at $t_0=0$, water that contains 1/4 g of salt
-per liter is poured into the tank at the rate of 4 liters/min and the
-mixture is drained from the tank at the rate of 2 liters/min
+A 500-liter tank initially contains \qty{10}{\gram} of salt dissolved in 200
+liters of water. Starting at $t_0=0$, water that contains 1/4 \unit{\gram} of salt
+per liter is poured into the tank at the rate of \qty{4}{\liter\per\minute} and the
+mixture is drained from the tank at the rate of \qty{2}{\liter\per\minute}
 (\zcref{figure:4.2.5}). Find a
 differential equation for the quantity $Q(t)$ of salt in the tank at
 time $t$ prior to the time when the tank overflows and find the
-concentration $K(t)$ (g/liter ) of salt in the tank at any such time.
+concentration $K(t)$ (\unit{\gram\per\liter}) of salt in the tank at any such time.
 \end{example}
 
 \begin{figure}
@@ -1133,15 +1143,12 @@ concentration $K(t)$ (g/liter ) of salt in the tank at any such time.
   \label{figure:4.2.5}
 \end{figure}
 
-
-
-
-
-\solution  We first determine the
+\begin{solution}
+We first determine the
 amount $W(t)$ of solution in the tank at any time $t$ prior to
-overflow.  Since $W(0) = 200$ and we're adding 4 liters/min while
- removing only 2 liters/min, there's a net gain
-of 2 liters/min in the tank;  therefore,
+overflow.  Since $W(0) = 200$ and we're adding \qty{4}{\liter\per\minute} while
+ removing only \qty{2}{\liter\per\minute}, there's a net gain
+of \qty{2}{\liter\per\minute} in the tank;  therefore,
 \[
 W(t) = 2t+200.
 \]
@@ -1159,7 +1166,7 @@ Q' = \text{rate in}-\text{rate out}.
 \end{equation}
  To determine the rate out, we observe that since
 the mixture is being removed from the tank at the constant
-rate of 2 liters/min and there are $2t+200$
+rate of \qty{2}{\liter\per\minute} and there are $2t+200$
 liters in the tank at time $t$, the fraction of the mixture
 being removed per minute at time $t$ is
 \[
@@ -1216,6 +1223,8 @@ time $t$.  Then
 K(t) = \frac{1}{4}-\frac{2000}{(t+100)^2}
 \]
 (\zcref{figure:4.2.6}).
+\end{solution}
+
 \begin{figure}
   \centering
   \includegraphics[alt={A graph for 0<t<1100 and 0<K<0.3 that begins at (0,0.05) and quickly increases toward a horizontal asymptote of y=0.25.},
@@ -1647,7 +1656,7 @@ the object as a function of $t$, and find the terminal velocity.
 Assume  that the initial velocity is $v_0$.
  \end{example}
 
-\solution
+\begin{solution}
 The total force acting on the object is
 \begin{equation} \label{eq:4.3.4}
 F=-mg+F_1,
@@ -1723,7 +1732,7 @@ Letting $t\to\infty$ here shows that the terminal velocity is
 \]
 which  is independent of the
 initial velocity $v_0$ (\zcref{figure:4.3.2}).
-
+\end{solution}
 
 \begin{figure}
   \centering
@@ -1743,7 +1752,7 @@ acting on the object is constant gravity, find its velocity $v$ as a
 function of $t$, and find its  terminal velocity.
 \end{example}
 
-\solution
+\begin{solution}
 Since $mg=960$ and $g=32$,   $m=960/32=30$.  The atmospheric
 resistance is $-3v$ \unit{\pound} if $v$ is expressed in feet
 per second.  Therefore
@@ -1776,8 +1785,9 @@ v=-320+380e^{-t/10}\unit{\feet\per\second}
 \]
 The terminal velocity is
 \[
-\lim_{t\to\infty}v(t)=\qty{-320}{\feet\per\second}.
+\lim_{t\to\infty}v(t)=\qty{-320}{\feet\per\second}.\qedhere
 \]
+\end{solution}
 
 
 \begin{example}\label{example:4.3.3}
@@ -1789,7 +1799,8 @@ find the velocity of the object as a function of $t$, and
 find the terminal velocity.
 \end{example}
 
-\solution Since the object is falling, the resistance is in the upward
+\begin{solution}
+Since the object is falling, the resistance is in the upward
 (positive) direction. Hence,
 \begin{equation} \label{eq:4.3.9}
 mv'=-mg+kv^2,
@@ -1862,6 +1873,7 @@ of \eqref{eq:4.3.9} such that $v_0\le0$ then
 \lim_{t\to\infty}v(t)=-\sqrt\frac{mg}{k}
 \]
 (\zcref{figure:4.3.3}).
+\end{solution}
 
 
 \begin{figure}
@@ -1883,7 +1895,8 @@ speed is \qty{2}{\meter\per\second}, find the time $T$ required for the mass to 
 maximum altitude.
 \end{example}
 
-\solution  The mass will
+\begin{solution}
+The mass will
 climb while $v>0 $ and reach its maximum altitude when $v=0$.
 Therefore $v>0$ for $0\le t<T$ and $v(T)=0$. Although the mass of
 the object and our assumptions concerning the forces acting on it are
@@ -1944,6 +1957,7 @@ altitude is less than
 \]
 regardless of the initial velocity.  \zcref[S]{figure:4.3.4}
 shows graphs of $v$ over $[0,T]$ for various values of $v_0$.
+\end{solution}
 
 \begin{figure}
   \centering
@@ -3155,8 +3169,7 @@ inward to it (\zcref{figure:4.4.16}). Use your favorite
 differential equations software  to verify this for
 $\mu=.5,1.1.5,2$. Use a grid with $-4<y<4$ and $-4<v<4$.
 
-% escape enumext's minipage
-% TODO
+% TODO escape enumext's minipage
 \exercisetext{%
 \begin{figure}
   \centering
@@ -3389,7 +3402,7 @@ x^2+y^2+c^2=0
 \]
 does not define a one-parameter family of curves, since no $(x,y)$
 satisfies the equation if $c\ne0$, and only the single point $(0,0)$
-satisfies it if $c=0$. \bbox
+satisfies it if $c=0$.
 \end{example}
 
 
@@ -3434,7 +3447,8 @@ y=cx^2.
 \end{equation}
 \end{example}
 
-\solution Differentiating
+\begin{solution}
+Differentiating
 \eqref{eq:4.5.8} with respect to $x$ yields
 \[
 y'=2cx.
@@ -3446,7 +3460,8 @@ y=\frac{xy'}{2}
 \]
  as a differential equation for the family of
 curves defined by \eqref{eq:4.5.8}.  The graph of any function of
-the form $y=cx^2$ is an integral curve of this equation. \bbox
+the form $y=cx^2$ is an integral curve of this equation.
+\end{solution}
 
 The next example shows that members of a given family of curves
 may be obtained by joining  integral curves for more than one
@@ -3584,7 +3599,7 @@ axes and tangent to the curve at $(x_0,y(x_0))$
 (\zcref{figure:4.5.6}).
 \end{example}
 
-\solution
+\begin{solution}
  The equation of the  line tangent to the curve at $P=(x_0,y(x_0)$ is
 \[
 y=y(x_0)+y'(x_0)(x-x_0).
@@ -3621,7 +3636,7 @@ y=\frac{c}{x}.
 If $c=0$ this curve is the line $y=0$, which does not satisfy the
 geometric requirements imposed by the problem;   thus, $c\ne0$, and the
 solutions define a family of hyperbolas (\zcref{figure:4.5.7}).
-
+\end{solution}
 
 \noindent
 \begin{minipage}{0.48\linewidth}
@@ -3669,7 +3684,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig040509}
 \tagstructend
 \end{minipage}
 
-\solution
+\begin{solution}
 The equation of the line tangent to the curve at $(x_0,y(x_0))$ is
 \[
 y=y(x_0)+y'(x_0)(x-x_0).
@@ -3699,6 +3714,7 @@ y=\frac{cx}{x-1}.
 If $c=0$, the graph of this function is the $x$-axis.   If $c\ne0$, it's
 a hyperbola with vertical asymptote $x=1$ and horizontal asymptote
 $y=c$. \zcref[S]{figure:4.5.9} shows the graphs for $c\ne0$.
+\end{solution}
 
 
 \boxit{Orthogonal Trajectories}
@@ -3794,7 +3810,7 @@ x^2+y^2=c^2 \quad (c>0).
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 To find a differential equation for the family of circles we
 differentiate \eqref{eq:4.5.17} implicitly with respect to $x$ to obtain
 \[
@@ -3820,6 +3836,7 @@ origin is an orthogonal trajectory of the given family \eqref{eq:4.5.17}
 (\zcref{figure:4.5.11}). This is consistent with the theorem of plane
 geometry which states that a diameter of a circle and a tangent line
 to the circle at the end of the diameter are perpendicular.
+\end{solution}
 
 \begin{example}\label{example:4.5.10}
 Find the orthogonal trajectories of the family of hyperbolas
@@ -3829,7 +3846,7 @@ xy=c \quad (c\ne0)
 (\zcref{figure:4.5.7}).
 \end{example}
 
-\solution
+\begin{solution}
 Differentiating \eqref{eq:4.5.18} implicitly with respect to $x$ yields
 \[
 y+xy'=0,
@@ -3853,6 +3870,7 @@ y^2-x^2=k,
 \]
 which is the equation of a hyperbola if $k \ne0$, or of the lines
 $y=x$ and $y=-x$ if $k=0$ (\zcref{figure:4.5.12}).
+\end{solution}
 
 \begin{figure}
   \centering
@@ -3872,9 +3890,7 @@ Find the orthogonal trajectories of the family of circles defined by
 $y$-axis (\zcref{figure:4.5.13}(a)).
 \end{example}
 
-
-
-\solution
+\begin{solution}
 Multiplying out the left side of \eqref{eq:4.5.19} yields
 \begin{equation} \label{eq:4.5.20}
 x^2-2cx+y^2=0,
@@ -3958,7 +3974,7 @@ Thus, the orthogonal trajectories are circles centered on the $y$ axis
 and tangent to the $x$ axis (\zcref{figure:4.5.13}(b)). The circles
 for which $h>0$ are above the $x$-axis, while those for which $h<0$
 are below.
-
+\end{solution}
 
 \begin{figure}
   \centering

@@ -277,7 +277,6 @@ y=\cos\omega x+\frac{3}{\omega}\sin\omega x
 \]
  is the unique solution of \eqref{eq:5.1.9} on
 $(-\infty,\infty)$.
-\bbox
 \end{alistSolution}
 
 \zcref[S]{thmtype:5.1.1} implies that if $k_0$ and $k_1$ are
@@ -386,7 +385,6 @@ and \eqref{eq:5.1.17} shows that this is equivalent to
 Solving these equations yields  $c_1=1$  and $c_2=1$.
 Therefore $y=x^2+1/x^2$ is the unique solution of \eqref{eq:5.1.15}
 on $(-\infty,0)$.
-\bbox
 \end{alistSolution}
 
 Although the \emph{\color{blue}formulas} for the solutions of \eqref{eq:5.1.14} and
@@ -445,7 +443,7 @@ y''+p(x)y'+q(x)y&=(c_1y_1''+c_2y_2'')+p(x)(c_1y_1'+c_2y_2')
 +c_2\left(y_2''+p(x)y_2'+q(x)y_2\right)\\
 &=c_1\cdot0+c_2\cdot0=0,
 \end{align*}
-since $y_1$ and $y_2$ are solutions of \eqref{eq:5.1.18}.% \bbox
+since $y_1$ and $y_2$ are solutions of \eqref{eq:5.1.18}.
 \end{proof}
 
 We say that  $\{y_1,y_2\}$ is a \emph{\color{blue}fundamental set of
@@ -635,7 +633,7 @@ implies \eqref{eq:5.1.29}. If $W(x_0)\ne0$, \eqref{eq:5.1.29} implies
 that
 $W$ has no zeros in $(a,b)$, since an exponential is never zero. On
 the other hand, if $W(x_0)=0$,  \eqref{eq:5.1.29} implies that $W(x)=0$
-for all $x$ in $(a,b)$.%\bbox
+for all $x$ in $(a,b)$.
 \end{proof}
 
 The function $W$ defined in \eqref{eq:5.1.28} is  the
@@ -737,7 +735,7 @@ W(x)&=W(x_0)e^{-\ln(x/x_0)}=W(x_0)\frac{x_0}{x}\\
 \eqref{eq:5.1.31}}\\
 &=-\frac{4}{x},
 \end{align*}
-which is consistent with \eqref{eq:5.1.31}.\bbox
+which is consistent with \eqref{eq:5.1.31}.
 \end{alistSolution}
 
 The next theorem will enable us to complete the proof of
@@ -795,7 +793,7 @@ $y_2$ on  $(a,b)$, since
 \[
 \left(\frac{y_1}{y_2}\right)'=\frac{y_1'y_2-y_1y_2'}{y_2^2}=-\frac{W}{y_2^2}
 \]
-on any subinterval of  $(a,b)$ where $y_2$ has no zeros.% \bbox
+on any subinterval of  $(a,b)$ where $y_2$ has no zeros.
 \end{proof}
 
 We can now complete the proof of \zcref{thmtype:5.1.3}.
@@ -1832,7 +1830,8 @@ $-3=-2c_1+3c_2=-4+3c_2$,
 \[
 y=e^{-2x}(2\cos 3x+ \frac{1}{3}\sin 3x).
 \]
-\zcref[S]{figure:5.2.3}  is a graph of this function. \bbox
+\zcref[S]{figure:5.2.3}  is a graph of this function.
+\end{alistSolution}
 
 \begin{figure}
   \centering
@@ -1842,7 +1841,6 @@ y=e^{-2x}(2\cos 3x+ \frac{1}{3}\sin 3x).
   \caption{$y=e^{-2x}(2\cos 3x+ \dfrac{1}{3}\sin 3x)$}
   \label{figure:5.2.3}
 \end{figure}
-\end{alistSolution}
 
 Now suppose   the characteristic equation of $ay''+by'+cy=0$ has
 arbitrary complex roots;   thus, $b^2-4ac<0$ and, from \eqref{eq:5.2.3},
@@ -2349,7 +2347,7 @@ compute
 &\quad{}-(y_p''+p(x)y_p'+q(x)y_p)\\
 &=f(x)-f(x)=0,
 \end{align*}
-since $y$ and $y_p$ both satisfy \eqref{eq:5.3.3}.% \bbox
+since $y$ and $y_p$ both satisfy \eqref{eq:5.3.3}.
 \end{proof}
 
 We say that \eqref{eq:5.3.5} is the \emph{\color{blue}general solution of
@@ -2544,7 +2542,7 @@ x^2y''+xy'-4y=2x^4
 on $(-\infty,0)$ and $(0,\infty)$.
 \end{example}
 
-\solution
+\begin{solution}
 In \zcref{example:5.1.3},  we verified that $y_1=x^2$ and $y_2=1/x^2$
 form a fundamental set of solutions of the complementary equation
 \[
@@ -2564,8 +2562,9 @@ if $A=1/6$;  therefore, $y_p=x^4/6$ is a particular solution of
 \zcref[S]{thmtype:5.3.2} implies that the general solution of
 \eqref{eq:5.3.13} on  $(-\infty,0)$ and  $(0,\infty)$ is
 \[
-y=\frac{x^4}{6}+c_1x^2+\frac{c_2}{x^2}.
+y=\frac{x^4}{6}+c_1x^2+\frac{c_2}{x^2}.\qedhere
 \]
+\end{solution}
 
 
 \boxit{The Principle of Superposition}
@@ -2604,7 +2603,7 @@ y_p''+p(x)y_p'+q(x)y_p
 +q(x)(y_{p_1}+y_{p_2})\\
 &=\left(y_{p_1}''+p(x)y_{p_1}'+q(x)y_{p_1}\right)
 +\left(y_{p_2}''+p(x)y_{p_2}'+q(x)y_{p_2}\right)\\
-&=f_1(x)+f_2(x).%\bbox
+&=f_1(x)+f_2(x).\qedhere
 \end{align*}
 \end{proof}
 
@@ -2668,7 +2667,8 @@ x^2y''+4xy'+2y=2x^4+4x^2
 on $(-\infty,\infty)$.
 \end{example}
 
-\solution   The right side $F(x)=2x^4+4x^2$ in \eqref{eq:5.3.17}
+\begin{solution}
+The right side $F(x)=2x^4+4x^2$ in \eqref{eq:5.3.17}
 is the sum of the right sides
 \[
 F_1(x)=2x^4\quad\text{and}\quad F_2(x)=4x^2.
@@ -2679,6 +2679,7 @@ Therefore the principle of superposition implies that
 y_p=y_{p_1}+y_{p_2}=\frac{x^4}{15}+\frac{x^2}{3}
 \]
 is a particular solution of \eqref{eq:5.3.17}.
+\end{solution}
 
 \exercises
 
@@ -2916,7 +2917,7 @@ y''-7y'+12y=4e^{2x}.
 Then find the general solution.
 \end{example}
 
-\solution
+\begin{solution}
 Substituting $y_p=Ae^{2x}$ for $y$ in \eqref{eq:5.4.2} will produce a
 constant multiple of $Ae^{2x}$ on the left side of \eqref{eq:5.4.2}, so it
 may be possible to choose $A$ so that $y_p$ is a solution of
@@ -2934,8 +2935,9 @@ is $p(r)=r^2-7r+12=(r-3)(r-4)$, so $\{e^{3x},e^{4x}\}$ is a
 fundamental set of solutions of \eqref{eq:5.4.3}. Therefore the general
 solution of \eqref{eq:5.4.2} is
 \[
- y=2e^{2x}+c_1e^{3x}+c_2e^{4x}.
+ y=2e^{2x}+c_1e^{3x}+c_2e^{4x}.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:5.4.2}
 Find a particular solution of
@@ -2945,7 +2947,7 @@ y''-7y'+12y=5e^{4x}.
 Then find the general solution.
 \end{example}
 
-\solution
+\begin{solution}
 Fresh from our success in finding a particular solution of
 \eqref{eq:5.4.2} --- where we chose $y_p=Ae^{2x}$ because the right side
 of
@@ -2984,6 +2986,7 @@ this equation, so $y_p=5xe^{4x}$ is a particular solution of
 y=5xe^{4x}+c_1e^{3x}+c_2e^{4x}
 \]
 is the general solution.
+\end{solution}
 
 \begin{example}\label{example:5.4.3}
 Find a particular solution of
@@ -2992,7 +2995,7 @@ y''-8y'+16y=2e^{4x}.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Since the characteristic polynomial of the complementary equation
 \begin{equation} \label{eq:5.4.7}
 y''-8y'+16y=0
@@ -3017,7 +3020,8 @@ $y_p=x^2e^{4x}$ is a particular solution of \eqref{eq:5.4.4}. Therefore
 \[
 y=e^{4x}(x^2+c_1+c_2x)
 \]
-is the general solution. \bbox
+is the general solution.
+\end{solution}
 
 The preceding examples illustrate the following facts concerning
 the form of a particular solution $y_p$
@@ -3092,7 +3096,7 @@ y''-3y'+2y=e^{3x}(-1+2x+x^2).
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Substituting
 \[
 y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\quad\text{and}\quad
@@ -3139,6 +3143,7 @@ is a particular solution of  \eqref{eq:5.4.11}, and
 y_p=u_pe^{3x}=-\frac{e^{3x}}{4}(1+2x-2x^2)
 \]
 is a particular solution of  \eqref{eq:5.4.10}.
+\end{solution}
 
 \begin{example}\label{example:5.4.5}
  Find a particular solution of
@@ -3147,7 +3152,7 @@ y''-4y'+3y=e^{3x}(6+8x+12x^2).
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Substituting
 \[
 y=ue^{3x},\quad y'=u'e^{3x}+3ue^{3x},\quad\text{and}\quad
@@ -3203,6 +3208,7 @@ and
 y_p=u_pe^{3x}=xe^{3x}(4-x+2x^2)
 \]
 is a particular solution of  \eqref{eq:5.4.12}.
+\end{solution}
 
 \begin{example}\label{example:5.4.6}
 Find a particular solution of
@@ -3211,7 +3217,8 @@ Find a particular solution of
 \end{equation}
 \end{example}
 
-\solution  Substituting
+\begin{solution}
+Substituting
 \[
 y=ue^{-x/2},\quad  y'=u'e^{-x/2}-\frac{1}{2}ue^{-x/2},\quad\text{and}\quad
 y''=u''e^{-x/2}-u'e^{-x/2}+\frac{1}{4}ue^{-x/2}
@@ -3238,6 +3245,7 @@ Therefore
 y_p=u_pe^{-x/2}=x^2e^{-x/2}(-1+2x+3x^2)
 \]
 is a particular solution of  \eqref{eq:5.4.14}.
+\end{solution}
 
 
 \boxit{Summary}
@@ -3317,7 +3325,7 @@ y''-7y'+12y=4e^{2x}+5e^{4x}.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 In \zcref{example:5.4.1} we found that $y_{p_1}=2e^{2x}$
 is a particular solution of
 \[
@@ -3330,6 +3338,7 @@ y''-7y'+12y=5e^{4x}.
 \]
 Therefore the principle of superposition implies that
 $y_p=2e^{2x}+5xe^{4x}$ is a particular solution of \eqref{eq:5.4.17}.
+\end{solution}
 
 \exercises
 In \zcref[range]{exer:5.4.1,exer:5.4.14} find a particular
@@ -3626,7 +3635,7 @@ y''-2y'+y=5\cos2x+10\sin2x.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 In \eqref{eq:5.5.4} the coefficients of $\cos2x$ and $\sin2x$ are both zero
 degree polynomials (constants). Therefore \zcref{thmtype:5.5.1}
 implies that \eqref{eq:5.5.4} has a particular solution
@@ -3656,6 +3665,7 @@ Solving these equations yields $A=1$, $B=-2$.  Therefore
 y_p=\cos2x-2\sin2x
 \]
 is a particular solution of \eqref{eq:5.5.4}.
+\end{solution}
 
 \begin{example}\label{example:5.5.2}
 Find a particular solution of
@@ -3664,7 +3674,7 @@ y''+4y=8\cos2x+12\sin2x.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 The procedure used in  \zcref{example:5.5.1} doesn't work here;
 substituting $y_p=A\cos2x+B\sin2x$ for $y$ in \eqref{eq:5.5.5} yields
 \[
@@ -3696,6 +3706,7 @@ which holds if $A=-3$ and $B=2$.  Therefore
 y_p=-x(3\cos2x-2\sin2x)
 \]
 is a particular solution of \eqref{eq:5.5.5}.
+\end{solution}
 
 \begin{example}\label{example:5.5.3}
 Find a particular solution of
@@ -3704,7 +3715,7 @@ y''+3y'+2y=(16+20x)\cos x+10\sin x.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 The coefficients of $\cos x$ and $\sin x$ in \eqref{eq:5.5.7} are
 polynomials of degree one and zero, respectively. Therefore
 \zcref{thmtype:5.5.1} tells us to look for a particular solution of
@@ -3750,6 +3761,7 @@ Substituting $A_0=1$, $A_1=2$, $B_0=-1$, $B_1=6$ into
 y_p=(1+2x)\cos x-(1-6x)\sin x
 \]
 is a particular solution of  \eqref{eq:5.5.7}.
+\end{solution}
 
 
 \boxit{A Useful Observation}
@@ -3790,7 +3802,7 @@ y''+y=(8-4x)\cos x-(8+8x)\sin x.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 According to  \zcref{thmtype:5.5.1}, we should look for a
 particular solution of the form
 \begin{equation} \label{eq:5.5.13}
@@ -3842,6 +3854,7 @@ The solution of this system is  $A_1=2$, $B_1=-1$, $A_0=3$, $B_0=2$.
 y_p=x\left[(3+2x)\cos x+(2-x)\sin x\right]
 \]
 is a particular solution of \eqref{eq:5.5.12}.
+\end{solution}
 
 
 \boxit{Forcing Functions with Exponential Factors}
@@ -3865,7 +3878,7 @@ y''-3y'+2y=e^{-2x}\left[2\cos 3x-(34-150x)\sin 3x\right].
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Let $y=ue^{-2x}$. Then
 \begin{align*}
 y''-3y'+2y&=e^{-2x}\left[(u''-4u'+4u)-3(u'-2u)+2u\right]\\
@@ -3926,6 +3939,7 @@ is a particular solution of  \eqref{eq:5.5.17}. Therefore
 y_p=e^{-2x}\left[(1+7x)\cos 3x-(2-x)\sin 3x\right]
 \]
 is a particular solution of   \eqref{eq:5.5.16}.
+\end{solution}
 
 \begin{example}\label{example:5.5.6}
 Find a particular solution of
@@ -3934,7 +3948,7 @@ y''+2y'+5y=e^{-x}\left[(6-16x)\cos2x-(8+8x)\sin2x\right].
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Let $y=ue^{-x}$. Then
 \begin{align*}
 y''+2y'+5y&=e^{-x}\left[(u''-2u'+u)+2(u'-u)+5u\right]\\
@@ -3990,7 +4004,8 @@ is a particular solution of  \eqref{eq:5.5.21}, and
 \[
 y_p=xe^{-x}\left[(1+x)\cos2x+(1-2x)\sin2x\right]
 \]
-is a particular solution of  \eqref{eq:5.5.20}.  \bbox
+is a particular solution of  \eqref{eq:5.5.20}. 
+\end{solution}
 
 You can also find a particular solution of \eqref{eq:5.5.20}
 by substituting
@@ -4445,7 +4460,7 @@ $y_2=y_{p_1}-y_{p_2}=x^2e^x$ is a solution of \eqref{eq:5.6.7}. Since
 $y_2/y_1$ is nonconstant and we already know  that $y_1=e^x$ is a
 solution of \eqref{eq:5.6.6}, \zcref{thmtype:5.1.6} implies that
 $\{e^x,x^2e^x\}$ is a fundamental set of solutions of
-\eqref{eq:5.6.7}.\bbox
+\eqref{eq:5.6.7}.
 \end{alistSolution}
 
 Although \eqref{eq:5.6.10} is a correct form for the general solution of
@@ -4568,7 +4583,7 @@ x^2y''-3xy'+3y=0,
  given that $y_1=x$ is a solution.
 \end{example}
 
-\solution
+\begin{solution}
  If $y=ux$ then $y'=u'x+u$ and $y''=u''x+2u'$, so
 \begin{align*}
 x^2y''-3xy'+3y&=x^2(u''x+2u')-3x(u'x+u)+3ux\\
@@ -4600,6 +4615,7 @@ y=c_1x+c_2x^3.
 \]
 Therefore $\{x,x^3\}$ is  a fundamental set of solutions of
 \eqref{eq:5.6.18}.
+\end{solution}
 
 \exercises
 In \zcref[range]{exer:5.6.1,exer:5.6.17} find the general solution,
@@ -4994,7 +5010,7 @@ x^2y''-2xy'+2y=0.
  Then find the general solution of \eqref{eq:5.7.15}.
 \end{example}
 
-\solution
+\begin{solution}
 We set
 \[
 y_p=u_1x+u_2x^2,
@@ -5018,8 +5034,9 @@ y_p=u_1x+u_2x^2
 \]
 and the general solution of  \eqref{eq:5.7.15} is
 \[
-y=\frac{4}{35}x^{9/2}+c_1x+c_2x^2.
+y=\frac{4}{35}x^{9/2}+c_1x+c_2x^2.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:5.7.2}
  Find a particular
@@ -5035,7 +5052,7 @@ equation
  Then find the general solution of \eqref{eq:5.7.16}.
 \end{example}
 
-\solution
+\begin{solution}
 We set
 \[
 y_p=u_1x+u_2e^x,
@@ -5065,8 +5082,9 @@ However, since $c_1$ is an arbitrary constant, so is $c_1-1$;
 therefore, we  improve the appearance of this result by
 renaming the constant and writing the general solution as
 \begin{equation} \label{eq:5.7.18}
-y= -x^2-1+c_1x+c_2e^x.\bbox
+y= -x^2-1+c_1x+c_2e^x.\qedhere
 \end{equation}
+\end{solution}
 
 There's nothing \emph{\color{blue}wrong} with leaving the general solution of
 \eqref{eq:5.7.16} in the form \eqref{eq:5.7.17};     however, we think
@@ -5094,8 +5112,7 @@ y''+3y'+2y=\frac{1}{1+e^x}.
 Then find the general solution.
 \end{example}
 
-\solution
-
+\begin{solution}
 The characteristic polynomial of the complementary equation
 \begin{equation} \label{eq:5.7.20}
 y''+3y'+2y=0
@@ -5151,8 +5168,9 @@ The general solution of
  \eqref{eq:5.7.19} is
 \[
 y=y_p+c_1e^{-x}+c_2e^{-2x}=\left(e^{-x}+e^{-2x}\right)\ln(1+e^x)
-+c_1e^{-x}+c_2e^{-2x}.
++c_1e^{-x}+c_2e^{-2x}.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:5.7.4}
 Solve the initial value problem
@@ -5170,7 +5188,7 @@ equation
 \]
 \end{example}
 
-\solution
+\begin{solution}
 We first use variation of parameters to find a particular solution
 of
 \[
@@ -5248,6 +5266,7 @@ y&=\frac{2\ln(x+1)}{x-1}+\frac{2}{x-1}+\frac{1}{x+1}\\
 \end{align*}
 as the solution of  \eqref{eq:5.7.21}. \zcref[S]{figure:5.7.1} is a graph
 of the solution.
+\end{solution}
 
 \begin{figure}
   \centering

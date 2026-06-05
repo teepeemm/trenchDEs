@@ -551,7 +551,7 @@ xy'+y=x^2
  on $(0,\infty)$ and on $(-\infty,0)$.
 \end{example}
 
-\solution
+\begin{solution}
 Substituting \eqref{eq:1.2.5} and
 \[
 y'=\frac{2x}{3} - \frac{1}{x^2}
@@ -566,6 +566,7 @@ on $(-\infty,0)$ and $(0,\infty)$.
  However, $y$ isn't  a solution of the differential
 equation on any open interval that contains $x=0$, since  $y$ is
 not defined at  $x=0$.
+\end{solution}
 
 \zcref[S]{figure:1.2.1} shows the graph
 of \eqref{eq:1.2.5}. The
@@ -609,7 +610,8 @@ y''+2y'+y=2x
  on $(-\infty,\infty)$.
 \end{example}
 
-\solution Differentiating \eqref{eq:1.2.7} twice yields
+\begin{solution}
+Differentiating \eqref{eq:1.2.7} twice yields
 \begin{align*}
 y'&=-(c_1+c_2x)e^{-x}+c_2e^{-x}+2\qquad\text{and}\\
 y''&=(c_1+c_2x)e^{-x}-2c_2e^{-x},
@@ -624,6 +626,7 @@ y''+2y'+y&=(c_1+c_2x)e^{-x}-2c_2e^{-x}\\
 \end{align*}
 for all values of $x$.
 Therefore $y$ is a solution of \eqref{eq:1.2.8} on $(-\infty,\infty)$.
+\end{solution}
 
 \begin{example}\label{example:1.2.4}
 Find all solutions of
@@ -632,7 +635,8 @@ y^{(n)}=e^{2x}.
 \end{equation}
 \end{example}
 
-\solution Integrating \eqref{eq:1.2.9} yields
+\begin{solution}
+Integrating \eqref{eq:1.2.9} yields
 \[
 y^{(n-1)}=\frac{e^{2x}}{2}+k_1,
 \]
@@ -668,6 +672,8 @@ y=\frac{e^{2x}}{2^n}+c_1+c_2x+\dots+c_nx^{n-1},
 general rule, arbitrary constants appearing in solutions  of differential
 equations should be simplified if possible. You'll see examples
 of this throughout the text.
+\end{solution}
+
 
 \boxit{Initial Value Problems}
 
@@ -688,7 +694,8 @@ y'=x^3
  such that $y(1)=2$.
 \end{example}
 
-\solution  At the beginning of this section we saw
+\begin{solution}
+At the beginning of this section we saw
 that the  solutions of $y'=x^3$ are
 \[
 y=\frac{x^4}{4}+c.
@@ -700,8 +707,9 @@ we set $x=1$ and $y=2$ here to obtain
 \]
  Therefore the required solution is
 \[
-y=\frac{x^4+7}{4}.
+y=\frac{x^4+7}{4}.\qedhere
 \]
+\end{solution}
 
 \zcref[S]{figure:1.2.2} shows
 the graph  of this solution.
@@ -846,7 +854,7 @@ y&=-\frac{gt^2}{2}+c_1t+c_2.
 Imposing the initial conditions $y(0)=y_0$ and $y'(0)=v_0$ in these
 two equations shows that $c_1=v_0$ and $c_2=y_0$. Therefore the
 solution of the initial value problem \eqref{eq:1.2.17} is
-\[y=-\frac{gt^2}{2}+v_0t+y_0.\]
+\[y=-\frac{gt^2}{2}+v_0t+y_0.\qedhere\]
 \end{alistSolution}
 
 \exercises

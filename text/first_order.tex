@@ -1145,8 +1145,8 @@ y'=x(1+y^2).
 \end{example}
 
 
-\solution Separating variables
-yields
+\begin{solution}
+Separating variables yields
 \[
 \frac{y'}{1+y^2}=x.
 \]
@@ -1158,6 +1158,7 @@ Therefore
 \[
 y=\tan\left(\frac{x^2}{2}+c\right).
 \]
+\end{solution}
 
 \begin{example}\label{example:2.2.2}
 \begin{alist}
@@ -1362,7 +1363,9 @@ Find all solutions of
 y'=2xy^2.
 \end{equation}
 \end{example}
-\solution Here we must divide by $p(y)=y^2$ to separate variables.
+
+\begin{solution}
+Here we must divide by $p(y)=y^2$ to separate variables.
 This isn't  legitimate if $y$ is a solution of \eqref{eq:2.2.16} that
 equals zero for some value of $x$. One such solution can be found by
 inspection:  $y \equiv 0$. Now suppose   $y$ is a solution
@@ -1392,6 +1395,7 @@ the form \eqref{eq:2.2.17} for any value of $c$.
 
 \zcref[S]{figure:2.2.3} shows a direction field and some integral
 curves for \eqref{eq:2.2.16}
+\end{solution}
 
 \begin{figure}
   \centering
@@ -1409,7 +1413,8 @@ y'=\frac{1}{2}x(1-y^2).
 \end{equation}
 \end{example}
 
-\solution Here we must divide by $p(y)=1-y^2$ to separate variables.
+\begin{solution}
+Here we must divide by $p(y)=1-y^2$ to separate variables.
 This isn't  legitimate if $y$ is a solution of \eqref{eq:2.2.18} that
 equals $\pm1$ for some value of $x$. Two such solutions can be found
 by inspection: $y \equiv 1$ and $y\equiv-1$. Now suppose
@@ -1459,6 +1464,7 @@ constant solution, $y \equiv -1$, can't be obtained in this way.
 
 \zcref[S]{figure:2.2.4} shows a direction field and some integral curves for
 \eqref{eq:2.2.18}.
+\end{solution}
 
 \begin{figure}
   \centering
@@ -1470,6 +1476,7 @@ A direction field and integral curves for
 $y'=\dfrac{x(1-y^2)}{2}$}
   \label{figure:2.2.4}
 \end{figure}
+
 
 \boxit{Differences Between Linear and Nonlinear Equations}
 
@@ -1511,7 +1518,8 @@ y'=2xy^2, \quad y(0)=y_0
 \end{example}
 
 
-\solution  First suppose   $y_0\ne0$. From
+\begin{solution}
+First suppose $y_0\ne0$. From
 \zcref{example:2.2.4}, we know that $y$ must be of the form
 \begin{equation} \label{eq:2.2.20}
 y=-\frac{1}{x^2+c}.
@@ -1526,6 +1534,7 @@ This is also the solution if $y_0=0$. If $y_0<0$,
 the denominator isn't  zero for any value of $x$, so the
 the solution is valid on $(-\infty,\infty)$. If $y_0>0$, the solution
  is  valid only on $(-1/\sqrt{y_0},1/\sqrt{y_0})$.
+\end{solution}
 
 \exercises
 
@@ -1955,7 +1964,7 @@ any value of $x$. Show that \zcref{thmtype:2.3.1}\part{b} implies
 this.
 \end{example}
 
-\solution
+\begin{solution}
 We'll obtain a contradiction
 by assuming that \eqref{eq:2.3.6} has a solution $y_1$ that equals
 zero for some value of $x$, but isn't  identically zero. If $y_1$
@@ -1974,6 +1983,7 @@ f(x,y)=2xy^2 \quad\text{and}\quad  f_y(x,y)= 4xy.
 are both continuous
 for all $(x,y)$, which implies that \eqref{eq:2.3.7} has a unique
 solution on some open interval that contains $x_0$.
+\end{solution}
 
 \begin{example}\label{example:2.3.5}
 Consider the initial value problem
@@ -2026,7 +2036,7 @@ has more than one solution on every open interval that contains $x_0=0$.  Show
 that this is true.
 \end{example}
 
-\solution
+\begin{solution}
 By inspection, $y\equiv0$ is a solution of the
 differential equation
 \begin{equation} \label{eq:2.3.10}
@@ -2073,6 +2083,7 @@ In fact, there are \emph{\color{blue}four} distinct solutions of
 \eqref{eq:2.3.9}  defined on $(-\infty,\infty)$ that differ
 from each other on every open interval that contains $x_0=0$.
   Can you identify the other two?
+\end{solution}
 
 \begin{figure}
   \centering
@@ -2112,7 +2123,7 @@ Find a solution and determine the largest open interval $(a,b)$ on
 which it's unique.
 \end{example}
 
-\solution
+\begin{solution}
 Let $y$ be any solution of \eqref{eq:2.3.12}. Because of the initial
 condition $y(0)=-1$ and the continuity of $y$, there's an open interval
 $I$ that contains $x_0=0$ on which $y$ has no zeros, and is consequently
@@ -2142,6 +2153,7 @@ y =
 \end{cases}
 \]
 (see \zcref{figure:2.3.3}).
+\end{solution}
 
 \noindent
 \begin{minipage}[t]{0.48\linewidth}
@@ -2174,7 +2186,7 @@ Find the solution and determine the largest open interval on which it's
 unique.
 \end{example}
 
-\solution
+\begin{solution}
 Let $y$ be any solution of \eqref{eq:2.3.14}. Because of the initial
 condition $y(0)=1$ and the continuity of $y$, there's an open interval
 $I$ that contains $x_0=0$ on which $y$ has no zeros, and is consequently
@@ -2188,6 +2200,7 @@ differs from zero and is given by \eqref{eq:2.3.15} on $(-\infty,\infty)$;
 that is, \eqref{eq:2.3.15} is the unique solution of \eqref{eq:2.3.14} on
 $(-\infty,\infty)$.
 \zcref[S]{figure:2.3.4} shows the graph of this solution.
+\end{solution}
 
 \exercises
 
@@ -2405,7 +2418,7 @@ y'-y=xy^2.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Since $y_1=e^x$ is a solution of $y'-y=0$, we look for solutions of
 \eqref{eq:2.4.3}  in the form $y=ue^x$, where
 \[
@@ -2422,6 +2435,7 @@ y&=-\frac{1}{x-1+ce^{-x}}.
 %
 \zcref[S]{figure:2.4.1}  shows
 direction field and some integral curves of \eqref{eq:2.4.3}.
+\end{solution}
 
 \begin{figure}
   \centering
@@ -2535,7 +2549,8 @@ y'=\frac{y+xe^{-y/x}}{x}.
 \end{equation}
 \end{example}
 
-\solution Substituting  $y=ux$
+\begin{solution}
+Substituting  $y=ux$
 into \eqref{eq:2.4.8} yields
 \[
 u'x+u =  \frac{ux+xe^{-ux/x}}{x} = u+e^{-u}.
@@ -2552,6 +2567,7 @@ $y=ux=x \ln (\ln |x|+c)$.
 
 \zcref[S]{figure:2.4.2} shows
 a direction field and integral curves for \eqref{eq:2.4.8}.
+\end{solution}
 
 \begin{figure}
   \centering
@@ -3092,7 +3108,7 @@ is an implicit solution of
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 Regarding $y$ as a function of $x$ and
 differentiating \eqref{eq:2.5.4} implicitly with respect to
 $x$ yields
@@ -3106,7 +3122,8 @@ $y$ yields
 (4x^3y^3+2xy^5+2y)\frac{dx}{dy}+(3x^4y^2+5x^2y^4+2x)=0.
 \]
 Therefore \eqref{eq:2.5.4} is an implicit solution of \eqref{eq:2.5.5}
-in either of its two possible interpretations. \bbox
+in either of its two possible interpretations.
+\end{solution}
 
 You may think this example is pointless, since
 concocting a differential equation that has a given implicit solution
@@ -3223,7 +3240,8 @@ coefficient of $dy$ is differentiated with respect to $x$.
 is not exact on any open rectangle.
 \end{example}
 
-\solution   Here
+\begin{solution}
+Here
 \[
 M(x,y)=3x^2y\quad\text{and}\quad  N(x,y)=4x^3
 \]
@@ -3236,7 +3254,7 @@ but not on any open rectangle, so
 there's no
 function $F$ such that $F_x(x,y)=M(x,y)$ and $F_y(x,y)=N(x,y)$
 for all $(x,y)$ on any open rectangle.
-\bbox
+\end{solution}
 
 The next example illustrates two possible methods for finding a
 function $F$ that satisfies the condition $F_x=M$ and $F_y=N$ if
@@ -3250,7 +3268,7 @@ Solve
 \end{example}
 
 
-\solution
+\begin{solution}
 Here
 \[
 M(x,y)=4x^3y^3+3x^2,\quad N(x,y)=3x^4y^2+6y^2,
@@ -3271,7 +3289,8 @@ F_y(x,y)=N(x,y)=3x^4y^2+6y^2
 \end{equation}
  for all $(x,y)$.
 
-(Method 1)  To find $F$, we integrate \eqref{eq:2.5.14} with
+\begin{enumext}[label=\arabic*,wrap-label={(Method #1)},labelwidth=5em,list-indent=0pt]
+\item To find $F$, we integrate \eqref{eq:2.5.14} with
 respect to $x$ to obtain
 \begin{equation} \label{eq:2.5.16}
 F(x,y)=x^4y^3+x^3+\phi(y),
@@ -3312,7 +3331,7 @@ yields the explicit solution
 y=\left(\frac{c-x^3}{2+x^4}\right)^{1/3}.
 \]
 
-(Method 2) Instead of first integrating
+\item Instead of first integrating
 \eqref{eq:2.5.14}
 with respect to $x$, we could begin by integrating \eqref{eq:2.5.15} with
 respect to $y$ to obtain
@@ -3336,9 +3355,11 @@ integration to be zero yields
 \psi(x)=x^3.
 \]
  Substituting this into \eqref{eq:2.5.18} yields \eqref{eq:2.5.17}.
+\end{enumext}
 
 \zcref[S]{figure:2.5.1} shows a direction field and  some
 integral curves of \eqref{eq:2.5.13}.
+\end{solution}
 
 \begin{figure}
   \centering
@@ -3350,19 +3371,15 @@ $(4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0$}
   \label{figure:2.5.1}
 \end{figure}
 
-
-
 Here's a summary of the procedure used in Method 1 of this
-example. You should summarize procedure used in Method~2.
+example. You should summarize the procedure used in Method~2.
 
-\smallskip
-{\color{blue}
-{\centerline{\bfseries Procedure For Solving An Exact Equation}}
+\begin{remark*}[Procedure For Solving An Exact Equation]
 
 \begin{enumext}[
 label=\arabic*,
 wrap-label={Step #1.},
-labelwidth={4em},
+labelwidth={3em},
 list-indent=0pt,
 ]
 \item Check that the equation
@@ -3400,7 +3417,7 @@ constant of integration to be zero, and substitute the result in
 \eqref{eq:2.5.19}. If possible, solve for $y$ explicitly as a
 function of $x$.
 \end{enumext}
-}
+\end{remark*}
 
 
 It's a common mistake to omit Step 6. However, it's important to
@@ -3420,7 +3437,8 @@ integration.
 \end{equation}
 \end{example}
 
-\solution We leave it to you to check that
+\begin{solution}
+We leave it to you to check that
 $M_y=N_x$ on any open rectangle  where $\tan x$ and $\sec x$ are
 defined. Here we must find a function $F$ such that
 \begin{equation} \label{eq:2.5.22}
@@ -3445,7 +3463,8 @@ Hence, $\psi$ is  a constant, which we can take to be zero in
 \[
 e^{xy} \tan x=c
 \]
-is an implicit solution of \eqref{eq:2.5.21}. \bbox
+is an implicit solution of \eqref{eq:2.5.21}.
+\end{solution}
 
 Attempting to apply our procedure to an equation that isn't  exact
 will lead to failure in  Step 4, since the function
@@ -3466,7 +3485,8 @@ is not exact, and show  that the procedure for solving exact equations
   fails when applied to \eqref{eq:2.5.25}.
 \end{example}
 
-\solution   Here
+\begin{solution}
+Here
 \[
 M_y(x,y)=6x^2y \quad\text{and}\quad N_x(x,y)=18x^2y,
 \]
@@ -3497,6 +3517,7 @@ or
 \]
 This is a contradiction, since $\phi'$  must be independent
 of $x$. Therefore the procedure fails.
+\end{solution}
 
 \exercises
 \emph{In \zcref[range]{exer:2.5.1,exer:2.5.17} determine which equations
@@ -3952,7 +3973,8 @@ Find an integrating factor for the equation
 and solve the equation.
 \end{example}
 
-\solution In \eqref{eq:2.6.13}
+\begin{solution}
+In \eqref{eq:2.6.13}
 \[
 M=2xy^3-2x^3y^3-4xy^2+2x,\ N=3x^2y^2+4y,
 \]
@@ -4006,6 +4028,7 @@ of \eqref{eq:2.6.13}.
 
 \zcref[S]{figure:2.6.1}  shows a  direction field and some integral curves
 for \eqref{eq:2.6.13}
+\end{solution}
 
 \begin{figure}
   \centering
@@ -4028,7 +4051,8 @@ Find an integrating factor for
 and solve the equation.
 \end{example}
 
-\solution In \eqref{eq:2.6.18},
+\begin{solution}
+In \eqref{eq:2.6.18},
 \[
 M=2xy^3,\quad N=3x^2y^2+x^2y^3+1,
 \]
@@ -4082,7 +4106,8 @@ that
 is an implicit solution of \eqref{eq:2.6.19}.
 It is also an implicit solution
  of \eqref{eq:2.6.18}. \zcref[S]{figure:2.6.2} shows a direction
-field and some integral curves for \eqref{eq:2.6.18}.\bbox
+field and some integral curves for \eqref{eq:2.6.18}.
+\end{solution}
 
 \begin{figure}
   \centering
@@ -4106,7 +4131,8 @@ Find an integrating factor for
 \end{equation} and solve the equation.
  \end{example}
 
-\solution In \eqref{eq:2.6.23}
+\begin{solution}
+In \eqref{eq:2.6.23}
  \[
  M=3xy+6y^2,\ N=2x^2+9xy,
  \]
@@ -4180,7 +4206,7 @@ check to see that $x\equiv0$ and $y\equiv0$ are also solutions of
 
 \zcref[S]{figure:2.6.3} shows a direction field and integral curves for
 \eqref{eq:2.6.23}.
-
+\end{solution}
 
 See \zcref{exer:2.6.28} for a general discussion of equations like
 \eqref{eq:2.6.23}.
@@ -4230,7 +4256,7 @@ $\mu(x,y)=x^ay^b$.
   \label{figure:2.6.4}
 \end{figure}
 
-\solution
+\begin{solution}
 In \eqref{eq:2.6.26}
 \[
 M=-y,\ N=x+x^6,
@@ -4283,7 +4309,7 @@ by renaming the arbitrary constant.
 
 \zcref[S]{figure:2.6.4} shows a direction field and some integral curves
  for \eqref{eq:2.6.26}.
-
+\end{solution}
 
  \exercises
 \begin{exerciselist}

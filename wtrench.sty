@@ -97,20 +97,24 @@
 }
 %\newcommand{\twotab} {\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}}
 %\newcommand{\threetab} {\begin{tabular}[t]{@{}p{112pt}@{}p{122pt}@{}p{112pt}}}
-\newcommand{\solution}{\vskip10pt\noindent{\scshape Solution }\  }
+
+%\newcommand{\solution}{\vskip10pt\noindent{\scshape Solution }\  }
+%\newenvironment{solution}{\bigskip\noindent{\scshape Solution }\  }{\bbox}
+\NewEnvironmentCopy{solution}{proof}
+\AddToHook{env/solution/begin}{\renewcommand\proofname{\textsc{\textup{Solution}}}}
 
 \newcommand{\exercisetext}[1]{%
  \end{exerciselist}{\itshape #1}\begin{exerciselist}[resume]}
 
-\newcommand{\arraytext}[1]{\noalign{\hspace*{-1.75em}
-\mbox{#1}\vspace*{-9\jot}}\nonumber\\}
+%\newcommand{\arraytext}[1]{\noalign{\hspace*{-1.75em}
+%\mbox{#1}\vspace*{-9\jot}}\nonumber\\}
 %this command comes after a \newline command (\\)
 
 \usepackage{enumext}
 
 % TODO FORMATTING
 \newcommand{\exercises}{%
-{\color{red}\subsection*{\thesection\ Exercises}}%
+{\color{red}\subsection*[\thesection\ Exercises]{\thesection\ Exercises}}%
 \noindent
 }
 %\bigskip{\centerline{\color{red}\large\bfseries\thesection\
@@ -193,6 +197,7 @@
   #1
  ]%
 }{%
+ \bbox
  \end{enumext}%
 }
 

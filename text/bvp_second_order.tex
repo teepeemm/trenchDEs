@@ -1,4 +1,3 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter[running={Boundary Value Problems for 2nd Order ODEs}]{Boundary Value Problems for Second Order Ordinary Differential Equations}
@@ -365,7 +364,7 @@ given that $\{x,x^{2}\}$ is a fundamental set of solutions
 of the complementary equation
 \end{example}
 
-\solution
+\begin{solution}
 Using variation of parameters (\zcref{sec:variation_param}), you can show
 that
 $y_{p}=x^{3}$ is a solution of the complementary equation
@@ -392,6 +391,7 @@ Therefore
 y=x^{3}+7x-4x^{2}
 \]
 is the unique solution of \eqref{eq:13.1.13}
+\end{solution}
 
 \begin{example}\label{example:13.1.5}
 Solve the boundary value problem
@@ -400,7 +400,7 @@ y''-7y'+12y=4e^{2x},\quad y(0)=3,\quad y(1)=5e^{2}.
 \]
 \end{example}
 
-\solution
+\begin{solution}
 From \zcref{example:5.4.1}, $y_{p}=2e^{2x}$ is a particular solution
 of
 \begin{equation} \label{eq:13.1.14}
@@ -440,7 +440,7 @@ and
 y=2e^{2x}+\frac{3}{e(1-e)}(e^{3x}-e^{4x})+
 \frac{e^{4}}{e-1}(e^{3(x-1)}-e^{4(x-1)}).
 \]
-
+\end{solution}
 
 Sometimes  it's useful to have a formula for the solution of a general
 boundary problem. Our next theorem addresses this question.
@@ -555,10 +555,10 @@ y''+y=F(x).\quad y(0)+y'(0)=0,\quad y(\pi)-y'(\pi)=0,
 and find the Green's function for this problem.
 \end{example}
 
-\solution
+\begin{solution}
 Here
 \[
-B_{1}(y)=y(0)+y'(0)   \text{\;    and\; \;  } B_{2}(y)=y(\pi)-y'(\pi).
+B_{1}(y)=y(0)+y'(0)   \qquad\text{and}\qquad B_{2}(y)=y(\pi)-y'(\pi).
 \]
 Let $\{z_{1},z_{2}\}=\{\cos x,\sin x\}$, which is a fundamental set of
 solutions of $y''+y=0$. Then
@@ -607,6 +607,7 @@ x,\\[.1in]
 \dst{\frac{(\cos x-\sin x)(\cos t+\sin t)}{2}},&\quad x\le t\le \pi.
 \end{cases}
 \]
+\end{solution}
 
 We'll now consider the situation not covered by \zcref{thmtype:13.1.3}.
 
@@ -961,7 +962,7 @@ y'+3y'+2y+\lambda y=0,\quad  y(0)=0,\quad y(1)=0.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 The characteristic equation of \eqref{eq:13.2.2} is
 \[
 r^{2}+3r+2+\lambda=0,
@@ -1017,7 +1018,7 @@ $\lambda_{n}=(1+4n^{2}\pi^{2})/4$, with associated eigenfunctions
 \[
 y_{n}=e^{-3x/2}\sin n\pi x,\quad  n=1,2,3,\dots.
 \]
-
+\end{solution}
 
 \begin{example} \label{example:13.2.2}
 Solve the eigenvalue problem
@@ -1026,7 +1027,7 @@ x^{2}y''+xy'+\lambda y=0,\quad y(1)=0,\quad y(2)=0.
 \end{equation}
 \end{example}
 
-\solution
+\begin{solution}
 If  $\lambda=0$,  the differential equation in \eqref{eq:13.2.4}  reduces to
 $x(xy')'=0$, so $xy'=c_{1}$,
 \[
@@ -1078,6 +1079,7 @@ with associated eigenfunctions
 \[
 y_{n}=\sin\left(\frac{n\pi}{\ln2}\ln x\right),\quad n=1,2,3,\dots.
 \]
+\end{solution}
 
 For theoretical purposes, it's useful to rewrite the differential equation
 in \eqref{eq:13.2.1} in a different form, provided by the next theorem.
@@ -1150,7 +1152,7 @@ y''+3y'+(2+\lambda)y=0,\quad y(0)=0,\quad y(1)=0
 of \zcref{example:13.2.1}  as a Sturm-Liouville problem.
 \end{example}
 
-\solution
+\begin{solution}
 Comparing \eqref{eq:13.2.11} to \eqref{eq:13.2.7}  shows that $u(x)=3$, so we   take
 $U(x)=3x$ and $p(x)=e^{3x}$. Multiplying the differential equation in
 \eqref{eq:13.2.11} by $e^{3x}$ yields
@@ -1165,7 +1167,7 @@ e^{3x}(y''+3y')=(e^{3x}y')',
 \begin{equation} \label{eq:13.2.12}
 (e^{3x}y')'+2e^{3x}y+\lambda e^{3x}y=0,\quad y(0)=0,\quad y(1)=0.
 \end{equation}
-
+\end{solution}
 
 \begin{example}\label{example:13.2.4}
 Rewrite the eigenvalue problem
@@ -1175,9 +1177,7 @@ x^{2}y''+xy'+\lambda y=0,\quad y(1)=0,\quad y(2)=0
 of \zcref{example:13.2.2}  as a Sturm-Liouville problem.
 \end{example}
 
-
-
-\solution
+\begin{solution}
 Dividing the differential equation in \eqref{eq:13.2.13} by $x^{2}$  yields
 \[
 y''+\frac{1}{x}y'+\frac{\lambda}{x^{2}}y=0.
@@ -1195,10 +1195,11 @@ xy''+y'=(xy')',
 \eqref{eq:13.2.13} is equivalent to the Sturm-Liouville problem
 \begin{equation} \label{eq:13.2.14}
 (xy')'+\frac{\lambda}{x}y=0,\quad y(1)=0,\quad y(2)=0.
-\end{equation} \bbox
+\end{equation}
+\end{solution}
 
 Problems 1--4 of \zcref{sec:eig_probs} are Sturm-Liouville problems.
-(Problem~5 isn't , although some authors use a definition of
+(Problem~5 isn't, although some authors use a definition of
 \href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Sturm.html}
 {\color{blue}\itshape Sturm-Liouville problem}
 that does include it.)  We were able to find
@@ -1222,8 +1223,8 @@ y''+\lambda y=0, \quad y(0)+y'(0)=0,\quad y(1)+3y'(1)=0.
 \end{equation}
 \end{example}
 
-\solution  If
-$\lambda=0$, the differential equation in \eqref{eq:13.2.15} reduces
+\begin{solution}
+If $\lambda=0$, the differential equation in \eqref{eq:13.2.15} reduces
 to $y''=0$, with general solution $y=c_{1}+c_{2}x$. The boundary conditions
 require that
 \begin{align*}
@@ -1340,7 +1341,8 @@ From \eqref{eq:13.2.19}   and the first equation in \eqref{eq:13.2.20},
 \[
 y_{n}=k_{n}\cos k_{n}x-\sin k_{n}x
 \]
-is an eigenfunction associated with $\lambda_{n}$  \bbox
+is an eigenfunction associated with $\lambda_{n}$.
+\end{solution}
 
 \begin{figure}
   \centering\color{blue}

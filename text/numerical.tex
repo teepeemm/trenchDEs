@@ -1,4 +1,3 @@
-% !TEX TS-program = LuaLaTeX-dev
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Numerical Methods}\label{ch:numerical}
@@ -147,7 +146,7 @@ y'+2y=x^3e^{-2x},\quad y(0)=1
 at $x=0.1,0.2,0.3$.
 \end{example}
 
-\solution
+\begin{solution}
 We rewrite \eqref{eq:3.1.5}  as
 \[
 y'=-2y+x^3e^{-2x},\quad y(0)=1,
@@ -165,8 +164,9 @@ y_2 & = y_1+hf(x_1,y_1)\\
 .640081873,\\
 y_3 & = y_2+hf(x_2,y_2)\\
  & = .640081873+(.1)\left(-2(.640081873)+(.2)^3e^{-.4}\right)=
-.512601754.\bbox
+.512601754.\qedhere
 \end{align*}
+\end{solution}
 
 We've written the details of these computations to ensure that you
 understand the procedure. However,  in the rest of the examples as
@@ -195,7 +195,8 @@ which can be obtained by the method of \zcref{sec:linar_first_order}. (Verify.)
 \end{example}
 
 
-\solution \zcref[S]{table:3.1.1} shows the values of the exact solution
+\begin{solution}
+\zcref[S]{table:3.1.1} shows the values of the exact solution
 \eqref{eq:3.1.6} at the specified points, and the approximate values of
 the solution at these points obtained by Euler's method with step
 sizes $h=0.1$, $h=0.05$, and $h=0.025$. In examining this table, keep
@@ -206,6 +207,7 @@ $x=0.05$, $0.15$, \dots, since there's nothing to compare them with in
 the row corresponding to $h=0.1$. Similarly, the approximate values
 in the row corresponding to $h=0.025$ are actually the results of
 40 steps with Euler's method.
+\end{solution}
 
 \begin{table}
 \caption{Numerical solution of $y'+2y=x^3e^{-2x},\ y(0)=1$, by Euler's method.}
@@ -315,7 +317,6 @@ more accurate numerical method known as the
 {\color{blue}\itshape Runge}-\href{http://www-history.mcs.st-and.ac.uk/Mathematicians/Kutta.html}{\itshape\color{blue}Kutta\/}
 method with a small step size.
 %They are exact to eight decimal places.
-\bbox
 \end{example}
 
 
@@ -1450,7 +1451,7 @@ y'+2y=x^3e^{-2x},\quad y(0)=1
 at $x=0.1,0.2,0.3$.
 \end{example}
 
-\solution
+\begin{solution}
 As in \zcref{example:3.1.1}, we rewrite \eqref{eq:3.2.5} as
 \[
 y'=-2y+x^3e^{-2x},\quad y(0)=1,
@@ -1477,8 +1478,9 @@ k_{1,2} & = f(x_2,y_2)
 k_{2,2} & = f(x_3,y_2+hk_{1,2})=f(.3,.672734445+.1(-1.340106330)),\\
  &=f(.3,.538723812)=-2(.538723812)+(.3)^3e^{-.6}=-1.062629710,\\
 y_3&=y_2+\frac{h}{2}(k_{1,2}+k_{2,2})
-=.672734445+(.05)(-1.340106330-1.062629710)=.552597643.
+=.672734445+(.05)(-1.340106330-1.062629710)=.552597643.\qedhere
 \end{align*}}
+\end{solution}
 
 \begin{example}\label{example:3.2.2}
 \zcref[S]{table:3.2.2} shows results of using the improved Euler method
@@ -2210,7 +2212,7 @@ y'+2y=x^3e^{-2x},\quad y(0)=1,
 at $x=0.1,0.2$.
 \end{example}
 
-\solution
+\begin{solution}
 Again we rewrite \eqref{eq:3.3.2}  as
 \[
 y'=-2y+x^3e^{-2x},\quad y(0)=1,
@@ -2242,9 +2244,9 @@ k_{4,1} &= f(x_1+h,y_1+hk_{3,1})=f(.2,.818753803+(.1)(-1.487873498))\\
 &=f(.2,.669966453)=-2(.669966453)+(.2)^3e^{-.4}=-1.334570346,\\
 y_2&=y_1+\frac{h}{6}(k_{1,1}+2k_{2,1}+2k_{3,1}+k_{4,1}),\\
 &=.818753803+\frac{.1}{6}(-1.636688875+2(-1.471338457)+2(-1.487873498)-1.334570346)
-\\&=.670592417.
-\end{align*}
-}
+\\&=.670592417.\qedhere
+\end{align*}}
+\end{solution}
 
 The Runge-Kutta method is sufficiently accurate for most
 applications.
@@ -2527,7 +2529,8 @@ Use the Runge-Kutta  method with step size $h=0.1$
 at $x=0$, $0.1$, $0.2$, \dots, $1$.
 \end{example}
 
-\solution We first rewrite \eqref{eq:3.3.5} in the form \eqref{eq:3.3.3}
+\begin{solution}
+We first rewrite \eqref{eq:3.3.5} in the form \eqref{eq:3.3.3}
 as
 \begin{equation} \label{eq:3.3.6}
 y'=\frac{2x+3}{(y-1)^2},\quad y(1)=4.
@@ -2556,6 +2559,7 @@ y=1+(3x^2+9x+15)^{1/3}.
 \]
 (Since the differential equation in \eqref{eq:3.3.6} is separable,
 this formula can be obtained by the method of \zcref{sec:separable}.)
+\end{solution}
 
 \begin{table}
 \caption{Numerical solution of $z'=\dfrac{2x-3}{(z-1)^2},\ z(-1)=4$, on $[-1,0]$ and of $(y-1)^2y'=2x+3,\ y(1)=4$, on $[0,1]$.}

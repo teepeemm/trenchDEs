@@ -278,7 +278,8 @@ Solve \eqref{eq:12.1.4} with
 $f(x)=x(x^2-3Lx+2L^2)$.
 \end{example}
 
-\solution From  \zcref{example:11.3.6}, the Fourier
+\begin{solution}
+From  \zcref{example:11.3.6}, the Fourier
 sine series of
 $f$ on $[0,L]$ is
 \[
@@ -288,10 +289,9 @@ S(x)=\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
 Therefore
 \[
 u(x,t)=\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
-e^{-n^2\pi^2a^2t/L^2}\sin\frac{n\pi x}{L}.
-\bbox
+e^{-n^2\pi^2a^2t/L^2}\sin\frac{n\pi x}{L}.\qedhere
 \]
-
+\end{solution}
 
 If both ends of bar are insulated so that no heat can pass
 through them, then
@@ -337,7 +337,8 @@ n=1,2,3,\dots.
 Solve \eqref{eq:12.1.6} with $f(x)=x$.
 \end{example}
 
-\solution From  \zcref{example:11.3.1}, the Fourier
+\begin{solution}
+From  \zcref{example:11.3.1}, the Fourier
 cosine series of
 $f$ on $[0,L]$ is
 \[
@@ -349,10 +350,9 @@ Therefore
 u(x,t)=\frac{L}{2}-\frac{4L}{\pi^2}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^2}
 e^{-(2n-1)^2\pi^2a^2t/L^2}\cos\frac{(2n-1)\pi x}{L}.
-\bbox
+\qedhere
 \]
-
-
+\end{solution}
 
  We  leave it to you (\zcref{exer:12.1.2})
 to use the method of separation of variables and \zcref{thmtype:11.1.4}
@@ -389,7 +389,8 @@ Solve \eqref{eq:12.1.7} with $f(x)=x$.
 \end{example}
 
 
-\solution From  \zcref{example:11.3.4}, the mixed
+\begin{solution}
+From  \zcref{example:11.3.4}, the mixed
 Fourier sine series of
 $f$ on $[0,L]$ is
 \[
@@ -400,8 +401,9 @@ Therefore
 \[
 u(x,t)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^2}
 e^{-(2n-1)^2\pi^2a^2t/4L^2}\sin\frac{(2n-1)\pi x}{2L}.
-\bbox
+\qedhere
 \]
+\end{solution}
 
 \zcref[S]{figure:12.1.2} shows a graph of $u=u(x,t)$ plotted with respect
 to
@@ -455,7 +457,8 @@ Solve \eqref{eq:12.1.8} with $f(x)=x-L$.
 \end{example}
 
 
-\solution From  \zcref{example:11.3.3}, the mixed
+\begin{solution}
+From  \zcref{example:11.3.3}, the mixed
 Fourier cosine series of
 $f$ on $[0,L]$ is
 \[
@@ -466,7 +469,9 @@ Therefore
 \[
 u(x,t)=-\frac{8L}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 e^{-(2n-1)^2\pi^2a^2t/4L^2}\cos\frac{(2n-1)\pi x}{2L}.
+\qedhere
 \]
+\end{solution}
 
 
 \boxit{Nonhomogeneous Problems}
@@ -520,8 +525,9 @@ u_t=u_{xx}-2,\quad 0<x<1,\quad t>0,\\
 u(0,t)=-1,\quad u(1,t)=1,\quad t>0,\\
  u(x,0)=x^3-2x^2+3x-1,\quad 0\le x\le1.
 \end{gather*}
+\end{example}
 
-\solution
+\begin{solution}
 We leave it to you to show that
 \[
 q(x)=x^2+x-1
@@ -554,9 +560,9 @@ Therefore
 u(x,t)=x^2+x-1+
 \frac{12}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}
 e^{-n^2\pi^2t}\sin n\pi x.
-\bbox
+\qedhere
 \]
-\end{example}
+\end{solution}
 
 A similar procedure works if the boundary conditions in \eqref{eq:12.1.11}
 are replaced by mixed boundary conditions
@@ -1560,7 +1566,7 @@ g(x)=x(L-x).
 \]
 \end{example}
 
-\solution
+\begin{solution}
 We leave it to you to verify that $f$ and $g$ satisfy the assumptions
 of \zcref{thmtype:12.2.4}.
 
@@ -1595,6 +1601,7 @@ implies that $S_f(x)=f(x)$ and $S_g(x)=g(x)$ if $0\le x\le L$. Therefore
 $u(x,0)=f(x)$ and $u_t(x,0)=g(x)$ if $0\le x\le L$.
 Hence, $u$ is an actual solution of the initial-boundary
 value problem.
+\end{solution}
 
 \medskip
 
@@ -2644,7 +2651,7 @@ u(0,y)=0,\quad u(a,y)=0,\quad 0\le y\le b
   \label{figure:12.3.4}
 \end{figure}
 
-\solution
+\begin{solution}
 The boundary conditions in \eqref{eq:12.3.4} require
  products $v(x,y)=X(x)Y(y)$ such that
 $X(0)=X(a)=Y(b)=0$; hence, we let $k=-\lambda$ in \eqref{eq:12.3.3}.
@@ -2713,8 +2720,9 @@ is the Fourier sine series of $f$ on $[0,a]$; that is,
 \[
 \alpha_n=\frac{2}{a}\int_0^af(x)\sin\frac{n\pi x}{a}\,dx,\quad
 n=1,2,3,\dots.
-\qquad\bbox
+\qedhere
 \]
+\end{solution}
 
 If $y<b$ then
 \begin{equation} \label{eq:12.3.9}
@@ -2748,7 +2756,8 @@ and $f(0)=f(L)=0$.
 Solve \eqref{eq:12.3.4} with $f(x)=x(x^2-3ax+2a^2)$.
 \end{example}
 
-\solution  From \zcref{example:11.3.6},
+\begin{solution}
+From \zcref{example:11.3.6},
 \[
 S(x)=\frac{12a^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{n^3}\sin\frac{n\pi
 x}{a}.
@@ -2780,6 +2789,7 @@ while \zcref{figure:12.3.6}  shows the curves
 \[
 u=u(x,0.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.
 \]
+\end{solution}
 
 \noindent
   \begin{minipage}{0.48\linewidth}
@@ -2822,7 +2832,7 @@ u_x(0,y)=0,\quad u_x(a,y)=0,\quad 0\le y\le b
   \label{figure:12.3.7}
 \end{figure}
 
-\solution
+\begin{solution}
 The boundary conditions in \eqref{eq:12.3.11} require
  products $v(x,y)=X(x)Y(y)$ such that
 $X'(0)=X'(a)=Y(0)=0$; hence, we let $k=-\lambda$ in
@@ -2899,14 +2909,16 @@ is the Fourier cosine series of $f$ on $[0,a]$; that is,
 \alpha_0=\frac{1}{a}\int_0^af(x)\,dx
 \quad\text{and}\quad
 \alpha_n=\frac{2}{a}\int_0^af(x)\cos\frac{n\pi x}{a}\,dx,\quad
-n=1,2,3,\dots.
+n=1,2,3,\dots.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:12.3.4}
 Solve \eqref{eq:12.3.11} with $f(x)=x$.
 \end{example}
 
-\solution From \zcref{example:11.3.1},
+\begin{solution}
+From \zcref{example:11.3.1},
 \[
 C(x)=\frac{a}{2}-\frac{4a}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos\frac{(2n-1)\pi x}{a}.
@@ -2927,6 +2939,7 @@ while \zcref{figure:12.3.9}  shows the curves
 \[
 u=u(x,.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.
 \]
+\end{solution}
 
 \noindent
   \begin{minipage}{0.48\linewidth}
@@ -2969,7 +2982,7 @@ u(0,y)=g(y),\quad u_x(a,y)=0,\quad 0\le y\le b
   \label{figure:12.3.10}
 \end{figure}
 
-\solution
+\begin{solution}
 The boundary conditions in \eqref{eq:12.3.16} require
  products $v(x,y)=X(x)Y(y)$ such that
 $Y(0)=Y'(b)=X'(a)=0$; hence, we let $k=\lambda$ in
@@ -3042,12 +3055,14 @@ that is,
 \[
 \alpha_n=\frac{2}{b}\int_0^bg(y)\sin\frac{(2n-1)\pi y}{2b}\,dy.
 \]
+\end{solution}
 
 \begin{example}\label{example:12.3.6}
 Solve \eqref{eq:12.3.16} with $g(y)=y(2y^2-9by+12b^2)$.
 \end{example}
 
-\solution  From \zcref{example:11.3.8},
+\begin{solution}
+From \zcref{example:11.3.8},
 \[
 S_M(y)
 =\frac{96b^3}{\pi^3}\sum_{n=1}^\infty
@@ -3060,7 +3075,9 @@ u(x,y)
 =\frac{96b^3}{\pi^3}\sum_{n=1}^\infty
 \frac{\cosh(2n-1)\pi(x-a)/2b}{(2n-1)^3\cosh(2n-1)\pi a/2b}
 \left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi y}{2b}.
+\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:12.3.7}
 Define the formal solution of
@@ -3082,7 +3099,7 @@ u_x(0,y)=0,\quad u_x(a,y)=g(y),\quad 0\le y\le b
   \label{figure:12.3.11}
 \end{figure}
 
-\solution
+\begin{solution}
 The boundary conditions in \eqref{eq:12.3.20} require
  products $v(x,y)=X(x)Y(y)$ such that
 $Y'(0)=Y(b)=X'(0)=0$; hence, we let $k=\lambda$ in
@@ -3156,12 +3173,14 @@ that is,
 \[
 \alpha_n=\frac{2}{b}\int_0^bg(y)\cos\frac{(2n-1)\pi y}{2b}\,dy.
 \]
+\end{solution}
 
 \begin{example}\label{example:12.3.8}
 Solve \eqref{eq:12.3.20} with $g(y)=y-b$.
 \end{example}
 
-\solution  From \zcref{example:11.3.3},
+\begin{solution}
+From \zcref{example:11.3.3},
 \[
 C_M(y)=-\frac{8b}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos\frac{(2n-1)\pi y}{2b}.
@@ -3171,8 +3190,9 @@ Therefore
 u(x,y)=-\frac{16b^2}{\pi^3}\sum_{n=1}^\infty\frac{
 \cosh(2n-1)\pi x/2b}{(2n-1)^3\sinh(2n-1)\pi a/2b}
 \cos\frac{(2n-1)\pi y}{2b}.
-\qquad\bbox
+\qedhere
 \]
+\end{solution}
 
 
 \boxit{Laplace's Equation for a Semi-Infinite Strip}
@@ -3222,7 +3242,8 @@ Define the bounded formal solution of
 \eqref{eq:12.3.24}.
 \end{example}
 
-\solution Proceeding as in the solution of \zcref{example:12.3.1},
+\begin{solution}
+Proceeding as in the solution of \zcref{example:12.3.1},
 we find that the building block functions are of the form
 \[
 v_n(x,y)=Y_n(y)\sin\frac{n\pi x}{a},
@@ -3251,7 +3272,7 @@ where
 S(x)=\sum_{n=1}^\infty b_n\sin\frac{n\pi x}{a}
 \]
 is the Fourier sine series of $f$ on $[0,a]$.
-\bbox
+\end{solution}
 
 See \zcref[range]{exer:12.3.29,exer:12.3.34}  for other boundary value
 problems  on a semi-infinite strip.
@@ -3761,7 +3782,8 @@ Find the bounded formal solution of \eqref{eq:12.4.2} with
 $f(\theta)=\theta(\pi^2-\theta^2)$.
 \end{example}
 
-\solution From  \zcref{example:11.2.6},
+\begin{solution}
+From  \zcref{example:11.2.6},
 \[
 \theta(\pi^2-\theta^2)=12\sum_{n=1}^\infty\frac{(-1)^n}{n^3}\sin
 n\theta,\quad -\pi\le\theta\le\pi,
@@ -3770,8 +3792,9 @@ so
 \[
 u(r,\theta)=12\sum_{n=1}^\infty\frac{r^n}{\rho^n}\frac{(-1)^n}{n^3}\sin
 n\theta,\quad
-0\le r\le \rho,\quad -\pi\le\theta\le\pi.
+0\le r\le \rho,\quad -\pi\le\theta\le\pi.\qedhere
 \]
+\end{solution}
 
 \begin{example}\label{example:12.4.2}
 Define the formal solution of
@@ -3794,8 +3817,7 @@ where $0<\rho_0<\rho$ (\zcref{figure:12.4.2}).
   \label{figure:12.4.2}
 \end{figure}
 
-
-\solution
+\begin{solution}
 We use separation of variables exactly as before, except that
 now we choose the constants in \eqref{eq:12.4.5} and \eqref{eq:12.4.7}
 so that $R_n(\rho_0)=0$ for $n=0$, $1$, $2$,\dots. In view of the
@@ -3858,6 +3880,7 @@ F(\theta)
 n\theta+\beta_n\sin n\theta)
 \]
 is the Fourier series of  $f$ on $[-\pi,\pi]$.
+\end{solution}
 
 \begin{example}\label{example:12.4.3}
 Define the bounded formal solution of
@@ -3880,7 +3903,7 @@ where $0<\gamma<2\pi$ (\zcref{figure:12.4.3}).
   \label{figure:12.4.3}
 \end{figure}
 
-\solution
+\begin{solution}
 Now $v(r,\theta)=R(r)\Theta(\theta)$, where
 \begin{equation} \label{eq:12.4.11}
 r^2R''+rR'-\lambda R=0
@@ -3950,8 +3973,9 @@ S(\theta)=\sum_{n=1}^\infty\alpha_n
 is the Fourier sine expansion of $f$ on $[0,\gamma]$; that is,
 \[
 \alpha_n=\frac{2}{\gamma}\int_0^\gamma
-f(\theta)\sin\frac{n\pi\theta}{\gamma}\,d\theta.
+f(\theta)\sin\frac{n\pi\theta}{\gamma}\,d\theta.\qedhere
 \]
+\end{solution}
 
 \exercises
 \begin{exerciselist}
