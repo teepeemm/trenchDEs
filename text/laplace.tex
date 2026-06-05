@@ -157,8 +157,7 @@ or as the transform pair
 1\leftrightarrow\frac{1}{s},\quad s>0.
 \]
 
-\color{blue}
-\remark{
+\begin{remark*}
 It is convenient to combine the steps of integrating from $0$ to $T$
 and letting $T\to\infty$. Therefore, instead of writing \eqref{eq:8.1.3}
 and \eqref{eq:8.1.4} as separate steps we write
@@ -169,8 +168,8 @@ and \eqref{eq:8.1.4} as separate steps we write
 \infty,&s\le0.
 \end{cases}
 \]
-We'll follow this practice throughout this chapter.}
-\color{black}
+We'll follow this practice throughout this chapter.
+\end{remark*}
 
 \begin{example}\label{example:8.1.2}
  Find the Laplace transform of $f(t)=t$.
@@ -314,8 +313,8 @@ transform.
 
 \begin{theorem}\color{blue}[Linearity Property]\label{thmtype:8.1.2}
  Suppose $\laplace(f_i)$ is defined for
- $s>s_i,$ $1\le i\le n).$
-Let $s_0$ be the largest of the numbers $s_1$, $s_{2},$ \dots,$s_n,$ and
+ $s>s_i$, $1\le i\le n)$.
+Let $s_0$ be the largest of the numbers $s_1$, $s_{2}$, \dots, $s_n$, and
 let
 $c_1$, $c_2$,\dots, $c_n$ be  constants. Then
 \[
@@ -516,13 +515,12 @@ f(t_0)=f(t_0+)=f(t_0-).
 \tagstructend
 \end{minipage}
 
-{
-\color{blue}
-\remark{We know from calculus that a definite integral isn't
+\begin{remark*}
+We know from calculus that a definite integral isn't
 affected by changing the values of its integrand at isolated points.
 Therefore, redefining a function $f$ to make it continuous at
-removable discontinuities does not change $\laplace(f)$.}
-}
+removable discontinuities does not change $\laplace(f)$.
+\end{remark*}
 
 \begin{definition}\label{thmtype:8.1.4}
 \begin{rmlist}
@@ -581,25 +579,17 @@ to have a Laplace transform.  The proof is sketched in
 \zcref{exer:8.1.10}.
 
 \begin{theorem}\color{blue}\label{thmtype:8.1.6} If $f$
-is piecewise continuous on $[0,\infty)$ and of exponential order $s_0,$
+is piecewise continuous on $[0,\infty)$ and of exponential order $s_0$,
  then $\laplace(f)$ is defined for $s>s_0$.
 \end{theorem}
 
-
-
-
-
-
-
-
-\color{blue}
-\remark{
+\begin{remark*}
 We emphasize that the conditions of \zcref{thmtype:8.1.6}
  are sufficient, but \emph{\color{blue}not necessary}, for $f$ to have a Laplace
 transform. For example, \zcref{exer:8.1.14}(c) shows that  $f$
 may have a Laplace transform even though $f$ isn't  of exponential
-order.}
-\color{black}
+order.
+\end{remark*}
 
 \begin{example}\label{example:8.1.8}
 If $f$ is bounded on some interval $[t_0,\infty)$, say
@@ -673,12 +663,11 @@ This is consistent with \zcref{thmtype:8.1.6}, since
 \]
 and therefore $f$ is of exponential order $s_0=-1$.
 
-{
-\color{blue}
-\remark{In \zcref{sec:unit_step_func} we'll develop a more efficient
+\begin{remark*}
+In \zcref{sec:unit_step_func} we'll develop a more efficient
 method for finding Laplace transforms of piecewise continuous
-functions.}
-}
+functions.
+\end{remark*}
 
 \begin{example}\label{example:8.1.11}
 We stated  earlier that
@@ -806,7 +795,7 @@ where $\tau>0$, then $g$ is also of exponential order $s_0$.
 
 \begin{theorem*}[A]
 Let $g$ be integrable on $[0,T]$ for
-every $T>0.$  Suppose there's a function $w$ defined on some
+every $T>0$.  Suppose there's a function $w$ defined on some
 interval $[\tau,\infty)$ (with $\tau\ge 0$) such that $|g(t)|\le
 w(t)$ for $t\ge\tau$ and $\int^\infty_\tau w(t)\,dt$
 converges.  Then $\int_0^\infty g(t)\,dt$ converges.
@@ -1076,12 +1065,11 @@ and write
 &=e^{-t}(3\cos 2t+\frac{5}{2}\sin 2t).
 \end{align*}
 
-{
-\color{blue}
-\remark{We'll often write inverse Laplace transforms of specific
+\begin{remark*}
+We'll often write inverse Laplace transforms of specific
 functions without explicitly stating how they are obtained. In such
-cases you should refer to the table of Laplace transforms in \zcref{sec:laplace_table}.}
-}
+cases you should refer to the table of Laplace transforms in \zcref{sec:laplace_table}.
+\end{remark*}
 
 
 \boxit{Inverse Laplace Transforms of Rational Functions}
@@ -1226,12 +1214,12 @@ and
 &= \frac{17}{2}-10e^t+\frac{7}{2}e^{2t}-e^{-t}.
 \end{align*}
 
-\color{blue}
-\remark{We didn't ``multiply out'' the numerator in
+\begin{remark*}
+We didn't ``multiply out'' the numerator in
 \eqref{eq:8.2.7} before
 computing the coefficients in \eqref{eq:8.2.8}, since
- it wouldn't simplify the computations.}
-\color{black}
+ it wouldn't simplify the computations.
+\end{remark*}
 
 \begin{example}\label{example:8.2.6}
 Find the inverse Laplace transform of
@@ -1566,15 +1554,15 @@ next theorem answers this question.
 \begin{theorem}\color{blue}\label{thmtype:8.3.1}
  Suppose $f$ is continuous
 on $[0,\infty)$ and of exponential order $s_0$, and $f'$ is piecewise
-continuous on $[0,\infty).$  Then $f$ and $f'$ have Laplace transforms for
-$s > s_0,$ and
+continuous on $[0,\infty)$.  Then $f$ and $f'$ have Laplace transforms for
+$s > s_0$, and
 \begin{equation}\label{eq:8.3.1}
 \laplace(f')=s \laplace(f)-f(0).
 \end{equation}
 \end{theorem}
 
 \begin{proof}
-We know from Theorem~8.1.6 that $\laplace(f)$ is defined for
+We know from \zcref{thmtype:8.1.6} that $\laplace(f)$ is defined for
 $s>s_0$.
 We first consider the case where $f'$ is continuous on $[0,\infty)$.
 Integration by parts yields
@@ -1670,8 +1658,8 @@ using  the Laplace transform.
 
 \begin{theorem}\color{blue}\label{thmtype:8.3.2}
 Suppose $f$ and $f'$ are continuous on $[0,\infty)$ and of
-exponential order $s_0,$ and that $f''$ is piecewise continuous on
-$[0,\infty).$ Then $f$, $f'$, and $f''$ have Laplace transforms for $s
+exponential order $s_0$, and that $f''$ is piecewise continuous on
+$[0,\infty)$. Then $f$, $f'$, and $f''$ have Laplace transforms for $s
 > s_0$,
 \begin{equation}\label{eq:8.3.4}
 \laplace(f')=s \laplace(f)-f(0),
@@ -1890,16 +1878,15 @@ which is therefore  the solution of  \eqref{eq:8.3.15}.
 
 \medskip
 
-\color{blue}
-\remark{
+\begin{remark*}
 In our examples we applied \zcref{thmtype:8.3.1,thmtype:8.3.2}
 without verifying that the unknown function $y$ satisfies their
 hypotheses. This is characteristic of the formal manipulative way in
 which the Laplace transform is used to solve differential equations.
 Any doubts about the validity of the method for solving a given
 equation can be resolved by verifying that the resulting function $y$
-is  the solution of the given problem.}
-\color{black}
+is  the solution of the given problem.
+\end{remark*}
 
 \exercises
 In \zcref[range]{exer:8.3.1,exer:8.3.31}
@@ -2123,8 +2110,8 @@ We need the next theorem to
  show how \eqref{eq:8.4.6} can be used to find $\laplace(f)$.
 
 \begin{theorem}\color{blue}\label{thmtype:8.4.1}
-Let $g$ be defined on $[0,\infty).$ Suppose   $\tau\ge0$ and
-$\laplace\left(g(t+\tau)\right)$ exists for $s>s_0.$ Then
+Let $g$ be defined on $[0,\infty)$. Suppose   $\tau\ge0$ and
+$\laplace\left(g(t+\tau)\right)$ exists for $s>s_0$. Then
 $\laplace\left(u(t-\tau)g(t)\right)$ exists for $s>s_0$, and
 \[
 \laplace(u(t-\tau)g(t))=e^{-s\tau}\laplace\left(g(t+\tau)\right).
@@ -2347,14 +2334,14 @@ or, equivalently,
 \end{equation}
 \end{theorem}
 
-{\color{blue}
-\remark{Recall that the First Shifting Theorem
+\begin{remark*}
+Recall that the First Shifting Theorem
 (\zcref{thmtype:8.1.3}) states that multiplying a function  by
 $e^{at}$ corresponds to shifting the argument of its transform by $a$
 units. \zcref[S]{thmtype:8.4.2} states that multiplying a Laplace
 transform by the exponential $e^{-\tau s}$ corresponds to shifting the
-argument of the inverse transform by $\tau$ units.}
-}
+argument of the inverse transform by $\tau$ units.
+\end{remark*}
 
 \begin{example}\label{example:8.4.6}
  Use \eqref{eq:8.4.12} to find
@@ -2615,7 +2602,7 @@ g_m(t)=f_m(t+t_m)-f_{m-1}(t+t_m).
 
 \begin{alist} % (a)
 \item
-Use (A) and Theorem~8.1.6 to show that
+Use (A) and \zcref{thmtype:8.1.6} to show that
 \[
 \laplace(f)=\sum_{m=0}^\infty\int_{t_m}^{t_{m+1}}e^{-st}f_m(t)\,dt
 \tag{D}
@@ -2693,9 +2680,9 @@ in the case where $f$ has jump discontinuities. The next theorem
 motivates our definition. We omit the proof.
 
 \begin{theorem}\color{blue}\label{thmtype:8.5.1}
-Suppose $a,b$, and $c$ are constants $(a\ne0),$ and $f$ is
-piecewise  continuous on $[0,\infty).$ with jump discontinuities
-at $t_1,$ \dots, $t_n,$ where
+Suppose $a,b$, and $c$ are constants $(a\ne0)$, and $f$ is
+piecewise  continuous on $[0,\infty)$. with jump discontinuities
+at $t_1$, \dots, $t_n$, where
 \[
 0<t_1<\cdots<t_n.
 \]
@@ -2710,7 +2697,7 @@ properties:
 \item % (c)
 $y''$ is defined
 on every open subinterval of $[0,\infty)$ that does not contain any of the
-points $t_1,$ \dots, $t_n$, and
+points $t_1$, \dots, $t_n$, and
 \[
 ay''+by'+cy=f(t)
 \]
@@ -2890,16 +2877,16 @@ y=\begin{cases}
 which is the result obtained in \zcref{example:8.5.1}.
 
 \medskip
-\color{blue}
-\remark{It isn't obvious that using the Laplace transform to solve
+\begin{remark*}
+It isn't obvious that using the Laplace transform to solve
 \eqref{eq:8.5.2} as we did in \zcref{example:8.5.2} yields a function
 $y$ with the properties stated in \zcref{thmtype:8.5.1}; that is,
 such that $y$ and $y'$ are continuous on $[0,\infty)$ and $y''$ has
 limits from the right and left at $t_1$. However, this is
 true if  $f_0$ and $f_1$ are continuous and of exponential order on
 $[0,\infty)$. A proof  is sketched in
-{Exercises~8.6.\ref{exer:8.6.11}}--8.6.\ref{exer:8.6.13}.}
-\color{black}
+{Exercises~8.6.\ref{exer:8.6.11}}--8.6.\ref{exer:8.6.13}.
+\end{remark*}
 
 
 \begin{example}\label{example:8.5.3}
@@ -3020,7 +3007,7 @@ h_1(t)=-\frac{2}{3}\sin t+\frac{1}{3}\sin2t
 \quad\text{and}\quad
 h_2(t)=-\frac{1}{3}\cos t+\frac{1}{3}\cos2t.
 \]
-From  \eqref{eq:8.5.13} and Theorem~8.4.2,
+From  \eqref{eq:8.5.13} and \zcref{thmtype:8.4.2},
 \begin{equation}\label{eq:8.5.15}
 y=u\left(t-\frac{\pi}{4}\right) h_1\left(t-\frac{\pi}{4}\right)+
 u(t-\pi) h_2(t-\pi).
@@ -3199,12 +3186,12 @@ $f(t)=(m+1)t, \quad   2m\pi\le t<2(m+1)\pi,\quad m=0,1,2,\dots$
 \item % (c)
 $y''+y=f(t), \quad  y(0)=0,\quad  y'(0)=0$;
 
-$f(t)=(-1)^m,\quad  m\pi\le t<(m+1)\pi,\quad m=0,1,2,\dots.$
+$f(t)=(-1)^m,\quad  m\pi\le t<(m+1)\pi,\quad m=0,1,2,\dots$.
 
 \item % (d)
 $y''-y=f(t), \quad  y(0)=0,\quad  y'(0)=0$;
 
-$f(t)=m+1,\quad  m\le t<(m+1),\quad m=0,1,2,\dots.$
+$f(t)=m+1,\quad  m\le t<(m+1),\quad m=0,1,2,\dots$.
 
 \hint{You will need the formula
 \[
@@ -3215,14 +3202,14 @@ $f(t)=m+1,\quad  m\le t<(m+1),\quad m=0,1,2,\dots.$
 $y''+2y'+2y=f(t), \quad  y(0)=0,\quad  y'(0)=0$;
 
 $f(t)=(m+1)(\sin t+2\cos t),\quad  2m\pi\le t<2(m+1)\pi,\quad
-m=0,1,2,\dots.$
+m=0,1,2,\dots$.
 
 (See the hint in (d).)
 
 \item % (f)
 $y''-3y'+2y=f(t), \quad  y(0)=0,\quad y'(0)=0$;
 
-$f(t)=m+1,\quad  m\le t<m+1,\quad m=0,1,2,\dots.$
+$f(t)=m+1,\quad  m\le t<m+1,\quad m=0,1,2,\dots$.
 
  (See the hints in (b) and (d).)
 \end{alist}
@@ -3428,7 +3415,7 @@ case where $g(t)=e^{at}$. This next theorem states that this is
 true in general.
 
 \begin{theorem}[The Convolution Theorem]\label{thmtype:8.6.2}
-If $\laplace(f)=F$  and $\laplace(g)=G,$ then
+If $\laplace(f)=F$  and $\laplace(g)=G$, then
 \[
 \laplace(f*g)=FG.
 \]
@@ -4215,7 +4202,7 @@ where $t_0$ is a fixed nonnegative number. The next theorem will
 motivate our definition.
 
 \begin{theorem}\color{blue} \label{thmtype:8.7.1}
-Suppose $t_0\ge0.$ For each positive number $h,$ let $y_h$ be the
+Suppose $t_0\ge0$. For each positive number $h$, let $y_h$ be the
 solution of the initial value problem
 \begin{equation} \label{eq:8.7.1}
 ay_h''+by_h'+cy_h=f_h(t), \quad  y_h(0)=0,\quad y_h'(0)=0,

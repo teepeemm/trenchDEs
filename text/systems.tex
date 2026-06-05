@@ -359,14 +359,14 @@ v_2'&=\dfrac{1}{m_2}\left[c_2v_1-c_2v_2+k_2y_1-k_2y_2+F_2\right].
 \end{equation}
 
 
-\color{blue}
-\remark{ The difference in form between \eqref{eq:10.1.15} and
+\begin{remark*}
+The difference in form between \eqref{eq:10.1.15} and
 \eqref{eq:10.1.17}, due to the way in which the unknowns are \emph{\color{blue}denoted}
 in the two systems, isn't  important;     \eqref{eq:10.1.17} is a first
 order system, in that each equation in \eqref{eq:10.1.17} expresses the
 first derivative of one of the unknown functions in a way that does
-not involve derivatives of any of the other unknowns.}
-\color{black}
+not involve derivatives of any of the other unknowns.
+\end{remark*}
 
 \begin{example}\label{example:10.1.5}
  Rewrite the system
@@ -728,9 +728,8 @@ Solving this system yields $c_1=1$, $c_2=-2$, so
 is the solution of  \eqref{eq:10.2.5}.
 \end{alistSolution}
 
-{
-\color{blue}
-\remark{The theory of $n\times n$ linear systems of differential
+\begin{remark*}
+The theory of $n\times n$ linear systems of differential
 equations is analogous to the theory of the scalar $n$-th order
 equation
 \begin{equation} \label{eq:10.2.6}
@@ -740,8 +739,8 @@ as
 developed in \zcref{sec:higher_theory}. For example, by rewriting
 \eqref{eq:10.2.6} as an equivalent linear system it can be shown that
 \zcref{thmtype:10.2.1} implies \zcref{thmtype:9.1.1}
-(\zcref{exer:10.2.12}).}
-}
+(\zcref{exer:10.2.12}).
+\end{remark*}
 
 \exercises
 
@@ -1249,8 +1248,8 @@ The next theorem is analogous to
 $n=2$ and in \zcref{exer:10.3.5} for general~$n$.
 
 \begin{theorem}\color{blue}$[$Abel's Formula$]$ \label{thmtype:10.3.2}
-Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b),$ let
-$\vect{y}_1$, $\vect{y}_2$, \dots, $\vect{y}_n$ be solutions of $\vect{y}'=A(t)\vect{y}$ on $(a,b),$ and let $t_0$ be in $(a,b)$. Then the
+Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$, let
+$\vect{y}_1$, $\vect{y}_2$, \dots, $\vect{y}_n$ be solutions of $\vect{y}'=A(t)\vect{y}$ on $(a,b)$, and let $t_0$ be in $(a,b)$. Then the
 Wronskian of $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is given by
 \begin{equation} \label{eq:10.3.6}
 W(t)=W(t_0)\exp\left(
@@ -1258,12 +1257,10 @@ W(t)=W(t_0)\exp\left(
 ds\right), \quad  a < t < b.
 \end{equation}
 Therefore,  either $W$ has no zeros in  $(a,b)$ or $W\equiv0$
-on  $(a,b).$
+on  $(a,b)$.
 \end{theorem}
 
-{
-\color{blue}
-\remark{
+\begin{remark*}
 The sum of the diagonal entries of a square matrix $A$ is called the
 \emph{\color{blue}trace} of $A$, denoted by tr$(A)$. Thus, for an $n\times n$
 matrix $A$,
@@ -1275,8 +1272,8 @@ and  \eqref{eq:10.3.6} can be written as
 W(t)=W(t_0)\exp\left(
 \int^t_{t_0}\tr(A(s))\,
 ds\right), \quad a < t < b.
-\]}
-}
+\]
+\end{remark*}
 
 The next theorem is analogous to
 \zcref{thmtype:5.1.6,thmtype:9.1.4}.
@@ -2712,9 +2709,9 @@ The next theorem shows what to do in this situation.
 \begin{theorem}\color{blue}\label{thmtype:10.5.1}
 Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_1$
 of multiplicity $\ge2$ and the associated eigenspace has dimension
-$1;$ that is, all $\lambda_1$-eigenvectors of $A$ are scalar
+$1$; that is, all $\lambda_1$-eigenvectors of $A$ are scalar
 multiples
-of  an eigenvector $\vect{X}.$  Then there are infinitely many vectors
+of  an eigenvector $\vect{X}$.  Then there are infinitely many vectors
 $\vect{u}$ such that
 \begin{equation}\label{eq:10.5.2}
 (A-\lambda_1I)\vect{u}=\vect{X}.
@@ -2724,7 +2721,7 @@ Moreover, if $\vect{u}$ is any such vector  then
 \vect{y}_1=\vect{X}e^{\lambda_1t}\quad\text{and}\quad
 \vect{y}_2=\vect{u}e^{\lambda_1t}+\vect{X}te^{\lambda_1t}
 \end{equation}
-are linearly independent  solutions of $\vect{y}'=A\vect{y}.$
+are linearly independent  solutions of $\vect{y}'=A\vect{y}$.
 \end{theorem}
 
 A complete proof of this theorem is beyond the scope of this book. The
@@ -2917,7 +2914,7 @@ Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_1$ of
 multiplicity $\ge 3$ and the associated eigenspace is
 one-dimensional; that is, all eigenvectors associated with
 $\lambda_1$
-are scalar multiples of the eigenvector $\vect{X}.$ Then there are
+are scalar multiples of the eigenvector $\vect{X}$. Then there are
 infinitely many vectors $\vect{u}$ such that
 \begin{equation}\label{eq:10.5.9}
 (A-\lambda_1I)\vect{u}=\vect{X},
@@ -3060,7 +3057,7 @@ If $\vect{u}$ satisfies  \eqref{eq:10.5.13}, then
 \end{aligned}
 \label{eq:10.5.14},
 \]
-are linearly independent solutions of  $\vect{y}'=A\vect{y}.$
+are linearly independent solutions of  $\vect{y}'=A\vect{y}$.
 \end{theorem}
 
 We omit the proof of this theorem.
@@ -3960,7 +3957,6 @@ If $\alpha<0$,  then
 \lim_{t\to-\infty}\|\vect{y}(t)\|=\infty\quad\text{and}\quad 
 \lim_{t\to\infty}\vect{y}(t)=0,
 \]
-\enlargethispage{2in}
 so the trajectory spirals toward the origin as $t$ varies from
 $-\infty$ to $\infty$. Again, the direction of the spiral depends upon
 the relative orientation of $\vect{u}$ and $\vect{v}$, as shown in
@@ -3969,7 +3965,7 @@ the relative orientation of $\vect{u}$ and $\vect{v}$, as shown in
 \noindent
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={Similar Figure \ref*{figure:10.6.1}, but now solution curves spiral outward.},
+\includegraphics[alt={Similar to Figure \ref*{figure:10.6.1}, but now solution curves spiral outward.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig010603}
 \captionof{figure}{$\alpha>0$; shadow trajectory spiraling outward}
 \label{figure:10.6.3}
@@ -3978,7 +3974,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig010603}
 \hfill
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={Similar Figure \ref*{figure:10.6.2}, but now solution curves spiral outward.},
+\includegraphics[alt={Similar to Figure \ref*{figure:10.6.2}, but now solution curves spiral outward.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig010604}
 \captionof{figure}{$\alpha>0$; shadow trajectory spiraling outward}
 \label{figure:10.6.4}
@@ -3988,7 +3984,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig010604}
 \noindent
 \begin{minipage}{0.49\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={Similar Figure \ref*{figure:10.6.3}, but now solution curves spiral inward.},
+\includegraphics[alt={Similar to Figure \ref*{figure:10.6.3}, but now solution curves spiral inward.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig010605}
 \captionof{figure}{$\alpha<0$; shadow trajectory spiraling inward}
 \label{figure:10.6.5}
@@ -3997,7 +3993,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig010605}
 \hfill
 \begin{minipage}{0.49\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={Similar Figure \ref*{figure:10.6.4}, but now solution curves spiral inward.},
+\includegraphics[alt={Similar to Figure \ref*{figure:10.6.4}, but now solution curves spiral inward.},
 width=\linewidth,height=2.44in,keepaspectratio]{fig100606}
 \captionof{figure}{$\alpha<0$; shadow trajectory spiraling inward}
 \label{figure:10.6.6}
@@ -4146,7 +4142,7 @@ complementary system. We leave the proof as an exercise
 
 \begin{theorem}\color{blue}\label{thmtype:10.7.1}
 Suppose the $n\times n$ matrix function $A$ and the $n$-vector
-function $\vect{F}$ are continuous on $(a,b).$ Let $\vect{y}_p$ be a
+function $\vect{F}$ are continuous on $(a,b)$. Let $\vect{y}_p$ be a
 particular solution of $\vect{y}'=A(t)\vect{y}+\vect{F}(t)$ on $(a,b)$,
 and let
 $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ be a fundamental set of
@@ -4155,7 +4151,7 @@ $(a,b)$. Then $\vect{y}$ is a solution of $\vect{y}'=A(t)\vect{y}+\vect{f}(t)$ o
 \[
 \vect{y}=\vect{y}_p+c_1\vect{y}_1+c_2\vect{y}_2+\cdots+c_n\vect{y}_n,
 \]
-where $c_1,$ $c_2,$ \dots, $c_n$  are constants.
+where $c_1$, $c_2$, \dots, $c_n$  are constants.
 \end{theorem}
 
 
