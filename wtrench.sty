@@ -66,7 +66,7 @@
 \markboth{\markonleft{#2}}{\markonright{#3}}
 \vskip7pt}
 
-\newcommand{\hint}[1]{{\scshape Hint}:\ {\itshape #1}}
+\newcommand{\hint}[1]{{\scshape Hint}:\ {\slshape #1}}
 \newcommand{\note}[1]{({\scshape Note}:\ #1)}
 
 \newcommand{\svc}[1]{\mbox{\tiny{\bfseries #1}}}
@@ -98,13 +98,27 @@
 %\newcommand{\twotab} {\begin{tabular}[t]{@{}p{168pt}@{}p{168pt}}}
 %\newcommand{\threetab} {\begin{tabular}[t]{@{}p{112pt}@{}p{122pt}@{}p{112pt}}}
 
+% We want a clone of {proof} (with qedhere), but starting with "Solution" instead
 %\newcommand{\solution}{\vskip10pt\noindent{\scshape Solution }\  }
 %\newenvironment{solution}{\bigskip\noindent{\scshape Solution }\  }{\bbox}
-\NewEnvironmentCopy{solution}{proof}
-\AddToHook{env/solution/begin}{\renewcommand\proofname{\textsc{\textup{Solution}}}}
+\DeclareInstanceCopy{blockenv}{solution}{proof}
+\EditInstance{blockenv}{solution}{
+ name = solution,
+ inner-instance = solution,
+}
+\DeclareInstanceCopy{captionedtext}{solution}{proof}
+\EditInstance{captionedtext}{solution}{
+ title = Solution,
+ caption-decls = \scshape,
+}
+\NewDocumentEnvironment{solution}{ ={note}o }{%
+ \pushQED {\qed }\ParseLaTeXeTheoremlike {solution}\BooleanTrue {#1}%
+}{%
+ \popQED \BlockEnvEnd
+}
 
 \newcommand{\exercisetext}[1]{%
- \end{exerciselist}{\itshape #1}\begin{exerciselist}[resume]}
+ \end{exerciselist}{\slshape #1}\begin{exerciselist}[resume]}
 
 %\newcommand{\arraytext}[1]{\noalign{\hspace*{-1.75em}
 %\mbox{#1}\vspace*{-9\jot}}\nonumber\\}
@@ -182,7 +196,9 @@
 }{%
  \end{enumext}%
 }
+
 \newenvironment{alistSolution}[1][]{%
+ \pushQED {\qed }% allows \qedhere
  \begin{enumext}[
   label=\alph*,
 %  font=\bfseries,
@@ -197,7 +213,7 @@
   #1
  ]%
 }{%
- \bbox
+ \popQED
  \end{enumext}%
 }
 
