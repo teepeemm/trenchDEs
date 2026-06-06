@@ -81,6 +81,16 @@ filecolor = blue,
   }
 \ExplSyntaxOff
 
+\usepackage{xstring}
+
+\newcommand*{\personHref}[2]{%
+ \IfStrEqCase{#1}{%
+  {Libby}{\href{https://www.nobelprize.org/prizes/chemistry/1960/libby/facts/}{\color{blue}\slshape#2}}%
+  {Malthus}{\href{http://en.wikipedia.org/wiki/Thomas_Robert_Malthus}{\color{blue}\slshape#2}}%
+ }[\href{https://mathshistory.st-andrews.ac.uk/Biographies/#1/}{\color{blue}\slshape#2}]%
+}
+
+
 
 %\colorlet{blue}{DarkBlue}
 \colorlet{red}{DarkRed}
