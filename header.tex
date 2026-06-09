@@ -117,7 +117,7 @@ filecolor = blue,
 \numberwithin{table}{section}
 \numberwithin{figure}{section}
 
-\newcommand{\place}{\bigskip\hrule\bigskip\noindent}
+%\newcommand{\place}{\bigskip\hrule\bigskip\noindent}
 %\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
 \newcommand{\threecol}[3]{\begin{bmatrix}#1\\#2\\#3\end{bmatrix}}
 %\newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\[1\jot]#2\\[1\jot]#3\end{array}\right]}
@@ -143,9 +143,9 @@ filecolor = blue,
 %#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
 \newcommand{\threebythree}[9]{\begin{bmatrix}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{bmatrix}}
 % TODO
-\newcommand{\solutionpart}[1]{\vskip10pt\noindent{%\underbar
-\color{blue}\scshape Solution({\bfseries #1})\ }
-}
+%\newcommand{\solutionpart}[1]{\bigskip\noindent{%\underbar
+%\color{blue}\scshape Solution({\bfseries #1})\ }
+%}
 \newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
 \newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
 \newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, }
@@ -169,15 +169,18 @@ filecolor = blue,
 
 \newcommand{\technology}{\bigskip\noindent\fbox{\color{red}USING
 TECHNOLOGY}\par}
+
 \newcommand{\bigbox}[1]{\vskip10pt\vbox{\hrule\hbox{\vrule\kern5pt
 \vbox{\noindent
 \strut\kern5pt\mbox{}\newline#1\mbox{}\newline
 \kern5pt\strut}\kern5pt\vrule}\hrule}}
+
 \newcommand{\blankbox}[1]{\vskip10pt\vbox{\hbox{\kern5pt
 \vbox{\noindent\strut\kern5pt\vspace*{-15pt}#1\vspace*{-20pt}
 \kern5pt\strut}\kern5pt}}}
-\newenvironment{newtable}[1]{ \begin{quote}
-Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
+
+%\newenvironment{newtable}[1]{ \begin{quote}
+%Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
 
 \newcommand{\sectionanswers}[1]{%
  \ParseLaTeXeHeading{section}{\BooleanTrue}{

@@ -101,20 +101,21 @@
 % We want a clone of {proof} (with qedhere), but starting with "Solution" instead
 %\newcommand{\solution}{\vskip10pt\noindent{\scshape Solution }\  }
 %\newenvironment{solution}{\bigskip\noindent{\scshape Solution }\  }{\bbox}
-\DeclareInstanceCopy{blockenv}{solution}{proof}
-\EditInstance{blockenv}{solution}{
- name = solution,
- inner-instance = solution,
-}
-\DeclareInstanceCopy{captionedtext}{solution}{proof}
-\EditInstance{captionedtext}{solution}{
- title = Solution,
- caption-decls = \scshape,
-}
-\NewDocumentEnvironment{solution}{ ={note}o }{%
- \pushQED {\qed }\ParseLaTeXeTheoremlike {solution}\BooleanTrue {#1}%
+%\DeclareInstanceCopy{blockenv}{solution}{proof}
+%\EditInstance{blockenv}{solution}{
+% name = solution,
+% inner-instance = solution,
+%}
+%\DeclareInstanceCopy{captionedtext}{solution}{proof}
+%\EditInstance{captionedtext}{solution}{
+% title = Solution,
+% caption-decls = \scshape,
+%}
+\newenvironment{solution}{%
+%\NewDocumentEnvironment{solution}{ ={note}o }{%
+ \pushQED {\qed }\bigskip\noindent\textsc{Solution. }%\ParseLaTeXeTheoremlike {solution}\BooleanTrue {#1}%
 }{%
- \popQED \BlockEnvEnd
+ \popQED %\BlockEnvEnd
 }
 
 \newcommand{\exercisetext}[1]{%
@@ -128,7 +129,9 @@
 
 % TODO FORMATTING
 \newcommand{\exercises}{%
-{\color{red}\subsection*[\thesection\ Exercises]{\thesection\ Exercises}}%
+{\color{red}\subsection*[
+	running=\thesection\ Exercises,
+	bookmark=\thesection\ Exercises,]{\thesection\ Exercises}}%
 \noindent
 }
 %\bigskip{\centerline{\color{red}\large\bfseries\thesection\
