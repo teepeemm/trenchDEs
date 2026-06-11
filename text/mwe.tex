@@ -1,13 +1,43 @@
-\DocumentMetadata{
-  lang        = en-US,
-  pdfstandard = ua-2,
-%  pdfstandard = a-4f,
-  tagging=on,
-  tagging-setup={math/setup=mathml-SE} 
-}
+% Source - https://tex.stackexchange.com/q/763586
+% Posted by pks40
+% Retrieved 2026-06-09, License - CC BY-SA 4.0
+
 \documentclass{article}
 
-\title{Minimum Example}
+\usepackage{amsthm}
+%\usepackage{cleveref}
+\usepackage{zref-clever}
+\providecommand{\cref}{\zcref}
+
+\theoremstyle{theorem}
+\newtheorem{thm}{Theorem}
+\newtheorem{theorem}{Theorem}
+\newtheorem{mytheorem}{Theorem}
+
+\zcRefTypeSetup{thm}{
+cap,
+name-sg = theorem,
+Name-sg = Theorem
+}
+
 \begin{document}
-$a\times b$
+
+\begin{thm}\label{thm:test1}
+  Test1
+\end{thm}
+
+\begin{theorem}\label{thm:test2}
+Test2
+\end{theorem}
+
+\begin{mytheorem}\label{thm:test3}
+Test3
+\end{mytheorem}
+
+In \cref{thm:test1} and \zcref{thm:test1}, we tested stuff.
+
+In \cref{thm:test2} and \zcref{thm:test2}, we tested stuff.
+
+In \cref{thm:test3} and \zcref{thm:test3}, we tested stuff.
+
 \end{document}
