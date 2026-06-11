@@ -7,25 +7,25 @@
   </buildInformation>
   <jobs>
     <job>
-      <item size="21931607">
+      <item size="26987924">
         <name>/Users/timothyprescott/Documents/programming/git/trenchDEs/TRENCH_DIFFEQ.pdf</name>
       </item>
       <validationReport jobEndStatus="normal" profileName="PDF/UA-2 + Tagged PDF validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
-        <details passedRules="1727" failedRules="0" passedChecks="8399536" failedChecks="0"></details>
+        <details passedRules="1727" failedRules="0" passedChecks="10213652" failedChecks="0"></details>
       </validationReport>
       <validationReport jobEndStatus="normal" profileName="WTPDF 1.0 Accessibility validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
-        <details passedRules="1723" failedRules="0" passedChecks="8399532" failedChecks="0"></details>
+        <details passedRules="1723" failedRules="0" passedChecks="10213648" failedChecks="0"></details>
       </validationReport>
       <validationReport jobEndStatus="normal" profileName="WTPDF 1.0 Reuse validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true">
-        <details passedRules="1710" failedRules="0" passedChecks="7426102" failedChecks="0"></details>
+        <details passedRules="1710" failedRules="0" passedChecks="9009118" failedChecks="0"></details>
       </validationReport>
-      <duration start="1779202514221" finish="1779202577553">00:01:03.332</duration>
+      <duration start="1780609614801" finish="1780609697335">00:01:22.534</duration>
     </job>
   </jobs>
   <batchSummary totalJobs="1" failedToParse="0" encrypted="0" outOfMemory="0" veraExceptions="0">
     <validationReports compliant="1" nonCompliant="0" failedJobs="0">1</validationReports>
     <featureReports failedJobs="0">0</featureReports>
     <repairReports failedJobs="0">0</repairReports>
-    <duration start="1779202514002" finish="1779202577852">00:01:03.850</duration>
+    <duration start="1780609614558" finish="1780609697757">00:01:23.199</duration>
   </batchSummary>
 </report>
