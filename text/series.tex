@@ -723,16 +723,14 @@ and \eqref{eq:7.1.23} begin with $n=0$.
 
 \item\label{exer:7.1.1}For each power series use \zcref{thmtype:7.1.3} to find the radius
 of convergence $R$. If $R>0$, find the open interval of convergence.
-
-\begin{alist}[columns=2]
-% TODO was horizontal
+\begin{alist*}[columns=2]
 \item $\dst{\sum_{n=0}^\infty\frac{(-1)^n}{2^nn}(x-1)^n}$
 \item $\dst{\sum_{n=0}^\infty 2^nn(x-2)^n}$
 \item $\dst{\sum_{n=0}^\infty\frac{n!}{9^n}x^n}$
 \item $\dst{\sum_{n=0}^\infty\frac{n(n+1)}{16^n}(x-2)^n}$
 \item $\dst{\sum_{n=0}^\infty (-1)^n\frac{7^n}{n!}x^n}$
 \item $\dst{\sum_{n=0}^\infty \frac{3^n}{4^{n+1}(n+1)^2}(x+7)^n}$
-\end{alist}
+\end{alist*}
 
 \item\label{exer:7.1.2}Suppose there's an
 integer $M$ such that $b_m\ne0$ for $m\ge M$,  and
@@ -752,16 +750,14 @@ b_mz^m$ and then let $z=(x-x_0)^2$.}
 \item\label{exer:7.1.3}For each power series, use the result of \zcref{exer:7.1.2} to find
 the radius of convergence $R$. If $R>0$, find the open interval of
 convergence.
-
-\begin{alist}[columns=2]
-% TODO was horizontal
+\begin{alist*}[columns=2]
 \item $\dst{\sum_{m=0}^\infty (-1)^m(3m+1)(x-1)^{2m+1}}$
 \item $\dst{\sum_{m=0}^\infty (-1)^m\frac{m(2m+1)}{2^m}(x+2)^{2m}}$
 \item $\dst{\sum_{m=0}^\infty\frac{m!}{(2m)!}(x-1)^{2m}}$
 \item $\dst{\sum_{m=0}^\infty (-1)^m\frac{m!}{9^m}(x+8)^{2m}}$
 \item $\dst{\sum_{m=0}^\infty(-1)^m\frac{(2m-1)}{3^m}x^{2m+1}}$
 \item $\dst{\sum_{m=0}^\infty(x-1)^{2m}}$
-\end{alist}
+\end{alist*}
 
 \item\label{exer:7.1.4}Suppose there's an integer $M$ such that $b_m\ne0$ for $m\ge M$,
 and
@@ -781,19 +777,14 @@ to the series $\sum_{m=0}^\infty b_mz^m$ and then let $z=(x-x_0)^k$.}
 \item\label{exer:7.1.5}For each power series use the result of \zcref{exer:7.1.4} to find
 the radius of convergence $R$. If $R>0$, find the open interval of
 convergence.
-
-\begin{alist}[columns=2]
-% TODO was horizontal
+\begin{alist*}[columns=2]
 \item $\dst{\sum_{m=0}^\infty\frac{(-1)^m}{(27)^m}(x-3)^{3m+2}}$
 \item $\dst{\sum_{m=0}^\infty\frac{x^{7m+6}}{m}}$
 \item $\dst{\sum_{m=0}^\infty\frac{9^m(m+1)}{(m+2)}(x-3)^{4m+2}}$
 \item $\dst{\sum_{m=0}^\infty(-1)^m\frac{2^m}{m!}x^{4m+3}}$
 \item $\dst{\sum_{m=0}^\infty\frac{m!}{(26)^m}(x+1)^{4m+3}}$
 \item $\dst{\sum_{m=0}^\infty\frac{(-1)^m}{8^mm(m+1)}(x-1)^{3m+1}}$
-\end{alist}
-
-
-
+\end{alist*}
 
 \item\label{exer:7.1.6}\Lex
 Graph $y=\sin x$ and the Taylor polynomial
@@ -842,18 +833,20 @@ on the interval $(-5,5)$ for $M=0$, $1$, $2$, \dots, until you find a
 value of $M$ for which there's no perceptible difference between the
 two graphs.
  Choose the scale on the $y$-axis so that~$-75~\le~y\le~75$.
-
-\exercisetext{In \zcref[range]{exer:7.1.11,exer:7.1.15}
+\end{exerciselist}
+%
+\textsl{In \zcref[range]{exer:7.1.11,exer:7.1.15}
 find a power series solution
 $y(x)=\sum_{n=0}^\infty a_nx^n$.}
-
-\item(1)\label{exer:7.1.11}$(2+x)y''+xy'+3y$
-\item(1)\label{exer:7.1.12}$(1+3x^2)y''+3x^2y'-2y$
-\item(1)\label{exer:7.1.13}$(1+2x^2)y''+(2-3x)y'+4y$
-\item(1)\label{exer:7.1.14}$(1+x^2)y''+(2-x)y'+3y$
-
+\begin{exerciselistTwoColumn}
+\item\label{exer:7.1.11}$(2+x)y''+xy'+3y$
+\item\label{exer:7.1.12}$(1+3x^2)y''+3x^2y'-2y$
+\item\label{exer:7.1.13}$(1+2x^2)y''+(2-3x)y'+4y$
+\item\label{exer:7.1.14}$(1+x^2)y''+(2-x)y'+3y$
 \item\label{exer:7.1.15}$(1+3x^2)y''-2xy'+4y$
+\end{exerciselistTwoColumn}
 
+\begin{exerciselist}
 \item\label{exer:7.1.16}Suppose $y(x)=\sum_{n=0}^\infty a_n(x+1)^n$
 on an open interval that contains $x_0~=~-1$. Find a power series in
 $x+1$ for
@@ -1552,16 +1545,18 @@ accurate for the problem at hand.
  In \zcref[range]{exer:7.2.1,exer:7.2.8}  find the power
 series in $x$ for the general solution.
 
-\begin{exerciselist}
-\item(1)\label{exer:7.2.1}$(1+x^2)y''+6xy'+6y=0$
-\item(1)\label{exer:7.2.2}$(1+x^2)y''+2xy'-2y=0$
-\item(1)\label{exer:7.2.3}$(1+x^2)y''-8xy'+20y=0$
-\item(1)\label{exer:7.2.4}$(1-x^2)y''-8xy'-12y=0$
-\item(1)\label{exer:7.2.5}$(1+2x^2)y''+7xy'+2y=0$
-\item(1)\label{exer:7.2.6}$(1+x^2)y''+2xy'+\dfrac{1}{4}y=0$
-\item(1)\label{exer:7.2.7}$(1-x^2)y''-5xy'-4y=0$
-\item(1)\label{exer:7.2.8}$(1+x^2)y''-10xy'+28y=0$
+\begin{exerciselistTwoColumn}
+\item\label{exer:7.2.1}$(1+x^2)y''+6xy'+6y=0$
+\item\label{exer:7.2.2}$(1+x^2)y''+2xy'-2y=0$
+\item\label{exer:7.2.3}$(1+x^2)y''-8xy'+20y=0$
+\item\label{exer:7.2.4}$(1-x^2)y''-8xy'-12y=0$
+\item\label{exer:7.2.5}$(1+2x^2)y''+7xy'+2y=0$
+\item\label{exer:7.2.6}$(1+x^2)y''+2xy'+\dfrac{1}{4}y=0$
+\item\label{exer:7.2.7}$(1-x^2)y''-5xy'-4y=0$
+\item\label{exer:7.2.8}$(1+x^2)y''-10xy'+28y=0$
+\end{exerciselistTwoColumn}
 
+\begin{exerciselist}
 \item\label{exer:7.2.9}\Lex
 \begin{alist}
 \item % (a)
@@ -1656,25 +1651,26 @@ as $r\to1$?
 \item % (c)
 Try (a) and (b) with $r=1.2$. Explain your results.
 \end{alist}
+\end{exerciselist}
 
-
-\exercisetext{In \zcref[range]{exer:7.2.16,exer:7.2.20}
+\textsl{In \zcref[range]{exer:7.2.16,exer:7.2.20}
  find the power series in $x-x_0$
 for the general solution.}
 
-\item(1)\label{exer:7.2.16}$y''-y=0;\quad   x_0=3$
-\item(1)\label{exer:7.2.17}$y''-(x-3)y'-y=0;\quad   x_0=3$
-
-\item\label{exer:7.2.18}$(1-4x+2x^2)y''+10(x-1)y'+6y=0;\quad  x_0=1$
-\item\label{exer:7.2.19}$(11-8x+2x^2)y''-16(x-2)y'+36y=0;\quad  x_0=2$
-\item\label{exer:7.2.20}$(5+6x+3x^2)y''+9(x+1)y'+3y=0;\quad  x_0=-1$
-
-\exercisetext{In \zcref[range]{exer:7.2.21,exer:7.2.26}
+\begin{exerciselistTwoColumn}
+\item\label{exer:7.2.16}$y''-y=0;\quad   x_0=3$
+\item\label{exer:7.2.17}$y''-(x-3)y'-y=0;\quad   x_0=3$
+\item(2)\label{exer:7.2.18}$(1-4x+2x^2)y''+10(x-1)y'+6y=0;\quad  x_0=1$
+\item(2)\label{exer:7.2.19}$(11-8x+2x^2)y''-16(x-2)y'+36y=0;\quad  x_0=2$
+\item(2)\label{exer:7.2.20}$(5+6x+3x^2)y''+9(x+1)y'+3y=0;\quad  x_0=-1$
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:7.2.21,exer:7.2.26}
  find $a_0$, \dots, $a_N$ for $N$ at least $7$ in the power series
 $y=\sum_{n=0}^\infty a_n(x-x_0)^n$
  for the  solution of the initial value problem.  Take $x_0$ to be the
 point where the initial conditions are imposed.}
-
+\begin{exerciselist}
 \item\label{exer:7.2.21}\Cex $(x^2-4)y''-xy'-3y=0,\quad y(0)=-1,\quad
 y'(0)=2$
 \item\label{exer:7.2.22}\Cex $y''+(x-3)y'+3y=0,\quad y(3)=-2,\quad
@@ -1688,7 +1684,7 @@ y(4)=3,\quad y'(4)=-4$
 \item\label{exer:7.2.26}\Cex
 $(2x^2+4x+5)y''-20(x+1)y'+60y=0,\quad y(-1)=3,\quad y'(-1)=-3$
 
-\item\label{exer:7.2.27}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.2.27}\begin{alist}
 \item % (a)
 Find a power series in $x$ for the general solution of
 \[
@@ -1732,7 +1728,7 @@ a_1\sum^\infty_{m=0}(-1)^m
 \]
 where $r$ and $s$ are nonnegative integers.
 
-\item\label{exer:7.2.30}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.2.30}\begin{alist}
 \item % (a)
 Use \zcref{exer:7.2.28}  to show that the power series in $x$
 for the general solution of
@@ -1785,7 +1781,7 @@ $(1-x^2)^{b-1}$.)
 \end{alist}
 
 
-\item\label{exer:7.2.31}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.2.31}\begin{alist}
 \item % (a)
 Use \zcref{exer:7.2.28}  to show that the power series in $x$
 for the general solution
@@ -1877,18 +1873,21 @@ y=\dst{a_0\sum^\infty_{m=0}(-1)^m \left[\prod^{m-1}_{j=0}
 \frac{x^{3m+1}}{3^mm!}}.
 \]
 \end{alist}
-
-\exercisetext{In \zcref[range]{exer:7.2.33,exer:7.2.37}  use the method of
+\end{exerciselist}
+%
+\textsl{In \zcref[range]{exer:7.2.33,exer:7.2.37}  use the method of
 \zcref{exer:7.2.32}  to find the power series in
 $x$ for the general solution.}
 
-\item(1)\label{exer:7.2.33}$y''-xy=0$
-\item(1)\label{exer:7.2.34}$(1-2x^3)y''-10x^2y'-8xy=0$
-\item(1)\label{exer:7.2.35}$(1+x^3)y''+7x^2y'+9xy=0$
-\item(1)\label{exer:7.2.36}$(1-2x^3)y''+6x^2y'+24xy=0$
-
+\begin{exerciselistTwoColumn}
+\item\label{exer:7.2.33}$y''-xy=0$
+\item\label{exer:7.2.34}$(1-2x^3)y''-10x^2y'-8xy=0$
+\item\label{exer:7.2.35}$(1+x^3)y''+7x^2y'+9xy=0$
+\item\label{exer:7.2.36}$(1-2x^3)y''+6x^2y'+24xy=0$
 \item\label{exer:7.2.37}$(1-x^3)y''+15x^2y'-63xy=0$
+\end{exerciselistTwoColumn}
 
+\begin{exerciselist}
 \item\label{exer:7.2.38}Consider the equation
 \[
 \left(1+\alpha x^{k+2}\right)y''+\beta x^{k+1}y'+\gamma x^ky=0,
@@ -1932,19 +1931,20 @@ m!}}\\
 \frac{x^{(k+2)m+1}}{(k+2)^mm!}}.
 \end{align*}
 \end{alist}
-
-\exercisetext{In \zcref[range]{exer:7.2.39,exer:7.2.44}  use the method of
+\end{exerciselist}
+%
+\textsl{In \zcref[range]{exer:7.2.39,exer:7.2.44}  use the method of
 \zcref{exer:7.2.38}  to find the power series in $x$
  for the general solution.}
+\begin{exerciselistTwoColumn}
+\item\label{exer:7.2.39}$(1+2x^5)y''+14x^4y'+10x^3y=0$
+\item\label{exer:7.2.40}$y''+x^2y=0$ %&
+\item\label{exer:7.2.41}$y''+x^6y'+7x^5y=0$
+\item\label{exer:7.2.42}$(1+x^8)y''-16x^7y'+72x^6y=0$
+\item\label{exer:7.2.43}$(1-x^6)y''-12x^5y'-30x^4y=0$
+\item\label{exer:7.2.44}$y''+x^5y'+6x^4y=0$
 
-\item(1)\label{exer:7.2.39}$(1+2x^5)y''+14x^4y'+10x^3y=0$
-\item(1)\label{exer:7.2.40}$y''+x^2y=0$ %&
-\item(1)\label{exer:7.2.41}$y''+x^6y'+7x^5y=0$
-\item(1)\label{exer:7.2.42}$(1+x^8)y''-16x^7y'+72x^6y=0$
-\item(1)\label{exer:7.2.43}$(1-x^6)y''-12x^5y'-30x^4y=0$
-\item(1)\label{exer:7.2.44}$y''+x^5y'+6x^4y=0$
-
-\end{exerciselist}
+\end{exerciselistTwoColumn}
 
 
 \section{Series Solutions Near an Ordinary Point II}
@@ -2383,7 +2383,7 @@ n+\epsilon}{(n+2)(n+1)}\, a_n.
 \]
 
 
-\item\label{exer:7.3.30}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.3.30}\begin{alist}
 \item % (a)
 Let $\alpha$  and $\beta$  be constants, with $\beta\ne0$. Show that
 $y=\sum_{n=0}^\infty a_nx^n$
@@ -2858,28 +2858,30 @@ y=\frac{1}{x}\left[c_1\cos(\ln x)+c_2\sin(\ln x)\right].\qedhere
 In \zcref[range]{exer:7.4.1,exer:7.4.18} find the general solution of
 the given Euler equation on $(0,\infty)$.
 
+\begin{exerciselistTwoColumn}
+
+\item\label{exer:7.4.1}$x^2y''+7xy'+8y=0$
+\item\label{exer:7.4.2}$x^2y''-7xy'+7y=0$
+\item\label{exer:7.4.3}$x^2y''-xy'+y=0$
+\item\label{exer:7.4.4}$x^2y''+5xy'+4y=0$
+\item\label{exer:7.4.5}$x^2y''+xy'+y=0$
+\item\label{exer:7.4.6}$x^2y''-3xy'+13y=0$
+\item\label{exer:7.4.7}$x^2y''+3xy'-3y=0$%&
+\item\label{exer:7.4.8}$12x^2y''-5xy''+6y=0$
+\item\label{exer:7.4.9}$4x^2y''+8xy'+y=0$%&
+\item\label{exer:7.4.10}$3x^2y''-xy'+y=0$
+\item\label{exer:7.4.11}$2x^2y''-3xy'+2y=0$%&
+\item\label{exer:7.4.12}$x^2y''+3xy'+5y=0$
+\item\label{exer:7.4.13}$9x^2y''+15xy'+y=0$%&
+\item\label{exer:7.4.14}$x^2y''-xy'+10y=0$
+\item\label{exer:7.4.15}$x^2y''-6y=0$%&
+\item\label{exer:7.4.16}$2x^2y''+3xy'-y=0$
+\item\label{exer:7.4.17}$x^2y''-3xy'+4y=0$%&
+\item\label{exer:7.4.18}$2x^2y''+10xy'+9y=0$
+\end{exerciselistTwoColumn}
+
 \begin{exerciselist}
-
-\item(1)\label{exer:7.4.1}$x^2y''+7xy'+8y=0$
-\item(1)\label{exer:7.4.2}$x^2y''-7xy'+7y=0$
-\item(1)\label{exer:7.4.3}$x^2y''-xy'+y=0$
-\item(1)\label{exer:7.4.4}$x^2y''+5xy'+4y=0$
-\item(1)\label{exer:7.4.5}$x^2y''+xy'+y=0$
-\item(1)\label{exer:7.4.6}$x^2y''-3xy'+13y=0$
-\item(1)\label{exer:7.4.7}$x^2y''+3xy'-3y=0$%&
-\item(1)\label{exer:7.4.8}$12x^2y''-5xy''+6y=0$
-\item(1)\label{exer:7.4.9}$4x^2y''+8xy'+y=0$%&
-\item(1)\label{exer:7.4.10}$3x^2y''-xy'+y=0$
-\item(1)\label{exer:7.4.11}$2x^2y''-3xy'+2y=0$%&
-\item(1)\label{exer:7.4.12}$x^2y''+3xy'+5y=0$
-\item(1)\label{exer:7.4.13}$9x^2y''+15xy'+y=0$%&
-\item(1)\label{exer:7.4.14}$x^2y''-xy'+10y=0$
-\item(1)\label{exer:7.4.15}$x^2y''-6y=0$%&
-\item(1)\label{exer:7.4.16}$2x^2y''+3xy'-y=0$
-\item(1)\label{exer:7.4.17}$x^2y''-3xy'+4y=0$%&
-\item(1)\label{exer:7.4.18}$2x^2y''+10xy'+9y=0$
-
-\item\label{exer:7.4.19}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.4.19}\begin{alist}
 \item % (a)
 Adapt the proof of \zcref{thmtype:7.4.3} to show that  $y=y(x)$
 satisfies the Euler equation
@@ -3865,7 +3867,7 @@ an integer, find a fundamental set of Frobenius solutions of
 functions.
 \end{alist}
 
-\item\label{exer:7.5.54}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.5.54}\begin{alist}
 \item % (a)
 Verify that
 \[
@@ -3886,7 +3888,7 @@ $(0,\rho)$ then  $|x|^r\sum_{n=0}^\infty a_nx^n$ is a solution on
 $(-\rho,0)$ and $(0,\rho)$.
 \end{alist}
 
-\item\label{exer:7.5.55}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.5.55}\begin{alist}
 \item % (a)
 Deduce from \zcref{eq:7.5.20} that
 \[
@@ -3996,7 +3998,7 @@ where
 b_n=\sum_{j=0}^np_j(n+r-j)a_{n-j}.
 \]
 
-\item\label{exer:7.5.58}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.5.58}\begin{alist}
 \item % (a)
 Let  $L$ be as in \zcref{exer:7.5.57}. Show that if
 \[
@@ -4078,7 +4080,7 @@ form a fundamental set of Frobenius solutions of
 \]
 \end{alist}
 
-\item\label{exer:7.5.60}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.5.60}\begin{alist}
 \item % (a)
 Suppose $\alpha_0,\alpha_1$, and $\alpha_2$ are real numbers with
 $\alpha_0\ne0$, and  $\{a_n\}_{n=0}^\infty$ is
@@ -5776,7 +5778,7 @@ the coefficients.
 
 \item\label{exer:7.7.40}$4x^2(1+x^2)y''+4x(2+x^2)y'-(15+x^2)y=0$
 
-\item\label{exer:7.7.41}\begin{alist}[above=-\baselineskip]
+\item\label{exer:7.7.41}\begin{alist}
 \item % (a)
 Under the assumptions of \zcref{thmtype:7.7.1}, show that
 \[

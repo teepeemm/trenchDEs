@@ -560,17 +560,16 @@ speed of the object. Let $\alpha$ be the constant of proportionality.
 
 
 \item\label{exer:10.1.5}Rewrite the given system as a first order system.
-
-\begin{alist}[columns=2]
-% TODO was horizontal
+%
+\begin{alist*}[columns=2]
 \item $\begin{aligned} x''' &= f(t,x,y,y')\\ y'' &= g(t,y,y') \end{aligned}$
 \item $\begin{aligned}
 u' &=f(t,u,v,v',w')\\ v''&=g(t,u,v,v',w)\\w''&=h(t,u,v,v',w,w')
-\end{aligned}$
+\end{aligned}$\bigskip
 \item $y''' =f(t,y,y',y'')$
-\item $y^{(4)} = f(t,y)$
+\item $y^{(4)} = f(t,y)$\bigskip
 \item $\begin{aligned} x'' &= f(t,x,y)\\ y'' &=g(t,x,y) \end{aligned}$
-\end{alist}
+\end{alist*}
 
 \item\label{exer:10.1.6}Rewrite the system \eqref{eq:10.1.14} of differential equations derived in
 \zcref{example:10.1.3}   as a first order system.
@@ -2449,49 +2448,46 @@ The direction of motion is toward the origin on $L_1$ and away from
 the origin on $L_2$. The direction of motion along any other
 trajectory is away from $L_1$, toward $L_2$.
 
-
-
-
-
 \exercises
  In \zcref[range]{exer:10.4.1,exer:10.4.15} find the general
 solution.
 
-\begin{exerciselist}
-\item(1)\label{exer:10.4.1}$\vect{y}'=
+\begin{exerciselistTwoColumn}
+\item\label{exer:10.4.1}$\vect{y}'=
 \begin{bmatrix} 1&2\\2&1\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.2}$\vect{y}'=
+\item\label{exer:10.4.2}$\vect{y}'=
 \dfrac{1}{4}\begin{bmatrix}-5&3 \\3&-5\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.3}$\vect{y}'=
+\item\label{exer:10.4.3}$\vect{y}'=
 \dfrac{1}{5}\begin{bmatrix}-4&3\\-2&-11\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.4}$\vect{y}'=
+\item\label{exer:10.4.4}$\vect{y}'=
 \begin{bmatrix}-1&-4\\-1&-1\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.5}$\vect{y}'=
+\item\label{exer:10.4.5}$\vect{y}'=
 \begin{bmatrix}2&-4\\-1&-1\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.6}$\vect{y}'=
+\item\label{exer:10.4.6}$\vect{y}'=
 \begin{bmatrix}4&-3\\2&-1\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.7}$\vect{y}'=
+\item\label{exer:10.4.7}$\vect{y}'=
 \begin{bmatrix}-6&-3\\1&-2\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.8}$\vect{y}'=
+\item\label{exer:10.4.8}$\vect{y}'=
 \begin{bmatrix}1&-1&-2\\1&-2&-3\\-4&1&-1\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.9}$\vect{y}'=
+\item\label{exer:10.4.9}$\vect{y}'=
 \begin{bmatrix}-6&-4&-8\\-4&0&-4\\-8&-4&-6\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.10}$\vect{y}'=
+\item\label{exer:10.4.10}$\vect{y}'=
 \begin{bmatrix}3&5&8\\1&-1&-2\\-1&-1&-1\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.11}$\vect{y}'=
+\item\label{exer:10.4.11}$\vect{y}'=
 \begin{bmatrix}1&-1&2\\12&-4& 10\\-6&1&-7\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.12}$\vect{y}'=
+\item\label{exer:10.4.12}$\vect{y}'=
 \begin{bmatrix}4&-1&-4\\4&-3&-2\\1&-1&-1\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.13}$\vect{y}'=
+\item\label{exer:10.4.13}$\vect{y}'=
 \begin{bmatrix}-2&2&-6\\2&6&2\\-2&-2&2\end{bmatrix}\vect{y}$
-\item(1)\label{exer:10.4.14}$\vect{y}'=
+\item\label{exer:10.4.14}$\vect{y}'=
 \begin{bmatrix}3&2&-2\\-2&7&-2\\-10&10&-5\end{bmatrix}\vect{y}$
-
 \item\label{exer:10.4.15}$\vect{y}'=
 \begin{bmatrix}3&1&-1\\3&5&1\\-6&2&4\end{bmatrix}\vect{y}$
-
-\exercisetext{In \zcref[range]{exer:10.4.16,exer:10.4.27}
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:10.4.16,exer:10.4.27}
 solve the initial value problem.}
+\begin{exerciselist}
 
 \item\label{exer:10.4.16}$\vect{y}'=\twobytwo{-7}4{-6}7\vect{y},\quad\vect{y}(0)=\twocol2{-4}$
 
@@ -2547,17 +2543,19 @@ where $\tau=t_2-t_1$. \hint{Show that $\vect{y}_1(t-\tau)$ and $\vect{y}_2(t)$ a
 and apply the uniqueness assertion of
 \zcref{thmtype:10.2.1}.}
 \end{alist}
-
-\exercisetext{In \zcref[range]{exer:10.4.29,exer:10.4.34}
+\end{exerciselist}
+%
+\textsl{In \zcref[range]{exer:10.4.29,exer:10.4.34}
 describe and graph trajectories of the given system.}
-
-\item(1)\label{exer:10.4.29}\CGex $\vect{y}'=\twobytwo111{-1}\vect{y}$
-\item(1)\label{exer:10.4.30}\CGex $\vect{y}'=\twobytwo{-4}3{-2}{-11}\vect{y}$
-\item(1)\label{exer:10.4.31}\CGex $\vect{y}'=\twobytwo9{-3}{-1}{11}\vect{y}$
-\item(1)\label{exer:10.4.32}\CGex $\vect{y}'=\twobytwo{-1}{-10}{-5}4\vect{y}$
-\item(1)\label{exer:10.4.33}\CGex $\vect{y}'=\twobytwo5{-4}1{10}\vect{y}$
-\item(1)\label{exer:10.4.34}\CGex $\vect{y}'=\twobytwo{-7}13{-5}\vect{y}$
-
+\begin{exerciselistTwoColumn}
+\item\label{exer:10.4.29}\CGex $\vect{y}'=\twobytwo111{-1}\vect{y}$
+\item\label{exer:10.4.30}\CGex $\vect{y}'=\twobytwo{-4}3{-2}{-11}\vect{y}$
+\item\label{exer:10.4.31}\CGex $\vect{y}'=\twobytwo9{-3}{-1}{11}\vect{y}$
+\item\label{exer:10.4.32}\CGex $\vect{y}'=\twobytwo{-1}{-10}{-5}4\vect{y}$
+\item\label{exer:10.4.33}\CGex $\vect{y}'=\twobytwo5{-4}1{10}\vect{y}$
+\item\label{exer:10.4.34}\CGex $\vect{y}'=\twobytwo{-7}13{-5}\vect{y}$
+\end{exerciselistTwoColumn}
+\begin{exerciselist}
 \item\label{exer:10.4.35}Suppose the eigenvalues of the $2\times 2$
 matrix $A$ are $\lambda=0$ and $\mu\ne0$, with
 corresponding  eigenvectors $\vect{X}_1$ and $\vect{X}_2$.
@@ -2571,19 +2569,21 @@ Show that the trajectories of nonconstant solutions of $\vect{y}'=A\vect{y}$ are
 $L_1$, and that the direction of motion along these trajectories is
 away from $L_1$ if $\mu>0$, or toward $L_1$ if $\mu<0$.
 \end{alist}
-
-\exercisetext{The matrices of the systems in
+\end{exerciselist}
+%
+\textsl{The matrices of the systems in
 \zcref[range]{exer:10.4.36,exer:10.4.41} are singular. Describe
 and graph the trajectories of nonconstant solutions  of the given
 systems.}
-
-\item(1)\label{exer:10.4.36}\CGex $\vect{y}'=\twobytwo{-1}11{-1}\vect{y}$
-\item(1)\label{exer:10.4.37}\CGex $\vect{y}'=\twobytwo{-1}{-3}26\vect{y}$
-\item(1)\label{exer:10.4.38}\CGex $\vect{y}'=\twobytwo1{-3}{-1}3\vect{y}$
-\item(1)\label{exer:10.4.39}\CGex $\vect{y}'=\twobytwo1{-2}{-1}2\vect{y}$
-\item(1)\label{exer:10.4.40}\CGex $\vect{y}'=\twobytwo{-4}{-4}11\vect{y}$
-\item(1)\label{exer:10.4.41}\CGex $\vect{y}'=\twobytwo3{-1}{-3}1\vect{y}$
-
+\begin{exerciselistTwoColumn}
+\item\label{exer:10.4.36}\CGex $\vect{y}'=\twobytwo{-1}11{-1}\vect{y}$
+\item\label{exer:10.4.37}\CGex $\vect{y}'=\twobytwo{-1}{-3}26\vect{y}$
+\item\label{exer:10.4.38}\CGex $\vect{y}'=\twobytwo1{-3}{-1}3\vect{y}$
+\item\label{exer:10.4.39}\CGex $\vect{y}'=\twobytwo1{-2}{-1}2\vect{y}$
+\item\label{exer:10.4.40}\CGex $\vect{y}'=\twobytwo{-4}{-4}11\vect{y}$
+\item\label{exer:10.4.41}\CGex $\vect{y}'=\twobytwo3{-1}{-3}1\vect{y}$
+\end{exerciselistTwoColumn}
+\begin{exerciselist}
 \item\label{exer:10.4.42}\Lex
 Let $P=P(t)$ and $Q=Q(t)$ be the populations of two species at time
 $t$, and assume that each population would grow exponentially if the
@@ -3313,24 +3313,25 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig100505}
 In \zcref[range]{exer:10.5.1,exer:10.5.12} find the general
 solution.
 
-\begin{exerciselist}
+\begin{exerciselistTwoColumn}
 
-\item(1)\label{exer:10.5.1}$\vect{y}'=\twobytwo34{-1}7\vect{y}$
-\item(1)\label{exer:10.5.2}$\vect{y}'=\twobytwo0{-1}1{-2}\vect{y}$
-\item(1)\label{exer:10.5.3}$\vect{y}'=\twobytwo{-7}4{-1}{-11}\vect{y}$
-\item(1)\label{exer:10.5.4}$\vect{y}'=\twobytwo31{-1}1\vect{y}$
-\item(1)\label{exer:10.5.5}$\vect{y}'=\twobytwo4{12}{-3}{-8}\vect{y}$
-\item(1)\label{exer:10.5.6}$\vect{y}'=\twobytwo{-10}9{-4}2\vect{y}$
-\item(1)\label{exer:10.5.7}$\vect{y}'=\twobytwo{-13}{16}{-9}{11}\vect{y}$
-\item(1)\label{exer:10.5.8}$\vect{y}'=\threebythree021{-4}61042\vect{y}$
-\item(1)\label{exer:10.5.9}$\vect{y}'=\dfrac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10\vect{y}$
-\item(1)\label{exer:10.5.10}$\vect{y}'=\threebythree{-1}1{-1}{-2}02{-1}3{-1}\vect{y}$
-\item(1)\label{exer:10.5.11}$\vect{y}'=\threebythree4{-2}{-2}{-2}3{-1}2{-1}3\vect{y}$
-\item(1)\label{exer:10.5.12}$\vect{y}'=\threebythree6{-5}32{-1}3211\vect{y}$
-
-\exercisetext{In \zcref[range]{exer:10.5.13,exer:10.5.23}
+\item\label{exer:10.5.1}$\vect{y}'=\twobytwo34{-1}7\vect{y}$
+\item\label{exer:10.5.2}$\vect{y}'=\twobytwo0{-1}1{-2}\vect{y}$
+\item\label{exer:10.5.3}$\vect{y}'=\twobytwo{-7}4{-1}{-11}\vect{y}$
+\item\label{exer:10.5.4}$\vect{y}'=\twobytwo31{-1}1\vect{y}$
+\item\label{exer:10.5.5}$\vect{y}'=\twobytwo4{12}{-3}{-8}\vect{y}$
+\item\label{exer:10.5.6}$\vect{y}'=\twobytwo{-10}9{-4}2\vect{y}$
+\item\label{exer:10.5.7}$\vect{y}'=\twobytwo{-13}{16}{-9}{11}\vect{y}$
+\item\label{exer:10.5.8}$\vect{y}'=\threebythree021{-4}61042\vect{y}$
+\item\label{exer:10.5.9}$\vect{y}'=\dfrac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10\vect{y}$
+\item\label{exer:10.5.10}$\vect{y}'=\threebythree{-1}1{-1}{-2}02{-1}3{-1}\vect{y}$
+\item\label{exer:10.5.11}$\vect{y}'=\threebythree4{-2}{-2}{-2}3{-1}2{-1}3\vect{y}$
+\item\label{exer:10.5.12}$\vect{y}'=\threebythree6{-5}32{-1}3211\vect{y}$
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:10.5.13,exer:10.5.23}
 solve the initial value problem.}
-
+\begin{exerciselist}
 \item\label{exer:10.5.13}$\vect{y}'=\twobytwo{-11}8{-2}{-3}\vect{y} ,\quad\vect{y}(0)=\twocol62$
 
 \item\label{exer:10.5.14}$\vect{y}'=\twobytwo{15}{-9}{16}{-9}\vect{y} ,\quad\vect{y}(0)=\twocol58$
@@ -3364,23 +3365,24 @@ y(0)=\threecol{-2}13$
 \item\label{exer:10.5.23}$\vect{y}'=
 \threebythree{-5}{-1}{11}{-7}1{13}{-4}08\vect{y},\quad
 \vect{y}(0)=\threecol022$
-
-\exercisetext{The coefficient matrices in
+\end{exerciselist}
+%
+\textsl{The coefficient matrices in
 \zcref[range]{exer:10.5.24,exer:10.5.32}
 have eigenvalues of multiplicity $3$. Find the
 general solution.}
-
-\item(1)\label{exer:10.5.24}$\vect{y}'=\threebythree5{-1}1{-1}9{-3}{-2}24\vect{y}$
-\item(1)\label{exer:10.5.25}$\vect{y}'=\threebythree1{10}{-12}2232{-1}6\vect{y}$
-\item(1)\label{exer:10.5.26}$\vect{y}'=\threebythree{-6}{-4}{-4}2{-1}1231\vect{y}$
-\item(1)\label{exer:10.5.27}$\vect{y}'=\threebythree02{-2}{-1}5{-3}111\vect{y}$
-\item(1)\label{exer:10.5.28}$\vect{y}'=\threebythree{-2}{-12}{10}2{-24}{11}2{-24}8\vect{y}$
-\item(1)\label{exer:10.5.29}$\vect{y}'=\threebythree{-1}{-12}81{-9}41{-6}1\vect{y}$
-\item(1)\label{exer:10.5.30}$\vect{y}'=\threebythree{-4}0{-1}{-1}{-3}{-1}10{-2}\vect{y}$
-\item(1)\label{exer:10.5.31}$\vect{y}'=\threebythree{-3}{-3}445{-8}23{-5}\vect y$
-
+\begin{exerciselistTwoColumn}
+\item\label{exer:10.5.24}$\vect{y}'=\threebythree5{-1}1{-1}9{-3}{-2}24\vect{y}$
+\item\label{exer:10.5.25}$\vect{y}'=\threebythree1{10}{-12}2232{-1}6\vect{y}$
+\item\label{exer:10.5.26}$\vect{y}'=\threebythree{-6}{-4}{-4}2{-1}1231\vect{y}$
+\item\label{exer:10.5.27}$\vect{y}'=\threebythree02{-2}{-1}5{-3}111\vect{y}$
+\item\label{exer:10.5.28}$\vect{y}'=\threebythree{-2}{-12}{10}2{-24}{11}2{-24}8\vect{y}$
+\item\label{exer:10.5.29}$\vect{y}'=\threebythree{-1}{-12}81{-9}41{-6}1\vect{y}$
+\item\label{exer:10.5.30}$\vect{y}'=\threebythree{-4}0{-1}{-1}{-3}{-1}10{-2}\vect{y}$
+\item\label{exer:10.5.31}$\vect{y}'=\threebythree{-3}{-3}445{-8}23{-5}\vect y$
 \item\label{exer:10.5.32}$\vect{y}'={\threebythree{-3}{-1}01{-1}0{-1}{-1}{-2}}\vect{y}$
-
+\end{exerciselistTwoColumn}
+\begin{exerciselist}
 \item\label{exer:10.5.33}Under the assumptions of \zcref{thmtype:10.5.1}, suppose
 $\vect{u}$ and $\hat\vect{u}$ are vectors such that
 \[
@@ -3421,22 +3423,22 @@ is parallel to $\vect{X}$. Conclude from this that all vectors $\vect{u}$
 such that $(A-\lambda_1I)\vect{u}=\vect{X}$ define the same positive and
 negative half-planes with respect to the line $L$
  through the origin parallel to $\vect{X}$.
-
-\exercisetext{In \zcref[range]{exer:10.5.36,exer:10.5.45}
- plot trajectories of the given system.}
-
-\item(1)\label{exer:10.5.36}\CGex\, $\vect{y}'=\twobytwo{-3}{-1}41\vect{y}$
-\item(1)\label{exer:10.5.37}\CGex\,  $\vect{y}'=\twobytwo2{-1}10\vect{y}$
-\item(1)\label{exer:10.5.38}\CGex\, $\vect{y}'=\twobytwo{-1}{-3}35\vect{y}$
-\item(1)\label{exer:10.5.39}\CGex\,  $\vect{y}'=\twobytwo{-5}3{-3}1\vect{y}$
-\item(1)\label{exer:10.5.40}\CGex\,  $\vect{y}'=\twobytwo{-2}{-3}34\vect{y}$
-\item(1)\label{exer:10.5.41}\CGex\,  $\vect{y}'=\twobytwo{-4}{-3}32\vect{y}$
-\item(1)\label{exer:10.5.42}\CGex\,  $\vect{y}'=\twobytwo0{-1}1{-2}\vect{y}$
-\item(1)\label{exer:10.5.43}\CGex\,  $\vect{y}'=\twobytwo01{-1}2\vect{y}$
-\item(1)\label{exer:10.5.44}\CGex\,  $\vect{y}'=\twobytwo{-2}1{-1}0\vect{y}$
-\item(1)\label{exer:10.5.45}\CGex\, $\vect{y}'=\twobytwo0{-4}1{-4}\vect{y}$
-
 \end{exerciselist}
+%
+\textsl{In \zcref[range]{exer:10.5.36,exer:10.5.45}
+ plot trajectories of the given system.}
+\begin{exerciselistTwoColumn}
+\item\label{exer:10.5.36}\CGex\, $\vect{y}'=\twobytwo{-3}{-1}41\vect{y}$
+\item\label{exer:10.5.37}\CGex\,  $\vect{y}'=\twobytwo2{-1}10\vect{y}$
+\item\label{exer:10.5.38}\CGex\, $\vect{y}'=\twobytwo{-1}{-3}35\vect{y}$
+\item\label{exer:10.5.39}\CGex\,  $\vect{y}'=\twobytwo{-5}3{-3}1\vect{y}$
+\item\label{exer:10.5.40}\CGex\,  $\vect{y}'=\twobytwo{-2}{-3}34\vect{y}$
+\item\label{exer:10.5.41}\CGex\,  $\vect{y}'=\twobytwo{-4}{-3}32\vect{y}$
+\item\label{exer:10.5.42}\CGex\,  $\vect{y}'=\twobytwo0{-1}1{-2}\vect{y}$
+\item\label{exer:10.5.43}\CGex\,  $\vect{y}'=\twobytwo01{-1}2\vect{y}$
+\item\label{exer:10.5.44}\CGex\,  $\vect{y}'=\twobytwo{-2}1{-1}0\vect{y}$
+\item\label{exer:10.5.45}\CGex\, $\vect{y}'=\twobytwo0{-4}1{-4}\vect{y}$
+\end{exerciselistTwoColumn}
 
 
 \section{Constant Coefficient Homogeneous Systems III}
@@ -4024,28 +4026,29 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig100606}
 In \zcref[range]{exer:10.6.1,exer:10.6.16}  find the general
 solution.
 
-\begin{exerciselist}
+\begin{exerciselistTwoColumn}
 
-\item(1)\label{exer:10.6.1}$\vect{y}'=\twobytwo{-1}2{-5}5\vect{y}$
-\item(1)\label{exer:10.6.2}$\vect{y}'=\twobytwo{-11}4{-26}9\vect{y}$
-\item(1)\label{exer:10.6.3}$\vect{y}'=\twobytwo12{-4}5\vect{y}$
-\item(1)\label{exer:10.6.4}$\vect{y}'=\twobytwo5{-6}3{-1}\vect{y}$
-\item(1)\label{exer:10.6.5}$\vect{y}'=\threebythree3{-3}1022511\vect{y}$
-\item(1)\label{exer:10.6.6}$\vect{y}'=\threebythree{-3}311{-5}{-3}{-3}73\vect{y}$
-\item(1)\label{exer:10.6.7}$\vect{y}'=\threebythree21{-1}011101\vect{y}$
-\item(1)\label{exer:10.6.8}$\vect{y}'=\threebythree{-3}1{-3}4{-1}24{-2}3\vect{y}$
-\item(1)\label{exer:10.6.9}$\vect{y}'=\twobytwo5{-4}{10}1\vect{y}$
-\item(1)\label{exer:10.6.10}$\vect{y}'=\dfrac{1}{3}\twobytwo7{-5}25\vect{y}$
-\item(1)\label{exer:10.6.11}$\vect{y}'=\twobytwo32{-5}1\vect{y}$
-\item(1)\label{exer:10.6.12}$\vect{y}'=\twobytwo{34}{52}{-20}{-30}\vect{y}$
-\item(1)\label{exer:10.6.13}$\vect{y}'=\threebythree11210{-1}{-1}{-2}{-1}\vect{y}$
-\item(1)\label{exer:10.6.14}$\vect{y}'=\threebythree3{-4}{-2}{-5}7{-8}{-10}{13}{-8}\vect{y}$
-\item(1)\label{exer:10.6.15}$\vect{y}'=\threebythree60{-3}{-3}331{-2}6\vect{y}$
-\item(1)\label{exer:10.6.16}$\vect{y}'=\threebythree12{-2}02{-1}100\vect{y}$
-
-\exercisetext{In \zcref[range]{exer:10.6.17,exer:10.6.24}
+\item\label{exer:10.6.1}$\vect{y}'=\twobytwo{-1}2{-5}5\vect{y}$
+\item\label{exer:10.6.2}$\vect{y}'=\twobytwo{-11}4{-26}9\vect{y}$
+\item\label{exer:10.6.3}$\vect{y}'=\twobytwo12{-4}5\vect{y}$
+\item\label{exer:10.6.4}$\vect{y}'=\twobytwo5{-6}3{-1}\vect{y}$
+\item\label{exer:10.6.5}$\vect{y}'=\threebythree3{-3}1022511\vect{y}$
+\item\label{exer:10.6.6}$\vect{y}'=\threebythree{-3}311{-5}{-3}{-3}73\vect{y}$
+\item\label{exer:10.6.7}$\vect{y}'=\threebythree21{-1}011101\vect{y}$
+\item\label{exer:10.6.8}$\vect{y}'=\threebythree{-3}1{-3}4{-1}24{-2}3\vect{y}$
+\item\label{exer:10.6.9}$\vect{y}'=\twobytwo5{-4}{10}1\vect{y}$
+\item\label{exer:10.6.10}$\vect{y}'=\dfrac{1}{3}\twobytwo7{-5}25\vect{y}$
+\item\label{exer:10.6.11}$\vect{y}'=\twobytwo32{-5}1\vect{y}$
+\item\label{exer:10.6.12}$\vect{y}'=\twobytwo{34}{52}{-20}{-30}\vect{y}$
+\item\label{exer:10.6.13}$\vect{y}'=\threebythree11210{-1}{-1}{-2}{-1}\vect{y}$
+\item\label{exer:10.6.14}$\vect{y}'=\threebythree3{-4}{-2}{-5}7{-8}{-10}{13}{-8}\vect{y}$
+\item\label{exer:10.6.15}$\vect{y}'=\threebythree60{-3}{-3}331{-2}6\vect{y}$
+\item\label{exer:10.6.16}$\vect{y}'=\threebythree12{-2}02{-1}100\vect{y}$
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:10.6.17,exer:10.6.24}
 solve the initial value problem.}
-
+\begin{exerciselist}
 \item\label{exer:10.6.17}$\vect{y}'=\twobytwo4{-6}3{-2}\vect{y},\quad \vect{y}(0)=\twocol52$
 
 \item\label{exer:10.6.18}$\vect{y}'=\twobytwo7{15}{-3}1\vect{y},\quad \vect{y}(0)=\twocol51$
@@ -4117,30 +4120,33 @@ $\vect{u}_1^{(2)}$, and $\vect{v}_1^{(2)}$, respectively. Conclude from
 that therefore the counterclockwise angles from $\vect{u}_1$ to $\vect{V}_1$ and from $\vect{u}_2$ to $\vect{v}_2$ are both $\pi/2$ or both
 $-\pi/2$.
 \end{alist}
-
-\exercisetext{In \zcref[range]{exer:10.6.29,exer:10.6.32} find vectors
+\end{exerciselist}
+%
+\textsl{In \zcref[range]{exer:10.6.29,exer:10.6.32} find vectors
 $\vect{u}$ and $\vect{v}$ parallel to the axes of symmetry of the
 trajectories, and plot some typical trajectories.}
-
-\item(1)\label{exer:10.6.29}\CGex\, $\vect{y}'=\twobytwo3{-5}5{-3}\vect{y}$
-\item(1)\label{exer:10.6.30}\CGex\,  $\vect{y}'=\twobytwo{-15}{10}{-25}{15}\vect{y}$
-\item(1)\label{exer:10.6.31}\CGex\,  $\vect{y}'=\twobytwo{-4}8{-4}4\vect{y}$
-\item(1)\label{exer:10.6.32}\CGex\,  $\vect{y}'=\twobytwo{-3}{-15}33\vect{y}$
-
-\exercisetext{In \zcref[range]{exer:10.6.33,exer:10.6.40} find vectors
+\begin{exerciselistTwoColumn}
+\item\label{exer:10.6.29}\CGex\, $\vect{y}'=\twobytwo3{-5}5{-3}\vect{y}$
+\item\label{exer:10.6.30}\CGex\,  $\vect{y}'=\twobytwo{-15}{10}{-25}{15}\vect{y}$
+\item\label{exer:10.6.31}\CGex\,  $\vect{y}'=\twobytwo{-4}8{-4}4\vect{y}$
+\item\label{exer:10.6.32}\CGex\,  $\vect{y}'=\twobytwo{-3}{-15}33\vect{y}$
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:10.6.33,exer:10.6.40} find vectors
 $\vect{u}$ and $\vect{v}$ parallel to the axes of symmetry of the shadow
 trajectories, and plot a typical trajectory.}
+\begin{exerciselistTwoColumn}
+\item\label{exer:10.6.33}\CGex\,  $\vect{y}'=\twobytwo{-5}6{-12}7\vect{y}$
+\item\label{exer:10.6.34}\CGex\,  $\vect{y}'=\twobytwo5{-12}6{-7}\vect{y}$
+\item\label{exer:10.6.35}\CGex\,  $\vect{y}'=\twobytwo4{-5}9{-2}\vect{y}$
+\item\label{exer:10.6.36}\CGex\,  $\vect{y}'=\twobytwo{-4}9{-5}2\vect{y}$
+\item\label{exer:10.6.37}\CGex\,  $\vect{y}'=\twobytwo{-1}{10}{-10}{-1}\vect{y}$
+\item\label{exer:10.6.38}\CGex\,  $\vect{y}'=\twobytwo{-1}{-5}{20}{-1}\vect{y}$
+\item\label{exer:10.6.39}\CGex\,  $\vect{y}'=\twobytwo{-7}{10}{-10}9\vect{y}$
+\item\label{exer:10.6.40}\CGex\,  $\vect{y}'=\twobytwo{-7}6{-12}5\vect{y}$
 
-\item(1)\label{exer:10.6.33}\CGex\,  $\vect{y}'=\twobytwo{-5}6{-12}7\vect{y}$
-\item(1)\label{exer:10.6.34}\CGex\,  $\vect{y}'=\twobytwo5{-12}6{-7}\vect{y}$
-\item(1)\label{exer:10.6.35}\CGex\,  $\vect{y}'=\twobytwo4{-5}9{-2}\vect{y}$
-\item(1)\label{exer:10.6.36}\CGex\,  $\vect{y}'=\twobytwo{-4}9{-5}2\vect{y}$
-\item(1)\label{exer:10.6.37}\CGex\,  $\vect{y}'=\twobytwo{-1}{10}{-10}{-1}\vect{y}$
-\item(1)\label{exer:10.6.38}\CGex\,  $\vect{y}'=\twobytwo{-1}{-5}{20}{-1}\vect{y}$
-\item(1)\label{exer:10.6.39}\CGex\,  $\vect{y}'=\twobytwo{-7}{10}{-10}9\vect{y}$
-\item(1)\label{exer:10.6.40}\CGex\,  $\vect{y}'=\twobytwo{-7}6{-12}5\vect{y}$
+\end{exerciselistTwoColumn}
 
-\end{exerciselist}
 
 \section{Variation of Parameters for Nonhomogeneous Linear Systems}
 \label{sec:systems_variation_param}
@@ -4623,35 +4629,37 @@ is a particular solution of  \eqref{eq:10.7.10}.
  In \zcref[range]{exer:10.7.1,exer:10.7.10} find a particular
 solution.
 
-\begin{exerciselist}
+\begin{exerciselistTwoColumn}
 
-\item(1)\label{exer:10.7.1}$\vect{y}'=\twobytwo{-1}{-4}{-1}{-1}\vect{y}+\begin{bmatrix}21e^{4t}\\8e^{-3t}\end{bmatrix}$
+\item\label{exer:10.7.1}$\vect{y}'=\twobytwo{-1}{-4}{-1}{-1}\vect{y}+\begin{bmatrix}21e^{4t}\\8e^{-3t}\end{bmatrix}$
 
-\item(1)\label{exer:10.7.2}$\vect{y}'
+\item\label{exer:10.7.2}$\vect{y}'
 =\dfrac{1}{5}\twobytwo{-4}3{-2}{-11}\vect{y}
 +\begin{bmatrix}50e^{3t}\\10e^{-3t}\end{bmatrix}$
 
-\item(1)\label{exer:10.7.3}$\vect{y}'=\twobytwo1221\vect{y}+\begin{bmatrix}1\\t\end{bmatrix}$
+\item\label{exer:10.7.3}$\vect{y}'=\twobytwo1221\vect{y}+\begin{bmatrix}1\\t\end{bmatrix}$
 
-\item(1)\label{exer:10.7.4}$\vect{y}'=\twobytwo{-4}{-3}65\vect{y}+\begin{bmatrix}2\\-2e^t\end{bmatrix}$
+\item\label{exer:10.7.4}$\vect{y}'=\twobytwo{-4}{-3}65\vect{y}+\begin{bmatrix}2\\-2e^t\end{bmatrix}$
 
-\item(1)\label{exer:10.7.5}$\vect{y}'=\twobytwo{-6}{-3}1{-2}\vect{y}+\begin{bmatrix}4e^{-3t}\\4e^{-5t}\end{bmatrix}$
+\item\label{exer:10.7.5}$\vect{y}'=\twobytwo{-6}{-3}1{-2}\vect{y}+\begin{bmatrix}4e^{-3t}\\4e^{-5t}\end{bmatrix}$
 
-\item(1)\label{exer:10.7.6}$\vect{y}'=\twobytwo01{-1}0\vect{y}+\begin{bmatrix}1\\t\end{bmatrix}$
+\item\label{exer:10.7.6}$\vect{y}'=\twobytwo01{-1}0\vect{y}+\begin{bmatrix}1\\t\end{bmatrix}$
 
-\item(1)\label{exer:10.7.7}$\vect{y}'=\threebythree31{-1}351{-6}24\vect{y}+\begin{bmatrix}3\\6\\3\end{bmatrix}$
+\item\label{exer:10.7.7}$\vect{y}'=\threebythree31{-1}351{-6}24\vect{y}+\begin{bmatrix}3\\6\\3\end{bmatrix}$
 
-\item(1)\label{exer:10.7.8}$\vect{y}'
+\item\label{exer:10.7.8}$\vect{y}'
 =\threebythree3{-1}{-1}{-2}324{-1}{-2}\vect{y}
 +\begin{bmatrix}1\\e^t\\e^t\end{bmatrix}$
 
-\item\label{exer:10.7.9}$\vect{y}'=\threebythree{-3}222{-3}222{-3}\vect{y}+\begin{bmatrix}e^t\\e^{-5t}\\e^t\end{bmatrix}$
+\item(2)\label{exer:10.7.9}$\vect{y}'=\threebythree{-3}222{-3}222{-3}\vect{y}+\begin{bmatrix}e^t\\e^{-5t}\\e^t\end{bmatrix}$
 
-\item\label{exer:10.7.10}$\vect{y}'=\dfrac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10\vect{y}+\begin{bmatrix}e^t\\e^t\\e^t\end{bmatrix}$
-
-\exercisetext{In \zcref[range]{exer:10.7.11,exer:10.7.20} find a
+\item(2)\label{exer:10.7.10}$\vect{y}'=\dfrac{1}{3}\threebythree11{-3}{-4}{-4}3{-2}10\vect{y}+\begin{bmatrix}e^t\\e^t\\e^t\end{bmatrix}$
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:10.7.11,exer:10.7.20} find a
 particular solution, given that $Y$ is a fundamental matrix for the
 complementary system.}
+\begin{exerciselist}
 
 \item\label{exer:10.7.11}$\vect{y}'
 =\dfrac{1}{t}\begin{bmatrix}1&t\\-t&1\end{bmatrix}\vect{y}
@@ -4713,7 +4721,7 @@ e^t&e^{-t}&t\\e^t&-e^{-t}&e^{-t}\\e^t&e^{-t}&0
 
 \item\label{exer:10.7.21}Prove \zcref{thmtype:10.7.1}.
 
-\item\label{exer:10.7.22}\begin{alist}[above=-\baselineskip]
+\item\label{exer:10.7.22}\begin{alist}
 \item % (a)
 Convert the scalar equation
 \[

@@ -721,7 +721,7 @@ and it's consumed continuously at a rate proportional to
 $p^2$, with proportionality constant 1/8.  Find $p(t)$ if
 $p(0)=100$.
 
-\item\label{exer:4.1.21}\begin{alist}[above=-\baselineskip]
+\item\label{exer:4.1.21}\begin{alist}
 \item % (a)
  In the situation of \zcref{example:4.1.6}
 find the exact value $P(t)$ of the person's account after $t$
@@ -2270,7 +2270,7 @@ radius of about 1080 miles.  The acceleration due to
 gravity at the surface of the moon is about $5.31$
 ft/s$^2$.  Find the escape velocity in miles/s.
 
-\item\label{exer:4.3.19}\begin{alist}[above=-\baselineskip]
+\item\label{exer:4.3.19}\begin{alist}
 \item %(a)
 Show that \zcref{eq:4.3.23}  can be rewritten as
 \[
@@ -3019,7 +3019,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig040412}
 \captionof{figure}{\zcref[S]{figure:4.4.11} with some trajectories added}
 \label{figure:4.4.12}
 \tagstructend
-\end{minipage}\smallskip
+\end{minipage}\bigskip
 
 
 
@@ -3100,14 +3100,14 @@ solutions, determine whether they are stable or unstable, and
 plot some trajectories. \hint{Use \zcref{eq:4.4.8} to
 obtain the equations of the trajectories.}
 
-\begin{exerciselist}
-\item(1)\label{exer:4.4.1}\CGex $y''+y^3=0$
-\item(1)\label{exer:4.4.2}\CGex $y''+y^2=0$
-\item(1)\label{exer:4.4.3}\CGex$ y''+y|y|=0$ 
-\item(1)\label{exer:4.4.4}\CGex $y''+ye^{-y}=0$
-
-\exercisetext{
-In \zcref[range]{exer:4.4.5,exer:4.4.8} find the equations of the
+\begin{exerciselistTwoColumn}
+\item\label{exer:4.4.1}\CGex $y''+y^3=0$
+\item\label{exer:4.4.2}\CGex $y''+y^2=0$
+\item\label{exer:4.4.3}\CGex$ y''+y|y|=0$ 
+\item\label{exer:4.4.4}\CGex $y''+ye^{-y}=0$
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:4.4.5,exer:4.4.8} find the equations of the
 trajectories of the given undamped equation. Identify the equilibrium
 solutions,
 determine whether they are stable or unstable, and find the equations
@@ -3116,12 +3116,14 @@ equilibria). Plot the separatrices and some
 trajectories in each of the regions of Poincaré plane determined by
 them. \hint{Use \zcref{eq:4.4.17} to determine the separatrices.}}
 
-\item(1)\label{exer:4.4.5}\CGex $y''-y^3+4y=0$ 
-\item(1)\label{exer:4.4.6}\CGex $y''+y^3-4y=0$
-\item(1)\label{exer:4.4.7}\CGex $y''+y(y^2-1)(y^2-4)=0$
-\item(1)\label{exer:4.4.8}\CGex $y''+y(y-2)(y-1)(y+2)=0$
-
-\exercisetext{In \zcref[range]{exer:4.4.9,exer:4.4.12}
+\begin{exerciselistTwoColumn}
+\item\label{exer:4.4.5}\CGex $y''-y^3+4y=0$ 
+\item\label{exer:4.4.6}\CGex $y''+y^3-4y=0$
+\item\label{exer:4.4.7}\CGex $y''+y(y^2-1)(y^2-4)=0$
+\item\label{exer:4.4.8}\CGex $y''+y(y-2)(y-1)(y+2)=0$
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:4.4.9,exer:4.4.12}
 plot some trajectories of the given equation for various values
 (positive, negative, zero) of the parameter $a$. Find the equilibria
 of the equation and classify them as stable or unstable. Explain why
@@ -3129,23 +3131,28 @@ the phase plane plots corresponding to positive and negative values of
 $a$ differ so markedly. Can you think of a reason why zero deserves to
 be called the \emph{\color{blue}critical value} of $a$?}
 
-\item(1)\label{exer:4.4.9}\Lex $y''+y^2-a=0$
-\item(1)\label{exer:4.4.10}\Lex $y''+y^3-ay=0$
-\item(1)\label{exer:4.4.11}\Lex $y''-y^3+ay=0$
-\item(1)\label{exer:4.4.12}\Lex $y''+y-ay^3=0$
-
-\exercisetext{In \zcref[range]{exer:4.4.13,exer:4.4.18}
+\begin{exerciselistTwoColumn}
+\item\label{exer:4.4.9}\Lex $y''+y^2-a=0$
+\item\label{exer:4.4.10}\Lex $y''+y^3-ay=0$
+\item\label{exer:4.4.11}\Lex $y''-y^3+ay=0$
+\item\label{exer:4.4.12}\Lex $y''+y-ay^3=0$
+\end{exerciselistTwoColumn}
+%
+\textsl{In \zcref[range]{exer:4.4.13,exer:4.4.18}
 plot trajectories of the given equation for $c=0$ and small nonzero
 (positive and negative) values of $c$ to observe the effects of
 damping.}
 
-\item(1)\label{exer:4.4.13}\Lex $y''+cy'+y^3=0$
-\item(1)\label{exer:4.4.14}\Lex $y''+cy'-y=0$
-\item(1)\label{exer:4.4.15}\Lex $y''+cy'+y^3=0$
-\item(1)\label{exer:4.4.16}\Lex $y''+cy'+y^2=0$
-\item(1)\label{exer:4.4.17}\Lex $y''+cy'+y|y|=0$
-\item(1)\label{exer:4.4.18}\Lex $y''+y(y-1)+cy=0$
+\begin{exerciselistTwoColumn}
+\item\label{exer:4.4.13}\Lex $y''+cy'+y^3=0$
+\item\label{exer:4.4.14}\Lex $y''+cy'-y=0$
+\item\label{exer:4.4.15}\Lex $y''+cy'+y^3=0$
+\item\label{exer:4.4.16}\Lex $y''+cy'+y^2=0$
+\item\label{exer:4.4.17}\Lex $y''+cy'+y|y|=0$
+\item\label{exer:4.4.18}\Lex $y''+y(y-1)+cy=0$
+\end{exerciselistTwoColumn}
 
+\begin{exerciselist}
 \item\label{exer:4.4.19}\Lex
 The \personHref{Van_der_Pol}{van der Pol equation}
 \[
@@ -3163,17 +3170,14 @@ outward to it, while trajectories outside the limit cycle spiral
 inward to it (\zcref{figure:4.4.16}). Use your favorite
 differential equations software  to verify this for
 $\mu=.5,1.1.5,2$. Use a grid with $-4<y<4$ and $-4<v<4$.
-
-% TODO escape enumext's minipage
-\exercisetext{%
+%
 \begin{figure}
   \centering
   \includegraphics[alt={Solution curves in the y v plane exhibiting the phenomena described in \zcref{exer:4.4.19}.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040416}
   \caption{Trajectories of van der Pol's equation}
   \label{figure:4.4.16}
-\end{figure}}
-
+\end{figure}
 
 \item\label{exer:4.4.20}\Lex
 \personHref{Rayleigh}{Rayleigh's equation},
@@ -3985,17 +3989,19 @@ are below.
 In  \zcref[range]{exer:4.5.1,exer:4.5.8} find a first order
 differential equation for the given family of curves.
 
+\begin{exerciselistTwoColumn}
+
+\item\label{exer:4.5.1}$y(x^2+y^2)=c$
+\item\label{exer:4.5.2}$e^{xy}=cy$
+\item\label{exer:4.5.3}$\ln |xy|=c(x^2+y^2)$
+\item\label{exer:4.5.4}$y=x^{1/2}+cx$
+\item\label{exer:4.5.5}$y=e^{x^2}+ce^{-x^2}$
+\item\label{exer:4.5.6}$y=x^3+\dfrac{c}{x}$
+\item\label{exer:4.5.7}$y=\sin x+ce^x$
+\item\label{exer:4.5.8}$y=e^x+c(1+x^2)$
+\end{exerciselistTwoColumn}
+
 \begin{exerciselist}
-
-\item(1)\label{exer:4.5.1}$y(x^2+y^2)=c$
-\item(1)\label{exer:4.5.2}$e^{xy}=cy$
-\item(1)\label{exer:4.5.3}$\ln |xy|=c(x^2+y^2)$
-\item(1)\label{exer:4.5.4}$y=x^{1/2}+cx$
-\item(1)\label{exer:4.5.5}$y=e^{x^2}+ce^{-x^2}$
-\item(1)\label{exer:4.5.6}$y=x^3+\dfrac{c}{x}$
-\item(1)\label{exer:4.5.7}$y=\sin x+ce^x$
-\item(1)\label{exer:4.5.8}$y=e^x+c(1+x^2)$
-
 \item\label{exer:4.5.9}Show that the family of circles
 \[
 (x-x_0)^2+y^2=1,\;-\infty<x_0<\infty,
@@ -4028,14 +4034,13 @@ of lines through the given points tangent to the parabola $y=x^2$.
 Also, find the points of tangency.
 
 \begin{alist}[columns=4]
-% TODO horizontal
 \item $(5,9)$
 \item $(6,11)$
 \item $(-6,20)$
 \item $(-3,5)$
 \end{alist}
 
-\item\label{exer:4.5.15}\begin{alist}[above=-\baselineskip]
+\item\label{exer:4.5.15}\begin{alist}
 \item % (a)
 Show that the equation of the line tangent to the circle
 \[
@@ -4078,7 +4083,7 @@ Find the equations of two lines through (5,5) tangent to the circle
 (A), and find the points of tangency.
 \end{alist}
 
-\item\label{exer:4.5.16}\begin{alist}[above=-\baselineskip]
+\item\label{exer:4.5.16}\begin{alist}
 \item % (a)
 Show that the equation of the line tangent to the  parabola
 \[
@@ -4153,17 +4158,20 @@ $x_I=x_0+1$.
 \item\label{exer:4.5.24}Find a curve $y=y(x)$ through $(2,1)$ such that the normal to the
 curve at any point $(x_0,y(x_0))$ intersects the $y$ axis at
 $y_I=2y(x_0)$.
-
-\exercisetext{In \zcref[range]{exer:4.5.25,exer:4.5.29} find the
+\end{exerciselist}
+%
+\textsl{In \zcref[range]{exer:4.5.25,exer:4.5.29} find the
 orthogonal trajectories of the given family of curves.}
 
-\item(1)\label{exer:4.5.25}$x^2+2y^2=c^2$
-\item(1)\label{exer:4.5.26}$x^2+4xy+y^2=c$
-\item(1)\label{exer:4.5.27}$y=ce^{2x}$
-\item(1)\label{exer:4.5.28}$xye^{x^2}=c$
-
+\begin{exerciselistTwoColumn}
+\item\label{exer:4.5.25}$x^2+2y^2=c^2$
+\item\label{exer:4.5.26}$x^2+4xy+y^2=c$
+\item\label{exer:4.5.27}$y=ce^{2x}$
+\item\label{exer:4.5.28}$xye^{x^2}=c$
 \item\label{exer:4.5.29}$y=\dfrac{ce^x}{x}$
+\end{exerciselistTwoColumn}
 
+\begin{exerciselist}
 \item\label{exer:4.5.30}Find a curve through $(-1,3)$ orthogonal to every parabola of the form
 \[
 y=1+cx^2
