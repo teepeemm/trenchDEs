@@ -3,7 +3,10 @@
 \begin{center}
 
 \thispagestyle{empty}
-{\sloppy\bfseries\huge ELEMENTARY \medskip DIFFERENTIAL EQUATIONS}
+{\sloppy\bfseries\huge
+ELEMENTARY \medskip DIFFERENTIAL EQUATIONS%
+\iftoggle{boundaryvalues}{ WITH \medskip BOUNDARY VALUE PROBLEMS}{}%
+}
 
 
  \vspace*{.15in}
@@ -95,13 +98,13 @@ are  prohibited.
 
 \setlength{\parindent}{10pt}
 
-\chapter*{Preface}
+\chapter*[Preface]{Preface}
 
 \emph{\color{blue}Elementary Differential Equations with Boundary Value Problems}
  is
 written for students in science, engineering, and mathematics who have
 completed calculus  through partial  differentiation. If  your syllabus
-includes \zcref{ch:systems} (Linear Systems of Differential Equations),
+includes \zcref{ch:systems} (\nameref*{ch:systems}),
 your students should have some preparation in linear algebra.
 
 In writing this book I have been guided by the these principles:
@@ -134,9 +137,9 @@ of topics in this text reflects my pedagogical orientation along
 traditional lines. However, I have incorporated what I believe to be
 the best use of modern technology, so you can select the level of
 technology that you want to include in your course. The text includes
-336 exercises -- identified by the symbols \Cex  and \CGex -- that call
+336 exercises --- identified by the symbols \Cex  and \CGex --- that call
 for graphics or computation and graphics. There are also
-73 laboratory exercises -- identified by \Lex -- that require extensive
+73 laboratory exercises --- identified by \Lex --- that require extensive
 use of technology. In addition, several sections include informal advice on
 the use of technology. If you prefer not to emphasize technology,
 simply ignore these exercises and the  advice.
@@ -206,6 +209,79 @@ also to find the general solution of the nonhomogeneous equation, and in
 that treat the usual variation of parameters problem for second and higher
 order linear equations and for linear systems.
 
+\iftoggle{boundaryvalues}{%
+\zcref[S]{ch:bvp_fourier} develops the theory of Fourier series.
+\zcref[S]{sec:eig_probs} discusses the five main eigenvalue problems
+that arise in connection with the method of separation of
+variables for the heat and wave equations and for Laplace's
+equation over a rectangular domain:
+\begin{enumext}[label=\arabic*,wrap-label={Problem #1:},labelwidth=5em]
+\item $y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0$
+\item $y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0$
+\item $y''+\lambda y=0,\quad y(0)=0,\quad y'(L)=0$
+\item $y''+\lambda y=0,\quad y'(0)=0,\quad y(L)=0$
+\item $y''+\lambda y=0,\quad y(-L)=y(L),\quad y'(-L)=y'(L)$
+\end{enumext}
+
+These problems are handled in a
+unified way     for example, a single theorem shows that the
+eigenvalues of all five problems are nonnegative.
+
+\zcref[S]{sec:fourier_i} presents the  Fourier series expansion
+of functions defined on
+on $[-L,L]$,   interpreting it as an expansion in terms of the
+eigenfunctions of Problem~5.
+
+\zcref[S]{sec:fourier_ii}  presents the
+ Fourier sine and cosine expansions of functions defined on
+$[0,L]$, interpreting them as expansions in terms of the
+eigenfunctions of Problems~1 and 2, respectively. In addition,
+\zcref{sec:fourier_i} includes what I call the mixed Fourier sine and
+cosine expansions, in terms of the eigenfunctions of Problems~4
+and 5, respectively. In all cases, the convergence properties of
+these series are deduced from the convergence properties of
+the Fourier series discussed in \zcref[S]{sec:eig_probs}.
+
+\zcref[S]{ch:fourier_pde} consists of four sections devoted to the
+heat equation, the wave equation, and Laplace's equation
+in rectangular and polar coordinates.
+For all three, I consider homogeneous boundary conditions
+of the four types occurring in Problems~1--4. I present
+the method of separation of variables as a way of
+choosing the appropriate form for the series expansion
+of the solution of the given problem, stating---without
+belaboring the point---that the expansion may fall short of being
+an actual solution, and giving an indication of conditions under
+which the formal solution is an actual solution. In particular, I
+found it necessary
+to devote some detail to this question  in connection with the wave
+equation in \zcref{sec:wave_eq}.
+
+In Sections \zcref[noname]{sec:heat_eq} (\nameref*{sec:heat_eq}) and
+\zcref[noname]{sec:wave_eq} (\nameref*{sec:wave_eq}) I
+%In \zcref{sec:heat_eq,sec:wave_eq} (\nameref*{sec:heat_eq} and \nameref*{sec:wave_eq}, respectively) I
+devote considerable effort to devising examples and numerous
+exercises where the functions defining the initial conditions
+satisfy
+the homogeneous boundary conditions. Similarly, in most of the
+examples and exercises \zcref{sec:laplace_rect}
+(\nameref*{sec:laplace_rect}), the functions defining the boundary conditions
+on a given side of the rectangular domain satisfy homogeneous
+boundary conditions at the endpoints of the same type (Dirichlet or
+Neumann) as the boundary conditions imposed on adjacent sides of
+the region. Therefore  the formal solutions obtained in many of the
+examples and exercises are  actual solutions.
+
+\zcref[S]{sec:twopoint_bvp} deals with two-point value problems for
+a second order ordinary differential equation. Conditions for
+existence
+and uniqueness of solutions are given, and the construction
+of Green's functions is included.
+
+\zcref[S]{sec:sturm_liouville} presents the elementary aspects of Sturm-Liouville
+theory.
+}{}% end toggle{boundaryvalues}
+
 You may also find the following to be of interest:
 
 \begin{itemize}
@@ -272,6 +348,11 @@ your syllabus while omitting the method of Frobenius, you can skip the
 introductory paragraphs in \zcref*{sec:regular_singular} and begin with
 \zcref{thmtype:7.4.2}. You can then cover
 \zcref*{sec:regular_singular} immediately after \zcref{sec:const_coeff_homog}.
+
+\iftoggle{boundaryvalues}{%
+\item \zcref[S,nocomp]{ch:bvp_fourier,ch:fourier_pde,ch:bvp_second_order} can be covered at any time
+after the completion of \zcref{ch:second_order}.%
+}{}% end toggle{boundaryvalues}
 
 \end{itemize}
 \medskip

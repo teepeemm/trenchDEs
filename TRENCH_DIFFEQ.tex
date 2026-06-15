@@ -1,15 +1,15 @@
 \DocumentMetadata{
-  tagging=on,
+  tagging=off,
   lang=en-US,
-  pdfstandard=UA-2,
-  tagging-setup={
-%    math/alt/use,
-    math/setup=mathml-SE
-  }
+%  pdfstandard=UA-2,
+%  tagging-setup={
+%%    math/alt/use,
+%    math/setup=mathml-SE
+%  }
 }
 \documentclass{book}
 
-%\includeonly{
+\includeonly{
 %text/preface,
 %text/intro,
 %text/first_order,
@@ -20,17 +20,19 @@
 %text/series,
 %text/laplace,
 %text/higher_order,
-%text/systems,
+text/systems,
 %text/bvp_fourier,
 %text/fourier_pde,
 %text/bvp_second_order,
 %text/answers,
 %text/bv_answers,
 %text/index
-%}
+}
 
 \usepackage{wtrench}
 \input{header}
+
+\toggletrue{boundaryvalues}
 
 \begin{document}
 %\setkeys{Gin}{alt={FAKE ALT TEXT}}
@@ -61,11 +63,15 @@
 
 \include{text/systems}
 
+\iftoggle{boundaryvalues}{
+
 \include{text/bvp_fourier}
 
 \include{text/fourier_pde}
 
 \include{text/bvp_second_order}
+
+}{}
 
 \backmatter
 
@@ -75,7 +81,11 @@
 
 \include{text/answers}
 
+\iftoggle{boundaryvalues}{
+
 \include{text/bv_answers}
+
+}
 
 \endgroup
 
