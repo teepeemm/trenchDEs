@@ -14,6 +14,7 @@
 \usepackage[per-mode = symbol]{siunitx}
 \usepackage{capt-of}
 \usepackage{zref-clever}
+\usepackage{etoolbox}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
@@ -35,6 +36,14 @@ filecolor = blue,
 \zcRefTypeSetup{section}{cap}
 \zcRefTypeSetup{table}{cap}
 \zcRefTypeSetup{theorem}{cap}
+\zcRefTypeSetup{enumXi}{
+  Name-sg=Exercise,
+  Name-pl=Exercises,
+  name-sg=exercise,
+  name-pl=exercises,
+  rangesep={\textendash},
+  cap
+}
 \zcRefTypeSetup{enumXvii}{
   Name-sg=Exercise,
   Name-pl=Exercises,
@@ -44,6 +53,7 @@ filecolor = blue,
   cap
 }
 
+\newtoggle{boundaryvalues}
 
 \EditInstance{heading}{section}{title-decls=\raggedright}
 

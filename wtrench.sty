@@ -118,8 +118,11 @@
  \popQED %\BlockEnvEnd
 }
 
+\newcounter{exercise}
+\counterwithin{exercise}{section}
+
 \newcommand{\exercisetext}[1]{%
- \end{exerciselist}{\slshape #1}\begin{exerciselist}[resume]}
+ \end{exerciselist}{\slshape #1}\begin{exerciselist}}
 
 %\newcommand{\arraytext}[1]{\noalign{\hspace*{-1.75em}
 %\mbox{#1}\vspace*{-9\jot}}\nonumber\\}
@@ -140,8 +143,8 @@
 \ExplSyntaxOn
 \keys_define:nn { enumext / enumext* }
   {
-    item_join .int_set:N = \l__enumext_item_join_int,
-    item_join .default:n = { 1 }
+    item-join .int_set:N = \l__enumext_item_join_int,
+    item-join .default:n = { 1 }
   }
 \cs_set_protected:Nn \__enumext_item_peek_args_vii:
   {
@@ -151,60 +154,75 @@
   }
 \ExplSyntaxOff
 
-%\newcounter{exercise}
-%\newenvironment{exerciselist}{\begin{list}{\bf
-%\arabic{exercise}.}
-%{\topsep 10pt\partopsep 0pt\labelwidth 16pt
-%\labelsep 12pt\leftmargin 28pt
-%\itemsep 0pt\usecounter{exercise}}}{\end{list}}
 \newenvironment{exerciselist}[1][]{%
- \begin{enumext*}[
+ \begin{enumext}[
   label=\arabic*,
-%  font=\bfseries,
+  start={1+\value{exercise}},
   wrap-label*={##1.},
   topsep=10pt,
   partopsep=0pt,
   itemsep=0pt,
   labelwidth=16pt,
   labelsep=12pt,
-%  leftmargin=28pt,
+%  columns=2,
+%  item-join=2,
+  after={\setcounter{exercise}{\value{enumXi}}},
+  #1
+ ]%
+}{%
+ \end{enumext}%
+}
+\newenvironment{exerciselistTwoColumn}[1][]{%
+ \begin{enumext*}[
+  label=\arabic*,
+  start={1+\value{exercise}},
+  wrap-label*={##1.},
+  topsep=10pt,
+  partopsep=0pt,
+  itemsep=0pt,
+  labelwidth=16pt,
+  labelsep=12pt,
   columns=2,
-  item_join=2,
-%  leftmargin=22pt,
-%  first={},
+  after={\setcounter{exercise}{\value{enumXvii}}},
   #1
  ]%
 }{%
  \end{enumext*}%
 }
 
-%\newcounter{lcal}
-%\newenvironment{alist}{\begin{list}{\bf (\alph{lcal})}
-%{\topsep 0pt\partopsep 0pt\labelwidth 14pt
-%\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-%\usecounter{lcal}}}{\end{list}}
 \newenvironment{alist}[1][]{%
  \begin{enumext}[
   label=\alph*,
-%  font=\bfseries,
   wrap-label*={(##1)},
   topsep=0pt,
   partopsep=0pt,
   itemsep=0pt,
   labelwidth=14pt,
   labelsep=8pt,
-%  leftmargin=22pt,
   #1
  ]%
 }{%
  \end{enumext}%
+}
+\newenvironment{alist*}[1][]{%
+ \begin{enumext*}[
+  label=\alph*,
+  wrap-label*={(##1)},
+  topsep=0pt,
+  partopsep=0pt,
+  itemsep=0pt,
+  labelwidth=14pt,
+  labelsep=8pt,
+  #1
+ ]%
+}{%
+ \end{enumext*}%
 }
 
 \newenvironment{alistSolution}[1][]{%
  \pushQED {\qed }% allows \qedhere
  \begin{enumext}[
   label=\alph*,
-%  font=\bfseries,
   wrap-label*={{\color{blue}\textsc{Solution}(##1)}},
   topsep=0pt,
   partopsep=0pt,
@@ -212,7 +230,6 @@
   list-indent=0pt,
   labelwidth=6em,
   labelsep=8pt,
-%  leftmargin=22pt,
   #1
  ]%
 }{%
@@ -220,41 +237,29 @@
  \end{enumext}%
 }
 
-%\newenvironment{numberlist}{\begin{list}{\bfseries \arabic{rm}.}
-%{\topsep 12pt\partopsep 0pt\labelwidth 14pt
-%\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-%\usecounter{rm}}}{\end{list}}
 \newenvironment{numberlist}[1][]{%
  \begin{enumext}[
   label=\arabic*,
-%  font=\bfseries,
   wrap-label*={##1.},
   topsep=12pt,
   partopsep=0pt,
   itemsep=0pt,
   labelwidth=14pt,
   labelsep=8pt,
-%  leftmargin=22pt,
   #1
  ]%
 }{%
  \end{enumext}%
 }
 
-%\newenvironment{Alist}{\begin{list}{\bf (\Alph{lcal})}
-%{\topsep 0pt\partopsep 0pt\labelwidth 14pt
-%\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-%\usecounter{lcal}}}{\end{list}}
 \newenvironment{Alist}[1][]{%
  \begin{enumext}[
   label=\Alph*,
-%  font=\bfseries,
   wrap-label*={(##1)},
   topsep=0pt,
   partopsep=0pt,
   labelwidth=14pt,
   labelsep=8pt,
-%  leftmargin=22pt,
   itemsep=0pt,
   #1
  ]%
@@ -262,32 +267,20 @@
  \end{enumext}%
 }
 
-%\newcounter{rm}
-%\newenvironment{rmlist}{\begin{list}{\bf (\roman{rm})}
-%{\topsep 0pt\partopsep 0pt\labelwidth 24pt
-%\labelsep 8pt\leftmargin 32pt\itemsep 0pt
-%\usecounter{rm}}}{\end{list}}
 \newenvironment{rmlist}[1][]{%
  \begin{enumext}[
   label=\roman*,
-%  font=\bfseries,
   wrap-label*={(##1)},
   topsep=0pt,
   partopsep=0pt,
   labelwidth=24pt,
   labelsep=8pt,
-%  leftmargin=32pt,
   itemsep=0pt,
   #1
  ]%
 }{%
  \end{enumext}%
 }
-
-%\newenvironment{definition}[1]{
-%\begin{trivlist}\item[]{\sc\bf Definition}\space
-%\refstepcounter{theorem}{\bf\thetheorem}\
-% #1}{\end{trivlist}}
 
 
 %\if_meaning:w\__math_luamml_structelem:\luamml_structelem:
