@@ -31,9 +31,10 @@ experiencing motion under a central force.
 
 We consider the motion of an object of mass $m$, suspended from a
 spring of negligible mass. We say that the spring-mass system is
-in \emph{\color{blue}equilibrium} when the object is at rest and the forces
+in \emph{\color{blue}equilibrium}\index{equilibrium!spring-mass system}
+when the object is at rest and the forces
 acting on it sum to zero. The position of the object in this case is
-the \emph{\color{blue}equilibrium position}. We define $y$ to be the displacement
+the \indexterm{equilibrium position}. We define $y$ to be the displacement
 of the object from its equilibrium position (\zcref{figure:6.1.1}),
 measured positive upward.
 
@@ -67,7 +68,7 @@ object:
 \item A force $F_s$ exerted by the spring resisting change in its
 length. The \emph{\color{blue}natural length} of the spring is its length with
 no mass attached. We assume that the spring obeys
-\personHref{Hooke}{Hooke's law}:
+\personHref{Hooke}{Hooke's law}\index{Hooke's law}:
 If the length of the spring is changed by an amount $\Delta L$
 from its natural length,  then the spring exerts a force $F_s=k\Delta
 L$, where $k$ is a positive number called the \emph{\color{blue}spring constant}.
@@ -80,7 +81,7 @@ a force proportional to the velocity of the object. It may be due to
 air resistance or friction in the spring. However, a convenient way to
 visualize a damping force is to assume that the object is rigidly
 attached to a piston with negligible mass immersed in a cylinder
-(called a \emph{\color{blue}dashpot}) filled with a viscous liquid
+(called a \indexterm{dashpot}) filled with a viscous liquid
 (\zcref{figure:6.1.2}). As the piston moves, the liquid exerts a
 damping force. We say that the motion is \emph{\color{blue}undamped} if $c=0$, or
 \emph{\color{blue}damped} if $c>0$.
@@ -95,7 +96,7 @@ if $F\not\equiv0$.
 
 
 
-From Newton's second law of motion,
+From Newton's second law of motion\index{Newton's second law of motion},
 \begin{equation}\label{eq:6.1.1}
 my''=-mg+F_d+F_s+F=-mg-cy'+F_s+F.
 \end{equation}
@@ -278,10 +279,10 @@ This is the time required for the object to complete one full cycle of
 oscillation (for example, to move from its highest position to its
 lowest position and back to its highest position). Since the highest
 and lowest positions of the object are $y=R$ and $y=-R$, we say that
-$R$ is the \emph{\color{blue}amplitude} of the oscillation. The angle $\phi$ in
+$R$ is the \emph{\color{blue}amplitude}\index{amplitude!of oscillation} of the oscillation. The angle $\phi$ in
 \eqref{eq:6.1.10} is the \emph{\color{blue}phase angle}. It's measured
 in
-radians. \zcref[S]{eq:6.1.10} is the \emph{\color{blue}amplitude-phase
+radians. \zcref[S]{eq:6.1.10} is the \indexterm{amplitude-phase
 form} of the displacement. If $t$ is in seconds then $\omega_0$ is
 in radians per second (rad/s);   it's  the \emph{\color{blue}frequency} of
 the motion. It is also called the \emph{\color{blue}natural frequency} of
@@ -507,7 +508,7 @@ $|R(t)|$. In \zcref{figure:6.1.6} the dashed curve above the $t$ axis
 is $y=|R(t)|$, the dashed curve below the $t$ axis is $y=-|R(t)|$, and
 the displacement $y$ appears as an oscillation bounded by them. The
 oscillation of $y$ for $t$ on an interval between successive zeros of
-$R(t)$ is called a \emph{\color{blue}beat}.
+$R(t)$ is called a \indexterm{beat}.
 
 
 
@@ -786,10 +787,10 @@ y=Re^{-ct/2m}\cos(\omega_1 t-\phi),
 R=\sqrt{c_1^2+c_2^2},\quad R\cos\phi=c_1,\quad\text{and}\quad  R\sin\phi=c_2.
 \]
 The factor $Re^{-ct/2m}$ in \eqref{eq:6.2.3} is called the
-\emph{\color{blue}time-varying amplitude} of the motion, the quantity $\omega_1$ is
-called the \emph{\color{blue}frequency}, and $T=2\pi/\omega_1$ (which is the
+\indexterm{time-varying amplitude}\index{amplitude!time-varying} of the motion, the quantity $\omega_1$ is
+called the \indexterm{frequency}, and $T=2\pi/\omega_1$ (which is the
 period of the cosine function in \eqref{eq:6.2.3} is called the
-\emph{\color{blue}quasi-period}. A typical graph of \eqref{eq:6.2.3} is shown in
+\indexterm{quasi-period}. A typical graph of \eqref{eq:6.2.3} is shown in
 \zcref{figure:6.2.1}. As illustrated in that figure, the graph of $y$
 oscillates between the dashed exponential curves $y=\pm Re^{-ct/2m}$.
 
@@ -1124,7 +1125,7 @@ y_c&=c_1e^{r_1t}+c_2e^{r_2t}\,(r_1,r_2<0).
 \end{align*}
 In all three cases $\lim_{t\to\infty} y_c(t)=0$ for any choice of
 $c_1$ and $c_2$. For this reason we say that $y_c$ is the
-\emph{\color{blue}transient component} of the solution $y$.
+\indexterm{transient component} of the solution $y$.
 The behavior of $y$ for
 large $t$ is determined by $y_p$, which we call the \emph{\color{blue}steady state
 component} of $y$. Thus, for large $t$ the motion is like simple
@@ -1373,6 +1374,7 @@ y=e^{r_1t}(c_1+c_2t)\,(r_1<0).
 
 
 \section{The \texorpdfstring{$RLC$}{RLC} Circuit}\label{sec:rlc}
+\index{circuit, RLC|see{RLC circuit}}
 
 In this section we consider the \emph{\color{blue}$RLC$ circuit}, shown
 schematically in \zcref{figure:6.3.1}. As we'll see, the $RLC$
@@ -1381,7 +1383,7 @@ damping.
 
 Nothing happens while the switch is open (dashed line). When the
 switch is closed (solid line) we say that the \emph{\color{blue}circuit is
-closed}. Differences in electrical potential in a closed circuit
+closed}\index{closed circuit}. Differences in electrical potential in a closed circuit
 cause current to flow in the circuit. The battery or generator in
 \zcref{figure:6.3.1} creates a difference in electrical potential
 $E=E(t)$ between its two terminals, which we've marked arbitrarily as
@@ -1424,24 +1426,24 @@ by
 V_R=IR,
 \end{equation}
 where $I$ is current and $R$ is a positive constant,
-the \emph{\color{blue}resistance} of the resistor.
+the \indexterm{resistance} of the resistor.
 The voltage drop across the induction coil is given by
-\begin{equation} \label{eq:6.3.2}
+\begin{equation}\label{eq:6.3.2}
 V_I=L\frac{dI}{dt}=LI',
 \end{equation}
-where $L$ is a positive constant, the \emph{\color{blue}inductance} of the coil.
+where $L$ is a positive constant, the \indexterm{inductance} of the coil.
 
-A capacitor stores electrical charge $Q=Q(t)$, which is related to
+A \indexterm{capacitor} stores electrical charge $Q=Q(t)$, which is related to
 the current in the circuit by the equation
 \begin{equation} \label{eq:6.3.3}
 Q(t)=Q_0+\int_0^tI(\tau)\,d\tau,
 \end{equation}
-where $Q_0$ is the charge on the capacitor at $t=0$. The voltage drop
+where $Q_0$ is the \indexterm{charge} on the capacitor at $t=0$. The voltage drop
 across a capacitor is given by
 \begin{equation} \label{eq:6.3.4}
 V_C=\frac{Q}{C},
 \end{equation}
-where $C$ is a positive constant, the \emph{\color{blue}capacitance} of the
+where $C$ is a positive constant, the \indexterm{capacitance} of the
 capacitor.
 
 \zcref[S]{table:6.3.1} names the units for the quantities that we've
@@ -1473,10 +1475,10 @@ $C$ & Capacitance&farad (\unit\farad)\\
 
 
 According to
-\personHref{Kirchhoff}{Kirchoff's law}, the sum of
+\personHref{Kirchhoff}{Kirchoff's law}\index{Kirchoff's law}, the sum of
 the voltage drops in a closed $RLC$ circuit equals the impressed
 voltage. Therefore, from \eqref{eq:6.3.1}, \eqref{eq:6.3.2}, and \eqref{eq:6.3.4},
-\begin{equation} \label{eq:6.3.5}
+\begin{equation}\label{eq:6.3.5}
  LI'+RI+\frac{1}{C}Q=E(t).
 \end{equation}
 This equation contains two unknowns, the current $I$ in the
@@ -1609,7 +1611,7 @@ value problem
  LQ''+RQ'+\frac{1}{C}Q=0,\quad Q(0)=Q_0,\quad Q'(0)=I_0,
 \]
 approaches zero exponentially as $t\to\infty$. Thus, all such
-solutions are \emph{\color{blue}transient}, in the sense defined
+solutions are \emph{\color{blue}transient}\index{transient solution}, in the sense defined
 \zcref{sec:spring_ii} in the discussion of forced vibrations of a
 spring-mass system with damping.
 
@@ -1680,10 +1682,10 @@ equation, and approaches zero exponentially as $t\to\infty$ for any
 initial conditions , while $Q_p$ depends only on $E$ and is
 independent of the initial conditions. As in the case of forced
 oscillations of a spring-mass system with damping, we call $Q_p$ the
-\emph{\color{blue}steady state} charge on the capacitor of the $RLC$ circuit. Since
+\emph{\color{blue}steady state}\index{charge!steady state} charge on the capacitor of the $RLC$ circuit. Since
 $I=Q'=Q_c'+Q_p'$ and $Q_c'$ also tends to zero exponentially as
-$t\to\infty$, we say that $I_c=Q'_c$ is the \emph{\color{blue}transient} current
-and $I_p=Q_p'$ is the \emph{\color{blue}steady state} current. In most
+$t\to\infty$, we say that $I_c=Q'_c$ is the \indexterm{transient current}\index{current!transient}
+and $I_p=Q_p'$ is the \emph{\color{blue}steady state} current\index{steady state current}\index{current!steady state}. In most
 applications we're interested only in the steady state charge and
 current.
 
@@ -1823,7 +1825,7 @@ at every point is toward the origin.
  Gravitational forces are central
 forces;   for example, as mentioned in \zcref{sec:elementary_mechanics}, if we
 assume that Earth is a perfect sphere with constant mass density then
-Newton's law of gravitation asserts that the force exerted on an
+Newton's law of gravitation\index{Newton's law of gravitation} asserts that the force exerted on an
 object by Earth's gravitational field is proportional to the mass of
 the object and inversely proportional to the square of its distance
 from the center of Earth, which we take to be the origin.
@@ -1863,14 +1865,14 @@ object with mass $m$ moving under this force is given by
 r(\theta)=\frac{1}{u(\theta)},
 \]
 where $u$  is solution of the differential equation
-\begin{equation} \label{eq:6.4.1}
+\begin{equation}\label{eq:6.4.1}
  \frac{d^2u}{d\theta^2}+u=-\frac{1}{mh^2u^2}f(1/u),
 \end{equation}
 and $h$ is a constant defined below.
 
 
 
-Newton's second law of motion ($\vect{F}=m\vect{a}$) says that the polar
+Newton's second law of motion\index{Newton's second law of motion} ($\vect{F}=m\vect{a}$) says that the polar
 coordinates
 $r=r(t)$ and $\theta=\theta(t)$ of
 the particle  satisfy the vector differential equation
@@ -2001,7 +2003,7 @@ and dividing through by $-mh^2u^2$ yields \eqref{eq:6.4.1}.
 
 \zcref[S]{eq:6.4.7} has the following geometrical interpretation, which
 is known as
-\personHref{Kepler}{Kepler's Second Law}.
+\personHref{Kepler}{Kepler's second law}\index{Kepler's second law}.
 
 \begin{theorem}\color{blue}\label{thmtype:6.4.1}
  The position vector
@@ -2082,11 +2084,13 @@ where
 \rho=\frac{h^2}{k}\quad\text{and}\quad  e=A\rho.
 \]
 A curve satisfying \eqref{eq:6.4.11} is a conic section with a focus at
-the origin (\zcref{exer:6.4.1}). The nonnegative constant $e$ is
- the \emph{\color{blue}eccentricity} of the orbit, which is
-an ellipse if
+the origin (\zcref{exer:6.4.1}). The nonnegative constant $e$ is the
+\emph{\color{blue}eccentricity}\index{eccentricity of orbit}\index{orbit!eccentricity}
+of the orbit, which is
+an ellipse\index{elliptic orbit}\index{orbit!elliptic} if
 $e<1$
-ellipse (a circle if $e=0$), a parabola if $e=1$, or a hyperbola if $e>1$.
+(a circle\index{circular orbit}\index{orbit!circular} if $e=0$),
+a parabola if $e=1$, or a hyperbola if $e>1$.
 
 \begin{figure}
   \centering\color{blue}
@@ -2099,17 +2103,17 @@ ellipse (a circle if $e=0$), a parabola if $e=1$, or a hyperbola if $e>1$.
 If  the orbit is an ellipse, then the minimum and maximum
 values of $r$  are
 \begin{align*}
-r_{\min}&=\frac{\rho}{1+e}\quad\text{(the \emph{\color{blue}perihelion
+r_{\min}&=\frac{\rho}{1+e}\quad\text{(the \indexterm{perihelion
 distance}, attained when
 $\theta=\phi$)}  \\
 r_{\max}&=\frac{\rho}{1-e}\quad\text{(the
-\emph{\color{blue}aphelion distance}, attained when
+\indexterm{aphelion distance}, attained when
 $\theta=\phi+\pi$)}.
 \end{align*}
 \zcref[S]{figure:6.4.4} shows
 a typical elliptic orbit.
-The point $P$ on the orbit where $r=r_{\min}$ is the \emph{\color{blue}perigee} 
-and the point $A$ where $r=r_{\max}$ is the \emph{\color{blue}apogee}.
+The point $P$ on the orbit where $r=r_{\min}$ is the \indexterm{perigee} 
+and the point $A$ where $r=r_{\max}$ is the \indexterm{apogee}.
 
 
 
@@ -2151,8 +2155,8 @@ the object to traverse the entire orbit is
 T=\frac{2\pi\rho^2}{h(1-e^2)^{3/2}}.
 \]
 (This is
-\personHref{Kepler}{Kepler's third law};   $T$ is called the
-\emph{\color{blue}period} of the orbit.)
+\personHref{Kepler}{Kepler's third law}\index{Kepler's third law};
+$T$ is called the \emph{\color{blue}period}\index{period of orbit}\index{orbit!period of} of the orbit.)
 
 \begin{minipage}{\linewidth}
 \tagstructbegin{tag=Sect}

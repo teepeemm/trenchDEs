@@ -193,7 +193,7 @@ elongations of the springs in equilibrium then
 Let $H_1$ be the Hooke's law force acting on $m_1$, and let $D_1$ be
 the damping force on $m_1$. Similarly, let $H_2$ and $D_2$ be the
 Hooke's law and damping forces acting on $m_2$. According to Newton's
-second law of motion,
+second law of motion\index{Newton's second law of motion},
 \begin{equation} \label{eq:10.1.8}
 \begin{aligned}
 m_1y_1''&=-m_1g+H_1+D_1+F_1,\\
@@ -253,7 +253,7 @@ m_2y_2''&=c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2.  \qedhere
 Let $\vect{X}=\vect{X}(t)=x(t)\,\ivect+y(t)\,\jvect+z(t)\,\vect{k}$ be
 the position vector at time $t$ of an object with mass $m$, relative
 to a rectangular coordinate system with origin at Earth's center
-(\zcref{figure:10.1.3}). According to Newton's law of gravitation,
+(\zcref{figure:10.1.3}). According to Newton's law of gravitation\index{Newton's law of gravitation},
 Earth's gravitational force $\vect{F}=\vect{F}(x,y,z)$ on the object is
 inversely proportional to the square of the distance of the object
 from Earth's center, and directed toward the center;   thus,
@@ -279,7 +279,7 @@ Therefore we can rewrite \eqref{eq:10.1.13} as
 =-mgR^2\frac{x\,\ivect+y\,\jvect+z\,\vect{k}}{\left(x^2+y^2+z^2\right)^{3/2}}.
 \]
 Now suppose $\vect{F}$ is the only force acting on the object.
-According to Newton's second law of motion, $\vect{F}=m\vect{X}''$;   that
+According to Newton's second law of motion\index{Newton's second law of motion}, $\vect{F}=m\vect{X}''$;   that
 is,
 \[
  m(x''\,\ivect+y''\,\jvect+z''\,\vect{k})=
@@ -458,13 +458,13 @@ can be rewritten as first order systems by the method used in
 order systems.
 
 
-\boxit{Numerical Solution of Systems}
+\boxit{Numerical Solution of Systems}\index{numerical methods!system of equations}
 
 The  numerical methods that we studied in \zcref{ch:numerical}
 can be extended to systems, and most differential equation software
 packages include programs to solve systems of equations. We won't go
 into detail on numerical methods for systems;     however, for
-illustrative purposes we'll describe  the Runge-Kutta method for
+illustrative purposes we'll describe  the Runge-Kutta method\index{Runge-Kutta method!system of equations} for
 the numerical solution of  the initial value problem
 \begin{align*}
 y_1'&=g_1(t,y_1,y_2),\quad y_1(t_0)=y_{10},\\
@@ -623,7 +623,7 @@ where
 \vect{y}=\col yn,\quad
 A(t)=\matfunc ann,\quad\text{and}\quad \vect{F}(t)=\colfunc fn.
 \]
-We call $A$  the \emph{\color{blue}coefficient matrix} of \eqref{eq:10.2.2} and
+We call $A$  the \indexterm{coefficient matrix} of \eqref{eq:10.2.2} and
 $\vect{F}$  the \emph{\color{blue}forcing function}.   We'll say that $A$
 and $\vect{F}$ are \emph{\color{blue}continuous} if their entries are continuous.
 If $\vect{F}=\vect{0}$, then \eqref{eq:10.2.2} is
@@ -645,8 +645,8 @@ The next theorem gives sufficient conditions for the existence
 of solutions of initial value problems for \eqref{eq:10.2.2}. We omit the
 proof.
 
-\begin{theorem}\color{blue} \label{thmtype:10.2.1}
-Suppose the coefficient matrix $A$ and the forcing function $\vect{f}$ are continuous on $(a,b)$, let $t_0$ be in $(a,b)$, and let $\vect{k}$ be an arbitrary constant $n$-vector. Then the initial value
+\begin{theorem}\label{thmtype:10.2.1}\index{uniqueness theorem}
+Suppose the coefficient matrix\index{coefficient matrix} $A$ and the forcing function $\vect{f}$ are continuous on $(a,b)$, let $t_0$ be in $(a,b)$, and let $\vect{k}$ be an arbitrary constant $n$-vector. Then the initial value
 problem
 \[
 \vect{y}'=A(t)\vect{y}+\vect{F}(t), \quad  \vect{y}(t_0)=\vect{k}
@@ -1240,7 +1240,7 @@ y_{n1}&y_{n2}&\cdots&y_{nn} \\
 \end{vmatrix}
 \end{equation}
 is called the
-\personHref{Wronski}{Wronskian} of $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$. It can be shown (\zcref{exer:10.3.2,exer:10.3.3})
+\personHref{Wronski}{Wronskian}\index{Wronskian} of $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$. It can be shown (\zcref{exer:10.3.2,exer:10.3.3})
 that this definition is analogous to definitions of the Wronskian of
 scalar functions given in \zcref{sec:homog_linear,sec:higher_theory}.
 The next theorem is analogous to
@@ -1248,7 +1248,7 @@ The next theorem is analogous to
 \zcref{exer:10.3.4} for
 $n=2$ and in \zcref{exer:10.3.5} for general~$n$.
 
-\begin{theorem}\color{blue}$[$Abel's Formula$]$ \label{thmtype:10.3.2}
+\begin{theorem}[Abel's Formula]\label{thmtype:10.3.2}
 Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$, let
 $\vect{y}_1$, $\vect{y}_2$, \dots, $\vect{y}_n$ be solutions of $\vect{y}'=A(t)\vect{y}$ on $(a,b)$, and let $t_0$ be in $(a,b)$. Then the
 Wronskian of $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is given by
@@ -1279,7 +1279,7 @@ ds\right), \quad a < t < b.
 The next theorem is analogous to
 \zcref{thmtype:5.1.6,thmtype:9.1.4}.
 
-\begin{theorem}\color{blue}\label{thmtype:10.3.3}
+\begin{theorem}\label{thmtype:10.3.3}
 Suppose the  $n\times n$ matrix $A=A(t)$ is continuous
  on $(a,b)$ and let
 $\vect{y}_1$, $\vect{y}_2$, \dots, $\vect{y}_n$
@@ -1307,7 +1307,7 @@ at all points in $(a,b)$.
 \end{theorem}
 
 
-We say that $Y$ in \eqref{eq:10.3.4} is a \emph{\color{blue}fundamental matrix} for
+We say that $Y$ in \eqref{eq:10.3.4} is a \indexterm{fundamental matrix}\index{matrix!fundamental} for
 $\vect{y}'=A(t)\vect{y}$ if any (and therefore all) of the statements
 (a)--(e) of \zcref{thmtype:10.3.2} are true for the
 columns of $Y$. In this case, \eqref{eq:10.3.3} implies that the general
@@ -2303,7 +2303,7 @@ eigenvalue}
 
 Now suppose   $\lambda_2>\lambda_1$, and let $L_1$ and $L_2$ denote
 lines through the origin parallel to $\vect{X}_1$ and $\vect{X}_2$,
-respectively. By a half-line of $L_1$ (or $L_2$), we mean either of the
+respectively. By a half-line\index{half-line} of $L_1$ (or $L_2$), we mean either of the
 rays obtained by removing the origin from $L_1$ (or $L_2$).
 
 Letting $c_2=0$ in \eqref{eq:10.4.19} yields $\vect{y}=c_1\vect{x}_1e^{\lambda_1 t}$. If $c_1\ne0$, the trajectory defined by this
@@ -2584,7 +2584,7 @@ systems.}
 \item\label{exer:10.4.41}\CGex $\vect{y}'=\twobytwo3{-1}{-3}1\vect{y}$
 \end{exerciselistTwoColumn}
 \begin{exerciselist}
-\item\label{exer:10.4.42}\Lex
+\item\label{exer:10.4.42}\index{competition between species}\index{species!competition between}\Lex
 Let $P=P(t)$ and $Q=Q(t)$ be the populations of two species at time
 $t$, and assume that each population would grow exponentially if the
 other didn't exist; that is, in the absence of competition,
@@ -2655,7 +2655,7 @@ eigenvalues, but does not have $n$ linearly independent eigenvectors.
 It is shown in linear algebra that this occurs if and only if $A$ has
 at least one eigenvalue of multiplicity $r>1$ such that the associated
 eigenspace has dimension less than $r$. In this case $A$ is said to be
-\emph{\color{blue}defective}. Since it's beyond the scope of this book to give a
+\emph{\color{blue}defective}\index{defective matrix}\index{matrix!defective}. Since it's beyond the scope of this book to give a
 complete analysis of systems with defective coefficient matrices, we
 will restrict our attention to some commonly occurring special cases.
 
@@ -3196,8 +3196,8 @@ $c_1<0$. The origin is the trajectory of the trivial solution $\vect{y}\equiv\ve
 Henceforth, we assume that $c_2\ne0$. In this case, the trajectory of
 \eqref{eq:10.5.20} can't intersect $L$, since every point of $L$ is on a
 trajectory obtained by setting $c_2=0$. Therefore the trajectory of
-\eqref{eq:10.5.20} must lie entirely in one of the open half-planes
-bounded
+\eqref{eq:10.5.20} must lie entirely in one of the open
+half-planes\index{half-plane} bounded
 by $L$, but does not contain any point on $L$. Since the initial point
 $(y_1(0),y_2(0))$ defined by $\vect{y}(0)=c_1\vect{X}_1+c_2\vect{u}$ is
 on the trajectory, we can determine which half-plane contains the
@@ -3208,13 +3208,13 @@ trajectory from the sign of $c_2$, as shown in
   \centering
   \includegraphics[alt={A dashed line L and a vector x parallel to L.  A vector u has the same origin as x but points in a different direction.  On the "positive half-plane" where u points, c2 is positive.  On the "negative half-plane" where u does not point, c2 is negative.}
   width=4.5in,height=2.6in,keepaspectratio]{fig100501}
-\caption{Positive and negative half-planes}
+\caption{Positive and negative half-planes}\index{negative half-plane}\index{positive half-plane}\index{half-plane}
   \label{figure:10.5.1}
 \end{figure}
 %
 For convenience we'll call the half-plane where $c_2>0$ the
-\emph{\color{blue}positive half-plane}. Similarly, the-half plane where $c_2<0$ is
-the \emph{\color{blue}negative half-plane}. You should convince yourself
+\indexterm{positive half-plane}. Similarly, the half-plane where $c_2<0$ is
+the \indexterm{negative half-plane}. You should convince yourself
 (\zcref{exer:10.5.35}) that even though there are infinitely
 many vectors $\vect{u}$ that satisfy \eqref{eq:10.5.21}, they all define
 the same positive and negative half-planes. In the figures simply
@@ -3913,7 +3913,7 @@ $z_2$ are the displacements in the directions of $\vect{u}$ and $\vect{V}$, resp
 From \eqref{eq:10.6.5}, the solutions of \eqref{eq:10.6.10} are given by
 \begin{equation} \label{eq:10.6.13} \vect{y}=e^{\alpha t}\left[(c_1\cos\beta
 t+c_2\sin\beta t)\vect{u} +(-c_1\sin\beta t+c_2\cos\beta t)\vect{v}\right]. \end{equation} For convenience, let's call the curve
-traversed by $e^{-\alpha t}\vect{y}(t)$ a \emph{\color{blue}shadow trajectory} of
+traversed by $e^{-\alpha t}\vect{y}(t)$ a \indexterm{shadow trajectory}\index{trajectory!shadow} of
 \eqref{eq:10.6.10}. Multiplying \eqref{eq:10.6.13} by $e^{-\alpha t}$ yields
 \[
 e^{-\alpha t}\vect{y}(t)=z_1(t)\vect{u}+z_2(t)\vect{v},
@@ -4158,7 +4158,7 @@ We now consider the nonhomogeneous linear system
 \]
 where $A$ is an $n\times n$ matrix function and $\vect{F}$ is an
 $n$-vector forcing function. Associated with this system is the
-\emph{\color{blue}complementary system} $\vect{y}'=A(t)\vect{y}$.
+\indexterm{complementary system} $\vect{y}'=A(t)\vect{y}$.
 
 The next theorem is analogous to
 \zcref{thmtype:5.3.2,thmtype:9.1.5}. It shows how to find the general solution

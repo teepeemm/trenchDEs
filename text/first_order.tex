@@ -403,7 +403,7 @@ c=\begin{cases}
 \begin{remark*}
 Rewriting a first order differential equation so that one
 side depends only on $y$ and $y'$ and the other depends only on $x$
-is called \emph{\color{blue}separation of variables}. We did this in
+is called \indexterm{separation of variables}. We did this in
 \zcref{example:2.1.3,example:2.1.4}, and in rewriting
 \eqref{eq:2.1.12} as \eqref{eq:2.1.15}. We'll apply this method to nonlinear
 equations in \zcref{sec:separable}.
@@ -419,13 +419,13 @@ When considering this equation  we call
 \[
 y'+p(x)y=0
 \]
-the \emph{\color{blue}complementary equation}.
+the \indexterm{complementary equation}.
 
 We'll find solutions of \eqref{eq:2.1.16} in the form $y=uy_1$, where
 $y_1$ is a nontrivial solution of the complementary equation and $u$
 is to be determined. This method of using a solution of the
 complementary equation to obtain solutions of a nonhomogeneous
-equation is a special case of a method called \emph{\color{blue}variation of
+equation is a special case of a method called \indexterm{variation of
 parameters}, which you'll encounter several times in this book.
 (Obviously, $u$ can't be constant, since if it were, the left side
 of \eqref{eq:2.1.16} would be zero. Recognizing this, the early users of
@@ -729,6 +729,7 @@ to apply the numerical integration procedures discussed in
 The method of variation of parameters leads to this theorem.
 
 \begin{theorem}\label{thmtype:2.1.2}
+\index{existence theorem}\index{uniqueness theorem}
 Suppose $p$ and $f$ are continuous on an open interval $(a,b)$,  and let $y_1$
 be any nontrivial solution of the complementary equation
 \[
@@ -1024,7 +1025,7 @@ $y=c_1y_1+c_2y_2$ is a solution of
 \[
 y'+p(x)y=c_1f_1(x)+c_2f_2(x).
 \]
-(This is the \emph{principle of superposition}.)
+(This is the \indexterm{principle of superposition}\index{superposition!principle of}.)
 
 \item %(b)
 Use \part{a} to show that if $y_1$ and $y_2$ are solutions
@@ -1090,13 +1091,13 @@ u^{(j+1)}=\frac{f_j}{y_1},\quad 0\le j\le m.
 \section{Separable Equations}\label{sec:separable}
 
 A first order differential equation  is
-\emph{\color{blue}separable} if it can be written as
+\emph{\color{blue}separable}\index{separable equation} if it can be written as
 \begin{equation} \label{eq:2.2.1}
 h(y)y'=g(x),
 \end{equation}
 where the left side is a product of $y'$ and a function of $y$ and
 the right side is a function of $x$. Rewriting a separable
-differential equation in this form is called \emph{\color{blue}separation of
+differential equation in this form is called \indexterm{separation of
 variables}. In \zcref{sec:linar_first_order} we used separation of variables
 to solve homogeneous linear equations. In this section we'll apply
 this method to nonlinear equations.
@@ -1256,8 +1257,7 @@ see in the next example, this isn't  always possible.
 In this situation we must broaden our definition of a solution of a
 separable equation. The next theorem provides the basis for this
 modification.  We omit the proof, which requires a result from
-advanced calculus called as the \emph{\color{blue}implicit function
-theorem}.
+advanced calculus called as the \indexterm{implicit function theorem}.
 
 \begin{theorem}\label{thmtype:2.2.1}
 Suppose $g=g(x)$ is continuous on $(a,b)$ and $h=h(y)$
@@ -1710,8 +1710,6 @@ $y_2$ with $y_1<y_2$ such that if $y_0>y_1$ then
 $\lim_{t\to\infty}y(t)=y_2$, and if $y_0<y_1$ then $y(t)=-\infty$
 for some finite value of~$t$. (What happens if $y_0=y_1$?)
 
-
-
 \item % (b)
 Choose $a$ and $b$ positive and $q=a^2/4b$. By plotting direction
 fields
@@ -1726,8 +1724,6 @@ and solutions of (A) on suitable rectangular grids of the form (B),
 discover that
 no matter what $y_0$ is, $y(t)=-\infty$ for some finite value of $t$.
 
-
-
 \item % (d)
 Verify your results experiments analytically.
 Start by separating variables in (A)  to obtain
@@ -1739,7 +1735,7 @@ quadratic formula. This should lead you to see why there are
 three cases.  Take it from there!
 
 Because of its role in the transition between these
-three cases,  $q_0=a^2/4b$ is called a \emph{\color{blue}bifurcation value}
+three cases,  $q_0=a^2/4b$ is called a \indexterm{bifurcation value}
 of $q$. In general, if $q$ is a parameter in any differential
 equation,  $q_0$ is said to be a bifurcation value of
 $q$ if the nature of the solutions of the equation with $q<q_0$
@@ -1827,7 +1823,7 @@ illustrate it with examples.
 
 
 Some terminology:
- an \emph{\color{blue}open rectangle $R$}
+ an \emph{\color{blue}open rectangle $R$}\index{open rectangle}
  is a set of points $(x,y)$ such that
 \[
 a<x<b\quad\text{and}\quad c<y<d
@@ -1844,6 +1840,7 @@ nonlinear differential equations. We omit the proof, which is beyond
 the scope of this book.
 
 \begin{theorem}\label{thmtype:2.3.1}
+\index{existence theorem}\index{uniqueness theorem}
 \begin{alist}
 \item %(a)
  If  $f$ is continuous
@@ -2397,7 +2394,7 @@ the given equation into a separable equation.
 
 \boxit{Bernoulli Equations}
 
-A \personHref{Bernoulli_Jacob}{Bernoulli equation} is an equation  of
+A \personHref{Bernoulli_Jacob}{Bernoulli equation}\index{Bernoulli's equation|(} is an equation  of
 the form
 \begin{equation} \label{eq:2.4.2}
 y'+p(x)y=f(x)y^r,
@@ -2443,7 +2440,7 @@ y&=-\frac{1}{x-1+ce^{-x}}.
 %
 \zcref[S]{figure:2.4.1}  shows
 direction field and some integral curves of \eqref{eq:2.4.3}.
-\end{solution}
+\end{solution}\index{Bernoulli's equation|)}
 
 \begin{figure}
   \centering
@@ -2791,7 +2788,7 @@ initial value problem and graph the solution.}
 \[
 P'=aP(1-\alpha P)
 \]
-from Verhulst's model for population growth can be written in
+from Verhulst's model\index{Verhulst model} for population growth can be written in
 Bernoulli form as
 \[
 P'-aP=-a\alpha P^2.
@@ -3034,8 +3031,8 @@ $y'=q(y/x)$,  so is $y_1=y(ax)/a$, where $a$ is any nonzero
 constant.
 
 
-\item\label{exer:2.4.55}A \emph{\color{blue}generalized}
-\personHref{Riccati}{Riccati equation} is of the form
+\item\label{exer:2.4.55}A
+\personHref{Riccati}{generalized Riccati equation}\index{generalized Riccati equation}\index{Riccati equation!generalized}\index{Ricatti, Jacopo Francesco} is of the form
 \[
 y'=P(x)+Q(x)y+R(x)y^2.\tag{A}
 \]
@@ -3229,7 +3226,7 @@ From  \eqref{eq:2.5.10}  and \eqref{eq:2.5.11}, we conclude that
  a necessary condition for exactness is that $M_y=N_x$.
 This motivates the next theorem, which we state without proof.
 
-\begin{theorem}[The Exactness Condition]\label{thmtype:2.5.2}
+\begin{theorem}[The Exactness Condition]\label{thmtype:2.5.2}\index{exactness condition}
 Suppose  $M$ and
 $N$ are continuous and have continuous partial derivatives
 $M_y$ and $N_x$ on an open rectangle $R$. Then
@@ -3786,12 +3783,12 @@ $R$.
 
 \item\label{exer:2.5.43}Suppose all second partial derivatives of
 $F=F(x,y)$ are continuous and $F_{xx}+F_{yy}=0$ on an open rectangle
-$R$. (A function with these properties is said to be \emph{\color{blue}harmonic};
+$R$. (A function with these properties is said to be \indexterm{harmonic};
 see also \zcref{exer:2.5.42}.) Show that $-F_y\,dx+F_x\,dy=0$ is
 exact on $R$, and
 therefore there's a function $G$ such that
 $G_x=-F_y$ and $G_y=F_x$ in $R$. (A function $G$ with this property is
-said to be a \emph{\color{blue}harmonic conjugate} of $F$.)
+said to be a \indexterm{harmonic conjugate} of $F$.)
 
 \item\label{exer:2.5.44}Verify that the following functions are harmonic, and find all their
 harmonic conjugates.  (See \zcref{exer:2.5.43}.)

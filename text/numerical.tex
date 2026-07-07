@@ -173,6 +173,7 @@ to carry out the necessary computations.
 
 \medskip
 \boxit{Examples Illustrating The Error in Euler's Method}
+\index{Euler's method!error in}
 
 
 \begin{example}\label{example:3.1.2}
@@ -189,7 +190,6 @@ y=\frac{e^{-2x}}{4}(x^4+4),
 \end{equation}
 which can be obtained by the method of \zcref{sec:linar_first_order}. (Verify.)
 \end{example}
-
 
 \begin{solution}
 \zcref[S]{table:3.1.1} shows the values of the exact solution
@@ -490,7 +490,9 @@ Recalling \eqref{eq:3.1.9}, we can establish the bound
 Although it may be difficult to determine the constant $M$, what is
 important is that there's an $M$ such that \eqref{eq:3.1.10} holds.
  We say that the
-local truncation error of Euler's method is \emph{\color{blue}of order} $h^2$,
+local truncation error of Euler's
+method\index{local truncation error of Euler's method}\index{Euler's method!local truncation error}
+is \emph{\color{blue}of order} $h^2$,
 which we write as $O(h^2)$.
 
 Note that the magnitude of the local truncation error in
@@ -581,12 +583,13 @@ Because of \eqref{eq:3.1.18} we say that the global truncation error of
 
 
 \boxit{Semilinear Equations and Variation of Parameters}
+\index{semilinear}
 
 An equation that can be written in the form
 \begin{equation} \label{eq:3.1.19}
 y'+p(x)y=h(x,y)
 \end{equation}
-with $p\not\equiv0$ is said to be \emph{\color{blue}semilinear}. (Of course,
+with $p\not\equiv0$ is said to be \indexterm{semilinear}. (Of course,
 \eqref{eq:3.1.19} is linear if $h$ is independent of $y$.) One way to
 apply Euler's method to an initial value problem
 \begin{equation} \label{eq:3.1.20}
@@ -617,7 +620,7 @@ y_i=u_iy_1(x_i)
 \]
 as approximate values of the solution of \eqref{eq:3.1.20}.
 We'll call this procedure the
-\personHref{Euler}{Euler semilinear method}.
+\personHref{Euler}{Euler semilinear method}\index{semilinear Euler method}.
 
 The next two examples show that the Euler and Euler semilinear
 methods may yield drastically different results.
@@ -770,7 +773,6 @@ u'=e^{-x^2},\quad u(0)=3.
 \]
 The results listed in \zcref{table:3.1.6} are clearly better than
 those obtained by Euler's method.
-
 \end{alistSolution}
 
 
@@ -1016,10 +1018,10 @@ in \eqref{eq:3.1.19},  we also have the option of using variation of
 parameters and then applying the given numerical method to the initial
 value problem \eqref{eq:3.1.21} for $u$. By analogy with the terminology
 used here, we'll call the resulting procedure
-the improved Euler semilinear method, the \emph{\color{blue}midpoint semilinear
-method},
-Heun's semilinear method or the
-Runge-Kutta semilinear method, as
+the improved Euler semilinear method\index{improved Euler semilinear method},
+the \indexterm{midpoint semilinear method},
+Heun's semilinear method\index{Heun's semilinear method} or the
+Runge-Kutta semilinear method\index{Runge-Kutta semilinear method}, as
 the case may be.
 
 \exercises
@@ -1225,8 +1227,8 @@ $y'-4y=\dfrac{x}{y^2(y+1)},\quad y(0)=1$;  \;
 $y'+2y=\dfrac{x^2}{1+y^2},\quad y(2)=1$;  \;
  $h=0.1,0.05,0.025$ on $[2,3]$
 
-\item\label{exer:3.1.23}{\sc Numerical Quadrature.}
-The fundamental theorem of  calculus says that if $f$
+\item\label{exer:3.1.23}{\scshape Numerical Quadrature.}\index{numerical quadrature}
+The fundamental theorem of calculus\index{fundamental theorem of calculus} says that if $f$
 is continuous on a closed interval $[a,b]$ then it has an
 antiderivative $F$ such that $F'(x)=f(x)$ on $[a,b]$  and
 \[
@@ -1235,17 +1237,17 @@ antiderivative $F$ such that $F'(x)=f(x)$ on $[a,b]$  and
 This solves the problem of evaluating a definite integral if
 the integrand $f$ has an antiderivative that can be found and
 evaluated easily. However, if $f$
-doesn't have this property,  (A) doesn't  provide a useful
+doesn't have this property, (A) doesn't  provide a useful
 way to evaluate the definite integral. In this case we must resort to
 approximate methods. There's a class of such methods called
-\emph{\color{blue}numerical quadrature}, where the approximation takes the
+\indexterm{numerical quadrature}, where the approximation takes the
 form
 \[
 \int_a^bf(x)\,dx\approx \sum_{i=0}^n c_if(x_i),\tag{B}
 \]
 where $a=x_0<x_1<\cdots<x_n=b$ are suitably chosen points and
 $c_0$, $c_1$, \dots, $c_n$
-are suitably chosen constants. We call (B)  a \emph{\color{blue}quadrature
+are suitably chosen constants. We call (B)  a \indexterm{quadrature
 formula}.
 \begin{alist}
 \item % (a)
@@ -1259,7 +1261,7 @@ by applying Euler's method to the initial value problem
 y'=f(x),\quad y(a)=0.
 \]
 \item % (b)
-The quadrature formula (C) is sometimes called \emph{\color{blue}the left
+The quadrature formula (C) is sometimes called the \indexterm{left
 rectangle rule}. Draw a figure that justifies this terminology.
 \item % (c)
 \Lex
@@ -1279,6 +1281,8 @@ and explain what you find.
 
 \section{The Improved Euler Method and Related Methods}
 \label{sec:improved_euler}
+\index{improved Euler method}
+\index{Euler method!improved}
 
 In \zcref{sec:euler_method} we saw that the global truncation error of
 Euler's method is $O(h)$, which would seem to imply that we can
@@ -1591,9 +1595,9 @@ values of the solution of
 y'-2xy=1,\quad y(0)=3
 \end{equation}
 at $x=0$, $0.2$, $0.4$, $0.6$, \dots, $2.0$ by
-(a) the improved Euler method; (b) the improved Euler
-semilinear method. (We used Euler's method and the Euler semilinear
-method on this problem in \zcref{example:3.1.4}.)
+(a) the improved Euler method\index{improved Euler method};
+(b) the improved Euler semilinear method\index{improved Euler semilinear method}.
+(We used Euler's method and the Euler semilinear method on this problem in \zcref{example:3.1.4}.)
 \end{example}
 
 \begin{alistSolution}
@@ -1706,6 +1710,8 @@ those obtained by the improved Euler method.
 \end{alistSolution}
 
 \boxit{A Family of Methods with $O(h^3)$ Local Truncation Error}
+\index{local truncation error!numerical methods with $O(h^3)$}
+\index{numerical methods with $O(h^3)$ local truncation error}
 
 We'll now derive a class of methods with $O(h^3)$ local truncation
 error for solving \eqref{eq:3.2.1}. For simplicity, we
@@ -1846,7 +1852,7 @@ y_{i+1}&=y_i+h[(1-\rho)k_{1,i}+\rho k_{2,i}].
 Consistent with our requirement that $0<\theta<1$, we require that
 $\rho\ge1/2$. Letting $\rho=1/2$ in \eqref{eq:3.2.13} yields the improved
 Euler method \eqref{eq:3.2.4}. Letting $\rho=3/4$ yields
-\personHref{Heun}{Heun's method},
+\personHref{Heun}{Heun's method}\index{Heun's method},
 \[
 y_{i+1}=y_i+h\left[\frac{1}{4}f(x_i,y_i)+\frac{3}{4}f\left(
 x_i+\frac{2}{3}h,y_i+\frac{2}{3}hf(x_i,y_i)\right)\right],
@@ -1857,8 +1863,7 @@ k_{1,i}&=(x_i,y_i),\\
 k_{2,i}&=f\left(x_i+\frac{2h}{3},y_i+\frac{2h}{3}k_{1,i}\right),\\
 y_{i+1}&=y_i+\frac{h}{4}(k_{1,i}+3k_{2,i}).
 \end{align*}
-Letting $\rho=1$ yields the \emph{\color{blue}midpoint
-method},
+Letting $\rho=1$ yields the \indexterm{midpoint method},
 \[
 y_{i+1}=y_i+hf\left(x_i+\frac{h}{2},y_i+\frac{h}{2}f(x_i,y_i)\right),
 \]
@@ -2111,7 +2116,7 @@ y'=f(x,y),\quad y(x_0)=y_0,
 \]
 then $y''$ and $y'''$ are bounded.
 
-\item\label{exer:3.2.32}{\sc Numerical Quadrature} (see {Exercise~3.1.\ref{exer:3.1.23}}).
+\item\label{exer:3.2.32}{\scshape Numerical Quadrature}\index{numerical quadrature} (see {Exercise~3.1.\ref{exer:3.1.23}}).
 \begin{alist}
 \item % (a)
 Derive the quadrature formula
@@ -2124,7 +2129,7 @@ by applying the improved Euler method to the initial value problem
 y'=f(x),\quad y(a)=0.
 \]
 \item % (b)
-The quadrature formula (A) is  called \emph{\color{blue}the trapezoid
+The quadrature formula (A) is  called the \indexterm{trapezoid
 rule}. Draw a figure that justifies this terminology.
 \item % (c)
 \Lex
@@ -2361,7 +2366,7 @@ We applied the improved Euler  method to this problem in
 
 \begin{example}\label{example:3.3.4}
 \zcref[S]{table:3.3.3,table:3.3.4} show results obtained by
-applying the Runge-Kutta and Runge-Kutta semilinear methods to
+applying the Runge-Kutta\index{Runge-Kutta method} and Runge-Kutta semilinear methods\index{Runge-Kutta semilinear method} to
 to the initial value problem
 \[
 y'-2xy=1,\ y(0)=3,
@@ -2892,7 +2897,7 @@ y=2x^2-\frac{12}{x^2},
 which can be obtained by the method discussed in \zcref{sec:linar_first_order}.
 
 
-\item\label{exer:3.3.28}{\sc Numerical Quadrature} (see
+\item\label{exer:3.3.28}{\scshape Numerical Quadrature}\index{numerical quadrature} (see
 {Exercise~3.1.\ref{exer:3.1.23}}).
 \begin{alist}
 \item % (a)
@@ -2908,7 +2913,7 @@ by applying the Runge-Kutta  method to the initial value problem
 y'=f(x),\quad y(a)=0.
 \]
 This quadrature formula is  called
-\personHref{Simpson}{Simpson's Rule}.
+\personHref{Simpson}{Simpson's Rule}\index{Simpson's rule}.
 \item % (b)
 \Lex
 For several choices of $a$, $b$, $A$, $B$, $C$, and $D$

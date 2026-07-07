@@ -101,6 +101,8 @@ $a > 0$, or \emph{\color{blue}decays exponentially} if $a < 0$
 
 
 \boxit{Radioactive Decay}
+\index{exponential growth and decay!radioactive decay}
+\index{growth and decay|see{exponential growth and decay}}
 
 Experimental evidence shows that radioactive material decays at a rate
 proportional to the mass of the material present. According to this
@@ -126,7 +128,7 @@ problem is
 Q=Q_0e^{-k(t-t_0)}.
 \end{equation}
 
-The \emph{\color{blue}half--life} $\tau$ of a radioactive material is defined to be
+The \indexterm{half-life} $\tau$ of a radioactive material is defined to be
 the time required for half of its mass to decay; that is, if
 $Q(t_0)=Q_0$, then \begin{equation} \label{eq:4.1.4} Q(\tau+t_0)=\frac{Q_0}{2}.
 \end{equation}
@@ -208,6 +210,8 @@ t_1=1620{\frac{\ln\frac83}{\ln2}}\approx  2292.4\text{ years}.
 \end{alistSolution}
 
 \boxit{Interest Compounded Continuously}
+\index{compound interest!continuous}
+\index{exponential growth and decay!continuous compound interest}
 
 Suppose we deposit an amount of money $Q_0$  in an
 interest-bearing account and make no further deposits or withdrawals
@@ -283,7 +287,7 @@ grows exponentially.
 \begin{example}\label{example:4.1.2}
 If \$150 is deposited in a bank that pays
 $5\frac{1}{2}$\% annual
-interest compounded continuously,  the value of the account after
+interest compounded continuously,\index{compound interest!continuous} the value of the account after
 $t$ years is
 \[
 Q(t)=150e^{.055t}
@@ -411,11 +415,11 @@ $\dfrac{a}{k}$ as $t\to\infty$}
 \end{alistSolution}
 
 
-\boxit{Carbon Dating}
+\boxit{Carbon Dating}\index{exponential growth and decay!carbon dating}\index{carbon dating}
 
 The fact that $Q$ approaches a steady state value in the
-situation discussed in \zcref{example:4.1.4} underlies the method of \emph{\color{blue}carbon
-dating}, devised by  the American chemist and Nobel Prize Winner
+situation discussed in \zcref{example:4.1.4} underlies the method of 
+\indexterm{carbon dating}, devised by  the American chemist and Nobel Prize Winner
 \personHref{Libby}{W.S.~Libby}.
 
 Carbon-12 is stable, but carbon-14, which is produced by cosmic
@@ -786,7 +790,7 @@ exact value  if
 \item\label{exer:4.1.23}Assume that the homebuyer of \zcref{exer:4.1.22} elects to repay the
 loan continuously at the rate of $\alpha M$ dollars per month,
 where $\alpha$ is a constant greater than 1.
-(This is called \emph{\color{blue}accelerated payment}.)
+(This is called \indexterm{accelerated payment}.)
 \begin{alist}
 \item % (a)
  Determine the time $T(\alpha)$ when the loan
@@ -849,7 +853,7 @@ units of mass per unit of time.
 
 \section{Cooling and Mixing}\label{sec:cooling_mixing}
 
-\boxit{Newton's Law of Cooling}
+\boxit{Newton's Law of Cooling}\index{Newton's law of cooling}
 
 Newton's law of cooling states that if an object with temperature
 $T(t)$ at time $t$ is in a medium with temperature $T_m(t)$,  the
@@ -1548,14 +1552,15 @@ Use numerical methods to  confirm  your guess in the these cases:
 
 \section{Elementary Mechanics}\label{sec:elementary_mechanics}
 
-\boxit{Newton's Second Law of Motion}
+\boxit{Newton's Second Law of Motion}\index{Newton's second law of motion}
 
 In this section we consider an object with constant mass $m$ moving
 along a line under a force $F$. Let $y=y(t)$ be the displacement of
 the object from a reference point on the line at time $t$, and let
 $v=v(t)$ and $a=a(t)$ be the velocity and acceleration of the object
 at time $t$. Thus, $v=y'$ and $a=v'=y''$, where the prime denotes
-differentiation with respect to $t$. Newton's second law of motion
+differentiation with respect to $t$.
+Newton's second law of motion\index{Newton's second law of motion}
 asserts that the force $F$ and the acceleration $a$ are related by the
 equation
 \begin{equation}\label{eq:4.3.1}
@@ -1588,14 +1593,16 @@ British & foot (\unit{\feet}) & pound (\unit{\pound}) & slug (sl)\\
 \end{table}
 
 If we assume that Earth is a perfect sphere with constant mass
-density,  Newton's law of gravitation (discussed later in this
-section) asserts that the force exerted on an object by Earth's
+density,  Newton's law of gravitation\index{Newton's law of gravitation} (discussed later in this
+section)
+% WHERE?
+asserts that the force exerted on an object by Earth's
 gravitational field is proportional to the mass of the object and
 inversely proportional to the square of its  distance from the
 center of Earth. However, if the object remains sufficiently close to
 Earth's surface, we may assume that the gravitational force is
 constant and equal to its value at the surface. The magnitude of this
-force is $mg$, where $g$ is called the \emph{\color{blue}acceleration due to
+force is $mg$, where $g$ is called the \indexterm{acceleration due to
 gravity}. (To be completely accurate, $g$ should be called the
 \emph{\color{blue}magnitude of the acceleration due to gravity at Earth's surface}.)
 This quantity has been determined experimentally. Approximate
@@ -1643,7 +1650,7 @@ Earth's surface and take the upward direction to be positive, so
  the gravitational force can be assumed to have the constant value
  $-mg$. We'll see that, under reasonable assumptions on the
 resisting force, the velocity approaches a limit as $t\to\infty$.
-We call this limit the \emph{\color{blue}terminal velocity}.
+We call this limit the \indexterm{terminal velocity}.
 
 \begin{example}\label{example:4.3.1}
 An object with mass $m$ moves under constant gravitational force
@@ -1968,7 +1975,7 @@ $v_0>0$}
 \end{figure}
 
 
-\boxit{Escape Velocity}
+\boxit{Escape Velocity}\index{escape velocity}
 
 Suppose a space vehicle is launched vertically and its fuel is
 exhausted when the vehicle reaches an altitude $h$ above Earth, where
@@ -2016,7 +2023,7 @@ so \eqref{eq:4.3.19} implies that
 \end{equation}
 
 We'll show that there's a number $v_e$, called the
-\emph{\color{blue}escape velocity}, with these properties:
+\indexterm{escape velocity}, with these properties:
 
 \begin{enumerate}
 \item If $v_0\ge v_e$ then $v(t)>0$ for all $t>0$, and the vehicle
@@ -2262,7 +2269,7 @@ force due to gravity is given by Newton's law of gravitation. Take the
 upward direction to be positive.}
 
 \item\label{exer:4.3.17}A space probe is to be launched from a space station 200
-miles above Earth.  Determine its escape velocity in
+miles above Earth.  Determine its escape velocity\index{escape velocity|(} in
 miles/s.  Take Earth's radius to be 3960 miles.
 
 \item\label{exer:4.3.18}A space vehicle is to be launched from the moon, which has a
@@ -2297,7 +2304,7 @@ equal times to climb from $y=h$ to $y=y_m$ and to
 fall back from $y=y_m$ to $y=h$.
 \end{alist}
 
-\item\label{exer:4.3.20}In the situation considered in the discussion of escape velocity, show
+\item\label{exer:4.3.20}In the situation considered in the discussion of escape velocity\index{escape velocity|)}, show
 that $\lim_{t\to\infty}y(t)=\infty$ if $v(t)>0$ for all $t>0$.
 
 
@@ -2310,6 +2317,8 @@ all $t>0$.}
 
 
 \section{Autonomous Second Order Equations}\label{sec:auto_second_order}
+\index{autonomous second order equation}
+\index{first order equation!autonomous second order equation converted to}
 
 A second order differential equation that can be written as
 \begin{equation} \label{eq:4.4.1}
@@ -2332,12 +2341,12 @@ v\frac{dv}{dy}=F(y,v).
 \end{equation}
 The integral curves of \eqref{eq:4.4.4} can be plotted in the $(y,v)$
 plane, which is called the
-\personHref{Poincare}{Poincaré phase plane} of \eqref{eq:4.4.1}. If $y$ is a solution of
+\personHref{Poincare}{Poincaré phase plane}\index{Poincaré phase plane}\index{Poincaré, Henri} of \eqref{eq:4.4.1}. If $y$ is a solution of
 \eqref{eq:4.4.1}
 then $y=y(t), v=y'(t)$ is a parametric equation for an integral curve
 of \eqref{eq:4.4.4}. We'll call these integral curves
 \emph{\color{blue}trajectories} of \eqref{eq:4.4.1}, and we'll call
-\eqref{eq:4.4.4} the \emph{\color{blue}phase plane equivalent} of \eqref{eq:4.4.1}.
+\eqref{eq:4.4.4} the \indexterm{phase plane equivalent} of \eqref{eq:4.4.1}.
 
 In this section we'll consider  autonomous equations
 that can be written as
@@ -2356,7 +2365,7 @@ $-mq(y,y')y'$, where $q(y,y')$ is usually a positive function and
 we've put the factor $y'$ outside  to make it
 explicit that the force
 is in the direction opposing the motion. In this case Newton's second
-law of motion leads to \eqref{eq:4.4.5}.
+law of motion\index{Newton's second law of motion} leads to \eqref{eq:4.4.5}.
 
 The phase plane equivalent of \eqref{eq:4.4.5} is
 \begin{equation} \label{eq:4.4.6}
@@ -2403,8 +2412,8 @@ period $T$; that is, $y(t+T)=y(t)$ for all $t$ in $(-\infty,\infty)$.
 
 If $\overline y$ is a constant such that $p(\overline y)=0$ then
 $y\equiv\overline y$ is a constant solution of \eqref{eq:4.4.5}. We say
-that $\overline y$ is an \emph{\color{blue}equilibrium} of \eqref{eq:4.4.5} and
- $(\overline y,0)$ is a \emph{\color{blue}critical point} of the phase plane
+that $\overline y$ is an \indexterm{equilibrium} of \eqref{eq:4.4.5} and
+ $(\overline y,0)$ is a \indexterm{critical point} of the phase plane
 equivalent equation \eqref{eq:4.4.6}. We say that the equilibrium and
 the critical point are \emph{\color{blue}stable} if, for any given $\epsilon>0$
 \emph{\color{blue}no matter how small}, there's a $\delta>0$,
@@ -2502,7 +2511,7 @@ $\Delta L$ (positive or negative), then the spring exerts an opposing
 force with magnitude $k|\Delta L|$, where k is a positive constant. In
 \zcref{sec:spring_i} it will be shown that if the mass of the spring
 is negligible compared to $m$ and no other forces act on the object then
-Newton's second law of motion implies that
+Newton's second law of motion\index{Newton's second law of motion} implies that
 \begin{equation} \label{eq:4.4.9}
 my''=-ky,
 \end{equation}
@@ -2722,7 +2731,7 @@ if $v_0=\pm v_c$. (\zcref{exer:4.4.21}) .
 
 Since the dashed curves separate trajectories of whirling solutions
 from trajectories of oscillating solutions, each of these curves is
-called a \emph{\color{blue}separatrix}.
+called a \indexterm{separatrix}.
 
 In general, if \eqref{eq:4.4.7} has both stable and unstable equilibria
 then the separatrices are the curves given by \eqref{eq:4.4.8} that pass
@@ -2736,10 +2745,10 @@ defines a separatrix passing through $(\overline y,0)$.
 
 \begin{figure}
   \centering
-  \includegraphics[alt={The y v plane with several solution curves that are symmetric about both axes.  Dashed lines connect (-π,0) to (π,0) by going through (0,±1).  Inside the dashed lines, several ellipses are centered at the origin.  Outside the dashed lines, solution curves move horizontally through the plane.},
+  \includegraphics[alt={The y v plane with several solution curves that are symmetric about both axes.  Dashed separatrices connect (-π,0) to (π,0) by going through (0,±1).  Inside the separatrices, several ellipses are centered at the origin.  Outside the separatrices, solution curves move horizontally through the plane.},
   width=2.83in,height=1.83in,keepaspectratio]{fig040407}
 \color{blue}
-\caption{ Trajectories of the undamped pendulum}
+\caption{Trajectories of the undamped pendulum}\index{separatrix}
   \label{figure:4.4.7}
 \end{figure}
 
@@ -2967,7 +2976,7 @@ changes in its length. Now we'll assume that some mechanism (for
 example, friction in the spring or atmospheric resistance) opposes the
 motion of the object with a force proportional to its velocity. In
 \zcref{sec:spring_i} it will be shown that in this case Newton's
-second law of motion implies that
+second law of motion\index{Newton's second law of motion} implies that
 \begin{equation} \label{eq:4.4.27}
 my''+cy'+ky=0,
 \end{equation}
@@ -3153,7 +3162,7 @@ damping.}
 
 \begin{exerciselist}
 \item\label{exer:4.4.19}\Lex
-The \personHref{Van_der_Pol}{van der Pol equation}
+The \personHref{Van_der_Pol}{van der Pol equation}\index{van der Pol equation}
 \[
 y''-\mu(1-y^2)y'+y=0,\tag{A}
 \]
@@ -3164,7 +3173,7 @@ $-\mu(1-y^2)y'$ works to reduce $|y|$ if $|y|<1$ or to increase $|y|$
 if
 $|y|>1$. It can be shown that van der
 Pol's equation has exactly one closed trajectory, which is called a
-\emph{\color{blue}limit cycle}. Trajectories inside the limit cycle spiral
+\indexterm{limit cycle}. Trajectories inside the limit cycle spiral
 outward to it, while trajectories outside the limit cycle spiral
 inward to it (\zcref{figure:4.4.16}). Use your favorite
 differential equations software  to verify this for
@@ -3179,7 +3188,7 @@ $\mu=.5,1.1.5,2$. Use a grid with $-4<y<4$ and $-4<v<4$.
 \end{figure}
 
 \item\label{exer:4.4.20}\Lex
-\personHref{Rayleigh}{Rayleigh's equation},
+\personHref{Rayleigh}{Rayleigh's equation}\index{Rayleigh's equation}\index{Rayleigh, Lord},
 \[
 y''-\mu(1-(y')^2/3)y'+y=0
 \]
@@ -3464,7 +3473,7 @@ The next example shows that members of a given family of curves
 may be obtained by joining  integral curves for more than one
 differential equation.
 
-\begin{example}\label{example:4.5.6}
+\begin{example}\label{example:4.5.6}\index{tangent lines}
 \begin{alist}
 \item %(a)
 Try to find a differential equation for the family of lines tangent
@@ -3714,7 +3723,7 @@ $y=c$. \zcref[S]{figure:4.5.9} shows the graphs for $c\ne0$.
 \end{solution}
 
 
-\boxit{Orthogonal Trajectories}
+\boxit{Orthogonal Trajectories}\index{orthogonal trajectories}\index{trajectories!orthogonal}
 
 Two curves $C_1$ and $C_2$ are said to be \emph{orthogonal} at a
 point of intersection $(x_0,y_0)$ if they have perpendicular tangents
@@ -3751,13 +3760,13 @@ curves defined by
 \begin{equation} \label{eq:4.5.16}
 u(x,y)=c
 \end{equation}
-are called \emph{\color{blue}isothermal} curves. The orthogonal trajectories of
-this family are called \emph{\color{blue}heat-flow} lines, because at any given
+are called \indexterm{isothermal curves}\index{isothermals}\index{curves!isothermal}. The orthogonal trajectories of
+this family are called \indexterm{heat-flow lines}, because at any given
 point the direction of maximum heat flow is perpendicular to the
 isothermal through the point. If $u$ represents the potential energy
 of an object moving under a force that depends upon $(x,y)$,  the
-curves \eqref{eq:4.5.16} are called \emph{\color{blue}equipotentials}, and the
-orthogonal trajectories are called \emph{\color{blue}lines of force}.
+curves \eqref{eq:4.5.16} are called \indexterm{equipotentials}\index{equipotential curves}\index{curves!equipotential}, and the
+orthogonal trajectories are called \indexterm{lines of force}.
 
 From analytic geometry we know that two nonvertical lines $L_1$ and
 $L_2$ with slopes $m_1$ and $m_2$, respectively, are perpendicular if
@@ -3781,6 +3790,7 @@ This suggests a  method for finding orthogonal trajectories
 of a family of integral curves of a first order equation.
 
 \begin{center}{\bfseries Finding Orthogonal Trajectories}\end{center}
+\index{orthogonal trajectories}
 
 \begin{enumext}[
   label=\arabic*,
