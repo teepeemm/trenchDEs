@@ -28,6 +28,7 @@ experiencing motion under a central force.
 \newpage
 
 \section{Spring Problems I}\label{sec:spring_i}
+\index{spring problems}
 
 We consider the motion of an object of mass $m$, suspended from a
 spring of negligible mass. We say that the spring-mass system is
@@ -96,7 +97,7 @@ if $F\not\equiv0$.
 
 
 
-From Newton's second law of motion\index{Newton's second law of motion},
+From Newton's second law of motion\index{Newton's!second law of motion},
 \begin{equation}\label{eq:6.1.1}
 my''=-mg+F_d+F_s+F=-mg-cy'+F_s+F.
 \end{equation}
@@ -131,6 +132,7 @@ We call this \emph{\color{blue}the equation of motion}.
 
 
 \boxit{Simple Harmonic Motion}
+\index{simple harmonic motion}
 
 Throughout the rest of this section we'll consider spring-mass
 systems without damping; that is, $c=0$. We'll consider systems with
@@ -374,6 +376,9 @@ Therefore $\phi$ is in the second quadrant and
 
 
 \boxit{Undamped Forced Oscillation}
+\index{undamped oscillation!forced}
+\index{forced oscillation!undamped}
+\index{oscillation!undamped forced}
 
 In many mechanical problems a device is subjected to periodic external
 forces. For example, soldiers marching in cadence on a bridge cause
@@ -729,8 +734,12 @@ other. How are the two spring constants related?
 
 
 \section{Spring Problems II}\label{sec:spring_ii}
+\index{spring problems}
 
 \boxit{Free Vibrations With Damping}
+\index{free vibrations with damping}
+\index{damping!free vibrations with}
+\index{vibrations!free with damping}
 
 In this section we consider the motion of an object in a spring-mass
 system with damping. We start with unforced motion, so the equation of
@@ -760,6 +769,8 @@ negative, or zero. We'll now consider these three cases.
 
 
 \boxit{Underdamped Motion}
+\index{underdamped motion}
+\index{motion!underdamped}
 
 We say the motion is \emph{\color{blue}underdamped} if $c<\sqrt{4mk}$. In this
 case $r_1$ and $r_2$ in \eqref{eq:6.2.2} are complex conjugates, which we
@@ -805,6 +816,8 @@ oscillates between the dashed exponential curves $y=\pm Re^{-ct/2m}$.
 
 
 \boxit{Overdamped Motion}
+\index{overdamped motion}
+\index{motion!overdamped}
 
 We say the motion is \emph{\color{blue}overdamped} if $c>\sqrt{4mk}$. In this
 case the zeros $r_1$ and $r_2$ of the characteristic polynomial are
@@ -820,6 +833,8 @@ equal zero for more than one value of $t$ unless $c_1=c_2=0$.
 
 
 \boxit{Critically Damped Motion}
+\index{critically damped motion}
+\index{motion!critically damped}
 
 We say the motion is \emph{\color{blue}critically damped} if $c=\sqrt{4mk}$. In
 this case $r_1=r_2=-c/2m$ and the general solution of \eqref{eq:6.2.1} is
@@ -1025,6 +1040,9 @@ as the solution of the given initial value problem
 
 
 \boxit{Forced Vibrations With Damping}
+\index{forced vibrations with damping}
+\index{damping!forced vibrations with}
+\index{vibrations!forced with damping}
 
 Now we consider the motion of an object in a spring-mass system with
 damping, under the influence of a periodic forcing function
@@ -1125,10 +1143,10 @@ y_c&=c_1e^{r_1t}+c_2e^{r_2t}\,(r_1,r_2<0).
 \end{align*}
 In all three cases $\lim_{t\to\infty} y_c(t)=0$ for any choice of
 $c_1$ and $c_2$. For this reason we say that $y_c$ is the
-\indexterm{transient component} of the solution $y$.
+\emph{\color{blue}transient component}\index{transient!component} of the solution $y$.
 The behavior of $y$ for
 large $t$ is determined by $y_p$, which we call the \emph{\color{blue}steady state
-component} of $y$. Thus, for large $t$ the motion is like simple
+component}\index{steady state!component} of $y$. Thus, for large $t$ the motion is like simple
 harmonic motion at the frequency of the external force.
 
 The amplitude of $y_p$ in \eqref{eq:6.2.17} is
@@ -1374,7 +1392,7 @@ y=e^{r_1t}(c_1+c_2t)\,(r_1<0).
 
 
 \section{The \texorpdfstring{$RLC$}{RLC} Circuit}\label{sec:rlc}
-\index{circuit, RLC|see{RLC circuit}}
+\index{circuit!RLC}\index{RLC circuit}
 
 In this section we consider the \emph{\color{blue}$RLC$ circuit}, shown
 schematically in \zcref{figure:6.3.1}. As we'll see, the $RLC$
@@ -1465,7 +1483,9 @@ Symbol&Name&Unit\\\midrule
 $E$  &  Impressed Voltage & volt \unit\volt  \\
 $I$ & Current & ampere (\unit\ampere)\\
 $Q$ & Charge & coulomb (\unit\coulomb)\\
-$R$ & Resistance& ohm (\unit\ohm)\\
+$R$ & Resistance& ohm (\(\Omega\))\\
+% todo see https://github.com/josephwright/siunitx/issues/873
+%$R$ & Resistance& ohm (\unit\ohm)\\
 $L$ & Inductance& henry (\unit\henry)\\
 $C$ & Capacitance&farad (\unit\farad)\\
 \bottomrule
@@ -1512,11 +1532,11 @@ electrical and mechanical quantities connected with \eqref{eq:6.3.6} and
 \multicolumn{2}{c}{Electrical}&
 \multicolumn{2}{c}{Mechanical}\\\cmidrule(r){1-2}\cmidrule(l){3-4}
 charge& $Q$& displacement&$y$\\
-curent&$I$&velocity&$y'$\\
+current&$I$&velocity&$y'$\\
 impressed voltage&$E(t)$&external force&$F(t)$\\
 inductance&$L$&Mass&$m$\\
 resistance&$R$&damping&$c$\\
-1/capacitance&$1/C$&cpring constant&$k$\\
+1/capacitance&$1/C$&spring constant&$k$\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1531,6 +1551,8 @@ notation, according to \zcref{table:6.3.1}.
 
 
 \boxit{Free Oscillations}
+\index{free oscillations}
+\index{oscillation!free}
 
 We say that an $RLC$ circuit is in \emph{\color{blue}free oscillation} if $E(t)=0$
 for $t>0$, so that \eqref{eq:6.3.6} becomes
@@ -1611,7 +1633,7 @@ value problem
  LQ''+RQ'+\frac{1}{C}Q=0,\quad Q(0)=Q_0,\quad Q'(0)=I_0,
 \]
 approaches zero exponentially as $t\to\infty$. Thus, all such
-solutions are \emph{\color{blue}transient}\index{transient solution}, in the sense defined
+solutions are \emph{\color{blue}transient}\index{transient!solution}, in the sense defined
 \zcref{sec:spring_ii} in the discussion of forced vibrations of a
 spring-mass system with damping.
 
@@ -1668,6 +1690,9 @@ I=e^{-100t}(2\cos200t-251\sin200t).\qedhere
 
 
 \boxit{Forced Oscillations With Damping}
+\index{forced oscillation!with damping}
+\index{oscillation!forced with damping}
+\index{damping!forced oscillation with}
 
 An initial value problem for \eqref{eq:6.3.6}  has the form
 \begin{equation} \label{eq:6.3.17}
@@ -1684,8 +1709,8 @@ independent of the initial conditions. As in the case of forced
 oscillations of a spring-mass system with damping, we call $Q_p$ the
 \emph{\color{blue}steady state}\index{charge!steady state} charge on the capacitor of the $RLC$ circuit. Since
 $I=Q'=Q_c'+Q_p'$ and $Q_c'$ also tends to zero exponentially as
-$t\to\infty$, we say that $I_c=Q'_c$ is the \indexterm{transient current}\index{current!transient}
-and $I_p=Q_p'$ is the \emph{\color{blue}steady state} current\index{steady state current}\index{current!steady state}. In most
+$t\to\infty$, we say that $I_c=Q'_c$ is the \emph{\color{blue}transient current}\index{current!transient}\index{transient!current}
+and $I_p=Q_p'$ is the \emph{\color{blue}steady state} current\index{steady state!current}\index{current!steady state}. In most
 applications we're interested only in the steady state charge and
 current.
 
@@ -1814,6 +1839,8 @@ $\dfrac{1}{20}Q''+4Q'+125Q=U\cos\omega t+V\sin\omega t$
 
 
 \section{Motion Under a Central Force}\label{sec:central_force}
+\index{motion!under a central force}
+\index{central force!motion under}
 
 We'll now study the motion of a object moving under the influence
 of a \emph{\color{blue}central force}; that is, a force whose magnitude at any
@@ -1825,7 +1852,7 @@ at every point is toward the origin.
  Gravitational forces are central
 forces;   for example, as mentioned in \zcref{sec:elementary_mechanics}, if we
 assume that Earth is a perfect sphere with constant mass density then
-Newton's law of gravitation\index{Newton's law of gravitation} asserts that the force exerted on an
+Newton's law of gravitation\index{Newton's!law of gravitation} asserts that the force exerted on an
 object by Earth's gravitational field is proportional to the mass of
 the object and inversely proportional to the square of its distance
 from the center of Earth, which we take to be the origin.
@@ -1872,7 +1899,7 @@ and $h$ is a constant defined below.
 
 
 
-Newton's second law of motion\index{Newton's second law of motion} ($\vect{F}=m\vect{a}$) says that the polar
+Newton's second law of motion\index{Newton's!second law of motion} ($\vect{F}=m\vect{a}$) says that the polar
 coordinates
 $r=r(t)$ and $\theta=\theta(t)$ of
 the particle  satisfy the vector differential equation
@@ -2050,6 +2077,8 @@ which completes the proof.
 
 
 \boxit{Motion Under an Inverse Square Law Force}
+\index{motion!with inverse square law force}
+\index{inverse square law force!motion with}
 
 In the special case where
  $f(r)=-mk/r^2=-mku^2$, so $\vect{F}$  can be interpreted

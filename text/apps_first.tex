@@ -18,6 +18,8 @@ at a certain
 rate, but decays at a rate proportional to its mass, or a saver
 makes regular deposits in a savings account that draws compound
 interest.
+\index{growth|see{exponential growth}}
+\index{decay|see{exponential decay}}
 
 
 \medskip\noindent
@@ -51,6 +53,8 @@ differential equations to curves.
 
 
 \section{Growth and Decay}\label{sec:growth_decay}
+\index{exponential growth and decay}
+%\index{growth and decay}
 
 Since the applications in this section deal with functions of time, we'll
  denote the independent variable by $t$. If $Q$ is a function of
@@ -62,6 +66,8 @@ Q'=\frac{dQ}{dt}.
 
 
 \boxit{Exponential Growth and Decay}
+\index{exponential growth and decay}
+%\index{growth and decay!exponential}
 
 One of the most common mathematical models for a physical process is
 the \emph{\color{blue}exponential model}, where it's assumed that the rate
@@ -101,8 +107,7 @@ $a > 0$, or \emph{\color{blue}decays exponentially} if $a < 0$
 
 
 \boxit{Radioactive Decay}
-\index{exponential growth and decay!radioactive decay}
-\index{growth and decay|see{exponential growth and decay}}
+\index{exponential decay!radioactive decay}
 
 Experimental evidence shows that radioactive material decays at a rate
 proportional to the mass of the material present. According to this
@@ -211,7 +216,7 @@ t_1=1620{\frac{\ln\frac83}{\ln2}}\approx  2292.4\text{ years}.
 
 \boxit{Interest Compounded Continuously}
 \index{compound interest!continuous}
-\index{exponential growth and decay!continuous compound interest}
+\index{exponential growth!continuous compound interest}
 
 Suppose we deposit an amount of money $Q_0$  in an
 interest-bearing account and make no further deposits or withdrawals
@@ -325,6 +330,8 @@ Q_0=10000e^{-.55} \approx \$5769.50.\qedhere
 
 
 \boxit{Mixed Growth and Decay}
+\index{exponential growth and decay!mixed}
+\index{mixed exponential growth and decay}
 
 \begin{example}\label{example:4.1.4}
 A radioactive substance with decay constant $k$ is produced at a
@@ -415,7 +422,7 @@ $\dfrac{a}{k}$ as $t\to\infty$}
 \end{alistSolution}
 
 
-\boxit{Carbon Dating}\index{exponential growth and decay!carbon dating}\index{carbon dating}
+\boxit{Carbon Dating}\index{exponential decay!carbon dating}\index{carbon dating}
 
 The fact that $Q$ approaches a steady state value in the
 situation discussed in \zcref{example:4.1.4} underlies the method of 
@@ -487,6 +494,8 @@ and lasted for about 400 years.
 
 
 \boxit{A Savings Program}
+\index{savings program}
+\index{exponential growth!savings program}
 
 \begin{example}\label{example:4.1.6}
 A person opens a savings account with an initial deposit of \$1000 and
@@ -852,8 +861,10 @@ units of mass per unit of time.
 
 
 \section{Cooling and Mixing}\label{sec:cooling_mixing}
+\index{cooling and mixing}
+\index{mixing and cooling}
 
-\boxit{Newton's Law of Cooling}\index{Newton's law of cooling}
+\boxit{Newton's Law of Cooling}\index{Newton's!law of cooling}
 
 Newton's law of cooling states that if an object with temperature
 $T(t)$ at time $t$ is in a medium with temperature $T_m(t)$,  the
@@ -1015,6 +1026,7 @@ at 11:02:55.
 
 
 \boxit{Mixing Problems}
+\index{mixing problems}
 
 In the next two examples a saltwater solution with a given
 concentration (weight of salt per unit volume of solution) is added at
@@ -1551,8 +1563,9 @@ Use numerical methods to  confirm  your guess in the these cases:
 
 
 \section{Elementary Mechanics}\label{sec:elementary_mechanics}
+\index{elementary mechanics}
 
-\boxit{Newton's Second Law of Motion}\index{Newton's second law of motion}
+\boxit{Newton's Second Law of Motion}\index{Newton's!second law of motion}
 
 In this section we consider an object with constant mass $m$ moving
 along a line under a force $F$. Let $y=y(t)$ be the displacement of
@@ -1560,7 +1573,7 @@ the object from a reference point on the line at time $t$, and let
 $v=v(t)$ and $a=a(t)$ be the velocity and acceleration of the object
 at time $t$. Thus, $v=y'$ and $a=v'=y''$, where the prime denotes
 differentiation with respect to $t$.
-Newton's second law of motion\index{Newton's second law of motion}
+Newton's second law of motion\index{Newton's!second law of motion}
 asserts that the force $F$ and the acceleration $a$ are related by the
 equation
 \begin{equation}\label{eq:4.3.1}
@@ -1568,7 +1581,7 @@ F=ma.
 \end{equation}
 
 
-\boxit{Units}
+\boxit{Units}\index{units}
 
 In applications there are three main sets of units in use for length,
 mass, force, and time: the cgs, mks, and British systems. All three
@@ -1581,7 +1594,8 @@ mass.
 
 \begin{table}
 \centering
-\caption{Units of measurement in various systems}\label{table:units}
+\caption{Units of measurement in various systems%
+\index{cgs units}\index{mks units}\index{British units}}\label{table:units}
 \tagpdfsetup{table/header-rows={1}}
 \begin{tabular}{cccc}\toprule
 & Length & Force & Mass \\\midrule
@@ -1593,7 +1607,7 @@ British & foot (\unit{\feet}) & pound (\unit{\pound}) & slug (sl)\\
 \end{table}
 
 If we assume that Earth is a perfect sphere with constant mass
-density,  Newton's law of gravitation\index{Newton's law of gravitation} (discussed later in this
+density,  Newton's law of gravitation\index{Newton's!law of gravitation} (discussed later in this
 section)
 % WHERE?
 asserts that the force exerted on an object by Earth's
@@ -1642,6 +1656,7 @@ through a resisting medium.
 
 \boxit{Motion Through a Resisting Medium Under Constant
 Gravitational Force}
+\index{motion!through resisting medium and gravity}
 
 Now we consider an object moving vertically in some medium. We assume
 that the only forces acting on the object are gravity and resistance
@@ -2318,6 +2333,7 @@ all $t>0$.}
 
 \section{Autonomous Second Order Equations}\label{sec:auto_second_order}
 \index{autonomous second order equation}
+\index{second order equation!autonomous}
 \index{first order equation!autonomous second order equation converted to}
 
 A second order differential equation that can be written as
@@ -2365,7 +2381,7 @@ $-mq(y,y')y'$, where $q(y,y')$ is usually a positive function and
 we've put the factor $y'$ outside  to make it
 explicit that the force
 is in the direction opposing the motion. In this case Newton's second
-law of motion\index{Newton's second law of motion} leads to \eqref{eq:4.4.5}.
+law of motion\index{Newton's!second law of motion} leads to \eqref{eq:4.4.5}.
 
 The phase plane equivalent of \eqref{eq:4.4.5} is
 \begin{equation} \label{eq:4.4.6}
@@ -2454,6 +2470,9 @@ the following examples.
 
 
 \boxit{The Undamped Case}
+\index{undamped second order equation!autonomous}
+\index{autonomous second order equation!undamped}
+\index{second order equation!undamped autonomous}
 
 We'll begin with the case where $q\equiv0$, so  \eqref{eq:4.4.5}
 reduces to
@@ -2511,7 +2530,7 @@ $\Delta L$ (positive or negative), then the spring exerts an opposing
 force with magnitude $k|\Delta L|$, where k is a positive constant. In
 \zcref{sec:spring_i} it will be shown that if the mass of the spring
 is negligible compared to $m$ and no other forces act on the object then
-Newton's second law of motion\index{Newton's second law of motion} implies that
+Newton's second law of motion\index{Newton's!second law of motion} implies that
 \begin{equation} \label{eq:4.4.9}
 my''=-ky,
 \end{equation}
@@ -2774,6 +2793,9 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig040409}
 
 
 \boxit{Stability and Instability Conditions for $y''+p(y)=0$}
+\index{stability condition!for second order undamped autonomous equation}
+\index{instability condition!for second order undamped autonomous equation}
+\index{second order undamped autonomous equation!stability condition}
 
 It can be shown (\zcref{exer:4.4.23}) that an equilibrium
 $\overline y$ of an undamped equation
@@ -2915,6 +2937,9 @@ behavior:
 
 
 \boxit{The Damped Case}
+\index{damped second order equation!autonomous}
+\index{autonomous second order equation!damped}
+\index{second order equation!damped autonomous}
 
 The phase plane equivalent of the damped autonomous equation
 \begin{equation} \label{eq:4.4.24}
@@ -2968,6 +2993,8 @@ however, there are situations where  $c$ may be negative.
 
 
 \boxit{The Damped Spring-Mass System}
+\index{damped spring-mass system}
+\index{spring-mass system!damped}
 
 Earlier we considered
 the spring-mass system under the assumption that the only forces
@@ -2976,7 +3003,7 @@ changes in its length. Now we'll assume that some mechanism (for
 example, friction in the spring or atmospheric resistance) opposes the
 motion of the object with a force proportional to its velocity. In
 \zcref{sec:spring_i} it will be shown that in this case Newton's
-second law of motion\index{Newton's second law of motion} implies that
+second law of motion\index{Newton's!second law of motion} implies that
 \begin{equation} \label{eq:4.4.27}
 my''+cy'+ky=0,
 \end{equation}
@@ -3317,6 +3344,8 @@ y$, then $\overline y$ is an unstable equilibrium of $y''+p(y)=0$.
 \section{Applications to Curves}\label{sec:app_curves}
 
 \boxit{One-Parameter Families of Curves}
+\index{one-parameter family of curves}
+\index{family of curves!one-parameter}
 
 We begin with two examples of families of curves generated by varying
 a parameter over a set of real numbers.
@@ -3594,6 +3623,7 @@ which is tangent to the parabola at $(x_0,x_0^2)=(1,1)$, as shown in
 
 
 \boxit{Geometric Problems}
+\index{geometric problems}
 
 We now consider some geometric problems that can be solved by means of
 differential equations.
@@ -3723,7 +3753,8 @@ $y=c$. \zcref[S]{figure:4.5.9} shows the graphs for $c\ne0$.
 \end{solution}
 
 
-\boxit{Orthogonal Trajectories}\index{orthogonal trajectories}\index{trajectories!orthogonal}
+\boxit{Orthogonal Trajectories}
+\index{orthogonal trajectories}\index{trajectories!orthogonal}
 
 Two curves $C_1$ and $C_2$ are said to be \emph{orthogonal} at a
 point of intersection $(x_0,y_0)$ if they have perpendicular tangents

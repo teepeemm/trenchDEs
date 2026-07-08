@@ -68,8 +68,10 @@ impulsive forcing functions.
 
 
 \section{Introduction to the Laplace Transform}\label{sec:laplace_intro}
+\index{Laplace transform!introduction}
 
 \boxit{Definition of the Laplace Transform}
+\index{Laplace transform!definition}
 
 To define the Laplace transform, we first recall the definition of an
 improper integral. If $g$ is integrable over the
@@ -113,6 +115,7 @@ for all $s>s_0$ (\zcref{exer:8.1.14}(b)).
 
 
 \boxit{Computation of Some Simple Laplace Transforms}
+\index{Laplace transform!simple computation}
 
 \begin{example}\label{example:8.1.1}
  Find the Laplace transform of  $f(t)=1$.
@@ -281,6 +284,7 @@ F(s)=\frac{\omega}{s^2+\omega^2},\quad s>0.\qedhere
 
 
 \boxit{Tables of Laplace transforms}
+\index{Laplace transform!table}
 
 Extensive tables of Laplace transforms have been compiled and are
 commonly used in applications. The brief table of Laplace transforms
@@ -310,6 +314,8 @@ should refer to the table of Laplace transforms.
 
 
 \boxit{Linearity of the Laplace Transform}
+\index{Laplace transform!linearity}
+\index{linearity!of Laplace transform}
 
 The next theorem presents an important property of the Laplace
 transform.
@@ -370,6 +376,10 @@ last expression in \eqref{eq:8.1.9} yields
 
 
 \boxit{The First Shifting Theorem}
+\index{first shifting theorem}
+\index{shifting theorem!first}
+\index{Laplace transform!first shifting theorem}
+\index{Laplace transform!shifting theorem!first}
 
 The next theorem enables us to start with known transform pairs and derive
 others. (For other results of this kind, see \zcref{exer:8.1.6,exer:8.1.13}.)
@@ -428,6 +438,8 @@ $e^{\lambda t}\sin\omega t\leftrightarrow\dfrac{s-\lambda}{(s-\lambda)^2+\omega^
 \end{solution}
 
 \boxit{Existence of Laplace Transforms}
+\index{Laplace transform!existence}
+\index{existence!Laplace transform}
 
 Not every function has a Laplace transform.  For example, it can be shown
 (\zcref{exer:8.1.3}) that
@@ -951,8 +963,11 @@ f(t+2\pi)=f(t)}$
 
 
 \section{The Inverse Laplace Transform}\label{sec:inverse_laplace}
+\index{Laplace transform!inverse}
 
 \boxit{Definition of the Inverse Laplace Transform}
+\index{Laplace transform!inverse!definition}
+\index{inverse Laplace transform!definition}
 
 In \zcref{sec:laplace_intro} we defined the Laplace transform
 of
@@ -1078,6 +1093,8 @@ cases you should refer to the table of Laplace transforms in \zcref{sec:laplace_
 
 
 \boxit{Inverse Laplace Transforms of Rational Functions}
+\index{inverse Laplace transform!rational functions}
+\index{Laplace transform!inverse!rational functions}
 
 Using the Laplace transform to
  solve differential equations
@@ -1544,8 +1561,12 @@ Explain how the results of (a) and (b) are related.
 
 
 \section{Solution of Initial Value Problems}\label{sec:laplace_ivp}
+\index{Laplace transform!solution of initial value problems}
+\index{solution of initial value problems!Laplace transform}
 
 \boxit{Laplace Transforms of Derivatives}
+\index{Laplace transform!of derivatives}
+\index{derivatives!Laplace transform of}
 
 In the rest of this chapter we'll use the Laplace transform to solve
 initial value problems for constant coefficient second order
@@ -1691,6 +1712,8 @@ Substituting \eqref{eq:8.3.4} into this yields
 
 
 \boxit{Solving Second Order Equations with the Laplace Transform}
+\index{Laplace transform!solving second order equations}
+\index{second order equations!solving with Laplace transform}
 
 We'll now use the Laplace transform to solve initial value problems
 for  second order equations.
@@ -1966,6 +1989,7 @@ ay''+by'+cy&=0, \quad  y(0)=0,\quad y'(0)=1.
 
 
 \section{The Unit Step Function}\label{sec:unit_step_func}
+\index{unit step function}\index{step function}
 
 In the next section we'll consider initial value problems
 \[
@@ -2061,6 +2085,8 @@ Now we can use the table of Laplace transforms to find that
 
 
 \boxit{Laplace Transforms of Piecewise Continuous Functions}
+\index{Laplace transform!of piecewise continuous functions}
+\index{piecewise continuous functions!Laplace transform of}
 
 We'll now develop the method of \zcref{example:8.4.1} into a
 systematic way to find the Laplace transform of a piecewise continuous
@@ -2321,6 +2347,10 @@ we see from \eqref{eq:8.4.11} that
 
 
 \boxit{The Second Shifting Theorem}
+\index{second shifting theorem}
+\index{shifting theorem!second}
+\index{Laplace transform!second shifting theorem}
+\index{Laplace transform!shifting theorem!second}
 
 Replacing $g(t)$ by $g(t-\tau)$ in \zcref{thmtype:8.4.1}
 yields the next theorem.
@@ -2676,6 +2706,8 @@ formulas related to the formula for the sum of a geometric series.}}
 \section[running={Piecewise Continuous Forcing Functions}]
 {Constant Coefficient Equations with Piecewise Continuous Forcing Functions}
 \label{sec:laplace_piecewise_forcing}
+\index{constant coefficient equation!with piecewise continuous forcing function}
+\index{piecewise continuous forcing function!constant coefficient equation}
 
 We'll now consider initial value problems of the form
 \begin{equation}\label{eq:8.5.1}
@@ -3328,6 +3360,7 @@ for $m=1,\dots,n$.
 
 
 \section{Convolution}\label{sec:laplace_convolution}
+\index{convolution}
 
 In this section we consider the problem of finding the inverse Laplace
 transform of a product $H(s)=F(s)G(s)$, where $F$ and $G$ are the
@@ -3514,10 +3547,13 @@ it follows that
 
 
 \boxit{A Formula for the Solution of an Initial Value Problem}
+\index{Laplace transform!formula for solution of initial value problem}
+\index{convolution!formula for solution of initial value problem}
+\index{initial value problem!convolution formula for solution}
 
 The convolution theorem provides a formula for the
 solution of an initial value problem for a linear constant coefficient
-second order equation with an unspecified.
+second order equation with an unspecified forcing function.
 The next three examples illustrate this.
 
 \begin{example}\label{example:8.6.2}
@@ -3640,10 +3676,12 @@ t\right)+\int_0^tf(t-\tau)e^{-\tau}\sin\tau\,d\tau.\qedhere
 
 
 \boxit{Evaluating Convolution Integrals}
+\index{convolution integrals!evaluating}
 
 We'll say that an integral of the form $\int_0^t
 u(\tau)v(t-\tau)\,d\tau$ is a
-\indexterm{convolution integral}\index{integral!convolution}. The convolution
+\emph{\color{blue}convolution integral}\index{convolution!integral}\index{integral!convolution}.
+The convolution
 theorem provides a convenient way to evaluate convolution integrals.
 
 \begin{example}\label{example:8.6.5}
@@ -4180,7 +4218,10 @@ y(t)=\int_0^t w(t-\tau)f_0(\tau)\,d\tau+\sum_{m=1}^\infty u(t-t_m)
 \end{exerciselist}
 
 
-\section{Constant Coefficient Equations with Impulses}\label{sec:laplace_impulse}
+\section{Constant Coefficient Equations with Impulses}
+\label{sec:laplace_impulse}
+\index{constant coefficient equation!with impulse}
+\index{impulse!with constant coefficient equation}
 
 So far in this chapter, we've considered initial value problems
 for the constant coefficient equation
@@ -4712,6 +4753,7 @@ $[0,\infty)$  on which the forcing function is zero.
 
 
 \section{A Brief Table of Laplace Transforms}\label{sec:laplace_table}
+\index{Laplace transform!table}
 
 \[
 \tagpdfsetup{table/header-rows={1}}

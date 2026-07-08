@@ -1,43 +1,31 @@
-% Source - https://tex.stackexchange.com/q/763586
-% Posted by pks40
-% Retrieved 2026-06-09, License - CC BY-SA 4.0
-
 \documentclass{article}
 
-\usepackage{amsthm}
-%\usepackage{cleveref}
-\usepackage{zref-clever}
-\providecommand{\cref}{\zcref}
+\usepackage{enumext}
 
-\theoremstyle{theorem}
-\newtheorem{thm}{Theorem}
-\newtheorem{theorem}{Theorem}
-\newtheorem{mytheorem}{Theorem}
-
-\zcRefTypeSetup{thm}{
-cap,
-name-sg = theorem,
-Name-sg = Theorem
-}
+%\AddToHook{env/enumext*/begin}{\setcounter{enumXvii}{\value{enumXi}}}
 
 \begin{document}
 
-\begin{thm}\label{thm:test1}
-  Test1
-\end{thm}
-
-\begin{theorem}\label{thm:test2}
-Test2
-\end{theorem}
-
-\begin{mytheorem}\label{thm:test3}
-Test3
-\end{mytheorem}
-
-In \cref{thm:test1} and \zcref{thm:test1}, we tested stuff.
-
-In \cref{thm:test2} and \zcref{thm:test2}, we tested stuff.
-
-In \cref{thm:test3} and \zcref{thm:test3}, we tested stuff.
-
+\begin{enumext}
+\item one
+\end{enumext}
+\begin{enumext}[resume]
+\item two
+\end{enumext}
+%\setcounter{enumXvii}{\value{enumXi}}
+\begin{enumext*}[resume,
+%start={1+\value{enumXi}},
+%before={\setcounter{enumXvii}{\value{enumXi}}}
+%first={\setcounter{enumXvii}{\value{enumXi}}}
+]
+%\setcounter{enumXvii}{\value{enumXi}}
+\item three
+\end{enumext*}
+\begin{enumext}[resume]%[,start={1+\value{enumXvii}}]
+\item four
+\end{enumext}
 \end{document}
+
+Can enumext and enumext* share a counter?
+
+I would like to have enumext and enumext* share a counter.  The best I've found so far is to use `start={1+\value{enumXi}}` or `start={1+\value{enumXvii}}`, depending on which environment came before.  But that requires that I track which environment came before.  Is there a way to make this happen automatically?  The following outputs "1. one, 2. two, 1. three, 3. four".

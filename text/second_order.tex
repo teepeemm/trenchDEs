@@ -79,6 +79,8 @@ equation.
 
 
 \section{Homogeneous Linear Equations}\label{sec:homog_linear}
+\index{homogeneous equation!linear}
+\index{linear equation!homogeneous}
 
 A second order differential equation is said to be \emph{\color{blue}linear} if
 it can be written as
@@ -401,6 +403,9 @@ which contains the initial point $x_0=-1$.
 
 \boxit{The General Solution of a Homogeneous Linear Second Order
 Equation}
+\index{homogeneous equation!linear second order!general solution}
+\index{linear equation!homogeneous second order!general solution}
+\index{second order equation!homogeneous linear!general solution}
 
 If $y_1$ and $y_2$ are defined on an interval
 $(a,b)$ and $c_1$ and $c_2$ are constants, then
@@ -456,6 +461,7 @@ In this case we say that \eqref{eq:5.1.19} is
 
 
 \boxit{Linear Independence}
+\index{linear independence}
 
 We need a way to determine whether a given set $\{y_1,y_2\}$
 of solutions of \eqref{eq:5.1.18}  is a fundamental set.
@@ -1477,6 +1483,8 @@ has infinitely many solutions on $(-\infty,\infty)$.  On what interval does
 
 \section{Constant Coefficient Homogeneous Equations}
 \label{sec:const_coeff_homog}
+\index{homogeneous equation!constant coefficient}
+\index{constant coefficient equation!homogeneous}
 
 If $a,b$, and $c$ are real constants and $a\ne0$, then
 \[
@@ -1530,6 +1538,7 @@ In each case we'll start with an example.
 
 
 \boxit{Case 1: Distinct Real Roots}
+\index{characteristic equation!distinct real roots}
 
 \begin{example}\label{example:5.2.1}
 \begin{alist}
@@ -1601,6 +1610,7 @@ set of solutions of $ay''+by'+cy=0$.
 
 
 \boxit{Case 2: A Repeated Real Root}
+\index{characteristic equation!repeated real root}
 
 \begin{example}\label{example:5.2.2}
 \begin{alist}
@@ -1741,6 +1751,7 @@ is the general solution.
 
 
 \boxit{Case 3: Complex Conjugate Roots}
+\index{characteristic equation!complex conjugate roots}
 
 \begin{example}\label{example:5.2.3}
 \begin{alist}
@@ -1936,6 +1947,8 @@ is the general solution.
 
 
 \boxit{Summary}
+\index{constant coefficient equation!homogeneous!summary}
+\index{homogeneous equation!constant coefficient!summary}
 
 The next theorem summarizes the results of this section.
 
@@ -2252,6 +2265,8 @@ are both solutions of (G).
 
 
 \section{Nonhomogeneous Linear Equations}\label{sec:nonhomog_linear}
+\index{nonhomogeneous equation!linear}
+\index{linear equation!nonhomogeneous}
 
 We'll now consider the nonhomogeneous linear second order equation
 \begin{equation} \label{eq:5.3.1}
@@ -2563,6 +2578,7 @@ y=\frac{x^4}{6}+c_1x^2+\frac{c_2}{x^2}.\qedhere
 
 
 \boxit{The Principle of Superposition}
+\index{principle of superposition}\index{superposition!principle of}
 
 The next theorem enables us to break a nonhomogeneous equation into
 simpler parts, find a particular solution for each part, and then
@@ -2892,6 +2908,8 @@ the complementary equation on $(a,b)$.
 \end{exerciselist}
 
 \section{The Method of Undetermined Coefficients I}\label{sec:undetermined_coeffs_i}
+\index{method of undetermined coefficients}
+\index{undetermined coefficients!method of}
 
 In this section we consider the constant coefficient equation
 \begin{equation} \label{eq:5.4.1}
@@ -3255,9 +3273,11 @@ is a particular solution of  \eqref{eq:5.4.14}.
 
 
 \boxit{Summary}
+\index{method of undetermined coefficients!summary}
+\index{undetermined coefficients!method of!summary}
 
 The preceding examples illustrate the following facts concerning
- particular solutions of a constant coefficent equation of the form
+ particular solutions of a constant coefficient equation of the form
 \[
 ay''+by'+cy=e^{\alpha x}G(x),
 \]
@@ -3319,6 +3339,7 @@ integration to be zero, as in \zcref{example:5.4.6}.
 
 
 \boxit{Using the Principle of Superposition}
+\index{principle of superposition}\index{superposition!principle of}
 
 The next example shows how to combine the method of undetermined
 coefficients and \zcref{thmtype:5.3.3}, the principle of
@@ -3556,6 +3577,8 @@ positive integer and $\alpha\ne0$.
 
 
 \section{The Method of Undetermined Coefficients II}\label{sec:undetermined_coeffs_ii}
+\index{method of undetermined coefficients}
+\index{undetermined coefficients!method of}
 
 In this section we consider the constant coefficient equation
 \begin{equation} \label{eq:5.5.1}
@@ -3568,6 +3591,7 @@ will use is called \emph{\color{blue}the method of undetermined coefficients}.
 
 
 \boxit{Forcing Functions Without Exponential Factors}
+\index{forcing function!nonexponential case}
 
 We begin with the case where $\lambda=0$ in \eqref{eq:5.5.1};   thus, we
 we
@@ -3864,6 +3888,7 @@ is a particular solution of \eqref{eq:5.5.12}.
 
 
 \boxit{Forcing Functions with Exponential Factors}
+\index{forcing function!exponential case}
 
 To find a particular solution of
 \begin{equation} \label{eq:5.5.15}
@@ -4843,8 +4868,9 @@ where $\{z_1,z_2\}$ is a fundamental set of solutions of
 
 
 \section{Variation of Parameters}\label{sec:variation_param}
+\index{variation of parameters}
 
-In this section we give a method called \emph{\color{blue}variation of
+In this section we give a method called \indexterm{variation of
 parameters} for finding a particular solution of
 \begin{equation} \label{eq:5.7.1}
 P_0(x)y''+P_1(x)y'+P_2(x)y=F(x)
@@ -5282,6 +5308,9 @@ of the solution.
 
 
 \boxit{Comparison of Methods}
+\index{undetermined coefficients!comparison}
+\index{reduction of order!comparison}
+\index{variation of parameters!comparison}
 
 We've now considered three methods
 for solving  nonhomogeneous linear equations: undetermined

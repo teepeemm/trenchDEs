@@ -30,6 +30,7 @@ for numerical solution of differential equations.
 \newpage
 
 \section{Euler's Method}\label{sec:euler_method}
+\index{Euler's method}
 
 If an initial value problem
 \begin{equation} \label{eq:3.1.1}
@@ -83,6 +84,7 @@ book, we'll consider only truncation errors.
 
 
 \boxit{Euler's Method}
+\index{Euler's method}
 
 The simplest numerical method for solving \eqref{eq:3.1.1} is
 \personHref{Euler}{Euler's method}.
@@ -408,6 +410,7 @@ h&\multicolumn{10}{c}{x}\\\cmidrule(l){2-11}
 
 
 \boxit{Truncation Error in Euler's Method}
+\index{Euler's method!truncation error in}
 
 Consistent with the results indicated in
 \zcref[range]{table:3.1.1,table:3.1.4}, we'll now show that under
@@ -491,7 +494,7 @@ Although it may be difficult to determine the constant $M$, what is
 important is that there's an $M$ such that \eqref{eq:3.1.10} holds.
  We say that the
 local truncation error of Euler's
-method\index{local truncation error of Euler's method}\index{Euler's method!local truncation error}
+method\index{local truncation error!of Euler's method}\index{Euler's method!local truncation error}
 is \emph{\color{blue}of order} $h^2$,
 which we write as $O(h^2)$.
 
@@ -584,6 +587,7 @@ Because of \eqref{eq:3.1.18} we say that the global truncation error of
 
 \boxit{Semilinear Equations and Variation of Parameters}
 \index{semilinear}
+\index{variation of parameters}
 
 An equation that can be written in the form
 \begin{equation} \label{eq:3.1.19}
@@ -1279,10 +1283,10 @@ and explain what you find.
 \end{exerciselist}
 
 
-\section{The Improved Euler Method and Related Methods}
+\section{The Improved Euler's Method and Related Methods}
 \label{sec:improved_euler}
-\index{improved Euler method}
-\index{Euler method!improved}
+\index{improved Euler's method}
+\index{Euler's method!improved}
 
 In \zcref{sec:euler_method} we saw that the global truncation error of
 Euler's method is $O(h)$, which would seem to imply that we can
@@ -1365,6 +1369,8 @@ improved Euler method with 48 evaluations.
 
 
 \boxit{The Improved Euler Method}
+\index{improved Euler's method}
+\index{Euler's method!improved}
 
 The
 \personHref{Euler}{improved Euler method} for solving the initial value
@@ -1595,8 +1601,8 @@ values of the solution of
 y'-2xy=1,\quad y(0)=3
 \end{equation}
 at $x=0$, $0.2$, $0.4$, $0.6$, \dots, $2.0$ by
-(a) the improved Euler method\index{improved Euler method};
-(b) the improved Euler semilinear method\index{improved Euler semilinear method}.
+(a) the improved Euler method\index{improved Euler's method};
+(b) the improved Euler semilinear method\index{improved Euler's semilinear method}.
 (We used Euler's method and the Euler semilinear method on this problem in \zcref{example:3.1.4}.)
 \end{example}
 
@@ -1711,7 +1717,7 @@ those obtained by the improved Euler method.
 
 \boxit{A Family of Methods with $O(h^3)$ Local Truncation Error}
 \index{local truncation error!numerical methods with $O(h^3)$}
-\index{numerical methods with $O(h^3)$ local truncation error}
+\index{numerical methods!with $O(h^3)$ local truncation error}
 
 We'll now derive a class of methods with $O(h^3)$ local truncation
 error for solving \eqref{eq:3.2.1}. For simplicity, we
@@ -2149,6 +2155,7 @@ and explain what you find.
 \end{exerciselist}
 
 \section{The Runge-Kutta Method}\label{sec:runge_kutta}
+\index{Runge-Kutta method}
 
 In general, if $k$ is any  positive  integer  and $f$
 satisfies appropriate assumptions, there are numerical methods with
@@ -2463,7 +2470,8 @@ which we considered in \zcref{example:3.1.4,example:3.2.4}.
 \]
 \end{table}
 
-\boxit{The Case Where $x_0$ Isn't  The Left Endpoint}
+\boxit{The Case Where $x_0$ Isn't The Left Endpoint}
+\index{numerical methods!not starting at the left endpoint}
 
 So far in this chapter we've considered numerical methods
  for solving an initial value problem
