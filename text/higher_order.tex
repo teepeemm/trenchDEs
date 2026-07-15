@@ -73,7 +73,8 @@ $(a,b)$.
 The next theorem is analogous to
 \zcref{thmtype:5.3.1}.
 
-\begin{theorem}\label{thmtype:9.1.1}\index{uniqueness theorem}
+\begin{theorem}\label{thmtype:9.1.1}
+\index{existence theorem}\index{uniqueness theorem}\index{higher order equation!existence and uniqueness theorem}
 Suppose   $Ly=F$ is normal on $(a,b)$, let $x_0$ be a point in
 $(a,b)$,
 and let $k_0$, $k_1$, \dots, $k_{n-1}$ be arbitrary real numbers. Then
@@ -92,11 +93,15 @@ has a unique solution on $(a,b)$.
 \index{nonhomogeneous equation!linear higher order}
 \index{higher order equation!linear nonhomogeneous}
 \index{linear equation!higher order nonhomogeneous}
+\index{general solution!linear higher order equation}
+\index{linear higher order equation!general solution}
+\index{linear higher order equation!homogeneous}
 
 Eqn.~\eqref{eq:9.1.2} is said to be \emph{\color{blue}homogeneous} if $F\equiv0$ and
-\emph{\color{blue}nonhomogeneous} otherwise. Since $y\equiv0$ is obviously a
+\emph{\color{blue}nonhomogeneous}\index{linear higher order equation!nonhomogeneous}
+otherwise. Since $y\equiv0$ is obviously a
 solution of $Ly=0$, we call it the \emph{\color{blue}trivial}\index{trivial solution!higher order differential equation} solution. Any other
-solution is \emph{\color{blue}nontrivial}\index{nontrivial solution!higher order differential equation}.
+solution is \emph{\color{blue}nontrivial}\index{nontrivial solution!higher order differential equation}\index{linear higher order equation!(non)trivial}.
 
 
 
@@ -111,29 +116,31 @@ easy
 $Ly=0$ on $(a,b)$, then so is any linear combination of
 $\{y_1,y_2,\dots,y_n\}$. (See the proof of \zcref{thmtype:5.1.2}.) We
 say that $\{y_1,y_2,\dots,y_n\}$ is a \emph{\color{blue}fundamental set of
-solutions of $Ly=0$ on}\index{fundamental set of solutions} $(a,b)$ if every solution of $Ly=0$ on
+solutions of $Ly=0$ on}\index{fundamental set of
+solutions}\index{linear higher order equation!fundamental set of solutions}
+$(a,b)$ if every solution of $Ly=0$ on
 $(a,b)$ can be written as a linear combination of
 $\{y_1,y_2,\dots,y_n\}$, as in \eqref{eq:9.1.3}. In this case we say that
 \eqref{eq:9.1.3} is the \emph{\color{blue}general solution of $Ly=0$ on
 $(a,b)$}\index{general solution}.
 
 
-It can be shown (\zcref{exer:9.1.14,exer:9.1.15}) that if
-the equation $Ly=0$ is normal on $(a,b)$ then it has
-infinitely many fundamental  sets of solutions  on $(a,b)$.
-The next definition will help to identify fundamental sets of
+It can be shown (\zcref{exer:9.1.14,exer:9.1.15}) that if the equation $Ly=0$
+is normal on $(a,b)$ then it has infinitely many fundamental sets of
+solutions\index{fundamental set of solutions!higher order constant coefficient homogeneous equation}\index{linear higher order equation!fundamental set of solutions}
+on $(a,b)$. The next definition will help to identify fundamental sets of
 solutions of $Ly=0$.
 
 
 
-We say that $\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly independent}\index{linearly independent!functions} on
+We say that $\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly independent}\index{linearly independent!$n$ functions} on
 $(a,b)$ if the only constants $c_1$, $c_2$, \dots, $c_n$ such that
 \begin{equation}\label{eq:9.1.4}
 c_1y_1(x)+c_2y_2(x)+\cdots+c_ny_n(x)=0,\quad a<x<b,
 \end{equation}
 are $c_1=c_2=\cdots=c_n=0$. If \eqref{eq:9.1.4} holds for some set of
 constants $c_1$, $c_2$, \dots, $c_n$ that are not all zero, then
-$\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly dependent}\index{linearly dependent!functions} on $(a,b)$
+$\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly dependent}\index{linearly dependent!$n$ functions} on $(a,b)$
 
 The next theorem is analogous to
 \zcref{thmtype:5.1.3}.
@@ -268,6 +275,7 @@ is the general solution of \eqref{eq:9.1.9}.
 
 
 \boxit{The Wronskian}\index{Wronskian}
+\index{linear higher order equation!Wronskian}
 
 We can use the method used in \zcref{example:9.1.1,example:9.1.2} to test $n$ solutions $\{y_1,y_2,\dots,y_n\}$ of any
 $n$th order equation $Ly=0$ for linear independence on an interval
@@ -442,7 +450,7 @@ $y_{1}$ and $y_{2}$ are  solutions  of \eqref{eq:5.1.35}   such that
 \begin{equation} \label{eq:9.1.16}
 \alpha y_{i}(c)+ y_{i}'(c)+\cdots +y_{i}^{(n-1)}(c)=0,\quad 1\le i\le n.
 \end{equation}
-Then $\{y_{1},y_{2},\dots y_{n}\}$ isn't  linearly independent on $(a,b)$.
+Then $\{y_{1},y_{2},\dots y_{n}\}$ is linearly dependent on $(a,b)$.
 \end{theorem}
 
 
@@ -475,11 +483,14 @@ and \zcref{thmtype:9.1.4} implies the stated conclusion.
 \index{nonhomogeneous equation!linear higher order!general solution}
 \index{linear equation!nonhomogeneous higher order!general solution}
 \index{higher order equation!nonhomogeneous linear!general solution}
+\index{general solution!linear higher order equation}
+\index{linear higher order equation!nonhomogeneous}
 
 The next theorem is analogous to
 \zcref{thmtype:5.3.2}.
 It shows how to find the general solution of $Ly=F$ if we know a particular
-solution of $Ly=F$ and a fundamental set of solutions of the
+solution\index{particular solution!nonhomogeneous higher order equation}
+of $Ly=F$ and a fundamental set of solutions of the
 \indexterm{complementary equation} $Ly=0$.
 
 \begin{theorem}\label{thmtype:9.1.6}
@@ -842,8 +853,12 @@ of the set has no zeros.
 \section{Higher Order Constant Coefficient Homogeneous Equations}
 \label{sec:higher_const_coeff}
 \index{higher order equation!constant coefficient homogeneous}
+\index{higher order equation!constant coefficient homogeneous!general solution}
 \index{homogeneous equation!higher order constant coefficient}
 \index{constant coefficient equation!higher order homogeneous}
+\index{general solution!higher order constant coefficient homogeneous equation}
+\index{linear higher order equation!constant coefficient homogeneous}
+\index{linear higher order equation!constant coefficient homogeneous!general solution}
 
 If $a_0$, $a_1$, \dots, $a_n$ are constants and $a_0\ne0$, then
 \[
@@ -862,7 +877,9 @@ As in \zcref{sec:const_coeff_homog}, we call
 \begin{equation} \label{eq:9.2.2}
 p(r)=a_0r^n+a_1r^{n-1}+\cdots+a_n
 \end{equation}
-the \indexterm{characteristic polynomial}\index{polynomial!characteristic} of \eqref{eq:9.2.1}. We saw in
+the
+\indexterm{characteristic polynomial}\index{polynomial!characteristic}\index{linear higher order equation!constant coefficient homogeneous!characteristic polynomial}
+of \eqref{eq:9.2.1}. We saw in
 \zcref{sec:const_coeff_homog} that when $n=2$ the solutions of \eqref{eq:9.2.1} are
 determined by the zeros of the characteristic polynomial. This is also
 true when $n>2$, but the situation is more complicated in this case.
@@ -1195,7 +1212,8 @@ of each of these equations
 p_j(D)y=0,\quad 1\le j\le k,
 \]
 where $p_j$ is a power of a first degree term or of an irreducible
-quadratic. To find a fundamental set of solutions
+quadratic. To find a fundamental set of
+solutions\index{fundamental set of solutions!higher order constant coefficient homogeneous equation}\index{higher order constant coefficient homogeneous equation!fundamental set of solutions}\index{linear higher order equation!constant coefficient homogeneous!fundamental set of solutions}
 $\{y_1,y_2,\dots,y_n\}$ of $p(D)y=0$, we find fundamental set of
 solutions of each of the equations and take $\{y_1,y_2,\dots,y_n\}$ to
 be the set of all functions in these separate fundamental sets. In
@@ -1750,6 +1768,7 @@ the possible forms for the general solution of (A).
 \label{sec:higher_undetermined}
 \index{undetermined coefficients!higher order equations}
 \index{higher order equations!undetermined coefficients}
+\index{linear higher order equation!undetermined coefficients}
 
 In this section we consider the constant coefficient equation
 \begin{equation}
@@ -1769,7 +1788,9 @@ e^{\lambda x}\left[\left(p_0+p_1x+\cdots+p_kx^k\right)
 \]
 
 From \zcref{thmtype:9.1.5}, the general solution of \eqref{eq:9.3.1} is
-$y=y_p+y_c$, where $y_p$ is a particular solution of \eqref{eq:9.3.1} and
+$y=y_p+y_c$, where $y_p$ is a particular
+solution\index{particular solution!nonhomogeneous higher order equation}
+of \eqref{eq:9.3.1} and
 $y_c$ is the general solution of the complementary equation
 \[
 a_0y^{(n)}+a_1y^{(n-1)}+\cdots+a_ny=0.
@@ -2330,6 +2351,8 @@ a(V''(x)-2\omega U'(x))&=q_0+q_1x+\cdots+q_kx^k.
 \boxit{Derivation of the method}
 \index{variation of parameters!higher order equations!derivation}
 \index{higher order equations!variation of parameters!derivation}
+\index{linear higher order equation!variation of parameters}
+\index{linear higher order equation!variation of parameters!derivation}
 
 We assume throughout this section that the nonhomogeneous linear
 equation
@@ -2475,6 +2498,8 @@ W=\sum_{j=1}^n(-1)^{n-j}y_j^{(n-1)}W_j.
 \boxit{Third Order Equations}
 \index{third order equation!linear}
 \index{higher order equation!third order}
+\index{linear higher order equation!variation of parameters!third order}
+\index{variation of parameters!third order}
 
 If $n=3$, then
 \[
@@ -2583,6 +2608,8 @@ y=2xe^x(x-1)+c_1x+c_2e^x+c_3e^{-x}.
 \boxit{Fourth Order Equations}
 \index{fourth order equations!linear}
 \index{higher order equation!fourth order}
+\index{linear higher order equation!variation of parameters!fourth order}
+\index{variation of parameters!fourth order}
 
 If $n=4$, then
 \[

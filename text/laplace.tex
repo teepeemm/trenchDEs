@@ -69,6 +69,7 @@ impulsive forcing functions.
 
 \section{Introduction to the Laplace Transform}\label{sec:laplace_intro}
 \index{Laplace transform!introduction}
+\index{Laplace transform}
 
 \boxit{Definition of the Laplace Transform}
 \index{Laplace transform!definition}
@@ -76,7 +77,7 @@ impulsive forcing functions.
 To define the Laplace transform, we first recall the definition of an
 improper integral. If $g$ is integrable over the
 interval $[a,T]$ for every $T>a$, then the \indexterm{improper
-integral} of $g$ over $[a,\infty)$ is defined as
+integral}\index{integral!improper} of $g$ over $[a,\infty)$ is defined as
 \begin{equation} \label{eq:8.1.1}
 \int^\infty_a g(t)\,dt=\lim_{T\to\infty}\int^T_a g(t)\,dt.
 \end{equation}
@@ -115,6 +116,7 @@ for all $s>s_0$ (\zcref{exer:8.1.14}(b)).
 
 \boxit{Computation of Some Simple Laplace Transforms}
 \index{Laplace transform!simple computation}
+\index{Laplace transform!computation of simple}
 
 \begin{example}\label{example:8.1.1}
  Find the Laplace transform of  $f(t)=1$.
@@ -452,7 +454,7 @@ Our next objective is to establish conditions that ensure the
 existence of the Laplace transform of a function. We first review some
 relevant definitions from calculus.
 
-Recall that a limit
+Recall that a limit\index{limit}
 \[
 \lim_{t\to t_0} f(t)
 \]
@@ -483,7 +485,7 @@ so  \eqref{eq:8.1.12} can be expressed as
 f(t_0+)=f(t_0-)=f(t_0).
 \]
 If $f(t_0+)$ and $f(t_0-)$ have finite but distinct values,  we say
-that $f$ has a \indexterm{jump discontinuity}\index{discontinuity!jump}  at $t_0$,
+that $f$ has a \indexterm{jump discontinuity}\index{discontinuity!jump}\index{piecewise continuous function!Laplace transform}  at $t_0$,
  and
 \[
 f(t_0+)-f(t_0-)
@@ -542,7 +544,7 @@ removable discontinuities does not change $\laplace(f)$.
 \begin{definition}\label{thmtype:8.1.4}
 \begin{rmlist}
 \item % (i)
-A function $f$ is said to be \indexterm{piecewise continuous} on a finite
+A function $f$ is said to be \emph{\color{blue}piecewise continuous}\index{piecewise continuous function} on a finite
 closed interval $[0,T]$ if $f(0+)$ and $f(T-)$ are finite and $f$ is
 continuous on the open interval $(0,T)$ except possibly at finitely
 many points, where $f$ may have jump discontinuities or removable
@@ -963,6 +965,7 @@ f(t+2\pi)=f(t)}$
 
 \section{The Inverse Laplace Transform}\label{sec:inverse_laplace}
 \index{Laplace transform!inverse}
+\index{inverse Laplace transform}
 
 \boxit{Definition of the Inverse Laplace Transform}
 \index{Laplace transform!inverse!definition}
@@ -1021,6 +1024,9 @@ The next theorem enables us to find inverse transforms of linear
 combinations of transforms in the table. We omit the proof.
 
 \begin{theorem}[Linearity Property]\label{thmtype:8.2.1}
+\index{inverse Laplace transform!linearity property}
+\index{Laplace transform!inverse!linearity property}
+\index{linearity!inverse Laplace transform}
 If $F_1$, $F_2$, \dots, $F_n$ are Laplace transforms and
 $c_1$, $c_2$, \dots, $c_n$ are constants, then
 \[
@@ -1092,8 +1098,9 @@ cases you should refer to the table of Laplace transforms in \zcref{sec:laplace_
 
 
 \boxit{Inverse Laplace Transforms of Rational Functions}
-\index{inverse Laplace transform!rational functions}
-\index{Laplace transform!inverse!rational functions}
+\index{inverse Laplace transform!rational function}
+\index{Laplace transform!inverse!rational function}
+\index{rational function!inverse Laplace transform}
 
 Using the Laplace transform to
  solve differential equations
@@ -1419,11 +1426,11 @@ Therefore
 
 \medskip
 
-Some software packages that do symbolic algebra can find partial
-fraction expansions very easily. We recommend that you use such a
-package if one is available to you, but only after you've  done
-enough partial fraction expansions on your own to  master the
-technique.
+Some software packages that do symbolic algebra can find partial fraction
+expansions\index{partial fraction expansion!finding with software packages}
+very easily. We recommend that you use such a package if one is available to
+you, but only after you've done enough partial fraction expansions on your own
+to master the technique.
 
 \exercises
 
@@ -1562,6 +1569,7 @@ Explain how the results of (a) and (b) are related.
 \section{Solution of Initial Value Problems}\label{sec:laplace_ivp}
 \index{Laplace transform!solution of initial value problems}
 \index{solution of initial value problems!Laplace transform}
+\index{initial value problem!solved with Laplace transform}
 
 \boxit{Laplace Transforms of Derivatives}
 \index{Laplace transform!of derivatives}
@@ -1574,6 +1582,7 @@ equations. To do this, we must know how the Laplace transform of
 next theorem answers this question.
 
 \begin{theorem}\label{thmtype:8.3.1}
+\index{Laplace transform!solution of initial value problems!derivative}
  Suppose $f$ is continuous
 on $[0,\infty)$ and of exponential order $s_0$, and $f'$ is piecewise
 continuous on $[0,\infty)$.  Then $f$ and $f'$ have Laplace transforms for
@@ -1711,8 +1720,10 @@ Substituting \eqref{eq:8.3.4} into this yields
 
 
 \boxit{Solving Second Order Equations with the Laplace Transform}
-\index{Laplace transform!solving second order equations}
-\index{second order equations!solving with Laplace transform}
+\index{Laplace transform!solving second order equation}
+\index{Laplace transform!solving initial value problem!second order equation}
+\index{second order equation!solving with Laplace transform}
+\index{initial value problem!solved with Laplace transform!second order equation}
 
 We'll now use the Laplace transform to solve initial value problems
 for  second order equations.
@@ -1989,6 +2000,8 @@ ay''+by'+cy&=0, \quad  y(0)=0,\quad y'(0)=1.
 
 \section{The Unit Step Function}\label{sec:unit_step_func}
 \index{unit step function}\index{step function}
+\index{Laplace transform!piecewise continuous function!unit step function}
+\index{piecewise continuous function!Laplace transform!unit step function}
 
 In the next section we'll consider initial value problems
 \[
@@ -2084,8 +2097,8 @@ Now we can use the table of Laplace transforms to find that
 
 
 \boxit{Laplace Transforms of Piecewise Continuous Functions}
-\index{Laplace transform!of piecewise continuous functions}
-\index{piecewise continuous functions!Laplace transform of}
+\index{Laplace transform!piecewise continuous functions}
+\index{piecewise continuous functions!Laplace transform}
 
 We'll now develop the method of \zcref{example:8.4.1} into a
 systematic way to find the Laplace transform of a piecewise continuous
@@ -2707,6 +2720,7 @@ formulas related to the formula for the sum of a geometric series.}}
 \label{sec:laplace_piecewise_forcing}
 \index{constant coefficient equation!with piecewise continuous forcing function}
 \index{piecewise continuous forcing function!constant coefficient equation}
+\index{forcing function!with piecewise continuous constant equation}
 
 We'll now consider initial value problems of the form
 \begin{equation}\label{eq:8.5.1}
@@ -3360,6 +3374,7 @@ for $m=1,\dots,n$.
 
 \section{Convolution}\label{sec:laplace_convolution}
 \index{convolution}
+\index{Laplace transform!convolution}
 
 In this section we consider the problem of finding the inverse Laplace
 transform of a product $H(s)=F(s)G(s)$, where $F$ and $G$ are the
@@ -3447,8 +3462,8 @@ in this case.
 This motivates  the next definition.
 
 \begin{definition}\label{thmtype:8.6.1}
-The \indexterm{convolution} $f*g$ of two functions $f$
-and $g$ is defined by
+The \indexterm{convolution}\index{Laplace transform!convolution!defined}
+$f*g$ of two functions $f$ and $g$ is defined by
 \[
 (f*g)(t)=\int_0^t f(\tau)g(t-\tau)\,d\tau.
 \]
@@ -3466,7 +3481,8 @@ is,
 case where $g(t)=e^{at}$. This next theorem states that this is
 true in general.
 
-\begin{theorem}[The Convolution Theorem]\label{thmtype:8.6.2}\index{convolution!theorem}
+\begin{theorem}[The Convolution Theorem]\label{thmtype:8.6.2}
+\index{convolution!theorem}\index{Laplace transform!convolution!theorem}
 If $\laplace(f)=F$  and $\laplace(g)=G$, then
 \[
 \laplace(f*g)=FG.
@@ -3547,8 +3563,10 @@ it follows that
 
 \boxit{A Formula for the Solution of an Initial Value Problem}
 \index{Laplace transform!formula for solution of initial value problem}
+\index{Laplace transform!solution of initial value problem!formula}
 \index{convolution!formula for solution of initial value problem}
 \index{initial value problem!convolution formula for solution}
+\index{initial value problem!solved with Laplace transform!formula}
 
 The convolution theorem provides a formula for the
 solution of an initial value problem for a linear constant coefficient
@@ -3679,7 +3697,7 @@ t\right)+\int_0^tf(t-\tau)e^{-\tau}\sin\tau\,d\tau.\qedhere
 
 We'll say that an integral of the form $\int_0^t
 u(\tau)v(t-\tau)\,d\tau$ is a
-\emph{\color{blue}convolution integral}\index{convolution!integral}\index{integral!convolution}.
+\emph{\color{blue}convolution integral}\index{convolution!integral}\index{integral!convolution}\index{Laplace transform!convolution!integral}.
 The convolution
 theorem provides a convenient way to evaluate convolution integrals.
 
@@ -3789,6 +3807,7 @@ y(t)=1+2t.\qedhere
 
 
 \boxit{Transfer Functions}\index{transfer function}
+\index{Laplace transform!convolution!transfer function}
 
 The next theorem presents a formula for the solution of
 the general initial value problem
@@ -3920,7 +3939,9 @@ in these two examples don't have negative real parts.
 In physical applications where the input $f$ and the output $y$ of a
 device are related by \eqref{eq:8.6.13}, the zeros of the characteristic
 polynomial usually do have negative real parts. Then $W=\laplace(w)$
-is called the \indexterm{transfer function} of the device. Since
+is called the
+\indexterm{transfer function}\index{convolution!transfer function}
+of the device. Since
 \[
 H(s)=W(s)F(s),
 \]
@@ -4221,6 +4242,7 @@ y(t)=\int_0^t w(t-\tau)f_0(\tau)\,d\tau+\sum_{m=1}^\infty u(t-t_m)
 \label{sec:laplace_impulse}
 \index{constant coefficient equation!with impulse}
 \index{impulse!with constant coefficient equation}
+\index{Laplace transform!constant coefficient equation!impulse}
 
 So far in this chapter, we've considered initial value problems
 for the constant coefficient equation
@@ -4230,7 +4252,7 @@ ay''+by'+cy=f(t),
 where $f$ is continuous or piecewise continuous on $[0,\infty)$. In
 this section we consider initial value problems where $f$
 represents a force that's very large for a short time and
-zero otherwise. We say that such forces are \emph{\color{blue}impulsive}\index{impulsive force}.
+zero otherwise. We say that such forces are \emph{\color{blue}impulsive}\index{impulsive force}\index{force!impulsive}.
 Impulsive forces occur, for example, when two objects collide. Since
 it isn't  feasible to represent such forces as continuous or
 piecewise continuous functions, we must construct a different
