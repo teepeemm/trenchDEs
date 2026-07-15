@@ -76,7 +76,7 @@ to obtain solutions~of~(A).
 \medskip\noindent
 \zcref[S,font=\scshape]{sec:regular_singular} introduces the appropriate assumptions on $P_1$
 and $P_2$
-in the case where $P_0(0)=0$, and deals with \emph{\color{blue}Euler's equation}
+in the case where $P_0(0)=0$, and deals with \emph{\color{blue}Euler's equation}\index{Euler equation}
 \[
 ax^2y''+bxy'+cy=0,
 \]
@@ -120,13 +120,13 @@ An infinite series of the form
 \end{equation}
 where $x_0$ and $a_0$, $a_1$, \dots, $a_n$, \dots\ are constants, is
 called a
-\indexterm{power series}\index{series!power} in $x-x_0$. We say that the power series
-\eqref{eq:7.1.1} \emph{\color{blue}converges}\index{convergent power series} for a given $x$ if the limit
+\indexterm{power series}\index{power series!defined}\index{series!power} in $x-x_0$. We say that the power series
+\eqref{eq:7.1.1} \emph{\color{blue}converges}\index{convergent power series}\index{power series!convergent} for a given $x$ if the limit
 \[
 \lim_{N\to\infty}
 \sum_{n=0}^Na_n(x-x_0)^n
 \]
-exists; otherwise, we say that the power series \emph{\color{blue}diverges}
+exists; otherwise, we say that the power series \emph{\color{blue}diverges}\index{divergent power series}\index{power series!divergent}
 for the given $x$.
 \end{definition}
 
@@ -157,7 +157,7 @@ converges if $|x-x_0|<R$ and diverges if  $|x-x_0|>R$.
 
 
 In case~(iii) we say that $R$ is the
-\emph{\color{blue}radius of convergence of power series}\index{convergence!of power series!radius of}\index{power series!radius of convergence}
+\emph{\color{blue}radius of convergence of power series}\index{convergence!of power series!radius of}\index{power series!radius of convergence}\index{radius of convergence}
 of the power series. For convenience, we include the other two cases
 in this definition by defining $R=0$ in case~(i) and $R=\infty$ in
 case~(ii). We define the \indexterm{open interval of convergence}\index{convergence!open interval of} of
@@ -197,8 +197,9 @@ $n\ge N$ and
 \[
 \lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=L,
 \]
-where $0\le L\le\infty$. Then the radius of convergence of
-$\sum_{n=0}^\infty a_n(x-x_0)^n$ is $R=1/ L$, which should be interpreted
+where $0\le L\le\infty$. Then the radius of
+convergence\index{convergence!of power series!radius of}\index{power series!radius of convergence}\index{radius of convergence}
+of $\sum_{n=0}^\infty a_n(x-x_0)^n$ is $R=1/ L$, which should be interpreted
 to mean that $R=0$ if $L=\infty$, or $R=\infty$ if $L=0$.
 \end{theorem}
 
@@ -321,7 +322,9 @@ which is the series  \eqref{eq:7.1.4} for $\cos x$.
 
 The next theorem shows that if $f$ is \emph{\color{blue}defined} by a power
 series in $x-x_0$ with a positive radius of convergence, then the power
-series is the Taylor series\index{Taylor series}\index{series!Taylor} of $f$ about $x_0$.
+series is the Taylor
+series\index{Taylor series}\index{series!Taylor}\index{power series!Taylor series}
+of $f$ about $x_0$.
 
 \begin{theorem}\label{thmtype:7.1.5}
 If the power series
@@ -383,7 +386,9 @@ a_n=b_n=\frac{f^{(n)}(x_0)}{n!},\quad n=0,1,2, \dots.
 $n=0$, $1$, $2$, \dots.
 
 
-\boxit{Taylor Polynomials}\index{Taylor polynomial}\index{polynomial!Taylor}
+\boxit{Taylor Polynomials}
+\index{Taylor polynomial}\index{polynomial!Taylor}
+\index{power series!Taylor polynomial}
 
 If $f$ has $N$ derivatives at a point $x_0$, we say that
 \[
@@ -416,7 +421,7 @@ approximation of $y=e^x$ by its Taylor polynomial $T_N$ improves as
 $N$ increases.
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={Plot of y=e^x on 0<x<5 with dashed approximations for N=1 through N=6.  The approximations increase in x and N, and are always between y=0 and y=e^x.},
   width=5.67in,height=3.3in,keepaspectratio]{fig070101}
 \caption{Approximation of $y=e^x$ by Taylor
@@ -429,6 +434,7 @@ polynomials about $x=0$}
 \boxit{Shifting the Summation Index}
 \index{shifting summation index}
 \index{summation index!shifting}
+\index{power series!shifting summation index}
 
 In \zcref{thmtype:7.1.1} of a power series in $x-x_0$, the $n$-th
 term is a constant multiple of $(x-x_0)^n$. This isn't  true in
@@ -441,7 +447,8 @@ $(x-x_0)^n$. For example, letting $n=k+1$ in the series in
 \begin{equation} \label{eq:7.1.10}
 f'(x)=\sum_{k=0}^\infty (k+1)a_{k+1}(x-x_0)^k,
 \end{equation}
-where we start the new summation index $k$ from zero so that the first
+where we start the new summation index\index{summation index} $k$ from zero so
+that the first
 term in \eqref{eq:7.1.10} (obtained by setting $k=0$) is the same as the
 first term in \eqref{eq:7.1.6} (obtained by setting $n=1$). However, the
 sum of a series is independent of the symbol used to denote the
@@ -539,6 +546,8 @@ beginning of a series.)
 \boxit{Linear Combinations of Power Series}
 \index{linear combinations of power series}
 \index{power series!linear combinations of}
+\index{linear second order equation!series solution}
+\index{series solution!linear second order equation}
 
 If a power series is multiplied by a constant, then the constant can be
 placed inside the summation; that is,
@@ -945,6 +954,8 @@ expression in  the form $x^r\sum_{n=0}^\infty b_nx^n$.}
 \label{sec:series_ordinary_i}
 \index{series solutions near ordinary point}
 \index{ordinary point!series solutions near}
+\index{linear second order equation!series solution!near ordinary point}
+\index{series solution!linear second order equation!near ordinary point}
 
 Many physical applications give rise to second order homogeneous
 linear  differential equations of the form
@@ -957,24 +968,24 @@ functions. Therefore we'll consider the problem of representing
 solutions of \eqref{eq:7.2.1} with series.
 
 We assume throughout that $P_0$, $P_1$ and $P_2$ have no common
-factors. Then we say that $x_0$ is an \indexterm{ordinary point}\index{Bessel's equation!ordinary point of} of
-\eqref{eq:7.2.1} if $P_0(x_0)\ne0$, or a \indexterm{singular point}\index{Bessel's equation!singular point of} if
+factors. Then we say that $x_0$ is an \indexterm{ordinary point} of
+\eqref{eq:7.2.1} if $P_0(x_0)\ne0$, or a \indexterm{singular point} if
 $P_0(x_0)=0$. For Legendre's equation\index{Legendre's equation},
 \begin{equation}\label{eq:7.2.2}
 (1-x^2)y''-2xy'+\alpha(\alpha+1)y=0,
 \end{equation}
-$x_0=1$ and $x_0=-1$ are singular points and all other points are
-ordinary points. For Bessel's equation\index{Bessel's equation},
+$x_0=1$ and $x_0=-1$ are singular points\index{Legendre's equation!singular points} and all other points are
+ordinary points\index{Legendre's equation!ordinary points}. For Bessel's equation\index{Bessel's equation},
 \[
 x^2y''+xy'+(x^2-\nu^2)y=0,
 \]
-$x_0=0$ is a singular point and all other points are ordinary points.
+$x_0=0$ is a singular point\index{Bessel's equation!singular point} and all other points are ordinary points\index{Bessel's equation!ordinary point}.
 If $P_0$ is a nonzero constant as in Airy's
 equation,\index{Airy's equation}
 \begin{equation}\label{eq:7.2.3}
 y''-xy=0,
 \end{equation}
-then every point is an ordinary point.
+then every point is an ordinary point\index{Airy's equation!ordinary point}.
 
 Since polynomials are continuous everywhere, $P_1/P_0$ and $P_2/P_0$
 are continuous at any point $x_0$ that isn't  a zero of $P_0$.
@@ -1016,7 +1027,7 @@ than $(x_0-\rho,x_0+\rho)$. If $P_0$ is constant then $\rho=\infty$
 and $(x_0-\rho,x_0+\rho)=(-\infty,\infty)$.)
 \end{theorem}
 
-We call \eqref{eq:7.2.6} a \emph{\color{blue}power series solution in $x-x_0$}  of
+We call \eqref{eq:7.2.6} a \emph{\color{blue}power series solution in $x-x_0$} \index{power series!solution of differential equation}\index{differential equation!power series solution} of
 \eqref{eq:7.2.5}. We'll now develop a method for finding power series
 solutions of \eqref{eq:7.2.5}. For this purpose we write \eqref{eq:7.2.5} as
 $Ly=0$, where
@@ -1059,7 +1070,7 @@ $x-x_0$ of $Ly=0$ can be obtained by choosing $a_0$ and $a_1$
 arbitrarily and computing $a_2$, $a_3$, \dots, successively so that
 $b_n=0$
 for $n\ge0$. For simplicity, we call the power series obtained  this
-way \emph{\color{blue}the power series in $x-x_0$ for the general solution} of
+way \emph{\color{blue}the power series in $x-x_0$ for the general solution}\index{power series!general solution solution of differential equation}\index{differential equation!power series general solution solution} of
 $Ly=0$, without explicitly identifying the open interval of
 convergence of the series.
 
@@ -1169,9 +1180,10 @@ which should look familiar.
 
 Equations like \eqref{eq:7.2.10}, \eqref{eq:7.2.11}, and \eqref{eq:7.2.12}, which
 define a given coefficient in the sequence $\{a_n\}$ in terms of one
-or more coefficients with lesser indices are called \emph{\color{blue}recurrence
+or more coefficients with lesser indices are called \indexterm{recurrence
 relations}. When we use a recurrence relation to compute terms
-of a sequence we're computing \emph{\color{blue}recursively}.
+of a sequence we're computing
+\emph{\color{blue}recursively}\index{recursive sequence}\index{coefficients!computed recursively}\index{recurrence relation}.
 
 In  the remainder of this  section we  consider the problem of
 finding power series solutions in $x-x_0$  for equations of the form
@@ -2411,8 +2423,9 @@ if and only if
  a_{n+2}+\alpha a_{n+1}+\beta a_n=0,\quad n\ge0.
 \tag{B}
 \]
-An equation of this form is called a \emph{\color{blue}second order homogeneous linear
-difference equation}. The polynomial $p(r)=r^2+\alpha r+\beta$ is called the
+An equation of this form is called a
+\emph{\color{blue}second order homogeneous linear difference equation}\index{difference equation}\index{linear difference equation!second order homogeneous}\index{second order homogeneous linear difference equation}.
+The polynomial $p(r)=r^2+\alpha r+\beta$ is called the
 \indexterm{characteristic polynomial}\index{polynomial!characteristic} of (B).
 If $r_1$
 and $r_2$ are the zeros of $p$, then $1/r_1$ and $1/r_2$ are the
@@ -2570,6 +2583,8 @@ $(16-11x+2x^2)y''+(10-6x+x^2)y'-(2-x)y,\quad y(3)=1,\quad y'(3)=-2$
 \label{sec:regular_singular}
 \index{regular singular point!Euler equation}
 \index{Euler equation!regular singular point}
+\index{linear second order equation!series solution!Euler's equation}
+\index{linear second order equation!regular singular point}
 
 \bigbox{This section sets the stage for \zcref[nocomp]{sec:frobenius_i,sec:frobenius_ii,sec:frobenius_iii}. If you're not interested in those sections, but wish
 to learn about Euler equations, omit the introductory paragraphs
@@ -2940,10 +2955,13 @@ on $(0,\infty)$.
 \[
 P_0(x)y''+P_1(x)y'+P_2(x)y=0
 \]
-is said to be \emph{\color{blue}oscillatory}\index{oscillatory solution} on an
+is said to be
+\emph{\color{blue}oscillatory}\index{oscillatory solution}\index{solution!oscillatory}
+on an
 interval $(a,b)$ if it has infinitely many zeros on $(a,b)$.
 Otherwise $y$ is said to be
-\emph{\color{blue}nonoscillatory}\index{nonoscillatory solution} on $(a,b)$.
+\emph{\color{blue}nonoscillatory}\index{nonoscillatory solution}\index{solution!nonoscillatory}
+on $(a,b)$.
 Show that the equation
 \[
 x^2y''+ky=0 \quad (k=\; \text{constant})
@@ -3005,10 +3023,14 @@ point of (B).
 \section{The Method of Frobenius I}\label{sec:frobenius_i}
 \index{method of Frobenius}
 \index{Frobenius!method of}
+\index{Frobenius solutions}
+\index{linear second order equation!series solution!Frobenius solution}
+\index{series solution!linear second order equation!Frobenius solution}
 
 In this section we begin to study  series solutions of a
 homogeneous linear second order differential equation with a regular
-singular point at $x_0=0$, so it can be written as
+singular point at $x_0=0$\index{regular singular point!at $x_0=0$},
+so it can be written as
 \begin{equation} \label{eq:7.5.1}
 x^2A(x)y''+xB(x)y'+C(x)y=0,
 \end{equation}
@@ -3026,7 +3048,8 @@ encounter in the next two sections is called
 \personHref{Frobenius}{the method of Frobenius},
 and we'll call them Frobenius solutions.
 
-It can be shown that the power series $\sum_{n=0}^\infty a_nx^n$ in a
+It can be shown that the power series\index{Frobenius solutions!power series}
+$\sum_{n=0}^\infty a_nx^n$ in a
 Frobenius solution of \eqref{eq:7.5.1} converges on some open interval
 $(-\rho,\rho)$, where $0<\rho\le\infty$. However, since $x^r$ may be
 complex for negative $x$ or undefined if $x=0$, we'll consider
@@ -3226,7 +3249,8 @@ plane.
 \end{theorem}
 
 \begin{proof}
- If $\{a_n(r)\}$ is determined by the recurrence relation
+If $\{a_n(r)\}$ is determined by the recurrence
+relation\index{Frobenius solutions!recurrence relation}\index{recurrence relation!Frobenius solutions}
 \eqref{eq:7.5.12} then substituting $a_n=a_n(r)$ into \eqref{eq:7.5.5}
 yields
 $b_0=p_0(r)$ and $b_n=0$ for $n\ge1$, so \eqref{eq:7.5.4} reduces to
@@ -3281,7 +3305,7 @@ which is nonzero if $n>0$, since $r_1-r_2\ge0$. Therefore the
 assumptions of \zcref{thmtype:7.5.2} hold with $r=r_1$, and
 \eqref{eq:7.5.14} implies that $Ly_1=p_0(r_1)x^{r_1}=0$.
 
-Now suppose $r_1-r_2$ isn't  an integer. From \eqref{eq:7.5.15},
+Now suppose $r_1-r_2$ isn't an integer\index{Frobenius solutions!indicial equation with real roots differing by a noninteger}\index{indicial equation!with real roots differing by a noninteger}. From \eqref{eq:7.5.15},
 \[
 p_0(n+r_2)=n\alpha_0(n-r_1+r_2)\ne0\quad\text{if}\quad n=1,2,\cdots.
 \]
@@ -3321,7 +3345,9 @@ and $r_2=-2$, so  $r_1-r_2=1/2$. Therefore
 y_1=x^{-3/2}\sum_{n=0}^\infty a_n(-3/2)x^n\quad\text{and}\quad
 y_2=x^{-2}\sum_{n=0}^\infty a_n(-2)x^n
 \end{equation}
-form a fundamental set of  Frobenius solutions of \eqref{eq:7.5.16}.
+form a fundamental set of Frobenius
+solutions\index{coefficients!Frobenius solutions}
+of \eqref{eq:7.5.16}.
 To find the coefficients in these series, we use the recurrence
 relation of \zcref{thmtype:7.5.2};   thus,
 \begin{align*}
@@ -3367,6 +3393,8 @@ y_2&=x^{-2}\left(1+\frac{1}{2}x^2-\frac{1}{3}x^3+\frac{1}{8}x^4+\frac{1}{30}x^5
 \boxit{Special Cases With Two Term Recurrence Relations}
 \index{method of Frobenius!two term recurrence relation}
 \index{recurrence relation!two term!method of Frobenius}
+\index{Frobenius solutions!recurrence relation!two term}
+\index{recurrence relation!two term}
 
 For $n\ge2$, the recurrence relation \eqref{eq:7.5.12} of
 \zcref{thmtype:7.5.2} involves the three coefficients
@@ -3374,7 +3402,7 @@ $a_n(r)$, $a_{n-1}(r)$, and $a_{n-2}(r)$. We'll now consider some
 special cases where \eqref{eq:7.5.12} reduces to a two term recurrence
 relation; that is, a relation involving only $a_n(r)$ and $a_{n-1}(r)$
 or only $a_n(r)$ and $a_{n-2}(r)$. This simplification often makes it
-possible to obtain explicit formulas for the coefficents of Frobenius
+possible to obtain explicit formulas for the coefficients of Frobenius
 solutions.
 
 We first consider equations of the form
@@ -3601,6 +3629,7 @@ singular point. Therefore, motivated by \zcref{thmtype:7.5.2}
 (specifically, \eqref{eq:7.5.14}), we suggest the following  procedure.
 
 \begin{remark*}[Verification Procedure]
+\index{Frobenius solutions!verifying}
 Let $L$ and $Y_n(x; r_i)$ be defined by
 \[
 Ly=
@@ -4182,6 +4211,8 @@ some interval $(0,\rho)$.}
 \section{The Method of Frobenius II}\label{sec:frobenius_ii}
 \index{method of Frobenius}
 \index{Frobenius!method of}
+\index{Frobenius solutions!indicial equation with repeated root}
+\index{indicial equation!with repeated root}
 
 In this section we discuss a method for finding two linearly
 independent Frobenius solutions of a homogeneous linear second order
@@ -5113,6 +5144,8 @@ y}{\partial r}(x,r_1)
 \section{The Method of Frobenius III}\label{sec:frobenius_iii}
 \index{method of Frobenius}
 \index{Frobenius!method of}
+\index{Frobenius solutions!indicial equation with real roots differing by an integer}
+\index{indicial equation!with real roots differing by an integer}
 
 In \zcref{sec:frobenius_i,sec:frobenius_ii} we discussed methods
 for finding

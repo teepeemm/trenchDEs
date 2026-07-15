@@ -2,6 +2,7 @@
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Linear Second Order Equations}\label{ch:second_order}
+\index{linear second order equation}
 
 
 \noindent
@@ -16,9 +17,9 @@ the form
 \[
 P_0(x)y''+P_1(x)y'+P_2(x)y=F(x).
 \]
-Such equations are said to be \emph{\color{blue}linear}. As in the case of first
-order linear equations, (A) is said to be \emph{\color{blue}homogeneous}
-if $F\equiv0$, or \emph{\color{blue}nonhomogeneous} if $F\not\equiv0$.
+Such equations are said to be \emph{\color{blue}linear}\index{linear differential equation}\index{differential equation!linear}. As in the case of first
+order linear equations, (A) is said to be \emph{\color{blue}homogeneous}\index{homogeneous differential equation}\index{differential equation!homogeneous}
+if $F\equiv0$, or \emph{\color{blue}nonhomogeneous}\index{nonhomogeneous differential equation}\index{differential equation!nonhomogeneous} if $F\not\equiv0$.
 
 \medskip\noindent
 \zcref[S,CAP,font=\scshape]{sec:homog_linear} is devoted to the theory of homogeneous linear
@@ -43,7 +44,7 @@ equations.
 
 \medskip\noindent
 \zcref[S,CAP,font=\scshape]{sec:undetermined_coeffs_i,sec:undetermined_coeffs_ii}
-present  the \emph{\color{blue}method of
+present  the \indexterm{method of
 undetermined coefficients}, which can be used to solve
 nonhomogeneous equations of the form
 \[
@@ -57,7 +58,7 @@ introduced in \zcref{ch:first_order}.
 
 
 \medskip\noindent
-\zcref[S,CAP,font=\scshape]{sec:reduction_order} deals with \emph{\color{blue}reduction of order}, a
+\zcref[S,CAP,font=\scshape]{sec:reduction_order} deals with \indexterm{reduction of order}, a
 technique based on the idea of variation of parameters,  which
 enables us to find the general solution of a nonhomogeneous
 linear second order equation provided that we know one nontrivial
@@ -69,7 +70,7 @@ equation.
 \medskip\noindent
 \zcref[S,CAP,font=\scshape]{sec:variation_param}
 deals with the method traditionally called
-\emph{\color{blue}variation of parameters},
+\indexterm{variation of parameters},
 which enables us to find the general solution of a nonhomogeneous
 linear second order equation provided that we know two nontrivial
 solutions (with nonconstant ratio)  of the associated homogeneous
@@ -79,19 +80,20 @@ equation.
 
 
 \section{Homogeneous Linear Equations}\label{sec:homog_linear}
-\index{homogeneous equation!linear}
-\index{linear equation!homogeneous}
+\index{homogeneous equation!linear second order}
+\index{linear second order equation!homogeneous}
 
-A second order differential equation is said to be \emph{\color{blue}linear} if
-it can be written as
+A second order differential equation is said to be
+\emph{\color{blue}linear}\index{linear differential equation}\index{differential equation!linear}\index{linear second order equation!defined}
+if it can be written as
 \begin{equation}\label{eq:5.1.1}
 y''+p(x)y'+q(x)y=f(x).
 \end{equation}
-We call the function $f$ on the right a \emph{\color{blue}forcing function},
+We call the function $f$ on the right a \indexterm{forcing function},
 since in physical applications it's often related to a force acting
 on some system modeled by the differential equation. We say that
-\eqref{eq:5.1.1} is \emph{\color{blue}homogeneous} if $f\equiv0$ or
-\emph{\color{blue}nonhomogeneous} if $f\not\equiv0$. Since these definitions are like
+\eqref{eq:5.1.1} is \emph{\color{blue}homogeneous}\index{homogeneous differential equation}\index{differential equation!homogeneous} if $f\equiv0$ or
+\emph{\color{blue}nonhomogeneous}\index{nonhomogeneous differential equation}\index{differential equation!nonhomogeneous}\index{linear second order equation!nonhomogeneous} if $f\not\equiv0$. Since these definitions are like
 the corresponding definitions in \zcref{sec:linar_first_order} for the linear
 first order equation
 \begin{equation}\label{eq:5.1.2}
@@ -123,7 +125,7 @@ The next theorem gives sufficient conditions for existence and
 uniqueness of solutions of initial value problems for \eqref{eq:5.1.3}. We
 omit the proof.
 
-\begin{theorem}\color{blue} \label{thmtype:5.1.1}
+\begin{theorem}\label{thmtype:5.1.1}
 \index{uniqueness theorem}
 Suppose $p$ and $q$ are continuous on an open interval $(a,b)$,
 let $x_0$ be any point in $(a,b)$, and let $k_0$ and $k_1$ be
@@ -135,7 +137,7 @@ y''+p(x)y'+q(x)y=0,\ y(x_0)=k_0,\ y'(x_0)=k_1
 \end{theorem}
 
 Since $y\equiv0$ is obviously a solution of \eqref{eq:5.1.3} we call it
-the \emph{\color{blue}trivial} solution. Any other solution is \emph{\color{blue}nontrivial}.
+the \indexterm{trivial solution}\index{differential equation!trivial solution}\index{trivial solution!homogeneous linear second order equation}. Any other solution is \emph{\color{blue}nontrivial}\index{nontrivial solution!homogeneous linear second order equation}\index{differential equation!nontrivial solution}.
 Under the assumptions of \zcref{thmtype:5.1.1}, the only solution of
 the initial value problem
 \[
@@ -406,13 +408,14 @@ Equation}
 \index{homogeneous equation!linear second order!general solution}
 \index{linear equation!homogeneous second order!general solution}
 \index{second order equation!homogeneous linear!general solution}
+\index{general solution!second order equation!homogeneous linear}
 
 If $y_1$ and $y_2$ are defined on an interval
 $(a,b)$ and $c_1$ and $c_2$ are constants, then
 \[
 y=c_1y_1+c_2y_2
 \]
-is a \emph{\color{blue}linear combination of $y_1$ and $y_2$}. For
+is a \emph{\color{blue}linear combination of $y_1$ and $y_2$}\index{linear combination of functions}. For
 example, $y=2\cos x+7 \sin x$ is a linear combination of $y_1=
 \cos x$ and $y_2=\sin x$, with $c_1=2$ and $c_2=7$.
 
@@ -420,7 +423,7 @@ example, $y=2\cos x+7 \sin x$ is a linear combination of $y_1=
 The next theorem states a fact that we've already verified in
 \zcref{example:5.1.1,example:5.1.2,example:5.1.3}.
 
-\begin{theorem}\color{blue}\label{thmtype:5.1.2}
+\begin{theorem}\label{thmtype:5.1.2}
 If $y_1$ and $y_2$ are solutions of the homogeneous equation
 \begin{equation}\label{eq:5.1.18}
 y''+p(x)y'+q(x)y=0
@@ -453,15 +456,15 @@ since $y_1$ and $y_2$ are solutions of \eqref{eq:5.1.18}.
 \end{proof}
 
 We say that  $\{y_1,y_2\}$ is a \emph{\color{blue}fundamental set of
-solutions of $\eqref{eq:5.1.18}$ on}  $(a,b)$ if every solution
+solutions of $\eqref{eq:5.1.18}$ on}\index{fundamental set of solutions}\index{fundamental set of solutions!homogeneous linear second order equation}\index{solution!fundamental set} $(a,b)$ if every solution
 of \eqref{eq:5.1.18} on  $(a,b)$  can be written as a linear
 combination of $y_1$ and $y_2$ as in \eqref{eq:5.1.19}.
 In this case we say that \eqref{eq:5.1.19} is
-\emph{\color{blue}general solution of $\eqref{eq:5.1.18}$ on}  $(a,b)$.
+\emph{\color{blue}general solution of $\eqref{eq:5.1.18}$ on}\index{general solution} $(a,b)$.
 
 
 \boxit{Linear Independence}
-\index{linear independence}
+\index{linear independence!two functions}
 
 We need a way to determine whether a given set $\{y_1,y_2\}$
 of solutions of \eqref{eq:5.1.18}  is a fundamental set.
@@ -469,7 +472,7 @@ The next definition will enable us to state necessary and
 sufficient conditions for this.
 
 We say that two functions $y_1$ and $y_2$ defined on an interval
-$(a,b)$ are \emph{\color{blue}linearly independent on} $(a,b)$ if neither is a
+$(a,b)$ are \emph{\color{blue}linearly independent on}\index{linear independence} $(a,b)$ if neither is a
 constant multiple of the other on $(a,b)$. (In
 particular, this means
 that neither can be the trivial solution of \eqref{eq:5.1.18}, since, for
@@ -477,7 +480,7 @@ example, if $y_1\equiv0$  we could write $y_1=0y_2$.) We'll also
 say that the set $\{y_1,y_2\}$ \emph{\color{blue}is linearly independent on}
 $(a,b)$.
 
- \begin{theorem}\color{blue} \label{thmtype:5.1.3}
+ \begin{theorem}\label{thmtype:5.1.3}
 Suppose $p$ and $q$ are continuous on $(a,b)$. Then a set
 $\{y_1,y_2\}$ of solutions of
 \begin{equation}\label{eq:5.1.20}
@@ -513,7 +516,11 @@ solution of $x^2y''+xy'-4y=0$ on $(-\infty,0)$ and $(0,\infty)$.
 
 
 \boxit{The Wronskian and Abel's Formula}
-\index{Abel's formula|(}\index{Wronskian|(}
+\index{Abel's formula}\index{Wronskian}
+\index{homogeneous linear second order equation!Abel's formula}
+\index{homogeneous linear second order equation!Wronskian}
+\index{linear second order equation!homogeneous!Abel's formula}
+\index{linear second order equation!homogeneous!Wronskian}
 
 To motivate a result that we need in order to prove
 \zcref{thmtype:5.1.3},
@@ -592,7 +599,7 @@ c_2&=\frac{y_1(x_0)k_1-y_1'(x_0)k_0}{y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)},
 no matter how $k_0$ and $k_1$ are chosen. This motivates us to
 consider conditions on $y_1$ and $y_2$ that imply \eqref{eq:5.1.25}.
 
-\begin{theorem}\color{blue} \label{thmtype:5.1.4}
+\begin{theorem}\label{thmtype:5.1.4}
 Suppose $p$ and $q$ are continuous on $(a,b)$, let $y_1$ and
 $y_2$ be solutions of
 \begin{equation}\label{eq:5.1.27}
@@ -746,7 +753,7 @@ which is consistent with \eqref{eq:5.1.31}.
 The next theorem will enable us to complete the proof of
 \zcref{thmtype:5.1.3}.
 
-\begin{theorem}\color{blue} \label{thmtype:5.1.5}
+\begin{theorem}\label{thmtype:5.1.5}
  Suppose  $p$ and $q$ are continuous on an open interval $(a,b)$,
  let $y_1$ and $y_2$ be solutions of
 \begin{equation}\label{eq:5.1.32}
@@ -810,12 +817,12 @@ it,  $\{y_1,y_2\}$ is  a fundamental set of solutions of
 \eqref{eq:5.1.32}  if and only if $W$ has no zeros on  $(a,b)$.
 Therefore  $\{y_1,y_2\}$ is   a fundamental set
 for \eqref{eq:5.1.32} on  $(a,b)$ if and only if  $\{y_1,y_2\}$
-is linearly independent on $(a,b)$. \hfill\qedsymbol\index{Abel's formula|)}
+is linearly independent on $(a,b)$. \hfill\qedsymbol
 
 The next theorem summarizes the relationships among the
 concepts discussed in this section.
 
-\begin{theorem}\color{blue} \label{thmtype:5.1.6}
+\begin{theorem}\label{thmtype:5.1.6}
  Suppose  $p$ and $q$ are continuous on an open interval $(a,b)$
 and  let $y_1$ and $y_2$ be solutions of
 \begin{equation}\label{eq:5.1.34}
@@ -838,7 +845,6 @@ The Wronskian of   $\{y_1,y_2\}$ is nonzero at some point in  $(a,b)$.
 The Wronskian of   $\{y_1,y_2\}$ is nonzero at all points in  $(a,b)$.
 \end{alist}
 \end{theorem}
-\index{Wronskian|)}
 
 We can apply this theorem to an equation written as
 \[
@@ -848,7 +854,7 @@ on an interval $(a,b)$ where $P_0$, $P_1$, and $P_2$
 are continuous and $P_0$ has no zeros.
 
 
-\begin{theorem}\color{blue} \label{thmtype:5.1.7}
+\begin{theorem}\label{thmtype:5.1.7}
 Suppose  $c$ is in $(a,b)$ and $\alpha$ and $\beta$  are real numbers,
 not both zero.
 Under the assumptions of \zcref{thmtype:5.1.7}, suppose
@@ -1485,13 +1491,13 @@ has infinitely many solutions on $(-\infty,\infty)$.  On what interval does
 \label{sec:const_coeff_homog}
 \index{homogeneous equation!constant coefficient}
 \index{constant coefficient equation!homogeneous}
+\index{linear second order equation!homogeneous!constant coefficient}
 
 If $a,b$, and $c$ are real constants and $a\ne0$, then
 \[
 ay''+by'+cy=F(x)
 \]
- is said to be a \emph{\color{blue}constant coefficient
- equation}.
+is said to be a \indexterm{constant coefficient equation}.
 In this section we  consider the homogeneous constant
 coefficient equation
 \begin{equation} \label{eq:5.2.1}
@@ -1539,6 +1545,8 @@ In each case we'll start with an example.
 
 \boxit{Case 1: Distinct Real Roots}
 \index{characteristic equation!distinct real roots}
+\index{constant coefficient equation!homogeneous!distinct real roots}
+\index{homogeneous equation!constant coefficient!distinct real roots}
 
 \begin{example}\label{example:5.2.1}
 \begin{alist}
@@ -1595,7 +1603,6 @@ of this solution.
   \centering
   \includegraphics[alt={A curve for 0<x<5 and 0<y<3 beginning at (0,3) and decreasing toward a horizontal asymptote y=0.},
   width=5.67in,height=3.3in,keepaspectratio]{fig050201}
-\color{blue}
   \caption{$y=\dfrac{7}{2}e^{-x}-\dfrac{1}{2}e^{-5x}$}
   \label{figure:5.2.1}
 \end{figure}
@@ -1611,6 +1618,8 @@ set of solutions of $ay''+by'+cy=0$.
 
 \boxit{Case 2: A Repeated Real Root}
 \index{characteristic equation!repeated real root}
+\index{constant coefficient equation!homogeneous!repeated real roots}
+\index{homogeneous equation!constant coefficient!repeated real roots}
 
 \begin{example}\label{example:5.2.2}
 \begin{alist}
@@ -1695,7 +1704,6 @@ y=e^{-3x}(3+8x).
   \centering
   \includegraphics[alt={A curve for 0<x<5 and 0<y<3 beginning at (0,3) and decreasing toward a horizontal asymptote y=0.},
   width=5.67in,height=3.3in,keepaspectratio]{fig050202}
-\color{blue}
   \caption{$y=e^{-3x}(3+8x)$}
   \label{figure:5.2.2}
 \end{figure}
@@ -1752,6 +1760,8 @@ is the general solution.
 
 \boxit{Case 3: Complex Conjugate Roots}
 \index{characteristic equation!complex conjugate roots}
+\index{constant coefficient equation!homogeneous!complex conjugate roots}
+\index{homogeneous equation!constant coefficient!complex conjugate roots}
 
 \begin{example}\label{example:5.2.3}
 \begin{alist}
@@ -1842,7 +1852,6 @@ y=e^{-2x}(2\cos 3x+ \frac{1}{3}\sin 3x).
 
 \begin{figure}
   \centering
-\color{blue}
   \includegraphics[alt={A curve for 0<x,y<2 beginning at (0,2) and decreasing toward a horizontal asymptote y=0.  The curve crosses the x axis near x=0.5 and x=1.5.},
   width=5.67in,height=3.3in,keepaspectratio]{fig050203}
   \caption{$y=e^{-2x}(2\cos 3x+ \dfrac{1}{3}\sin 3x)$}
@@ -1869,10 +1878,10 @@ Don't memorize these formulas. Just remember that $r_1$
 and $r_2$ are of the form \eqref{eq:5.2.17},
 where  $\lambda$ is an arbitrary real number and $\omega$
 is   positive;
- $\lambda$ and $\omega$ are  the \emph{\color{blue}real}
-and \emph{\color{blue}imaginary parts}, respectively, of $r_1$.
+ $\lambda$ and $\omega$ are  the \emph{\color{blue}real}\index{real part}
+and \emph{\color{blue}imaginary parts}\index{imaginary part}, respectively, of $r_1$.
 Similarly, $\lambda$ and $-\omega$ are the real and imaginary parts of
-$r_2$. We say that $r_1$ and $r_2$ are \emph{\color{blue}complex conjugates},
+$r_2$. We say that $r_1$ and $r_2$ are \indexterm{complex conjugates},
 which means that they have the same real part and their imaginary
 parts have the same absolute values, but opposite signs.
 
@@ -1952,7 +1961,7 @@ is the general solution.
 
 The next theorem summarizes the results of this section.
 
-\begin{theorem}\color{blue} \label{thmtype:5.2.1}
+\begin{theorem}\label{thmtype:5.2.1}
 Let $p(r)=ar^2+br+c$ be the characteristic polynomial of
 \begin{equation} \label{eq:5.2.20}
 ay''+by'+cy=0.
@@ -2272,39 +2281,44 @@ We'll now consider the nonhomogeneous linear second order equation
 \begin{equation} \label{eq:5.3.1}
 y''+p(x)y'+q(x)y=f(x),
 \end{equation}
-where the forcing function $f$ isn't  identically zero. The next
+where the forcing function\index{forcing function} $f$ isn't  identically zero.
+The next
 theorem, an extension of \zcref{thmtype:5.1.1}, gives sufficient
 conditions for existence and uniqueness of solutions of initial value
 problems for \eqref{eq:5.3.1}. We omit the proof, which is beyond the
 scope of this book.
 
-\begin{theorem}\color{blue} \label{thmtype:5.3.1}
+\begin{theorem}\label{thmtype:5.3.1}
+\index{existence theorem!second order equation}
+\index{uniqueness theorem!second order equation}
+\index{second order equation!existence and uniqueness theorem}
 Suppose $p$, $q$, and $f$ are continuous on an open interval
 $(a,b)$, let $x_0$ be any point in $(a,b)$, and let $k_0$ and $k_1$ be
 arbitrary real numbers. Then the initial value problem
 \[
 y''+p(x)y'+q(x)y=f(x), \quad  y(x_0)=k_0,\quad y'(x_0)=k_1
 \]
- has a unique solution  on $(a,b)$.
+has a unique solution  on $(a,b)$.
 \end{theorem}
 
-To find the general solution of  \eqref{eq:5.3.1}
+To find the general solution\index{linear second order equation!nonhomogeneous!general solution} of  \eqref{eq:5.3.1}
 on an interval $(a,b)$ where $p$, $q$, and $f$ are continuous,
 it's necessary to find the general solution  of
  the associated homogeneous equation
 \begin{equation} \label{eq:5.3.2}
 y''+p(x)y'+q(x)y=0
 \end{equation}
-on $(a,b)$. We call \eqref{eq:5.3.2} the \emph{\color{blue}complementary equation}
+on $(a,b)$. We call \eqref{eq:5.3.2} the \indexterm{complementary equation}\index{linear second order equation!complementary equation}
 for \eqref{eq:5.3.1}.
 
 The next theorem shows how to find the general solution of
 \eqref{eq:5.3.1} if we know one solution $y_p$ of \eqref{eq:5.3.1} and a
 fundamental set of solutions of \eqref{eq:5.3.2}. We call
-$y_p$ a \emph{\color{blue}particular solution} of \eqref{eq:5.3.1};   it
-can be any solution that we can find,  one way or another.
+$y_p$ a
+\emph{\color{blue}particular solution}\index{particular solution!nonhomogeneous equation!linear second order}\index{linear second order equation!nonhomogeneous!particular solution}
+of \eqref{eq:5.3.1}; it can be any solution that we can find, one way or another.
 
-\begin{theorem}\color{blue} \label{thmtype:5.3.2}
+\begin{theorem}\label{thmtype:5.3.2}
 Suppose $p$, $q$, and $f$ are continuous on $(a,b)$. Let $y_p$
 be a particular solution of
 \begin{equation} \label{eq:5.3.3}
@@ -2361,7 +2375,7 @@ since $y$ and $y_p$ both satisfy \eqref{eq:5.3.3}.
 \end{proof}
 
 We say that \eqref{eq:5.3.5} is the \emph{\color{blue}general solution of
-$\eqref{eq:5.3.3}$ on $(a,b)$}.
+$\eqref{eq:5.3.3}$ on $(a,b)$}\index{general solution}\index{general solution!nonhomogeneous linear second order equation}.
 
 
 If $P_0$, $P_1$, and $F$ are continuous and $P_0$ has no zeros on
@@ -2453,7 +2467,6 @@ y=1+\cos x+7\sin x.
   \centering
   \includegraphics[alt={A generic sinusoidal curve.},
   width=5.67in,height=3.3in,keepaspectratio]{fig050301}
-\color{blue}
   \caption{$y=1+\cos x+7\sin x$}
   \label{figure:5.3.1}
 \end{figure}
@@ -2535,7 +2548,6 @@ y=1+3x+x^2-e^x(3-x).
   \centering
   \includegraphics[alt={A curve for 0<x<2 and -2<y<16 beginning at (0,-2), crossing the x axis near x=0.6, and increasing from there.},
   width=5.67in,height=3.3in,keepaspectratio]{fig050302}
-\color{blue}
   \caption{ $y=1+3x+x^2-e^x(3-x)$}
   \label{figure:5.3.2}
 \end{figure}
@@ -2579,9 +2591,10 @@ y=\frac{x^4}{6}+c_1x^2+\frac{c_2}{x^2}.\qedhere
 
 \boxit{The Principle of Superposition}
 \index{principle of superposition}\index{superposition!principle of}
+\index{linear second order equation!nonhomogeneous!super position principle}
 
 The next theorem enables us to break a nonhomogeneous equation into
-simpler parts, find a particular solution for each part, and then
+simpler parts, find a particular solution\index{particular solution!nonhomogeneous equation!linear second order} for each part, and then
 combine their solutions to obtain a particular solution of the
 original problem.
 
@@ -2909,7 +2922,11 @@ the complementary equation on $(a,b)$.
 
 \section{The Method of Undetermined Coefficients I}\label{sec:undetermined_coeffs_i}
 \index{method of undetermined coefficients}
-\index{undetermined coefficients!method of}
+\index{undetermined coefficients, method of!linear second order equation}
+\index{coefficients!method of undetermined}
+\index{constant coefficient equation!nonhomogeneous}
+\index{linear second order equation!constant coefficient}
+\index{linear second order equation!nonhomogeneous!method of undetermined coefficients}
 
 In this section we consider the constant coefficient equation
 \begin{equation} \label{eq:5.4.1}
@@ -2920,7 +2937,7 @@ where $\alpha$ is a constant and $G$ is a polynomial.
 
 From \zcref{thmtype:5.3.2}, the general solution of \eqref{eq:5.4.1}
 is
-$y=y_p+c_1y_1+c_2y_2$, where $y_p$ is a particular solution of
+$y=y_p+c_1y_1+c_2y_2$, where $y_p$ is a particular solution\index{particular solution!nonhomogeneous equation!linear second order} of
 \eqref{eq:5.4.1} and $\{y_1,y_2\}$ is a fundamental set of
 solutions of the complementary equation
 \[
@@ -2928,7 +2945,7 @@ ay''+by'+cy=0.
 \]
 In \zcref{sec:const_coeff_homog} we showed how to find $\{y_1,y_2\}$. In this
 section we'll show how to find $y_p$. The procedure that we'll use
-is called \emph{\color{blue}the method of undetermined coefficients}.
+is called the \indexterm{method of undetermined coefficients}.
 
 Our first example is similar to
 \zcref[range]{exer:5.3.16,exer:5.3.21}.
@@ -3344,7 +3361,10 @@ integration to be zero, as in \zcref{example:5.4.6}.
 The next example shows how to combine the method of undetermined
 coefficients and \zcref{thmtype:5.3.3}, the principle of
 superposition.
-\index{principle of superposition}\index{superposition!principle of}
+\index{principle of superposition}
+\index{principle of superposition!method of undetermined coefficients}
+\index{coefficients!method of undetermined!principle of superposition}
+\index{undetermined coefficients, method of!principle of superposition}
 
 \begin{example}\label{example:5.4.7}
 Find a particular solution of
@@ -3587,7 +3607,7 @@ ay''+by'+cy=e^{\lambda x}\left(P(x)\cos \omega x+Q(x)\sin \omega x\right)
 where $\lambda$ and $\omega$ are real numbers, $\omega\ne0$, and $P$
 and $Q$ are polynomials. We want to find a particular solution of
 \eqref{eq:5.5.1}. As in \zcref{sec:undetermined_coeffs_i}, the procedure that we
-will use is called \emph{\color{blue}the method of undetermined coefficients}.
+will use is called the \indexterm{method of undetermined coefficients}.
 
 
 \boxit{Forcing Functions Without Exponential Factors}
@@ -3623,7 +3643,7 @@ respectively. Then $y_p$ will be a particular solution of
 \eqref{eq:5.5.2}. The next theorem tells us how to choose the proper
 form for $y_p$. For the proof see \zcref{exer:5.5.37}.
 
-\begin{theorem}\color{blue} \label{thmtype:5.5.1}
+\begin{theorem}\label{thmtype:5.5.1}
 Suppose $\omega$ is a positive number and $P$ and $Q$ are
 polynomials. Let $k$ be the larger of the degrees of $P$ and $Q$. Then
 the equation
@@ -3803,7 +3823,7 @@ polynomials multiplying $\cos x$. An analogous result applies in
 general, as follows (\zcref{exer:5.5.36}).
 
 
-\begin{theorem}\color{blue}\label{thmtype:5.5.2}
+\begin{theorem}\label{thmtype:5.5.2}
 If
 \[
 y_p=A(x)\cos\omega x+B(x)\sin\omega x,
@@ -4365,6 +4385,8 @@ where $c$ is a constant of integration.
 
 \section{Reduction of Order}\label{sec:reduction_order}
 \index{reduction of order}
+\index{general solution!nonhomogeneous linear second order equation}
+\index{linear second order equation!nonhomogeneous!reduction of order}
 
 In this section we give a method for finding the general
 solution of
@@ -4869,9 +4891,11 @@ where $\{z_1,z_2\}$ is a fundamental set of solutions of
 
 \section{Variation of Parameters}\label{sec:variation_param}
 \index{variation of parameters}
+\index{linear second order equation!nonhomogeneous!variation of parameters}
 
-In this section we give a method called \indexterm{variation of
-parameters} for finding a particular solution of
+In this section we give a method called
+\emph{\color{blue}variation of parameters}\index{variation of parameters!linear second order equation}
+for finding a particular solution\index{particular solution!nonhomogeneous equation!linear second order} of
 \begin{equation} \label{eq:5.7.1}
 P_0(x)y''+P_1(x)y'+P_2(x)y=F(x)
 \end{equation}
@@ -5301,7 +5325,6 @@ of the solution.
   \centering
   \includegraphics[alt={A solution curve on -1<x<1 and -50<y<50 with vertical asymptotes at y=±1.  The curve begins near positive infinity when x=-1, crosses the x axis near 0.25, the y axis near y=-1, and goes to negative infinity as x approaches 1.},
   width=5.67in,height=3.3in,keepaspectratio]{fig050701}
-\color{blue}
   \caption{ $y=\dfrac{2\ln(x+1)}{x-1}+\frac{3x+1}{x^2-1}$}
   \label{figure:5.7.1}
 \end{figure}

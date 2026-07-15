@@ -75,9 +75,8 @@ impulsive forcing functions.
 
 To define the Laplace transform, we first recall the definition of an
 improper integral. If $g$ is integrable over the
-interval $[a,T]$ for every $T>a$, then the \emph{\color{blue}improper
-integral of
-$g$ over} $[a,\infty)$ is defined as
+interval $[a,T]$ for every $T>a$, then the \indexterm{improper
+integral} of $g$ over $[a,\infty)$ is defined as
 \begin{equation} \label{eq:8.1.1}
 \int^\infty_a g(t)\,dt=\lim_{T\to\infty}\int^T_a g(t)\,dt.
 \end{equation}
@@ -105,7 +104,7 @@ transforms the function $f=f(t)$  into the function $F=F(s)$. Thus,
 \[
 F=\laplace(f).
 \]
-The functions $f$ and $F$ form a \emph{\color{blue}transform pair}, which we'll
+The functions $f$ and $F$ form a \emph{\color{blue}transform pair}\index{Laplace transform!pair}\index{transform pair}, which we'll
 sometimes denote by
 \[
 f(t)\leftrightarrow F(s).
@@ -320,7 +319,7 @@ should refer to the table of Laplace transforms.
 The next theorem presents an important property of the Laplace
 transform.
 
-\begin{theorem}\color{blue}[Linearity Property]\label{thmtype:8.1.2}
+\begin{theorem}[Linearity Property]\label{thmtype:8.1.2}
  Suppose $\laplace(f_i)$ is defined for
  $s>s_i$, $1\le i\le n)$.
 Let $s_0$ be the largest of the numbers $s_1$, $s_{2}$, \dots, $s_n$, and
@@ -492,7 +491,7 @@ f(t_0+)-f(t_0-)
 is called the \emph{\color{blue}jump} in $f$ at $t_0$ (\zcref{figure:8.1.1}).
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A graph of an x y function that is continuous other than a jump at x=t naught.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080101}
 \caption{A jump discontinuity}
@@ -543,13 +542,13 @@ removable discontinuities does not change $\laplace(f)$.
 \begin{definition}\label{thmtype:8.1.4}
 \begin{rmlist}
 \item % (i)
-A function $f$ is said to be \emph{\color{blue}piecewise continuous} on a finite
+A function $f$ is said to be \indexterm{piecewise continuous} on a finite
 closed interval $[0,T]$ if $f(0+)$ and $f(T-)$ are finite and $f$ is
 continuous on the open interval $(0,T)$ except possibly at finitely
 many points, where $f$ may have jump discontinuities or removable
 discontinuities.
 \item % (ii)
-A function $f$ is said to be \emph{\color{blue}piecewise continuous} on the
+A function $f$ is said to be \indexterm{piecewise continuous} on the
 infinite interval $[0,\infty)$ if it's piecewise continuous on
 $[0,T]$ for every $T>0$.
 \end{rmlist}
@@ -597,7 +596,7 @@ The next theorem gives useful sufficient conditions for a function $f$
 to have a Laplace transform.  The proof is sketched in
 \zcref{exer:8.1.10}.
 
-\begin{theorem}\color{blue}\label{thmtype:8.1.6} If $f$
+\begin{theorem}\label{thmtype:8.1.6} If $f$
 is piecewise continuous on $[0,\infty)$ and of exponential order $s_0$,
  then $\laplace(f)$ is defined for $s>s_0$.
 \end{theorem}
@@ -975,7 +974,7 @@ $f$ by
 \[
 F(s)=\laplace(f)=\int_0^\infty e^{-st}f(t)\,dt.
 \]
-We'll also say that $f$ is an \emph{\color{blue}inverse Laplace Transform} of
+We'll also say that $f$ is an \indexterm{inverse Laplace Transform} of
 $F$, and write
 \[
 f=\laplace^{-1}(F).
@@ -1574,7 +1573,7 @@ equations. To do this, we must know how the Laplace transform of
  $f'$ is related to the Laplace transform of $f$. The
 next theorem answers this question.
 
-\begin{theorem}\color{blue}\label{thmtype:8.3.1}
+\begin{theorem}\label{thmtype:8.3.1}
  Suppose $f$ is continuous
 on $[0,\infty)$ and of exponential order $s_0$, and $f'$ is piecewise
 continuous on $[0,\infty)$.  Then $f$ and $f'$ have Laplace transforms for
@@ -1678,7 +1677,7 @@ which agrees with the known result.
 We  need the next theorem to solve second order differential equations
 using  the Laplace transform.
 
-\begin{theorem}\color{blue}\label{thmtype:8.3.2}
+\begin{theorem}\label{thmtype:8.3.2}
 Suppose $f$ and $f'$ are continuous on $[0,\infty)$ and of
 exponential order $s_0$, and that $f''$ is piecewise continuous on
 $[0,\infty)$. Then $f$, $f'$, and $f''$ have Laplace transforms for $s
@@ -2252,7 +2251,7 @@ f(t)=\begin{cases}
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A function that is line segments connecting (0,1) to (2,1), (2,-3) to (3,-5), (3,9) to (5,15), and then (5,4) to (7,6).},
   width=5.67in,height=3.3in,keepaspectratio]{fig080403}
   \caption{The piecewise continuous function \eqref{eq:8.4.7}}
@@ -2305,7 +2304,7 @@ f(t)=\begin{cases}
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A function that is a curve connecting (0,0) to (π/2,1), (π/2,-3) to (π,-1), and is continuous starting at (π,-3) onward.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080404}
   \caption{The piecewise continuous function \eqref{eq:8.4.10}}
@@ -2475,7 +2474,7 @@ h(t)=2\cos 2t&{}+u(t-\pi/2)\left(3\sin 3t-\frac{1}{3}\cos 3t\right)\\
 \end{solution}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A function that is a curve connecting (0,2) to (π/2,-2), (π/2,1) to (π,2), and is continuous starting from (π,3) onward.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080405}
   \caption{ The piecewise continuous function
@@ -2726,7 +2725,7 @@ must define what we mean by a solution of \eqref{eq:8.5.1} on $[0,\infty)$
 in the case where $f$ has jump discontinuities. The next theorem
 motivates our definition. We omit the proof.
 
-\begin{theorem}\color{blue}\label{thmtype:8.5.1}
+\begin{theorem}\label{thmtype:8.5.1}
 Suppose $a,b$, and $c$ are constants $(a\ne0)$, and $f$ is
 piecewise  continuous on $[0,\infty)$. with jump discontinuities
 at $t_1$, \dots, $t_n$, where
@@ -2834,7 +2833,7 @@ y=\begin{cases}
 
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A curve for 0<t<2π and -2.5<y<2.5 that begins at (0,2), crosses the t axis near t=1.6, bottoms out near (4,-2.2), and increases to another t intercept near t=2π.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080501}
   \caption{ Graph of \eqref{eq:8.5.4}}
@@ -3097,7 +3096,7 @@ $y''$ has limits from the right and left at $t_1=\pi/4$ and $t_2=\pi$
 \end{solution}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A solution curve for 0<t<2π and -1<y<1 that is 0 for t<1, then curves downward, bottoms out near (3,-0.9), crosses the t axis near t=4.2, peaks near (5.6,1), and finishes near (2π,0.8).},
   width=5.67in,height=3.3in,keepaspectratio]{fig080502}
   \caption{ Graph of \eqref{eq:8.5.16}}
@@ -3505,7 +3504,7 @@ independent of $\tau$ yields
 \end{align*}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A graph of t=𝜏 with the region where 𝜏<t shaded.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080601}
   \caption{}
@@ -3897,7 +3896,7 @@ $y_2$ both approach zero as $t\to\infty$, so $\lim_{t\to\infty}v(t)=0$
 for any choice of initial conditions. Moreover, the value of $h(t)$ is
 essentially independent of the values of $f(t-\tau)$ for large $\tau$,
 since $\lim_{\tau\to\infty}w(\tau)=0$. In this case we say that $v$
-and $h$ are \emph{\color{blue}transient} and \emph{\color{blue}steady state components},
+and $h$ are \emph{\color{blue}transient}\index{transient component} and \emph{\color{blue}steady state components}\index{steady state component},
 respectively, of the solution $y$ of \eqref{eq:8.6.13}. These definitions
 apply to the initial value problem of \zcref{example:8.6.4}, where
 the zeros of
@@ -3921,7 +3920,7 @@ in these two examples don't have negative real parts.
 In physical applications where the input $f$ and the output $y$ of a
 device are related by \eqref{eq:8.6.13}, the zeros of the characteristic
 polynomial usually do have negative real parts. Then $W=\laplace(w)$
-is called the \emph{\color{blue}transfer function} of the device. Since
+is called the \indexterm{transfer function} of the device. Since
 \[
 H(s)=W(s)F(s),
 \]
@@ -4231,7 +4230,7 @@ ay''+by'+cy=f(t),
 where $f$ is continuous or piecewise continuous on $[0,\infty)$. In
 this section we consider initial value problems where $f$
 represents a force that's very large for a short time and
-zero otherwise. We say that such forces are \emph{\color{blue}impulsive}.
+zero otherwise. We say that such forces are \emph{\color{blue}impulsive}\index{impulsive force}.
 Impulsive forces occur, for example, when two objects collide. Since
 it isn't  feasible to represent such forces as continuous or
 piecewise continuous functions, we must construct a different
@@ -4267,7 +4266,7 @@ ay''+by'+cy=\delta(t-t_0), \quad  y(0)=0,\quad y'(0)=0,
 where $t_0$ is a fixed nonnegative number. The next theorem will
 motivate our definition.
 
-\begin{theorem}\color{blue} \label{thmtype:8.7.1}
+\begin{theorem}\label{thmtype:8.7.1}
 Suppose $t_0\ge0$. For each positive number $h$, let $y_h$ be the
 solution of the initial value problem
 \begin{equation} \label{eq:8.7.1}
@@ -4294,7 +4293,7 @@ w=\laplace^{-1}\left(\frac{1}{as^2+bs+c}\right).
 \end{theorem}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A rectangle with base from t naught to t naught + h and height 1/h.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080701}
 \caption{  $y=f_h(t)$}
@@ -4454,7 +4453,7 @@ the graph of $y_h$ moves to the left toward the graph of $w$.
 
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A graph of solution curves in the t y plane as described in the text.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080702}
 \caption{An illustration of \zcref{thmtype:8.7.1}}
@@ -4493,7 +4492,7 @@ The graph of $y=u(t-t_0)(t-t_0)e^{-(t-t_0)}$ is shown in
 \end{solution}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A curve for t naught < t < t naught + 7 and 0<y<0.4 that begins at (t naught,0), peaks near (t naught+1,0.37), and then decreases to a horizontal asymptote of y=0.},
   width=5.67in,height=3.3in,keepaspectratio]{fig080703}
 \caption{

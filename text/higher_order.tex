@@ -37,7 +37,7 @@ equations.
 \index{higher order equation!linear!introduction}
 \index{linear equation!higher order!introduction}
 
-An $n$th order differential equation is said to be \emph{\color{blue}linear} if it
+An $n$th order differential equation is said to be \emph{\color{blue}linear}\index{linear!higher order differential equation}\index{higher order!linear differential equation} if it
 can be written in the form
 \begin{equation}\label{eq:9.1.1}
 y^{(n)}+p_1(x)y^{(n-1)}+\cdots+p_n(x)y=f(x).
@@ -64,7 +64,7 @@ abbreviate the left side of \eqref{eq:9.1.2} by $Ly$; that is,
 \[
 Ly=P_0y^{(n)}+P_1y^{(n-1)}+\cdots+P_ny.
 \]
-We say that the equation $Ly=F$ is \emph{\color{blue}normal} on $(a,b)$ if
+We say that the equation $Ly=F$ is \emph{\color{blue}normal}\index{normal differential equation}\index{differential equation!normal} on $(a,b)$ if
 $P_0$, $P_1$, \dots, $P_n$ and $F$ are continuous on $(a,b)$ and $P_0$ has
 no zeros on $(a,b)$. If this is so then $Ly=F$ can be
 written as \eqref{eq:9.1.1} with $p_1$, \dots, $p_n$ and $f$ continuous on
@@ -89,11 +89,14 @@ has a unique solution on $(a,b)$.
 \index{homogeneous equation!linear higher order}
 \index{higher order equation!linear homogeneous}
 \index{linear equation!higher order homogeneous}
+\index{nonhomogeneous equation!linear higher order}
+\index{higher order equation!linear nonhomogeneous}
+\index{linear equation!higher order nonhomogeneous}
 
 Eqn.~\eqref{eq:9.1.2} is said to be \emph{\color{blue}homogeneous} if $F\equiv0$ and
 \emph{\color{blue}nonhomogeneous} otherwise. Since $y\equiv0$ is obviously a
-solution of $Ly=0$, we call it the \emph{\color{blue}trivial} solution. Any other
-solution is \emph{\color{blue}nontrivial}.
+solution of $Ly=0$, we call it the \emph{\color{blue}trivial}\index{trivial solution!higher order differential equation} solution. Any other
+solution is \emph{\color{blue}nontrivial}\index{nontrivial solution!higher order differential equation}.
 
 
 
@@ -102,17 +105,17 @@ $c_1$, $c_2$, \dots, $c_n$ are constants, then
 \begin{equation}\label{eq:9.1.3}
 y=c_1y_1+c_2y_2+\cdots+c_ny_n
 \end{equation}
-is a \emph{\color{blue}linear combination} of $\{y_1,y_2,\dots,y_n\}$. It's
+is a \emph{\color{blue}linear combination}\index{linear combination!of functions} of $\{y_1,y_2,\dots,y_n\}$. It's
 easy
  to show that if $y_1$, $y_2$, \dots, $y_n$ are solutions of
 $Ly=0$ on $(a,b)$, then so is any linear combination of
 $\{y_1,y_2,\dots,y_n\}$. (See the proof of \zcref{thmtype:5.1.2}.) We
 say that $\{y_1,y_2,\dots,y_n\}$ is a \emph{\color{blue}fundamental set of
-solutions of $Ly=0$ on} $(a,b)$ if every solution of $Ly=0$ on
+solutions of $Ly=0$ on}\index{fundamental set of solutions} $(a,b)$ if every solution of $Ly=0$ on
 $(a,b)$ can be written as a linear combination of
 $\{y_1,y_2,\dots,y_n\}$, as in \eqref{eq:9.1.3}. In this case we say that
 \eqref{eq:9.1.3} is the \emph{\color{blue}general solution of $Ly=0$ on
-$(a,b)$}.
+$(a,b)$}\index{general solution}.
 
 
 It can be shown (\zcref{exer:9.1.14,exer:9.1.15}) that if
@@ -123,19 +126,19 @@ solutions of $Ly=0$.
 
 
 
-We say that $\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly independent} on
+We say that $\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly independent}\index{linearly independent!functions} on
 $(a,b)$ if the only constants $c_1$, $c_2$, \dots, $c_n$ such that
 \begin{equation}\label{eq:9.1.4}
 c_1y_1(x)+c_2y_2(x)+\cdots+c_ny_n(x)=0,\quad a<x<b,
 \end{equation}
 are $c_1=c_2=\cdots=c_n=0$. If \eqref{eq:9.1.4} holds for some set of
 constants $c_1$, $c_2$, \dots, $c_n$ that are not all zero, then
-$\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly dependent} on $(a,b)$
+$\{y_1,y_2,\dots,y_n\}$ is \emph{\color{blue}linearly dependent}\index{linearly dependent!functions} on $(a,b)$
 
 The next theorem is analogous to
 \zcref{thmtype:5.1.3}.
 
-\begin{theorem}\color{blue}\label{thmtype:9.1.2}
+\begin{theorem}\label{thmtype:9.1.2}
 If  $Ly=0$ is normal on $(a,b)$, then a set
 $\{y_1,y_2,\dots,y_n\}$ of $n$ solutions of $Ly=0$ on $(a,b)$ is a
 fundamental set if and only if it's linearly independent on $(a,b)$.
@@ -330,7 +333,7 @@ Formula \eqref{eq:9.1.15} is
 The next theorem is analogous to
 \zcref{thmtype:5.1.6}.
 
-\begin{theorem}\color{blue}\label{thmtype:9.1.4}
+\begin{theorem}\label{thmtype:9.1.4}
 Suppose $Ly=0$ is normal on $(a,b)$ and let $y_1$, $y_2$, \dots, $y_n$
 be $n$ solutions of $Ly=0$ on $(a,b)$. Then the following statements
 are equivalent;  that is, they are either all true or all false:
@@ -479,7 +482,7 @@ It shows how to find the general solution of $Ly=F$ if we know a particular
 solution of $Ly=F$ and a fundamental set of solutions of the
 \indexterm{complementary equation} $Ly=0$.
 
-\begin{theorem}\color{blue}\label{thmtype:9.1.6}
+\begin{theorem}\label{thmtype:9.1.6}
 Suppose $Ly=F$ is normal on $(a,b)$. Let $y_p$ be a particular
 solution of $Ly=F$ on $(a,b)$, and let $\{y_1,y_2,\dots,y_n\}$ be a
 fundamental set of solutions of the complementary equation $Ly=0$ on
@@ -846,7 +849,7 @@ If $a_0$, $a_1$, \dots, $a_n$ are constants and $a_0\ne0$, then
 \[
 a_0y^{(n)}+a_1y^{(n-1)}+\cdots+a_ny=F(x)
 \]
-is said to be a \emph{\color{blue}constant coefficient equation}.
+is said to be a \indexterm{constant coefficient equation}.
 In this section we consider the homogeneous constant coefficient
 equation
 \begin{equation} \label{eq:9.2.1}
@@ -976,7 +979,7 @@ y=4e^x-e^{2x}+e^{3x}
 \end{alistSolution}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A graph of the solution for 0<x<2 and 0<y<700 that begins at (0,4), increases slowly at first, and increases rapidly as x increases.},
   width=5.67in,height=3.3in,keepaspectratio]{fig090201}
 \caption{$y=4e^x-e^{2x}+e^{3x}$}
@@ -1007,7 +1010,7 @@ p(D)=(D-1)(D^2+1)=(D^2+1)(D-1).
 \end{equation}
 However, before we can make this assertion we must \emph{\color{blue}define}
  what we mean by saying that two operators are equal, and what we mean
-by the products of operators in \eqref{eq:9.2.7}. We say that two
+by the products of operators in \eqref{eq:9.2.7}\index{operator!equality}\index{operator!product}. We say that two
 operators are equal if they apply to the same functions and always
 produce the same result. The definitions of the products in
 \eqref{eq:9.2.7} is this: if $y$ is any three-times differentiable
@@ -1213,7 +1216,7 @@ and
 where $m$ is an arbitrary positive integer. The next two theorems show
 how to do this.
 
-\begin{theorem}\color{blue} \label{thmtype:9.2.1}
+\begin{theorem}\label{thmtype:9.2.1}
 If $m$ is a positive integer, then
 \begin{equation} \label{eq:9.2.15}
 \{e^{ax}, xe^{ax},\dots, x^{m-1}e^{ax}\}
@@ -1295,7 +1298,7 @@ y=e^{-x}(c_1+c_2x+c_3x^2).\qedhere
 The proof of the next theorem is sketched in
 \zcref{exer:9.2.41}.
 
-\begin{theorem}\color{blue} \label{thmtype:9.2.2}
+\begin{theorem}\label{thmtype:9.2.2}
 If $\omega \ne0$ and $m$ is a positive integer, then
 \begin{align*}
 \{e^{\lambda x}\cos\omega x, xe^{\lambda x}\cos\omega x,
@@ -1700,7 +1703,7 @@ solutions of the given equation.
 +a_{n-1}xy'+a_ny=0,\quad x>0,
 \tag{A}
 \]
-where $a_0$, $a_1$, \dots, $a_n$ are constants, is an \emph{\color{blue}Euler} or
+where $a_0$, $a_1$, \dots, $a_n$ are constants, is an \emph{\color{blue}Euler}\index{Euler equation} or
 \emph{\color{blue}equidimensional} equation\index{equidimensional equation}.
 
 Show that if
@@ -1778,7 +1781,7 @@ above. The procedure that we  use is a generalization of the
 method that we used in
 \zcref{sec:undetermined_coeffs_i,sec:undetermined_coeffs_ii},
 and is again called
-\emph{\color{blue}method of undetermined coefficients}. Since
+\indexterm{method of undetermined coefficients}. Since
 the underlying ideas are the same as those in
 \zcref*{sec:undetermined_coeffs_i,sec:undetermined_coeffs_ii},
 we'll give  an informal presentation based on
@@ -1861,7 +1864,7 @@ is a particular solution of  \eqref{eq:9.3.2} (\zcref{figure:9.3.1}).
 \end{solution}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A plot of the solution for 0<x<2 and 0<y<50 that begins at (0,1), increases slowly at first, and then increases rapidly.},
   width=5.67in,height=3.3in,keepaspectratio]{fig090301}
   \caption{$y_p=e^x(1+2x-x^2+x^3)$ }
@@ -1935,7 +1938,7 @@ is a particular solution of  \eqref{eq:9.3.4}.
 \end{solution}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A graph of the solution curve for 0<x<1 and -0.1<y<0.3, beginning flat at the origin, bottoming out near (0.65,-0.05), crossing the x axis near x=0.83, and increasing from there.},
   width=5.67in,height=3.3in,keepaspectratio]{fig090302}
   \caption{$y_p=\dfrac{x^2e^{2x}}{24}(-4+4x+x^2)$}
@@ -2030,7 +2033,7 @@ is a particular  solution of \eqref{eq:9.3.7} (\zcref{figure:9.3.3}).
 \end{solution}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A graph of the solution curve for 0<x<4 and -20<y<100, beginning flat at (0,-1), bottoming out near (2.8,-15), crossing the x axis near x=3.4, and increasing from there.},
   width=5.67in,height=3.3in,keepaspectratio]{fig090303}
 \caption{$y_p=e^xu_p=-\dfrac{e^x}{2}\left[(2-x)\cos x+(1+x)\sin x\right]$}
@@ -2105,7 +2108,7 @@ Substituting these into the last two equations  yields
 \end{align*}
 %
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A wobbly graph of the solution, beginning at the origin, decreasing to a minimum near (2,-0.42), crossing the x axis near x=3.9, peaking near (5,0.12), crossing the x axis again near x=7.2, and then increasing to the horizontal asymptote y=0.},
   width=5.67in,height=3.3in,keepaspectratio]{fig090304}
 \caption{ $y_p=-\dfrac{xe^{-x}}{2}\left[(3-2x)\cos x+(1+x)\sin x\right]$}

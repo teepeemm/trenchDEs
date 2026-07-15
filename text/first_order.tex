@@ -1,6 +1,7 @@
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{First Order Equations}\label{ch:first_order}
+\index{first order equation}
 
 
 \noindent
@@ -47,30 +48,32 @@ an exact differential from calculus.
 \medskip\noindent
 \zcref[S,CAP,font=\scshape]{sec:integrating_factors} deals with
 equations that are not exact, but can made exact by multiplying them
-by a function known called \emph{\color{blue}integrating factor}.
+by a function known called \indexterm{integrating factor}.
 
 \newpage
 
 
 \section{Linear First Order Equations}\label{sec:linar_first_order}
-\index{linear first order equations}
-\index{first order linear equations}
+\index{linear equation!first order}
+\index{first order equation!linear}
 
-A first order differential equation is said to be \emph{\color{blue}linear} if it
+A first order differential equation is said to be \emph{\color{blue}linear}\index{linear!differential equation}\index{differential equation!linear} if it
 can be written as
-
 \begin{equation}\label{eq:2.1.1}
 y'+p(x)y=f(x).
 \end{equation}
-A first order differential equation that can't be written like this
-is \emph{\color{blue}nonlinear}. We say that \eqref{eq:2.1.1} is \emph{\color{blue}homogeneous}
-if $f\equiv0$;     otherwise it's \emph{\color{blue}nonhomogeneous}. Since
-$y\equiv0$ is obviously a solution of the homgeneous equation
+A first order differential equation that can't be written like this is
+\emph{\color{blue}nonlinear}\index{nonlinear!differential equation}\index{differential equation!nonlinear}\index{first order equation!nonlinear}.
+We say that \eqref{eq:2.1.1} is 
+\emph{\color{blue}homogeneous}\index{homogeneous!differential equation}\index{differential equation!homogeneous}\index{first order equation!linear!homogeneous}\index{linear equation!first order!homogeneous}
+if $f\equiv0$;     otherwise it's
+\emph{\color{blue}nonhomogeneous}\index{nonhomogeneous!differential equation}\index{differential equation!nonhomogeneous}\index{first order equation!linear!nonhomogeneous}\index{linear equation!first order!nonhomogeneous}\index{nonhomogeneous!linear!first order}.
+Since $y\equiv0$ is obviously a solution of the homogeneous equation
 \[
 y'+p(x)y=0,
 \]
-we call it the \emph{\color{blue}trivial solution}. Any  other solution
-is \emph{\color{blue}nontrivial}.
+we call it the \indexterm{trivial solution}\index{trivial solution!of homogeneous linear first order equation}. Any  other solution
+is \emph{\color{blue}nontrivial}\index{nontrivial solution}\index{nontrivial solution!of homogeneous linear first order equation}.
 
 
 \begin{example}\label{example:2.1.1}
@@ -103,6 +106,8 @@ y'+xe^y &=12&&\text{(because of $e^y$)}.
 
 \boxit{General Solution of a Linear First Order Equation}
 \index{linear first order equation!general solution}
+\index{first order equation!linear!general solution}
+\index{general solution!first order linear equation}
 
 To motivate a definition that we'll need, consider the
 simple linear first order equation
@@ -116,14 +121,14 @@ y=-\frac{1}{x}+c,
 \end{equation}
 where $c$ is an arbitrary constant.
 We call $c$ a
-\emph{\color{blue}parameter} and say that \eqref{eq:2.1.3} defines a
-\emph{\color{blue}one-parameter family} of functions.
+\emph{\color{blue}parameter}\index{parameter!one-parameter family} and say that \eqref{eq:2.1.3} defines a
+\indexterm{one-parameter family of functions}.
 For each real number $c$, the
 function defined by \eqref{eq:2.1.3} is a solution of \eqref{eq:2.1.2}
 on $(-\infty,0)$ and $(0,\infty)$;     moreover, every solution of
 \eqref{eq:2.1.2} on either of these intervals is of the form
 \eqref{eq:2.1.3} for some choice of $c$. We say that \eqref{eq:2.1.3}
-is \emph{\color{blue}the general solution} of~\eqref{eq:2.1.2}.
+is the \indexterm{general solution} of~\eqref{eq:2.1.2}.
 
 We'll  see that a similar situation occurs in connection with any
 first order linear equation
@@ -142,7 +147,7 @@ solution of \eqref{eq:2.1.4} on $(a,b)$.
 If $y$ is a solution of \eqref{eq:2.1.4} on $(a,b)$, then $y$ can be
 obtained from the formula by choosing $c$ appropriately.
 \end{itemize}
-We'll call $y=y(x,c)$ the \emph{\color{blue}general solution} of
+We'll call $y=y(x,c)$ the \indexterm{general solution} of
 \eqref{eq:2.1.4}.
 
 When this has been established, it will follow that
@@ -176,6 +181,8 @@ further; however, see \zcref{exer:2.1.44} for an example.
 \boxit{Homogeneous Linear First Order Equations}
 \index{linear!first order equation!homogeneous}
 \index{homogeneous!linear first order equation}
+\index{homogeneous!linear first order equation!general solution}
+\index{general solution!homogeneous linear first order equation}
 
 We begin with the problem of finding the general solution of
 a homogeneous linear first order equation.
@@ -253,7 +260,6 @@ $a$.
   \centering
   \includegraphics[alt={Six solution curves corresponding to the values -4, -2.5, -1, 1, 1.5, and 2 for a.  The more negative values of a decrease more quickly.  The more positive values of a increase more quickly.},
   width=5.4in,height=3.3in,keepaspectratio]{fig020101}
-\color{blue}
   \caption{Solutions of $y'-ay=0$, $y(0)=1$}
   \label{figure:2.1.1}
 \end{figure}
@@ -338,7 +344,6 @@ The interval of validity of this solution is  $(0,\infty)$.
   \centering
   \includegraphics[alt={Several hyperbolas y=c/x.  When c>0 the hyperbolas are in the first and third quadrants.  When c<0 the hyperbolas are in the second and fourth quadrants.},
   width=5.4in,height=3.3in,keepaspectratio]{fig020102}
-\color{blue}
   \caption{Solutions of $xy'+y=0$ on $(0,\infty)$ and $(-\infty,0)$}
   \label{figure:2.1.2}
 \end{figure}
@@ -347,6 +352,7 @@ The results in Examples~\ref{example:2.1.3}(a) and \ref{example:2.1.4}(b)
 are special cases of the next theorem.
 
 \begin{theorem}\label{thmtype:2.1.1}
+\index{linear first order equation!homogeneous!general solution}
 If $p$ is continuous on $(a,b)$, then the general solution
 of the homogeneous equation
 \begin{equation}\label{eq:2.1.12}
@@ -408,15 +414,21 @@ c=\begin{cases}
 \begin{remark*}
 Rewriting a first order differential equation so that one
 side depends only on $y$ and $y'$ and the other depends only on $x$
-is called \indexterm{separation of variables}. We did this in
+is called
+\indexterm{separation of variables}\index{homogeneous linear first order equation!separation of variables}\index{linear first order equation!homogeneous!separation of variables}\index{variables, separation of}.
+We did this in
 \zcref{example:2.1.3,example:2.1.4}, and in rewriting
 \eqref{eq:2.1.12} as \eqref{eq:2.1.15}. We'll apply this method to nonlinear
 equations in \zcref{sec:separable}.
 \end{remark*}
 
 \boxit{Linear Nonhomogeneous First Order Equations}
-\index{linear nonhomogeneous first order equation}
-\index{nonhomogeneous linear first order equation}
+\index{linear equation!first order!nonhomogeneous}
+\index{linear first order equation!nonhomogeneous!general solution}
+\index{linear first order equation!nonhomogeneous!variation of parameters}
+\index{nonhomogeneous equation!linear!first order}
+\index{nonhomogeneous equation!linear first order!general solution}
+\index{nonhomogeneous equation!linear first order!variation of parameters}
 \index{first order equation!linear nonhomogeneous}
 
 We'll now solve the nonhomogeneous equation
@@ -434,7 +446,7 @@ $y_1$ is a nontrivial solution of the complementary equation and $u$
 is to be determined. This method of using a solution of the
 complementary equation to obtain solutions of a nonhomogeneous
 equation is a special case of a method called \indexterm{variation of
-parameters}, which you'll encounter several times in this book.
+parameters}\index{variation of parameters!linear first order equation}, which you'll encounter several times in this book.
 (Obviously, $u$ can't be constant, since if it were, the left side
 of \eqref{eq:2.1.16} would be zero. Recognizing this, the early users of
 this method viewed $u$ as a ``parameter'' that varies; hence, the name
@@ -506,7 +518,6 @@ for \eqref{eq:2.1.18}.
   \centering
   \includegraphics[alt={A field for -1<x<1 and -2<y<2.  For x near -1, the arrows point down and to the right.  As x increases, the arrows turn to point to the right and toward y=0.  Several solution curves follow the arrows.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020103}
-\color{blue}
   \caption{A direction field and integral curves for $y'+2y=x^{2}e^{-2x}$}
   \label{figure:2.1.3}
 \end{figure}
@@ -589,9 +600,8 @@ The interval of validity of this solution is $(0,\pi)$;
 
 \begin{figure}
 \centering
-\includegraphics[alt={An increasing blue curve beginning near negative infinity as x approaches 0, crossing the x axis near (0.7,0), and finishing near positive infinity as x approaches π.},
+\includegraphics[alt={An increasing curve beginning near negative infinity as x approaches 0, crossing the x axis near (0.7,0), and finishing near positive infinity as x approaches π.},
 width=5.4in,height=3in,keepaspectratio]{fig020104}
-\color{blue}
 \caption{Solution of
 $y'+(\cot x)y=x\csc x, y(\pi/2)=1$}
   \label{figure:2.1.4}
@@ -612,8 +622,7 @@ that you really understand the method. After that, omit them.
 \medskip
 
 
-We summarize the method  of variation of parameters for
-solving
+We summarize the method  of variation of parameters for solving\index{linear first order equation!nonhomogeneous!variation of parameters}
 \begin{equation} \label{eq:2.1.26}
 y'+p(x)y=f(x)
 \end{equation}
@@ -652,8 +661,10 @@ of the form  \eqref{eq:2.1.26}
 and then follow this   procedure.
 
 \boxit{Solutions in Integral Form}
-\index{integral form!solutions of differential equations in}
-\index{solutions of differential equations in integral form}
+\index{integral form!solutions of differential equations}
+\index{solutions of differential equations!integral form}
+\index{linear first order equation!nonhomogeneous!solution in integral form}
+\index{nonhomogeneous equation!linear first order!solution in integral form}
 
 Sometimes the integrals that arise in solving a linear first order
 equation can't be evaluated in terms of elementary functions. In this
@@ -729,7 +740,6 @@ to apply the numerical integration procedures discussed in
   \centering
   \includegraphics[alt={Ten solution curves that begin at x=0 and go to the right, turning upward as x increases.},
   width=5.4in,height=3.3in,keepaspectratio]{fig020105}
-\color{blue}
   \caption{Solutions of $y'-2xy=1$, $y(0)=y_{0}$}
   \label{figure:2.1.5}
 \end{figure}
@@ -748,7 +758,7 @@ y'+p(x)y=0
 on $(a,b)$. Then:
 \begin{alist}
 \item % (a)
-The general solution of the nonhomogeneous equation
+The general solution of the nonhomogeneous equation\index{nonhomogeneous equation!linear first order!general solution}
 \begin{equation}\label{eq:2.1.31}
 y'+p(x)y=f(x)
 \end{equation}
@@ -1099,6 +1109,8 @@ u^{(j+1)}=\frac{f_j}{y_1},\quad 0\le j\le m.
 
 
 \section{Separable Equations}\label{sec:separable}
+\index{first order equation!separable}
+\index{separable equation!first order}
 
 A first order differential equation  is
 \emph{\color{blue}separable}\index{separable equation} if it can be written as
@@ -1108,7 +1120,7 @@ h(y)y'=g(x),
 where the left side is a product of $y'$ and a function of $y$ and
 the right side is a function of $x$. Rewriting a separable
 differential equation in this form is called \indexterm{separation of
-variables}. In \zcref{sec:linar_first_order} we used separation of variables
+variables}\index{variables, separation of}. In \zcref{sec:linar_first_order} we used separation of variables
 to solve homogeneous linear equations. In this section we'll apply
 this method to nonlinear equations.
 
@@ -1251,7 +1263,6 @@ y=- \sqrt{5-x^2}, \quad -\sqrt{5} < x < \sqrt{5}.\qedhere
   \centering
   \includegraphics[alt={Two semicircles centered at the origin.  One has radius √2 in the upper half; the other has radius √5 in the lower half plane.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020201}
-\color{blue}
   \caption{(a) $y=\sqrt{2-x^{2}}$,\, $-\sqrt{2}<x<\sqrt{2}$; \,
 (b) $y=-\sqrt{5-x^{2}}$,\, $-\sqrt{5}<x<\sqrt{5}$}
   \label{figure:2.2.1}
@@ -1260,6 +1271,10 @@ y=- \sqrt{5-x^2}, \quad -\sqrt{5} < x < \sqrt{5}.\qedhere
 
 \boxit{Implicit Solutions of Separable Equations}
 \index{implicit solution}\index{separable equation}
+\index{implicit solution!separable equation}
+\index{initial value problem!implicit solution}
+\index{separable equation!implicit solution}
+\index{first order equation!separable!implicit solution}
 
 In \zcref{example:2.2.1,example:2.2.2} we were able to
 solve the equation $H(y)=G(x)+c$ to obtain explicit formulas for
@@ -1294,10 +1309,10 @@ h(y)y'=g(x),\quad y(x_0)=x_0.
 
 
 It's convenient to say that \eqref{eq:2.2.11} with $c$ arbitrary is an
-\emph{\color{blue}implicit solution} of $h(y)y'=g(x)$. Curves defined by
+\indexterm{implicit solution} of $h(y)y'=g(x)$. Curves defined by
 \eqref{eq:2.2.11} are integral curves of $h(y)y'=g(x)$. If $c$ satisfies
 \eqref{eq:2.2.10}, we'll say that \eqref{eq:2.2.11} is an
-\emph{\color{blue}implicit solution of the initial value problem}
+\emph{\color{blue}implicit solution of the initial value problem}\index{implicit solution!of initial value problem}
 \eqref{eq:2.2.12}. However, keep
 these  points in mind:
 \begin{itemize}
@@ -1352,7 +1367,6 @@ for \eqref{eq:2.2.13}.
   \centering
   \includegraphics[alt={A vector field for 1<x<4 and -1<y<2 with arrows pointing up and right.  The arrows are steepest along y=0, and flatten out as they approach y=2.  Several solution curves follow the arrows.},
   width=5.4in,height=3.3in,keepaspectratio]{fig020202}
-\color{blue}
   \caption{A direction field and integral curves for
 $y'=\dfrac{2x+1}{5y^{4}+1}$}
   \label{figure:2.2.2}
@@ -1360,6 +1374,8 @@ $y'=\dfrac{2x+1}{5y^{4}+1}$}
 
 \boxit{Constant Solutions of Separable Equations}
 \index{separable equation}\index{constant solution}
+\index{separable equation!constant solution}
+\index{first order equation!separable!constant solution}
 
 An equation of the form
 \[
@@ -1417,7 +1433,6 @@ curves for \eqref{eq:2.2.16}
   \centering
   \includegraphics[alt={A vector field for -2<x,y<2, with arrows pointing to the right and downward when x<0 and right and upward when x>0.  For y<0, solution curves start along y=0, curve downward to bottom out when x=0, and then increase back to finish along y=0.  For y>0, solution curves start at vertical asymptotes, bottom out when x=0, and then increase to finish at other vertical asymptotes.},
   width=5.4in,height=3.3in,keepaspectratio]{fig020203}
-\color{blue}
   \caption{A direction field and  integral curves for $y'=2xy^{2}$}
   \label{figure:2.2.3}
 \end{figure}
@@ -1486,15 +1501,14 @@ constant solution, $y \equiv -1$, can't be obtained in this way.
   \centering
   \includegraphics[alt={A vector field for -2<x<2 and -3<y<3 with trivial solutions y=±1.  When y>1, the curves increase to a peak at x=0 before decreasing to y=1.  When -1<y<1, the curves decrease and are flat near x=0 before increasing to y=1.  When y<-1, the curves begin at a vertical asymptote, increase to a maximum at x=0, and then go to another vertical asymptote.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020204}
-\color{blue}
-\caption{
-A direction field and integral curves for
+\caption{A direction field and integral curves for
 $y'=\dfrac{x(1-y^2)}{2}$}
   \label{figure:2.2.4}
 \end{figure}
 
 
 \boxit{Differences Between Linear and Nonlinear Equations}
+\index{nonlinear equation!first order}
 
 \zcref[S]{thmtype:2.1.2} states that if $p$ and $f$ are continuous on
 $(a,b)$ then every solution of
@@ -1830,7 +1844,6 @@ illustrate it with examples.
   \centering
   \includegraphics[alt={The rectangle a<x<b and c<y<d with dots insides and a dashed boundary.},
   trim=0 50 0 60,clip,width=5.67in,height=3.3in,keepaspectratio]{fig020301}
-\color{blue}
   \caption{An open rectangle}
   \label{figure:2.3.1}
 \end{figure}
@@ -1855,10 +1868,14 @@ the scope of this book.
 
 \begin{theorem}\label{thmtype:2.3.1}
 \index{existence theorem}\index{uniqueness theorem}
+\index{first order equation!existence and uniqueness of solutions}
+\index{nonlinear equation!first order}
+\index{nonlinear equation!first order!existence and uniqueness of solutions}
+\index{uniqueness of solutions of nonlinear first order equation}
 \begin{alist}
 \item %(a)
  If  $f$ is continuous
-on an open rectangle
+on an open rectangle\index{open rectangle}\index{rectangle, open}
 \[
 R:  \{ a < x < b, c < y < d \}
 \]
@@ -1867,7 +1884,7 @@ then  the initial value problem
 \begin{equation} \label{eq:2.3.1}
 y'=f(x,y), \quad y(x_0)=y_0
 \end{equation}
- has at least one solution  on some open subinterval
+ has at least one solution  on some open subinterval\index{open subinterval}\index{subinterval, open}
 of  $(a,b)$ that contains $x_0$.
 
 \item % (b)
@@ -1882,7 +1899,7 @@ It's important to understand exactly what \zcref{thmtype:2.3.1}
 says.
 
 \begin{itemize}
-\item (a) is an \emph{\color{blue}existence theorem}. It guarantees that a
+\item (a) is an \indexterm{existence theorem}. It guarantees that a
 solution exists on some open interval that contains $x_0$, but provides
 no information on how to find the solution, or to determine the open
 interval on which it exists. Moreover, \part{a} provides no
@@ -1891,7 +1908,7 @@ leaves open the possibility that \eqref{eq:2.3.1} may have two or more
 solutions that differ for values of $x$ arbitrarily close to $x_0$. We
 will see in \zcref{example:2.3.6} that this can happen.
 
-\item (b) is a \emph{\color{blue}uniqueness theorem}. It guarantees that
+\item (b) is a \indexterm{uniqueness theorem}. It guarantees that
 \eqref{eq:2.3.1} has a unique solution on some open interval (a,b) that
 contains $x_0$. However, if $(a,b)\ne(-\infty,\infty)$,
 \eqref{eq:2.3.1} may have more than one solution on a larger interval
@@ -2127,7 +2144,6 @@ name=myplot] %
 \node [right] at (myplot.right of origin) {\scriptsize $x$};
 \node [above] at (myplot.above origin) {\scriptsize $y$};
 \end{tikzpicture}
-\color{blue}
 \caption{Two solutions ($y=0$ and $y=x^{10/3}$) of \eqref{eq:2.3.9}  that
 differ on every interval  containing $x_{0}=0$}
   \label{figure:2.3.2}
@@ -2179,7 +2195,7 @@ y =
 \noindent
 \begin{minipage}[t]{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-\includegraphics[alt={A blue curve beginning near (-2,6), decreasing to horizontally cross the x axis at x=1, bottoming out at (0,-1), and finishing in a mirror image near (2,6).  A second blue curve goes from (-2,0) to (-1,0) and from (1,0) to (2,0).},
+\includegraphics[alt={A curve beginning near (-2,6), decreasing to horizontally cross the x axis at x=1, bottoming out at (0,-1), and finishing in a mirror image near (2,6).  A second curve goes from (-2,0) to (-1,0) and from (1,0) to (2,0).},
 width=\linewidth,height=2.44in,keepaspectratio]{fig020303}
 \captionof{figure}{Two solutions of \eqref{eq:2.3.12} on $(-\infty,\infty)$
 that coincide on $(-1,1)$, but on no larger open interval}
@@ -2188,7 +2204,7 @@ that coincide on $(-1,1)$, but on no larger open interval}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{0.48\linewidth}
-\tagstructbegin{tag=Sect}\includegraphics[alt={A blue curve beginning near (-2,6), decreasing to bottom out at (0,1), and finishing in a mirror image near (2,6).},
+\tagstructbegin{tag=Sect}\includegraphics[alt={A curve beginning near (-2,6), decreasing to bottom out at (0,1), and finishing in a mirror image near (2,6).},
 width=\linewidth,height=2.44in,keepaspectratio]{fig020304}
 \captionof{figure}{The unique solution of \eqref{eq:2.3.14}}
 \label{figure:2.3.4}
@@ -2381,6 +2397,8 @@ any point in $(a,b)$.
 \index{transformation of nonlinear equation!into separable equation}
 \index{nonlinear equation!transformation into separable equation}
 \index{separable equation!transformation of nonlinear equation into}
+\index{first order equation!transformation into separable equation}
+\index{first order equation!separable}
 
 In \zcref{sec:linar_first_order} we found that the solutions of a linear
 nonhomogeneous equation
@@ -2418,8 +2436,9 @@ y'+p(x)y=f(x)y^r,
 \end{equation}
 where $r$ can be any real number other than $0$ or $1$. (Note that
 \eqref{eq:2.4.2} is linear if and only if $r=0$ or $r=1$.) We can
-transform
-\eqref{eq:2.4.2} into a separable equation by variation of parameters:
+transform \eqref{eq:2.4.2} into a separable
+equation\index{separable equation!transformation from Bernoulli's equation}\index{transformation to separable equation!Bernoulli's equation}
+by variation of parameters:
 if  $y_1$ is  a nontrivial solution of \eqref{eq:2.4.1},
 substituting
 $y=uy_1$ into \eqref{eq:2.4.2} yields
@@ -2463,7 +2482,6 @@ direction field and some integral curves of \eqref{eq:2.4.3}.
   \centering
   \includegraphics[alt={A vector field for -2<x,y<2 with arrows pointing right and downward for negative x and right and upward for positive x.  Curves below a horizontal asymptote y=0 decrease to bottom out near x=0.5 and then tend towards (2,-0.5).  Curves above y=0 bottom out near x=-1 and then increase toward vertical asymptotes.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020401}
-\color{blue}
 \caption{A direction field and integral curves for $y'-y=xy^{2}$}
   \label{figure:2.4.1}
 \end{figure}
@@ -2506,6 +2524,9 @@ variables to obtain
 
 \boxit{Homogeneous Nonlinear Equations}
 \index{homogeneous!nonlinear equation}
+\index{homogeneous!nonlinear equation!defined}
+\index{homogeneous!nonlinear equation!transformation to separable equation}
+\index{transformation to separable equation!homogeneous!nonlinear equation}
 \index{nonlinear!homogeneous equation}
 
 In the text  we'll consider only the most widely studied class of
@@ -2514,8 +2535,9 @@ Other types of equations appear in
 \zcref[range]{exer:2.4.44,exer:2.4.51}.
 
 The differential equation \eqref{eq:2.4.4}
-is said to be \emph{\color{blue}homogeneous} if  $x$ and $y$
-occur in $f$ in such a way that  $f(x,y)$ depends only
+is said to be
+\emph{\color{blue}homogeneous}\index{homogeneous!differential equation}\index{differential equation!homogeneous}\index{separable equation!transformation from homogeneous equation}
+if  $x$ and $y$ occur in $f$ in such a way that  $f(x,y)$ depends only
 on the ratio $y/x$; that is, \eqref{eq:2.4.4} can be written as
 \begin{equation} \label{eq:2.4.7}
 y'=q(y/x),
@@ -2548,22 +2570,23 @@ solutions $u\equiv u_0$ such that $q(u_0)=u_0$) yields
 \]
 
 Before turning to examples, we point out something that you may've have
-already noticed:
- the definition of \emph{\color{blue}homogeneous equation} given
-here isn't  the same as the definition given in \zcref{sec:linar_first_order},
-where we said that a linear equation of the form
+already noticed: the definition of
+\emph{\color{blue}homogeneous equation}\index{homogeneous!equation}\index{homogeneous!differential equation}
+given here isn't  the same as the definition given in
+\zcref{sec:linar_first_order}, where we said that a linear equation of the form
 \[
 y'+p(x)y=0
 \]
 is homogeneous. We make no apology for this inconsistency, since we
-didn't create it     historically, \emph{\color{blue}homogeneous} has been
+didn't create it. Historically, \indexterm{homogeneous} has been
 used in these two inconsistent ways. The one
 having to do with linear equations is the most important. This
 is the only section of the book where the meaning defined here will
 apply.
 
 Since $y/x$ is in general undefined if $x=0$, we'll consider
-solutions of nonhomogeneous equations only on open intervals that do
+% this said nonhomogeneous ?
+solutions of homogeneous equations only on open intervals that do
 not contain the point $x=0$.
 
 \begin{example}\label{example:2.4.2}
@@ -2597,7 +2620,6 @@ a direction field and integral curves for \eqref{eq:2.4.8}.
   \centering
   \includegraphics[alt={A vector field for 0.5<x<5 and -2<y<2 with arrows pointing up and right.  The arrows are more vertical for small x values, and point more northeast as x increases.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020402}
-\color{blue}
 \caption
 {A direction field and some integral curves for
 $y'=\dfrac{y+xe^{-y/x}}{x}$}
@@ -3021,7 +3043,7 @@ given equation implicitly.}
 a function $y_1$ such that the substitution $y=uy_1$ transforms
 the given equation  into a separable
 equation of the form \eqref{eq:2.4.6}. Then solve the given equation
-explicitly.}
+explicitly.}\index{transformation to separable equation!other equations}
 
 \begin{exerciselistTwoColumn}
 \item\label{exer:2.4.44}$3xy^2y'=y^3+x$
@@ -3077,7 +3099,8 @@ method suggested by \zcref{exer:2.4.55} to find other solutions.}
 
 
 \section{Exact Equations}\label{sec:exact}
-\index{exact equation}
+\index{exact first order equation}
+\index{first order equation!exact}
 
 In this  section it's convenient to write first order
 differential equations in the form
@@ -3096,8 +3119,9 @@ M(x,y)\,\frac{dx}{dy}+N(x,y)=0,
 where $y$ is the independent variable and $x$ is the dependent
 variable. Since the solutions of \eqref{eq:2.5.2} and \eqref{eq:2.5.3} will
 often have to be left in
-implicit, form we'll say that $F(x,y)=c$ is an implicit solution of
-\eqref{eq:2.5.1} if every differentiable function $y=y(x)$ that satisfies
+implicit, form we'll say that $F(x,y)=c$ is an
+\indexterm{implicit solution}\index{first order equation!exact!implicit solution}\index{implicit solution!exact first order equation}
+of \eqref{eq:2.5.1} if every differentiable function $y=y(x)$ that satisfies
 $F(x,y)=c$ is a solution of \eqref{eq:2.5.2} and every
 differentiable function $x=x(y)$ that satisfies $F(x,y)=c$ is a
 solution of \eqref{eq:2.5.3}.
@@ -3198,7 +3222,7 @@ We'll say that  the equation
 \begin{equation} \label{eq:2.5.8}
 M(x,y)\,dx+N(x,y)\,dy=0
 \end{equation}
- is  \emph{\color{blue}exact} on an an open rectangle  $R$ if there's
+ is  \emph{\color{blue}exact}\index{exact!differential equation}\index{differential equation!exact} on an an open rectangle  $R$ if there's
 a function $F=F(x,y)$ such  $F_x$
 and $F_y$  are continuous, and
 \begin{equation} \label{eq:2.5.9}
@@ -3211,7 +3235,7 @@ where the expression
 F_x(x,y)\,dx+F_y(x,y)\,dy
 \]
 (obtained by substituting \eqref{eq:2.5.9} into the left side of
-\eqref{eq:2.5.8}) is the  \emph{\color{blue}exact differential of} $F$.
+\eqref{eq:2.5.8}) is the  \indexterm{exact differential} of $F$.
 
 \zcref[S]{example:2.5.1} shows that it's easy to solve
 \eqref{eq:2.5.8}
@@ -3399,7 +3423,6 @@ integral curves of \eqref{eq:2.5.13}.
   \centering
   \includegraphics[alt={A vector field for -1<x,y<1 with arrows flowing down and to the right. Several solution curves follow the arrows, coalescing as they approach ±(1,0.7).  Along y=x, the curves bump away from the origin.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020501}
-\color{blue}
 \caption{A direction field and  integral curves for
 $(4x^3y^3+3x^2)\,dx+(3x^4y^2+6y^2)\,dy=0$}
   \label{figure:2.5.1}
@@ -3409,6 +3432,8 @@ Here's a summary of the procedure used in Method 1 of this
 example. You should summarize the procedure used in Method~2.
 
 \begin{remark*}[Procedure For Solving An Exact Equation]
+\index{exact first order equation!procedures for solving}
+\index{first order equation!exact!procedures for solving}
 
 \begin{enumext}[
 label=\arabic*,
@@ -3851,7 +3876,7 @@ yields the implicit solution
 x^3+x^2y^2=c.
 \]
 
-A function $\mu=\mu(x,y)$ is  an \emph{\color{blue}integrating factor} for
+A function $\mu=\mu(x,y)$ is  an \indexterm{integrating factor} for
 \eqref{eq:2.6.1}  if
 \begin{equation}\label{eq:2.6.4}
  \mu(x,y)M (x,y)\,dx+\mu(x,y)N (x,y)\,dy=0
@@ -4069,7 +4094,6 @@ for \eqref{eq:2.6.13}
   \centering
   \includegraphics[alt={A vector field for -2<x<2 and -4<y<4 that is symmetric along x=0.  Near the origin, solution curves circle clockwise.  For y>0.5, solution curves decrease and are horizontal near x=0.  For x=-2 and y<-1.3, solution curves increase until x=-1.5 and then decrease toward an asymptote along y=1/x.  For x=-2 and -1.3<y<1, solution curves increase slowly and then around x=-1.5 they turn upward and then track close to y=1.  For y=-4 and 0<x<2, solution curves move upward and then turn left to cross x=0 horizontally.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020601}
-\color{blue}
 \caption{A direction field and  integral curves for
 $(2xy^3-2x^3y^3-4xy^2+2x)\,dx+(3x^2y^2+4y)\,dy=0$}
   \label{figure:2.6.1}
@@ -4147,7 +4171,6 @@ field and some integral curves for \eqref{eq:2.6.18}.
   \centering
   \includegraphics[alt={A vector field for -4<x,y<4 symmetric about x=0 with trivial solution y=0. For y>0, solution curves increase from a horizontal asymptote along y=0 and peak horizontally when x=0.  For negative y close to 0, solution curves start near the horizontal asymptote and decrease to a minimum when x=0.  For negative y further from 0, solution curves turn away from x=0 and move downward to the left.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020602}
-\color{blue}
 \caption{A direction field and integral curves for
 $2xy^3e^y\,dx+(3x^2y^2+x^2y^3+1)e^y\,dy=0$}
   \label{figure:2.6.2}
@@ -4250,7 +4273,6 @@ See \zcref{exer:2.6.28} for a general discussion of equations like
   \centering
   \includegraphics[alt={A vector field for -4<x<4 and -2<y<2 with straight line solutions x,y=0 and slant asymptote y=-x/3.  Solutions approach the origin along those lines in the fourth quadrant and alternating with each half line.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020603}
-\color{blue}
 \caption{A direction field and integral curves for
 $(3xy+6y^2)\,dx+(2x^2+9xy)\,dy=0$}
   \label{figure:2.6.3}
@@ -4285,7 +4307,6 @@ $\mu(x,y)=x^ay^b$.
   \centering
   \includegraphics[alt={A vector field for -1<x,y<1 symmetric about y=0 with arrows radiating from the origin.  For x near -1 and y>0, the vectors turn upward.  For x near 1 and y>0, the vectors turn more horizontal.},
   width=5.67in,height=3.3in,keepaspectratio]{fig020604}
-\color{blue}
 \caption{A direction field and integral curves for $-y\,dx+(x+x^6)\,dy=0$}
   \label{figure:2.6.4}
 \end{figure}

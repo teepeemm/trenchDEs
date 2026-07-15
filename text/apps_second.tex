@@ -2,6 +2,7 @@
 
 \chapter{Applications of Linear Second Order Equations}
 \label{ch:apps_second}
+\index{applications!of linear second order equations}
 
 \noindent
 \textsc{In this chapter}
@@ -14,7 +15,7 @@ equations.
 
 
 \medskip\noindent
-\zcref[S,CAP,font=\scshape]{sec:rlc} is about $RLC$ circuits, the electrical
+\zcref[S,CAP,font=\scshape]{sec:rlc} is about RLC circuits, the electrical
 analogs of spring-mass systems.
 
 
@@ -29,14 +30,17 @@ experiencing motion under a central force.
 
 \section{Spring Problems I}\label{sec:spring_i}
 \index{spring problems}
+\index{applications!of linear second order equations!spring-mass systems}
+\index{spring-mass system}
 
 We consider the motion of an object of mass $m$, suspended from a
 spring of negligible mass. We say that the spring-mass system is
-in \emph{\color{blue}equilibrium}\index{equilibrium!spring-mass system}
+in
+\emph{\color{blue}equilibrium}\index{equilibrium!spring-mass system}\index{spring-mass system!equilibrium}
 when the object is at rest and the forces
 acting on it sum to zero. The position of the object in this case is
 the \indexterm{equilibrium position}. We define $y$ to be the displacement
-of the object from its equilibrium position (\zcref{figure:6.1.1}),
+of the object from its equilibrium position (\zcref{figure:6.1.1})\index{damping!spring-mass system with},
 measured positive upward.
 
 
@@ -67,30 +71,35 @@ object:
 \item The force $-mg$, due to gravity.
 
 \item A force $F_s$ exerted by the spring resisting change in its
-length. The \emph{\color{blue}natural length} of the spring is its length with
+length. The
+\emph{\color{blue}natural length}\index{natural length of spring}\index{spring, natural length}
+of the spring is its length with
 no mass attached. We assume that the spring obeys
 \personHref{Hooke}{Hooke's law}\index{Hooke's law}:
 If the length of the spring is changed by an amount $\Delta L$
 from its natural length,  then the spring exerts a force $F_s=k\Delta
-L$, where $k$ is a positive number called the \emph{\color{blue}spring constant}.
+L$, where $k$ is a positive number called the \indexterm{spring constant}\index{constant!spring}.
 If the spring is stretched then  $\Delta L>0$ and $F_s>0$, so the
 spring force is upward, while if the spring is compressed then $\Delta
 L<0$ and $F_s<0$, so the spring force is downward.
 
-\item A \emph{\color{blue}damping force} $F_d=-cy'$ that resists the motion with
+\item A \indexterm{damping force}\index{force!damping} $F_d=-cy'$ that resists the motion with
 a force proportional to the velocity of the object. It may be due to
 air resistance or friction in the spring. However, a convenient way to
 visualize a damping force is to assume that the object is rigidly
 attached to a piston with negligible mass immersed in a cylinder
 (called a \indexterm{dashpot}) filled with a viscous liquid
 (\zcref{figure:6.1.2}). As the piston moves, the liquid exerts a
-damping force. We say that the motion is \emph{\color{blue}undamped} if $c=0$, or
-\emph{\color{blue}damped} if $c>0$.
+damping force. We say that the motion is
+\emph{\color{blue}undamped}\index{undamped motion}\index{motion!undamped}\index{spring-mass system!undamped}
+if $c=0$, or
+\emph{\color{blue}damped}\index{damped motion}\index{motion!damped}\index{spring-mass system!damped}
+if $c>0$.
 
 
 \item An external force $F$, other than the force due to gravity, that
 may vary with $t$, but is independent of displacement and velocity. We
-say that the motion is \emph{\color{blue}free} if $F\equiv0$, or \emph{\color{blue}forced}
+say that the motion is \emph{\color{blue}free}\index{free motion}\index{motion!free} if $F\equiv0$, or \emph{\color{blue}forced}\index{forced motion}\index{motion!forced}
 if $F\not\equiv0$.
 
 \end{itemize}
@@ -103,7 +112,7 @@ my''=-mg+F_d+F_s+F=-mg-cy'+F_s+F.
 \end{equation}
 We must now relate $F_s$ to $y$. In the absence of external forces the
 object stretches the spring by an amount $\Delta l$ to assume its
-equilibrium position (\zcref{figure:6.1.3}). Since the sum of the forces acting on the object
+equilibrium position (\zcref{figure:6.1.3}\index{spring, natural length}). Since the sum of the forces acting on the object
 is then zero, Hooke's Law implies that $mg=k\Delta l$. If the object
 is displaced $y$ units from its equilibrium position, the total
 change in the length of the spring is $\Delta L=\Delta l-y$,
@@ -119,20 +128,23 @@ Since $mg=k\Delta l$ this can be written as
 \begin{equation}\label{eq:6.1.2}
 my''+cy'+ky=F.
 \end{equation}
-We call this \emph{\color{blue}the equation of motion}.
+We call this the \indexterm{equation of motion}\index{motion!equation of}.
 
 \begin{figure}
   \centering
   \includegraphics[alt={(a) A spring of length L.  (b) The same spring, stretched by a mass a further length ∆L.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060103}
-\color{blue}
-\caption{(a) Natural length of spring, (b) Spring stretched by mass}
+\caption{(a) Natural length of spring\index{spring, natural length}, (b) Spring stretched by mass}
   \label{figure:6.1.3}
 \end{figure}
 
 
 \boxit{Simple Harmonic Motion}
 \index{simple harmonic motion}
+\index{spring-mass system!simple harmonic motion}
+\index{spring-mass system!undamped}
+\index{damping!spring-mass system!undamped}
+\index{elementary mechanics!spring-mass system!undamped}
 
 Throughout the rest of this section we'll consider spring-mass
 systems without damping; that is, $c=0$. We'll consider systems with
@@ -208,7 +220,6 @@ where $y$ is in feet (\zcref{figure:6.1.4}).
   \centering
   \includegraphics[alt={A sinusoidal curve, with amplitude about 1.5 and period about 0.8},
   width=5.67in,height=3.3in,keepaspectratio]{fig060104}
-\color{blue}
 \caption{$y=\dfrac{3}{2}\cos8t-\dfrac{3}{8}\sin 8t$}
   \label{figure:6.1.4}
 \end{figure}
@@ -246,7 +257,9 @@ y=R\cos(\omega_0t-\theta).
 \end{equation}
 
 From \eqref{eq:6.1.8} and \eqref{eq:6.1.9} we see that the $R$ and $\phi$
-can be interpreted as polar coordinates of the point with rectangular
+can be interpreted as polar
+coordinates\index{polar coordinates!amplitude-phase form}
+of the point with rectangular
 coordinates $(c_1,c_2)$ (\zcref{figure:6.1.5}). Given $c_1$ and
 $c_2$, we can compute $R$ from \eqref{eq:6.1.8}. From \eqref{eq:6.1.8} and
 \eqref{eq:6.1.9}, we see that $\theta$ is related to $c_1$ and $c_2$ by
@@ -262,7 +275,6 @@ will always choose $\theta$ so that $-\pi\le\theta<\pi$.
   \centering
   \includegraphics[alt={A point in the first quadrant with coordinates (c1,c2) that is distance R from the origin and makes an angle of 𝜃 with the positive x axis.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060105}
-\color{blue}
 \caption{$R=\protect\sqrt{c_1^2+c_2^2}$;  \quad
 $c_1=R\cos\theta$;  \quad $c_2=R\sin\theta$}
   \label{figure:6.1.5}
@@ -272,7 +284,7 @@ $c_1=R\cos\theta$;  \quad $c_2=R\sin\theta$}
 
 
 The motion described by \eqref{eq:6.1.7} or \eqref{eq:6.1.10}
-is  \emph{\color{blue}simple harmonic motion}. We see from either of these
+is  \indexterm{simple harmonic motion}. We see from either of these
 equations that the motion is periodic, with period
 \[
 T=2\pi/\omega_0.
@@ -281,14 +293,18 @@ This is the time required for the object to complete one full cycle of
 oscillation (for example, to move from its highest position to its
 lowest position and back to its highest position). Since the highest
 and lowest positions of the object are $y=R$ and $y=-R$, we say that
-$R$ is the \emph{\color{blue}amplitude}\index{amplitude!of oscillation} of the oscillation. The angle $\phi$ in
-\eqref{eq:6.1.10} is the \emph{\color{blue}phase angle}. It's measured
+$R$ is the
+\emph{\color{blue}amplitude}\index{amplitude of oscillation}\index{simple harmonic motion!amplitude of oscillation}\index{oscillation!amplitude}
+of the oscillation. The angle $\phi$ in
+\eqref{eq:6.1.10} is the \indexterm{phase angle}\index{simple harmonic motion!phase angle}. It's measured
 in
 radians. \zcref[S]{eq:6.1.10} is the \indexterm{amplitude-phase
-form} of the displacement. If $t$ is in seconds then $\omega_0$ is
-in radians per second (rad/s);   it's  the \emph{\color{blue}frequency} of
-the motion. It is also called the \emph{\color{blue}natural frequency} of
-the spring-mass system without damping.
+form}\index{simple harmonic motion!amplitude-phase form} of the displacement. If $t$ is in seconds then $\omega_0$ is
+in radians per second (rad/s);   it's  the
+\emph{\color{blue}frequency}\index{frequency!motion}\index{motion!frequency}\index{frequency!simple harmonic motion}\index{simple harmonic motion!frequency}
+of the motion. It is also called the
+\indexterm{natural frequency}\index{simple harmonic motion!natural frequency}
+of the spring-mass system without damping.
 
 \begin{example}\label{example:6.1.2}
 We found the displacement of the object
@@ -379,6 +395,9 @@ Therefore $\phi$ is in the second quadrant and
 \index{undamped oscillation!forced}
 \index{forced oscillation!undamped}
 \index{oscillation!undamped forced}
+\index{damping!undamped spring-mass system!forced oscillation}
+\index{forced motion!oscillation!undamped}
+\index{spring-mass system!undamped!forced oscillation}
 
 In many mechanical problems a device is subjected to periodic external
 forces. For example, soldiers marching in cadence on a bridge cause
@@ -521,7 +540,6 @@ $R(t)$ is called a \indexterm{beat}.
   \centering
   \includegraphics[alt={A high frequency sine-like curve whose amplitude is given by a lower frequency sinusoidal.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060106}
-\color{blue}
 \caption{Undamped oscillation with beats}
   \label{figure:6.1.6}
 \end{figure}
@@ -598,7 +616,7 @@ or break.
 
 This phenomenon of unbounded displacements of a spring-mass system in
 response to a periodic forcing function at its natural
-frequency is called \emph{\color{blue}resonance}. More complicated mechanical
+frequency is called \indexterm{resonance}. More complicated mechanical
 structures can also exhibit resonance-like phenomena. For example,
 rhythmic oscillations of a suspension bridge by wind forces or of an
 airplane wing by periodic vibrations of reciprocating engines can
@@ -612,7 +630,6 @@ mechanical system in question.
   \centering
   \includegraphics[alt={A sine-like curve whose amplitude grows linearly.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060107}
-\color{blue}
 \caption{Unbounded displacement due to resonance}
   \label{figure:6.1.7}
 \end{figure}
@@ -738,8 +755,10 @@ other. How are the two spring constants related?
 
 \boxit{Free Vibrations With Damping}
 \index{free vibrations with damping}
-\index{damping!free vibrations with}
 \index{vibrations!free with damping}
+\index{damping!spring-mass system!free vibrations}
+\index{elementary mechanics!spring-mass system!damped}
+\index{spring-mass system!damped!free vibration}
 
 In this section we consider the motion of an object in a spring-mass
 system with damping. We start with unforced motion, so the equation of
@@ -771,8 +790,10 @@ negative, or zero. We'll now consider these three cases.
 \boxit{Underdamped Motion}
 \index{underdamped motion}
 \index{motion!underdamped}
+\index{damping!spring-mass system!underdamped}
+\index{spring-mass system!damping!underdamped}
 
-We say the motion is \emph{\color{blue}underdamped} if $c<\sqrt{4mk}$. In this
+We say the motion is \emph{\color{blue}underdamped}\index{underdamped motion}\index{motion!underdamped} if $c<\sqrt{4mk}$. In this
 case $r_1$ and $r_2$ in \eqref{eq:6.2.2} are complex conjugates, which we
 write as
 \[
@@ -809,8 +830,7 @@ oscillates between the dashed exponential curves $y=\pm Re^{-ct/2m}$.
   \centering
   \includegraphics[alt={A sine-like curve whose amplitude is exponentially decreasing.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060201}
-\color{blue}
-\caption{ Underdamped motion}
+\caption{Underdamped motion}
   \label{figure:6.2.1}
 \end{figure}
 
@@ -818,8 +838,10 @@ oscillates between the dashed exponential curves $y=\pm Re^{-ct/2m}$.
 \boxit{Overdamped Motion}
 \index{overdamped motion}
 \index{motion!overdamped}
+\index{damping!spring-mass system!overdamped}
+\index{spring-mass system!damping!overdamped}
 
-We say the motion is \emph{\color{blue}overdamped} if $c>\sqrt{4mk}$. In this
+We say the motion is \emph{\color{blue}overdamped}\index{overdamped motion}\index{motion!overdamped} if $c>\sqrt{4mk}$. In this
 case the zeros $r_1$ and $r_2$ of the characteristic polynomial are
 real, with $r_1<r_2<0$ (see \eqref{eq:6.2.2}), and the general solution of
 \eqref{eq:6.2.1} is
@@ -835,8 +857,10 @@ equal zero for more than one value of $t$ unless $c_1=c_2=0$.
 \boxit{Critically Damped Motion}
 \index{critically damped motion}
 \index{motion!critically damped}
+\index{damping!spring-mass system!critically damped}
+\index{spring-mass system!damping!critically damped}
 
-We say the motion is \emph{\color{blue}critically damped} if $c=\sqrt{4mk}$. In
+We say the motion is \emph{\color{blue}critically damped}\index{critically damped motion}\index{motion!critically damped} if $c=\sqrt{4mk}$. In
 this case $r_1=r_2=-c/2m$ and the general solution of \eqref{eq:6.2.1} is
 \[
 y=e^{-ct/2m}(c_1+c_2t).
@@ -925,7 +949,6 @@ problems are graphed in \zcref{figure:6.2.2}.
   \centering
   \includegraphics[alt={Two curves that begin at (0,1).  Curve (a) increases and then decreases exponentially.  Curve (b) decreases to cross the x axis near 0.1 and then decays exponentially to 0.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060202}
-\color{blue}
 \caption{(a) $y=e^{-8t}(1+28t)$, (b) $y=e^{-8t}(1-12t)$}
   \label{figure:6.2.2}
 \end{figure}
@@ -1033,7 +1056,6 @@ as the solution of the given initial value problem
   \centering
   \includegraphics[alt={A curve beginning at (0,1), increasing for just a bit, and then decreasing exponentially toward 0.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060203}
-\color{blue}
 \caption{$y=\dfrac{17}{12}e^{-4t}-\dfrac{5}{12}e^{-16t}$}
   \label{figure:6.2.3}
 \end{figure}
@@ -1041,8 +1063,10 @@ as the solution of the given initial value problem
 
 \boxit{Forced Vibrations With Damping}
 \index{forced vibrations with damping}
-\index{damping!forced vibrations with}
+\index{damping!spring-mass system!forced vibrations}
 \index{vibrations!forced with damping}
+\index{forced motion!vibrations}
+\index{spring-mass system!damped!forced vibrations}
 
 Now we consider the motion of an object in a spring-mass system with
 damping, under the influence of a periodic forcing function
@@ -1202,7 +1226,7 @@ R_{\max}=\frac{2mF_0}{c\sqrt{4mk-c^2}} \quad\text{if}\quad c<\sqrt{2mk}.
 We summarize our results  as follows.
 
 
-\begin{theorem}\color{blue} \label{thmtype:6.2.1}
+\begin{theorem}\label{thmtype:6.2.1}
  Suppose we consider the amplitude $R$ of the steady state
 component of the solution of
 \[
@@ -1391,18 +1415,20 @@ y=e^{r_1t}(c_1+c_2t)\,(r_1<0).
 \end{exerciselist}
 
 
-\section{The \texorpdfstring{$RLC$}{RLC} Circuit}\label{sec:rlc}
+\section{The RLC Circuit}\label{sec:rlc}
 \index{circuit!RLC}\index{RLC circuit}
+\index{applications!of linear second order equations!RLC circuit}
 
-In this section we consider the \emph{\color{blue}$RLC$ circuit}, shown
-schematically in \zcref{figure:6.3.1}. As we'll see, the $RLC$
+In this section we consider the \indexterm{RLC circuit}, shown
+schematically in \zcref{figure:6.3.1}. As we'll see, the RLC
 circuit is an electrical analog of a spring-mass system with
 damping.
 
 Nothing happens while the switch is open (dashed line). When the
-switch is closed (solid line) we say that the \emph{\color{blue}circuit is
-closed}\index{closed circuit}. Differences in electrical potential in a closed circuit
-cause current to flow in the circuit. The battery or generator in
+switch is closed (solid line) we say that the
+\emph{\color{blue}circuit is closed}\index{closed circuit}\index{RLC cicuit!closed}.
+Differences in electrical potential in a closed circuit
+cause current\index{current} to flow in the circuit. The battery or generator in
 \zcref{figure:6.3.1} creates a difference in electrical potential
 $E=E(t)$ between its two terminals, which we've marked arbitrarily as
 positive and negative. (We could just as well interchange the
@@ -1410,14 +1436,14 @@ markings.) We'll say that $E(t)>0$ if the potential at the positive
 terminal is greater than the potential at the negative terminal,
 $E(t)<0$ if the potential at the positive terminal is less than the
 potential at the negative terminal, and $E(t)=0$ if the potential is
-the same at the two terminals. We call $E$ the \emph{\color{blue}impressed
-voltage}.
+the same at the two terminals. We call $E$ the \indexterm{impressed
+voltage}\index{voltage!impressed}.
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A circuit with resistor (resistance R), induction coil (inductance L), capacitor (capacitance C), a switch, and a battery or generator supplying an impressed voltage E=E(t).},
   width=5.67in,height=3.3in,keepaspectratio]{fig060301}
-\caption{An $RLC$ circuit}
+\caption{An RLC circuit}
   \label{figure:6.3.1}
 \end{figure}
 
@@ -1429,10 +1455,10 @@ the battery or generator back to the negative terminal, as indicated
 by the arrows in \zcref{figure:6.3.1}   $I(t)<0$ if the flow is in the
 opposite direction, and $I(t)=0$ if no current flows at time $t$.
 
-Differences in potential occur at the resistor, induction coil, and
-capacitor in \zcref{figure:6.3.1}. Note that the two sides of each
+Differences in potential occur at the resistor\index{resistor}, induction coil\index{inductor}, and
+capacitor\index{capacitor} in \zcref{figure:6.3.1}. Note that the two sides of each
 of these components are also identified as positive and negative. The
-\emph{\color{blue}voltage drop across}  each component is defined to be the
+\indexterm{voltage drop} across each component is defined to be the
 potential on the positive side of the component minus the potential on
 the negative side. This terminology is somewhat misleading, since
 ``drop'' suggests a decrease even though changes in potential are
@@ -1496,7 +1522,7 @@ $C$ & Capacitance&farad (\unit\farad)\\
 
 According to
 \personHref{Kirchhoff}{Kirchoff's law}\index{Kirchoff's law}, the sum of
-the voltage drops in a closed $RLC$ circuit equals the impressed
+the voltage drops in a closed RLC circuit equals the impressed
 voltage. Therefore, from \eqref{eq:6.3.1}, \eqref{eq:6.3.2}, and \eqref{eq:6.3.4},
 \begin{equation}\label{eq:6.3.5}
  LI'+RI+\frac{1}{C}Q=E(t).
@@ -1508,7 +1534,7 @@ order equation
 \begin{equation} \label{eq:6.3.6}
  LQ''+RQ'+\frac{1}{C}Q=E(t)
 \end{equation}
-in $Q$. To find the current flowing in an $RLC$ circuit, we solve
+in $Q$. To find the current flowing in an RLC circuit, we solve
 \eqref{eq:6.3.6} for $Q$ and then differentiate the solution to obtain
 $I$.
 
@@ -1551,10 +1577,13 @@ notation, according to \zcref{table:6.3.1}.
 
 
 \boxit{Free Oscillations}
-\index{free oscillations}
+\index{free oscillation}
 \index{oscillation!free}
+\index{oscillation!RLC circuit!free}
+\index{free motion!oscillation!RLC circuit}
+\index{RLC circuit!free oscillation}
 
-We say that an $RLC$ circuit is in \emph{\color{blue}free oscillation} if $E(t)=0$
+We say that an RLC circuit is in \indexterm{free oscillation}\index{RLC circuit!free oscillation} if $E(t)=0$
 for $t>0$, so that \eqref{eq:6.3.6} becomes
 \begin{equation} \label{eq:6.3.8}
 LQ''+RQ'+\frac{1}{C}Q=0.
@@ -1574,7 +1603,7 @@ spring-mass system.
 
 \begin{enumext}[label=\arabic*,wrap-label={\textsc{Case} #1.},list-indent=0pt,labelwidth=3.5em]
 \item
-The oscillation is \emph{\color{blue}underdamped} if $R<\sqrt{4L/C}$. In this
+The oscillation is \emph{\color{blue}underdamped}\index{underdamped oscillation}\index{oscillation!underdamped} if $R<\sqrt{4L/C}$. In this
 case, $r_1$ and $r_2$ in \eqref{eq:6.3.9} are complex conjugates, which we
 write as
 \[
@@ -1601,15 +1630,16 @@ reduces to
 \[
 Q=A\cos\left(\frac{t}{\sqrt{LC}}-\phi\right),
 \]
-which is analogous to  the simple harmonic motion of an undamped
-spring-mass system in free vibration.
+which is analogous to  the simple harmonic motion\index{simple harmonic motion}
+of an undamped
+spring-mass system in free vibration\index{free motion!vibration}.
 
-Actual $RLC$ circuits are usually underdamped, so the case we've just
+Actual RLC circuits are usually underdamped, so the case we've just
 considered is the most important. However, for completeness we'll
 consider the other two possibilities.
 
 \item
-The oscillation is \emph{\color{blue}overdamped} if $R>\sqrt{4L/C}$. In this case,
+The oscillation is \emph{\color{blue}overdamped}\index{overdamped oscillation}\index{oscillation!overdamped} if $R>\sqrt{4L/C}$. In this case,
 the zeros $r_1$ and $r_2$ of the characteristic polynomial are real,
 with $r_1<r_2<0$ (see \eqref{eq:6.3.9}), and the general solution of
 \eqref{eq:6.3.8} is
@@ -1618,7 +1648,7 @@ Q=c_1e^{r_1t}+c_2e^{r_2t}.
 \end{equation}
 
 \item
-The oscillation is \emph{\color{blue}critically damped} if $R=\sqrt{4L/C}$. In
+The oscillation is \emph{\color{blue}critically damped}\index{critically damped oscillation}\index{oscillation!critically damped} if $R=\sqrt{4L/C}$. In
 this case, $r_1=r_2=-R/2L$ and the general solution of \eqref{eq:6.3.8} is
 \begin{equation}\label{eq:6.3.12}
 Q=e^{-Rt/2L}(c_1+c_2t).
@@ -1638,7 +1668,7 @@ solutions are \emph{\color{blue}transient}\index{transient!solution}, in the sen
 spring-mass system with damping.
 
 \begin{example}\label{example:6.3.1}
-At $t=0$ a current of 2 amperes flows in an $RLC$ circuit with
+At $t=0$ a current of 2 amperes flows in an RLC circuit with
 resistance $R=40$ ohms, inductance $L=.2$ henrys, and capacitance
 $C=10^{-5}$ farads. Find the current flowing in the circuit at $t>0$
 if the initial charge on the capacitor is 1 coulomb. Assume that
@@ -1690,9 +1720,12 @@ I=e^{-100t}(2\cos200t-251\sin200t).\qedhere
 
 
 \boxit{Forced Oscillations With Damping}
-\index{forced oscillation!with damping}
-\index{oscillation!forced with damping}
-\index{damping!forced oscillation with}
+\index{forced oscillation!damped}
+\index{oscillation!forced, damped}
+\index{oscillation!RLC circuit!forced, damped}
+\index{damping!RLC circuit in forced oscillation}
+\index{forced motion!oscillation!damped}
+\index{RLC circuit!forced oscillation with damping}
 
 An initial value problem for \eqref{eq:6.3.6}  has the form
 \begin{equation} \label{eq:6.3.17}
@@ -1707,7 +1740,8 @@ equation, and approaches zero exponentially as $t\to\infty$ for any
 initial conditions , while $Q_p$ depends only on $E$ and is
 independent of the initial conditions. As in the case of forced
 oscillations of a spring-mass system with damping, we call $Q_p$ the
-\emph{\color{blue}steady state}\index{charge!steady state} charge on the capacitor of the $RLC$ circuit. Since
+\emph{\color{blue}steady state}\index{charge!steady state}\index{steady state charge}
+charge on the capacitor of the RLC circuit. Since
 $I=Q'=Q_c'+Q_p'$ and $Q_c'$ also tends to zero exponentially as
 $t\to\infty$, we say that $I_c=Q'_c$ is the \emph{\color{blue}transient current}\index{current!transient}\index{transient!current}
 and $I_p=Q_p'$ is the \emph{\color{blue}steady state} current\index{steady state!current}\index{current!steady state}. In most
@@ -1715,7 +1749,7 @@ applications we're interested only in the steady state charge and
 current.
 
 \begin{example}\label{example:6.3.2}
-Find the amplitude-phase form of the steady state current in the $RLC$
+Find the amplitude-phase form of the steady state current in the RLC
 circuit in \zcref{figure:6.3.1} if the impressed voltage, provided by
 an alternating current generator, is $E(t)=E_0\cos\omega t$.
 \end{example}
@@ -1766,7 +1800,7 @@ t-\phi).\qedhere
 
 \exercises
 In \zcref[range]{exer:6.3.1,exer:6.3.5} find the current in the
-$RLC$ circuit, assuming that $E(t)=0$ for $t>0$.
+RLC circuit, assuming that $E(t)=0$ for $t>0$.
 
 \begin{exerciselist}
 \item\label{exer:6.3.1}$R=3$ ohms;  \, $L=.1$ henrys;  \, $C=.01$ farads;   $Q_0=0$
@@ -1800,7 +1834,7 @@ state current in the circuit described by the  equation.}
 
 \item\label{exer:6.3.11}Show that if $E(t)=U\cos\omega t+V\sin\omega t$ where $U$
 and $V$ are constants then the steady state current in
-the $RLC$ circuit shown in \zcref{figure:6.3.1} is
+the RLC circuit shown in \zcref{figure:6.3.1} is
 \[
 I_p=\frac{\omega^2RE(t)+(1/C-L\omega^2)E'(t)}{\Delta},
 \]
@@ -1809,7 +1843,7 @@ where
 \Delta=(1/C-L\omega^2)^2+R^2\omega^2.
 \]
 
-\item\label{exer:6.3.12}Find the amplitude of the steady state current $I_p$ in the $RLC$
+\item\label{exer:6.3.12}Find the amplitude of the steady state current $I_p$ in the RLC
 circuit shown in \zcref{figure:6.3.1}  if $E(t)=U\cos\omega
 t+V\sin\omega t$, where $U$ and $V$ are constants. Then find the value
 $\omega_0$ of $\omega$ maximizes the amplitude, and
@@ -1841,9 +1875,11 @@ $\dfrac{1}{20}Q''+4Q'+125Q=U\cos\omega t+V\sin\omega t$
 \section{Motion Under a Central Force}\label{sec:central_force}
 \index{motion!under a central force}
 \index{central force!motion under}
+\index{applications!of linear second order equations!motion under a central force}
+\index{force!motion under central}
 
 We'll now study the motion of a object moving under the influence
-of a \emph{\color{blue}central force}; that is, a force whose magnitude at any
+of a \indexterm{central force}; that is, a force whose magnitude at any
 point $P$ other than the origin depends only on the distance from
 $P$ to the origin, and whose direction at $P$ is parallel to the line
 connecting $P$ and the origin, as indicated in
@@ -1865,10 +1901,10 @@ case the subsequent motion is in the plane determined by them. For
 convenience we take this to be the $xy$-plane. We'll
 consider
 the problem of determining the curve traversed by the object. We call
-this curve the \emph{\color{blue}orbit}.
+this curve the \indexterm{orbit}.
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A vector field where everything points to the origin.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060401}
   \caption{}
@@ -1878,8 +1914,8 @@ this curve the \emph{\color{blue}orbit}.
 We can represent a central force in terms of polar coordinates
 \[
 x=r\cos\theta,\quad y=r\sin\theta
-\]
- as
+\]\index{central force!in terms of polar coordinates}\index{polar coordinates!central force}
+as
 \[
 \vect{F}(r,\theta)=f(r)(\cos\theta\ivect+\sin\theta\jvect).
 \]
@@ -1935,7 +1971,7 @@ $t$, we see from \eqref{eq:6.4.3}  and the chain rule that
 \end{equation}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={Two vectors pointing away from the origin.  Vector e1 points in the (1,1) direction.  Vector e2 points in the (-1,1) direction.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060402}
   \caption{}
@@ -2032,7 +2068,7 @@ and dividing through by $-mh^2u^2$ yields \eqref{eq:6.4.1}.
 is known as
 \personHref{Kepler}{Kepler's second law}\index{Kepler's second law}.
 
-\begin{theorem}\color{blue}\label{thmtype:6.4.1}
+\begin{theorem}\label{thmtype:6.4.1}
  The position vector
  of an object moving under a central force
 sweeps out equal areas in equal times; more precisely, if
@@ -2049,7 +2085,7 @@ where $h=r^2\theta'$, which we have shown to be constant.
 \end{theorem}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A circular sector in the first quadrant with its vertex at the origin and between the angles 𝜃=𝜃(t1) and 𝜃=𝜃(t2).},
   width=5.67in,height=3.3in,keepaspectratio]{fig060403}
   \caption{}
@@ -2079,6 +2115,8 @@ which completes the proof.
 \boxit{Motion Under an Inverse Square Law Force}
 \index{motion!with inverse square law force}
 \index{inverse square law force!motion with}
+\index{applications!of linear second order equations!motion under inverse square law force}
+\index{force!motion under inverse square law}
 
 In the special case where
  $f(r)=-mk/r^2=-mku^2$, so $\vect{F}$  can be interpreted
@@ -2122,7 +2160,7 @@ $e<1$
 a parabola if $e=1$, or a hyperbola if $e>1$.
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An ellipse with one focus at the origin.  The point closest to the origin is labeled P; the point furthest from the origin is labeled A.  The ellipse is not aligned to either axis, so that A is in the first quadrant and P is in the third quadrant.},
   width=5.67in,height=3.3in,keepaspectratio]{fig060404}
   \caption{}

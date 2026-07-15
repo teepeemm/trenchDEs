@@ -1,6 +1,7 @@
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Linear Systems of Differential Equations}\label{ch:systems}
+\index{system}
 
 \noindent
 \textsc{In this chapter} we consider
@@ -37,7 +38,7 @@ of variation of parameters for nonhomogeneous linear systems.
 
 \section{Introduction to Systems of Differential Equations}
 \label{sec:systems_intro}
-\index{higher order system!introduction}
+\index{system!introduction}
 
 Many physical situations are modeled by systems of $n$ differential
 equations
@@ -63,7 +64,7 @@ Assume that both mixtures are well stirred.
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={The tanks as described in the example},
   width=5.67in,height=3.3in,keepaspectratio]{fig100101}
   \caption{The tanks described in \zcref{example:10.1.1}.}
@@ -135,7 +136,7 @@ Q_2'=8+\frac{1}{50}Q_1-\frac{1}{50}Q_2.
 \end{equation}
 
 We say that \eqref{eq:10.1.3} and \eqref{eq:10.1.6}  form a \emph{\color{blue}system of two
-first order equations in two unknowns}, and write them together as
+first order equations in two unknowns}\index{system of differential equations}, and write them together as
 \begin{align*}
 Q_1'&=5-\frac{2}{25}Q_1+\frac{1}{100}Q_2\\
 Q_2'&=8+\frac{1}{50}Q_1-\frac{1}{50}Q_2. \qedhere
@@ -166,7 +167,7 @@ elongations of the springs in equilibrium then
 \end{equation}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
 \begin{tikzpicture}[alt={The spring system as described in the example.},
     spring/.style={decorate, decoration={zigzag, pre length=0.3cm, post length=0.3cm, segment length=5pt, amplitude=5pt}},
     mass/.style={rectangle, draw, fill=blue, minimum width=1cm, minimum height=1cm, text=white},
@@ -194,7 +195,7 @@ elongations of the springs in equilibrium then
 Let $H_1$ be the Hooke's law force acting on $m_1$, and let $D_1$ be
 the damping force on $m_1$. Similarly, let $H_2$ and $D_2$ be the
 Hooke's law and damping forces acting on $m_2$. According to Newton's
-second law of motion\index{Newton's second law of motion},
+second law of motion\index{Newton's!second law of motion},
 \begin{equation} \label{eq:10.1.8}
 \begin{aligned}
 m_1y_1''&=-m_1g+H_1+D_1+F_1,\\
@@ -254,7 +255,7 @@ m_2y_2''&=c_2y_1'-c_2y_2'+k_2y_1-k_2y_2+F_2.  \qedhere
 Let $\vect{X}=\vect{X}(t)=x(t)\,\ivect+y(t)\,\jvect+z(t)\,\vect{k}$ be
 the position vector at time $t$ of an object with mass $m$, relative
 to a rectangular coordinate system with origin at Earth's center
-(\zcref{figure:10.1.3}). According to Newton's law of gravitation\index{Newton's law of gravitation},
+(\zcref{figure:10.1.3}). According to Newton's law of gravitation\index{Newton's!law of gravitation},
 Earth's gravitational force $\vect{F}=\vect{F}(x,y,z)$ on the object is
 inversely proportional to the square of the distance of the object
 from Earth's center, and directed toward the center;   thus,
@@ -280,7 +281,7 @@ Therefore we can rewrite \eqref{eq:10.1.13} as
 =-mgR^2\frac{x\,\ivect+y\,\jvect+z\,\vect{k}}{\left(x^2+y^2+z^2\right)^{3/2}}.
 \]
 Now suppose $\vect{F}$ is the only force acting on the object.
-According to Newton's second law of motion\index{Newton's second law of motion}, $\vect{F}=m\vect{X}''$;   that
+According to Newton's second law of motion\index{Newton's!second law of motion}, $\vect{F}=m\vect{X}''$;   that
 is,
 \[
  m(x''\,\ivect+y''\,\jvect+z''\,\vect{k})=
@@ -298,7 +299,7 @@ of this equation yields the  system
 \end{example}
 
 \begin{figure}[tbp]
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A three dimensional coordinate system, with a vector X starting at the origin.},
   width=5.67in,height=3.3in,keepaspectratio]{fig100103}
   \caption{}
@@ -306,7 +307,7 @@ of this equation yields the  system
 \end{figure}
 
 
-\boxit{Rewriting Higher Order  Systems as First Order Systems}
+\boxit{Rewriting Higher Order Systems as First Order Systems}
 \index{higher order system!rewriting as first order system}
 \index{first order system!from higher order system}
 
@@ -319,7 +320,7 @@ y_2'&=g_2(t,y_1,y_2,\dots,y_n)\\
 y_n'&=g_n(t,y_1,y_2,\dots,y_n)
 \end{aligned}
 \end{equation}
-is called a \emph{\color{blue}first order system}, since the only derivatives
+is called a \indexterm{first order system}, since the only derivatives
 occurring in it are first derivatives. The derivative of
 each of the unknowns may depend upon the independent variable and all
 the unknowns, but not on the derivatives of other unknowns. When we
@@ -397,8 +398,8 @@ y_3'&=g(t,x_1,x_2,y_1,y_2,y_3).\qedhere
 
 
 \boxit{Rewriting Scalar Differential Equations as Systems}
-\index{scalar differential equation!rewriting as higher order system}
-\index{higher order system!from scalar differential equation}
+\index{scalar differential equation!rewriting as system}
+\index{system!from scalar differential equation}
 
 In this chapter we'll refer to differential equations involving only
 one unknown function as \emph{\color{blue}scalar} differential equations\index{scalar differential equation}. Scalar
@@ -464,8 +465,8 @@ order systems.
 
 
 \boxit{Numerical Solution of Systems}
-\index{numerical methods!system of equations}
-\index{higher order system!numerical methods}
+\index{numerical methods!system}
+\index{system!numerical methods!Runge-Kutta}
 
 The  numerical methods that we studied in \zcref{ch:numerical}
 can be extended to systems, and most differential equation software
@@ -560,7 +561,7 @@ of an object with mass $m$, expressed in terms of a rectangular
 coordinate system with origin at Earth's center
 (\zcref{figure:10.1.3}). Derive a system of differential equations for
 $x$, $y$, and $z$, assuming that the object moves under Earth's
-gravitational force (given by Newton's law of gravitation, as in
+gravitational force (given by Newton's law of gravitation\index{Newton's!law of gravitation}, as in
 \zcref{example:10.1.3} ) and a resistive force proportional to the
 speed of the object. Let $\alpha$ be the constant of proportionality.
 
@@ -604,7 +605,9 @@ on an interval $[t_0,b]$.
 
 
 \section{Linear Systems of Differential Equations}\label{sec:linear_systems}
-\index{higher order system!linear}
+\index{system!linear}
+\index{homogeneous linear system}
+\index{linear system}
 
 A  first order system of  differential equations that can be written in
 the form
@@ -616,7 +619,7 @@ y'_2&=a_{21}(t)y_1+a_{22}(t)y_2+\cdots+a_{2n}(t)y_n+f_2(t)\\
 y'_n&=a_{n1}(t)y_1+a_{n2}(t)y_2+\cdots+a_{nn}(t)y_n+f_n(t)
 \end{aligned}
 \end{equation}
-is called a \emph{\color{blue}linear system}.
+is called a \indexterm{linear system}\index{linear system!defined}.
 
 The linear system \eqref{eq:10.2.1}  can be written in matrix form as
 \[
@@ -632,13 +635,14 @@ where
 A(t)=\matfunc ann,\quad\text{and}\quad \vect{F}(t)=\colfunc fn.
 \]
 We call $A$  the \indexterm{coefficient matrix} of \eqref{eq:10.2.2} and
-$\vect{F}$  the \emph{\color{blue}forcing function}.   We'll say that $A$
-and $\vect{F}$ are \emph{\color{blue}continuous} if their entries are continuous.
+$\vect{F}$  the \indexterm{forcing function}.   We'll say that $A$
+and $\vect{F}$ are \emph{\color{blue}continuous}\index{continuous!matrix}\index{continuous!vector} if their entries are continuous.
 If $\vect{F}=\vect{0}$, then \eqref{eq:10.2.2} is
-\emph{\color{blue}homogeneous};
-otherwise, \eqref{eq:10.2.2} is \emph{\color{blue}nonhomogeneous}.
+\emph{\color{blue}homogeneous}\index{homogeneous!linear system}\index{linear system!homogeneous};
+otherwise, \eqref{eq:10.2.2} is
+\emph{\color{blue}nonhomogeneous}\index{nonhomogeneous!linear system}\index{linear system!nonhomogeneous}.
 
-An  initial value problem  for \eqref{eq:10.2.2} consists of
+An  initial value problem\index{linear system!initial value problem}  for \eqref{eq:10.2.2} consists of
 finding a solution of \eqref{eq:10.2.2} that equals a given constant
 vector
 \[
@@ -653,7 +657,10 @@ The next theorem gives sufficient conditions for the existence
 of solutions of initial value problems for \eqref{eq:10.2.2}. We omit the
 proof.
 
-\begin{theorem}\label{thmtype:10.2.1}\index{uniqueness theorem}
+\begin{theorem}\label{thmtype:10.2.1}
+\index{existence theorem}
+\index{uniqueness theorem}
+\index{linear system!existence and uniqueness theorem}
 Suppose the coefficient matrix\index{coefficient matrix} $A$ and the forcing function $\vect{f}$ are continuous on $(a,b)$, let $t_0$ be in $(a,b)$, and let $\vect{k}$ be an arbitrary constant $n$-vector. Then the initial value
 problem
 \[
@@ -935,9 +942,9 @@ $(a,b)$ if and only if (A) is normal on $(a,b)$.
 \[
 Q(t)=\matfunc qrs
 \]
-is  said to be  \emph{\color{blue}differentiable}
+is  said to be  \emph{\color{blue}differentiable}\index{differentiable matrix}
 if its entries $\{q_{ij}\}$ are  differentiable.  Then the
-\emph{\color{blue}derivative}  $Q'$ is defined by
+\emph{\color{blue}derivative}\index{derivative!matrix}\index{matrix!derivative} $Q'$ is defined by
  \[
 Q'(t)=\matfunc {q'}rs.
 \]
@@ -1073,8 +1080,10 @@ such that the function $\vect{X}=P\vect{y}$ is a solution of $\vect{X}'=B\vect{x
 
 
 \section{Basic Theory of Homogeneous Linear System}\label{sec:system_theory}
-\index{higher order system!homogeneous linear}
-\index{homogeneous system!higher order linear}
+\index{system!homogeneous linear}
+\index{homogeneous system!linear}
+\index{homogeneous linear system!basic theory}
+\index{linear system!homogeneous!basic theory}
 
 In this section we consider homogeneous linear systems $\vect{y}'=
 A(t)\vect{y}$, where $A=A(t)$ is a continuous $n\times n$ matrix
@@ -1086,7 +1095,8 @@ scalar equations, which we considered in
 Whenever we refer to solutions of $\vect{y}'=A(t)\vect{y}$ we'll mean
 solutions on $(a,b)$. Since $\vect{y}\equiv\vect{0}$ is obviously a
 solution of $\vect{y}'=A(t)\vect{y}$, we call it the \emph{\color{blue}trivial}
-solution. Any other solution is \emph{\color{blue}nontrivial}.
+solution\index{trivial solution!system}\index{system!trivial solution}. Any other solution is
+\emph{\color{blue}nontrivial}\index{nontrivial solution!system}\index{system!nontrivial solution}\index{homogeneous linear system!(non)trivial solution}\index{linear system!homogeneous!(non)trivial solution}.
 
 If $\vect{y}_1$, $\vect{y}_2$, \dots, $\vect{y}_n$ are vector functions
 defined on an interval $(a,b)$ and $c_1$, $c_2$, \dots, $c_n$ are
@@ -1094,16 +1104,17 @@ constants, then
 \begin{equation} \label{eq:10.3.1}
 \vect{y}=c_1\vect{y}_1+c_2\vect{y}_2+\cdots+c_n\vect{y}_n
 \end{equation}
-is a \emph{\color{blue}linear combination of} $\vect{y}_1$, $\vect{y}_2$,
+is a \emph{\color{blue}linear combination of}\index{linear combination of functions} $\vect{y}_1$, $\vect{y}_2$,
 \ldots, $\vect{y}_n$. It's easy show that if $\vect{y}_1$, $\vect{y}_2$,
 \dots, $\vect{y}_n$ are solutions of $\vect{y}'=A(t)\vect{y}$ on $(a,b)$, then so is any linear combination of
  $\vect{y}_1$, $\vect{y}_2$, \dots, $\vect{y}_n$ (\zcref{exer:10.3.1}). We say that
-$\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is a \emph{\color{blue}fundamental set of
-solutions of $\vect{y}'=A(t)\vect{y}$ on} $(a,b)$ on if every solution of
+$\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is a
+\emph{\color{blue}fundamental set of solutions of $\vect{y}'=A(t)\vect{y}$ on}\index{fundamental set of solutions!system}\index{system!fundamental set of solutions}\index{homogeneous linear system!fundamental set of solutions}\index{homogeneous linear system!general solution}\index{linear system!homogeneous!fundamental set of solutions}\index{linear system!homogeneous!general solution}
+$(a,b)$ on if every solution of
 $\vect{y}'=A(t)\vect{y}$ on $(a,b)$ can be written as a linear combination of
 $\vect{y}_1$, $\vect{y}_2$, \dots, $\vect{y}_n$, as in \eqref{eq:10.3.1}.
 In this
-case we say that \eqref{eq:10.3.1} is the \emph{\color{blue}general solution of $\vect{y}'=A(t)\vect{y}$ on} $(a,b)$.
+case we say that \eqref{eq:10.3.1} is the \emph{\color{blue}general solution of $\vect{y}'=A(t)\vect{y}$ on}\index{general solution!system}\index{system!general solution} $(a,b)$.
 
 
 
@@ -1114,20 +1125,22 @@ $\vect{y}'=A(t)\vect{y}$.
 
 
 We say that a set $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ of
-$n$-vector functions is \emph{\color{blue}linearly independent} on $(a,b)$ if the
+$n$-vector functions is
+\emph{\color{blue}linearly independent}\index{linearly independent!functions}\index{linear system!homogeneous!linear independence of solutions}
+on $(a,b)$ if the
 only constants $c_1$, $c_2$, \dots, $c_n$ such that
 \begin{equation} \label{eq:10.3.2}
  c_1\vect{y}_1(t)+c_2\vect{y}_2(t)+\cdots+c_n\vect{y}_n(t)=0,\quad
 a<t<b,
 \end{equation}
 are $c_1=c_2=\cdots=c_n=0$. If \eqref{eq:10.3.2} holds for some set of
-constants $c_1$, $c_2$, \dots, $c_n$ that are not all zero, then $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is \emph{\color{blue}linearly dependent} on
+constants $c_1$, $c_2$, \dots, $c_n$ that are not all zero, then $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is \emph{\color{blue}linearly dependent}\index{linearly dependent!functions} on
 $(a,b)$
 
 The next theorem is analogous to
 \zcref{thmtype:5.1.3,thmtype:9.1.2}.
 
-\begin{theorem}\color{blue}\label{thmtype:10.3.1}
+\begin{theorem}\label{thmtype:10.3.1}
 Suppose the $n\times n$ matrix $A=A(t)$ is continuous on $(a,b)$.
 Then a set
 $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ of $n$ solutions of $\vect{y}'=A(t)\vect{y}$ on $(a,b)$ is a fundamental set if and only if it's
@@ -1179,7 +1192,7 @@ We can use the method in
 \zcref{example:10.3.1}  to test
 $n$ solutions $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ of any
 $n\times n$ system
-$\vect{y}'=A(t)\vect{y}$  for linear independence on an interval $(a,b)$
+$\vect{y}'=A(t)\vect{y}$  for linear independence\index{linear independence!vector functions} on an interval $(a,b)$
 on which $A$ is continuous.  To explain this (and for other purposes
 later), it's useful to write a linear combination of
 $\vect{y}_1$, $\vect{y}_2$, \dots, $\vect{y}_n$ in a different way. We first
@@ -1250,7 +1263,8 @@ y_{n1}&y_{n2}&\cdots&y_{nn} \\
 \end{vmatrix}
 \end{equation}
 is called the
-\personHref{Wronski}{Wronskian}\index{Wronskian} of $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$. It can be shown (\zcref{exer:10.3.2,exer:10.3.3})
+\personHref{Wronski}{Wronskian}\index{Wronskian}\index{homogeneous linear system!Wronskian}\index{linear system!homogeneous!Wronskian}
+of $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$. It can be shown (\zcref{exer:10.3.2,exer:10.3.3})
 that this definition is analogous to definitions of the Wronskian of
 scalar functions given in \zcref{sec:homog_linear,sec:higher_theory}.
 The next theorem is analogous to
@@ -1273,7 +1287,7 @@ on  $(a,b)$.
 
 \begin{remark*}
 The sum of the diagonal entries of a square matrix $A$ is called the
-\emph{\color{blue}trace} of $A$, denoted by tr$(A)$. Thus, for an $n\times n$
+\indexterm{trace} of $A$, denoted by tr$(A)$. Thus, for an $n\times n$
 matrix $A$,
 \[
 \tr(A)=a_{11}+a_{22}+\cdots+a_{nn},
@@ -1298,15 +1312,19 @@ be  solutions of $\vect{y}'=A(t)\vect{y}$ on  $(a,b)$.
 either all true or all false:
 \begin{alist}
 \item % (a)
-The general solution of $\vect{y}'=A(t)\vect{y}$ on  $(a,b)$ is
+The general
+solution\index{general solution!system}\index{linear system!homogeneous!general solution}
+of $\vect{y}'=A(t)\vect{y}$ on  $(a,b)$ is
 $\vect{y}=c_1\vect{y}_1+c_2\vect{y}_2+\cdots+c_n\vect{y}_n$,
 where $c_1$, $c_2$, \dots, $c_n$  are arbitrary constants.
 \item % (b)
-  $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is a fundamental
-set of solutions of $\vect{y}'=A(t)\vect{y}$  on $(a,b)$.
+$\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is a fundamental set of
+solutions\index{fundamental set of solutions!homogeneous linear system}\index{homogeneous linear system!fundamental set of solutions}\index{homogeneous linear system!general solution}
+of $\vect{y}'=A(t)\vect{y}$  on $(a,b)$.
 \item % (c)
  $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is linearly
-independent on $(a,b)$.
+independent\index{linear system!homogeneous!linear independence of solutions}
+on $(a,b)$.
 \item % (d)
 The Wronskian of  $\{\vect{y}_1,\vect{y}_2,\dots,\vect{y}_n\}$ is nonzero
 at some point in $(a,b)$.
@@ -1787,7 +1805,13 @@ The matrix $Z$ defined above is sometimes denoted by $e^{tA}$. Discuss
 
 \section{Constant Coefficient Homogeneous Systems I}
 \label{sec:system_const_coeff_i}
-\index{higher order system!constant coefficient}
+\index{system!constant coefficient}
+\index{constant coefficient homogeneous linear system of differential equations}
+\index{constant coefficient homogeneous linear system of differential equations!linearly independent eigenvectors}
+\index{homogeneous linear system!constant coefficient}
+\index{homogeneous linear system!constant coefficient!geometric properties of solutions when $n=2$}
+\index{homogeneous linear system!constant coefficient!linearly independent eigenvectors}
+\index{linear system!homogeneous!constant coefficient}
 
 We'll now begin our study of the homogeneous system
 \begin{equation}\label{eq:10.4.1}
@@ -1895,7 +1919,7 @@ coefficient matrix in \eqref{eq:10.4.2}, and the vector coefficients of the
 exponential functions are associated eigenvectors. This illustrates
 the next theorem.
 
-\begin{theorem}\color{blue}\label{thmtype:10.4.1}
+\begin{theorem}\label{thmtype:10.4.1}
  Suppose the $n\times n$
 constant matrix $A$ has $n$ real eigenvalues
 $\lambda_1,\lambda_2,\ldots,\lambda_n$
@@ -2224,6 +2248,7 @@ e^{-5t}+c_3\begin{bmatrix}-1\\1\\0\end{bmatrix}e^{-5t}.\qedhere
 
 \boxit{Geometric Properties of Solutions when $n=2$}
 \index{second order system!geometric properties}
+\index{constant coefficient homogeneous linear system of differential equations!geometric properties of solutions!when $n=2$}
 
 We'll now  consider the geometric properties of solutions of a
 $2\times2$ constant coefficient system
@@ -2236,7 +2261,9 @@ It is convenient to think of a ``$y_1$-$y_2$ plane," where a point
 is identified by rectangular coordinates $(y_1,y_2)$. If $\vect{y}=\twocol{y_1}{y_2}$ is a non-constant solution of \eqref{eq:10.4.18},
 then the point $(y_1(t),y_2(t))$ moves along a curve $C$ in the
 $y_1$-$y_2$ plane as $t$ varies from $-\infty$ to $\infty$. We call
-$C$ the \emph{\color{blue}trajectory} of $\vect{y}$. (We also say that $C$ is a
+$C$ the
+\emph{\color{blue}trajectory}\index{trajectory!vector function}\index{trajectory!$2\times2$ system}
+of $\vect{y}$. (We also say that $C$ is a
 trajectory of the system \eqref{eq:10.4.18}.) I's important to note that
 $C$ is the trajectory of infinitely many solutions of \eqref{eq:10.4.18},
 since if $\tau$ is any real number, then $\vect{y}(t-\tau)$ is a
@@ -2654,7 +2681,9 @@ arguments developed at the end of this section.
 
 \section{Constant Coefficient Homogeneous Systems II}
 \label{sec:system_const_coeff_ii}
-\index{higher order system!constant coefficient}
+\index{system!constant coefficient}
+\index{constant coefficient homogeneous linear system of differential equations!with defective constant matrix}
+\index{homogeneous linear system!constant coefficient!defective coefficient matrix}
 
 We saw in \zcref{sec:system_const_coeff_i} that if an $n\times n$
 constant matrix
@@ -2726,7 +2755,7 @@ multiplying the first solution by $t$. However, this yields $\vect{y}_2=\twocol5
 
 The next theorem shows what to do in this situation.
 
-\begin{theorem}\color{blue}\label{thmtype:10.5.1}
+\begin{theorem}\label{thmtype:10.5.1}
 Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_1$
 of multiplicity $\ge2$ and the associated eigenspace has dimension
 $1$; that is, all $\lambda_1$-eigenvectors of $A$ are scalar
@@ -2933,7 +2962,7 @@ is
 \]
 \end{solution}
 
-\begin{theorem}\color{blue}\label{thmtype:10.5.2}
+\begin{theorem}\label{thmtype:10.5.2}
 Suppose the $n\times n$ matrix $A$ has an eigenvalue $\lambda_1$ of
 multiplicity $\ge 3$ and the associated eigenspace is
 one-dimensional; that is, all eigenvectors associated with
@@ -3176,8 +3205,10 @@ Therefore the general solution of \eqref{eq:10.5.15} is
 \end{solution}
 
 
-\boxit{Geometric Properties of Solutions when  $n=2$}
+\boxit{Geometric Properties of Solutions when $n=2$}
 \index{second order system!geometric properties}
+\index{constant coefficient homogeneous linear system of differential equations!geometric properties of solutions!when $n=2$}
+\index{homogeneous linear system!constant coefficient!geometric properties of solutions when $n=2$}
 
 We'll now  consider the geometric properties of solutions of a
 $2\times2$ constant coefficient system
@@ -3204,11 +3235,12 @@ the infinitely many solutions of
 We assume that $\lambda_1\ne0$.
 
 Let $L$ denote the line through the origin parallel to $\vect{X}$. By a
-\emph{\color{blue}half-line} of $L$ we mean either of the rays obtained by
+\indexterm{half-line} of $L$ we mean either of the rays obtained by
 removing the origin from $L$. \zcref[S]{eq:10.5.20} is a parametric
 equation of the half-line of $L$ in the direction of $\vect{X}$ if
 $c_1>0$, or of the half-line of $L$ in the direction of $-\vect{X}$ if
-$c_1<0$. The origin is the trajectory of the trivial solution $\vect{y}\equiv\vect{0}$.
+$c_1<0$. The origin is the trajectory\index{trajectory!$2\times2$ system}
+of the trivial solution $\vect{y}\equiv\vect{0}$.
 
 Henceforth, we assume that $c_2\ne0$. In this case, the trajectory of
 \eqref{eq:10.5.20} can't intersect $L$, since every point of $L$ is on a
@@ -3460,7 +3492,9 @@ negative half-planes with respect to the line $L$
 
 \section{Constant Coefficient Homogeneous Systems III}
 \label{sec:system_const_coeff_iii}
-\index{higher order system!constant coefficient}
+\index{system!constant coefficient}
+\index{constant coefficient homogeneous linear system of differential equations!with complex eigenvalue of constant matrix}
+\index{homogeneous linear system!constant coefficient!complex eigenvalues}
 
 We now consider the system $\vect{y}'=A\vect{y}$, where $A$ has a complex
 eigenvalue $\lambda=\alpha+i\beta$ with $\beta\ne0$. We continue to
@@ -3838,6 +3872,8 @@ c_3e^{2t}\begin{bmatrix}\cos2t\\-\cos2t\\\sin2t\end{bmatrix}.\qedhere
 
 \boxit{Geometric Properties of Solutions when  $n=2$}
 \index{second order system!geometric properties}
+\index{constant coefficient homogeneous linear system of differential equations!geometric properties of solutions!when $n=2$}
+\index{homogeneous linear system!constant coefficient!geometric properties of solutions when $n=2$}
 
 We'll now  consider the geometric properties of solutions of a
 $2\times2$ constant coefficient system
@@ -3852,7 +3888,8 @@ A=\begin{bmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
 has a complex eigenvalue $\lambda=\alpha+i\beta$
 ($\beta\ne0$) and $\vect{X}=\vect{u}+i\vect{v}$ is an
 associated eigenvector, where $\vect{u}$ and $\vect{v}$ have real
-components. To describe the trajectories accurately it's necessary to
+components. To describe the trajectories\index{trajectory!$2\times2$ system}
+accurately it's necessary to
 introduce a new rectangular coordinate system in the $y_1$-$y_2$
 plane. This raises a point that hasn't come up before: It is always
 possible to choose $\vect{X}$ so that $(\vect{u},\vect{v})=0$
@@ -4170,8 +4207,10 @@ trajectories, and plot a typical trajectory.}
 
 \section{Variation of Parameters for Nonhomogeneous Linear Systems}
 \label{sec:systems_variation_param}
-\index{higher order system!variation of parameters}
-\index{variation of parameters!higher order system}
+\index{system!variation of parameters}
+\index{linear system!nonhomogeneous!variation of parameters}
+\index{nonhomogeneous!linear system!variation of parameters}
+\index{variation of parameters!system}
 
 We now consider the nonhomogeneous linear system
 \[
@@ -4184,11 +4223,13 @@ $n$-vector forcing function. Associated with this system is the
 The next theorem is analogous to
 \zcref{thmtype:5.3.2,thmtype:9.1.5}. It shows how to find the general solution
 of
-$\vect{y}'=A(t)\vect{y}+\vect{F}(t)$ if we know a particular solution of $\vect{y}'=A(t)\vect{y}+\vect{F}(t)$ and a fundamental set of solutions of the
+$\vect{y}'=A(t)\vect{y}+\vect{F}(t)$ if we know a particular
+solution\index{particular solution!nonhomogeneous linear system}
+of $\vect{y}'=A(t)\vect{y}+\vect{F}(t)$ and a fundamental set of solutions of the
 complementary system. We leave the proof as an exercise
 (\zcref{exer:10.7.21}).
 
-\begin{theorem}\color{blue}\label{thmtype:10.7.1}
+\begin{theorem}\label{thmtype:10.7.1}
 Suppose the $n\times n$ matrix function $A$ and the $n$-vector
 function $\vect{F}$ are continuous on $(a,b)$. Let $\vect{y}_p$ be a
 particular solution of $\vect{y}'=A(t)\vect{y}+\vect{F}(t)$ on $(a,b)$,
@@ -4204,7 +4245,7 @@ where $c_1$, $c_2$, \dots, $c_n$  are constants.
 
 
 \boxit{Finding a Particular Solution of a Nonhomogeneous System}
-\index{higher order system!nonhomogeneous!particular solution}
+\index{system!nonhomogeneous!particular solution}
 
 We now discuss an extension of the method of variation of parameters
 to linear nonhomogeneous systems. This method will produce a

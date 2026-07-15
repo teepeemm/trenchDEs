@@ -60,7 +60,7 @@ We'll call
 \[
 e_i=y(x_i)-y_i
 \]
-the \emph{\color{blue}error at the $i$th step}. Because of the initial
+the \emph{\color{blue}error at the $i$th step}\index{approximation error!at $i$th step}\index{numerical approximation!error at $i$th step}. Because of the initial
 condition
 $y(x_0)=y_0$, we'll always have $e_0=0$. However, in general
 $e_i\ne0$ if $i>0$.
@@ -71,12 +71,12 @@ in applying a numerical method to solve an initial value problem:
 \item
 The formulas defining the method are based on some sort of
 approximation. Errors due to the inaccuracy of the approximation are
-called \emph{\color{blue}truncation errors}.
+called \emph{\color{blue}truncation errors}\index{truncation error}\index{numerical approximation!truncation error}.
 \item
 Computers do arithmetic with a fixed number of digits, and therefore
 make errors in evaluating the formulas defining the numerical methods.
 Errors due to the computer's inability to do exact arithmetic are
-called \emph{\color{blue}roundoff errors}.
+called \emph{\color{blue}roundoff errors}\index{roundoff error}\index{numerical approximation!roundoff error}.
 \end{itemize}
 
 Since a careful analysis of roundoff error is beyond the scope of this
@@ -441,7 +441,7 @@ compute $y_{i+1}$.
 
 Euler's method assumes that $y_{i+1}$ defined in \eqref{eq:3.1.2}  is
 an approximation to $y(x_{i+1})$. We call the error in this
-approximation the \emph{\color{blue}local truncation error at the $i$th step},
+approximation the \emph{\color{blue}local truncation error at the $i$th step}\index{numerical approximation!local truncation error!$i$th step}\index{local truncation error!$i$th step},
 and denote it by $T_i$;   thus,
 \begin{equation} \label{eq:3.1.8}
 T_i=y(x_{i+1})-y(x_i)-hf(x_i,y(x_i)).
@@ -1013,19 +1013,19 @@ h&\multicolumn{11}{c}{x}\\\cmidrule(l){2-12}
 
 In the next two sections we'll study other numerical methods for
 solving initial value problems,  called the
-\personHref{Euler}{improved Euler method}, the \emph{\color{blue}midpoint method},
-\personHref{Heun}{Heun's method}
+\personHref{Euler}{improved Euler method}\index{improved Euler's method}, the \indexterm{midpoint method},
+\personHref{Heun}{Heun's method}\index{Heun's method}
 and the
-\personHref{Runge}{Runge}-\personHref{Kutta}{Kutta method}.
+\personHref{Runge}{Runge}-\personHref{Kutta}{Kutta method}\index{Runge-Kutta method}.
  If the initial value problem is semilinear as
 in \eqref{eq:3.1.19},  we also have the option of using variation of
 parameters and then applying the given numerical method to the initial
 value problem \eqref{eq:3.1.21} for $u$. By analogy with the terminology
 used here, we'll call the resulting procedure
-the improved Euler semilinear method\index{improved Euler semilinear method},
-the \indexterm{midpoint semilinear method},
-Heun's semilinear method\index{Heun's semilinear method} or the
-Runge-Kutta semilinear method\index{Runge-Kutta semilinear method}, as
+the improved Euler semilinear method\index{improved Euler's semilinear method}\index{semilinear!improved Euler's method},
+the \indexterm{midpoint semilinear method}\index{semilinear!midpoint method},
+Heun's semilinear method\index{Heun's semilinear method}\index{semilinear!Heun's method} or the
+Runge-Kutta semilinear method\index{Runge-Kutta semilinear method}\index{semilinear!Runge-Kutta method}, as
 the case may be.
 
 \exercises

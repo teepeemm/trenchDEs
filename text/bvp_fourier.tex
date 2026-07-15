@@ -19,7 +19,7 @@ They are related to problems in partial
 differential equations that will be discussed in \zcref*{ch:fourier_pde}.
 We define what is meant by eigenvalues and eigenfunctions of
 the boundary value  problems, and  show that  the eigenfunctions have
-a property called \emph{\color{blue}orthogonality}.
+a property called \emph{\color{blue}orthogonality}\index{orthogonal!functions}.
 
 
 \medskip\noindent
@@ -56,12 +56,12 @@ following problems, where $\lambda$ is a real number and $L>0$:
 \end{enumext}
 
 In each problem the conditions following the differential equation
-are called \emph{\color{blue}boundary conditions}.
+are called \indexterm{boundary conditions}.
 Note that the boundary conditions in Problem~5, unlike those in
 Problems~1--4, don't require that $y$ or $y'$ be zero at the boundary
 points, but only that $y$ have the same value at $x=\pm L$ , and that
 $y'$ have the same value at $x=\pm L$. We say that the boundary
-conditions in Problem~5 are \emph{\color{blue}periodic}.
+conditions in Problem~5 are \emph{\color{blue}periodic}\index{periodic boundary conditions}\index{boundary conditions!periodic}.
 
 Obviously, $y\equiv0$ (the trivial solution) is a solution of
 Problems~1--5 for any value of $\lambda$. For most values of $\lambda$,
@@ -71,12 +71,12 @@ there are no other solutions. The interesting question is this:
 nontrivial solutions, and what are they?}
 
 A value of $\lambda$ for which the problem has
-a nontrivial solution is an \emph{\color{blue}eigenvalue} of the problem, and the
-nontrivial solutions are $\lambda$-\emph{\color{blue}eigenfunctions}, or \emph{\color{blue}eigenfunctions associated with $\lambda$}. Note that a nonzero
+a nontrivial solution is an \indexterm{eigenvalue} of the problem, and the
+nontrivial solutions are $\lambda$-\indexterm{eigenfunctions}, or \emph{\color{blue}eigenfunctions associated with $\lambda$}. Note that a nonzero
 constant multiple of a $\lambda$-eigenfunction is again a
 $\lambda$-eigenfunction.
 
-Problems~1--5 are called \emph{\color{blue}eigenvalue problems}. \emph{\color{blue}Solving}
+Problems~1--5 are called \emph{\color{blue}eigenvalue problems}\index{eigenvalue problem}.\emph{\color{blue}Solving}
 an eigenvalue problem means finding all its eigenvalues and associated
 eigenfunctions. We'll take it as given here that all the eigenvalues
 of Problems~1--5 are real numbers. This is proved in a more general
@@ -160,7 +160,7 @@ is an associated eigenfunction.
 For future reference, we state the result of \zcref{example:11.1.1}
 as a theorem.
 
-\begin{theorem}\color{blue}\label{thmtype:11.1.2}
+\begin{theorem}\label{thmtype:11.1.2}
 The eigenvalue problem
 \[
 y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0
@@ -182,7 +182,7 @@ an argument like that of \zcref{example:11.1.1}
 
 
 
-\begin{theorem}\color{blue}\label{thmtype:11.1.3}
+\begin{theorem}\label{thmtype:11.1.3}
 The eigenvalue problem
 \[
 y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0
@@ -615,10 +615,10 @@ n=1,2,3,\dots.
 \end{equation}
 Then the infinite series
 $\sum_{n=1}^\infty c_n\phi_n(x)$ is called the
-\emph{\color{blue}Fourier expansion of $f$ in terms of the orthogonal set}
+\emph{\color{blue}Fourier expansion of $f$ in terms of the orthogonal set}\index{Fourier!expansion}
 $\{\phi_n\}_{n=1}^\infty$, and
 $c_1$, $c_2$, \dots, $c_n$, \dots
-are called the \emph{\color{blue}Fourier coefficients of $f$ with respect to}
+are called the \emph{\color{blue}Fourier coefficients of $f$ with respect to}\index{Fourier!coefficient}
 $\{\phi_n\}_{n=1}^\infty$. We indicate the relationship between $f$
 and its Fourier
  expansion by
@@ -654,7 +654,7 @@ We'll now study Fourier expansions in terms
 of Problem~5.
  If $f$ is integrable on $[-L,L]$,  its
 Fourier expansion in terms of these functions is called the
-\emph{\color{blue}Fourier series of $f$ on $[-L,L]$}.  Since
+\emph{\color{blue}Fourier series of $f$ on $[-L,L]$}\index{Fourier!series}.  Since
 \begin{gather*}
 \int_{-L}^L 1^2\,dx=2L,\\
 \int_{-L}^L\cos^2\frac{n\pi x}{L}\,dx =
@@ -701,7 +701,7 @@ arise in applications.
 
 \begin{definition}\label{thmtype:11.2.3}
 A function  $f$ is said to be
-\emph{\color{blue}piecewise smooth} on $[a,b]$ if:
+\indexterm{piecewise smooth} on $[a,b]$ if:
 \begin{alist}
 \item % (a)
 $f$ has at most finitely many points of discontinuity in $(a,b)$;
@@ -722,7 +722,7 @@ finitely many points in $[a,b]$,
  $f(x_0+)=f(x_0-)$
 and $f'(x_0+)=f'(x_0-)$ for all but finitely many
 values of $x_0$ in $(a,b)$. Recall from \zcref{sec:laplace_intro} that
-$f$ is said to have a \emph{\color{blue}jump discontinuity} at $x_0$
+$f$ is said to have a \indexterm{jump discontinuity} at $x_0$
 if $f(x_0+)\ne f(x_0-)$.
 
 The next theorem gives sufficient conditions for convergence of a
@@ -828,7 +828,7 @@ the Fourier series  for $-2\le x\le 2$.
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A graph of the function in Example \ref*{example:11.2.1}},
   width=5.67in,height=3.3in,keepaspectratio]{fig110201}
 \caption{}
@@ -904,8 +904,8 @@ and $m=15$ (solid curve).
 \end{solution}
 
 \begin{figure}
-  \centering\color{blue}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \centering
+  \includegraphics[alt={A solid line goes from (-2,2) to the origin, and from (0,.5) to (2,.5).  Dotted, dashed, and solid curves approximate the solid line with increasing success.},
   width=5.67in,height=3.3in,keepaspectratio]{fig110202}
 \caption{}
   \label{figure:11.2.2}
@@ -926,8 +926,8 @@ that
 \[
 u(-x)=u(x)\quad\text{and}\quad v(-x)=-v(x),\quad -L\le x\le L.
 \]
-Then we say that $u$ is an \emph{\color{blue}even} function and $v$  is an
-\emph{\color{blue}odd function}. Note that:
+Then we say that $u$ is an \indexterm{even function} and $v$  is an
+\indexterm{odd function}. Note that:
 \begin{itemize}
 \item
 The product of two even functions is even.
@@ -1038,7 +1038,7 @@ and $m=15$ (solid curve).
 
 \begin{figure}
   \centering\color{blue}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={A parabola goes from (-2,6) to the origin to (1,0) to (2,2).  Dotted and solid curves approximate the parabola with increasing success.},
   width=5.67in,height=3.3in,keepaspectratio]{fig110203}
 \caption{Approximation of $f(x)=x^2-x$ by partial
 sums of its Fourier series on $[-2,2]$}
@@ -1117,8 +1117,8 @@ and $m=15$ (solid curve).
 \end{solution}
 
 \begin{figure}
-  \centering\color{blue}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \centering
+  \includegraphics[alt={A line from (-3,-3) to (3,3).  Dotted and slid curves approximate the line with increasing success.},
   width=5.67in,height=3.3in,keepaspectratio]{fig110204}
 \caption{Approximation of $f(x)=x$ by partial sums
 of its Fourier series on $[-\pi,\pi]$}
@@ -1247,11 +1247,10 @@ discontinuities $x=\pm\frac{1}{2}$ as $N$ increases.
 \end{example}
 
 \begin{center}
-\color{blue}
 \noindent
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={A square wave that is 1 for |x|<0.5.  The Fourier approximation has a minimum of -0.09 and a maximum of 1.09, and wiggles near the jump discontinuities.},
   width=\linewidth,height=2.2in,keepaspectratio]{fig110205}
 \captionof{figure}{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=10$}
 \label{figure:11.2.5}
@@ -1259,7 +1258,7 @@ discontinuities $x=\pm\frac{1}{2}$ as $N$ increases.
 \end{minipage}\hfill
 \begin{minipage}{0.48\linewidth}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={A square wave that is 1 for |x|<0.5.  The Fourier approximation has a minimum of -0.09 and a maximum of 1.09, and is slightly blurry near the jump discontinuities.},
   width=\linewidth,height=2.2in,keepaspectratio]{fig110206}
 \captionof{figure}{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=20$}
 \label{figure:11.2.6}
@@ -1268,7 +1267,7 @@ discontinuities $x=\pm\frac{1}{2}$ as $N$ increases.
 
 \tagstructbegin{tag=Sect}
 \noindent
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={A square wave that is 1 for |x|<0.5.  The Fourier approximation has a minimum of -0.09 and a maximum of 1.09, and is less blurry near the jump discontinuities.},
   width=\linewidth,height=3.3in,keepaspectratio]{fig110207}
 \captionof{figure}{The Gibbs Phenomenon: \zcref{example:11.2.7}, $N=30$}
   \label{figure:11.2.7}
@@ -1428,7 +1427,7 @@ of
 \personHref{Riemann}{Riemann's Lemma}.
 \item % (c)
 We say that a sequence $\{\alpha_n\}_{n=1}^\infty$  is \emph{\color{blue}of
-order $n^{-k}$} and write
+order $n^{-k}$}\index{order of a sequence} and write
 $\alpha_n=O(1/n^k)$
 if  there's a constant $M$ such that
 \[
@@ -1486,8 +1485,6 @@ B_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{2n\pi x}{L}\,dx,\quad
 n=1,2,3,\dots.
 \]
 
-%\begin{figure}
-%\color{blue}
   \begin{minipage}{0.48\linewidth}
     \centering
 \tagstructbegin{tag=Sect}
@@ -1576,7 +1573,7 @@ are arbitrary constants we say that
 \[
 P_m(x)=A_0+\sum_{n=1}^m\left(A_n\cos\frac{n\pi x}{L}+B_n\sin\frac{n\pi x}{L}\right)
 \]
-is a \emph{\color{blue}trigonometric polynomial of degree $\le m$}.
+is a \emph{\color{blue}trigonometric polynomial of degree $\le m$}\index{trigonometric polynomial}.
 
 Now let
 \[
@@ -1634,7 +1631,7 @@ y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0
 (Problem~2)  are orthogonal on $[0,L]$.
  If $f $ is integrable on $[0,L]$ then the
 Fourier expansion of $f$ in terms of these functions is called the
-\emph{\color{blue}Fourier cosine series of $f$ on $[0,L]$}. This series is
+\indexterm{Fourier cosine series} of $f$ on $[0,L]$. This series is
 \[
 a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 \]
@@ -1661,7 +1658,7 @@ obtained by extending  $f$ over $[-L,L]$ as an even
 function (\zcref{figure:11.3.1}).
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A function for 0<x<L.  The portion for -L<x<0 is dashed, and is a mirror image across the y axis of the portion for 0<x<L.},
   width=5.67in,height=3.3in,keepaspectratio]{fig110301}
   \caption{}
@@ -1751,7 +1748,7 @@ y''+\lambda y=0,\quad y(0)=0,\quad y(L)=0
 (Problem~1)  are orthogonal on $[0,L]$.
  If $f$ is integrable on $[0,L]$ then the
 Fourier expansion of $f$ in terms of these functions is called the
-\emph{\color{blue}Fourier sine series of $f$ on $[0,L]$}. This series is
+\indexterm{Fourier sine series} of $f$ on $[0,L]$. This series is
 \[
 \sum_{n=1}^\infty b_n\sin\frac{n\pi x}{L},
 \]
@@ -1774,7 +1771,7 @@ obtained by extending  $f$ over $[-L,L]$ as an odd
 function  (\zcref{figure:11.3.2}).
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A function for 0<x<L.  The portion for -L<x<0 is dashed, and is a mirror image across the origin of the portion for 0<x<L.},
   width=5.67in,height=3.3in,keepaspectratio]{fig110302}
   \caption{}
@@ -1862,7 +1859,7 @@ c_n=\frac{\dst\int_0^Lf(x)\cos\frac{(2n-1)\pi x}{2L}\,dx}{\dst\int_0^L
 x}{2L}\,dx.
 \]
 
-We'll  call this expansion the \emph{\color{blue}mixed Fourier cosine
+We'll  call this expansion the \indexterm{mixed Fourier cosine
 series} of $f$ on $[0,L]$, because the boundary conditions
 of \eqref{eq:11.3.2} are ``mixed'' in that they require $y$
 to be zero at
@@ -1885,7 +1882,7 @@ f(x),&0\le x\le L,\\-f(2L-x),&L< x\le 2L
 on $[0,2L]$ (\zcref{figure:11.3.3}).
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A function for 0<x<L.  The portion for L<x<2L is dashed, and is a mirror image across the point (L,0) of the portion for 0<x<L.},
   width=5.67in,height=3.3in,keepaspectratio]{fig110303}
   \caption{}
@@ -1979,7 +1976,7 @@ d_n=\frac{\dst\int_0^Lf(x)\sin\frac{(2n-1)\pi x}{2L}\,dx}{\dst\int_0^L
 \sin^2\frac{(2n-1)\pi x}{2L}\,dx}=\frac{2}{L}\int_0^Lf(x)\sin\frac{(2n-1)\pi
 x}{2L}\,dx.
 \]
-We'll  call this expansion the \emph{\color{blue}mixed Fourier sine
+We'll  call this expansion the \indexterm{mixed Fourier sine
 series} of $f$ on $[0,L]$.
 
 
@@ -1997,7 +1994,7 @@ f(x),&0\le x\le L,\\f(2L-x),&L< x\le 2L,
 on $[0,2L]$ (\zcref{figure:11.3.4}).
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A function for 0<x<L.  The portion for L<x<2L is dashed, and is a mirror image across the line x=L of the portion for 0<x<L.},
   width=5.67in,height=3.3in,keepaspectratio]{fig110304}
   \caption{}
@@ -2008,7 +2005,7 @@ on $[0,2L]$ (\zcref{figure:11.3.4}).
 Applying \zcref{thmtype:11.3.2} with $f$ replaced by $f_4$ and $L$
 replaced by $2L$ yields the next theorem.
 
-\begin{theorem}\color{blue} \label{thmtype:11.3.4}
+\begin{theorem}\label{thmtype:11.3.4}
 If $f$ is piecewise smooth on $[0,L]$, then the mixed Fourier
 sine series
 \[

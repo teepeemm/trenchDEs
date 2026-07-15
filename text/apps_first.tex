@@ -1,6 +1,7 @@
 % !TEX root = ../TRENCH_DIFFEQ.tex
 
 \chapter{Applications of First Order Equations}\label{ch:apps_first}
+\index{applications!of first order equations}
 
 \textsc{In this chapter} we consider applications of first order differential
 equations.
@@ -18,8 +19,6 @@ at a certain
 rate, but decays at a rate proportional to its mass, or a saver
 makes regular deposits in a savings account that draws compound
 interest.
-\index{growth|see{exponential growth}}
-\index{decay|see{exponential decay}}
 
 
 \medskip\noindent
@@ -67,10 +66,11 @@ Q'=\frac{dQ}{dt}.
 
 \boxit{Exponential Growth and Decay}
 \index{exponential growth and decay}
+\index{applications!of first order equations!growth and decay}
 %\index{growth and decay!exponential}
 
 One of the most common mathematical models for a physical process is
-the \emph{\color{blue}exponential model}, where it's assumed that the rate
+the \indexterm{exponential model}, where it's assumed that the rate
 of change of a quantity $Q$ is proportional to $Q$; thus
 \begin{equation} \label{eq:4.1.1}
 Q'=aQ,
@@ -92,15 +92,14 @@ Q=Q_0e^{a(t-t_0)}.
 \end{equation}
 Since the solutions of $Q'=aQ$ are exponential functions, we say that
 a
-quantity $Q$ that satisfies this equation \emph{\color{blue}grows exponentially} if
-$a > 0$, or \emph{\color{blue}decays exponentially} if $a < 0$
+quantity $Q$ that satisfies this equation \emph{\color{blue}grows exponentially}\index{exponential growth} if
+$a > 0$, or \emph{\color{blue}decays exponentially}\index{exponential decay} if $a < 0$
  (\zcref{figure:4.1.1}).
 
 \begin{figure}
   \centering
   \includegraphics[alt={Eight solution curves for t>0 starting from the same a naught.  When a is negative, the solutions decrease; when a is positive, the solutions increase.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040101}
-\color{blue}
 \caption{\label{figure:4.1.1}Exponential growth and decay}
   \label{figure4.1.1}
 \end{figure}
@@ -108,6 +107,7 @@ $a > 0$, or \emph{\color{blue}decays exponentially} if $a < 0$
 
 \boxit{Radioactive Decay}
 \index{exponential decay!radioactive decay}
+\index{radioactive decay}
 
 Experimental evidence shows that radioactive material decays at a rate
 proportional to the mass of the material present. According to this
@@ -116,7 +116,7 @@ satisfies \eqref{eq:4.1.1}, where $a$ is a negative constant whose value
 for any given material must be determined by experimental observation.
 For simplicity, we'll replace the negative constant $a$ by
 $-k$, where
-$k$ is a positive number that we'll call the \emph{\color{blue}decay constant}
+$k$ is a positive number that we'll call the \indexterm{decay constant}\index{constant!decay}
 of the material. Thus, \eqref{eq:4.1.1} becomes
 \[
 Q'=-kQ.
@@ -161,7 +161,6 @@ the amount of the material present at any particular time.
   \centering
   \includegraphics[alt={An exponential decay for t>0 starting at Q naught.  By time 𝜏, the amount has decreased to 0.5 times Q naught.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040102}
-\color{blue}
 \caption{Half-life of a radioactive substance}
   \label{figure:4.1.2}
 \end{figure}
@@ -217,6 +216,7 @@ t_1=1620{\frac{\ln\frac83}{\ln2}}\approx  2292.4\text{ years}.
 \boxit{Interest Compounded Continuously}
 \index{compound interest!continuous}
 \index{exponential growth!continuous compound interest}
+\index{interest compounded continuously}
 
 Suppose we deposit an amount of money $Q_0$  in an
 interest-bearing account and make no further deposits or withdrawals
@@ -224,7 +224,7 @@ for $t$ years, during which the account bears interest at a constant
 annual rate $r$. To calculate the value of the account at the
 end of $t$ years, we need one more piece of information: how the
 interest is added to the account, or---as the bankers say---how it
-is \emph{\color{blue}compounded}. If the interest is compounded annually,  the
+is \emph{\color{blue}compounded}\index{compound interest}. If the interest is compounded annually,  the
 value of the account is multiplied by $1+r$ at the end of each year.
 This means that after $t$ years the value of the account is
 \[
@@ -270,7 +270,7 @@ years is an increasing function of $n$. Now suppose  the maximum
 allowable rate of interest on savings accounts is restricted by law,
 but the time intervals between successive compoundings isn't; then
 competing banks can attract savers by compounding often. The ultimate
-step in this direction is to \emph{\color{blue}compound continuously}, by which we
+step in this direction is to \indexterm{compound continuously}\index{continuous compounding}, by which we
 mean that $n\to\infty$ in \eqref{eq:4.1.8}. Since we know from calculus
 that
 \[
@@ -389,7 +389,7 @@ from \eqref{eq:4.1.12}
 \lim_{t\to\infty} Q(t)=\frac{a}{k}.
 \]
 This limit depends only on $a$ and $k$, and not on $Q_0$.
-We say that $a/k$ is the \emph{\color{blue}steady state} value of $Q$. From
+We say that $a/k$ is the \indexterm{steady state} value of $Q$. From
 \eqref{eq:4.1.12} we also see that $Q$ approaches its steady state value
 from above if $Q_0 > a/k$, or from below if $Q_0 < a/k$. If $Q_0=a/k$,
 then $Q$ remains constant (\zcref{figure:4.1.3}).
@@ -413,7 +413,6 @@ name=myplot] %
 \node [right] at (myplot.right of origin) {\scriptsize $t$};
 \node [above] at (myplot.above origin) {\scriptsize $Q$};
 \end{tikzpicture}
-\color{blue}
 \caption{$Q(t)$ approaches the steady state value
 $\dfrac{a}{k}$ as $t\to\infty$}
   \label{figure:4.1.3}
@@ -545,10 +544,10 @@ second is due to the subsequent weekly deposits.
 \end{solution}
 
 Mathematical models must be tested for validity by comparing
-predictions based on them with the actual outcome of experiments.
-Example 6 is unusual in that we can compute the exact value of the
+predictions based on them with the actual outcome of experiments.\index{mathematical model!validity of}
+\zcref[S]{example:4.1.6} is unusual in that we can compute the exact value of the
 account at any specified time and compare it with the approximate
-value predicted by \eqref{eq:4.1.15} (See \zcref{exer:4.1.21}.). The
+value predicted by \eqref{eq:4.1.15} (see \zcref{exer:4.1.21}). The
 following table
  gives a comparison for a ten year period. Each exact answer
 corresponds to the time of the year-end deposit, and each year is
@@ -863,8 +862,9 @@ units of mass per unit of time.
 \section{Cooling and Mixing}\label{sec:cooling_mixing}
 \index{cooling and mixing}
 \index{mixing and cooling}
+\index{applications!of first order equations!cooling and mixing}
 
-\boxit{Newton's Law of Cooling}\index{Newton's!law of cooling}
+\boxit{Newton's Law of Cooling}\index{Newton's!law of cooling}\index{cooling!Newton's law of}
 
 Newton's law of cooling states that if an object with temperature
 $T(t)$ at time $t$ is in a medium with temperature $T_m(t)$,  the
@@ -876,12 +876,13 @@ T'=-k(T-T_m).
 \end{equation}
  Here $k > 0$, since the temperature of the object must decrease if
 $T > T_m$, or increase if $T < T_m$.
-We'll call $k$  the \emph{\color{blue}temperature decay constant of the medium}.
+We'll call $k$  the \indexterm{temperature decay constant}\index{constant!temperature decay} of the medium.
 
 For simplicity, in this section we'll assume  that the medium is
 maintained at a constant temperature $T_m$. This is another example of
  building a simple mathematical model for a physical
-phenomenon. Like most mathematical models it has its limitations. For
+phenomenon.\index{mathematical model!validity of}
+Like most mathematical models it has its limitations. For
 example, it's reasonable to assume that the temperature of a room
 remains approximately constant if the cooling object is a cup of
 coffee, but perhaps not if it's a huge cauldron of molten metal. (For
@@ -952,7 +953,6 @@ T(8) & = 25+375 e^{-2 \ln \dfrac{15}{7}} \\
   \centering
   \includegraphics[alt={A curve for 0<t<30 and 0<T<400 that begins at (0,400) and decreases toward a horizontal asymptote of T=25.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040201}
-\color{blue}
 \caption{$T=25+375e^{-(t/4)\ln 15/7}$}
   \label{figure:4.2.1}
 \end{figure}
@@ -1019,21 +1019,20 @@ at 11:02:55.
   \centering
   \includegraphics[alt={A curve for -5<t<40 and -20<T<110 passing through (0,60) and decreasing to a horizontal asymptote of T=-20.  A dashed line shows that when t≈-2, then T≈72.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040202}
-\color{blue}
   \caption{$T = -20+80 e^{-\frac{t}{2}\ln \frac{8}{7}}$}
   \label{figure:4.2.2}
 \end{figure}
 
 
 \boxit{Mixing Problems}
-\index{mixing problems}
+\index{mixing problem}
 
 In the next two examples a saltwater solution with a given
 concentration (weight of salt per unit volume of solution) is added at
 a specified rate to a tank that initially contains saltwater with a
 different concentration. The problem is to determine the quantity of
 salt in the tank as a function of time. This is an example of a
-\emph{\color{blue}mixing problem}. To construct a tractable mathematical model for
+\indexterm{mixing problem}. To construct a tractable mathematical model for
 mixing problems we assume in our examples (and most exercises) that
 the mixture is stirred instantly so that the salt is always uniformly
 distributed throughout the mixture. \zcref{exer:4.2.22,exer:4.2.23} deal with
@@ -1060,7 +1059,6 @@ tank at time $t > 0$, and solve the equation to determine $Q(t)$.
   \centering
   \includegraphics[alt={A container holding 600 gallons with an input of 4 gallons per minutes and 0.5 pounds per gallon, and an output of 4 gallons per minute.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040203}
-\color{blue}
   \caption{A mixing problem}
   \label{figure:4.2.3}
 \end{figure}
@@ -1120,7 +1118,6 @@ Q=ue^{-t/150}=300+ce^{-t/150}
   \centering
   \includegraphics[alt={A plot for 0<t<900 and 0<Q<300 with the curve beginning at (0,40) and increasing to a horizontal asymptote of Q=300.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040204}
-\color{blue}
   \caption{$Q=300-260e^{-t/150}$}
   \label{figure:4.2.4}
 \end{figure}
@@ -1152,7 +1149,6 @@ concentration $K(t)$ (\unit{\gram\per\liter}) of salt in the tank at any such ti
   \centering
   \includegraphics[alt={A mixing tank with an input of 4 liters per minute and 0.25 grams per liter, so that the total volume is 2t+200 liters.  An unlabeled amount exits the tank.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040205}
-\color{blue}
   \caption{Another mixing problem}
   \label{figure:4.2.5}
 \end{figure}
@@ -1243,7 +1239,6 @@ K(t) = \frac{1}{4}-\frac{2000}{(t+100)^2}
   \centering
   \includegraphics[alt={A graph for 0<t<1100 and 0<K<0.3 that begins at (0,0.05) and quickly increases toward a horizontal asymptote of y=0.25.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040206}
-\color{blue}
   \caption{$K(t) = \dfrac{1}{4}-\dfrac{2000}{(t+100)^2}$}
   \label{figure:4.2.6}
 \end{figure}
@@ -1415,6 +1410,7 @@ Find $\lim._{t\to\infty}S(t)$  and $\lim_{t\to\infty}T(t)$ .
 
 
 \item\label{exer:4.2.17}%\exercisemolten
+\index{mathematical model!validity of}
 In  our previous examples and exercises concerning Newton's law of cooling
 we assumed that
 the temperature of the medium remains constant.  This model is adequate
@@ -1564,6 +1560,8 @@ Use numerical methods to  confirm  your guess in the these cases:
 
 \section{Elementary Mechanics}\label{sec:elementary_mechanics}
 \index{elementary mechanics}
+\index{applications!of first order equations!elementary mechanics}
+\index{elementary mechanics!Newton's second law of motion}
 
 \boxit{Newton's Second Law of Motion}\index{Newton's!second law of motion}
 
@@ -1595,7 +1593,8 @@ mass.
 \begin{table}
 \centering
 \caption{Units of measurement in various systems%
-\index{cgs units}\index{mks units}\index{British units}}\label{table:units}
+\index{cgs units}\index{mks units}\index{British units}}\index{elementary mechanics!units used}
+\label{table:units}
 \tagpdfsetup{table/header-rows={1}}
 \begin{tabular}{cccc}\toprule
 & Length & Force & Mass \\\midrule
@@ -1607,17 +1606,18 @@ British & foot (\unit{\feet}) & pound (\unit{\pound}) & slug (sl)\\
 \end{table}
 
 If we assume that Earth is a perfect sphere with constant mass
-density,  Newton's law of gravitation\index{Newton's!law of gravitation} (discussed later in this
-section)
+density,  Newton's law of
+gravitation\index{Newton's!law of gravitation}\index{gravity!Newton's law of}
+(discussed later in this section)
 % WHERE?
 asserts that the force exerted on an object by Earth's
 gravitational field is proportional to the mass of the object and
 inversely proportional to the square of its  distance from the
 center of Earth. However, if the object remains sufficiently close to
-Earth's surface, we may assume that the gravitational force is
+Earth's surface, we may assume that the gravitational force\index{force!gravity} is
 constant and equal to its value at the surface. The magnitude of this
 force is $mg$, where $g$ is called the \indexterm{acceleration due to
-gravity}. (To be completely accurate, $g$ should be called the
+gravity}\index{gravity!acceleration}. (To be completely accurate, $g$ should be called the
 \emph{\color{blue}magnitude of the acceleration due to gravity at Earth's surface}.)
 This quantity has been determined experimentally. Approximate
 values of $g$  are
@@ -1657,6 +1657,7 @@ through a resisting medium.
 \boxit{Motion Through a Resisting Medium Under Constant
 Gravitational Force}
 \index{motion!through resisting medium and gravity}
+\index{elementary mechanics!motion through resisting medium and gravity}
 
 Now we consider an object moving vertically in some medium. We assume
 that the only forces acting on the object are gravity and resistance
@@ -1665,7 +1666,7 @@ Earth's surface and take the upward direction to be positive, so
  the gravitational force can be assumed to have the constant value
  $-mg$. We'll see that, under reasonable assumptions on the
 resisting force, the velocity approaches a limit as $t\to\infty$.
-We call this limit the \indexterm{terminal velocity}.
+We call this limit the \indexterm{terminal velocity}\index{velocity!terminal}.
 
 \begin{example}\label{example:4.3.1}
 An object with mass $m$ moves under constant gravitational force
@@ -1704,7 +1705,6 @@ regardless of the sign of the velocity.
   \centering
   \includegraphics[alt={Whether an object has velocity v downward (in (a)) or upward (in (b)), the force F1=-kv points in the opposite direction.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040301}
-\color{blue}
   \caption{Resistive forces}
   \label{figure:4.3.1}
 \end{figure}
@@ -1758,7 +1758,6 @@ initial velocity $v_0$ (\zcref{figure:4.3.2}).
   \centering
   \includegraphics[alt={Solution curves for t,v>0.  All curves approach the horizontal asymptote v=-mg/k, whether the curves begin above or below the asymptote.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040302}
-\color{blue}
   \caption{Solutions of $mv'=-mg-kv$}
   \label{figure:4.3.2}
 \end{figure}
@@ -1900,7 +1899,6 @@ of \eqref{eq:4.3.9} such that $v_0\le0$ then
   \centering
   \includegraphics[alt={Several solution curves for t>0>v.  All curves converge to the horizontal asymptote v=-(mg/k)^(1/2).},
   width=5.67in,height=3.3in,keepaspectratio]{fig040303}
-\color{blue}
   \caption{Solutions of $mv'=-mg+kv^2,\ v(0)=v_0\le0$}
   \label{figure:4.3.3}
 \end{figure}
@@ -1983,14 +1981,13 @@ shows graphs of $v$ over $[0,T]$ for various values of $v_0$.
   \centering
   \includegraphics[alt={Solution curves for 0<t<1 and 0<v<50 starting from (0,10k) for various values of k.  The curve starting from (0,10) ends near (0.7,0).  The curve starting from (0,20) ends near (0.9,0).  The other curves end near (1,0).},
   width=5.67in,height=3.3in,keepaspectratio]{fig040304}
-\color{blue}
-\caption{Solutions of \eqref{eq:4.3.15} for various
-$v_0>0$}
+\caption{Solutions of \eqref{eq:4.3.15} for various $v_0>0$}
   \label{figure:4.3.4}
 \end{figure}
 
 
-\boxit{Escape Velocity}\index{escape velocity}
+\boxit{Escape Velocity}\index{escape velocity}\index{velocity!escape}
+\index{elementary mechanics!escape velocity}
 
 Suppose a space vehicle is launched vertically and its fuel is
 exhausted when the vehicle reaches an altitude $h$ above Earth, where
@@ -2012,7 +2009,6 @@ where $R$ is  Earth's radius (\zcref{figure:4.3.5}).
   \centering
   \includegraphics[alt={A circle of radius R centered at (0,-R).  y=0 is at the top of the circle and y=h is above the circle.},
   trim=0 30 0 0,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040305}
-\color{blue}
   \caption{Escape velocity}
   \label{figure:4.3.5}
 \end{figure}
@@ -2108,7 +2104,6 @@ that satisfies the equation
 \]
 The velocity will be zero at the maximum  altitude, and the object will
 then fall to Earth under the influence of gravity.
-
 
 
 \exercises
@@ -2213,7 +2208,7 @@ Use your favorite numerical method to solve the equation you found in
 (a), to convince yourself that there's  a unique number $a_0$ such
 that $\lim_{t\to\infty}s(t)=\infty$ if $a\le a_0$ and
 $\lim_{t\to\infty}s(t)$ exists (finite) if $a>a_0$. (We say that $a_0$
-is the \emph{\color{blue}bifurcation value} of $a$.) Try to find $a_0$ and
+is the \indexterm{bifurcation value} of $a$.) Try to find $a_0$ and
 $\lim_{t\to\infty}s(t)$ in the case where $a>a_0$.
 \hint{See \zcref{exer:4.3.14}.}
 \end{alist}
@@ -2284,7 +2279,7 @@ force due to gravity is given by Newton's law of gravitation. Take the
 upward direction to be positive.}
 
 \item\label{exer:4.3.17}A space probe is to be launched from a space station 200
-miles above Earth.  Determine its escape velocity\index{escape velocity|(} in
+miles above Earth.  Determine its escape velocity\index{escape velocity|(}\index{elementary mechanics!escape velocity} in
 miles/s.  Take Earth's radius to be 3960 miles.
 
 \item\label{exer:4.3.18}A space vehicle is to be launched from the moon, which has a
@@ -2334,13 +2329,15 @@ all $t>0$.}
 \section{Autonomous Second Order Equations}\label{sec:auto_second_order}
 \index{autonomous second order equation}
 \index{second order equation!autonomous}
+\index{second order equation!autonomous!conversion to first order}
 \index{first order equation!autonomous second order equation converted to}
+\index{applications!of first order equations!autonomous second order equations}
 
 A second order differential equation that can be written as
 \begin{equation} \label{eq:4.4.1}
 y''=F(y,y')
 \end{equation}
-where $F$ is independent of $t$, is said to be \emph{\color{blue}autonomous}.
+where $F$ is independent of $t$, is said to be \emph{\color{blue}autonomous}\index{autonomous equation}.
 An autonomous second order equation can be converted into a first
 order equation relating $v=y'$ and $y$. If we let $v=y'$,
 \eqref{eq:4.4.1} becomes
@@ -2361,7 +2358,7 @@ plane, which is called the
 \eqref{eq:4.4.1}
 then $y=y(t), v=y'(t)$ is a parametric equation for an integral curve
 of \eqref{eq:4.4.4}. We'll call these integral curves
-\emph{\color{blue}trajectories} of \eqref{eq:4.4.1}, and we'll call
+\emph{\color{blue}trajectories}\index{trajectory of equation} of \eqref{eq:4.4.1}, and we'll call
 \eqref{eq:4.4.4} the \indexterm{phase plane equivalent} of \eqref{eq:4.4.1}.
 
 In this section we'll consider  autonomous equations
@@ -2370,13 +2367,14 @@ that can be written as
 y''+q(y,y')y'+p(y)=0.
 \end{equation}
 Equations of this form often arise in applications of Newton's second
-law of motion. For example, suppose  $y$ is the displacement of a
+law of motion.\index{autonomous second order equation!Newton's second law of motion}
+For example, suppose  $y$ is the displacement of a
 moving object with mass $m$. It's  reasonable to think of two
 types of time-independent forces acting on the object. One type --- such
 as gravity --- depends only on position. We could write such a force as
 $-mp(y)$. The second type --- such as atmospheric resistance or friction
 --- may depend on position and velocity. (Forces that depend on velocity
-are called \emph{\color{blue}damping} forces.) We  write this force as
+are called \emph{\color{blue}damping}\index{damping!force}\index{force!damping} forces.) We  write this force as
 $-mq(y,y')y'$, where $q(y,y')$ is usually a positive function and
 we've put the factor $y'$ outside  to make it
 explicit that the force
@@ -2431,7 +2429,7 @@ $y\equiv\overline y$ is a constant solution of \eqref{eq:4.4.5}. We say
 that $\overline y$ is an \indexterm{equilibrium} of \eqref{eq:4.4.5} and
  $(\overline y,0)$ is a \indexterm{critical point} of the phase plane
 equivalent equation \eqref{eq:4.4.6}. We say that the equilibrium and
-the critical point are \emph{\color{blue}stable} if, for any given $\epsilon>0$
+the critical point are \emph{\color{blue}stable}\index{stable equilibrium} if, for any given $\epsilon>0$
 \emph{\color{blue}no matter how small}, there's a $\delta>0$,
 \emph{\color{blue}sufficiently small}, such that if
 \[
@@ -2455,7 +2453,6 @@ radius $\epsilon$) for all $t>0$.
   \centering
   \includegraphics[alt={Two circles centered at (y bar,0) on the horizontal y axis (the vertical axis is v).  The larger circle has radius 𝜖; the smaller circle has radius 𝛿.},
   trim=0 40 0 0,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040401}
-\color{blue}
 \caption{Stability: if $(y_0,v_0)$ is in the smaller
 circle  then $(y(t),v(t))$ is in the larger circle for all $t>0$}
   \label{figure:4.4.1}
@@ -2463,7 +2460,7 @@ circle  then $(y(t),v(t))$ is in the larger circle for all $t>0$}
 
 
 If an equilibrium and the associated critical point are not stable, we
-say they are \emph{\color{blue}unstable}. To see if you really understand what
+say they are \emph{\color{blue}unstable}\index{unstable equilibrium}. To see if you really understand what
 \emph{\color{blue}stable} means, try to give a direct definition of \emph{\color{blue}unstable}
 (\zcref{exer:4.4.22}). We'll illustrate both definitions in
 the following examples.
@@ -2472,7 +2469,7 @@ the following examples.
 \boxit{The Undamped Case}
 \index{undamped second order equation!autonomous}
 \index{autonomous second order equation!undamped}
-\index{second order equation!undamped autonomous}
+\index{second order equation!autonomous!undamped}
 
 We'll begin with the case where $q\equiv0$, so  \eqref{eq:4.4.5}
 reduces to
@@ -2480,7 +2477,7 @@ reduces to
 y''+p(y)=0.
 \end{equation}
 We say that this equation --- as well as any physical situation
-that it may model --- is \emph{\color{blue}undamped}.
+that it may model --- is \emph{\color{blue}undamped}\index{undamped model}.
 The phase plane equivalent of \eqref{eq:4.4.7} is  the
 separable equation
 \[
@@ -2498,7 +2495,7 @@ mass $m$, then
  $mv^2/2$ is the kinetic energy and $mP(y)$ is the
 potential energy of the object;   thus, \eqref{eq:4.4.8} says that the
 total
-energy of the object remains constant, or is \emph{\color{blue}conserved}. In
+energy of the object remains constant, or is \emph{\color{blue}conserved}\index{conservation of energy}. In
 particular, if a trajectory passes through a given point $(y_0,v_0)$
 then
 \[
@@ -2507,6 +2504,9 @@ c=\frac{v_0^2}{2}+P(y_0).
 
 
 \begin{example}[The Undamped Spring-Mass System]\label{example:4.4.1}
+\index{autonomous second order equation!undamped!spring-mass system}
+\index{elementary mechanics!spring-mass system!undamped}
+\index{spring-mass system!undamped}
  Consider an object with mass $m$ suspended from a
 spring and moving vertically. Let $y$ be the displacement of the
 object from the position it occupies when suspended at rest from the
@@ -2516,7 +2516,6 @@ spring (\zcref{figure:4.4.2}).
   \centering
   \includegraphics[alt={Three springs labeled a, b, and c.  Spring a is above y=0, spring b aligns with y=0, and spring c is below y=0.},
   trim=0 20 0 20,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040402}
-\color{blue}
   \caption{(a) $y>0$, (b) $y=0$, (c) $y<0$}
   \label{figure:4.4.2}
 \end{figure}
@@ -2559,7 +2558,6 @@ mv^2+ky^2=\rho
   \centering
   \includegraphics[alt={Several ellipses centered at the origin of the y v plane.},
   trim=0 20 0 0,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040403}
-\color{blue}
 \caption{Trajectories of $my''+ky=0$}
   \label{figure:4.4.3}
 \end{figure}
@@ -2610,20 +2608,22 @@ $v>0$, you can easily verify that $y$ satisfies \eqref{eq:4.4.9} for all
 values of $t$. Thus, the displacement varies periodically between $-R$
 and $R$, with period $T=2\pi/\omega_0$ (\zcref{figure:4.4.4}). (If
 you've taken a course in elementary mechanics you may recognize this
-as \emph{\color{blue}simple harmonic motion}.)
+as \indexterm{simple harmonic motion}.)
 \end{example}
 
 \begin{figure}
   \centering
   \includegraphics[alt={A sinusoidal wave on the t y plane reaching max and min at y=±R.},
   trim=0 20 0 0,clip,width=5.67in,height=3.3in,keepaspectratio]{fig040404}
-\color{blue}
 \caption{$y=R\sin(\omega_0 t+\phi)$}
   \label{figure:4.4.4}
 \end{figure}
 
 
 \begin{example}[The Undamped Pendulum]\label{example:4.4.2}
+\index{autonomous second order equation!undamped!pendulum}
+\index{elementary mechanics!pendulum!undamped}
+\index{pendulum!undamped}
 Now we consider the motion of a pendulum with mass $m$, attached to the end
 of a weightless rod with length $L$ that rotates on a frictionless
 axle (\zcref{figure:4.4.5}). We assume that there's no air
@@ -2647,7 +2647,6 @@ y''=-\frac{g}{L} \sin y.
   \centering
   \includegraphics[alt={A pendulum of length L and mass m making an angle of y to the right of vertical.},
   width=2.83in,height=1.83in,keepaspectratio]{fig040405}
-\color{blue}
 \caption{The undamped pendulum}
   \label{figure:4.4.5}
 \end{figure}
@@ -2670,7 +2669,6 @@ $\overline y_{2m+1}=(2m+1)\pi$ is unstable.
   \centering
   \includegraphics[alt={Pendulum a hangs vertically down.  Pendulum b points upward.} 
   width=2.83in,height=1.83in,keepaspectratio]{fig040406}
-\color{blue}
 \caption{(a) Stable equilibrium, (b) Unstable equilibrium}
   \label{figure:4.4.6}
 \end{figure}
@@ -2766,7 +2764,6 @@ defines a separatrix passing through $(\overline y,0)$.
   \centering
   \includegraphics[alt={The y v plane with several solution curves that are symmetric about both axes.  Dashed separatrices connect (-π,0) to (π,0) by going through (0,±1).  Inside the separatrices, several ellipses are centered at the origin.  Outside the separatrices, solution curves move horizontally through the plane.},
   width=2.83in,height=1.83in,keepaspectratio]{fig040407}
-\color{blue}
 \caption{Trajectories of the undamped pendulum}\index{separatrix}
   \label{figure:4.4.7}
 \end{figure}
@@ -2796,6 +2793,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig040409}
 \index{stability condition!for second order undamped autonomous equation}
 \index{instability condition!for second order undamped autonomous equation}
 \index{second order undamped autonomous equation!stability condition}
+\index{autonomous second order equation!stability condition}
 
 It can be shown (\zcref{exer:4.4.23}) that an equilibrium
 $\overline y$ of an undamped equation
@@ -2896,7 +2894,7 @@ typical trajectories. The
 dashed curve through the critical point $(0,0)$, obtained by setting
 $c=0$ in \eqref{eq:4.4.23}, separates the $y$-$v$ plane into regions
 that contain different kinds of trajectories; again,
- we call this curve a \emph{\color{blue}separatrix}.
+ we call this curve a \indexterm{separatrix}.
 Trajectories in the region bounded by the closed loop (b) are closed
 curves,
 so solutions associated with them are periodic. Solutions associated
@@ -2909,7 +2907,6 @@ with trajectory not  on the separatrix, then
 
  \begin{figure}
   \centering
-  \color{blue}
   \includegraphics[alt={The y v plane with several solution curves symmetric about the horizontal y axis.  The dashed separatrix labeled (a) goes from the origin up and left, exiting the image; (c) is its mirror image going down and left.  The dashed separatrix labeled (b) goes from the origin up and right, loops around (1,0), and returns to the origin.  Within the (b) separatrix are several loops around (1,0).  Left of (a) and (c) are hyperbola looking curves.  Other curves trace the region to the right of the separatrices.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040410}
 \caption{ Trajectories of $y''+y(y-1)=0$}
@@ -2937,9 +2934,9 @@ behavior:
 
 
 \boxit{The Damped Case}
-\index{damped second order equation!autonomous}
+\index{damped!second order equation!autonomous}
 \index{autonomous second order equation!damped}
-\index{second order equation!damped autonomous}
+\index{second order equation!autonomous!damped}
 
 The phase plane equivalent of the damped autonomous equation
 \begin{equation} \label{eq:4.4.24}
@@ -2987,7 +2984,7 @@ and
 \frac{dv}{dy}=-c-\frac{p(y)}{v}.
 \]
 (We'll consider more general equations in the exercises.) The constant
-$c$ is called the \emph{\color{blue}damping constant}. In situations where
+$c$ is called the \indexterm{damping constant}\index{constant!damping}. In situations where
 \eqref{eq:4.4.26} is the equation of motion of an object, $c$ is positive;
 however, there are situations where  $c$ may be negative.
 
@@ -2995,6 +2992,9 @@ however, there are situations where  $c$ may be negative.
 \boxit{The Damped Spring-Mass System}
 \index{damped spring-mass system}
 \index{spring-mass system!damped}
+\index{autonomous second order equation!damped!spring-mass system}
+\index{damped!autonomous second order equation!spring-mass system}
+\index{elementary mechanics!spring-mass system!damped}
 
 Earlier we considered
 the spring-mass system under the assumption that the only forces
@@ -3007,7 +3007,7 @@ second law of motion\index{Newton's!second law of motion} implies that
 \begin{equation} \label{eq:4.4.27}
 my''+cy'+ky=0,
 \end{equation}
-where $c>0$ is the \emph{\color{blue}damping constant}. Again, this
+where $c>0$ is the \indexterm{damping constant}\index{constant!damping}. Again, this
 equation can
 be solved easily by a method that we'll study in \zcref{sec:const_coeff_homog},
 but that method isn't available here. Instead, we'll consider its
@@ -3061,7 +3061,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig040412}
 
 Solutions corresponding to the trajectories in
 \zcref{figure:4.4.12} cross the $y$-axis infinitely many times.
-The corresponding solutions are said to be \emph{\color{blue}oscillatory}
+The corresponding solutions are said to be \emph{\color{blue}oscillatory}\index{oscillatory solution}
 (\zcref{figure:4.4.13}). It is shown in
 \zcref{sec:spring_ii} that there's a number $c_1$ such that if $0\le
 c<c_1$ then  all solutions of \eqref{eq:4.4.27} are oscillatory, while if
@@ -3074,7 +3074,6 @@ some integral curves for \eqref{eq:4.4.28} in this case.
   \centering
   \includegraphics[alt={A curve in the t y plane that begins at t=0 with a positive y value.  The curve keeps changing the sign of y, but each change stays closer to the horizontal asymptote y=0.},
   width=3.9in,height=2.5in,keepaspectratio]{fig040413}
-\color{blue}
 \caption{An oscillatory solution of $my''+cy'+ky=0$}
   \label{figure:4.4.13}
 \end{figure}
@@ -3085,6 +3084,10 @@ some integral curves for \eqref{eq:4.4.28} in this case.
 
 
 \begin{example}[The Damped Pendulum]\label{example:4.4.5}
+\index{autonomous second order equation!damped!pendulum}
+\index{damped!autonomous second order equation!pendulum}
+\index{elementary mechanics!pendulum!damped}
+\index{pendulum!damped}
 Now we
 return to the pendulum. If we assume that
 some mechanism (for example, friction in the axle or atmospheric
@@ -3113,7 +3116,6 @@ $\overline y=2m\pi$.
   \centering
   \includegraphics[alt={A vector field for -1<y,v<1 with arrows pointing counter clockwise.  The arrows curve inward so much that they coalesce along y=-v/2 as they converge to the origin.},
   width=4.5in,height=2.9in,keepaspectratio]{fig040414}
-\color{blue}
 \caption{A typical direction field for $my''+cy'+ky=0$ with $c>c_1$}
   \label{figure:4.4.14}
 \end{figure}
@@ -3122,7 +3124,6 @@ $\overline y=2m\pi$.
   \centering
   \includegraphics[alt={Four trajectories beginning at y=0 with initial positive velocities.  The first trajectory spirals into the origin.  The second trajectory slows and then speeds back up before spiraling into (2π,0).  The third trajectory slows, speeds, slows, and speeds before spiraling into (4π,0).  The fourth trajectory slows, speeds, slows, speeds, slows, and speeds before spiraling into (6π,0).},
   ,width=4.5in,height=2.9in,keepaspectratio]{fig040415}
-\color{blue}
 \caption{Four trajectories of the damped pendulum}
   \label{figure:4.4.15}
 \end{figure}
@@ -3164,7 +3165,7 @@ plot some trajectories of the given equation for various values
 of the equation and classify them as stable or unstable. Explain why
 the phase plane plots corresponding to positive and negative values of
 $a$ differ so markedly. Can you think of a reason why zero deserves to
-be called the \emph{\color{blue}critical value} of $a$?}
+be called the \emph{\color{blue}critical value}\index{critical value!of trajectory} of $a$?}
 
 \begin{exerciselistTwoColumn}
 \item\label{exer:4.4.9}\Lex $y''+y^2-a=0$
@@ -3346,6 +3347,8 @@ y$, then $\overline y$ is an unstable equilibrium of $y''+p(y)=0$.
 \boxit{One-Parameter Families of Curves}
 \index{one-parameter family of curves}
 \index{family of curves!one-parameter}
+\index{applications!of first order equations!curves}
+\index{curves!one-parameter family}
 
 We begin with two examples of families of curves generated by varying
 a parameter over a set of real numbers.
@@ -3364,7 +3367,6 @@ $c<0$.   If $c=0$, the curve is the $x$ axis (\zcref{figure:4.5.1}).
   \centering
   \includegraphics[alt={Several parabolas symmetric about x=0 with their vertices at the origin.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040501}
-\color{blue}
   \caption{A family of curves defined by $y-cx^2=0$}
   \label{figure:4.5.1}
 \end{figure}
@@ -3402,7 +3404,7 @@ An equation that can be written in the form
 \begin{equation} \label{eq:4.5.3}
 H(x,y,c)=0
 \end{equation}
-is said to define a \emph{\color{blue}one-parameter family of curves} if, for
+is said to define a \indexterm{one-parameter family of curves}\index{curves!one-parameter family!defined}\index{one-parameter family of curves!defined} if, for
 each value of $c$ in in some nonempty set of real numbers, the set of
 points $(x,y)$ that satisfy \eqref{eq:4.5.3} forms a curve in the
 $xy$-plane.
@@ -3442,7 +3444,7 @@ satisfies it if $c=0$.
 
 
 Recall from \zcref{sec:basic_concepts} that the graph of a solution of a
-differential equation is called an \emph{\color{blue}integral curve} of the
+differential equation is called an \indexterm{integral curve} of the
 equation. Solving a first order differential equation usually produces
 a one--parameter family of integral curves of the equation. Here we
 are interested in the converse problem:
@@ -3452,6 +3454,8 @@ curve.
 This suggests the next definition.
 
 \begin{definition}\label{thmtype:4.5.2}
+\index{curves!one-parameter family!differential equation for}
+\index{one-parameter family of curves!differential equation for}
 If every curve in a one-parameter family defined by the equation
 \begin{equation} \label{eq:4.5.5}
 H(x,y,c)=0
@@ -3461,7 +3465,7 @@ is an integral curve of the first order differential equation
 F(x,y,y')=0,
 \end{equation}
 then  \eqref{eq:4.5.6} is said to be a \emph{\color{blue}differential equation
-for the family}.
+for the family}\index{differential equation!for family of curves}.
 \end{definition}
 
 To find a differential equation for a one--parameter family we
@@ -3565,7 +3569,7 @@ y'=2\left(x-\sqrt{x^2-y}\right),\quad\text{if}\quad x>x_0.
 \end{equation}
 Neither \eqref{eq:4.5.12} nor \eqref{eq:4.5.13} is a differential equation for
 the family of tangent lines to the parabola $y=x^2$. However, if each
-tangent line is regarded as consisting of two \emph{\color{blue}tangent half
+tangent line is regarded as consisting of two \indexterm{tangent half
 lines} joined at the point of tangency,   \eqref{eq:4.5.12} is a
 differential equation for the family of tangent half lines on which
 $x$ is less than the abscissa of the point of tangency
@@ -3580,7 +3584,6 @@ parabola $y=x^2$ is also an integral curve of both \eqref{eq:4.5.12} and
   \centering
   \includegraphics[alt={Two figures with parabolas y=x^2 and several tangent half lines.  In the left (right) figure, the tangent half lines go to the left (right) from the point of tangency.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040504}
-\color{blue}
   \caption{}
   \label{figure:4.5.4}
 \end{figure}
@@ -3755,11 +3758,12 @@ $y=c$. \zcref[S]{figure:4.5.9} shows the graphs for $c\ne0$.
 
 \boxit{Orthogonal Trajectories}
 \index{orthogonal trajectories}\index{trajectories!orthogonal}
+\index{curves!orthogonal trajectories}
 
 Two curves $C_1$ and $C_2$ are said to be \emph{orthogonal} at a
 point of intersection $(x_0,y_0)$ if they have perpendicular tangents
 at $(x_0,y_0)$ (\zcref{figure:4.5.10}). A curve is said to be an
-\emph{\color{blue}orthogonal trajectory} of a given family of curves if it's
+\indexterm{orthogonal trajectory} of a given family of curves if it's
 orthogonal to every curve in the family. For example, every line
 through the origin is an orthogonal trajectory of the family of
 circles centered at the origin.  Conversely,
@@ -3797,7 +3801,7 @@ point the direction of maximum heat flow is perpendicular to the
 isothermal through the point. If $u$ represents the potential energy
 of an object moving under a force that depends upon $(x,y)$,  the
 curves \eqref{eq:4.5.16} are called \indexterm{equipotentials}\index{equipotential curves}\index{curves!equipotential}, and the
-orthogonal trajectories are called \indexterm{lines of force}.
+orthogonal trajectories are called \indexterm{lines of force}\index{force!lines of}.
 
 From analytic geometry we know that two nonvertical lines $L_1$ and
 $L_2$ with slopes $m_1$ and $m_2$, respectively, are perpendicular if
@@ -3822,6 +3826,7 @@ of a family of integral curves of a first order equation.
 
 \begin{center}{\bfseries Finding Orthogonal Trajectories}\end{center}
 \index{orthogonal trajectories}
+\index{curves!orthogonal trajectories!finding}
 
 \begin{enumext}[
   label=\arabic*,
@@ -3842,6 +3847,7 @@ to find the orthogonal trajectories.
 \end{enumext}
 
 \begin{example}\label{example:4.5.9}
+\index{trajectories!orthogonal!finding}
 Find the orthogonal trajectories of the family of circles
 \begin{equation} \label{eq:4.5.17}
 x^2+y^2=c^2 \quad (c>0).
@@ -3914,7 +3920,6 @@ $y=x$ and $y=-x$ if $k=0$ (\zcref{figure:4.5.12}).
   \centering
   \includegraphics[alt={The hyperbolas y^2-x^2=c for various values of c.  Also, the lines y=±x.},
   width=5.67in,height=3.3in,keepaspectratio]{fig040512}
-\color{blue}
 \caption{Orthogonal trajectories of the hyperbolas $xy=c$}
   \label{figure:4.5.12}
 \end{figure}
@@ -4018,7 +4023,6 @@ are below.
   \centering
   \includegraphics[alt={Two figures.  In the left (right) figure, circles are tangent to the origin and have centers on the x (y) axis.},
   trim=0 20 0 20,clip,width=5in,height=3.3in,keepaspectratio]{fig040513}
-\color{blue}
 \caption{(a) The circles $(x-c)^2+y^2=c^2$, (b) The circles $x^2+(y-h)^2=h^2$}
   \label{figure:4.5.13}
 \end{figure}
@@ -4231,7 +4235,7 @@ satisfy
 \item\label{exer:4.5.32}If lines $L$ and $L_1$ intersect at $(x_0,y_0)$ and $\alpha$ is the
 smallest angle through which $L$ must be rotated counterclockwise
 about $(x_0,y_0)$ to bring it into coincidence with $L_1$, we say that
-$\alpha$ is the \emph{\color{blue}angle from $L$ to $L_1$};   thus,
+$\alpha$ is the \emph{\color{blue}angle from $L$ to $L_1$}\index{angle between curves};   thus,
 $0\le\alpha<\pi$. If $L$ and $L_1$ are tangents to curves $C$ and
 $C_1$, respectively, that intersect at $(x_0,y_0)$, we say that $C_1$
 intersects $C$ at the angle $\alpha$. Use the identity

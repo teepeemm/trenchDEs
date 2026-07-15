@@ -74,19 +74,19 @@ $x$ units from the origin satisfies the partial differential equation
 u_t=a^2u_{xx},\quad 0<x<L,\quad t>0,
 \]
 where $a$ is a positive constant determined by the thermal properties.
-This is the \emph{\color{blue}heat equation}.
+This is the \indexterm{heat equation}.
 
 To determine $u$, we must specify the temperature at every
 point in the bar when $t=0$, say
 \[
 u(x,0)=f(x),\quad 0\le x\le L.
 \]
-We call this the \emph{\color{blue}initial} condition.
- We must also specify \emph{\color{blue}boundary conditions}
+We call this the \indexterm{initial condition}.
+ We must also specify \indexterm{boundary conditions}
 that
 $u$ must satisfy at the ends of the bar for all $t>0$.
 We'll call this problem an
-\emph{\color{blue}initial-boundary value problem}.
+\indexterm{initial-boundary value problem}.
 
 We begin with the boundary conditions $u(0,t)=u(L,t)=0$,
 and write the initial-boundary value problem as
@@ -97,8 +97,8 @@ u(0,t)=0,\quad u(L,t)=0,\quad t>0,\\
 u(x,0)=f(x),\quad 0\le x\le L.
 \end{gathered}
 \end{equation}
-Our method of solving this problem  is called
-\emph{\color{blue}separation of variables} (not to be confused with method of separation of
+Our method of solving this problem is called
+\indexterm{separation of variables} (not to be confused with method of separation of
 variables used in \zcref{sec:separable} for solving ordinary
 differential equations).
 We begin by looking for functions of the form
@@ -127,7 +127,7 @@ Since the expression on the left is independent of $x$ while
 the one on the right is independent of $t$, this equation
 can  hold  for all $(x,t)$ only if
  the two sides  equal the same constant, which
-we  call  a \emph{\color{blue}separation constant}, and write it
+we  call  a \indexterm{separation constant}, and write it
  as $-\lambda$;
  thus,
 \[
@@ -188,7 +188,7 @@ This motivates the next definition.
 
 
 \begin{definition}\label{thmtype:12.1.1}
-The \emph{\color{blue}formal solution} of the initial-boundary value
+The \emph{\color{blue}formal solution}\index{formal solution!initial-boundary value problem} of the initial-boundary value
 problem
 \begin{equation} \label{eq:12.1.4}
 \begin{gathered}
@@ -216,7 +216,7 @@ We use the term ``formal solution'' in this definition
 because it's not in general true that the infinite series in
 \eqref{eq:12.1.5} actually satisfies all the requirements of the
 initial-boundary value problem \eqref{eq:12.1.4}.  When it does,
-we say that it's an \emph{\color{blue}actual solution} of \eqref{eq:12.1.4}.
+we say that it's an \emph{\color{blue}actual solution}\index{actual solution!initial-boundary value problem} of \eqref{eq:12.1.4}.
 
 
 Because of the negative
@@ -413,8 +413,8 @@ The other curves correspond to positive values of $t$. As $t$
 increases, the graphs approach the line $u=0$.
 
 \begin{figure}
-  \centering\color{blue}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \centering
+  \includegraphics[alt={The line y=x with axes x and u. Several curves begin at the origin, increase, and then turn down to finish at (L,0).  Some curves follow y=x more closely than others.},
   width=5.67in,height=3.3in,keepaspectratio]{fig120102}
   \caption{}
   \label{figure:12.1.2}
@@ -997,7 +997,7 @@ u(x,0)=f(x),\quad u_t(x,0)=g(x), \quad 0\le x\le L,
 where $a$ is a constant and $f$ and $g$  are given functions of $x$.
 
 The partial differential equation $u_{tt}=a^2u_{xx}$  is called the
-\emph{\color{blue}wave equation}. It is necessary to specify both $f$ and $g$
+\indexterm{wave equation}. It is necessary to specify both $f$ and $g$
 because the wave equation is a second order equation in $t$
 for each fixed $x$.
 
@@ -1022,7 +1022,7 @@ tightly stretched in equilibrium along the $x$-axis in the $xu$-plane
 and tied to the points $(0,0)$ and $(L,0)$ (\zcref{figure:12.2.1}).
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A thick line segment in the x u plane from the origin to (L,0).},
   trim=0 150 0 150,clip,
   width=5.67in,height=1.1in,keepaspectratio]{fig120201}
@@ -1039,7 +1039,7 @@ abscissa $x$ at time $t$.
 
 
 We'll show that it's reasonable to assume that $u$ satisfies the
-wave equation under the following assumptions:
+wave equation under the following assumptions:\index{wave equation!assumptions}
 
 
 \begin{numberlist}
@@ -1070,8 +1070,8 @@ necessarily inconsistent
 with Assumption~4;     we exaggerated the slope for clarity.)
 
 \begin{figure}
-  \centering\color{blue}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \centering
+  \includegraphics[alt={A thick line segment.  The left end ends in a tangent vector T1 which makes an angle 𝜃1 from horizontal.  The right end ends in a tangent vector T2, which makes an angle 𝜃2 from horizontal.},
   width=5.67in,height=3.3in,keepaspectratio]{fig120202}
 \caption{A segment of the displaced string}
   \label{figure:12.2.2}
@@ -1283,7 +1283,7 @@ not only for $0\le x\le L$  and $t\ge0$, but for $-\infty<x<\infty$
 and $-\infty<t<\infty$.
 
 
-\begin{theorem}\color{blue} \label{thmtype:12.2.2}
+\begin{theorem}\label{thmtype:12.2.2}
 If $f$ and $g$ are pieceswise smooth on $[0,L]$, then
 $u$ in $\eqref{eq:12.2.1}$ converges for all $(x,t)$,
 and can be written as
@@ -1421,9 +1421,8 @@ $(-\infty,\infty)$.
 
 \noindent
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={An odd function with period 2L and jump discontinuities at integer multiples of L.},
   width=\linewidth,keepaspectratio]{fig120203}
 \captionof{figure}{The odd extension of a function that does
 not satisfy \eqref{eq:12.2.13}}
@@ -1431,9 +1430,8 @@ not satisfy \eqref{eq:12.2.13}}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={An odd continuous function with period 2L.},
   width=\linewidth,keepaspectratio]{fig120204}
 \captionof{figure}{The odd extension of a function that satisfies \eqref{eq:12.2.13}}
   \label{figure:12.2.4}
@@ -1457,9 +1455,8 @@ if and only if $h'_+(0)=h'_-(L)=0$, as in \zcref{figure:12.2.6}.
 This completes the proof.\\
 %
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={An even continuous function with period 2L that is not differentiable at integer multiples of L.},
   width=\linewidth,keepaspectratio]{fig120205}
 \captionof{figure}{The even extension of a function that doesn't
  satisfy \eqref{eq:12.2.14}}
@@ -1467,9 +1464,8 @@ This completes the proof.\\
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={An even continuous function with period 2L that has continuous first derivative.},
   width=\linewidth,keepaspectratio]{fig120206}
 \captionof{figure}{The even extension of a function that satisfies \eqref{eq:12.2.14}}
   \label{figure:12.2.6}
@@ -1661,7 +1657,7 @@ multiply the formal solution by the same constant, we'll leave $f$ as
 we've defined it. Similar comments apply to the exercises.
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={A triangle shape that connects the origin to (0.5L,0.5L) to (L,0).},
   width=5.67in,height=3.3in,keepaspectratio]{fig120207}
 \caption{Graph of \eqref{eq:12.2.21}}
@@ -1716,9 +1712,8 @@ $L/2$.
 
 \noindent
   \begin{minipage}[t]{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The 2L periodic function that is y=x for |x|<0.5L and y=L-x for 0.5L<x<1.5L.},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120208}
 \captionof{figure}{The odd periodic extension of \eqref{eq:12.2.21}}
   \label{figure:12.2.8}
@@ -1727,7 +1722,7 @@ $L/2$.
   \begin{minipage}[t]{0.48\linewidth}
 \color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The function from the previous image slightly shifted right (dashed) and left(solid).},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120209}
 \captionof{figure}{Graphs of $y=S_f(x-at)$ (dashed) and $y=S_f(x-at)$ (solid),
 with $f$ as in \eqref{eq:12.2.21}}
@@ -1741,7 +1736,7 @@ dashed and solid curves  are the graphs of $y=S_f(x-at)$ and
 $y=S_f(x+at)$ respectively, for a fixed value of $t$.
 As $t$ increases the dashed curve moves to the right and the solid
 curve moves to the left. For this reason, we say that the functions
-$u_1(x,t)=S_f(x+at)$ and $u_2(x,t)=S_f(x-at)$ are \emph{\color{blue}traveling
+$u_1(x,t)=S_f(x+at)$ and $u_2(x,t)=S_f(x-at)$ are \indexterm{traveling
 waves}.
 Note that $u_1$ satisfies the wave equation at $(x,t)$
 if $x+at$ isn't  an odd multiple of $L/2$ and
@@ -1796,18 +1791,16 @@ $(0,L/2a)$.
 
 \noindent
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The portion of the previous image for 0<x<L.},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120210}
 \captionof{figure}{The part of the graph from \zcref{figure:12.2.9} on $[0,L]$}
   \label{figure:12.2.10}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The sum of the graphs from the previous image creates the function y=x for 0<x<.5L-at, y=.5L-at for .5L-at<x<.5L+at, and y=L-x for .5L+at<x<L.},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120211}
 \captionof{figure}{The graph of \eqref{eq:12.2.23} on $[0,L]$ for a fixed $t$
  in $(0,L/2a)$}
@@ -2502,10 +2495,10 @@ u_{xx}+u_{yy}=0.
 This is
 \personHref{Laplace}{Laplace's equation}.  This equation also arises
 in applications to  fluid mechanics and potential theory;   in fact,
-it is also called \emph{\color{blue}the potential equation}.
+it is also called the \indexterm{potential equation}.
 We seek solutions of \eqref{eq:12.3.2}
 in a region $R$ that satisfy specified conditions ---
-called \emph{\color{blue}boundary conditions} --- on the boundary of $R$.
+called \indexterm{boundary conditions} --- on the boundary of $R$.
 For example, we may require $u$ to assume prescribed values on the
 boundary.
  This is called a
@@ -2517,11 +2510,11 @@ derivative of $u$ at each point $(x,y)$ on the boundary
 to assume prescribed
 values.
 This is called a
-\personHref{Neumann_Carl}{Neumann condition},
+\personHref{Neumann_Carl}{Neumann condition}\index{Neumann condition},
 and the problem is called a Neumann problem.
 In some problems we impose Dirichlet conditions on part of the
 boundary and Neumann conditions on the rest. Then we say that
-the boundary conditions and the problem are \emph{\color{blue}mixed}.
+the boundary conditions and the problem are \emph{\color{blue}mixed}\index{mixed boundary conditions}.
 
 Solving boundary value problems for \eqref{eq:12.3.2} over general regions
 is beyond the
@@ -2530,7 +2523,7 @@ by considering the rectangular region
 shown in \zcref{figure:12.3.1}.
 
    \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={The rectangle 0<x<a and 0<y<b, with a thick boundary.},
   width=5.67in,height=3.3in,keepaspectratio]{fig120301}
 \caption{A rectangular region and its boundary}
@@ -2567,18 +2560,16 @@ The other 14 problems  are mixed.
 
 \noindent
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The rectangle 0<x<a and 0<y<b.  The function u satisfies Laplace's equation inside the rectangle, and is equal to given functions on the boundary.},
   width=\linewidth,height=1.6in,keepaspectratio]{fig120302}
 \captionof{figure}{A Dirichlet problem}
   \label{figure:12.3.2}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The rectangle 0<x<a and 0<y<b.  The function u satisfies Laplace's equation inside the rectangle, and its partial derivatives are equal to given functions on the boundary.},
   width=\linewidth,height=1.6in,keepaspectratio]{fig120303}
 \captionof{figure}{A Neumann problem}
   \label{figure:12.3.3}
@@ -2646,7 +2637,7 @@ u(0,y)=0,\quad u(a,y)=0,\quad 0\le y\le b
 
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An illustration of the example problem.},
   width=5.67in,height=3.3in,keepaspectratio]{fig120304}
 \caption{The boundary value problem \eqref{eq:12.3.4}}
@@ -2795,18 +2786,16 @@ u=u(x,0.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.
 
 \noindent
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The region 0<x<2, 0<y<1, 0<z<3.  The function u is 0 on three sides, but similar to a parabola along the side y=0, and connects smoothly.},
   width=\linewidth,height=1.6in,keepaspectratio]{fig120305}
   \captionof{figure}{}
   \label{figure:12.3.5}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The region 0<x<2 and 0<y<3 with several parabola like curves that start at the origin, peak near x=0.8, and decrease to (2,0).},
   width=\linewidth,height=1.6in,keepaspectratio]{fig120306}
   \captionof{figure}{}
   \label{figure:12.3.6}
@@ -2827,7 +2816,7 @@ u_x(0,y)=0,\quad u_x(a,y)=0,\quad 0\le y\le b
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An illustration of the example problem.},
   width=5.67in,height=3.3in,keepaspectratio]{fig120307}
 \caption{The boundary value problem \eqref{eq:12.3.11}}
@@ -2939,24 +2928,22 @@ u=u(x,y),\quad 0\le x\le 2,\quad 0\le y\le1,
 \]
 while \zcref{figure:12.3.9}  shows the curves
 \[
-u=u(x,.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.
+u=u(x,.1k),\quad 0\le x\le2,\quad k=0,1,\dots,10.\qedhere
 \]
 \end{solution}
 
 \noindent
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The region 0<x<2, 0<y<1, and 0<z<1.5.  The function u is 0 along y=0, and smoothly increases to the points (0,1,0.5) and (2,1,1.5).},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120308}
   \captionof{figure}{}
   \label{figure:12.3.8}
 \tagstructend
 \end{minipage}\hfill
   \begin{minipage}{0.48\linewidth}
-\color{blue}
 \tagstructbegin{tag=Sect}
-  \includegraphics[alt={ALT TEXT TO BE DETERMINED},
+  \includegraphics[alt={The region 0<x<2 and 0<y<1.5.  Several curves begin where x=0 and 0<y<0.5, increasing and spreading apart as they end at x=0 and 0<y<1.5.},
   width=\linewidth,height=2.2in,keepaspectratio]{fig120309}
   \captionof{figure}{}
   \label{figure:12.3.9}
@@ -2977,7 +2964,7 @@ u(0,y)=g(y),\quad u_x(a,y)=0,\quad 0\le y\le b
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An illustration of the example problem.},
   width=5.67in,height=3.3in,keepaspectratio]{fig120310}
 \caption{The boundary value problem \eqref{eq:12.3.16}}
@@ -3094,7 +3081,7 @@ u_x(0,y)=0,\quad u_x(a,y)=g(y),\quad 0\le y\le b
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An illustration of the example problem.},
   width=5.67in,height=3.3in,keepaspectratio]{fig120311}
 \caption{The boundary value problem \eqref{eq:12.3.20}}
@@ -3218,7 +3205,7 @@ u(0,y)=0,\quad u(a,y)=0,\quad y>0,
 \end{equation}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An illustration of the problem in Equation \ref*{eq:12.3.24}},
   width=5.67in,height=3.3in,keepaspectratio]{fig120312}
 \caption{A boundary value problem on a semi-infinite strip}
@@ -3617,7 +3604,7 @@ when $r=0$. We'll address this question at
 the appropriate time.
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An illustration of the problem in Equation \ref*{eq:12.4.2}},
   width=5.67in,height=3.3in,keepaspectratio]{fig120401}
 \caption{ The boundary value problem \eqref{eq:12.4.2}}
@@ -3814,7 +3801,7 @@ where $0<\rho_0<\rho$ (\zcref{figure:12.4.2}).
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An illustration of the problem in Equation \ref*{eq:12.4.9}},
   width=5.67in,height=3.3in,keepaspectratio]{fig120402}
 \caption{ The boundary value problem \eqref{eq:12.4.9}}
@@ -3900,7 +3887,7 @@ where $0<\gamma<2\pi$ (\zcref{figure:12.4.3}).
 \end{example}
 
 \begin{figure}
-  \centering\color{blue}
+  \centering
   \includegraphics[alt={An illustration of the problem in Equation \ref*{eq:12.4.10}},
   width=5.67in,height=3.3in,keepaspectratio]{fig120403}
 \caption{ The boundary value problem \eqref{eq:12.4.10}}

@@ -26,13 +26,13 @@ readily available differential equations software.
 
 In order to apply mathematical methods to a physical or ``real life''
 problem, we must  formulate the problem in mathematical
-terms; that is, we must construct a \emph{\color{blue}mathematical
+terms; that is, we must construct a \indexterm{mathematical
 model} for the
 problem. Many physical problems concern relationships between changing
 quantities. Since rates of change are represented mathematically by
 derivatives, mathematical models often involve equations relating an
 unknown function and one or more of its derivatives. Such equations
-are  \emph{\color{blue}differential equations}. They are the subject of this
+are  \emph{\color{blue}differential equations}\index{differential equation}. They are the subject of this
 book.
 
 Much of calculus is devoted to learning mathematical techniques that
@@ -182,7 +182,6 @@ various values of  $P_0$.
   \centering
   \includegraphics[alt={Nine curves converging to a limiting value of P=1/𝛼 as t increases.  The curves above the limiting value decay, while the curves below increase to that value.  There is a tenth curve along the horizontal axis.},
   width=5.67in,height=3.3in,keepaspectratio]{fig010101}
-\color{blue}
   \caption{Solutions of the logistic equation}
   \label{figure:1.1.1}
 \end{figure}
@@ -234,7 +233,6 @@ name=myplot] %
 \node [right] at (myplot.right of origin) {\scriptsize $t$};
 \node [above] at (myplot.above origin) {\scriptsize $T$};
 \end{tikzpicture}
-\color{blue}
   \caption{Temperature according to Newton's Law of Cooling}
   \label{figure:1.1.2}
 \end{figure}
@@ -380,7 +378,7 @@ which is usually rewritten as
 y''+q(y,y')y'+p(y)=f(t).
 \]
 Since the  second (and no higher) order derivative of $y$ occurs in
-this equation, we say that it is a \emph{\color{blue}second order differential
+this equation, we say that it is a \indexterm{second order differential
 equation}.
 
 \boxit{Interacting Species: Competition}
@@ -420,7 +418,6 @@ increasing $t$.
   \centering
   \includegraphics[alt={A field of arrows in the first quadrant, moving away from the origin as well as the diagonal P=Q.},
   width=5.67in,height=3.3in,keepaspectratio]{fig010103}
-\color{blue}
   \caption{Populations of competing species}
   \label{figure:1.1.3}
 \end{figure}
@@ -436,7 +433,7 @@ if it involves an unknown function of only one variable, or a
 \indexterm{partial differential equation}\index{differential equation!partial}
 if it involves partial derivatives of a function of more
 than one variable. For now we'll consider only ordinary differential
-equations, and we'll just call them \emph{\color{blue}differential equations}.
+equations, and we'll just call them \emph{\color{blue}differential equations}\index{differential equation}.
 
 Throughout this text, all variables and constants are real unless it's
 stated otherwise. We'll usually use $x$ for the independent variable
@@ -480,7 +477,7 @@ appears on the right. Here are some examples:
 xy'''+y^2&=\sin x  &&\text{(third order)},\\
 y^{(n)}+xy'+3y&=x&&\text{($n$-th order)}.
 \end{align*}
-Although none of these equations is  written as in
+Although none of these equations are written as in
 \eqref{eq:1.2.2}, all of them \emph{\color{blue}can} be written in this form:
 \begin{align*}
 y'&=x^2,  \\
@@ -494,7 +491,7 @@ y^{(n)}&=x-xy'-3y.
 \index{solution of differential equation}
 \index{differential equation!solutions}
 
-A \emph{\color{blue}solution} of a differential equation is a function that
+A \emph{\color{blue}solution}\index{differential equation!solution} of a differential equation is a function that
 satisfies the differential equation on some open interval;   thus, $y$
 is a solution of \eqref{eq:1.2.2} if $y$ is $n$ times differentiable and
 \[
@@ -595,7 +592,6 @@ name=myplot] % ticks=none,
 %\node at (.15,.9) {\scriptsize $f(x)$};
 %\node at (2.2,1.35) {\scriptsize $c$};
 \end{tikzpicture}
-\color{blue}
   \caption{$y=\dfrac{x^{2}}{3}+\dfrac{1}{x}$}
   \label{figure:1.2.1}
 \end{figure}
@@ -722,7 +718,6 @@ Note that imposing the  condition $y(1)=2$ is equivalent to requiring
   \centering
   \includegraphics[alt={A curve beginning near (-2,5) going down to flatten out as it crosses the y axis at y=1.75, and increasing in a mirror image to pass through (1,2) before finishing near (2,5).},
   width=5.67in,height=3.5in,keepaspectratio]{fig010202}
-\color{blue}
   \caption{$y=\dfrac{x^{4}+7}{4}$}
   \label{figure:1.2.2}
 \end{figure}
@@ -732,8 +727,8 @@ more briefly as
 \[
 y'=x^3,\quad y(1)=2.
 \]
- We call this an \emph{\color{blue}initial value problem}.
-The requirement $y(1)=2$ is an \emph{\color{blue}initial condition}.
+ We call this an \indexterm{initial value problem}.
+The requirement $y(1)=2$ is an \indexterm{initial condition}.
  Initial value problems can also be
 posed for higher order differential equations.  For example,
 \begin{equation} \label{eq:1.2.11}
@@ -744,7 +739,7 @@ equation where $y$ and $y'$ are required to have specified values at
  $x=0$. In general, an initial value
 problem for an $n$-th order differential equation requires $y$ and its
 first $n-1$ derivatives to have specified values at some point $x_0$.
-These requirements are the \emph{\color{blue}initial conditions}.
+These requirements are the \emph{\color{blue}initial conditions}\index{initial condition}.
 
 We'll denote an initial value problem for a differential equation by
 writing the initial conditions after the equation, as in
@@ -810,7 +805,7 @@ $x_0=-1$ on which \eqref{eq:1.2.14} is defined.
 \boxit{Free Fall Under Constant Gravity}
 \index{free fall under constant gravity}
 
-The term \emph{\color{blue}initial value problem}  originated in problems
+The term \indexterm{initial value problem}  originated in problems
 of motion where the independent variable is $t$
 (representing elapsed time), and the initial conditions
 are the position and velocity of an object at the initial
@@ -1096,9 +1091,9 @@ solve \eqref{eq:1.3.1} is equivalent to not knowing the equations of
 integral curves of \eqref{eq:1.3.1}. However, it's easy to calculate the
 slopes of these curves. To be specific, the slope of an integral curve
 of \eqref{eq:1.3.1} through a given point $(x_0,y_0)$ is given by the
-number $f(x_0,y_0)$. This is the basis of \emph{\color{blue}the method of direction fields}.
+number $f(x_0,y_0)$. This is the basis of \emph{\color{blue}the method of direction fields}\index{direction field}.
 
-If $f$ is defined on a set $R$, we can construct a \emph{\color{blue}direction
+If $f$ is defined on a set $R$, we can construct a \indexterm{direction
 field} for \eqref{eq:1.3.1}  in $R$ by drawing a
 short
 line segment through each point $(x,y)$ in $R$ with slope $f(x,y)$. Of
@@ -1123,7 +1118,7 @@ be  equally spaced points in $[c,d]$.
 \[
  (x_i,y_j),\quad 0\le i\le m,\quad 0\le j\le n,
 \]
-form a \emph{\color{blue}rectangular grid} (\zcref{figure:1.3.1}). Through each
+form a \indexterm{rectangular grid} (\zcref{figure:1.3.1}). Through each
 point in the grid we draw a short line segment with slope
 $f(x_i,y_j)$. The result is an approximation to a direction field  for
 \eqref{eq:1.3.1} in $R$. If the grid points are sufficiently numerous and
@@ -1135,7 +1130,6 @@ segments associated with the points in the grid.
   \centering
   \includegraphics[alt={A rectangle in the plane where a<x<b and c<y<d.},
   width = 0.7\textwidth]{fig010301}
-\color{blue}
   \caption{\quad  A rectangular grid}
   \label{figure:1.3.1}
 \end{figure}
@@ -1187,7 +1181,6 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig010303}
   \centering
   \includegraphics[alt={A rectangular field of arrows for -1<x,y<1, flowing from left to right.  Several curves follow the traces of the arrows, and appear to bunch toward y=0.4 as x increases.},
   width=5.67in,height=3.3in,keepaspectratio]{fig010304}
-\color{blue}
   \caption{A direction and integral curves for
 $y'=\dst{\frac{x-y}{1+x^2}}$}
   \label{figure:1.3.4}
@@ -1252,7 +1245,6 @@ are circles centered at the origin.
   \centering
   \includegraphics[alt={A field of arrows circling counterclockwise around the origin.  Several circles centered at the origin follow the arrows.},
   width=5.67in,height=3.3in,keepaspectratio]{fig010305}
-\color{blue}
 \caption{A direction field and integral curves for
 $y'=-\dst\frac{x}{y}$}
   \label{figure:1.3.5}
