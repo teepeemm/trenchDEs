@@ -31,7 +31,7 @@ verapdf:
 
 HELP_MESSAGE := $(HELP_MESSAGE)"bfopdf\\t\\t: validate with BFO\\n"
 bfopdf:
-	java -cp \"$(BFOPDF):$(PDFVERIFY)\" PDFverify $(JOBNAME).pdf
+	java -cp "$(BFOPDF):$(PDFVERIFY)" PDFverify $(JOBNAME).pdf
 
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="autoref p"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="eqref p"
