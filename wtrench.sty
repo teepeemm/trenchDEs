@@ -292,10 +292,10 @@
   \UseName{tag_if_active:T} {
     \if@partsw\else  % \includeonly has not been seen
       \directlua{ if status.hash_extra < 600001 then
-        error('TOO FEW HASHES: try --cnf-line="hash_extra=1000000"')
+        error('TOO FEW HASHES: try --cnf-line="hash_extra=2000000"')
         end }
       \directlua{ if status.max_strings < 500001 then
-        error('TOO FEW STRINGS: try --cnf-line="max_strings=1000000"')
+        error('TOO FEW STRINGS: try --cnf-line="max_strings=2000000"')
         end }
     \fi
   }
