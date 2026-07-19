@@ -93,8 +93,9 @@ We call the function $f$ on the right a \indexterm{forcing function},
 since in physical applications it's often related to a force acting
 on some system modeled by the differential equation. We say that
 \eqref{eq:5.1.1} is \emph{\color{blue}homogeneous}\index{homogeneous differential equation}\index{differential equation!homogeneous} if $f\equiv0$ or
-\emph{\color{blue}nonhomogeneous}\index{nonhomogeneous differential equation}\index{differential equation!nonhomogeneous}\index{linear second order equation!nonhomogeneous} if $f\not\equiv0$. Since these definitions are like
-the corresponding definitions in \zcref{sec:linar_first_order} for the linear
+\emph{\color{blue}nonhomogeneous}\index{nonhomogeneous equation}\index{linear second order equation!nonhomogeneous}\index{nonhomogeneous equation!linear second order}
+if $f\not\equiv0$. Since these definitions are like
+the corresponding definitions in \zcref{sec:linear_first_order} for the linear
 first order equation
 \begin{equation}\label{eq:5.1.2}
 y'+p(x)y=f(x),
@@ -109,7 +110,7 @@ a formula for the case where $f\not\equiv0$, there are no formulas for
 the general solution of \eqref{eq:5.1.1} in either case. Therefore we must
 be content to solve linear second order equations of special forms.
 
-In \zcref{sec:linar_first_order} we considered the homogeneous equation
+In \zcref{sec:linear_first_order} we considered the homogeneous equation
 $y'+p(x)y=0$ first, and then used a nontrivial solution of this
 equation to find the general solution of the nonhomogeneous equation
 $y'+p(x)y=f(x)$. Although the progression from the homogeneous to the
@@ -136,8 +137,10 @@ y''+p(x)y'+q(x)y=0,\ y(x_0)=k_0,\ y'(x_0)=k_1
  has a unique solution  on $(a,b)$.
 \end{theorem}
 
-Since $y\equiv0$ is obviously a solution of \eqref{eq:5.1.3} we call it
-the \indexterm{trivial solution}\index{differential equation!trivial solution}\index{trivial solution!homogeneous linear second order equation}. Any other solution is \emph{\color{blue}nontrivial}\index{nontrivial solution!homogeneous linear second order equation}\index{differential equation!nontrivial solution}.
+Since $y\equiv0$ is obviously a solution of \eqref{eq:5.1.3} we call it the
+\indexterm{trivial solution}\index{differential equation!trivial solution}\index{trivial solution!homogeneous linear second order equation}.
+Any other solution is
+\emph{\color{blue}nontrivial}\index{nontrivial solution!homogeneous linear second order equation}\index{differential equation!nontrivial solution}.
 Under the assumptions of \zcref{thmtype:5.1.1}, the only solution of
 the initial value problem
 \[
@@ -1652,7 +1655,7 @@ $y=uy_1=ue^{-3x}$,
 where $u$ is a function that we'll now
 determine.
 (This should remind you of the method of variation of parameters
-used in \zcref{sec:linar_first_order} to solve the nonhomogeneous
+used in \zcref{sec:linear_first_order} to solve the nonhomogeneous
 equation $y'+p(x)y=f(x)$, given a solution $y_1$ of the complementary
 equation $y'+p(x)y=0$.  It's also a special case of a method called
 \indexterm{reduction of order} that we'll study in \zcref{sec:reduction_order}.
@@ -2224,7 +2227,7 @@ e^{i\theta}=\cos\theta+i\sin\theta.
 \tag{E}
 \]
 This is
-\personHref{Euler}{Euler's identity}.
+\personHref{Euler}{Euler's identity}\index{Euler's identity}.
 \item % (b)
 Starting from
 \[
@@ -2274,8 +2277,8 @@ are both solutions of (G).
 
 
 \section{Nonhomogeneous Linear Equations}\label{sec:nonhomog_linear}
-\index{nonhomogeneous equation!linear}
-\index{linear equation!nonhomogeneous}
+\index{nonhomogeneous equation!linear second order}
+\index{linear second order equation!nonhomogeneous}
 
 We'll now consider the nonhomogeneous linear second order equation
 \begin{equation} \label{eq:5.3.1}
@@ -2308,14 +2311,15 @@ it's necessary to find the general solution  of
 \begin{equation} \label{eq:5.3.2}
 y''+p(x)y'+q(x)y=0
 \end{equation}
-on $(a,b)$. We call \eqref{eq:5.3.2} the \indexterm{complementary equation}\index{linear second order equation!complementary equation}
+on $(a,b)$. We call \eqref{eq:5.3.2} the
+\indexterm{complementary equation}\index{linear second order equation!complementary equation}\index{nonhomogeneous linear second order equation!complementary equation}
 for \eqref{eq:5.3.1}.
 
 The next theorem shows how to find the general solution of
 \eqref{eq:5.3.1} if we know one solution $y_p$ of \eqref{eq:5.3.1} and a
 fundamental set of solutions of \eqref{eq:5.3.2}. We call
 $y_p$ a
-\emph{\color{blue}particular solution}\index{particular solution!nonhomogeneous equation!linear second order}\index{linear second order equation!nonhomogeneous!particular solution}
+\emph{\color{blue}particular solution}\index{particular solution!nonhomogeneous equation!linear second order}\index{linear second order equation!nonhomogeneous!particular solution}\index{nonhomogeneous linear second order equation!particular solution}
 of \eqref{eq:5.3.1}; it can be any solution that we can find, one way or another.
 
 \begin{theorem}\label{thmtype:5.3.2}
@@ -2927,6 +2931,9 @@ the complementary equation on $(a,b)$.
 \index{constant coefficient equation!nonhomogeneous}
 \index{linear second order equation!constant coefficient}
 \index{linear second order equation!nonhomogeneous!method of undetermined coefficients}
+\index{linear second order equation!nonhomogeneous!constant coefficients}
+\index{nonhomogeneous linear second order equation!constant coefficients}
+\index{nonhomogeneous linear second order equation!undetermined coefficients}
 
 In this section we consider the constant coefficient equation
 \begin{equation} \label{eq:5.4.1}
@@ -2937,7 +2944,9 @@ where $\alpha$ is a constant and $G$ is a polynomial.
 
 From \zcref{thmtype:5.3.2}, the general solution of \eqref{eq:5.4.1}
 is
-$y=y_p+c_1y_1+c_2y_2$, where $y_p$ is a particular solution\index{particular solution!nonhomogeneous equation!linear second order} of
+$y=y_p+c_1y_1+c_2y_2$, where $y_p$ is a particular
+solution\index{particular solution!nonhomogeneous equation!linear second order}\index{nonhomogeneous linear second order equation!particular solution}
+of
 \eqref{eq:5.4.1} and $\{y_1,y_2\}$ is a fundamental set of
 solutions of the complementary equation
 \[
@@ -3066,7 +3075,7 @@ is the general solution.
 
 The preceding examples illustrate the following facts concerning
 the form of a particular solution $y_p$
-of a constant coefficent equation
+of a constant coefficient equation
 \[
 ay''+by'+cy=ke^{\alpha x},
 \]
@@ -3344,7 +3353,7 @@ au''+p'(\alpha)u'=G(x)
 \]
 (no $u$ term on the left), with a particular solution of the form
 $u_p=xQ(x)$, where $Q$ is a polynomial of the same degree as $G$ whose
-coefficents can be found by the method used in
+coefficients can be found by the method used in
 \zcref{example:5.4.5}. In Case~(c)  the equation for $u$
 will be of the form
 \[
@@ -3365,6 +3374,7 @@ superposition.
 \index{principle of superposition!method of undetermined coefficients}
 \index{coefficients!method of undetermined!principle of superposition}
 \index{undetermined coefficients, method of!principle of superposition}
+\index{nonhomogeneous linear second order equation!undetermined coefficients!superposition principle}
 
 \begin{example}\label{example:5.4.7}
 Find a particular solution of
@@ -3612,6 +3622,7 @@ will use is called the \indexterm{method of undetermined coefficients}.
 
 \boxit{Forcing Functions Without Exponential Factors}
 \index{forcing function!nonexponential case}
+\index{nonhomogeneous linear second order equation!undetermined coefficients!nonexponential forcing function}
 
 We begin with the case where $\lambda=0$ in \eqref{eq:5.5.1};   thus, we
 we
@@ -3909,6 +3920,7 @@ is a particular solution of \eqref{eq:5.5.12}.
 
 \boxit{Forcing Functions with Exponential Factors}
 \index{forcing function!exponential case}
+\index{nonhomogeneous linear second order equation!undetermined coefficients!exponential forcing function}
 
 To find a particular solution of
 \begin{equation} \label{eq:5.5.15}
@@ -4895,7 +4907,9 @@ where $\{z_1,z_2\}$ is a fundamental set of solutions of
 
 In this section we give a method called
 \emph{\color{blue}variation of parameters}\index{variation of parameters!linear second order equation}
-for finding a particular solution\index{particular solution!nonhomogeneous equation!linear second order} of
+for finding a particular
+solution\index{particular solution!nonhomogeneous equation!linear second order}\index{nonhomogeneous linear second order equation!particular solution}
+of
 \begin{equation} \label{eq:5.7.1}
 P_0(x)y''+P_1(x)y'+P_2(x)y=F(x)
 \end{equation}
@@ -5334,6 +5348,8 @@ of the solution.
 \index{undetermined coefficients!comparison}
 \index{reduction of order!comparison}
 \index{variation of parameters!comparison}
+\index{linear second order equation!nonhomogeneous!comparison of solving methods}
+\index{nonhomogeneous linear second order equation!comparison of solving methods}
 
 We've now considered three methods
 for solving  nonhomogeneous linear equations: undetermined

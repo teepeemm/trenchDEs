@@ -25,7 +25,3 @@
 \item four
 \end{enumext}
 \end{document}
-
-Can enumext and enumext* share a counter?
-
-I would like to have enumext and enumext* share a counter.  The best I've found so far is to use `start={1+\value{enumXi}}` or `start={1+\value{enumXvii}}`, depending on which environment came before.  But that requires that I track which environment came before.  Is there a way to make this happen automatically?  The following outputs "1. one, 2. two, 1. three, 3. four".

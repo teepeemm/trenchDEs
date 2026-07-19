@@ -72,15 +72,20 @@ nontrivial solutions, and what are they?}
 
 A value of $\lambda$ for which the problem has
 a nontrivial solution is an \indexterm{eigenvalue} of the problem, and the
-nontrivial solutions are $\lambda$-\indexterm{eigenfunctions}, or \emph{\color{blue}eigenfunctions associated with $\lambda$}. Note that a nonzero
+nontrivial solutions are
+$\lambda$-\emph{\color{blue}eigenfunctions}\index{eigenfunction}\index{lambda-eigenfunction},
+or
+\emph{\color{blue}eigenfunctions associated with $\lambda$}\index{eigenfunction associated with lambda}.
+Note that a nonzero
 constant multiple of a $\lambda$-eigenfunction is again a
 $\lambda$-eigenfunction.
 
-Problems~1--5 are called \emph{\color{blue}eigenvalue problems}\index{eigenvalue problem}.\emph{\color{blue}Solving}
-an eigenvalue problem means finding all its eigenvalues and associated
-eigenfunctions. We'll take it as given here that all the eigenvalues
-of Problems~1--5 are real numbers. This is proved in a more general
-setting in \zcref{sec:sturm_liouville}.
+Problems~1--5 are called
+\emph{\color{blue}eigenvalue problems}\index{eigenvalue problem}.
+\emph{\color{blue}Solving} an eigenvalue problem means finding all its
+eigenvalues and associated eigenfunctions. We'll take it as given here that all
+the eigenvalues of Problems~1--5 are real numbers. This is proved in a more
+general setting in \zcref{sec:sturm_liouville}.
 
 
 \begin{theorem}\label{thmtype:11.1.1}
@@ -341,6 +346,8 @@ There are no other eigenvalues.
 
 \boxit{Orthogonality}
 \index{orthogonal functions}
+\index{boundary value problem!two-point!orthogonality}
+\index{orthogonality}
 
 We say that two integrable functions $f$ and $g$ are
 \emph{\color{blue}orthogonal}\index{orthogonal functions} on an interval $[a,b]$ if
@@ -701,7 +708,7 @@ arise in applications.
 
 \begin{definition}\label{thmtype:11.2.3}
 A function  $f$ is said to be
-\indexterm{piecewise smooth} on $[a,b]$ if:
+\indexterm{piecewise smooth}\index{function!piecewise smooth} on $[a,b]$ if:
 \begin{alist}
 \item % (a)
 $f$ has at most finitely many points of discontinuity in $(a,b)$;
@@ -809,7 +816,8 @@ E_N(v_N)\approx .09|f(-L+)-f(L-)|.
 \end{remark*}
 
 This  is the
-\personHref{Gibbs}{Gibbs phenomenon}. Having been alerted to
+\personHref{Gibbs}{Gibbs phenomenon}\index{Gibbs phenomenon}.
+Having been alerted to
 it, you may see it in \zcref[range]{figure:11.2.2,figure:11.2.4},
  below;
 however, we'll give a  specific example at the end of this section.
@@ -914,6 +922,8 @@ and $m=15$ (solid curve).
 
 \boxit{Even and Odd Functions}
 \index{even and odd functions}\index{odd and even functions}
+\index{Fourier series!even and odd functions}
+\index{function!even and odd}
 
 Computing the Fourier coefficients of a  function  $f$
  can be tedious;     however,  the computation
@@ -1208,6 +1218,7 @@ in $[-L,L]$.
 \end{solution}
 
 \begin{example}[Gibbs Phenomenon]\label{example:11.2.7}
+\index{Gibbs phenomenon}
 The Fourier series of
 \[
 f(x)=\begin{cases}
@@ -1573,7 +1584,7 @@ are arbitrary constants we say that
 \[
 P_m(x)=A_0+\sum_{n=1}^m\left(A_n\cos\frac{n\pi x}{L}+B_n\sin\frac{n\pi x}{L}\right)
 \]
-is a \emph{\color{blue}trigonometric polynomial of degree $\le m$}\index{trigonometric polynomial}.
+is a \emph{\color{blue}trigonometric polynomial of degree $\le m$}\index{trigonometric polynomial}\index{polynomial!trigonometric}.
 
 Now let
 \[
@@ -1631,7 +1642,8 @@ y''+\lambda y=0,\quad y'(0)=0,\quad y'(L)=0
 (Problem~2)  are orthogonal on $[0,L]$.
  If $f $ is integrable on $[0,L]$ then the
 Fourier expansion of $f$ in terms of these functions is called the
-\indexterm{Fourier cosine series} of $f$ on $[0,L]$. This series is
+\indexterm{Fourier cosine series}\index{Fourier series!cosine series!defined}
+of $f$ on $[0,L]$. This series is
 \[
 a_0+\sum_{n=1}^\infty a_n\cos\frac{n\pi x}{L},
 \]
@@ -1789,7 +1801,8 @@ of $f$ on $[0,L]$, with
 \[
 b_n=\frac{2}{L}\int_0^Lf(x)\sin\frac{n\pi x}{L}\,dx,
 \]
- converges for all $x$ in $[0,L]$; moreover,
+converges\index{Fourier series!sine series!convergence}
+for all $x$ in $[0,L]$; moreover,
 \[
 S(x)=
 \begin{cases}
@@ -1905,7 +1918,8 @@ with
 \[
 c_n=\frac{2}{L}\int_0^Lf(x)\cos\frac{(2n-1)\pi x}{2L}\,dx,
 \]
- converges for all $x$ in $[0,L];    $ moreover,
+converges\index{Fourier series!cosine series!convergence}
+for all $x$ in $[0,L]$; moreover,
 \[
 C_M(x)=
 \begin{cases}

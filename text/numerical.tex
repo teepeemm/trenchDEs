@@ -196,7 +196,8 @@ with the values of the exact solution
 \begin{equation} \label{eq:3.1.6}
 y=\frac{e^{-2x}}{4}(x^4+4),
 \end{equation}
-which can be obtained by the method of \zcref{sec:linar_first_order}. (Verify.)
+which can be obtained by the method of \zcref{sec:linear_first_order}.
+(Verify.)
 \end{example}
 
 \begin{solution}
@@ -417,7 +418,7 @@ h&\multicolumn{10}{c}{x}\\\cmidrule(l){2-11}
 
 
 \boxit{Truncation Error in Euler's Method}
-\index{Euler's method!truncation error in}
+\index{Euler's method!truncation error}
 
 Consistent with the results indicated in
 \zcref[range]{table:3.1.1,table:3.1.4}, we'll now show that under
@@ -618,7 +619,8 @@ where
 f(x,y)=-p(x)y+h(x,y).
 \]
 However, we can also start by applying variation of parameters to
-\eqref{eq:3.1.20}, as in \zcref{sec:linar_first_order,sec:transform_separable};
+\eqref{eq:3.1.20}, as in
+\zcref{sec:linear_first_order,sec:transform_separable};
 thus, we
 write the solution of \eqref{eq:3.1.20} as $y=uy_1$, where $y_1$ is a
 nontrivial solution of the complementary equation $y'+p(x)y=0$. Then
@@ -634,7 +636,7 @@ y_i=u_iy_1(x_i)
 \]
 as approximate values of the solution of \eqref{eq:3.1.20}.
 We'll call this procedure the
-\personHref{Euler}{Euler semilinear method}\index{semilinear Euler method}\index{Euler method!semilinear}.
+\personHref{Euler}{Euler semilinear method}\index{semilinear!Euler method}\index{Euler's method!semilinear}.
 
 The next two examples show that the Euler and Euler semilinear
 methods may yield drastically different results.
@@ -672,7 +674,7 @@ would be clear that these results are useless even if the ``exact''
 values were not included in the table.
 
 \begin{table}
-\caption{Numerical solution of $y'-2xy=1,\ y(0)=3$, with the Eulers methods.}
+\caption{Numerical solution of $y'-2xy=1,\ y(0)=3$, with the Euler methods.}
 \label{table:3.1.5}\label{table:3.1.6}
 %\[
 %\begin{array}{ccccc}\toprule
@@ -925,9 +927,9 @@ y=ue^{-x^3}\quad\text{and}\quad u'=e^{x^3}(1+u^2e^{-2x^3}),\quad
 u(2)=2e^8
 \]
 yields the results in \zcref{table:3.1.10}. Noting the close
-agreement among the  three rowss of \zcref{table:3.1.9} (at
+agreement among the top three rows of \zcref{table:3.1.9} (at
 least for larger values of $x$) and the lack of any such agreement
-among the rows of \zcref{table:3.1.10}, we conclude that
+among the second three rows of \zcref{table:3.1.10}, we conclude that
 Euler's method is better than the Euler semilinear method for
 \eqref{eq:3.1.26}. Comparing the results with the exact values
 supports this conclusion.
@@ -1032,10 +1034,10 @@ in \eqref{eq:3.1.19},  we also have the option of using variation of
 parameters and then applying the given numerical method to the initial
 value problem \eqref{eq:3.1.21} for $u$. By analogy with the terminology
 used here, we'll call the resulting procedure
-the improved Euler semilinear method\index{improved Euler's method!semilinear}\index{semilinear!improved Euler's method},
+the \emph{\color{blue}improved Euler semilinear method}\index{improved Euler's method!semilinear}\index{semilinear!improved Euler's method},
 the \indexterm{midpoint semilinear method}\index{semilinear!midpoint method},
-Heun's semilinear method\index{Heun's method!semilinear}\index{semilinear!Heun's method} or the
-Runge-Kutta semilinear method\index{Runge-Kutta method!semilinear}\index{semilinear!Runge-Kutta method}, as
+\emph{\color{blue}Heun's semilinear method}\index{Heun's method!semilinear}\index{semilinear!Heun's method} or the
+\emph{\color{blue}Runge-Kutta semilinear method}\index{Runge-Kutta method!semilinear}\index{semilinear!Runge-Kutta method}, as
 the case may be.
 
 \exercises
@@ -1044,7 +1046,7 @@ exercises, since we'll revisit in the next two
 sections.
 In \zcref[range]{exer:3.1.1,exer:3.1.5} use Euler's method to find
 approximate values of the solution of the given initial value problem
-at the points $x_i=x_0+ih$, where $x_0$ is the point wher the
+at the points $x_i=x_0+ih$, where $x_0$ is the point where the
 initial condition is imposed and $i=1$, $2$, $3$. The purpose of these
 exercises is to familiarize you with the computational procedure of
 Euler's method.
@@ -1065,7 +1067,7 @@ y'+3y=7e^{4x},\quad y(0)=2
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with
 the values of the exact solution $y=e^{4x}+e^{-3x}$, which can be
-obtained by the method of \zcref{sec:linar_first_order}. Present your results
+obtained by the method of \zcref{sec:linear_first_order}. Present your results
 in a table like \zcref{table:3.1.1}.
 
 
@@ -1081,7 +1083,7 @@ with the values of the exact solution
 \[
 y=\frac{1}{3x^2}(9\ln x+x^3+2),
 \]
-which can be obtained by the method of \zcref{sec:linar_first_order}. Present
+which can be obtained by the method of \zcref{sec:linear_first_order}. Present
 your results in a table like \zcref{table:3.1.1}.
 
 \item\label{exer:3.1.8}\Cex
@@ -1172,8 +1174,8 @@ y'+3y=7e^{-3x},\quad y(0)=6
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with
 the values of the exact solution $y=e^{-3x}(7x+6)$, which can be
-obtained by the method of \zcref{sec:linar_first_order}. Do you notice anything
-special about the results? Explain.
+obtained by the method of \zcref{sec:linear_first_order}. Do you notice
+anything special about the results? Explain.
 
 \exercisetext{
 The linear initial value problems in
@@ -1615,7 +1617,7 @@ y'-2xy=1,\quad y(0)=3
 at $x=0$, $0.2$, $0.4$, $0.6$, \dots, $2.0$ by
 (a) the improved Euler method\index{improved Euler's method};
 (b) the improved Euler semilinear
-method\index{improved Euler's semilinear method}\index{improved Euler's method!semilinear}.
+method\index{improved Euler's method!semilinear}.
 (We used Euler's method and the Euler semilinear method on this problem in \zcref{example:3.1.4}.)
 \end{example}
 
@@ -1930,8 +1932,8 @@ y'+3y=7e^{4x},\quad y(0)=2
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
 values of the exact solution $y=e^{4x}+e^{-3x}$, which can be obtained
-by the method of \zcref{sec:linar_first_order}. Present your results in a table
-like \zcref{table:3.2.2}.
+by the method of \zcref{sec:linear_first_order}. Present your results in a
+table like \zcref{table:3.2.2}.
 
 
 \item\label{exer:3.2.7}\Cex
@@ -1947,7 +1949,7 @@ the values of the exact solution
 \[
 y=\frac{1}{3x^2}(9\ln x+x^3+2)
 \]
-which can be obtained by the method of \zcref{sec:linar_first_order}. Present
+which can be obtained by the method of \zcref{sec:linear_first_order}. Present
 your results in a table like \zcref{table:3.2.2}.
 
 \item\label{exer:3.2.8}\Cex
@@ -2036,7 +2038,7 @@ y'+3y=e^{-3x}(1-2x),\quad y(0)=2,
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
 values of the exact solution $y=e^{-3x}(2+x-x^2)$, which can be
-obtained by the method of \zcref{sec:linar_first_order}. Do you notice
+obtained by the method of \zcref{sec:linear_first_order}. Do you notice
 anything special about the results? Explain.
 
 \exercisetext{The linear initial value problems in
@@ -2173,7 +2175,7 @@ and explain what you find.
 In general, if $k$ is any  positive  integer  and $f$
 satisfies appropriate assumptions, there are numerical methods with
 local truncation
-error\index{local truncation error}\index{error!local!truncation}
+error\index{local truncation error}
 $O(h^{k+1})$ for solving an initial value
 problem
 \begin{equation} \label{eq:3.3.1}
@@ -2283,7 +2285,7 @@ obtained by the improved Euler method with $h=0.05$.
 
 \begin{table}
 \caption{Numerical solution of $y'+2y=x^3e^{-2x},\ y(0)=1$, by
-the Runge-Kuttta method and the improved Euler method.}
+the Runge-Kutta method and the improved Euler method.}
 \label{table:3.3.1}
 %\[
 %\begin{array}{cccccc}\toprule
@@ -2341,7 +2343,7 @@ We applied the improved Euler  method to this problem in
 
 \begin{table}
 \caption{Numerical solution of $y'=-2y^2+xy+x^2,\ y(0)=1$, by
- the Runge-Kuttta method and the improved Euler method.}
+ the Runge-Kutta method and the improved Euler method.}
 \label{table:3.3.2}
 %\[
 %\begin{array}{cccccc}\toprule
@@ -2688,8 +2690,8 @@ y'+3y=7e^{4x},\quad y(0)=2,
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with the
 values of the exact solution $y=e^{4x}+e^{-3x}$, which can be obtained
-by the method of \zcref{sec:linar_first_order}. Present your results in a table
-like \zcref{table:3.3.1}.
+by the method of \zcref{sec:linear_first_order}. Present your results in a
+table like \zcref{table:3.3.1}.
 
 
 \item\label{exer:3.3.7}\Cex
@@ -2705,7 +2707,7 @@ with the values of the exact solution
 \[
 y=\frac{1}{3x^2}(9\ln x+x^3+2),
 \]
-which can be obtained by the method of \zcref{sec:linar_first_order}. Present
+which can be obtained by the method of \zcref{sec:linear_first_order}. Present
 your results in a table like \zcref{table:3.3.1}.
 
 \item\label{exer:3.3.8}\Cex
@@ -2795,7 +2797,7 @@ y'+3y=e^{-3x}(1-4x+3x^2-4x^3),\quad y(0)=-3
 at $x=0$, $0.1$, $0.2$, $0.3$, \dots, $1.0$. Compare these approximate
 values with
 the values of the exact solution $y=-e^{-3x}(3-x+2x^2-x^3+x^4)$, which
-can be obtained by the method of \zcref{sec:linar_first_order}. Do
+can be obtained by the method of \zcref{sec:linear_first_order}. Do
 you notice anything special about the results? Explain.
 
 \exercisetext{
@@ -2905,7 +2907,7 @@ with the values of the exact solution
 y=\frac{7\ln x}{x}+\frac{3x}{2},
 \]
 which can be obtained by the method discussed in
-\zcref{sec:linar_first_order}.
+\zcref{sec:linear_first_order}.
 
 \item\label{exer:3.3.27}\Cex
 Use the Runge-Kutta  method with step sizes $h=0.1$,  $h=0.05$,
@@ -2920,7 +2922,8 @@ with the values of the exact solution
 \[
 y=2x^2-\frac{12}{x^2},
 \]
-which can be obtained by the method discussed in \zcref{sec:linar_first_order}.
+which can be obtained by the method discussed in
+\zcref{sec:linear_first_order}.
 
 
 \item\label{exer:3.3.28}{\scshape Numerical Quadrature}\index{numerical quadrature} (see

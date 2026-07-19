@@ -20,7 +20,8 @@ problems considered in \zcref{sec:eig_probs}.
 
 \section{Two-Point Boundary Value Problems}\label{sec:twopoint_bvp}
 \index{two-point boundary value problems}
-\index{boundary value problems!two-point}
+\index{boundary value problem!two-point}
+\index{second order equation!two-point boundary value problem}
 
 In \zcref{sec:nonhomog_linear} we considered initial value problems for the
 linear second order equation
@@ -28,16 +29,16 @@ linear second order equation
 P_{0}(x)y''+P_{1}(x)y'+P_{2}(x)y=F(x).
 \end{equation}
 Suppose $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are continuous and $P_{0}$
-has no zeros
-on an
-open interval $(a,b)$. From \zcref{thmtype:5.3.1}, if $x_{0}$ is in
+has no zeros on an open interval
+$(a,b)$.\index{boundary value problem!two-point!assumptions}\index{boundary value problem!two-point!boundary conditions}\index{boundary value problem!two-point!defined}\index{second order equation!two-point boundary value problem!boundary conditions}\index{two-point boundary value problem!boundary conditions}
+From \zcref{thmtype:5.3.1}, if $x_{0}$ is in
 $(a,b)$ and  $k_{1}$ and $k_{2}$ are arbitrary real numbers then
 \eqref{eq:13.1.1} has a unique solution on $(a,b)$ such that $y(x_{0})=k_{1}$
 and $y'(x_{0})=k_{2}$. Now we consider a different problem for
 \eqref{eq:13.1.1}.
 
 {\bfseries PROBLEM}\quad
-Suppose $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are  continous and  $P_{0}$
+Suppose $P_{0}$, $P_{1}$, $P_{2}$, and $F$ are  continuous and  $P_{0}$
 has no zeros on a closed interval $[a,b]$. Let $\alpha$, $\beta$,
 $\rho$, and $\delta$ be real numbers such that
 \begin{equation} \label{eq:13.1.2}
@@ -53,12 +54,14 @@ on the closed interval $[a,b]$ such that
 \end{equation}
 and
 \begin{equation} \label{eq:13.1.5}
-\rho y(b)+\delta y'(b)=k_{2}.
+\rho y(b)+\delta y'(b)=k_{2}.\index{second order equation!two-point boundary value problem!defined}\index{two-point boundary value problem!defined}
 \end{equation}
 
 
 \medskip
-The assumptions  stated in this problem apply throughout this section and
+The
+assumptions\index{second order equation!two-point boundary value problem!assumptions}\index{two-point boundary value problem!assumptions}
+stated in this problem apply throughout this section and
 won't be repeated. Note that we imposed conditions on $P_{0}$,
 $P_{1}$, $P_{2}$, and $F$  on the \emph{closed} interval $[a,b]$, and we
 are interested in solutions of \eqref{eq:13.1.3} on the closed interval.
@@ -78,8 +81,10 @@ y''+\frac{P_{1}(x)}{P_{0}(x)}y'+
 \]
 on $(c,d)$ to draw conclusions about solutions of \eqref{eq:13.1.3} on $[a,b]$.
 
-We call $a$ and $b$ \emph{boundary points.}  The conditions \eqref{eq:13.1.4}
-and \eqref{eq:13.1.5}  are \emph{boundary conditions}, and the problem is a
+We call $a$ and $b$ \indexterm{boundary points}.  The conditions \eqref{eq:13.1.4}
+and \eqref{eq:13.1.5}  are
+\indexterm{boundary conditions}\index{boundary conditions!two-point},
+and the problem is a
 \emph{two-point boundary value problem} or, for simplicity, a
 \emph{boundary value problem}. (We used  similar terminology in
 \zcref{ch:fourier_pde} with a different meaning; both meanings are in common usage.)
@@ -101,10 +106,11 @@ B_{2}(y)=\rho y(b)+\delta y'(b).
 \]
 We combine \eqref{eq:13.1.3}, \eqref{eq:13.1.4}, and \eqref{eq:13.1.5} as
 \begin{equation} \label{eq:13.1.6}
-Ly=F,\quad \quad B_{1}(y)=k_{1},\quad \quad B_{2}(y)=k_{2}.
+Ly=F,\qquad B_{1}(y)=k_{1},\qquad B_{2}(y)=k_{2}.
 \end{equation}
 This boundary value problem is \emph{homogeneous} if $F=0$
-and $k_{1}=k_{2}=0$;   otherwise it's \emph{nonhomogeneous}.
+and $k_{1}=k_{2}=0$;   otherwise it's
+\emph{nonhomogeneous}\index{boundary value problem!two-point!(non)homogeneous}\index{second order equation!two-point boundary value problem!(non)homogeneous}\index{two-point boundary value problem!(non)homogeneous}.
 
 We leave it to you (\zcref{exer:13.1.1}) to verify that $B_{1}$
 and $B_{2}$ are linear operators; that is, if $c_{1}$  and $c_{2}$
@@ -115,7 +121,8 @@ i=1,2.
 \end{equation}
 The next three examples show that the question of existence and uniqueness
 for solutions of boundary value problems is more complicated than
- for initial value problems.
+for initial value
+problems.\index{second order equation!two-point boundary value problem!solving}
 
 \begin{example}\label{example:13.1.1}
 Consider the boundary value problem
@@ -520,8 +527,9 @@ G(x,t)=
 \end{cases}.
 \]
 
-This is the   \emph{Green's function} for the boundary value problem
-\eqref{eq:13.1.16}.
+This is the
+\indexterm{Green's function}\index{boundary value problem!two-point!Green's function}\index{two-point boundary value problem!Green's function}
+for the boundary value problem \eqref{eq:13.1.16}.
 The Green's function  is related to the boundary value problem
 \eqref{eq:13.1.16} in much the
 same way that the inverse of a square matrix ${\mathbf A}$ is related to
@@ -554,7 +562,9 @@ Solve the boundary value problem
 \begin{equation} \label{eq:13.1.21}
 y''+y=F(x).\quad y(0)+y'(0)=0,\quad y(\pi)-y'(\pi)=0,
 \end{equation}
-and find the Green's function for this problem.
+and find the Green's
+function\index{Green's function}\index{second order equation!two-point boundary value problem!Green's function}
+for this problem.
 \end{example}
 
 \begin{solution}
@@ -813,11 +823,12 @@ Given that the homogeneous boundary value problem
 \[
 Ly=0, \quad B_{1}(y)=0,\quad B_{2}(y)=0
 \]
-has a nontrivial solution, express it explicity in terms of $z_{1}$
+has a nontrivial solution, express it explicitly in terms of $z_{1}$
 and $z_{2}$.
 
 \item\label{exer:13.1.21}If the boundary value problem has a solution for every continuous  $F$,
-then find  the Green's function for the problem and use it to write
+then find  the Green's function\index{Green's function}
+for the problem and use it to write
 an explicit formula for the solution. Otherwise, if the
 boundary value problem does not have a solution for every continuous $F$,
 find a necessary and sufficient condition on $F$ for the problem to have
@@ -936,7 +947,8 @@ y=\int_{a}^{b} G(x,t)F(t)\,dt +\frac{k_{2}}{B_{2}}(y_{1})y_{1}
 
 
 \section{Sturm-Liouville Problems}\label{sec:sturm_liouville}
-\index{Sturm-Liouville problems}
+\index{Sturm-Liouville problem}\index{Sturm-Liouville problem!defined}
+\index{eigenvalue problem!Sturm-Liouville problem}
 
 In this section we consider eigenvalue problems of  the form
 \begin{equation} \label{eq:13.2.1}
@@ -960,16 +972,17 @@ are positive on $[a,b]$.
 
 
 
-We say that $\lambda$ is an \emph{eigenvalue} of  \eqref{eq:13.2.1} if
+We say that $\lambda$ is an \indexterm{eigenvalue} of  \eqref{eq:13.2.1} if
 \eqref{eq:13.2.1} has a nontrivial solution $y$.   In this case, $y$ is an
-\emph{eigenfunction associated with $\lambda$}, or
-a $\lambda$-\emph{eigenfunction}.   \emph{Solving}  the eigenvalue
+\emph{eigenfunction associated with $\lambda$}\index{eigenfunction associated with lambda},
+or a $\lambda$-\emph{eigenfunction}\index{lambda-eigenfunction}.
+\emph{Solving}  the eigenvalue
 problem means finding all eigenvalues and associated eigenfunctions
 of \eqref{eq:13.2.1}.
 
 
 \begin{example}\label{example:13.2.1}
-Solve the eigenvalue problem
+Solve the eigenvalue problem\index{Sturm-Liouville problem!solving}
 \begin{equation} \label{eq:13.2.2}
 y'+3y'+2y+\lambda y=0,\quad  y(0)=0,\quad y(1)=0.
 \end{equation}
@@ -1034,7 +1047,8 @@ y_{n}=e^{-3x/2}\sin n\pi x,\quad  n=1,2,3,\dots.
 \end{solution}
 
 \begin{example} \label{example:13.2.2}
-Solve the eigenvalue problem
+Solve the eigenvalue
+problem\index{eigenvalue problem!Sturm-Liouville problem!solving}
 \begin{equation} \label{eq:13.2.4}
 x^{2}y''+xy'+\lambda y=0,\quad y(1)=0,\quad y(2)=0.
 \end{equation}
@@ -1144,14 +1158,14 @@ Ly=(p(x)y')'+q(x)y.
 \]
 
 The differential equation \eqref{eq:13.2.6} is called a
-\personHref{Sturm}{Sturm}-\personHref{Liouville}{Liouville equation}, and the
+\personHref{Sturm}{Sturm}-\personHref{Liouville}{Liouville equation}\index{Liouville, Joseph}, and the
 eigenvalue problem
 \begin{equation} \label{eq:13.2.10}
 (p(x)y')'+q(x)y+\lambda r(x)y=0,\quad B_{1}(y)=0,\quad
 B_{2}(y)=0,
 \end{equation}
 which is equivalent to \eqref{eq:13.2.1}, is called a
-Sturm-Liouville problem.
+Sturm-Liouville problem\index{eigenvalue problem!Sturm-Liouville problem!defined}\index{Sturm-Liouville equation}.
 
 \begin{example}\label{example:13.2.3}
 Rewrite the eigenvalue problem
@@ -1193,7 +1207,7 @@ y''+\frac{1}{x}y'+\frac{\lambda}{x^{2}}y=0.
 \]
 Comparing this to \eqref{eq:13.2.7} shows that $u(x)=1/x$, so we take $U(x)=\ln
 x$ and $p(x)=e^{\ln x}=x$.
-Multiplying the differntial equation by $x$ yields
+Multiplying the differential equation by $x$ yields
 \[
 xy''+y'+\frac{\lambda}{x}y=0.
 \]
@@ -1252,12 +1266,12 @@ so
 y'=k(c_{1}\sinh kx+c_{2}\cosh kx).
 \]
 The boundary conditions require that
-\begin{equation} \label{eq:13.2.17}
-\begin{gathered}
-c_{1}+kc_{2}=0\\
-(\cosh k+3k\sinh k)c_{1}+(\sinh k+3k\cosh k)c_{2}=0.
-\end{gathered}
-\end{equation}
+%\begin{equation} \label{eq:13.2.17}
+\begin{gather}
+c_{1}+kc_{2}=0\notag\\
+(\cosh k+3k\sinh k)c_{1}+(\sinh k+3k\cosh k)c_{2}=0.\label{eq:13.2.17}
+\end{gather}
+%\end{equation}
 The determinant of this system is
 \begin{align*}
 D_{N}(k)&=
@@ -1278,7 +1292,7 @@ has no solution in $(0,1/\sqrt{3})$. \zcref[S]{figure:13.2.1} shows the
 graphs
 of the two sides of \eqref{eq:13.2.18} on an interval to the right of the
 vertical asymptote, which is indicated by the dashed line. You can see that
-the two curves intersect near $k_{0}=1.2$, Given this estmate, you can use
+the two curves intersect near $k_{0}=1.2$, Given this estimate, you can use
 Newton's to compute $k_{0}$  more accurately. We computed $k_{0}\approx
 1.1219395$. Therefore $-k_{0}^{2}\approx -1.2587483$ is an eigenvalue of
 \eqref{eq:13.2.15}. From \eqref{eq:13.2.16} and the first equation in \eqref{eq:13.2.17},
@@ -1308,12 +1322,12 @@ so
 y'=k(-c_{1}\sin kx+c_{2}\cos kx).
 \]
 The boundary conditions require that
-\begin{equation} \label{eq:13.2.20}
-\begin{gathered}
-c_{1}+kc_{2}=0\\
-(\cos k-3k\sin k)c_{1}+(\sin k+3k\cos k)c_{2}=0.
-\end{gathered}
-\end{equation}
+%\begin{equation} \label{eq:13.2.20}
+\begin{gather}
+c_{1}+kc_{2}=0\notag\\
+(\cos k-3k\sin k)c_{1}+(\sin k+3k\cos k)c_{2}=0.\label{eq:13.2.20}
+\end{gather}
+%\end{equation}
 The determinant of this system is
 \begin{align*}
 D_{P}(k)&=
@@ -1518,7 +1532,8 @@ If $u$  and $v$ are any integrable functions on $[a,b]$ and
 \int_{a}^{b} r(x)u(x)v(x)\,dx=0,
 \]
 we say that $u$ and $v$ \emph{orthogonal on} $[a,b]$
- \emph{with respect to} $r=r(x)$.
+\emph{with respect to}
+$r=r(x)$.\index{eigenvalue problem!Sturm-Liouville problem!orthogonality}\index{orthogonality!Sturm-Liouville problem}\index{Sturm-Liouville problem!orthogonality}
 
 \zcref{thmtype:13.1.1}  implies the next theorem.
 
@@ -1579,7 +1594,7 @@ c_{n}=\frac{\dst{\int_{a}^{b}}r(x)f(x)y_{n}(x)\,dx}
 \]
 Then
 \[
-\frac{f(x-)+f(x+)}{2}=\sum_{n=1}^{\infty}c_{n}y_{n}(x)
+\frac{f(x-)+f(x+)}{2}=\sum_{n=1}^{\infty}c_{n}y_{n}(x)\index{Sturm-Liouville expansion}
 \]
 for all $x$ in the open interval $(a,b)$.
 \end{theorem}

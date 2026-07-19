@@ -507,7 +507,7 @@ f(t_0)\ne f(t_0+)=f(t_0-),
 \]
  we say that $f$ has a \indexterm{removable discontinuity}\index{discontinuity!removable} at $t_0$
 (\zcref{figure:8.1.2}).
-This terminolgy is appropriate since a function $f$  with a removable
+This terminology is appropriate since a function $f$  with a removable
 discontinuity at $t_0$  can be made continuous at $t_0$ by defining (or
 redefining)
 \[
@@ -584,7 +584,7 @@ $(s_0,\infty)$.
 
 \begin{definition}\label{thmtype:8.1.5}
 A function $f$ is said to be
-\emph{\color{blue}of exponential order}\index{exponential order!function of}\index{function of exponential order}
+\emph{\color{blue}of exponential order}\index{exponential order!function of}\index{function!of exponential order}
 $s_0$ if there are constants $M$ and $t_0$
 such that
 \begin{equation}\label{eq:8.1.14}
@@ -632,7 +632,7 @@ then $f(t)=t^\alpha$ is of exponential order $s_0$, since
 \[
 \lim_{t\to\infty}e^{-s_0t}t^\alpha=0,
 \]
-by L'H\^opital's rule. If $\alpha\ge 0$, $f$ is also
+by L'Hôpital's rule. If $\alpha\ge 0$, $f$ is also
 continuous on $[0,\infty)$. Therefore \zcref{exer:8.1.9} and
 \zcref{thmtype:8.1.6} imply that $\laplace(t^\alpha)$ exists for
 $s\ge s_0$. However, since $s_0$ is an arbitrary positive number, this
@@ -977,7 +977,7 @@ $f$ by
 \[
 F(s)=\laplace(f)=\int_0^\infty e^{-st}f(t)\,dt.
 \]
-We'll also say that $f$ is an \indexterm{inverse Laplace Transform} of
+We'll also say that $f$ is an \indexterm{inverse Laplace transform} of
 $F$, and write
 \[
 f=\laplace^{-1}(F).
@@ -1174,7 +1174,7 @@ and setting $s=1$ leads to
 \frac{3s+2}{s-1}=(s-2)\frac{A}{s-2}+B
 \]
 and setting $s=2$ leads to
-\eqref{eq:8.2.5}.  (It isn't necesary to
+\eqref{eq:8.2.5}.  (It isn't necessary to
  write the last two equations. We wrote them  only to justify
 the shortcut procedure indicated in  \eqref{eq:8.2.4} and
 \eqref{eq:8.2.5}.) \hfill\bbox
@@ -1572,8 +1572,8 @@ Explain how the results of (a) and (b) are related.
 \index{initial value problem!solved with Laplace transform}
 
 \boxit{Laplace Transforms of Derivatives}
-\index{Laplace transform!of derivatives}
-\index{derivatives!Laplace transform of}
+\index{Laplace transform!of derivative}
+\index{derivative!Laplace transform of}
 
 In the rest of this chapter we'll use the Laplace transform to solve
 initial value problems for constant coefficient second order
@@ -1650,7 +1650,7 @@ which agrees with the corresponding  result obtained  in
 \zcref{example:8.1.4}.
 \end{example}
 
-In \zcref{sec:linar_first_order} we showed that the solution of the
+In \zcref{sec:linear_first_order} we showed that the solution of the
 initial value problem
 \begin{equation}\label{eq:8.3.3}
 y'=ay, \quad  y(0)=y_0,
@@ -3396,7 +3396,7 @@ where
 G(s)=\frac{1}{as^2+bs+c}.
 \]
 
-Until now wen't been interested in the factorization indicated
+Until now we haven't been interested in the factorization indicated
 in \eqref{eq:8.6.1}, since we dealt only with differential equations
 with specific forcing functions. Hence, we could simply do the
 indicated multiplication in \eqref{eq:8.6.1} and use the table of Laplace
@@ -3958,7 +3958,8 @@ h(t)=\int_0^tw(\tau)f(t-\tau)\,d\tau,
 \]
 $w$ is sometimes called the \indexterm{weighting function} of the device,
 since it assigns weights to past values of the input $f$. It is also
-called the \indexterm{impulse response} of the device, for reasons
+called the \emph{\color{blue}impulse response}\index{impulse!response}
+of the device, for reasons
 discussed in the next section.
 
 Formula \eqref{eq:8.6.14} is given in more detail in
@@ -4263,7 +4264,9 @@ the interval $[t_0,t_0+h]$, then $\int_{t_0}^{t_0+h} f(t)\,dt$ is
 called the \indexterm{total impulse} of $f$. We're interested in the
 idealized situation where $h$ is so small that the total impulse
 can be assumed to be applied instantaneously at $t=t_0$. We say in
-this case that $f$ is an \indexterm{impulse function}. In particular, we
+this case that $f$ is an
+\emph{\color{blue}impulse function}\index{impulse!function}.
+In particular, we
 denote by $\delta(t-t_0)$ the impulse function with total impulse
 equal to one, applied at $t=t_0$. (The impulse function $\delta(t)$
 obtained by setting $t_0=0$ is  the
@@ -4415,7 +4418,8 @@ device are related by the differential equation
 \[
 ay''+by'+cy=f(t),
 \]
-$w$ is called the \indexterm{impulse response} of the device. Note
+$w$ is called the \emph{\color{blue}impulse response}\index{impulse!response}
+of the device. Note
 that
 $w$ is the solution of the initial value problem
 \begin{equation} \label{eq:8.7.12}

@@ -1,11 +1,11 @@
 \DocumentMetadata{
-  tagging=off,
+  tagging=on,
   lang=en-US,
-%  pdfstandard=UA-2,
-%  tagging-setup={
-%%    math/alt/use,
-%    math/setup=mathml-SE
-%  }
+  pdfstandard=UA-2,
+  tagging-setup={
+%    math/alt/use,
+    math/setup=mathml-SE
+  }
 }
 \documentclass[openany]{book}
 
@@ -27,7 +27,6 @@
 %text/integrals,
 %text/answers,
 %text/bv_answers,
-%text/index
 %}
 
 \usepackage{wtrench}
@@ -77,9 +76,10 @@
 
 \backmatter
 
+\raggedright
+
 \begingroup
 \setlength{\parindent}{0pt}
-\raggedright
 
 \include{text/answers}
 
@@ -91,8 +91,8 @@
 
 \endgroup
 
-\printindex
+%\showthe\columnsep % 10pt
 
-\include{text/index}
+\printindex
 
 \end{document}

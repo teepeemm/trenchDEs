@@ -1,0 +1,115 @@
+\DocumentMetadata{
+  tagging=off,
+  lang=en-US,
+  pdfstandard=UA-2,
+  tagging-setup={math/setup=mathml-SE}
+}
+\documentclass{article}
+\title{Comparing Trench to Nagle et al}
+\author{Tim Prescott}
+\date{\today}
+\usepackage{geometry}
+\usepackage{lua-unicode-math}
+\usepackage{ulem}
+\usepackage[table-auto-round]{siunitx}
+\usepackage{booktabs}
+\begin{document}
+\maketitle
+There are two main differences by Trench compared to other differential equations texts, relating to the use of variation of parameters.
+We explore these differences.
+
+\setcounter{section}{2}
+\subsection{Linear First Order Equations}
+
+A linear first order equation can be written
+\begin{equation}
+y'+p(x)y=f(x).\label{first_order}
+\end{equation}
+
+Most texts solve this using the integrating factor $\mu(x)=\exp\{\int p(x)dx\}$, so that
+\begin{align*}
+\mu(x)y'+\mu(x)p(x)y&=\mu(x)f(x)\\
+(\mu(x)y)'&=\mu(x)f(x)\\
+\mu(x)y&=\int\mu(x)f(x)dx+C\\
+y&=(\mu(x))^{-1}\int\mu(x)f(x)dx+C/\mu(x).
+\end{align*}
+
+Trench first observes that $y_1'+p(x)y_1=0$ can be separated to find a particular solution $y_1=c\exp\{-\int p(x)dx\}$.
+Using variation of parameters, we write $y=uy_1$ so that $y'=u'y_1+uy_1'$ and \eqref{first_order} implies
+\[
+f(x)=y'+p(x)y=u'y_1+uy_1'+p(x)uy_1=u'y_1+u(y_1'+p(x)y_1)=u'y_1.
+\]
+Therefore, $u=\int f(x)/y_1dx+C$, and $y=y_1\int f(x)/y_1dx+Cy_1$ solves \eqref{first_order}.
+
+Note that $y_1=c/\mu(x)$.
+
+\stepcounter{section}
+\subsection{Semilinear Numerical Methods}
+
+Given a differential equation $y'=f(x,y)$, $y(x_0)=y_0$, numerical methods use the steps $x_{i+1}=x_i+h$, $y_i'=g(x_i,y_i,f)$, and $y_{i+1}=y_i+hy_i'$ for various formulations of $g$.
+An equation is said to be \textit{semilinear} if we can write it as $y'+p(x)y=h(x,y)$.
+Let $y_1=c\exp\{-\int p(x)dx\}$ be a solution of the complementary equation $y'+p(x)y=0$, and define $y=uy_1$.
+Applying the formulation $g$ to $u$ leads to the step $u_i'=g(x_i,u_i,f/y_1)$.
+
+To help explain, we reproduce Example 3.1.4(b): solving the initial value problem $y'-2xy=1$, $y(0)=3$, using the Euler semilinear method for $h=0.05$.
+The complementary equation $y'-2xy=0$ has a solution $y_1=e^{x^2}$.
+To involve variation of parameters, we write $y=uy_1$ as a solution of the initial value problem, so that
+\begin{align*}
+y'&=1+2xy=1+2xuy_1 \\
+y'&=u'y_1+uy_1'=u'y_1+u2xy_1
+\end{align*}
+and $u'=1/y_1=e^{-x^2}$.
+Applying the Euler \sout{semilinear} method to $u$, we therefore have\\
+\begin{tabular}{S[table-format=2] S[table-format=1.2] S[table-format=1.9]
+S[table-format=1.9] S[table-format=2.8] S[table-format=3.7]}\toprule
+{$i$} & {$x_i$} & {$u_i$} & {$u_i'$} & {$(y_1)_i$} & {$y_i$} \\\midrule
+%0 & 0 & 3 & 1 & 1 & 3
+0 & 0.000000000000 & 3.000000000000 & 1.000000000000 & 1.000000000000 & 3.000000000000 \\
+1 & 0.050000000000 & 3.050000000000 & 0.997503122397 & 1.002503127606 & 3.057634539198 \\
+2 & 0.100000000000 & 3.099875156120 & 0.990049833749 & 1.010050167084 & 3.131029419379 \\
+3 & 0.150000000000 & 3.149377647807 & 0.977751237193 & 1.022755034164 & 3.221041843780 \\
+4 & 0.200000000000 & 3.198265209667 & 0.960789439152 & 1.040810774192 & 3.328788888946 \\
+5 & 0.250000000000 & 3.246304681625 & 0.939413062813 & 1.064494458918 & 3.455673345549 \\
+6 & 0.300000000000 & 3.293275334765 & 0.913931185271 & 1.094174283705 & 3.603417180461 \\
+7 & 0.350000000000 & 3.338971894029 & 0.884705904943 & 1.130319120074 & 3.774103773211 \\
+8 & 0.400000000000 & 3.383207189276 & 0.852143788966 & 1.173510870992 & 3.970230415433 \\
+9 & 0.450000000000 & 3.425814378724 & 0.816686482598 & 1.224460085122 & 4.194772965785 \\
+10 & 0.500000000000 & 3.466648702854 & 0.778800783071 & 1.284025416688 & 4.451265045192 \\
+11 & 0.550000000000 & 3.505588742008 & 0.738968488259 & 1.353237676421 & 4.743894763723 \\
+12 & 0.600000000000 & 3.542537166421 & 0.697676326071 & 1.433329414560 & 5.077622722804 \\
+13 & 0.650000000000 & 3.577420982724 & 0.655406254327 & 1.525771219603 & 5.458325975846 \\
+14 & 0.700000000000 & 3.610191295441 & 0.612626394184 & 1.632316219955 & 5.892973808689 \\
+15 & 0.750000000000 & 3.640822615150 & 0.569782824731 & 1.755054656960 & 6.389842685885 \\
+16 & 0.800000000000 & 3.669311756386 & 0.527292424043 & 1.896480879305 & 6.958779586196 \\
+17 & 0.850000000000 & 3.695676377589 & 0.485536895154 & 2.059575719128 & 7.611525333035 \\
+18 & 0.900000000000 & 3.719953222346 & 0.444858066223 & 2.247907986676 & 8.362112558575 \\
+19 & 0.950000000000 & 3.742196125657 & 0.405554505063 & 2.465759811604 & 9.227356813785 \\
+20 & 1.000000000000 & 3.762473850911 & 0.367879441171 & 2.718281828459 & 10.227464298983 \\
+21 & 1.050000000000 & 3.780867822969 & 0.332039945345 & 3.011685834853 & 11.386786065889 \\
+22 & 1.100000000000 & 3.797469820236 & 0.298197279430 & 3.353484652549 & 12.734756760681 \\
+23 & 1.150000000000 & 3.812379684208 & 0.266468297814 & 3.752791638650 & 14.307066602256 \\
+24 & 1.200000000000 & 3.825703099099 & 0.236927758682 & 4.220695816997 & 16.147129067436 \\
+25 & 1.250000000000 & 3.837549487033 & 0.209611387151 & 4.770733181968 & 18.307924675230 \\
+26 & 1.300000000000 & 3.848030056390 & 0.184519523993 & 5.419480705131 & 20.854324643372 \\
+27 & 1.350000000000 & 3.857256032590 & 0.161621192465 & 6.187307399149 & 23.866028790854 \\
+28 & 1.400000000000 & 3.865337092213 & 0.140858420921 & 7.099327065157 & 27.441292234703 \\
+29 & 1.450000000000 & 3.872380013259 & 0.122150669540 & 8.186610877909 & 31.701668339947 \\
+30 & 1.500000000000 & 3.878487546736 & 0.105399224562 & 9.487735836359 & 36.798065288039 \\
+31 & 1.550000000000 & 3.883757507964 & 0.090491441664 & 11.050768797744 & 42.918506287014 \\
+32 & 1.600000000000 & 3.888282080047 & 0.077304740443 & 12.935817315543 & 50.298106658794 \\
+33 & 1.650000000000 & 3.892147317070 & 0.065710273228 & 15.218320528630 & 59.231945415814 \\
+34 & 1.700000000000 & 3.895432830731 & 0.055576212611 & 17.993309601550 & 70.091728955387 \\
+35 & 1.750000000000 & 3.898211641362 & 0.046770622384 & 21.380942759123 & 83.347439966901 \\
+36 & 1.800000000000 & 3.900550172481 & 0.039163895099 & 25.533721747352 & 99.595562765709 \\
+37 & 1.850000000000 & 3.902508367236 & 0.032630755993 & 30.645934167683 & 119.596014511136 \\
+38 & 1.900000000000 & 3.904139905035 & 0.027051846866 & 36.966052814823 & 144.320641925994 \\
+39 & 1.950000000000 & 3.905492497379 & 0.022314914777 & 44.813077262218 & 175.017137032044 \\
+40 & 2.000000000000 & 3.906608243118 & 0.018315638889 & 54.598150033144 & 213.293582978450 \\
+\bottomrule
+\end{tabular}
+
+These match row 6 of Table 3.1.5, and are better approximations than those obtained by Euler's method.
+
+3.1.6, 3.1.7
+
+\end{document}

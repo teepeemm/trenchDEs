@@ -11,8 +11,8 @@ solution.
 
 
 \medskip\noindent
-\zcref[S,CAP,font=\scshape]{sec:linar_first_order} deals with linear equations,
-the simplest kind
+\zcref[S,CAP,font=\scshape]{sec:linear_first_order} deals with linear
+equations, the simplest kind
 of first order equations. In this section we introduce the method of
 variation of parameters. The idea underlying this method will be a
 unifying theme for our approach to solving many different kinds of
@@ -53,7 +53,7 @@ by a function known called \indexterm{integrating factor}.
 \newpage
 
 
-\section{Linear First Order Equations}\label{sec:linar_first_order}
+\section{Linear First Order Equations}\label{sec:linear_first_order}
 \index{linear equation!first order}
 \index{first order equation!linear}
 
@@ -543,7 +543,7 @@ y'+(\cot x)y=x\csc x,\quad y(\pi/2)=1.
 continuous except at the points $x=r\pi$, where $r$ is an integer.
 Therefore we seek solutions of \eqref{eq:2.1.20} on the intervals
 $\left(r\pi, (r+1)\pi \right)$.
-We need a nontrival solution $y_1$ of
+We need a nontrivial solution $y_1$ of
 the complementary equation;   thus, $y_1$ must satisfy
  $y_1'+(\cot x)y_1=0$, which we rewrite as
 \begin{equation}\label{eq:2.1.22}
@@ -1119,8 +1119,9 @@ h(y)y'=g(x),
 \end{equation}
 where the left side is a product of $y'$ and a function of $y$ and
 the right side is a function of $x$. Rewriting a separable
-differential equation in this form is called \indexterm{separation of
-variables}\index{variables, separation of}. In \zcref{sec:linar_first_order} we used separation of variables
+differential equation in this form is called
+\indexterm{separation of variables}\index{variables, separation of}.
+In \zcref{sec:linear_first_order} we used separation of variables
 to solve homogeneous linear equations. In this section we'll apply
 this method to nonlinear equations.
 
@@ -1509,6 +1510,7 @@ $y'=\dfrac{x(1-y^2)}{2}$}
 
 \boxit{Differences Between Linear and Nonlinear Equations}
 \index{nonlinear equation!first order}
+\index{first order equation!nonlinear}
 
 \zcref[S]{thmtype:2.1.2} states that if $p$ and $f$ are continuous on
 $(a,b)$ then every solution of
@@ -1796,7 +1798,7 @@ y'+p(x)y=f(x)
 \]
 is separable.  If the equation satisfies these conditions, solve it by
 separation of variables and by the method developed in
-\zcref{sec:linar_first_order}.
+\zcref{sec:linear_first_order}.
 \end{exerciselist}
 %
 \textsl{Solve the equations in
@@ -1863,8 +1865,8 @@ boundary rectangle (indicated by the dashed lines in
 
 The next theorem gives sufficient conditions for existence and
 uniqueness of solutions of initial value problems for first order
-nonlinear differential equations. We omit the proof, which is beyond
-the scope of this book.
+nonlinear differential equations\index{first order equation!nonlinear}.
+We omit the proof, which is beyond the scope of this book.
 
 \begin{theorem}\label{thmtype:2.3.1}
 \index{existence theorem}\index{uniqueness theorem}
@@ -2396,11 +2398,11 @@ any point in $(a,b)$.
 \label{sec:transform_separable}
 \index{transformation of nonlinear equation!into separable equation}
 \index{nonlinear equation!transformation into separable equation}
-\index{separable equation!transformation of nonlinear equation into}
+\index{separable equation!transformation from nonlinear equation}
 \index{first order equation!transformation into separable equation}
 \index{first order equation!separable}
 
-In \zcref{sec:linar_first_order} we found that the solutions of a linear
+In \zcref{sec:linear_first_order} we found that the solutions of a linear
 nonhomogeneous equation
 \[
 y'+p(x)y=f(x)
@@ -2489,6 +2491,7 @@ direction field and some integral curves of \eqref{eq:2.4.3}.
 
 \boxit{Other Nonlinear Equations That Can be  Transformed Into
 Separable Equations}
+\index{separable first order equation!transformation of nonlinear equation!into other equation}
 
 We've seen that the nonlinear Bernoulli equation can be transformed
 into a separable equation by  the substitution $y=uy_1$ if
@@ -2569,11 +2572,12 @@ solutions $u\equiv u_0$ such that $q(u_0)=u_0$) yields
 \frac{u'}{q(u)-u}=\frac{1}{x}.
 \]
 
-Before turning to examples, we point out something that you may've have
+Before turning to examples, we point out something that you may have
 already noticed: the definition of
 \emph{\color{blue}homogeneous equation}\index{homogeneous!equation}\index{homogeneous!differential equation}
 given here isn't  the same as the definition given in
-\zcref{sec:linar_first_order}, where we said that a linear equation of the form
+\zcref{sec:linear_first_order}, where we said that a linear equation of the
+form
 \[
 y'+p(x)y=0
 \]
@@ -3073,7 +3077,7 @@ constant.
 
 
 \item\label{exer:2.4.55}A
-\personHref{Riccati}{generalized Riccati equation}\index{generalized Riccati equation}\index{Riccati equation!generalized}\index{Ricatti, Jacopo Francesco} is of the form
+\personHref{Riccati}{generalized Riccati equation}\index{generalized Riccati equation}\index{Riccati equation!generalized}\index{Riccati, Jacopo Francesco} is of the form
 \[
 y'=P(x)+Q(x)y+R(x)y^2.\tag{A}
 \]
@@ -3099,7 +3103,6 @@ method suggested by \zcref{exer:2.4.55} to find other solutions.}
 
 
 \section{Exact Equations}\label{sec:exact}
-\index{exact first order equation}
 \index{first order equation!exact}
 
 In this  section it's convenient to write first order
@@ -3235,7 +3238,7 @@ where the expression
 F_x(x,y)\,dx+F_y(x,y)\,dy
 \]
 (obtained by substituting \eqref{eq:2.5.9} into the left side of
-\eqref{eq:2.5.8}) is the  \indexterm{exact differential} of $F$.
+\eqref{eq:2.5.8}) is the  \emph{\color{blue}exact differential}\index{exact!differential} of $F$.
 
 \zcref[S]{example:2.5.1} shows that it's easy to solve
 \eqref{eq:2.5.8}
@@ -3432,7 +3435,6 @@ Here's a summary of the procedure used in Method 1 of this
 example. You should summarize the procedure used in Method~2.
 
 \begin{remark*}[Procedure For Solving An Exact Equation]
-\index{exact first order equation!procedures for solving}
 \index{first order equation!exact!procedures for solving}
 
 \begin{enumext}[
@@ -3928,7 +3930,7 @@ We're not saying that \emph{\color{blue}every} equation
  $M\,dx+N\,dy=0$ has an integrating factor of this
 form;   rather, we're saying that \emph{\color{blue}some} equations have
 such integrating
-factors.We'llnow develop a way to determine whether a given
+factors. We'll now develop a way to determine whether a given
 equation has such an integrating factor, and a method for finding the
 integrating factor in this case.
 
@@ -4017,7 +4019,7 @@ q(y)\,dy}=\pm e^0=\pm1,
  \]
 so \eqref{eq:2.6.10} is an integrating factor for \eqref{eq:2.6.11} on $R$.
 
-(b) If $(N_x-M_y)/M$ is independent of $x$ then eqref{eq:2.6.8} holds
+(b) If $(N_x-M_y)/M$ is independent of $x$ then \eqref{eq:2.6.8} holds
 with $p\equiv0$ and $q=(N_x-M_y)/M$, and a similar argument shows that
 \eqref{eq:2.6.12} is an integrating factor for \eqref{eq:2.6.11} on $R$.
 \end{proof}
@@ -4518,7 +4520,7 @@ where $y_1$ is any nontrivial solution of the
 complementary equation $y'+p(x)y=0$. In this exercise we obtain this
 conclusion in a different way.
 You may find it instructive to apply the method suggested here
-to solve some of the exercises in \zcref{sec:linar_first_order}.
+to solve some of the exercises in \zcref{sec:linear_first_order}.
 \begin{alist}
 \item % (a)
 Rewrite (A) as

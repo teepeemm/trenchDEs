@@ -1,0 +1,21 @@
+personal_ws-1.1 en 0
+Cowles
+indicial
+keepaspectratio
+labelwidth
+myplot
+noname
+ODEs
+Semilinear
+semilinear
+separatrices
+separatrix
+xmax
+xmin
+xtick
+ymax
+ymin
+ytick
+NonCommercial
+ShareAlike
+Unported
