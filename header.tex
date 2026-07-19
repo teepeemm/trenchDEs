@@ -211,13 +211,16 @@ TECHNOLOGY}\par}
 \usepackage{makeidx}
 \makeindex
 
+\index{$\lambda$|see{lambda}}
 \index{coefficients!undetermined|see{undetermined coefficients}}
 \index{constant coefficient equation!homogeneous!higher order|see{higher order constant coefficient homogeneous equations}}
+\index{cooling!Newton's law of|see{Newton's law of cooling}}
 \index{decay|see{exponential decay}}
 \index{error!truncation!global|see{global truncation error}}
 \index{error!truncation!local|see{local truncation error}}
 \index{exact first order equation|see{first order equation, exact}}
-\index{first order equations!applications|see{applications, first order equations}}
+\index{first order equation!applications|see{applications, first order equations}}
+\index{first order equation!numerical methods|see{numerical methods}}
 \index{gravitation!Newton's law of|see{Newton's, law of gravitation}}
 \index{growth|see{exponential growth}}
 \index{harmonic motion, simple|see{simple harmonic motion}}
@@ -228,13 +231,30 @@ TECHNOLOGY}\par}
 \index{motion!Newton's second law of|see{Newton's second law of motion}}
 \index{motion!simple harmonic|see{simple harmonic motion}}
 \index{nonhomogeneous linear second order|see{linear second order, nonhomogeneous}}
-\index{numerical methods|seealso{Euler's, improved Euler's, Heun's, midpoint, Runge-Kutta, semilinear}}
-\index{solution|seealso{Frobenius solutions, nontrivial solution, series solution, trivial solution}}
-\index{spring-mass system!simple harmonic motion|seealso{simple harmonic motion}}
+\index{second order equation!applications|see{applications, second order equation}}
+\index{second order equation!linear|see{linear second order equation}}
 \index{superposition, principle of|see{principle of superposition}}
-\index{system|seealso{linear system}}
 \index{temperature|see{Newton's law of cooling}}
 \index{truncation error|see{local truncation error, global truncation error}}
+
+\AddToHook{enddocument/afterlastpage}{
+ \index{numerical methods|seealso{Euler's, improved Euler's, Heun's, midpoint, Runge-Kutta, semilinear}}
+ \index{solution|seealso{Frobenius solutions, nontrivial solution, series solution, trivial solution}}
+ \index{spring-mass system!simple harmonic motion|seealso{simple harmonic motion}}
+ \index{system|seealso{linear system}}
+}
+
+% I was unable to figure out where these index entries belong
+
+%\item  Boundary conditions
+%\subitem separated,  \pageref{eq:13.1.5}
+
+%\item Separated boundary conditions, \pageref{eq:13.1.5}
+
+%\item Wave, traveling
+%\subitem orthogonal with respect to, \pageref{eq:11.2.7}
+%\pageref{exer:7.2.30}
+
 
 \title{Elementary Differential Equations}
 \author{William F. Trench}
