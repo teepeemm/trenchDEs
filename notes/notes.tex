@@ -13,6 +13,7 @@
 \usepackage{ulem}
 \usepackage[table-auto-round]{siunitx}
 \usepackage{booktabs}
+\usepackage{hyperref}
 \begin{document}
 \maketitle
 There are two main differences by Trench compared to other differential equations texts, relating to the use of variation of parameters.
@@ -35,13 +36,14 @@ y&=(\mu(x))^{-1}\int\mu(x)f(x)dx+C/\mu(x).
 \end{align*}
 
 Trench first observes that $y_1'+p(x)y_1=0$ can be separated to find a particular solution $y_1=c\exp\{-\int p(x)dx\}$.
+Take $c=1$.
 Using variation of parameters, we write $y=uy_1$ so that $y'=u'y_1+uy_1'$ and \eqref{first_order} implies
 \[
 f(x)=y'+p(x)y=u'y_1+uy_1'+p(x)uy_1=u'y_1+u(y_1'+p(x)y_1)=u'y_1.
 \]
 Therefore, $u=\int f(x)/y_1dx+C$, and $y=y_1\int f(x)/y_1dx+Cy_1$ solves \eqref{first_order}.
 
-Note that $y_1=c/\mu(x)$.
+Note that $y_1=1/\mu(x)$.
 
 \stepcounter{section}
 \subsection{Semilinear Numerical Methods}
@@ -59,7 +61,9 @@ y'&=1+2xy=1+2xuy_1 \\
 y'&=u'y_1+uy_1'=u'y_1+u2xy_1
 \end{align*}
 and $u'=1/y_1=e^{-x^2}$.
-Applying the Euler \sout{semilinear} method to $u$, we therefore have\\
+Applying the Euler \sout{semilinear} method to $u$, we therefore have \autoref{tab:3.1.5}, where the $y_i$ column matches row 6 of Table 3.1.5.
+\begin{table}\centering
+\caption{Reproducing a row of Table 3.1.5.}\label{tab:3.1.5}
 \begin{tabular}{S[table-format=2] S[table-format=1.2] S[table-format=1.9]
 S[table-format=1.9] S[table-format=2.8] S[table-format=3.7]}\toprule
 {$i$} & {$x_i$} & {$u_i$} & {$u_i'$} & {$(y_1)_i$} & {$y_i$} \\\midrule
@@ -107,9 +111,69 @@ S[table-format=1.9] S[table-format=2.8] S[table-format=3.7]}\toprule
 40 & 2.000000000000 & 3.906608243118 & 0.018315638889 & 54.598150033144 & 213.293582978450 \\
 \bottomrule
 \end{tabular}
+\end{table}
+These are better approximations than those obtained by Euler's method.
 
-These match row 6 of Table 3.1.5, and are better approximations than those obtained by Euler's method.
+We now reproduce Example 3.1.6: solving the initial value problem $y'+3x^2y=1+y^2$, $y(2)=2$, and $h=0.025$ to find $y(3)$.
+The complementary equation $y'+3x^2y=0$ has a solution $y_1=\exp\{-x^3\}$.
+We write $y=uy_1$, so that
+\begin{align*}
+y'=1+y^2+3x^2y=1+u^2y_1^2+3x^2uy_1\\
+y'=u'y_1+uy_1'=u'y_1-u3x^2y_1
+\end{align*}
+and $u'=(1+u^2y_1^2)/y_1=\exp\{x^3\}+u^2\exp\{-x^3\}$ and $u(2)=2e^8$.
+Applying the Euler \sout{semilinear} method to $u$, we therefore have \autoref{tab:3.1.7}, where the $y_i$ column matches row 6 of Table 3.1.7.
+\begin{table}\centering
+\caption{Reproducing a row of Table 3.1.7.}\label{tab:3.1.7}
+\begin{tabular}{S[table-format=2] S[table-format=1.3] S[table-format=11] S[table-format=12] S[table-format=11] S[table-format=1.9]}
+\toprule
+{$i$} & {$x_i$} & {$u_i$} & {$u_i'$} & {$(y_1)_i$} & {$y_i$} \\\midrule
+0 & 2 & 5961.91597408346 & 14904.7899352086 & 372.619748380216 & 2 \\
+1 & 2.025 & 6334.53572246367 & 13973.6442857471 & 349.341107143678 & 1.56832187357475 \\
+2 & 2.05 & 6683.87682960735 & 13615.7549058581 & 340.393872646454 & 1.21206856993227 \\
+3 & 2.075 & 7024.27070225381 & 14090.2578447561 & 352.256446118903 & 0.925848003578241 \\
+4 & 2.1 & 7376.52714837271 & 15692.1738608978 & 392.304346522445 & 0.701214274244143 \\
+5 & 2.125 & 7768.83149489515 & 18806.8280659131 & 470.170701647827 & 0.528438905743028 \\
+6 & 2.15 & 8239.00219654298 & 23987.752618646 & 599.693815466151 & 0.397826031085984 \\
+7 & 2.175 & 8838.69601200913 & 32066.843498518 & 801.671087462951 & 0.300527883127205 \\
+8 & 2.2 & 9640.36709947208 & 44315.3809314022 & 1107.88452328506 & 0.228942240470333 \\
+9 & 2.225 & 10748.2516227571 & 62688.0404417994 & 1567.20101104498 & 0.176816599534693 \\
+10 & 2.25 & 12315.4526338021 & 90202.2624289826 & 2255.05656072456 & 0.139176142556997 \\
+11 & 2.275 & 14570.5091945267 & 131537.753280125 & 3288.44383200312 & 0.112164130639842 \\
+12 & 2.3 & 17858.9530265298 & 193994.422863544 & 4849.86057158861 & 0.0928528062257361 \\
+13 & 2.325 & 22708.8135981184 & 289036.682500685 & 7225.91706251712 & 0.0790582993161255 \\
+14 & 2.35 & 29934.7306606355 & 434803.252528295 & 10870.0813132074 & 0.0691760652447353 \\
+15 & 2.375 & 40804.8119738429 & 660218.62401206 & 16505.4656003015 & 0.0620429072406156 \\
+16 & 2.4 & 57310.2775741444 & 1011782.28217701 & 25294.5570544254 & 0.0568258046566895 \\
+17 & 2.425 & 82604.8346285698 & 1564870.78282211 & 39121.7695705528 & 0.0529349151238384 \\
+18 & 2.45 & 121726.604199123 & 2442707.45610965 & 61067.6864027412 & 0.0499570251488528 \\
+19 & 2.475 & 182794.290601864 & 3848467.60616201 & 96211.6901540504 & 0.0476055860557928 \\
+20 & 2.5 & 279005.980755914 & 6120074.54466023 & 153001.863616506 & 0.045683801218781 \\
+21 & 2.525 & 432007.84437242 & 9824524.60705812 & 245613.115176453 & 0.0440577458572497 \\
+22 & 2.55 & 677620.959548873 & 15921664.1947317 & 398041.604868291 & 0.0426370516740286 \\
+23 & 2.575 & 1075662.56441716 & 26051050.7775847 & 651276.269439619 & 0.0413612012135781 \\
+24 & 2.6 & 1726938.83385678 & 43038857.4224435 & 1075971.43556109 & 0.0401899199999864 \\
+25 & 2.625 & 2802910.26941787 & 71801648.6808823 & 1795041.21702206 & 0.0390965204224906 \\
+26 & 2.65 & 4597951.48643993 & 120972374.74613 & 3024309.36865325 & 0.0380633437312036 \\
+27 & 2.675 & 7622260.85509318 & 205852563.40368 & 5146314.085092 & 0.0370786743055751 \\
+28 & 2.7 & 12768574.9401852 & 353822121.428001 & 8845553.03570001 & 0.036134674124533 \\
+29 & 2.725 & 21614127.9758852 & 614345620.709589 & 15358640.5177397 & 0.0352260154808315 \\
+30 & 2.75 & 36972768.4936249 & 1077656008.94368 & 26941400.223592 & 0.0343489857725677 \\
+31 & 2.775 & 63914168.7172169 & 1909975127.16017 & 47749378.1790043 & 0.0335009076138484 \\
+32 & 2.8 & 111663546.896221 & 3420550696.07549 & 85513767.4018872 & 0.0326797670407496 \\
+33 & 2.825 & 197177314.298108 & 6190500005.04837 & 154762500.126209 & 0.0318839774221694 \\
+34 & 2.85 & 351939814.424318 & 11322893682.5922 & 283072342.064804 & 0.0311122308308332 \\
+35 & 2.875 & 635012156.489122 & 20933014414.2599 & 523325360.356497 & 0.030363405131913 \\
+36 & 2.9 & 1158337516.84562 & 39119149340.3616 & 977978733.50904 & 0.0296365061688764 \\
+37 & 2.925 & 2136316250.35466 & 73904514798.513 & 1847612869.96283 & 0.0289306318196212 \\
+38 & 2.95 & 3983929120.31749 & 141161781925.608 & 3529044548.14019 & 0.0282449495440394 \\
+39 & 2.975 & 7512973668.45768 & 272626801551.565 & 6815670038.78913 & 0.0275786821804001 \\
+40 & 3 & 14328643707.2468 & 532434126720.377 & 13310853168.0094 & 0.0269310987496944 \\
+\bottomrule
+\end{tabular}
+\end{table}
+There are worse approximations than those obtained by Euler's method.
 
-3.1.6, 3.1.7
+In general, it appears that a small $\lvert y''\rvert$ will lead to an accurate Euler's method, while a small $\lvert u''\rvert$ will lead to an accurate Euler's semilinear method.  If the other is large, then we have a clear winner.
 
 \end{document}
