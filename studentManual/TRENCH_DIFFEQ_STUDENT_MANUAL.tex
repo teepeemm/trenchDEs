@@ -1,143 +1,135 @@
-\documentclass[dvips]{book}
-\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\renewcommand{\rmdefault}{ptm}
-\usepackage[scaled=0.92]{helvet}
-\usepackage[psamsfonts]{amsfonts}
-\usepackage{amsmath, amsbsy, wtrench}
-\usepackage[dvips,
- bookmarks = true,
- colorlinks=true,
-plainpages = false,
-  citecolor = blue,
-urlcolor = blue,
-filecolor = blue,
- pageanchor = true]
-{hyperref}
-
-\setcounter{secnumdepth}{2}
-\usepackage[justification=centering, labelsep=space, skip=-10 pt]{caption}
-\usepackage[a4paper]{geometry}
-\usepackage{float}
-\usepackage{upref}
-
-
-\renewcommand{\exer}[1]{\par\medskip\;\noindent{\color{red}\bf #1.}}
-
-\numberwithin{example}{section}
-\numberwithin{equation}{section}
-\numberwithin{theorem}{section}
-\numberwithin{table}{section}
-\numberwithin{figure}{section}
-
-\newcommand{\place}{\bigskip\hrule\bigskip\noindent}
-\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
-\newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\[1\jot]#2\\[1\jot]#3\end{array}\right]}
-\newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}}
-\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
-\newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]}
-\newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]}
-\newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}}
-\newcommand{\twochar}[4]{\left|\begin{array}{cc}
-#1-\lambda&#2\\#3&#4-\lambda\end{array}\right|}
-\newcommand{\twobytwo}[4]{\left[\begin{array}{rr}
-#1&#2\\#3&#4\end{array}\right]}
-\newcommand{\threechar}[9]{\left[\begin{array}{ccc}
-#1-\lambda&#2&#3\\#4&#5-\lambda&#6\\#7&#8&#9-\lambda\end{array}\right]}
-\newcommand{\threebythree}[9]{\left[\begin{array}{rrr}
-#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
-\newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc
-Solution({\bf #1})\ }}
-\newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
-\newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
-\newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, }
-\newcommand{\matfunc}[3]{\left[\begin{array}{cccc}#1_{11}(t)&#1_{12}(t)&\cdots
-&#1_{1#3}(t)\\#1_{21}(t)&#1_{22}(t)&\cdots&#1_{2#3}(t)\\\vdots&
-\vdots&\ddots&\vdots\\#1_{#21}(t)&#1_{#22}(t)&\cdots&#1_{#2#3}(t)
-\end{array}\right]}
-
-\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
-\newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]}
-
-\newcommand{\cthreebythree}[9]{\left[\begin{array}{ccc}
-#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
-
-\newcommand{\technology}{\bigskip\noindent\fbox{\color{red}USING
-TECHNOLOGY}\par}
-\newcommand{\remark}[1]{\noindent{\sc Remark}:\ #1}
-\newcommand{\bigbox}[1]{\vskip10pt\vbox{\hrule\hbox{\vrule\kern5pt
-\vbox{\noindent
-\strut\kern5pt\mbox{}\newline#1\mbox{}\newline
-\kern5pt\strut}\kern5pt\vrule}\hrule}}
-\newcommand{\blankbox}[1]{\vskip10pt\vbox{\hbox{\kern5pt
-\vbox{\noindent\strut\kern5pt\vspace*{-15pt}#1\vspace*{-20pt}
-\kern5pt\strut}\kern5pt}}}
-\newenvironment{newtable}[1]{ \begin{quote}
-Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
-\newenvironment{numberlist}{\begin{list}{\bf \arabic{rm}.}
-{\topsep 12pt\partopsep 0pt\labelwidth 14pt
-\labelsep 8pt\leftmargin 22pt\itemsep 0pt
-\usecounter{rm}}}{\end{list}}
-\setlength{\oddsidemargin}{15.5pt}
-\setlength{\evensidemargin}{15.5pt}
-
-
-\usepackage{graphicx}
-\graphicspath{%
-    {converted_graphics/}% inserted by PCTeX
-    {EPS/}% inserted by PCTeX
+\DocumentMetadata{
+  tagging=off,
+  lang=en-US,
+%  pdfstandard=UA-2,
+%  tagging-setup={
+%%    math/alt/use,
+%    math/setup=mathml-SE
+%  }
 }
+\documentclass[openany]{book}
+%\documentclass[dvips]{book}
+%\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
+%\usepackage[T1]{fontenc}
+%\usepackage{textcomp}
+%\renewcommand{\rmdefault}{ptm}
+%\usepackage[scaled=0.92]{helvet}
+%\usepackage[psamsfonts]{amsfonts}
+%\usepackage{amsmath, amsbsy}
+\usepackage{../wtrench}
+\input{../header}
+\newcommand{\exer}[1]{\par\noindent{\bf #1}.}
+
+%\usepackage[dvips,
+% bookmarks = true,
+% colorlinks=true,
+%plainpages = false,
+%  citecolor = blue,
+%urlcolor = blue,
+%filecolor = blue,
+% pageanchor = true]
+%{hyperref}
+%
+%\setcounter{secnumdepth}{2}
+%\usepackage[justification=centering, labelsep=space, skip=-10 pt]{caption}
+%\usepackage[a4paper]{geometry}
+%\usepackage{float}
+%\usepackage{upref}
+%
+%
+%\renewcommand{\exer}[1]{\par\medskip\;\noindent{\color{red}\bfseries #1.}}
+%
+%\numberwithin{example}{section}
+%\numberwithin{equation}{section}
+%\numberwithin{theorem}{section}
+%\numberwithin{table}{section}
+%\numberwithin{figure}{section}
+%
+%\newcommand{\place}{\bigskip\hrule\bigskip\noindent}
+%\newcommand{\threecol}[3]{\left[\begin{array}{r}#1\\#2\\#3\end{array}\right]}
+%\newcommand{\threecolj}[3]{\left[\begin{array}{r}#1\\[1\jot]#2\\[1\jot]#3\end{array}\right]}
+%\newcommand{\lims}[2]{\,\bigg|_{#1}^{#2}}
+%\newcommand{\twocol}[2]{\left[\begin{array}{l}#1\\#2\end{array}\right]}
+%\newcommand{\ctwocol}[2]{\left[\begin{array}{c}#1\\#2\end{array}\right]}
+%\newcommand{\cthreecol}[3]{\left[\begin{array}{c}#1\\#2\\#3\end{array}\right]}
+%\newcommand{\eqline}[1]{\centerline{\hfill$\displaystyle#1$\hfill}}
+%\newcommand{\twochar}[4]{\left|\begin{array}{cc}
+%#1-\lambda&#2\\#3&#4-\lambda\end{array}\right|}
+%\newcommand{\twobytwo}[4]{\left[\begin{array}{rr}
+%#1&#2\\#3&#4\end{array}\right]}
+%\newcommand{\threechar}[9]{\left[\begin{array}{ccc}
+%#1-\lambda&#2&#3\\#4&#5-\lambda&#6\\#7&#8&#9-\lambda\end{array}\right]}
+%\newcommand{\threebythree}[9]{\left[\begin{array}{rrr}
+%#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
+%\newcommand{\solutionpart}[1]{\vskip10pt\noindent\underbar{\color{blue}\sc
+%Solution({\bfseries #1})\ }}
+%\newcommand{\Cex}{\fbox{\textcolor{red}{C}}\, }
+%\newcommand{\CGex}{\fbox{\textcolor{red}{C/G}}\, }
+%\newcommand{\Lex}{\fbox{\textcolor{red}{L}}\, }
+%\newcommand{\matfunc}[3]{\left[\begin{array}{cccc}#1_{11}(t)&#1_{12}(t)&\cdots
+%&#1_{1#3}(t)\\#1_{21}(t)&#1_{22}(t)&\cdots&#1_{2#3}(t)\\\vdots&
+%\vdots&\ddots&\vdots\\#1_{#21}(t)&#1_{#22}(t)&\cdots&#1_{#2#3}(t)
+%\end{array}\right]}
+%
+%\newcommand{\col}[2]{\left[\begin{array}{c}#1_1\\#1_2\\\vdots\\#1_#2\end{array}\right]}
+%\newcommand{\colfunc}[2]{\left[\begin{array}{c}#1_1(t)\\#1_2(t)\\\vdots\\#1_#2(t)\end{array}\right]}
+%
+%\newcommand{\cthreebythree}[9]{\left[\begin{array}{ccc}
+%#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right]}
+%
+%\newcommand{\technology}{\bigskip\noindent\fbox{\color{red}USING
+%TECHNOLOGY}\par}
+%\newcommand{\remark}[1]{\noindent{\sc Remark}:\ #1}
+%\newcommand{\bigbox}[1]{\vskip10pt\vbox{\hrule\hbox{\vrule\kern5pt
+%\vbox{\noindent
+%\strut\kern5pt\mbox{}\newline#1\mbox{}\newline
+%\kern5pt\strut}\kern5pt\vrule}\hrule}}
+%\newcommand{\blankbox}[1]{\vskip10pt\vbox{\hbox{\kern5pt
+%\vbox{\noindent\strut\kern5pt\vspace*{-15pt}#1\vspace*{-20pt}
+%\kern5pt\strut}\kern5pt}}}
+%\newenvironment{newtable}[1]{ \begin{quote}
+%Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
+%\newenvironment{numberlist}{\begin{list}{\bfseries \arabic{rm}.}
+%{\topsep 12pt\partopsep 0pt\labelwidth 14pt
+%\labelsep 8pt\leftmargin 22pt\itemsep 0pt
+%\usecounter{rm}}}{\end{list}}
+%\setlength{\oddsidemargin}{15.5pt}
+%\setlength{\evensidemargin}{15.5pt}
+%
+%
+%\usepackage{graphicx}
+%\graphicspath{%
+%    {converted_graphics/}% inserted by PCTeX
+%    {EPS/}% inserted by PCTeX
+%}
+
 \begin{document}
 
-
+\frontmatter
 
 \thispagestyle{empty}
 \begin{center}
-{\bf\large STUDENT SOLUTIONS MANUAL FOR}
- \vspace{.2in}
+{\bfseries
+\large STUDENT SOLUTIONS MANUAL FOR
+\bigskip
 
-
-
-{\bf\Huge ELEMENTARY}
-\smallskip
-
-{\bf\Huge DIFFERENTIAL EQUATIONS}
-
-\smallskip
-
-{\bf\large AND}
-
-\smallskip
-
-{\bf\Huge ELEMENTARY}
-
-\smallskip
-
-{\bf\Huge DIFFERENTIAL EQUATIONS}
-
-\smallskip
-
-
-
-{\bf\Huge WITH BOUNDARY VALUE}
-
-\smallskip
-
-{\bf\Huge PROBLEMS}
-
+\Huge ELEMENTARY\\DIFFERENTIAL EQUATIONS
+\iftoggle{boundaryvalues}{\\WITH BOUNDARY VALUE\\PROBLEMS}{}
+}
 
 % \vspace*{.2in}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[bb=-78 148 689 643,width=5.67in,height=3.66in,keepaspectratio]{cover}
+ \includegraphics[width=5.67in,height=3.3in,keepaspectratio,
+  alt={Arrows moving through the plain up and left, but circling clockwise around the origin.  Lines follow the arrows, creating a denser line that starts and ends along y=-x, but also circles clockwise around the origin.}
+ ]{../EPS/cover}
 \end{figure}
 
 %\vspace*{.2in}
 
 
-\bf\huge
+\bfseries\huge
 \href{http://ramanujan.math.trinity.edu/wtrench/index.shtml}
 {William F. Trench}
 \\\large
@@ -199,7 +191,7 @@ are  prohibited.
 \thispagestyle{empty}
 \noindent
 \vspace*{3in}
-\centerline{\bf\Huge TO BEVERLY}
+\centerline{\bfseries\Huge TO BEVERLY}
 
 
 \thispagestyle{empty}
@@ -210,9 +202,9 @@ are  prohibited.
 {\hskip1em Contents\hfill}
 {\hfill Contents\hskip1em}
 \vspace*{3.9pc}
-\centerline{\bf \Huge Contents}
+\centerline{\bfseries \Huge Contents}
 \vspace*{4.8pc}
-\bf
+\bfseries
   Chapter~1 \space Introduction\hskip1em
 \hfill1
 
@@ -452,27 +444,25 @@ Differential Equations  \hfill 273
 
 13.2 Sturm-Liouville Problems  \hfill 279
 
-\rm
-\newpage
-\setcounter{page}{1}
-\pagenumbering{arabic}
-\thispagestyle{empty}
+\mainmatter
 
+%\rm
+%\newpage
+%\setcounter{page}{1}
+%\pagenumbering{arabic}
+%\thispagestyle{empty}
+%
+%
+%\setcounter{chapter}{1}
+%\pagenumbering{arabic}
+%\setcounter{page}{1}
+%\thispagestyle{empty}
+%\pdfbookmark[0]{Chapter 1}{chapter:1}
 
-\setcounter{chapter}{1}
-\pagenumbering{arabic}
-\setcounter{page}{1}
-\thispagestyle{empty}
-\pdfbookmark[0]{Chapter 1}{chapter:1}
-\chaptertitle{Introduction}
+\chapter{Introduction}
 
-\newsection{2}{Basic Concepts}{Basic Concepts}
-\subpdfbookmark{Section 1.2} {section:1.2}
-
-\newcommand{\thissection}{\sectiontitle{\,BASIC CONCEPTS}}
-\thissection
-      \vspace*{-17.5pt}
-
+\stepcounter{section}
+\section{Basic Concepts}
 
 \exer{1.2.2}
 \part{a} If $y=ce^{2x}$, then $y'=2ce^{2x}=2y$.
@@ -710,26 +700,9 @@ and $x^2+4x+4y=0$ for all $x$. Therefore, $y_1$ satisfies
 
 
 
-\newpage
+\chapter{First Order Equations}
 
-\thispagestyle{empty}
-\setcounter{chapter}{2}
-\pdfbookmark[0]{Chapter 2}{chapter:2}
-\chaptertitle{First Order Equations}
-
-\newsection{1}{First Order Equations}{Linear First Order Equations}
-\subpdfbookmark{Section 2.1} {section:2.1}
-
-\setcounter{section}{1}
-\renewcommand{\thissection}
-{\sectiontitle{\,LINEAR FIRST ORDER EQUATIONS}}
-\thissection
-
-\vspace{-20pt}
-
-
-
-
+\section{Linear First Order Equations}
 
 \exer{2.1.2}
 $\dst{y'\over y}=-3x^2$;\quad $|\ln|y|=-x^3+k$;\quad $y=ce^{-x^3}$.
@@ -961,7 +934,7 @@ x}\left(2e^{-(x-1)}+e^{-x}\int_1^xe^te^{t^2}\,dt\right)}$.
 
 
 \exer{2.1.44}
-{\bf (b)} Eqn. (A) is equivalent to
+{\bfseries (b)} Eqn. (A) is equivalent to
 $$
 y'-{2\over x}=-{1\over x}
 \eqno{\rm (B)}
@@ -974,7 +947,7 @@ x^3}$;\quad
 $u=\dst{1\over2x^2}+c$, so $y=\dst{1\over2}+cx^2$ is the general
 solution of (A) on $(-\infty,0)$ and $(0,\infty)$.
 
-{\bf (c)}
+{\bfseries (c)}
 From the proof of \part{b}, any solution of (A) must be of the form
 $$
 y=\left\{\begin{array}{ll}\dst{{1\over2}+c_1x^2}, &x
@@ -1000,11 +973,11 @@ so $y'(0)=0$. Since $0y'(0)-2y(0)=0\cdot0-2(1/2)=-1$, any function of
 the form (C) satisfies (A) at
 $x=0$.
 
-{\bf (d)} From \part{b} any solution $y$ of (A) on
+{\bfseries (d)} From \part{b} any solution $y$ of (A) on
 $(-\infty,\infty)$ is of the form (C), so
 $y(0)=1/2$.
 
-{\bf (e)} If $x_0>0$, then every function of the form
+{\bfseries (e)} If $x_0>0$, then every function of the form
 (C) with $c_1=\dst{y_0-1/2\over x_0^2}$ and $c_2$
 arbitrary is a solution of the initial value problem on
 $(-\infty,\infty)$. Since these functions are all identical on
@@ -1015,21 +988,21 @@ that $y(x_0)=y_0$. A similar argument applies if $x_0<0$.
 
 
 \exer{2.1.46}
-{\bf (a)} Let $y=c_1y_1+c_2y_2$. Then
+{\bfseries (a)} Let $y=c_1y_1+c_2y_2$. Then
 \begin{eqnarray*}
 y'+p(x)y&=&(c_1y_1+c_2y_2)'+p(x)(c_1y_1+c_2y_2)\\[2\jot]
 &=&c_1y_1'+c_2y_2'+c_1p(x)y_1+c_2p(x)y_2\\[2\jot]
 &=&c_1(y_1'+p(x)y_1)+c_2(y_2+p(x)y_2)=c_1f_1(x)+c_2f_2(x).
 \end{eqnarray*}
 
-{\bf (b)}  Let $f_1=f_2=f$ and $c_1=-c_2=1$.
+{\bfseries (b)}  Let $f_1=f_2=f$ and $c_1=-c_2=1$.
 
-{\bf (c)}  Let $f_1=f$, $f_2=0$, and $c_1=c_2=1$.
+{\bfseries (c)}  Let $f_1=f$, $f_2=0$, and $c_1=c_2=1$.
 
 
 
 \exer{2.1.48}
-{\bf (a)}
+{\bfseries (a)}
 If $z=\tan y$, then $z'=(\sec^2y)y'$, so $z'-3z=-1$;\;
 $z_1=e^{3x}$;\;
 $z=ue^{3x}$;\;
@@ -1041,7 +1014,7 @@ $y=\tan^{-1}\dst{\left({1\over3}+ce^{3x}\right)}$.
 
 
 
-{\bf (b)}
+{\bfseries (b)}
 If $z=e^{y^2}$, then $z'=2yy'e^{y^2}$, so $z'+\dst{2\over
 x}z=\dst{1\over x^2}$;\;
 $z_1=\dst{1\over x^2}$;\;
@@ -1054,7 +1027,7 @@ $y=\pm\dst{\left[\ln\left(\dst{1\over x}+\dst{c\over
 x^2}\right)\right]^{1/2}}$.
 
 
-{\bf (c)}
+{\bfseries (c)}
 Rewrite the equation as $\dst{y'\over y}+\dst{2\over x}\ln y=4x$.
 If $z=\ln y$, then $z'=\dst{y'\over y}$, so $z'+\dst{2\over x}z=4x$;
 \
@@ -1067,7 +1040,7 @@ $z=x^2+\dst{c\over x^2}=\ln y$;\;
 $y=\exp\dst\left(x^2+{c\over x^2}\right)$.
 
 
-{\bf (d)}
+{\bfseries (d)}
 If $z=-\dst{1\over 1+y}$, then $z'=\dst{y'\over(1+y)^2}$, so
 $z'+\dst{1\over x}z=-\dst{3\over x^2}$;\;
 $z_1=\dst{1\over x}$;\;
@@ -1080,17 +1053,7 @@ $y=-1+\dst{x\over3\ln|x|+c}$.
 
 
 
-\newsection{2}{First Order Equations}
-{Separable Equations}
-\currentpdfbookmark{Section 2.2}{section:2.2}
-\renewcommand{\thissection}{\sectiontitle{\, SEPARABLE  EQUATIONS}}
-\thissection
-\vspace*{-15pt}
-
-
-
-
-
+\section{Separable Equations}
 
 \exer{2.2.2}
 By inspection, $y\equiv k\pi$ ($k=$integer) is a constant solution.
@@ -1301,16 +1264,7 @@ $y=e^{2x}\left(1\pm\sqrt{c-x^2}\right)$.
 
 
 
-\newsection{3}{First Order Equations}
-{Existence and Uniqueness of Solutions of Nonlinear Equations}
-\currentpdfbookmark{Section 2.3}{section:2.3}
-\renewcommand{\thissection}{\sectiontitle{\,
-EXISTENCE AND UNIQUENESS OF SOLUTIONS OF NONLINEAR EQUATIONS }}
-\thissection
-\vspace*{-15pt}
-
-
-
+\section{Existence and Uniqueness of Solutions of Nonlinear Equations}
 
 \exer{2.3.2}
 $f(x,y)=\dst{e^x+y\over x^2+y^2}$ and $f_y(x,y)=\dst{1\over
@@ -1503,21 +1457,7 @@ $$
 are also solutions of the initial value problem  on
 $(-\infty,\infty)$.
 
-
-
-\vspace*{5pt}
-\newsection{4}{First Order Equations}
-{Transformation of Nonlinear Equations into Separable Equations}
-\currentpdfbookmark{Section 2.4}{section:2.4}
-\renewcommand{\thissection}{\sectiontitle{\,
-TRANSFORMATION OF NONLINEAR EQUATIONS INTO SEPARABLE EQUATIONS }}
-\thissection
-
-\vspace*{-17.5pt}
-
-
-
-
+\section{Transformation of Nonlinear Equations into Separable Equations}
 
 \exer{2.4.2}
  Rewrite as $y'-\dst{2\over7x}y=-\dst{x\over7y^6}$. Then
@@ -1948,19 +1888,7 @@ $u=-\dst{x\over 1-cx}$;\;
 $z=-\dst{1\over x(1-cx)}$;\;
 $y=1-\dst{1\over x(1-cx)}$.
 
-\newsection{5}{First Order Equations}
-{Exact Equations}
-\currentpdfbookmark{Section 2.5}{section:2.5}
-\renewcommand{\thissection}{\sectiontitle{\,
-EXACT EQUATIONS}}
-\thissection
-
-\vspace*{-10pt}
-
-
-
-
-
+\section{Exact Equations}
 
 \exer{2.5.2}
 $M(x,y)=3y\cos x+4xe^x+2x^2e^x$;\;
@@ -2186,21 +2114,21 @@ Therefore, $\dst{x^3\over3}+xy^2=c$.
 
 
 \exer{2.5.30}
-{\bf (a)}
+{\bfseries (a)}
 Exactness requires that
 $N_x(x,y)=M_y(x,y)=\dst{\partial\over\partial
 y}(x^3y^2+2xy+3y^2)=2x^3y+2x+6y$.
  Hence, $N(x,y)=\dst{x^4y\over4}+x^2+6xy+g(x)$,
 where $g$ is  differentiable.
 
-{\bf (b)}
+{\bfseries (b)}
 Exactness requires that
 $N_x(x,y)=M_y(x,y)=\dst{\partial\over\partial y}(\ln xy+2y\sin
 x)=\dst{1\over y}+2\sin x$.
  Hence, $N(x,y)=\dst{x\over y}-2\cos x+g(x)$,
 where $g$ is  differentiable.
 
-{\bf (c)}
+{\bfseries (c)}
 Exactness requires that
 $N_x(x,y)=M_y(x,y)=\dst{\partial\over\partial y}(x\sin x+y\sin
 y)=y\cos y+\sin y$.
@@ -2314,7 +2242,7 @@ $N_{xx}+N_{yy}=0$.
 
 
 \exer{2.5.44}
-{\bf (a)}
+{\bfseries (a)}
 If $F(x,y)=x^2-y^2$, then $F_x(x,y)=2x$, $F_y(x,y)=-2y$,
 $F_{xx}(x,y)=2$, and $F_{yy}(x,y)=-2$.
 Therefore, $F_{xx}+F_{yy}=0$, and $G$ must satisfy
@@ -2331,7 +2259,7 @@ $\phi(y)=c$.
 Substituting this into (C) yields
 $G(x,y)=2xy+c$.
 
-{\bf (b)}
+{\bfseries (b)}
 If $F(x,y)=e^x\cos y$, then $F_x(x,y)=e^x\cos y$,
  $F_y(x,y)=-e^x\sin y$,
 $F_{xx}(x,y)=e^x\cos y$, and $F_{yy}(x,y)=-e^x\cos y$.
@@ -2347,7 +2275,7 @@ $\phi(y)=c$.
 Substituting this into (C) yields
 $G(x,y)=e^x\sin y+c$.
 
-{\bf (c)}
+{\bfseries (c)}
 If $F(x,y)=x^3-3xy^2$ , then $F_x(x,y)=3x^2-3y^2$, $F_y(x,y)=-6xy$,
 $F_{xx}(x,y)=6x$, and $F_{yy}(x,y)=-6x$.
 Therefore, $F_{xx}+F_{yy}=0$, and $G$ must satisfy
@@ -2362,7 +2290,7 @@ $\phi(y)=-y^3+c$.
 Substituting this into (C) yields
 $G(x,y)=3x^2y-y^3+c$.
 
-{\bf (d)}
+{\bfseries (d)}
 If $F(x,y)=\cos x\cosh y$, then $F_x(x,y)=-\sin x\cosh y$,
 $F_y(x,y)=\cos x\sinh y$,
 $F_{xx}(x,y)=-\cos x\cosh y$, and $F_{yy}(x,y)=\cos x\cosh y$.
@@ -2378,7 +2306,7 @@ $\phi(y)=c$.
 Substituting this into (C) yields
 $G(x,y)=-\sin x\sinh y+c$.
 
-{\bf (e)}
+{\bfseries (e)}
 If $F(x,y)=\sin x\cosh y$, then $F_x(x,y)=\cos x\cosh y$,
  $F_y(x,y)=\sin x\sinh y$,
 $F_{xx}(x,y)=-\sin x\cosh y$, and $F_{yy}(x,y)=\sin x\cosh y$.
@@ -2394,17 +2322,10 @@ $\phi(y)=c$.
 Substituting this into (C) yields
 $G(x,y)=\cos x\sinh y+c$.
 
-\newsection{6}{Integrating Factors}
-{Exact Equations}
-\currentpdfbookmark{Section 2.6}{section:2.6}
-\renewcommand{\thissection}{\sectiontitle{\,
-INTEGRATING FACTORS}}
-\thissection
-
-      \vspace*{-17.5pt}
+\section{Exact Equations}
 
 \exer{2.6.2}
-{\bf (a)} and {\bf (b)}. To show that $\mu(x,y)=\dst{1\over(x-y)^2}$
+{\bfseries (a)} and {\bfseries (b)}. To show that $\mu(x,y)=\dst{1\over(x-y)^2}$
 is an integrating
 factor for (A) and that (B) is exact, it suffices to observe that
 $\dst{{\partial \over\partial x}\left(xy\over x-y\right)}=-
@@ -2414,7 +2335,7 @@ $\dst{{\partial \over\partial y}\left(xy\over x-y\right)}=
 (C) is an implicit solution of (B). Since
 $\mu(x,y)$ is never zero, any solution of (B)  is a solution of~(A).
 
-{\bf (c)} If we interpret (A) as $-y^2+x^2y'=0$, then substituting
+{\bfseries (c)} If we interpret (A) as $-y^2+x^2y'=0$, then substituting
 $y=x$ yields $-x^2+x^2\cdot1=0$.
 
 \note{In Exercises~2.6.3--2.6.23, the given
@@ -2832,22 +2753,9 @@ $y=\dst{1\over\mu(x)}\left(c+\int
 $y_1=\dst{1\over\mu}$ is a nontrivial solution of $y'+p(x)y=0$.
 
 
-\newpage
-\thispagestyle{empty}
+\chapter{Numerical Methods}
 
-\setcounter{chapter}{3}
-\pdfbookmark[0]{Chapter 3}{chapter:3}
-\chaptertitle{Numerical Methods}
-
-\newsection{1}{Numerical Methods}{Euler's Method}
-\subpdfbookmark{Section 3.1} {section:3.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,EULER'S METHOD}}
-\thissection
-
-\vspace*{-15pt}
-
+\section{Euler's Method}
 
 
 \exer{3.1.2}
@@ -3204,19 +3112,7 @@ $y_1=2.962500000,\ y_2=2.922635828,\ y_3=2.880205639$
 \end{tabular}}
 
 
-\newpage
-
-
-
-
-\newsection{2}{Numerical Methods}
-{The Improved Euler Method and Related Methods}
-\currentpdfbookmark{Section 3.2}{section:3.2}
-\renewcommand{\thissection}{\sectiontitle{\,
-THE IMPROVED EULER METHOD AND RELATED METHODS}}
-\thissection
-
-\vspace*{-15pt}
+\section{The Improved Euler Method and Related Methods}
 
 \exer{3.2.2}
 $y_1=1.220207973,\ y_2=1.489578775\ y_3=1.819337186$
@@ -3698,16 +3594,7 @@ $E(f)=-\dst{K(b-a)h^2\over6}$; therefore the error is proportional
 to  $h^2$.
 
 
-\newsection{3}{Numerical Methods}
-{The Runge--Kutta Method}
-\currentpdfbookmark{Section 3.3}{section:3.3}
-\renewcommand{\thissection}{\sectiontitle{\,
-THE RUNGE--KUTTA METHOD}}
-\thissection
-
-\vspace{-15pt}
-
-
+\section{The Runge-Kutta Method}
 
 \exer{3.3.2}
 $y_1=1.221551366,\ y_2=1.492920208$
@@ -4148,25 +4035,10 @@ i^4-{2h^5\over3}\sum_{i=1}^n(i-1/2)^4\\
 $E(f)=-\dst{(b-a)h^4\over120}$; thus, the error is proportional to
 $h^4$.
 
-\newpage
-\thispagestyle{empty}
 
-\setcounter{chapter}{4}
-\pdfbookmark[0]{Chapter 4}{chapter:4}
-\chaptertitle{Applications of First Order Equations}
+\chapter{Applications of First Order Equations}
 
-\newsection{1}
-{Applications of First Order Equations}
-{Growth and Decay}
-\subpdfbookmark{Section 4.1} {section:4.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,GROWTH AND DECAY}}
-\thissection
-
-\vspace{-20pt}
-
-
+\section{Growth and Decay}
 
 \exer{4.1.2}
 $k\tau=\ln2$ and $\tau=2\Rightarrow k=\dst{\ln2\over2}$;
@@ -4307,18 +4179,7 @@ To make $P(T)=0$ we must take $P_0=S_0T$.
 $Q'=\dst{at\over1+btQ^2}-kQ$;\  $\lim_{t\to\infty}Q(t)=(a/bk)^{1/3}$.
 
 
-\newsection{2}{Applications of First Order Equations}
-{Cooling and Mixing}
-\currentpdfbookmark{Section 4.2}{section:4.2}
-\renewcommand{\thissection}{\sectiontitle{\,
-COOLING AND MIXING}}
-\thissection
-
-\vspace*{-12.5pt}
-
-
-
-
+\section{Cooling and Mixing}
 
 \exer{4.2.2}
 Since $T_0=100$ and $T_M=-10$, $T=-10+110e^{-kt}$. Now
@@ -4334,17 +4195,17 @@ $e^{-2k}=\dst{55\over142}$
 and $k=\dst{1\over2}\ln\dst{142\over55}$. Therefore,
 (A) $T=70+142e^{-{t\over2}\ln{142\over55}}$.
 
-{\bf (a)}
+{\bfseries (a)}
 $T(2)=70+142e^{-2\ln{142\over55}}=70+142\dst{\left(55\over142\right)^2}
 \approx91.30^\circ$F.
 
 
-{\bf (b)} Let $\tau$ be the time when
+{\bfseries (b)} Let $\tau$ be the time when
  $T(\tau)=72$, so $72=70+142e^{-{\tau\over2}\ln{142\over55}}$, or
 $e^{-{\tau\over2}\ln{142\over55}}=\dst{1\over71}$. Therefore,
 $\tau=2\dst{\ln71\over\ln{142\over55}}\approx8.99$ min.
 
-{\bf (c)}  Since (A) implies that $T>70$ for all $t>0$, the
+{\bfseries (c)}  Since (A) implies that $T>70$ for all $t>0$, the
 thermometer will never read $69^\circ$F.
 
 \exer{4.2.6}
@@ -4410,7 +4271,7 @@ $Q(0)=40\Rightarrow c=-234\times10^5$, so
 
 
 \exer{4.2.16}
-{\bf (a)} $S'=-k_m(S-T_m),\ S(0)=0$, so (A)
+{\bfseries (a)} $S'=-k_m(S-T_m),\ S(0)=0$, so (A)
 $S=T_m+(S_0-T_m)e^{-k_mt}$.
 $T'=-k(T-S)=-k\left(T-T_m-(S_0-T_m)e^{-k_mt}\right)$,
 from
@@ -4425,13 +4286,13 @@ k-k_m}(S_0-T_m)e^{(k-k_m)t}+T_0-T_m-\dst{k\over k-k_m}(S_0-T_m)$;
 $T=T_m+(T_0-T_m)e^{-kt}+\dst{k(S_0-T_m)\over
 (k-k_m)}\left(e^{-k_mt}-e^{-kt}\right)$.
 
-{\bf (b)} If $k=k_m$ (B) becomes
+{\bfseries (b)} If $k=k_m$ (B) becomes
 (B) $u'=kT_me^{kt}+k(S_0-T_m)$; $u=T_me^{kt}+k(S_0-T_m)t+c$;
 $T(0)=T_0\Rightarrow c=T_0-T_m$;
 $u=T_me^{kt}+k(S_0-T_m)t+(T_0-T_m)$;
 $T=T_m+k(S_0-T_m)te^{-kt}+(T_0-T_m)e^{-kt}$.
 
-{\bf (c)} $\lim_{t\to\infty}T(t)=\lim_{t\to\infty}S(t)=T_m$
+{\bfseries (c)} $\lim_{t\to\infty}T(t)=\lim_{t\to\infty}S(t)=T_m$
 in either  case.
 
 
@@ -4499,17 +4360,7 @@ $\dst\lim_{t\to\infty}Q(t)=2\lim_{t\to\infty}
 \dst{1\over Q_1(t)}\bigg/\left(-Q_1'(t)\over Q_1^2(t)\right)
 =-2\lim_{t\to\infty}{Q_1(t)\over Q_1'(t)}=300$.
 
-vspace*{10pt}
-
-\newsection{3}{Applications of First Order Equations}
-{Elementary Mechanics}
-\currentpdfbookmark{Section 4.3}{section:4.3}
-\renewcommand{\thissection}{\sectiontitle{\,
-ELEMENTARY MECHANICS}}
-\thissection
-
-
-\vspace*{-17.5pt}
+\section{Elementary Mechanics}
 
 \exer{4.3.2}
 The firefighter's mass is $m=\dst{192\over32}=6$ sl, so
@@ -4601,7 +4452,7 @@ $\lim_{t\to\infty}v(t)=-64$.
 
 
 \exer{4.3.12}
-{\bf (a)} $mv'=-mg-kv^2=-mg(1+\gamma^2v^2)$, where
+{\bfseries (a)} $mv'=-mg-kv^2=-mg(1+\gamma^2v^2)$, where
 $\gamma=\dst{\sqrt{k\over
 mg}}$. Therefore,(A)  $\dst{v'\over1+\gamma^2v^2}=-g$. With the
 substitution $u=\gamma v$,
@@ -4617,7 +4468,7 @@ Since $v(T)=0$, it follows that $T=\dst{1\over\gamma g}\tan^{-1}\gamma v_0
 =\dst{\sqrt{{m\over kg}}
 \tan^{-1}\left(v_0 \sqrt{{k\over mg}}\right)}$.
 
-{\bf (b)} Replacing $t$ by $t-T$ and setting $v_0=0$in the answer to
+{\bfseries (b)} Replacing $t$ by $t-T$ and setting $v_0=0$in the answer to
 the previous exercise yields
 $v =-\dst{\sqrt{mg\over k} \,
 {1-e^{-2\sqrt{gk\over m}\, (t-T)}\over {1+e^{-2\sqrt{gk\over m}\,
@@ -4625,9 +4476,9 @@ $v =-\dst{\sqrt{mg\over k} \,
 
 
 \exer{4.3.14}
-{\bf (a)} $mv'=-mg+f(|v|)$; since $s=|v|=-v$, (A) $ms'=mg-f(s)$.
+{\bfseries (a)} $mv'=-mg+f(|v|)$; since $s=|v|=-v$, (A) $ms'=mg-f(s)$.
 
-{\bf (b)} Since $f$ is increasing and $\lim_{t\to\infty}f(s)\le mg$,
+{\bfseries (b)} Since $f$ is increasing and $\lim_{t\to\infty}f(s)\le mg$,
 $mg-f(s)>0$ for all~$s$. This and (A) imply that $s$ is an increasing
 function of $t$, so either (B) $\lim_{t\to\infty}s(t)=\infty$
 or (C ) $\lim_{t\to\infty}s(t)=\overline s<\infty$. However,
@@ -4635,7 +4486,7 @@ or (C ) $\lim_{t\to\infty}s(t)=\overline s<\infty$. However,
 Consequently, $s(t)>s_0+Kt$ for all $t>0$, which contradicts (C)
 because $K>0$.
 
-{\bf (c)} There is a unique positive number $s_T$ such that
+{\bfseries (c)} There is a unique positive number $s_T$ such that
 $f(s_T)=mg$, and $s\equiv s_T$ is a constant solution of (A).
 Now suppose that $s(0)<s_T$. Then Theorem~2.3.1
 implies that (D) $s(t)<s_T$ for all $t>0$, so (A) implies that
@@ -4649,12 +4500,12 @@ $s(0)>s_T\Rightarrow\lim_{t\to\infty}s(t)=s_T$.
 
 
 \exer{4.3.16}
-{\bf (a)} (A) $mv'=-mg+k\sqrt{|v|}$; since the magnitude of the
+{\bfseries (a)} (A) $mv'=-mg+k\sqrt{|v|}$; since the magnitude of the
 resistance is 64 lb when $v=16$ ft/s, $4k=64$, so $k=16 \
 \mbox{lb$\cdot$ s}^{1/2}/\mbox{ft}^{1/2}$. Since $m=2$ and $g=32$,
 (A) becomes $2v'=-64+16\sqrt{|v|}$, or $v'=-32+8\sqrt{|v|}$.
 
-{\bf (b)} From Exercise~4.3.14\part{c}, $v_T$ is the negative
+{\bfseries (b)} From Exercise~4.3.14\part{c}, $v_T$ is the negative
 number such that $-32+8\sqrt{|v_T|}=0$; thus, $v_T=-16$ ft/s.
 
 
@@ -4678,16 +4529,7 @@ $v(T)\le v_0-\alpha T$, so $v(T) < 0$ for $T>\dst{v_0\over\alpha}$.
 This implies that the vehicle must eventually fall back to Earth,
 which contradicts the assumption that it continues to climb forever.
 
-\vspace*{3pt}
-
-\newsection{4}{Applications of First Order Equations}
-{Autonomous Second Order Equations}
-\currentpdfbookmark{Section 4.4}{section:4.4}
-\renewcommand{\thissection}{\sectiontitle{\,
-AUTONOMOUS SECOND ORDER EQUATIONS}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Autonomous Second Order Equations}
 
 \exer{4.4.1}
 $\overline y=0$ is a stable equilibrium.
@@ -4798,13 +4640,7 @@ so $\overline y$ is an unstable equilibrium of $y''+p(y)=0$.
 
 
 
-\newsection{5}{Applications of First Order Equations}
-{Applications to Curves}
-\currentpdfbookmark{Section 4.5}{section:4.5}
-\renewcommand{\thissection}{\sectiontitle{\,
-APPLICATIONS TO CURVES}}
-\thissection
-
+\section{Applications to Curves}
 
 \exer{4.5.2}
 Differentiating (A) $e^{xy}=cy$ yields (B) $(xy'+y)e^{xy}=cy'$. From
@@ -4853,28 +4689,28 @@ $y(2x+2yy')-y'(x^2+y^2-1)=0$, so $y'(y^2-x^2+1)+2xy=0$.
 From Example~4.5.6 the equation of the line tangent to the
 parabola at $(x_0,x_0^2)$ is (A) $y=-x_0^2+2x_0x$.
 
-{\bf (a)} From (A), $(x,y)=(5,9)$ is on the tangent line through
+{\bfseries (a)} From (A), $(x,y)=(5,9)$ is on the tangent line through
 $(x_0,x_0^2)$ if and only if $9=-x_0^2+10x_0$, or
 $x_0^2-10x_0+9=(x_0-1)(x_0-9)=0$. Letting $x_0=1$ in (A) yields the
 line $y=-1+2x$, tangent to the parabola at $(x_0,x_0^2)=(1,1)$.
 Letting $x_0=9$ in (A) yields the line $y=-81+18x$, tangent to the
 parabola at $(x_0,x_0^2)=(9,81)$.
 
-{\bf (b)} From (A), $(x,y)=(6,11)$ is on the tangent line through
+{\bfseries (b)} From (A), $(x,y)=(6,11)$ is on the tangent line through
 $(x_0,x_0^2)$ if and only if $11=-x_0^2+12x_0$, or
 $x_0^2-12x_0+11=(x_0-1)(x_0-11)=0$. Letting $x_0=1$ in (A) yields the
 line $y=-1+2x$, tangent to the parabola at $(x_0,x_0^2)=(1,1)$.
 Letting $x_0=11$ in (A) yields the line $y=-121+22x$, tangent to the
 parabola at $(x_0,x_0^2)=(11,21)$.
 
-{\bf (c)} From (A), $(x,y)=(-6,20)$ is on the tangent line through
+{\bfseries (c)} From (A), $(x,y)=(-6,20)$ is on the tangent line through
 $(x_0,x_0^2)$ if and only if $20=-x_0^2-12x_0$, or
 $x_0^2+12x_0+20=(x_0+2)(x_0+10)=0$. Letting $x_0=-2$ in (A) yields the
 line $y=-4-4x$, tangent to the parabola at $(x_0,x_0^2)=(-2,4)$.
 Letting $x_0=-10$ in (A) yields the line $y=-100-20x$, tangent to the
 parabola at $(x_0,x_0^2)=(-10,100)$.
 
-{\bf (d)} From (A), $(x,y)=(-3,5)$ is on the tangent line through
+{\bfseries (d)} From (A), $(x,y)=(-3,5)$ is on the tangent line through
 $(x_0,x_0^2)$ if and only if $5=-x_0^2-6x_0$, or
 $x_0^2+6x_0+5=(x_0+1)(x_0+5)=0$. Letting $x_0=-1$ in (A) yields the
 line $y=-1-2x$, tangent to the parabola at $(x_0,x_0^2)=(-1,1)$.
@@ -4882,20 +4718,20 @@ Letting $x_0=-5$ in (A) yields the line $y=-25-10x$, tangent to the
 parabola at $(x_0,x_0^2)=(-5,25)$.
 
 \exer{4.5.15}
-{\bf (a)} If $(x_0,y_0)$ is any point on the circle such that
+{\bfseries (a)} If $(x_0,y_0)$ is any point on the circle such that
 $x_0\ne\pm1$ (and therefore $y_0\ne0$), then differentiating (A)
 yields $2x_0+2y_0y_0'=0$, so $y_0'=-\dst{x_0\over y_0}$. Therefore,the
 equation of the tangent line is $y=y_0-\dst{x_0\over y_0}(x-x_0)$.
 Since $x_0^2+y_0^2=1$, this is equivalent to (B).
 
-{\bf (b)}
+{\bfseries (b)}
 Since $y'=-\dst{x_0\over y_0}$ on the tangent line, we can rewrite (B)
 as $y-xy'=\dst{1\over y_0}$. Hence (F) $\dst{1\over(y-xy')^2}=y_0^2$
 and (G) $x_0^2=1-y_0^2=\dst{(y-xy')^2-1\over(y-xy')^2}$. Since
 $(y')^2=\dst{x_0^2\over y_0^2}$, (F) and (G) imply that
 $(y')^2=(y-xy')^2-1$, which implies (C).
 
-{\bf (c)}
+{\bfseries (c)}
 Using the quadratic formula to solve (C) for $y'$
 yields
 $$
@@ -4917,12 +4753,12 @@ y_0}>0$, so (H) reduces to (D),
 or  $\pm=+$ if $\dst{x-x_0\over
 y_0}<0$, so (H) reduces to (E).
 
-{\bf (d)} Differentiating (A)
+{\bfseries (d)} Differentiating (A)
 yields $2x+2yy'=0$, so $y'=-\dst{x\over y}$ on either semicircle.
 Since (D) and (E) both reduce to $y'=\dst{xy\over1-x^2}=-\dst{x\over y
 }$ (since $x^2+y^2=1$) on both semicircles, the conclusion follows.
 
-{\bf (e)} From (D) and (E) the slopes of tangent lines from (5,5)
+{\bfseries (e)} From (D) and (E) the slopes of tangent lines from (5,5)
 tangent to the circle are
 $y'=\dst{25\pm\sqrt49\over24}=\dst{3\over4},\dst{4\over3}$. Therefore,
 tangent lines are $y=5+\dst{3\over4}(x-5)=\dst{1+3x/5\over4/5}$ and
@@ -4930,18 +4766,18 @@ $y=5+\dst{4\over3}(x-5)=\dst{1-4x/5\over-3/5}$, which intersect the
 circle at $(-3/5,4/5)$ $(4/5,-3/5)$, respectively. (See (B)).
 
 \exer{4.5.16}
-{\bf (a)} If $(x_0,y_0)$ is any point on the parabola such that
+{\bfseries (a)} If $(x_0,y_0)$ is any point on the parabola such that
 $x_0>0$ (and therefore $y_0\ne0$), then differentiating (A) yields
 $1=2y_0y_0'$, so $y_0'=\dst{1\over 2y_0}$. Therefore,the equation of
 the tangent line is $y=y_0+\dst{1\over2y_0}(x-x_0)$. Since
 $x_0=y_0^2$, this is equivalent to (B).
 
-{\bf (b)}
+{\bfseries (b)}
 Since $y'=\dst{1\over2y_0}$ on the tangent line, we can rewrite (B) as
 $\dst{y_0\over2}=y-xy'$. Substituting this into (B) yields
 $y=(y-xy')+\dst{x\over4(y-xy')}$, which implies~(C).
 
-{\bf (c)}
+{\bfseries (c)}
 Using the quadratic formula to solve (C) for $y'$ yields
 $$
 y'=\dst{y\pm\sqrt{y^2-x}\over2x}
@@ -4957,7 +4793,7 @@ only if we choose the ``$\pm$" so that $\pm\dst{\left|y_0-{x\over y_0}
 choose $\pm=+$ if $x>y_0^2=x_0$, so (F) reduces to (D), or $\pm=-$ if
 $x<y_0^2=x_0$, so (F) reduces to (E).
 
-{\bf (d)} Differentiating (A) yields $1=2yy'$, so $y'=\dst{1\over2y}$
+{\bfseries (d)} Differentiating (A) yields $1=2yy'$, so $y'=\dst{1\over2y}$
 on either half of the parabola. Since (D) and (E) both reduce to this
 if $x=y^2$, the conclusion follows.
 
@@ -5063,28 +4899,12 @@ $u=\dst{y\over x}$ yields $\dst{{1\over2}\ln (x^2+y^2)+(\tan\alpha)
 \tan^{-1}{y\over x}=k}$.
 
 
+\chapter{Linear Second Order Equations}
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-\thispagestyle{empty}
-\setcounter{chapter}{5}
-\pdfbookmark[0]{Chapter 5}{chapter:5}
-\chaptertitle{Linear Second Order Equations}
-
-\newsection{1} {Linear Second  Order Equations}
-{Homogeneous Linear Equations}
-\subpdfbookmark{Section 5.1} {section:5.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,HOMOGENEOUS LINEAR EQUATIONS}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Homogeneous Linear Equations}
 
 \exer{5.1.2}
-{\bf (a)} If $y_1=e^x\cos x$, then $y_1'=e^x(\cos x -\sin x)$  and
+{\bfseries (a)} If $y_1=e^x\cos x$, then $y_1'=e^x(\cos x -\sin x)$  and
 $y_1''=e^x(\cos x-\sin x-\sin x-\cos x)=-2e^x\sin x$, so
 $y_1''-2y_1'+2y_1=e^x(-2\sin x-2\cos x+2\sin x+2\cos x)=0$. If
 $y_2=e^x\sin x$, then
@@ -5092,7 +4912,7 @@ $y_2'=e^x(\sin x+\cos x)$ and
 $y_2''=e^x(\sin x+\cos x+\cos x-\sin x)=2e^x\cos x$, so
 $y_2''-2y_2'+2y_2=e^x(2\cos x-2\sin x-2\cos x+2\sin x)=0$.
 
-{\bf (b)} If (B) $y=e^x(c_1\cos x+c_2\sin x)$, then
+{\bfseries (b)} If (B) $y=e^x(c_1\cos x+c_2\sin x)$, then
 $$
 y'=e^x\left(c_1(\cos x-\sin x)+c_2(\sin x+\cos x)\right)
 \eqno{\rm (C)}
@@ -5108,18 +4928,18 @@ y''-2y'+2y&=&c_1e^x(-2\sin x-2\cos x+2\sin x+2\cos x)\\
 &&+c_2e^x(2\cos x-2\sin x-2\cos x+2\sin x)=0.
 \end{eqnarray*}
 
-{\bf (c)} We must choose $c_1$ and $c_2$ in (B) so that $y(0)=3$
+{\bfseries (c)} We must choose $c_1$ and $c_2$ in (B) so that $y(0)=3$
 and $y'(0)=-2$. Setting $x=0$ in (B) and (C) shows that
 $c_1=3$ and $c_1+c_2=-2$, so $c_2=-5$. Therefore,
  $y=e^x(3\cos x-5\sin x)$.
 
-{\bf (d)} We must choose $c_1$ and $c_2$ in (B) so that $y(0)=k_0$
+{\bfseries (d)} We must choose $c_1$ and $c_2$ in (B) so that $y(0)=k_0$
 and $y'(0)=k_1$. Setting $x=0$ in (B) and (C) shows that
 $c_1=k_0$ and $c_1+c_2=k_1$, so $c_2=k_1-k_0$.  Therefore,
 $y=e^x\left(k_0\cos x+(k_1-k_0)\sin x\right)$.
 
 \exer{5.1.4}
-{\bf (a)} If $y_1=\dst{1\over x-1}$, then $y_1'=-\dst{1\over(x-1)^2}$
+{\bfseries (a)} If $y_1=\dst{1\over x-1}$, then $y_1'=-\dst{1\over(x-1)^2}$
 and
 $y_1''=\dst{2\over(x-1)^3}$, so
 \begin{eqnarray*}
@@ -5138,7 +4958,7 @@ the intervals $(-\infty,-1)$, $(-1,1)$, and $(1,\infty)$ is
 \newpage
 
 
-{\bf (b)} Differentiating (B) yields (C)
+{\bfseries (b)} Differentiating (B) yields (C)
 $y'=-\dst{c_1\over(x-1)^2}-\dst{c_2\over(x+1)^2}$.
  We must choose $c_1$ and $c_2$ in (B) so that $y(0)=-5$
 and $y'(0)=1$. Setting $x=0$ in (B) and (C) shows that
@@ -5146,7 +4966,7 @@ $-c_1+c_2=-5,\ -c_1-c_2=1$. Therefore,$c_1=2$ and $c_2=-3$,
 so $y=\dst{{2\over x-1}-{3\over x+1}}$ on $(-1,1)$.
 
 
-{\bf (d)}
+{\bfseries (d)}
 The Wronskian of  $\{y_1,y_2\}$ is
 $$
 W(x)=\left| \begin{array}{cc}
@@ -5410,7 +5230,7 @@ $y=k_0\cos\omega(x-x_0)+\dst{k_1\over\omega}\sin\omega(x-x_0)$.
 
 
 \exer{5.1.42}
-{\bf (a)}
+{\bfseries (a)}
  If $y_1=x^2$, then $y_1'=2x$ and $y_1''=2$, so
 $x^2y_1''-4xy_1'+6y_1=x^2(2)-4x(2x)+6x^2=0$
 for $x$ in $(-\infty,\infty)$.
@@ -5421,7 +5241,7 @@ which is nonconstant on $(-\infty,0)$ and $(0,\infty)$, so
 Theorem~5.1.6 implies that  $\{y_1,y_2\}$ is a fundamental
 set of solutions of (A) on each of these intervals.
 
-{\bf (b)} Theorem~5.1.6 and \part{a} imply that $y$
+{\bfseries (b)} Theorem~5.1.6 and \part{a} imply that $y$
 satisfies (A) on $(-\infty,0)$ and on $(0,\infty)$ if and only if
 $y=\dst{\left\{\begin{array}{rr}
 a_1x^2+a_2x^3,&x> 0,\\
@@ -5456,12 +5276,12 @@ c_1x^2+c_2x^3,&x\ge 0,\\
 c_1x^2+c_3x^3,&x<0.
 \end{array}\right.}$
 
-{\bf (c)} We have shown that $y(0)=y'(0)=0$ for any choice
+{\bfseries (c)} We have shown that $y(0)=y'(0)=0$ for any choice
 of $c_1$ and $c_2$ in (C). Therefore,the given initial value problem
 has a solution if and only if $k_0=k_1=0$, in which case every
 function of the form (C) is a solution.
 
-{\bf (d)}  If $x_0>0$, then $c_1$ and $c_2$ in (C) are uniquely
+{\bfseries (d)}  If $x_0>0$, then $c_1$ and $c_2$ in (C) are uniquely
 determined by $k_0$ and $k_1$, but $c_3$ can be chosen arbitrarily.
 Therefore,(B) has a unique solution on
 $(0,\infty)$, but infinitely many solutions on $(-\infty,\infty)$.
@@ -5472,7 +5292,7 @@ $(-\infty,0)$, but infinitely many solutions on $(-\infty,\infty)$.
 
 
 \exer{5.1.44}
-{\bf (a)}
+{\bfseries (a)}
  If $y_1=x^3$, then $y_1'=3x^2$ and $y_1''=6x$, so
 $x^2y_1''-6xy_1'+12y_1=x^2(6x)-6x(3x^2)+12x^3=0$
 for $x$ in $(-\infty,\infty)$.
@@ -5484,7 +5304,7 @@ is nonconstant on $(-\infty,0)$ and $(0,\infty)$, so
 Theorem~5.1.6 implies that  $\{y_1,y_2\}$ is a fundamental
 set of solutions of (A) on each of these intervals.
 
-{\bf (b)}
+{\bfseries (b)}
  Theorem~5.1.2 and \part{a} imply that $y$ satisfies (A) on
 $(-\infty,0)$ and on $(0,\infty)$ if and only if
 (C) $y=\dst{\left\{\begin{array}{rr}
@@ -5512,13 +5332,13 @@ if }x>0,\\ 3b_1x+4b_2x^2,&\mbox{ if }x<0,\end{array}\right.}$ it
 follows that $y''(0)=\dst{\lim_{x\to0}{y'(x)-y'(0)\over x-0}}=0$.
 Therefore,(B) is a solution of (A) on $(-\infty,\infty)$.
 
-{\bf (c)} We have shown that $y(0)=y'(0)=0$ for any choice
+{\bfseries (c)} We have shown that $y(0)=y'(0)=0$ for any choice
 of $a_1$, $a_2$, $b_1$, and $b_2$ in (B). Therefore,the given initial
 value
 problem has a solution if and only if $k_0=k_1=0$, in which case every
 function of the form (B) is a solution.
 
-{\bf (d)}  If $x_0>0$, then $a_1$ and $a_2$ in (B) are uniquely
+{\bfseries (d)}  If $x_0>0$, then $a_1$ and $a_2$ in (B) are uniquely
 determined by $k_0$ and $k_1$, but $b_1$ and $b_2$ can be chosen
 arbitrarily. Therefore,(C) has a unique solution on
 $(0,\infty)$, but infinitely many solutions on $(-\infty,\infty)$.
@@ -5528,17 +5348,7 @@ arbitrarily. Therefore,(C) has a unique solution on
 $(-\infty,0)$, but infinitely many solutions on $(-\infty,\infty)$.
 
 
-\newsection{2}{Linear Second Order Equations}
-{Constant Coefficient Homogeneous Equations}
-\currentpdfbookmark{Section 5.2}{section:5.2}
-\renewcommand{\thissection}{\sectiontitle{\,
-CONSTANT COEFFICIENT HOMOGENEOUS EQUATIONS}}
-\thissection
-
-\vspace*{-17.5pt}
-
-
-
+\section{Constant Coefficient Homogeneous Equations}
 
 \exer{5.2.2}
 $p(r)=r^2-4r+5=(r-2)^2+1$;\;
@@ -5776,15 +5586,7 @@ $ay''+by'+cy=0$, by Theorem~5.2.1,(c).
 
 
 
-\newsection{3}{Linear Second Order Equations}
-{Nonhomogeneous Linear Equations}
-\currentpdfbookmark{Section 5.3}{section:5.3}
-\renewcommand{\thissection}{\sectiontitle{\,
-NONHOMOGENEOUS LINEAR EQUATIONS}}
-\thissection
-
-
-\vspace*{-17.5pt}
+\section{Nonhomogeneous Linear Equations}
 
 \exer{5.3.2}
 The characteristic polynomial of the complementary equation is
@@ -6042,14 +5844,7 @@ p(x)(y_2+y_p)'+q(x)(y_2+y_p)=f$. Now subtract (A) from (C)
 to see that $y_2''+p(x)y_2'+q(x)y_2=0$.
 
 
-\newsection{4}{Linear Second Order Equations I}
-{The Method of Undetermined Coefficients I}
-\currentpdfbookmark{Section 5.4}{section:5.4}
-\renewcommand{\thissection}{\sectiontitle{\,
-THE METHOD OF UNDETERMINED COEFFICIENTS I}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{The Method of Undetermined Coefficients I}
 
 \exer{5.4.2}
 If $y=ue^{-3x}$, then
@@ -6342,15 +6137,7 @@ $y=\dst{{(-1)^kk!e^{\alpha x}\over \alpha^{k+1}}\sum_{r=0}^k{(-\alpha
 x)^r\over r!}+c}$.
 
 
-\newsection{5}{Linear Second Order Equations}
-{The Method of Undetermined Coefficients II}
-\currentpdfbookmark{Section 5.5}{section:5.5}
-\renewcommand{\thissection}{\sectiontitle{\,
-THE METHOD OF UNDETERMINED COEFFICIENTS II}}
-\thissection
-
-
-\vspace*{-17.5pt}
+\section{The Method of Undetermined Coefficients II}
 
 \exer{5.5.2}
 Let
@@ -7109,15 +6896,7 @@ x+x(1+x)\sin x$ and $y=e^{-x}\left[x\cos x+x(1+x)\sin x\right]+c$.
 
 
 
-\newsection{6}{Linear Second Order Equations}
-{Reduction of Order}
-\currentpdfbookmark{Section 5.6}{section:5.6}
-\renewcommand{\thissection}{\sectiontitle{\,
-REDUCTION OF ORDER}}
-\thissection
-
-
-\vspace*{-5pt}
+\section{Reduction of Order}
 
 \note{The term $uy_1''$ is indicated by ``$\cdots$" in some of the
 following solutions, where $y_1''$ is complicated. Since this term
@@ -7447,14 +7226,7 @@ solution of (A) on $(a,b)$.
 
 
 
-\newsection{7}{Linear Second Order Equations}
-{Variation of Parameters}
-\currentpdfbookmark{Section 5.7}{section:5.7}
-\renewcommand{\thissection}{\sectiontitle{\,
-VARIATION OF PARAMETERS}}
-\thissection
-
-\vspace*{-15pt}
+\section{Variation of Parameters}
 
 \exer{5.7.2}
 (A) $y_p=u_1\cos2x+u_2\sin2x$;
@@ -7818,22 +7590,9 @@ y'&=&y_p'+k_0\sinh x+k_1\cosh x\\
 \end{eqnarray*}
 
 
-\newpage
-\thispagestyle{empty}
+\chapter{Applications of Linear Second Order Equations}
 
-\setcounter{chapter}{6}
-\pdfbookmark[0]{Chapter 6}{chapter:6}
-\chaptertitle{Applications of Linear Second Order Equations}
-
-\newsection{1} {Applications of Linear Second  Order Equations}
-{Spring Problems I}
-\subpdfbookmark{Section 6.1} {section:6.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,SPRING PROBLEMS I}}
-\thissection
-
- \vspace*{-15pt}
+\section{Spring Problems I}
 
 \exer{6.1.2}
 Since $\dst{k\over m}=\dst{g\over\Delta l}=\dst{32\over.1}=320$ the
@@ -7985,7 +7744,7 @@ R={1\over\omega_0} \sqrt{(\omega_0y_0)^2+(v_0)^2};\;
 \sqrt{(\omega_0y_0)^2+(v_0)^2}}\,.
 $$
 
-{\bf Discussion~6.1.1}
+{\bfseries Discussion~6.1.1}
 In Exercises~19, 20, and 21 we use
 the fact that in a spring--mass system with mass $m$ and spring
 constant $k$ the period of the motion is $T=2\pi\dst{\sqrt{m\over
@@ -8005,16 +7764,7 @@ k_2}}=3$, $k_1=9k_2$.
 
 
 
-\newsection{2} {Applications of Linear Second  Order Equations}
-{Spring Problems II}
-\currentpdfbookmark{Section 6.2}{section:6.2}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,SPRING PROBLEMS II }}
-\thissection
-
-\vspace*{-15pt}
-
+\section{Spring Problems II}
 
 \exer{6.2.2}
 Since $k=\dst{mg\over\Delta l}=\dst{16\over3.2}=5$ the equation of
@@ -8176,15 +7926,7 @@ $c_2=v_0-r_1y_0$. Therefore,
 $y=e^{r_1t}\dst{\left(y_0+(v_0-r_1y_0)t\right)}$.
 
 
-\newsection{3} {Applications of Linear Second  Order Equations}
-{The RLC Circuit}
-\currentpdfbookmark{Section 6.3}{section:6.3}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,THE RLC CIRCUIT}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{The RLC Circuit}
 
 \exer{6.3.2}
 $\dst{1\over20}Q''+2Q'+100Q=0$;\, $Q''+40Q'+2000Q=0$;\,
@@ -8261,16 +8003,7 @@ $I_p$ is
 $\sigma(\omega)=\dst{\sqrt{U^2+V^2}\over R}$.
 
 
-\newsection{4} {Applications of Linear Second  Order Equations}
-{Motion Under a Central Force}
-\currentpdfbookmark{Section 6.4}{section:6.4}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,MOTION UNDER A CENTRAL FORCE}}
-\thissection
-
-
-\vspace*{-17.5pt}
+\section{Motion Under a Central Force}
 
 \exer{6.4.2}
 Let $h=r_0^2\theta_0'$; then $\rho=\dst{h^2\over k}$. Since
@@ -8300,13 +8033,13 @@ r^4}+{1\over r^3}\right)$.
 
 
 \exer{6.4.6}
-{\bf (a)} With $f(r)=-\dst{mk\over r^3}$, Eqn.~6.4.11 becomes
+{\bfseries (a)} With $f(r)=-\dst{mk\over r^3}$, Eqn.~6.4.11 becomes
 (A) $\dst{d^2u\over d\theta^2}+\left(1-{k\over h^2}\right)u=0$. The
 initial conditions imply that $u(\theta_0)=\dst{1\over r_0}$ and
 $\dst{du\over d\theta}(\theta_0)=-\dst{r_0'\over h}$ (see
 Eqn.~(6.4.)
 
-{\bf (b)} Let $\gamma=\left|1-\dst{k\over h^2}\right|^{1/2}$. (i) If
+{\bfseries (b)} Let $\gamma=\left|1-\dst{k\over h^2}\right|^{1/2}$. (i) If
 $h^2<k$, then (A) becomes $\dst{d^2u\over d\theta^2}-\gamma^2u=0$, and
 the solution of the initial value problem for $u$ is $u=\dst{1\over
 r_0}\cosh\gamma(\theta-\theta_0)-\dst{r_0'\over\gamma
@@ -8325,21 +8058,9 @@ h}\sin\gamma(\theta-\theta_0)$; therefore $r=r_0\left(
 h}\sin\gamma(\theta-\theta_0)\right)^{-1}$.
 
 
-\newpage
-\thispagestyle{empty}
-\setcounter{chapter}{7}
-\pdfbookmark[0]{Chapter 7}{chapter:7}
-\chaptertitle{Series Solutions of Linear Second Equations}
+\chapter{Series Solutions of Linear Second Equations}
 
-\newsection{1} {Series Solutions of Linear Second Equations}
-{Review of Power Series}
-\subpdfbookmark{Section 7.1} {section:7.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,REVIEW OF POWER SERIES}}
-\thissection
-
-\vspace*{-12.5pt}
+\section{Review of Power Series}
 
 \exer{7.1.2}
 From Theorem~7.1.3, $\sum_{m=0}^\infty b_mz^m$ converges
@@ -8484,15 +8205,7 @@ $b_1=2(r+2)(r+4)a_1$
 $b_n=2(n+r+1)(n+r+3)a_n+(n+r-3)(n+r)a_{n-2}$,
 $n\ge2$.
 
-\newsection{2} {Series Solutions of Linear Second Order Equations}
-{Series Solutions Near an Ordinary Point I}
-\currentpdfbookmark{Section 7.2}{section:7.2}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,SERIES SOLUTIONS NEAR AN ORDINARY POINT I}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Series Solutions Near an Ordinary Point I}
 
 \exer{7.2.2}
 $p(n)=n(n-1)+2n-2=(n+2)(n-1)$;
@@ -8798,16 +8511,7 @@ result of Exercise~7.2.38\part{c} yields
 $y=\dst{a_0\sum_{m=0}^\infty(-1)^m{x^{6m}\over\prod_{j=0}^{m-1}(6j+5)}+
 a_1\sum_{m=0}^\infty(-1)^m{x^{6m+1}\over6^mm!}}$.
 
-\newsection{3} {Series Solutions of Linear Second Order Equations}
-{Series Solutions Near an Ordinary Point II}
-\currentpdfbookmark{Section 7.3}{section:7.3}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,SERIES SOLUTIONS NEAR AN ORDINARY POINT II}}
-\thissection
-
-\vspace*{-17.5pt}
-
+\section{Series Solutions Near an Ordinary Point II}
 
 \exer{7.3.2}
 If $y=\dst\sum_{n=0}^\infty a_nx^n$, then
@@ -9287,17 +8991,7 @@ $y=\dst{1+{3\over2}(x-1)^2+{1\over6}(x-1)^3-{1\over8}(x-1)^5+\cdots}$.
 
 
 
-\newsection{4} {Series Solutions of Linear Second Order Equations}
-{Regular Singular Points; Euler Equations}
-\currentpdfbookmark{Section 7.4}{section:7.4}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,REGULAR SINGULAR POINTS; EULER EQUATIONS}}
-\thissection
-
-
-
-
+\section{Regular Singular Points; Euler Equations}
 
 \exer{7.4.2}
 $p(r)=r(r-1)-7r+7=(r-7)(r-1)$; $y=c_1x+c_2x^7$.
@@ -9395,15 +9089,7 @@ $t=0_0$.
 
 
 
-\newsection{5} {Series Solutions of Linear Second Order Equations}
-{The Method of Frobenius I}
-\currentpdfbookmark{Section 7.5}{section:7.5}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,The Method of Frobenius I }}
-\thissection
-
-\vspace*{-17.5pt}
+\section{The Method of Frobenius I}
 
 \exer{7.5.2}
 $p_0(r)=r(3r-1)$;
@@ -9944,17 +9630,7 @@ $\dst{p_2(r-2)\over p_0(r)}={1\over3}={\alpha_2\over\alpha_0}$;
 $y_1=\dst{x\over3+2x+x^2}$; $y_2=\dst{x^{1/4}\over3+2x+x^2}$.
 
 
-\newsection{6} {Series Solutions of Linear Second Order Equations}
-{The Method of Frobenius II}
-\currentpdfbookmark{Section 7.6}{section:7.6}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,THE METHOD OF FROBENIUS II }}
-\thissection
-
-
-\vspace*{-17.5pt}
-
+\section{The Method of Frobenius II}
 
 \exer{7.6.2}
 $p_0(r)=(r+1)^2$;
@@ -10771,16 +10447,7 @@ $y_1=\dst{x\over(1-x)^2}$; $y_2=\dst{x\ln x\over(1-x)^2}$.
 See the proofs of Theorems~7.6.1 and 7.6.2.
 
 
-\newsection{7} {Series Solutions of Linear Second Order Equations}
-{The Method of Frobenius III}
-\currentpdfbookmark{Section 7.7}{section:7.7}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,THE METHOD OF FROBENIUS III }}
-\thissection
-
-
-\vspace*{-17.2pt}
+\section{The Method of Frobenius III}
 
 \exer{7.7.2}
 $p_0(r)=r(r-1)$;
@@ -10997,7 +10664,7 @@ $y_2=\dst\left(1-{4\over3}x+{5\over3}x^2-{40\over21}x^3
 +{40\over21}x^4-{32\over21}x^5+{16\over21}x^6\right)$.
 
 
-{\bf Note: in the solutions to Exercises~7.7.23--7.7.40,
+{\bfseries Note: in the solutions to Exercises~7.7.23--7.7.40,
 $z=x^{r_2}\sum_{m=0}^{k-1}a_{2m}(r_2)x^{2m}$.}
 
 
@@ -11256,22 +10923,9 @@ p_j(m+r_1-j)c_{m-j}$. Since $c_k=a_k(r_2)$, (B) implies that
 $c_m=a_k(r_2)a_m(r_1)$ for all $m\ge0$, which implies the conclusion.
 
 
-\newpage
-\thispagestyle{empty}
+\chapter{Laplace Transforms}
 
-\setcounter{chapter}{8}
-\pdfbookmark[0]{Chapter 8}{chapter:8}
-\chaptertitle{Laplace Transforms}
-
-\newsection{1} {Laplace Transforms}
-{Introduction to the Laplace Transform}
-\subpdfbookmark{Section 8.1} {section:8.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,INTRODUCTION TO THE LAPLACE TRANSFORM}}
-\thissection
-
-\vspace*{-17.2pt}
+\section{Introduction to the Laplace Transform}
 
 \exer{8.1.2} \part{a} $\cosh t\sin t=\dst{{1\over
 2}\left(e^t\sin t+e^{-t}\sin t\right)}
@@ -11425,18 +11079,7 @@ e^{-st}\sin t\,dt=
 {1\over(s^2+1)(1-e^{-\pi s})}$.
 
 
-\newpage
-
-\newsection{2} {Laplace Transforms}
-{The Inverse Laplace Transform}
-\currentpdfbookmark{Section 8.2}{section:8.2}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,THE INVERSE LAPLACE TRANSFORM}}
-\thissection
-
-\vspace*{-17.5pt}
-
+\section{The Inverse Laplace Transform}
 
 \exer{8.2.2}
 \part{a}
@@ -12047,15 +11690,7 @@ method can be used to determine the coefficient of $1/(s-s_1)$
 in the partial fraction expansion even if some of the other zeros
 of the denominator are repeated or complex.
 
-\newsection{3} {Laplace Transforms}
-{Solution of Initial Value Problems}
-\currentpdfbookmark{Section 8.3}{section:8.3}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,SOLUTION OF INITIAL VALUE PROBLEMS}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Solution of Initial Value Problems}
 
 \exer{8.3.2}
 $$
@@ -12484,16 +12119,7 @@ $\dst y_2={\cal L}^{-1}\left(a\over as^2+bs+c\right)$
 satisfies the initial conditions $y_1(0)=0$, $y_1'(0)=1$.
 
 
-\newsection{4} {Laplace Transforms}
-{The Unit Step Function}
-\currentpdfbookmark{Section 8.4}{section:8.4}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,THE UNIT STEP FUNCTION}}
-\thissection
-
-\vspace*{-17.5pt}
-
+\section{The Unit Step Function}
 
 \exer{8.4.2}
 $$
@@ -12765,18 +12391,8 @@ s}\left[{e^{-s}\over1+e^{-s}}-{2e^{-s}\over(1+e^{-s})^2}\right]=
 {1\over s}{(1-e^s)\over(1+e^s)^2}$.
 
 
-\newsection{5} {Laplace Transforms}
-{Constant Coeefficient Equations with Piecewise Continuous Forcing
+\section{Constant Coefficient Equations with Piecewise Continuous Forcing
 Functions}
-\currentpdfbookmark{Section 8.5}{section:8.5}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,CONSTANT COEEFFICIENT EQUATIONS WITH PIECEWISE CONTINUOUS FORCING \\
-\hspace*{14pt}  FUNCTIONS}}
-\thissection
-
-\vspace*{-17.5pt}
-
 
 \exer{8.5.2}
  $y''+y=3+u(t-4)(2t-8),\ y(0)=1,\ y'(0)=0$.
@@ -13404,16 +13020,7 @@ $y''$ has limits from the left at  $t_1,\dots,t_n$.
 
 %###
 
-\newsection{6} {Laplace Transforms}
-{Convolution}
-\currentpdfbookmark{Section 8.6}{section:8.6}
-
-\renewcommand{\thissection}{\sectiontitle
-{\, CONVOLUTION}}
-\thissection
-
-
-\vspace*{-17.6pt}
+\section{Convolution}
 
 \exer{8.6.2}
 \part{a}
@@ -13713,18 +13320,7 @@ Therefore,
 (B) imply that $h'(t_1)=0$.
 
 
-\newsection{7} {Laplace Transforms}
-{Constant Coefficient Equations with Impulses}
-\currentpdfbookmark{Section 8.7}{section:8.7}
-
-\renewcommand{\thissection}{\sectiontitle
-{\, CONSTANT COEFFICIENT EQUATIONS WITH IMPULSES}}
-\thissection
-
-
-
-\vspace*{-17.5pt}
-
+\section{Constant Coefficient Equations with Impulses}
 
 \exer{8.7.2}
  $(s^2+s-2)\hat Y(s)=\dst-{10\over s+1}+(-9+7s)+7$;
@@ -13955,24 +13551,9 @@ $y=\dst\sum_{k=1}^\infty u(t-k\pi)w(t-k\pi)=
 (m=0,1,\dots)}$.
 
 
+\chapter{Linear Higher Order Equations}
 
-\newpage
-\thispagestyle{empty}
-\setcounter{chapter}{9}
-\pdfbookmark[0]{Chapter 9}{chapter:9}
-\chaptertitle{Linear Higher Order Equations}
-
-\vspace*{-17.5pt}
-
-\newsection{1} {Linear Higher Order Equations}
-{Introduction to Linear Higher Order Equations}
-\subpdfbookmark{Section 9.1} {section:9.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,INTRODUCTION TO LINEAR HIGHER ORDER EQUATIONS}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Introduction to Linear Higher Order Equations}
 
 \exer{9.1.2} From Example~9.1.1,
 $y=\dst c_1x^2+c_2x^3+\dst{c_3\over x}$
@@ -15340,17 +14921,7 @@ which is equivalent to
 
 
 
-\newsection{2} {Linear Higher Order Equations}
-{Higher Order Constant Coefficient Homogeneous Equations}
-\currentpdfbookmark{Section 9.2}{section:9.2}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,HIGHER ORDER CONSTANT COEFFICIENT HOMOGENEOUS EQUATIONS}}
-\thissection
-
-\vspace*{-17.5pt}
-
-
+\section{Higher Order Constant Coefficient Homogeneous Equations}
 
 \exer{9.2.2}
 $p(r)=r^4+8r^2-9=(r-1)(r+1)(r^2+9)$;
@@ -15813,17 +15384,7 @@ is a fundamental set of solutions.
 
 
 
-\newsection{3} {Linear Higher Order Equations}
-{Undetermined Coefficients for Higher Order  Equations}
-\currentpdfbookmark{Section 9.3}{section:9.3}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,UNDETERMINED COEFFICIENTS FOR HIGHER ORDER  EQUATIONS}}
-\thissection
-
-\vspace*{-17.5pt}
-
-
+\section{Undetermined Coefficients for Higher Order  Equations}
 
 \exer{9.3.2} If $y=u^{-3x}$, then $y'''-2y''-5y'+6y=e^{-3x}[
 (u'''-11u''+34u'-24u)-2(u''-6u'+9u)-5(u'-3u)+6u]
@@ -16430,18 +15991,7 @@ $2 +e^x\left[(1+x)\cos x-\sin x-1\right]$.
 
 
 
-\newsection{4} {Linear Higher Order Equations}
-{Variation of Parameters for Higher Order  Equations}
-\currentpdfbookmark{Section 9.4}{section:9.4}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,VARIATION OF PARAMETERS  FOR HIGHER ORDER  EQUATIONS}}
-\thissection
-
-
-
-\vspace*{-17.5pt}
-
+\section{Variation of Parameters for Higher Order  Equations}
 
 \exer{9.4.2}
 $W=\left|\begin{array}{cccc}
@@ -17261,31 +16811,9 @@ $y_p=\dst\int_{x_0}^x
 F(t)\,dt$.
 
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-\thispagestyle{empty}
+\chapter{Linear Systems of Differential Equations}
 
-\setcounter{chapter}{10}
-\pdfbookmark[0]{Chapter 10}{chapter:10}
-\chaptertitle{Linear Systems of Differential Equations}
-
-
-
-\newsection{1} {Linear Systems of Differential Equations}
-{Introduction to Systems of Differential Equations}
-\subpdfbookmark{Section 10.1} {section:10.1}
-
-
-
-
-\renewcommand{\thissection}{\sectiontitle
-{\, INTRODUCTION TO SYSTEMS OF DIFFERENTIAL EQUATIONS }}
-\thissection
-
-\vspace*{-17.5pt}
-
+\section{Introduction to Systems of Differential Equations}
 
 \exer{10.1.2}
 $Q_1'=(\mbox{rate in})_1-(\mbox{rate out})_1$ and $Q_2'=(\mbox{rate
@@ -17320,7 +16848,7 @@ imply that (F) $Q_2'=\dst{5+{1\over50+t}Q_1-{4\over100+3t}Q_2}$. Now
 
 
 \exer{10.1.4}
-$m{\bf X}''=-\alpha{\bf X'}-mgR^2\dst{{\bf X}\over\|{\bf X}\|^3}$;
+$m{\bfseries X}''=-\alpha{\bfseries X'}-mgR^2\dst{{\bfseries X}\over\|{\bfseries X}\|^3}$;
 see Example~10.1.3.
 
 
@@ -17344,16 +16872,7 @@ y_{2,i+1}&=&y_{2i}+{h\over2}(J_{1i}+J_{2i}).
 
 \newpage
 
-\newsection{2} {Linear Systems of Differential  Equations}
-{Linear Systems of Differential  Equations}
-\currentpdfbookmark{Section 10.2}{section:10.2}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,LINEAR SYSTEMS OF DIFFERENTIAL  EQUATIONS}}
-\thissection
-
-
-\vspace*{-17.5pt}
+\section{Linear Systems of Differential  Equations}
 
 \exer{10.2.6}
 Let  $y_i=y^{(i-1)}$, $i=1,2,\dots,n$; then $y_i'=y_{i+1}$,
@@ -17367,7 +16886,7 @@ $$A=-{1\over P_0}
 P_n&P_{n-1}&P_{n-2}&\cdots&P_1
 \end{array}\right]
 \mbox{\quad and \quad}
-{\bf f}={1\over P_0}
+{\bfseries f}={1\over P_0}
 \left[\begin{array}{c}
 0\\ 0\\\vdots\\0\\F
 \end{array}\right].
@@ -17413,7 +16932,7 @@ the familiar result $(Y^n)'=nY^{n-1}Y'$.
 From Exercise~10.2.6, the initial value problem
 (A) $P_0(x)y^{(n)}+P_1(x)y^{(n-1)}+\cdots+P_n(x)y=F(x)$,
 $y(x_0)=k_0,\ y'(x_0)=k_1,\dots,\ y^{(n-1)}(x_0)=k_{n-1}$ is
-equivalent to the initial value problem (B) ${\bf y'}=A(t){\bf y}+{\bf
+equivalent to the initial value problem (B) ${\bfseries y'}=A(t){\bfseries y}+{\bfseries
 f}(t)$, with
 $$A=-{1\over P_0}
 \left[\begin{array}{ccccc}
@@ -17423,12 +16942,12 @@ $$A=-{1\over P_0}
 0&0&0&\cdots&1\\
 P_n&P_{n-1}&P_{n-2}&\cdots&P_1
 \end{array}\right],
-{\bf f}={1\over P_0}
+{\bfseries f}={1\over P_0}
 \left[\begin{array}{c}
 0\\ 0\\\vdots\\0\\F
 \end{array}\right],
 \mbox{\ and \ }
-{\bf k}=
+{\bfseries k}=
 \left[\begin{array}{c}
 k_0\\k_1\\\vdots\\k_{n-1}
 \end{array}\right].
@@ -17437,23 +16956,15 @@ Since Theorem~10.2.1 implies that (B) has a unique solution on
 $(a,b)$, it follows that (A) does also.
 
 
-\newsection{3} {Linear Systems of Differential  Equations}
-{Basic Theory of Homogeneous Linear System}
-\currentpdfbookmark{Section 10.3}{section:10.3}
-
-\renewcommand{\thissection}{\sectiontitle
-{\, BASIC THEORY OF HOMOGENEOUS LINEAR SYSTEM}}
-\thissection
-
-      \vspace*{-17.5pt}
+\section{Basic Theory of Homogeneous Linear System}
 
 \exer{10.3.2}
 \part{a}
-The system equivalent of (A) is (B) ${\bf
-y}'=-\dst{1\over P_0(x)}\twobytwo01{P_2(x)}{P_1(x)}{\bf y}$, where
-${\bf y}=\twocol{y}{y'}$. Let ${\bf y}_1=\twocol{y_1}{y_1'}$ and
- ${\bf y}_1=\twocol{y_2}{y_2'}$. Then the Wronskian of $\{{\bf
-y}_1,{\bf y}_2\}$ as defined in this section is
+The system equivalent of (A) is (B) ${\bfseries
+y}'=-\dst{1\over P_0(x)}\twobytwo01{P_2(x)}{P_1(x)}{\bfseries y}$, where
+${\bfseries y}=\twocol{y}{y'}$. Let ${\bfseries y}_1=\twocol{y_1}{y_1'}$ and
+ ${\bfseries y}_1=\twocol{y_2}{y_2'}$. Then the Wronskian of $\{{\bfseries
+y}_1,{\bfseries y}_2\}$ as defined in this section is
 $\twobytwo{y_1}{y_2}{y_1'}{y_2'}=W$.
 
 \part{b}
@@ -17493,15 +17004,15 @@ y_{11}&y_{12}\\y_{21}'&y_{22}'
 $Y(t_0)$ is invertible.
 
 \part{b} From  the equivalence of Theorem~10.3.3\part{a}and \part{b},
-the solution of the initial value problem is ${\bf y}=Y(t){\bf
-c}$, where ${\bf c}$ is a constant vector. To satisfy ${\bf
-y}(t_0)={\bf k}$, we must have
-$Y(t_0){\bf c}={\bf k}$, so ${\bf c}=Y^{-1}(t_0){\bf k}$
-and ${\bf y}=Y^{-1}(t_0)Y(t){\bf k}$.
+the solution of the initial value problem is ${\bfseries y}=Y(t){\bfseries
+c}$, where ${\bfseries c}$ is a constant vector. To satisfy ${\bfseries
+y}(t_0)={\bfseries k}$, we must have
+$Y(t_0){\bfseries c}={\bfseries k}$, so ${\bfseries c}=Y^{-1}(t_0){\bfseries k}$
+and ${\bfseries y}=Y^{-1}(t_0)Y(t){\bfseries k}$.
 
 \exer{10.3.8}
 \part{b}
-${\bf y}=\left[\begin{array}{r}
+${\bfseries y}=\left[\begin{array}{r}
 e^{-4t} \\ e^{-4t}\end{array}\right]+c_2
 \left[\begin{array}{r}-2e^{3t}
 \\ 5e^{3t}\end{array}\right]$ where
@@ -17510,7 +17021,7 @@ c_1-2c_2&=&10\\c_1+5c_2&=&-4
 \end{array},
 $
  so $c_1=6$, $c_2=-2$, and
-${\bf y}=\dst\left[\begin{array}{c}6e^{-4t}+4e^{3t}\\6e^{-4t}-10e^{3t}
+${\bfseries y}=\dst\left[\begin{array}{c}6e^{-4t}+4e^{3t}\\6e^{-4t}-10e^{3t}
 \end{array}\right]$.
 
 \part{c}
@@ -17519,14 +17030,14 @@ e^{-4t}&5e^{3t}\end{array}\right]$;
 $Y(0)=\left[\begin{array}{rc}1&-2\\1&5\end{array}\right]$;
 $Y^{-1}(0)=
 \dst{1\over7}\left[\begin{array}{cccc}5&2\\-1&1\end{array}\right]$;
-${\bf y}=Y(t)Y^{-1}(0){\bf k}=
+${\bfseries y}=Y(t)Y^{-1}(0){\bfseries k}=
 \dst{1\over7}\left[\begin{array}{cc}5e^{-4t}+2e^{3t}&2e^{-4t}-2e^{3t}
-\\5e^{-4t}-5e^{3t}&2e^{-4t}+5e^{3t}\end{array}\right]{\bf k}$.
+\\5e^{-4t}-5e^{3t}&2e^{-4t}+5e^{3t}\end{array}\right]{\bfseries k}$.
 
 
 \exer{10.3.10}
 \part{b}
-${\bf y}_1=c_1\left[\begin{array}{r} e^{3t} \\e^{3t}
+${\bfseries y}_1=c_1\left[\begin{array}{r} e^{3t} \\e^{3t}
 \end{array}\right]+c_2\left[\begin{array}{r}e^t \\
 -e^t\end{array}\right]$,
 where
@@ -17535,7 +17046,7 @@ c_1+c_2&=&2\\c_1-c_2&=&8
 \end{array},
 $
  so $c_1=5$, $c_2=-3$, and
-${\bf y}=\dst\left[\begin{array}{c}5e^{3t}-3e^t\\5e^{3t}+3e^t
+${\bfseries y}=\dst\left[\begin{array}{c}5e^{3t}-3e^t\\5e^{3t}+3e^t
 \end{array}\right]$.
 
 \part{c} $Y(t)=\left[\begin{array}{cr}e^{3t}&e^t\\
@@ -17544,13 +17055,13 @@ $Y(0)=\left[\begin{array}{rr}1&1\\1&-1\end{array}\right]$;
 
 $Y^{-1}(0)=
 \dst{1\over2}\left[\begin{array}{cr}1&1\\1&-1\end{array}\right]$;
-${\bf y}=Y(t)Y^{-1}(0){\bf k}=
+${\bfseries y}=Y(t)Y^{-1}(0){\bfseries k}=
 \dst{1\over2}\left[\begin{array}{cc}e^{3t}+e^t&e^{3t}-e^t
-\\e^{3t}-e^t&e^{3t}+e^t\end{array}\right]{\bf k}$.
+\\e^{3t}-e^t&e^{3t}+e^t\end{array}\right]{\bfseries k}$.
 
 \exer{10.3.12}
 \part{b}
-${\bf y}=c_1\left[\begin{array}{c}-e^{-2t} \\ 0 \\ e^{-2t}
+${\bfseries y}=c_1\left[\begin{array}{c}-e^{-2t} \\ 0 \\ e^{-2t}
 \end{array}\right]+c_2
 \left[\begin{array}{c}-e^{-2t} \\ e^{-2t} \\
 0\end{array}\right]+
@@ -17562,7 +17073,7 @@ $\begin{array}{rcr}
 \end{array},
 $
  so $c_1=11$, $c_2=-10$, $c_3=1$, and
-${\bf y
+${\bfseries y
 }=\dst{1\over3}\left[\begin{array}{c}-e^{-2t}+e^{4t}\\-10e^{-2t}+e^{4t}\\
 11e^{-2t}+e^{4t}\end{array}\right]$.
 
@@ -17575,28 +17086,28 @@ $Y(0)=
 $Y^{-1}(0)=
 \dst{1\over3}\left[\begin{array}{rrr}-1&-1&2\\-1&2&-1
 \\1&1&1\end{array}\right]$;
-${\bf y}=Y(t)Y^{-1}(0){\bf k}=
+${\bfseries y}=Y(t)Y^{-1}(0){\bfseries k}=
 \dst{1\over3}\left[\begin{array}{ccc}2e^{-2t}+e^{4t}&-e^{-2t}+e^{4t}
 &-e^{-2t}+e^{4t}
 \\-e^{-2t}+e^{4t}&2e^{-2t}+e^{4t}&-e^{-2t}+e^{4t}\\
 -e^{-2t}+e^{4t}&-e^{-2t}+e^{4t}&2e^{-2t}+e^{4t}
-\end{array}\right]{\bf k}$.
+\end{array}\right]{\bfseries k}$.
 
 \exer{10.3.14}
-If $Y$  and $Z$ are both fundamental matrices for ${\bf y}'=A(t){\bf y
+If $Y$  and $Z$ are both fundamental matrices for ${\bfseries y}'=A(t){\bfseries y
 }$, then $Z=CY$, where $C$ is a constant invertible matrix. Therefore,
 $ZY^{-1}=C$ and $YZ^{-1}=C^{-1}$.
 
 
 \exer{10.3.16}
 \part{a}
-The Wronskian  of $\{{\bf y}_1,{\bf y}_2,\dots,{\bf y}_n\}$ equals
+The Wronskian  of $\{{\bfseries y}_1,{\bfseries y}_2,\dots,{\bfseries y}_n\}$ equals
 one when $t=t_0$. Apply Theorem~10.3.3.
 
 \part{b}
-Let $Y$ be the matrix with columns $\{{\bf y}_1,{\bf y}_2,\dots,{\bf
-y}_n\}$. From \part{a}, $Y$ is a fundamental matrix for ${\bf
-y}'=A(t){\bf y}$ on $(a,b)$. From Exercise~10.3.15\part{b},
+Let $Y$ be the matrix with columns $\{{\bfseries y}_1,{\bfseries y}_2,\dots,{\bfseries
+y}_n\}$. From \part{a}, $Y$ is a fundamental matrix for ${\bfseries
+y}'=A(t){\bfseries y}$ on $(a,b)$. From Exercise~10.3.15\part{b},
 so is $Z=YC$ if $C$ is any invertible constant matrix.
 
 
@@ -17616,14 +17127,7 @@ $a$ is a scalar, while $e^{(t+s)A}=e^{tA}e^{sA}$  is analagous
 to $e^{(t+s)a}=e^{ta}e^{sa}$ when $a$ is a scalar.
 
 
-\newsection{4} {Linear Systems of Differential  Equations}
-{Constant Coefficient Homogeneous Systems I}
-\currentpdfbookmark{Section 10.4}{section:10.4}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,\quad CONSTANT COEFFICIENT HOMOGENEOUS SYSTEMS I}}
-\thissection
-      \vspace*{-17.5pt}
+\section{Constant Coefficient Homogeneous Systems I}
 
 \exer{10.4.2}
 $\dst{1\over4}{\left|\begin{array}{cc}-5-4\lambda&3\\
@@ -17635,7 +17139,7 @@ $\dst{\left[\begin{array}{rr}-3&3\\-4&4
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=x_2$.  Taking $x_2=1$ yields
-${\bf y}_1=\dst{\left[\begin{array}{c}1 \\
+${\bfseries y}_1=\dst{\left[\begin{array}{c}1 \\
 1\end{array}\right]}e^{-t/2}$.
 Eigenvectors  associated with $\lambda_2=-2$
 satisfy
@@ -17644,9 +17148,9 @@ $\dst{\left[\begin{array}{rr}{3\over4}&{3\over4}\\1&1
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=-x_2$.  Taking $x_2=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{r} -1\\
+${\bfseries y}_2=\dst{\left[\begin{array}{r} -1\\
 1\end{array}\right]}e^{-2t}$. Hence
- ${\bf y}=\dst{ c_1\left[\begin{array}{r} 1\\1\end{array}
+ ${\bfseries y}=\dst{ c_1\left[\begin{array}{r} 1\\1\end{array}
 \right]e^{-t/2}+c_2\left[\begin{array}{r}-1\\1\end{array}
 \right]e^{-2t}}$.
 
@@ -17660,7 +17164,7 @@ $\dst{\left[\begin{array}{rr}2&-4\\1&-2
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=2x_2$.  Taking $x_2=1$ yields
-${\bf y}_1=\dst{\left[\begin{array}{c}
+${\bfseries y}_1=\dst{\left[\begin{array}{c}
 2\\1\end{array}\right]}e^{-3t}$.
 Eigenvectors  associated with $\lambda_2=1$  satisfy
 $\dst{\left[\begin{array}{rr}-2&-4\\-1&-2
@@ -17668,8 +17172,8 @@ $\dst{\left[\begin{array}{rr}-2&-4\\-1&-2
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=-2x_2$.  Taking $x_2=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{r} -2\\1\end{array}\right]}e^t$.
-Hence  ${\bf y}=\dst{ c_1\left[\begin{array}{r} 2\\1\end{array}
+${\bfseries y}_2=\dst{\left[\begin{array}{r} -2\\1\end{array}\right]}e^t$.
+Hence  ${\bfseries y}=\dst{ c_1\left[\begin{array}{r} 2\\1\end{array}
 \right]e^{-3t}+c_2\left[\begin{array}{r}-2\\1\end{array}
 \right]e^t}$.
 
@@ -17683,16 +17187,16 @@ $\dst{\left[\begin{array}{rr}2&-3\\2&-3
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=\dst{3\over2}x_2$.  Taking $x_2=2$ yields
-${\bf y}_1=\dst{\left[\begin{array}{r}3\\2\end{array}\right]}e^{2t}$.
+${\bfseries y}_1=\dst{\left[\begin{array}{r}3\\2\end{array}\right]}e^{2t}$.
 Eigenvectors  associated with $\lambda_2=1$ satisfy
 $\dst{\left[\begin{array}{rr}3&-3\\2&-2
 \end{array}\right]\left[\begin{array}{r}
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=x_2$.  Taking $x_2=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{r}1\\1\end{array}\right]}e^t$.
+${\bfseries y}_2=\dst{\left[\begin{array}{r}1\\1\end{array}\right]}e^t$.
 Hence
- ${\bf y}=\dst{c_1\left[\begin{array}{r}3\\2\end{array}
+ ${\bfseries y}=\dst{c_1\left[\begin{array}{r}3\\2\end{array}
 \right]e^{2t}+c_2\left[\begin{array}{r}1\\1\end{array}\right]e^t}$.
 
 
@@ -17708,7 +17212,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&-2&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=x_3$ and $x_2=2x_3$.  Taking $x_3=1$ yields
-${\bf y}_1=\dst{\left[\begin{array}{rrr} 1\\2\\1
+${\bfseries y}_1=\dst{\left[\begin{array}{rrr} 1\\2\\1
 \end{array}\right]}e^{-3t}$.
 The eigenvectors associated with
  with $\lambda_2=-1$ satisfy the system with  augmented matrix
@@ -17719,7 +17223,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&0\\0&1&4&0
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=-x_3$ and $x_2=-4x_3$.  Taking $x_3=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{rrr}-1\\-4\\ 1
+${\bfseries y}_2=\dst{\left[\begin{array}{rrr}-1\\-4\\ 1
 \end{array}\right]}e^{-t}$.
 The eigenvectors associated with
  with $\lambda_3=2$ satisfy the system with  augmented matrix
@@ -17730,9 +17234,9 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&0\\0&1&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=-x_3$ and $x_2=-x_3$.  Taking $x_3=1$ yields
-${\bf y}_3=\dst{\left[\begin{array}{rrr}-1\\-1\\1
+${\bfseries y}_3=\dst{\left[\begin{array}{rrr}-1\\-1\\1
 \end{array}\right]}e^{2t}$. Hence
- ${\bf y}=\dst{c_1\left[\begin{array}{r} 1\\2\\1
+ ${\bfseries y}=\dst{c_1\left[\begin{array}{r} 1\\2\\1
 \end{array}\right]e^{-3t}+c_2\left[\begin{array}{r}-1\\-4\\1
 \end{array}
 \right]e^{-t}+c_3\left[\begin{array}{r}-1\\-1\\1\end{array}
@@ -17752,7 +17256,7 @@ $\dst{\left[\begin{array}{rrrcr}1&0&{2\over3}&\vdots&0\\[1\jot]0&1&{4\over3}&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=-{2\over3}x_3$ and $x_2=-{4\over3}x_3$.  Taking $x_3=3$
 yields
-${\bf y}_1=\dst{\left[\begin{array}{rrr}-2\\-4\\3
+${\bfseries y}_1=\dst{\left[\begin{array}{rrr}-2\\-4\\3
 \end{array}\right]}e^t$.
 The eigenvectors associated with
  with $\lambda_2=-2$ satisfy the system with  augmented matrix
@@ -17763,7 +17267,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&1&0&\vdots&0\\0&0&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=-x_2$ and $x_3=0$.  Taking $x_2=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{rrr} -1\\1\\0
+${\bfseries y}_2=\dst{\left[\begin{array}{rrr} -1\\1\\0
 \end{array}\right]}e^{-2t}$.
 The eigenvectors associated with
  with $\lambda_3=2$ satisfy the system with  augmented matrix
@@ -17775,9 +17279,9 @@ $\dst{\left[\begin{array}{rrrcr}1&0&{7\over4}&\vdots&0\\[1\jot]0&1&{5\over4}&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=-{7\over4}x_3$ and $x_2=-{5\over4}x_3$.  Taking $x_3=4$
 yields
-${\bf y}_3=\dst{\left[\begin{array}{rrr}-7\\-5\\4
+${\bfseries y}_3=\dst{\left[\begin{array}{rrr}-7\\-5\\4
 \end{array}\right]}e^{2t}$. Hence
-${\bf y}=\dst{ c_1\left[\begin{array}{r}-2\\-4\\
+${\bfseries y}=\dst{ c_1\left[\begin{array}{r}-2\\-4\\
 3\end{array}\right]e^t+c_2\left[\begin{array}{r}-1\\1\\0
 \end{array}\right]e^{-2t}+c_3\left[\begin{array}{r}-7\\-5\\4
 \end{array}\right]e^{2t}}$.
@@ -17795,7 +17299,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-11&\vdots&0\\0&1&-7&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=11x_3$ and $x_2=7x_3$.  Taking $x_3=1$ yields
-${\bf y}_1=\dst{\left[\begin{array}{rrr}11\\7\\1
+${\bfseries y}_1=\dst{\left[\begin{array}{rrr}11\\7\\1
 \end{array}\right]}e^{3t}$.
 The eigenvectors associated
  with $\lambda_2=-2$ satisfy the system with  augmented matrix
@@ -17806,7 +17310,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&-2&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=x_3$ and $x_2=2x_3$.  Taking $x_3=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{rrr}1\\2\\1
+${\bfseries y}_2=\dst{\left[\begin{array}{rrr}1\\2\\1
 \end{array}\right]}e^{-2t}$.
 The eigenvectors associated
  with $\lambda_3=-1$ satisfy the system with  augmented matrix
@@ -17817,9 +17321,9 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&-1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=x_3$ and $x_2=x_3$.  Taking $x_3=1$ yields
-${\bf y}_3=\dst{\left[\begin{array}{rrr}1\\1\\1
+${\bfseries y}_3=\dst{\left[\begin{array}{rrr}1\\1\\1
 \end{array}\right]}e^{-t}$. Hence
- ${\bf y}=\dst{c_1\left[\begin{array}{r}11\\\phantom{1}7
+ ${\bfseries y}=\dst{c_1\left[\begin{array}{r}11\\\phantom{1}7
 \\\phantom{1}1\end{array}\right]e^{3t}+c_2\left[\begin{array}{r}1\\2
 \\1\end{array}\right]e^{-2t}+c_3\left[\begin{array}{r}1\\1\\1
 \end{array}\right]e^{-t}}$.
@@ -17838,7 +17342,7 @@ $\dst{\left[\begin{array}{rrrcr}1&0&-{1\over5}&\vdots&0\\[1\jot]0&1&-{1\over5}&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=\dst{1\over5}x_3$ and $x_2=\dst{1\over5}x_3$.  Taking
 $x_3=5$ yields
-${\bf y}_1=\dst{\left[\begin{array}{rrr}1\\1\\5
+${\bfseries y}_1=\dst{\left[\begin{array}{rrr}1\\1\\5
 \end{array}\right]}e^{-5t}$.
 The eigenvectors associated
  with $\lambda_2=5$ satisfy the system with  augmented matrix
@@ -17849,12 +17353,12 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&-1&1&\vdots&0\\0&0&0&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=x_2-x_3$.  Taking $x_2=0$ and $x_3=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{rrr}-1\\0\\1
+${\bfseries y}_2=\dst{\left[\begin{array}{rrr}-1\\0\\1
 \end{array}\right]}e^{5t}$.
  Taking $x_2=1$ and $x_3=0$ yields
-${\bf y}_3=\dst{\left[\begin{array}{rrr}1\\1\\0
+${\bfseries y}_3=\dst{\left[\begin{array}{rrr}1\\1\\0
 \end{array}\right]}e^{5t}$. Hence
- ${\bf y}=\dst{c_1\left[\begin{array}{r}1\\1\\5
+ ${\bfseries y}=\dst{c_1\left[\begin{array}{r}1\\1\\5
 \end{array}\right]e^{-5t}+c_2\left[\begin{array}{r}-1\\0\\
  1\end{array}
 \right]e^{5t}+c_3\left[\begin{array}{r}1\\1\\0\end{array}
@@ -17870,7 +17374,7 @@ $\dst{\left[\begin{array}{rr}-12&4\\-6&2
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=\dst{x_2\over3}$.  Taking $x_2=3$ yields
-${\bf y}_1=\dst{\left[\begin{array}{c} 1\\3\end{array}\right]}e^{5t}$.
+${\bfseries y}_1=\dst{\left[\begin{array}{c} 1\\3\end{array}\right]}e^{5t}$.
 Eigenvectors  associated with $\lambda_2=5$
 satisfy
 $\dst{\left[\begin{array}{rr}-2&4\\-6&12
@@ -17878,17 +17382,17 @@ $\dst{\left[\begin{array}{rr}-2&4\\-6&12
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=2x_2$.  Taking $x_2=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{c}2\\1\end{array}\right]}e^{-5t}$.
+${\bfseries y}_2=\dst{\left[\begin{array}{c}2\\1\end{array}\right]}e^{-5t}$.
 The general solution is
-${\bf y}=c_1\dst{\left[\begin{array}{c}
+${\bfseries y}=c_1\dst{\left[\begin{array}{c}
 1\\3\end{array}\right]}e^{5t}+
 c_2\dst{\left[\begin{array}{c}2\\1\end{array}\right]}e^{-5t}$.
-Now ${\bf y}(0)=\dst{\twocol2{-4}}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\twocol2{-4}}\Rightarrow
 c_1\dst{\left[\begin{array}{c}
 1\\3\end{array}\right]}+
 c_2\dst{\left[\begin{array}{c}2\\1\end{array}\right]}=\dst{\twocol2{-4}}$,
 so $c_1=-2$ and $c_2=2$. Therefore,
-${\bf y}=\dst{-\twocol26e^{5t}+\twocol42e^{-5t}}$.
+${\bfseries y}=\dst{-\twocol26e^{5t}+\twocol42e^{-5t}}$.
 
 
 \exer{10.4.18}
@@ -17900,20 +17404,20 @@ $\dst{\left[\begin{array}{rr}12&-12\\24&-24
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=x_2$.  Taking $x_2=1$ yields
-${\bf y}_1=\dst{\left[\begin{array}{r}1\\1\end{array}\right]}e^{9t}$.
+${\bfseries y}_1=\dst{\left[\begin{array}{r}1\\1\end{array}\right]}e^{9t}$.
 Eigenvectors  associated with $\lambda_2=-3$
 $\dst{\left[\begin{array}{rr}24&-12\\24&-12
 \end{array}\right]\left[\begin{array}{r}
 x_1\\x_2\end{array}\right]=\left[\begin{array}{c} 0\\0\end{array}
 \right]}$,
 so $x_1=\dst{1\over2}x_2$.  Taking $x_2=2$ yields
-${\bf y}_2=\dst{\left[\begin{array}{r}1\\2\end{array}\right]}e^{-3t}$.
+${\bfseries y}_2=\dst{\left[\begin{array}{r}1\\2\end{array}\right]}e^{-3t}$.
 The general solution is
-${\bf y}=c_1\dst{\twocol11}e^{9t}+c_2\dst{\twocol12}e^{-3t}$.
-Now  ${\bf y}(0)=\dst{\twocol53}\Rightarrow
+${\bfseries y}=c_1\dst{\twocol11}e^{9t}+c_2\dst{\twocol12}e^{-3t}$.
+Now  ${\bfseries y}(0)=\dst{\twocol53}\Rightarrow
 c_1\dst{\twocol11}+c_2\dst{\twocol12}=\dst{\twocol53}$, so $c_1=7$
 and $c_2=-2$. Therefore,
-${\bf y}=\dst{\twocol77e^{9t}-\twocol24e^{-3t}}$.
+${\bfseries y}=\dst{\twocol77e^{9t}-\twocol24e^{-3t}}$.
 
 
 \exer{10.4.20}
@@ -17929,7 +17433,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&{1\over2}&0&\vdots&0\\[1\jot]0&0&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=-\dst{x_2\over2}$ and $x_3=0$.  Taking $x_2=2$ yields
-${\bf y}_1=\dst{\left[\begin{array}{rrr}-1\\2\\0
+${\bfseries y}_1=\dst{\left[\begin{array}{rrr}-1\\2\\0
 \end{array}\right]}e^{-t/2}$.
 The eigenvectors associated with
  with $\lambda_2=\lambda_3=1/2$ satisfy the system with  augmented
@@ -17942,19 +17446,19 @@ $\dst{\left[\begin{array}{rrrcr}1&-1&0&\vdots&0\\0&0&0&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=x_2$ and $x_3$ is arbitrary.  Taking $x_2=1$ and $x_3=0$
 yields
-${\bf y}_2=\dst{\left[\begin{array}{rrr}1\\1\\0
+${\bfseries y}_2=\dst{\left[\begin{array}{rrr}1\\1\\0
 \end{array}\right]}e^{t/2}$.
 Taking $x_2=0$ and $x_3=1$ yields
-${\bf y}_3=\dst{\left[\begin{array}{rrr}0\\0\\1
+${\bfseries y}_3=\dst{\left[\begin{array}{rrr}0\\0\\1
 \end{array}\right]}e^{t/2}$.
  The general solution is
-${\bf y}=\dst{c_1\threecol{-1}20e^{-t/2}+
+${\bfseries y}=\dst{c_1\threecol{-1}20e^{-t/2}+
 c_2\threecol110e^{t/2}+c_3\threecol001e^{t/2}}$.
-Now ${\bf y}(0)=\dst{\threecol471}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\threecol471}\Rightarrow
 \dst{c_1\threecol{-1}20+
 c_2\threecol110+c_3\threecol001e^{t/2}}=\dst{\threecol471}$,
 so $c_1=1$, $c_2=5$, and $c_3=1$. Hence
-${\bf y}=\dst{\threecol{-1}20e^{-t/2}+
+${\bfseries y}=\dst{\threecol{-1}20e^{-t/2}+
 \threecol550e^{t/2}+\threecol001e^{t/2}}$.
 
 
@@ -17970,7 +17474,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=x_3$ and $x_2=-x_3$.  Taking $x_3=$ yields
-${\bf y}_1=\dst{\left[\begin{array}{rrr}1\\-1\\1
+${\bfseries y}_1=\dst{\left[\begin{array}{rrr}1\\-1\\1
 \end{array}\right]}e^t$.
 The eigenvectors associated
  with $\lambda_2=-2$ satisfy the system with  augmented matrix
@@ -17981,7 +17485,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&0&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=x_3$ and $x_2=0$.  Taking $x_3=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{rrr}1\\0\\1
+${\bfseries y}_2=\dst{\left[\begin{array}{rrr}1\\0\\1
 \end{array}\right]}e^{-2t}$.
 The eigenvectors associated
  with $\lambda_3=3$ satisfy the system with  augmented matrix
@@ -17992,16 +17496,16 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&-1&0&\vdots&0\\0&0&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=x_2$ and $x_3=0$.  Taking $x_2=1$ yields
-${\bf y}_3=\dst{\left[\begin{array}{rrr}1\\1\\0
+${\bfseries y}_3=\dst{\left[\begin{array}{rrr}1\\1\\0
 \end{array}\right]}e^{3t}$.
 The general solution is
-${\bf y}=c_1\dst{\left[\begin{array}{rrr}1\\-1\\1
+${\bfseries y}=c_1\dst{\left[\begin{array}{rrr}1\\-1\\1
 \end{array}\right]}e^t+
 c_2\dst{\left[\begin{array}{rrr}1\\0\\1
 \end{array}\right]}e^{-2t}
 +c_3\dst{\left[\begin{array}{rrr}1\\1\\0
 \end{array}\right]}e^{3t}$.
-Now ${\bf y}(0)=\dst{\threecol0{-1}{-1}}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\threecol0{-1}{-1}}\Rightarrow
 c_1\dst{\left[\begin{array}{rrr}1\\-1\\1
 \end{array}\right]}+
 c_2\dst{\left[\begin{array}{rrr}1\\0\\1
@@ -18009,7 +17513,7 @@ c_2\dst{\left[\begin{array}{rrr}1\\0\\1
 +c_3\dst{\left[\begin{array}{rrr}1\\1\\0
 \end{array}\right]}=\dst{\threecol0{-1}{-1}}$, so
 $c_1=2$, $c_2=-3$, and $c_3=1$. Therefore,
-${\bf
+${\bfseries
 y}=\dst{\threecol2{-2}2e^t-\threecol303e^{-2t}+\threecol110e^{3t}}$.
 
 
@@ -18025,7 +17529,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&0\\0&1&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=-x_3$ and $x_2=-x_3$.  Taking $x_3=1$ yields
-${\bf y}_1=\dst{\left[\begin{array}{rrr}-1\\-1\\1
+${\bfseries y}_1=\dst{\left[\begin{array}{rrr}-1\\-1\\1
 \end{array}\right]}e^{2t}$.
 The eigenvectors associated with
  with $\lambda_2=-2$ satisfy the system with  augmented matrix
@@ -18036,7 +17540,7 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&0\\0&0&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=x_3=0$ and $x_2$ is arbitrary.  Taking $x_3=1$ yields
-${\bf y}_2=\dst{\left[\begin{array}{rrr}0\\1\\0
+${\bfseries y}_2=\dst{\left[\begin{array}{rrr}0\\1\\0
 \end{array}\right]}e^{-2t}$.
 The eigenvectors associated with
  with $\lambda_3=4$ satisfy the system with  augmented matrix
@@ -18047,16 +17551,16 @@ which is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&-3&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence $x_1=x_3$ and $x_2=3x_3$.  Taking $x_3=1$ yields
-${\bf y}_3=\dst{\left[\begin{array}{rrr}1\\3\\1
+${\bfseries y}_3=\dst{\left[\begin{array}{rrr}1\\3\\1
 \end{array}\right]}e^{4t}$.
  The general solution is
-${\bf y}=c_1\dst{\left[\begin{array}{rrr}-1\\-1\\1
+${\bfseries y}=c_1\dst{\left[\begin{array}{rrr}-1\\-1\\1
 \end{array}\right]}e^{2t}
 +c_2\dst{\left[\begin{array}{rrr}0\\1\\0
 \end{array}\right]}e^{-2t}
 +c_3\dst{\left[\begin{array}{rrr}1\\3\\1
 \end{array}\right]}e^{4t}$.
-Now ${\bf y}(0)=\dst{\threecol276}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\threecol276}\Rightarrow
 c_1\dst{\left[\begin{array}{rrr}-1\\-1\\1
 \end{array}\right]}
 +c_2\dst{\left[\begin{array}{rrr}0\\1\\0
@@ -18064,7 +17568,7 @@ c_1\dst{\left[\begin{array}{rrr}-1\\-1\\1
 +c_3\dst{\left[\begin{array}{rrr}1\\3\\1
 \end{array}\right]}=\dst{\threecol276}$, so $c_1=2$, $c_2=-3$, and
 $c_3=4$. Hence
-${\bf y}=\dst{\threecol{-2}{-2}2e^{2t}-\threecol030e^{-2t}+
+${\bfseries y}=\dst{\threecol{-2}{-2}2e^{2t}-\threecol030e^{-2t}+
 \threecol4{12}4e^{4t}}$
 
 
@@ -18078,7 +17582,7 @@ $\left[\begin{array}{ccccc}4&-1&0&\vdots&0\\4&-1&0&\vdots&0\\4&-4&3&\vdots&0\end
 which is row equivalent to
 $\left[\begin{array}{ccrcc}1&0&-{1\over4}&\vdots&0\\0&1&-1&\vdots&0\\0&0&0&\vdots&0\end{array}\right]$
 Hence $x_1=x_2/4$ and $x_2=x_3$.  Taking $x_3=4$ yields
-${\bf y}_1=\dst{\left[\begin{array}{rrr}1\\4\\4
+${\bfseries y}_1=\dst{\left[\begin{array}{rrr}1\\4\\4
 \end{array}\right]}e^{-t}$.
 The eigenvectors associated with
  with $\lambda_2=\lambda_3=2$ satisfy the system with  augmented
@@ -18088,19 +17592,19 @@ which is row equivalent to
 $\left[\begin{array}{crccc}1&-1&0&\vdots&0\\0&0&0&\vdots&0\\0&0&0&\vdots&0\end{array}\right]$.
 Hence $x_1=x_2$ and $x_3$ is arbitrary.  Taking $x_2=1$ and $x_3=0$
 yields
-${\bf y}_2=\dst{\left[\begin{array}{rrr}1\\1\\0
+${\bfseries y}_2=\dst{\left[\begin{array}{rrr}1\\1\\0
 \end{array}\right]}e^{2t}$.
 Taking $x_2=0$ and $x_3=1$ yields
-${\bf y}_3=\dst{\left[\begin{array}{rrr}0\\0\\1
+${\bfseries y}_3=\dst{\left[\begin{array}{rrr}0\\0\\1
 \end{array}\right]}e^{2t}$.
  The general solution is
-${\bf y}=c_1\dst{\left[\begin{array}{rrr}1\\4\\4
+${\bfseries y}=c_1\dst{\left[\begin{array}{rrr}1\\4\\4
 \end{array}\right]}e^{-t}+
 c_2\dst{\left[\begin{array}{rrr}1\\1\\0
 \end{array}\right]}e^{2t}+
 c_3\dst{\left[\begin{array}{rrr}0\\0\\1
 \end{array}\right]}e^{2t}$.
-Now ${\bf y}(0)=\dst{\threecol7{10}{2}}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\threecol7{10}{2}}\Rightarrow
 c_1\dst{\left[\begin{array}{rrr}1\\4\\4
 \end{array}\right]}+
 c_2\dst{\left[\begin{array}{rrr}1\\1\\0
@@ -18109,26 +17613,26 @@ c_3\dst{\left[\begin{array}{rrr}0\\0\\1
 \end{array}\right]}=\dst{\threecol7{10}{2}}$,
  so $c_1=1$, $c_2=6$, and
 $c_3=-2$. Hence
- ${\bf y}=\dst
+ ${\bfseries y}=\dst
 \threecol144e^{-t}+\threecol66{-2}e^{2t}$.
 
 
 \exer{10.4.28}
-{\bf(a)}  If ${\bf y}(t_0)=0$, then ${\bf y}$ is the solution
-of the initial value problem ${\bf y}'=A{\bf y},\ {\bf y}(t_0)={\bf
-0}$. Since ${\bf y}\equiv0$ is a solution of this problem,
+{\bfseries(a)}  If ${\bfseries y}(t_0)=0$, then ${\bfseries y}$ is the solution
+of the initial value problem ${\bfseries y}'=A{\bfseries y},\ {\bfseries y}(t_0)={\bfseries
+0}$. Since ${\bfseries y}\equiv0$ is a solution of this problem,
 Theorem~10.2.1 implies the conclusion.
 
-{\bf(b)} It is given that ${\bf y}_1'(t)=A{\bf y}_1(t)$ for all $t$.
-Replacing $t$ by $t-\tau$ shows that ${\bf y}_1'(t-\tau)=A{\bf
-y}_1(t-\tau)=A{\bf y}_2(t)$ for all $t$. Since ${\bf y}_2'(t)={\bf
-y}_1'(t-\tau)$ by the chain rule, this implies that ${\bf
-y}_2'(t)=A{\bf y}_2(t)$ for all $t$.
+{\bfseries(b)} It is given that ${\bfseries y}_1'(t)=A{\bfseries y}_1(t)$ for all $t$.
+Replacing $t$ by $t-\tau$ shows that ${\bfseries y}_1'(t-\tau)=A{\bfseries
+y}_1(t-\tau)=A{\bfseries y}_2(t)$ for all $t$. Since ${\bfseries y}_2'(t)={\bfseries
+y}_1'(t-\tau)$ by the chain rule, this implies that ${\bfseries
+y}_2'(t)=A{\bfseries y}_2(t)$ for all $t$.
 
-{\bf(c)} If ${\bf z}(t)={\bf y}_1(t-\tau)$, then ${\bf z}(t_2)={\bf
-y}_1(t_1)={\bf y}_2(t_2)$; therefore ${\bf z}$ and ${\bf y}_2$ are
-both solutions of the initial value problem ${\bf y}'=A{\bf y},\ {\bf
-y}(t_2)={\bf k}$, where ${\bf k}={\bf y}_2(t_2)$.
+{\bfseries(c)} If ${\bfseries z}(t)={\bfseries y}_1(t-\tau)$, then ${\bfseries z}(t_2)={\bfseries
+y}_1(t_1)={\bfseries y}_2(t_2)$; therefore ${\bfseries z}$ and ${\bfseries y}_2$ are
+both solutions of the initial value problem ${\bfseries y}'=A{\bfseries y},\ {\bfseries
+y}(t_2)={\bfseries k}$, where ${\bfseries k}={\bfseries y}_2(t_2)$.
 
 
 
@@ -18137,11 +17641,11 @@ The characteristic polynomial of $A$ is
 $p(\lambda)=\lambda^2-(a+b)+ab-\alpha\beta$, so the eigenvalues of $A$
 are $\lambda_1=\dst{a+b-\gamma\over2}$ and
 $\lambda_1=\dst{a+b+\gamma\over2}$, where
-$\gamma=\sqrt{(a-b)^2+4\alpha\beta}$; ${\bf
-x}_1=\ctwocol{b-a+\gamma}{2\beta}$ and ${\bf
+$\gamma=\sqrt{(a-b)^2+4\alpha\beta}$; ${\bfseries
+x}_1=\ctwocol{b-a+\gamma}{2\beta}$ and ${\bfseries
 x}_2=\ctwocol{b-a-\gamma}{2\beta}$ are associated eigenvectors. Since
 $\gamma>|b-a|$, if $L_1$ and $L_2$ are lines through the origin
-parallel to ${\bf x}_1$ and ${\bf x}_2$, then $L_1$ is in the first and
+parallel to ${\bfseries x}_1$ and ${\bfseries x}_2$, then $L_1$ is in the first and
 third quadrants and $L_2$ is in the second and fourth quadrants. The
 slope of $L_1$ is $\rho=\dst{2\beta\over b-a+\gamma}>0$. If $Q_0=\rho
 P_0$ there are three possibilities: (i) if $\alpha\beta=ab$, then
@@ -18161,16 +17665,7 @@ if $Q_0>\rho P_0$, or into the fourth quadrant (so $Q(T)=0$ and
 $P(T)>0$ for some finite $T$) if $Q_0<\rho P_0$.
 
 
-\newsection{5} {Linear Systems of Differential  Equations}
-{Constant Coefficient Homogeneous Systems II}
-\currentpdfbookmark{Section 10.5}{section:10.5}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,\quad CONSTANT COEFFICIENT HOMOGENEOUS SYSTEMS II}}
-\thissection
-
-\vspace*{-17.5pt}
-
+\section{Constant Coefficient Homogeneous Systems II}
 
 \exer{10.5.2}
 $\dst{\twochar{}{-1}1{-2}}=(\lambda+1)^2$.
@@ -18178,28 +17673,28 @@ Hence $\lambda_1=-1$.
 Eigenvectors   satisfy
 $\dst{\twobytwo1{-1}1{-1}\twocol{x_1}{x_2}=\twocol00}$,
 so $x_1=x_2$.  Taking $x_2=1$ yields
-${\bf y}_1=\dst{\twocol11}e^{-t}$.
-For a second solution we need a vector ${\bf u}$
+${\bfseries y}_1=\dst{\twocol11}e^{-t}$.
+For a second solution we need a vector ${\bfseries u}$
 such that $\dst{\twobytwo1{-1}1{-1}\twocol{u_1}{u_2}
 =\twocol11}$. Let $u_1=1$ and $u_2=0$. Then
-${\bf y}_2=\dst{\twocol10}e^{-t}+\dst{\twocol11}te^{-t}$.
+${\bfseries y}_2=\dst{\twocol10}e^{-t}+\dst{\twocol11}te^{-t}$.
 The general solution is
-${\bf y}=\dst{
+${\bfseries y}=\dst{
 c_1\twocol11e^{-t}+c_2\left(\twocol10e^{-t}+\twocol11te^{-t}\right)}$.
 
 \exer{10.5.4}
- $\dst{{\bf y}'=\twochar31{-1}1}=(\lambda-2)^2$.
+ $\dst{{\bfseries y}'=\twochar31{-1}1}=(\lambda-2)^2$.
 Hence $\lambda_1=2$.
 Eigenvectors   satisfy
 $\dst{\twobytwo11{-1}{-1}\twocol{x_1}{x_2}=\twocol00}$,
 so $x_1=-x_2$.  Taking $x_2=1$ yields
-${\bf y}_1=\dst{\twocol{-1}1}e^{2t}$.
-For a second solution we need a vector ${\bf u}$
+${\bfseries y}_1=\dst{\twocol{-1}1}e^{2t}$.
+For a second solution we need a vector ${\bfseries u}$
 such that $\dst{\twobytwo11{-1}{-1}\twocol{u_1}{u_2}
 =\twocol{-1}1}$. Let $u_1=-1$ and $u_2=0$. Then
-${\bf y}_2=\dst{\twocol{-1}0}e^{2t}+\dst{\twocol{-1}1}te^{2t}$.
+${\bfseries y}_2=\dst{\twocol{-1}0}e^{2t}+\dst{\twocol{-1}1}te^{2t}$.
 The general solution is
- ${\bf y}=\dst{
+ ${\bfseries y}=\dst{
 c_1\twocol{-1}1e^{2t}+c_2\left(\twocol{-1}0
 e^{2t}+\twocol{-1}1te^{2t}\right)}$.
 
@@ -18210,13 +17705,13 @@ Hence $\lambda_1=-4$.
 Eigenvectors   satisfy
 $\dst{\twobytwo{-6}9{-4}6\twocol{x_1}{x_2}=\twocol00}$,
 so $x_1={3\over2}x_2$.  Taking $x_2=2$ yields
-${\bf y}_1=\dst{\twocol32}e^{-4t}$.
-For a second solution we need a vector ${\bf u}$
+${\bfseries y}_1=\dst{\twocol32}e^{-4t}$.
+For a second solution we need a vector ${\bfseries u}$
 such that $\dst{\twobytwo{-6}9{-4}6\twocol{u_1}{u_2}
 =\twocol32}$. Let $u_1=-{1\over2}$ and $u_2=0$. Then
-${\bf y}_2=\dst{\twocol{-1}0}{e^{-4t}\over2}+\dst{\twocol32}te^{-4t}$.
+${\bfseries y}_2=\dst{\twocol{-1}0}{e^{-4t}\over2}+\dst{\twocol32}te^{-4t}$.
 The general solution is
-${\bf y}=\dst{c_1\twocol32e^{-4t}+
+${\bfseries y}=\dst{c_1\twocol32e^{-4t}+
 c_2\left(\twocol{-1}0{e^{-4t}\over2}+\twocol32te^{-4t}\right)}$.
 
 
@@ -18233,7 +17728,7 @@ $\dst{\left[\begin{array}{rrrcr}1&0&{1\over2}&\vdots&0\\0&1&{1\over2}&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=-\dst{1\over2}x_3$ and $x_2=-\dst{1\over2}x_3$.  Taking $x_3=2$
 yields
-${\bf y}_1=\dst{\threecol{-1}{-1}2}$.
+${\bfseries y}_1=\dst{\threecol{-1}{-1}2}$.
 The eigenvectors associated
  with $\lambda_2=4$ satisfy the system with  augmented matrix
 $\dst{\left[\begin{array}{rrrcr}-4&2&1&\vdots&0\\-4&2&1&
@@ -18243,18 +17738,18 @@ $\dst{\left[\begin{array}{rrrcr}1&0&-{1\over2}&\vdots&0\\0&1&-{1\over2}&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=\dst{1\over2}x_3$ and $x_2=\dst{1\over2}x_3$.  Taking
 $x_3=2$ yields
-${\bf y}_2=\dst{\threecol112}e^{4t}$.
-For a third solution we need a vector ${\bf u}$ such that
+${\bfseries y}_2=\dst{\threecol112}e^{4t}$.
+For a third solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree{-4}21{-4}2104{-2}\threecol{u_1}{u_2}{u_3}}=\dst{\threecol112}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-{1\over2}&\vdots&0\\0&1&-{1\over2}&
 \vdots&{1\over2}\\0&0&0&\vdots&0\end{array}\right]}$.
 Let  $u_3=0$, $u_1=0$, and $u_2=\dst{1\over2}$. Then
-${\bf
+${\bfseries
 y}_3=\dst{\threecol010}\dst{e^{4t}\over2}+\dst{\threecol112}te^{4t}$.
 The general solution is
 $$
-{\bf y}=\dst{
+{\bfseries y}=\dst{
 c_1\threecol{-1}{-1}2+c_2\threecol112e^{4t}+
 c_3\left(\threecol010{e^{4t}\over2}+\threecol112te^{4t}\right)}.
 $$
@@ -18273,7 +17768,7 @@ $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&0\\0&1&-1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=0$ and $x_2=x_3$.  Taking $x_3=1$
 yields
-${\bf y}_1=\dst{\threecol011}e^{2t}$.
+${\bfseries y}_1=\dst{\threecol011}e^{2t}$.
 The eigenvectors associated
  with $\lambda_2=-2$ satisfy the system with  augmented matrix
 $\dst{\left[\begin{array}{rrrcr}1&1&-1&\vdots&0\\-2&2&2&
@@ -18283,17 +17778,17 @@ $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&0&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=x_3$ and $x_2=0$.  Taking $x_3=1$
 yields
-${\bf y}_2=\dst{\threecol101}e^{-2t}$.
-For a third solution we need a vector ${\bf u}$ such that
+${\bfseries y}_2=\dst{\threecol101}e^{-2t}$.
+For a third solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree11{-1}{-2}22{-1}31\threecol{u_1}{u_2}{u_3}}=\dst{\threecol101}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&{1\over2}\\0&1&0&
 \vdots&{1\over2}\\0&0&0&\vdots&0\end{array}\right]}$.
-Let $u_3=0$, $u_1=\dst{1\over2}$, and $u_2=\dst{1\over2}$. Then ${\bf
+Let $u_3=0$, $u_1=\dst{1\over2}$, and $u_2=\dst{1\over2}$. Then ${\bfseries
 y}_3=\dst{\threecol110}\dst{e^{-2t}\over2}+\dst{\threecol101}te^{-2t}$.
 The general solution is
 $$
-{\bf y}=\dst{
+{\bfseries y}=\dst{
 c_1\threecol011e^{2t}+c_2\threecol101e^{-2t}+c_3\left
 (\threecol110{e^{-2t}\over2}+\threecol101te^{-2t}\right)}.
 $$
@@ -18312,7 +17807,7 @@ $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&0\\0&1&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=-x_3$ and $x_2=-x_3$.  Taking $x_3=1$
 yields
-${\bf y}_1=\dst{\threecol{-1}{-1}1}e^{-2t}$.
+${\bfseries y}_1=\dst{\threecol{-1}{-1}1}e^{-2t}$.
 The eigenvectors associated
  with $\lambda_2=4$ satisfy the system with  augmented matrix
 $\dst{\left[\begin{array}{rrrcr}2&-5&3&\vdots&0\\2&-5&3&
@@ -18322,17 +17817,17 @@ $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&-1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=x_3$ and $x_2=x_3$.  Taking $x_3=1$
 yields
-${\bf y}_2=\dst{\threecol111}e^{4t}$.
-For a third solution we need a vector ${\bf u}$ such that
+${\bfseries y}_2=\dst{\threecol111}e^{4t}$.
+For a third solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree2{-5}32{-5}321{-3}\threecol{u_1}{u_2}{u_3}}=
 \dst{\threecol111}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&{1\over2}\\0&1&-1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
-Let $u_3=0$, $u_1=\dst{1\over2}$, and $u_2=0$. Then ${\bf
+Let $u_3=0$, $u_1=\dst{1\over2}$, and $u_2=0$. Then ${\bfseries
 y}_3=\dst{\threecol100}{e^{4t}\over2}+\dst{\threecol111}te^{4t}$. The
 general solution is
- ${\bf y}=\dst{
+ ${\bfseries y}=\dst{
 c_1\threecol{-1}{-1}1e^{-2t}+c_2\threecol111e^{4t}+c_3\left
 (\threecol100{e^{4t}\over2}+\threecol111te^{4t}\right)}$.
 
@@ -18343,19 +17838,19 @@ Hence $\lambda_1=3$.
 Eigenvectors   satisfy
 $\dst{\twobytwo{12}{-9}{16}{-12}\twocol{x_1}{x_2}=\twocol00}$,
 so $x_1=\dst{3\over4}x_2$.  Taking $x_2=4$ yields
-${\bf y}_1=\dst{\twocol34}e^{3t}$.
-For a second solution we need a vector ${\bf u}$
+${\bfseries y}_1=\dst{\twocol34}e^{3t}$.
+For a second solution we need a vector ${\bfseries u}$
 such that $\dst{\twobytwo{12}{-9}{16}{-12}\twocol{u_1}{u_2}
 =\twocol34}$. Let $u_1=\dst{1\over4}$ and $u_2=0$. Then
-${\bf y}_2=\dst{\twocol10}{e^{3t}\over4}+\dst{\twocol34}te^{3t}$.
+${\bfseries y}_2=\dst{\twocol10}{e^{3t}\over4}+\dst{\twocol34}te^{3t}$.
 The general solution is
-${\bf y}=c_1\dst{\twocol34}e^{3t}+
+${\bfseries y}=c_1\dst{\twocol34}e^{3t}+
 c_2\left(\dst{\twocol10}{e^{3t}\over4}+\dst{\twocol34}te^{3t}\right)$.
-Now ${\bf y}(0)=\dst{\twocol58}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\twocol58}\Rightarrow
 c_1\dst{\twocol34}+
 c_2\dst{\twocol{1\over4}0}=\dst{\twocol58}$,  so $c_1=2$
 and $c_2=-4$. Therefore,
-${\bf y}=\dst{\twocol58e^{3t}-\twocol{12}{16}te^{3t}}$.
+${\bfseries y}=\dst{\twocol58e^{3t}-\twocol{12}{16}te^{3t}}$.
 
 
 \exer{10.5.16}
@@ -18364,19 +17859,19 @@ Hence $\lambda_1=5$.
 Eigenvectors   satisfy
 $\dst{\twobytwo{-12}{24}{-6}{12}\twocol{x_1}{x_2}=\twocol00}$,
 so $x_1=2x_2$.  Taking $x_2=1$ yields
-${\bf y}_1=\dst{\twocol21}e^{5t}$.
-For a second solution we need a vector ${\bf u}$
+${\bfseries y}_1=\dst{\twocol21}e^{5t}$.
+For a second solution we need a vector ${\bfseries u}$
 such that $\dst{\twobytwo{-12}{24}{-6}{12}\twocol{u_1}{u_2}}
 =\dst{\twocol21}$. Let $u_1=\dst{1\over6}$ and $u_2=0$. Then
-${\bf y}_2=\dst{\twocol10}{e^{5t}\over6}+\dst{\twocol21}te^{5t}$.
+${\bfseries y}_2=\dst{\twocol10}{e^{5t}\over6}+\dst{\twocol21}te^{5t}$.
 The general solution is
-${\bf y}=c_1\dst{\twocol21}e^{5t}
+${\bfseries y}=c_1\dst{\twocol21}e^{5t}
 +c_2\left(\dst{\twocol10}{e^{5t}\over6}+\dst{\twocol21}te^{5t}\right)$.
 Now
-${\bf y}(0)=\dst{\twocol31}\Rightarrow c_1\dst{\twocol21}
+${\bfseries y}(0)=\dst{\twocol31}\Rightarrow c_1\dst{\twocol21}
 +c_2{\twocol{1\over6}0}=\dst{\twocol31}$, so $c_1=1$
 and $c_2=6$. Therefore,
-${\bf y}=\dst{\twocol31e^{5t}-\twocol{12}6te^{5t}}$.
+${\bfseries y}=\dst{\twocol31e^{5t}-\twocol{12}6te^{5t}}$.
 
 
 \exer{10.5.18}
@@ -18401,25 +17896,25 @@ $\dst{\left[\begin{array}{rrrcr}1&1&0&\vdots&0\\0&0&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=-x_2$ and $x_3=0$.  Taking $x_2=1$
 yields
-${\bf y}_2=\dst{\threecol{-1}10}e^{-2t}$.
-For a third solution we need a vector ${\bf u}$ such that
+${\bfseries y}_2=\dst{\threecol{-1}10}e^{-2t}$.
+For a third solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree11011{-2}{-1}{-1}1\threecol{u_1}{u_2}{u_3}}=
 \dst{\threecol{-1}10}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&1&0&\vdots&-1\\0&0&1&
 \vdots&-1\\0&0&0&\vdots&0\end{array}\right]}$.
-Let $u_2=0$, $u_1=-1$, and $u_3=-1$. Then ${\bf
+Let $u_2=0$, $u_1=-1$, and $u_3=-1$. Then ${\bfseries
 y}_3=\dst{\threecol{-1}0{-1}}e^{-2t}+\dst{\threecol{-1}10}te^{-2t}$.
 The general solution is
-${\bf y}=c_1\dst{\threecol{-2}{-4}3}e^t+
+${\bfseries y}=c_1\dst{\threecol{-2}{-4}3}e^t+
 c_2\dst{\threecol{-1}10}e^{-2t}
 +c_3\left(\dst{\threecol{-1}0{-1}}e^{-2t}+
 \dst{\threecol{-1}10}te^{-2t}\right)$.
-Now ${\bf y}(0)=\dst{\threecol65{-7}}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\threecol65{-7}}\Rightarrow
 c_1\dst{\threecol{-2}{-4}3}+ c_2\dst{\threecol{-1}10}
 +c_3\dst{\threecol{-1}0{-1}}=\dst{\threecol65{-7}}$,
 so $c_1=-2$, $c_2=-3$, and $c_3=1$.  Therefore,
-${\bf y}=\dst{\threecol48{-6}e^t+\threecol2{-3}{-1}e^{-2t}+
+${\bfseries y}=\dst{\threecol48{-6}e^t+\threecol2{-3}{-1}e^{-2t}+
 \threecol{-1}10te^{-2t}}$.
 
 
@@ -18436,7 +17931,7 @@ $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&0\\0&1&0&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=x_3$ and $x_2=0$.  Taking $x_3=1$
 yields
-${\bf y}_1=\dst{\threecol101}e^{-3t}$.
+${\bfseries y}_1=\dst{\threecol101}e^{-3t}$.
 The eigenvectors associated
  with $\lambda_2=1$ satisfy the system with  augmented matrix
 $\dst{\left[\begin{array}{rrrcr}-8&-4&4&\vdots&0\\-1&-1&1&
@@ -18446,23 +17941,23 @@ $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&0\\0&1&-1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=0$ and $x_2=x_3$.  Taking $x_3=1$
 yields
-${\bf y}_2=\dst{\threecol011}e^t$.
-For a third solution we need a vector ${\bf u}$ such that
+${\bfseries y}_2=\dst{\threecol011}e^t$.
+For a third solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree{-8}{-4}4{-1}{-1}1{-9}{-5}5\threecol{u_1}{u_2}{u_3}}
 =\dst{\threecol011}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&1\\0&1&-1&
 \vdots&-2\\0&0&0&\vdots&0\end{array}\right]}$.
-Let $u_3=0$, $u_1=1$, and $u_2=-2$. Then ${\bf
+Let $u_3=0$, $u_1=1$, and $u_2=-2$. Then ${\bfseries
 y}_3=\dst{\threecol1{-2}0}e^t+\dst{\threecol011}te^{t}$. The general
 solution is
-${\bf y}=c_1\dst{\threecol101}e^{-3t}+ c_2\dst{\threecol011}e^t+
+${\bfseries y}=c_1\dst{\threecol101}e^{-3t}+ c_2\dst{\threecol011}e^t+
 c_3\left(\dst{\threecol1{-2}0}e^t+\dst{\threecol011}te^{t}\right)$.
-Now ${\bf y}(0)=\dst{\threecol{-6}9{-1}}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\threecol{-6}9{-1}}\Rightarrow
 c_1\dst{\threecol101}+ c_2\dst{\threecol011}+
 c_3\dst{\threecol1{-2}0}=\dst{\threecol{-6}9{-1}}$,
 so $c_1=-2$, $c_2=1$, and $c_3=-4$.  Therefore,
-${\bf y}=\dst{-\threecol202e^{-3t}+\threecol{-4}91e^t-
+${\bfseries y}=\dst{-\threecol202e^{-3t}+\threecol{-4}91e^t-
 \threecol044te^t}$.
 
 
@@ -18479,7 +17974,7 @@ $\dst{\left[\begin{array}{rrrcr}1&-1&0&\vdots&0\\0&0&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=x_2$ and $x_3=0$.  Taking $x_2=1$
 yields
-${\bf y}_1=\dst{\threecol110}e^{t}$.
+${\bfseries y}_1=\dst{\threecol110}e^{t}$.
 The eigenvectors associated
  with $\lambda_2=8$ satisfy the system with  augmented matrix
 $\dst{\left[\begin{array}{rrrcr}-4&-8&-4&\vdots&0\\-3&-9&-3&
@@ -18489,26 +17984,26 @@ $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&0\\0&1&0&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=-x_3$ and $x_2=0$.  Taking $x_3=1$
 yields
-${\bf y}_2=\dst{\threecol{-1}01}e^{8t}$.
-For a third solution we need a vector ${\bf u}$ such that
+${\bfseries y}_2=\dst{\threecol{-1}01}e^{8t}$.
+For a third solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree{-4}{-8}{-4}{-3}{-9}{-3}1{-1}1
 \threecol{u_1}{u_2}{u_3}}=\dst{\threecol{-1}01}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&{3\over4}\\0&1&0&
 \vdots&-{1\over4}\\0&0&0&\vdots&0\end{array}\right]}$.
-Let $u_3=0$, $u_1=\dst{3\over4}$, and $u_2=-\dst{1\over4}$. Then ${\bf
+Let $u_3=0$, $u_1=\dst{3\over4}$, and $u_2=-\dst{1\over4}$. Then ${\bfseries
 y}_3=\dst{\threecol3{-1}0}{e^{8t}\over4}+\dst{\threecol{-1}01}te^{8t}$.
 The general solution is
 $c_1\dst{\threecol110}e^{t}+
 c_2\dst{\threecol{-1}01}e^{8t}+
 c_3\dst\left({\threecol3{-1}0}{e^{8t}\over4}+
 \dst{\threecol{-1}01}te^{8t}\right)$.
-Now ${\bf y}(0)=\dst{\threecol{-4}1{-3}}\Rightarrow
+Now ${\bfseries y}(0)=\dst{\threecol{-4}1{-3}}\Rightarrow
 c_1\dst{\threecol110}+
 c_2\dst{\threecol{-1}01}+
 c_3\dst{\threecol{3\over4}{-{1\over4}}0}=\dst{\threecol{-4}1{-3}}$,
 so $c_1=-1$, $c_2=-3$, and $c_3=-8$.  Therefore,
-${\bf y}=\dst{-\threecol110e^{-4t}+\threecol{-3}2{-3}e^{8t}+
+${\bfseries y}=\dst{-\threecol110e^{-4t}+\threecol{-3}2{-3}e^{8t}+
 \threecol80{-8}te^{8t}}$.
 
 
@@ -18524,26 +18019,26 @@ $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&0\\0&1&-1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=0$ and $x_2=x_3$.  Taking $x_3=1$
 yields
-${\bf y}_1=\dst{\threecol011}e^{6t}$.
-For a second solution we need a vector ${\bf u}$ such that
+${\bfseries y}_1=\dst{\threecol011}e^{6t}$.
+For a second solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree1{-1}1{-1}3{-3}{-2}2{-2}\threecol{u_1}{u_2}{u_3}}
 =\dst{\threecol011}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&-{1\over4}\\0&1&-1&
 \vdots&{1\over4}\\0&0&0&\vdots&0\end{array}\right]}$.
-Let $u_3=0$, $u_1=-\dst{1\over4}$, and $u_2=\dst{1\over4}$. Then ${\bf
+Let $u_3=0$, $u_1=-\dst{1\over4}$, and $u_2=\dst{1\over4}$. Then ${\bfseries
 y}_2=\dst{\threecol{-1}10}{e^{6t}\over4}+\dst{\threecol011}te^{6t}$.
-For a third solution we need a vector ${\bf v}$ such that
+For a third solution we need a vector ${\bfseries v}$ such that
 $\dst{\threebythree1{-1}1{-1}3{-3}{-2}2{-2}\threecol{v_1}{v_2}{v_3}}
 =\dst{\threecolj{-{1\over4}}{1\over4}0}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&{1\over8}\\0&1&-1&
 \vdots&{1\over8}\\0&0&0&\vdots&0\end{array}\right]}$.
 Let $v_3=0$, $v_1=\dst{1\over8}$, and $v_2=\dst{1\over8}$. Then
-${\bf y}_3= \dst{\threecol110}{e^{6t}\over8}+
+${\bfseries y}_3= \dst{\threecol110}{e^{6t}\over8}+
 \dst{\threecol{-1}10}{te^{6t}\over4}+\dst{\threecol011}{t^2e^{6t}\over2}$.
 The general solution is
-${\bf y}=\dst{c_1\threecol011e^{6t}+
+${\bfseries y}=\dst{c_1\threecol011e^{6t}+
 c_2\left(\threecol{-1}10{e^{6t}\over4}+\threecol011te^{6t}\right)}$
 $$+c_3\left(\threecol110{e^{6t}\over8}+\threecol{-1}10{t
 e^{6t}\over4}+\threecol011{t^2e^{6t}\over2}\right).$$
@@ -18562,26 +18057,26 @@ $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&0\\0&1&1&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=0$ and $x_2=-x_3$.  Taking $x_3=1$
 yields
-${\bf y}_1=\dst{\threecol0{-1}1}e^{-2t}$.
-For a second solution we need a vector ${\bf u}$ such that
+${\bfseries y}_1=\dst{\threecol0{-1}1}e^{-2t}$.
+For a second solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree{-4}{-4}{-4}211233\threecol{u_1}{u_2}{u_3}}
 =\dst{\threecol0{-1}1}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&-1\\0&1&1&
 \vdots&1\\0&0&0&\vdots&0\end{array}\right]}$.
 Let $u_3=0$, $u_1=-1$, and $u_2=1$. Then
-${\bf y}_2=\threecol{{-1}}10e^{-2t}+\threecol0{-1}1te^{-2t}$.
-For a third solution we need a vector ${\bf v}$ such that
+${\bfseries y}_2=\threecol{{-1}}10e^{-2t}+\threecol0{-1}1te^{-2t}$.
+For a third solution we need a vector ${\bfseries v}$ such that
 $\dst{\threebythree{-4}{-4}{-4}211233\threecol{v_1}{v_2}{v_3}}
 =\dst{\threecol{-1}10}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&0&\vdots&{3\over4}\\0&1&1&
 \vdots&-{1\over2}\\0&0&0&\vdots&0\end{array}\right]}$.
 Let $v_3=0$, $v_1=\dst{3\over4}$, and $v_2=-\dst{1\over2}$. Then
-${\bf y}_3= \threecol3{-2}0\dst{e^{-2t}\over4}+\threecol{-1}10t
+${\bfseries y}_3= \threecol3{-2}0\dst{e^{-2t}\over4}+\threecol{-1}10t
 e^{-2t}+\threecol0{-1}1\dst{t^2e^{-2t}\over2}$.
 The general solution is
-${\bf y}=\dst{c_1\threecol0{-1}1e^{-2t}+
+${\bfseries y}=\dst{c_1\threecol0{-1}1e^{-2t}+
 c_2\left(\threecol{{-1}}10e^{-2t}+\threecol0{-1}1te^{-2t}\right)}$
 $$+c_3\left(\threecol3{-2}0{e^{-2t}\over4}+\threecol{-1}10t
 e^{-2t}+\threecol0{-1}1{t^2e^{-2t}\over2}\right)$$
@@ -18600,26 +18095,26 @@ $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&0\\0&1&-{1\over2}&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=-x_3$ and $x_2=\dst{x_3\over2}$.  Taking $x_3=2$
 yields
-${\bf y}_1=\dst{\threecol{-2}12}e^{-6t}$.
-For a second solution we need a vector ${\bf u}$ such that
+${\bfseries y}_1=\dst{\threecol{-2}12}e^{-6t}$.
+For a second solution we need a vector ${\bfseries u}$ such that
 $\dst{\threebythree4{-12}{10}2{-18}{11}2{-24}{14}\threecol{u_1}{u_2}{u_3}}
 =\dst{\threecol{-2}12}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&-1\\0&1&-{1\over2}&
 \vdots&-{1\over6}\\0&0&0&\vdots&0\end{array}\right]}$.
 Let $u_3=0$, $u_1=-1$, and $u_2=-\dst{1\over6}$. Then
-${\bf y}_2=-\threecol610\dst{e^{-6t}\over6}+\threecol{-2}12te^{-6t}$.
-For a third solution we need a vector ${\bf v}$ such that
+${\bfseries y}_2=-\threecol610\dst{e^{-6t}\over6}+\threecol{-2}12te^{-6t}$.
+For a third solution we need a vector ${\bfseries v}$ such that
 $\dst{\threebythree4{-12}{10}2{-18}{11}2{-24}{14}\threecol{v_1}{v_2}{v_3}}
 =\dst{\threecol{-1}{-{1\over6}}0}$.
 The augmented matrix of this system is row equivalent to
 $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&-{1\over3}\\0&1&-{1\over2}&
 \vdots&-{1\over36}\\0&0&0&\vdots&0\end{array}\right]}$.
 Let $v_3=0$, $v_1=-\dst{1\over3}$, and $v_2=-\dst{1\over36}$. Then
-${\bf y}_3= -\threecol{12}10\dst{e^{-6t}\over36}-\threecol610{t
+${\bfseries y}_3= -\threecol{12}10\dst{e^{-6t}\over36}-\threecol610{t
 e^{-6t}\over6}+\threecol{-2}12{t^2e^{-6t}\over2}$.
 The general solution is
- ${\bf y}=\dst{c_1\threecol{-2}12e^{-6t}+
+ ${\bfseries y}=\dst{c_1\threecol{-2}12e^{-6t}+
 c_2\left(-\threecol610{e^{-6t}\over6}+\threecol{-2}12te^{-6t}\right)}$
 $$+c_3\left(-\threecol{12}10{e^{-6t}\over36}-\threecol610{t
 e^{-6t}\over6}+\threecol{-2}12{t^2e^{-6t}\over2}\right).$$
@@ -18638,11 +18133,11 @@ $\dst{\left[\begin{array}{rrrcr}1&0&1&\vdots&0\\0&0&0&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=-x_3$ and $x_2$ is arbitrary.  Taking $x_2=0$ and $x_3=1$
 yields
-${\bf y}_1=\threecol{-1}01e^{-3t}$.
+${\bfseries y}_1=\threecol{-1}01e^{-3t}$.
 Taking $x_2=1$ and $x_3=0$
-yields  ${\bf y}_2=\threecol010e^{-3t}$.
+yields  ${\bfseries y}_2=\threecol010e^{-3t}$.
 For a third solution we need constants $\alpha$ and $\beta$  and a
-vector ${\bf u}$ such that
+vector ${\bfseries u}$ such that
 $\dst{\threebythree{-1}0{-1}{-1}0{-1}101\threecol{u_1}{u_2}{u_3}}
 =\alpha\dst{\threecol{-1}01}+\beta\threecol010$.
 The augmented matrix of this system is row equivalent to
@@ -18650,11 +18145,11 @@ $\dst{\left[\begin{array}{rrrcc}1&0&1&\vdots&\alpha\\0&0&0&
 \vdots&\alpha+\beta\\0&0&0&\vdots&0\end{array}\right]}$;
 hence the system
 has a solution if $\alpha=-\beta=1$, which yields the eigenvector
-${\bf x}_3=\threecol{-1}{-1}1$. Taking $u_1=1$  and $u_2=u_3=0$
+${\bfseries x}_3=\threecol{-1}{-1}1$. Taking $u_1=1$  and $u_2=u_3=0$
 yields the solution
-${\bf y}_3=\threecol100e^{-3t}+\threecol{-1}{-1}1te^{-3t}$.
+${\bfseries y}_3=\threecol100e^{-3t}+\threecol{-1}{-1}1te^{-3t}$.
 The general solution is
-${\bf
+${\bfseries
 y}=\dst{c_1\threecol{-1}01e^{-3t}+c_2\threecol010e^{-3t}+c_3\left
 (\threecol100e^{-3t}+\threecol{-1}{-1}1te^{-3t}\right)}$
 
@@ -18672,11 +18167,11 @@ $\dst{\left[\begin{array}{rrrcr}1&1&0&\vdots&0\\0&0&0&
 \vdots&0\\0&0&0&\vdots&0\end{array}\right]}$.
 Hence  $x_1=-x_2$ and $x_3$ is arbitrary.  Taking $x_2=1$ and $x_3=0$
 yields
-${\bf y}_1=\threecol{-1}10e^{-2t}$.
+${\bfseries y}_1=\threecol{-1}10e^{-2t}$.
 Taking  $x_2=0$ and $x_3=1$ yields
-  ${\bf y}_2=\threecol001e^{-2t}$.
+  ${\bfseries y}_2=\threecol001e^{-2t}$.
 For a third solution we need constants $\alpha$ and $\beta$  and a
-vector ${\bf u}$ such that
+vector ${\bfseries u}$ such that
 $\dst{\threebythree{-1}{-1}0110{-1}{-1}0\threecol{u_1}{u_2}{u_3}}
 =\alpha\dst{\threecol{-1}10}+\beta\threecol001$.
 The augmented matrix of this system is row equivalent to
@@ -18684,58 +18179,49 @@ $\dst{\left[\begin{array}{rrrcc}1&1&0&\vdots&\alpha\\0&0&0&
 \vdots&\alpha+\beta\\0&0&0&\vdots&0\end{array}\right]}$;
 hence the system
 has a solution if $\alpha=-\beta=1$, which yields the eigenvector
-${\bf x}_3=\threecol{-1}1{-1}$. Taking $u_1=1$  and $u_2=u_3=0$
+${\bfseries x}_3=\threecol{-1}1{-1}$. Taking $u_1=1$  and $u_2=u_3=0$
 yields the solution
-${\bf y}_3=
+${\bfseries y}_3=
 \threecol100e^{-2t}+\threecol{-1}1{-1}te^{-2t}$.
 The general solution is
- ${\bf y}=\dst{
+ ${\bfseries y}=\dst{
 c_1\threecol{-1}10e^{-2t}+c_2\threecol001e^{-2t}+c_3\left
 (\threecol100e^{-2t}+\threecol{-1}1{-1}te^{-2t}\right)}$.
 
 
 \exer{10.5.34}
 \begin{eqnarray*}
-{\bf y}_3'-A{\bf y}_3&=&(\lambda_1I-A){\bf v}e^{\lambda_1t}
-+(\lambda_1I-A){\bf u}te^{\lambda_1t}+{\bf u}e^{\lambda_1t}\\
-&&+(\lambda_1I-A){\bf x}{t^2e^{\lambda_1t}\over2}+{\bf
+{\bfseries y}_3'-A{\bfseries y}_3&=&(\lambda_1I-A){\bfseries v}e^{\lambda_1t}
++(\lambda_1I-A){\bfseries u}te^{\lambda_1t}+{\bfseries u}e^{\lambda_1t}\\
+&&+(\lambda_1I-A){\bfseries x}{t^2e^{\lambda_1t}\over2}+{\bfseries
 x}te^{\lambda_1t}\\
-&=&-{\bf u}e^{\lambda_1t}-{\bf x}te^{\lambda_1t}+{\bf
-u}e^{\lambda_1t}+0+{\bf x}te^{\lambda_1t}=0.
+&=&-{\bfseries u}e^{\lambda_1t}-{\bfseries x}te^{\lambda_1t}+{\bfseries
+u}e^{\lambda_1t}+0+{\bfseries x}te^{\lambda_1t}=0.
 \end{eqnarray*}
-Now suppose that $c_1{\bf y}_1+c_2{\bf y}_2+c_3{\bf y}_3={\bf 0}$.
+Now suppose that $c_1{\bfseries y}_1+c_2{\bfseries y}_2+c_3{\bfseries y}_3={\bfseries 0}$.
 Then
 $$
- c_1{\bf x}+c_2({\bf u}+t{\bf x})+c_3\dst\left({\bf
-v}+t{\bf u}+{t^2\over2}{\bf x}\right)={\bf 0}.
+ c_1{\bfseries x}+c_2({\bfseries u}+t{\bfseries x})+c_3\dst\left({\bfseries
+v}+t{\bfseries u}+{t^2\over2}{\bfseries x}\right)={\bfseries 0}.
 \eqno{\rm(A)}
 $$
-Differentiating this twice yields $c_3{\bf x}=0$, so $c_3=0$ since
-${\bf x}\ne{\bf 0}$. Therefore,(A) reduces to
-(B) $c_1{\bf x}+c_2({\bf u}+t{\bf x})={\bf 0}$.
-Differentiating this yields $c_2{\bf x}=0$, so $c_2=0$ since
-${\bf x}\ne{\bf 0}$. Therefore,(B) reduces to $c_3{\bf x}={\bf 0}$,
+Differentiating this twice yields $c_3{\bfseries x}=0$, so $c_3=0$ since
+${\bfseries x}\ne{\bfseries 0}$. Therefore,(A) reduces to
+(B) $c_1{\bfseries x}+c_2({\bfseries u}+t{\bfseries x})={\bfseries 0}$.
+Differentiating this yields $c_2{\bfseries x}=0$, so $c_2=0$ since
+${\bfseries x}\ne{\bfseries 0}$. Therefore,(B) reduces to $c_3{\bfseries x}={\bfseries 0}$,
 so $c_1=0$ since
-${\bf x}\ne{\bf 0}$. Therefore,${\bf y}_1$, ${\bf y}_2$, and ${\bf
+${\bfseries x}\ne{\bfseries 0}$. Therefore,${\bfseries y}_1$, ${\bfseries y}_2$, and ${\bfseries
 y}_3$ are linearly independendent.
 
 
-\newsection{6} {Linear Systems of Differential  Equations}
-{Constant Coefficient Homogeneous Systems III}
-\currentpdfbookmark{Section 10.6}{section:10.6}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,\quad CONSTANT COEFFICIENT HOMOGENEOUS SYSTEMS III}}
-\thissection
-
-
-\vspace*{-17.5pt}
+\section{Constant Coefficient Homogeneous Systems III}
 
 \exer{10.6.2}
 $\left|\begin{array}{cc}-11-\lambda&4\\-26&9-\lambda
 \end{array}\right|=(\lambda+1)^2+4$.
 The augmented matrix of
-$\left(A-\left(-1+2i\right)I\right){\bf x}={\bf 0}$ is
+$\left(A-\left(-1+2i\right)I\right){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}-10-2i&4&\vdots&0\\
 -26&10-2i&\vdots&0 \end{array}\right]$,
 which is row equivalent to
@@ -18743,12 +18229,12 @@ $\left[\begin{array}{cccr} 1&{-5+i\over13}&\vdots&0\\
 0&0&\vdots&0
 \end{array}\right]$.
 Therefore,$x_1=(5-i)x_2/13$. Taking $x_2=13$ yields the eigenvector
-${\bf x}=\left[\begin{array}{c}5-i\\13\end{array}\right]$.
+${\bfseries x}=\left[\begin{array}{c}5-i\\13\end{array}\right]$.
 Taking  real and imaginary parts of
 $e^{-t}(\cos2t+i\sin2t)
 )\left[\begin{array}{c}5-i\\13\end{array}\right]$ yields
 $$
- {\bf y}=\dst{c_1e^{-t}\ctwocol{5\cos2t+\sin2t}{13\cos2t}
+ {\bfseries y}=\dst{c_1e^{-t}\ctwocol{5\cos2t+\sin2t}{13\cos2t}
 +c_2e^{-t}\ctwocol{5\sin2t-\cos2t}{13\sin2t}}.
 $$
 
@@ -18757,7 +18243,7 @@ $$
 $\left|\begin{array}{cc} 5-\lambda&-6\\ 3&-1-\lambda
 \end{array}\right|=(\lambda-2)^2+9$.
 Hence, $\lambda=2+3i$ is an eigenvalue of $A$. The associated
-eigenvectors satisfy $\left(A-\left(2+3i\right)I\right){\bf x}={\bf
+eigenvectors satisfy $\left(A-\left(2+3i\right)I\right){\bfseries x}={\bfseries
 0}$. The augmented matrix of this system is
 $\left[\begin{array}{cccr} 3-3i&-6&\vdots&0\\
 3&-3-3i&\vdots&0  \end{array}\right]$,
@@ -18766,27 +18252,27 @@ $\left[\begin{array}{cccr} 1&-1-i&\vdots&0\\
 0&0&\vdots&0
 \end{array}\right]$.
 Therefore,$x_1=(1+i)x_2$. Taking $x_2=1$ yields $x_1=1+i$, so
-${\bf x}=\left[\begin{array}{c}1+i\\1\end{array}\right]$
+${\bfseries x}=\left[\begin{array}{c}1+i\\1\end{array}\right]$
 is an eigenvector.  Taking  real and imaginary parts of
 $e^{2t}(\cos3t+i\sin3t)
 \left[\begin{array}{c}1+i\\1\end{array}\right]$ yields
- ${\bf y}=\dst{c_1e^{2t}\ctwocol{\cos3t-\sin3t}{\cos3t}
+ ${\bfseries y}=\dst{c_1e^{2t}\ctwocol{\cos3t-\sin3t}{\cos3t}
 +c_2e^{2t}\ctwocol{\sin3t+\cos3t}{\sin3t}}$.
 
 
 \exer{10.6.6}
 $\left|\begin{array}{ccc}-3-\lambda&3&1\\1&-5-\lambda&-3\\-3
 &7&3-\lambda\end{array}\right|=-(\lambda+1)\left((\lambda+2)^2+4\right)$.
- The augmented matrix of $(A+I){\bf x=0}$ is
+ The augmented matrix of $(A+I){\bfseries x=0}$ is
 $\left[\begin{array}{rrrcr}-2&3&1&\vdots&0\\1&-4&-3&\vdots&0\\
 -3&7&4&\vdots&0\end{array}\right]$,
 which is row equivalent to
 $\left[\begin{array}{rrrcr} 1&0&1&\vdots&0\\ 0&1&1&
 \vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=x_2=-x_3$.  Taking $x_3=1$ yields
- ${\bf y}_1=\threecol{-1}{-1}1e^{-t}$.
+ ${\bfseries y}_1=\threecol{-1}{-1}1e^{-t}$.
 The augmented matrix of
-$\left(A-(-2+2i)I\right){\bf x=0}$ is
+$\left(A-(-2+2i)I\right){\bfseries x=0}$ is
 $\left[\begin{array}{ccccc}-1-2i&3&1&\vdots&0\\1&
 -3-2i&-3&\vdots&0\\-3&7&5-2i&\vdots&0
 \end{array}\right]$,
@@ -18796,16 +18282,16 @@ $\left[\begin{array}{ccccc} 1&0&-{1+i\over2}&\vdots&0\\
 \vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=\dst{(1+i)\over2}x_3$ and $x_2=-\dst{(1-i)\over2}x_3$.
 Taking $x_3=2$ yields the eigenvector
-${\bf x}_2=\left[\begin{array}{c}1+i\\-1+i\\2\end{array}\right]$.
+${\bfseries x}_2=\left[\begin{array}{c}1+i\\-1+i\\2\end{array}\right]$.
 The real and imaginary parts of
 $e^{-2t}(\cos2t+i\sin2t)\left[\begin{array}{c}1+i\\-1+i\\2\end{array}\right]$
  are
-${\bf y}_2=e^{-2t}\cthreecol{\cos2t-\sin2t}{-\cos2t-\sin2t}{2\cos2t}$
+${\bfseries y}_2=e^{-2t}\cthreecol{\cos2t-\sin2t}{-\cos2t-\sin2t}{2\cos2t}$
  and
-${\bf y}_3=e^{-2t}\cthreecol{\sin2t+\cos2t}{-\sin2t+\cos2t}{2\sin2t}$.
+${\bfseries y}_3=e^{-2t}\cthreecol{\sin2t+\cos2t}{-\sin2t+\cos2t}{2\sin2t}$.
  Therefore,
 $$
-\dst{{\bf y}=c_1\threecol{-1}{-1}1e^{-t}+c_2e^{-2t}\cthreecol{\cos2t-\sin
+\dst{{\bfseries y}=c_1\threecol{-1}{-1}1e^{-t}+c_2e^{-2t}\cthreecol{\cos2t-\sin
 2t}{-\cos2t-\sin  2t}{2\cos2t}+c_3e^{-2t}\cthreecol
 {\sin2t+\cos2t}{-\sin2t+\cos2t}{2\sin2t}}.
 $$
@@ -18814,15 +18300,15 @@ $$
 \exer{10.6.8}
 $\left|\begin{array}{ccc}-3-\lambda&1&-3\\4&-1-\lambda&2\\4
 &-2&3-\lambda\end{array}\right|=-(\lambda-1)\left((\lambda+1)^2+4\right)$.
- The augmented matrix of $(A-I){\bf x=0}$ is
+ The augmented matrix of $(A-I){\bfseries x=0}$ is
 $\left[\begin{array}{rrrcr}-4&1&-3&\vdots&0\\4&-2&2&\vdots&0\\
 4&-2&2&\vdots&0\end{array}\right]$,
 which is row equivalent to
 $\left[\begin{array}{rrrcr} 1&0&1&\vdots&0\\ 0&1&1&
 \vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=x_2=-x_3$.  Taking $x_3=1$ yields
-${\bf y}_1=\threecol{-1}{-1}1e^t$. The augmented matrix of
-$\left(A-(-1+2i)I\right){\bf x=0}$ is
+${\bfseries y}_1=\threecol{-1}{-1}1e^t$. The augmented matrix of
+$\left(A-(-1+2i)I\right){\bfseries x=0}$ is
 $\left[\begin{array}{crccr}-2-2i&1&-3&\vdots&0\\4&-2i&2&\vdots&0\\
 4&-2&4-2i&\vdots&0\end{array}\right]$,
 which is row equivalent to
@@ -18830,14 +18316,14 @@ $\left[\begin{array}{ccccc} 1&0&{1-i\over2}&\vdots&0\\
 0&1&-1&\vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=-\dst{1-i\over2}x_3$ and $x_2=x_3$.
 Taking $x_3=2$ yields the eigenvector
-${\bf x}_2=\left[\begin{array}{c}-1+i\\2\\2\end{array}\right]$.
+${\bfseries x}_2=\left[\begin{array}{c}-1+i\\2\\2\end{array}\right]$.
 The real and imaginary parts of
 $e^{-t}(\cos2t+i\sin2t)\left[\begin{array}{c}-1+i\\2\\2\end{array}\right]$
-are ${\bf y}_2=e^{-t}\cthreecol{-\sin2t-\cos2t}{2\cos2t}{2\cos2t}$
-and ${\bf y}_3=e^{-t}\cthreecol {\cos2t-\sin2t}{2\sin2t}{2\sin2t}$.
+are ${\bfseries y}_2=e^{-t}\cthreecol{-\sin2t-\cos2t}{2\cos2t}{2\cos2t}$
+and ${\bfseries y}_3=e^{-t}\cthreecol {\cos2t-\sin2t}{2\sin2t}{2\sin2t}$.
 Therefore,
 $$
-\dst{{\bf
+\dst{{\bfseries
 y}=c_1\threecol{-1}11e^{-t}+c_2e^{-t}\cthreecol{-\sin
 2t-\cos2t}{2\cos2t}{2\cos2t}+c_3e^{-t}\cthreecol
 {\cos2t-\sin2t}{2\sin2t}{2\sin2t}}.
@@ -18848,19 +18334,19 @@ $$
 $\dst{1\over3}\left|\begin{array}{cc}7-3\lambda&-5\\2&5-3\lambda
 \end{array}\right|=\dst{\left(\lambda-2\right)^2+1}$.
 The augmented matrix of
-$\dst{\left(A-(2+i)I\right)}{\bf x}={\bf 0}$ is
+$\dst{\left(A-(2+i)I\right)}{\bfseries x}={\bfseries 0}$ is
 $\dst{1\over3}\left[\begin{array}{cccr}1-3i&-5&\vdots&0\\2&-1-3i&\vdots&0
 \end{array}\right]$, which is row equivalent to
 $\left[\begin{array}{cccr} 1&-{1+3i\over2}&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$. Therefore,$x_1=\dst{1+3i\over2}x_2$. Taking
 $x_2=2$ yields the eigenvector
-${\bf x}=\left[\begin{array}{c}1+3i\\2\end{array}\right]$.
+${\bfseries x}=\left[\begin{array}{c}1+3i\\2\end{array}\right]$.
  Taking real and imaginary parts of
 $e^{2t}(\cos t+i\sin t)
 \left[\begin{array}{c}1+3i\\2\end{array}\right]$
 yields
 $$
-\dst{{\bf y}=c_1e^{2t}\left[\begin{array}{c}\cos t-3\sin t
+\dst{{\bfseries y}=c_1e^{2t}\left[\begin{array}{c}\cos t-3\sin t
 \\2\cos t\end{array}\right]+
 c_2e^{2t}\left[\begin{array}{c}
 \sin t+3\cos t\\ 2\sin t\end{array}\right]}.
@@ -18870,15 +18356,15 @@ $$
 \exer{10.6.12}
 $\left|\begin{array}{cc}34-\lambda&52\\-20&-30-\lambda
 \end{array}\right|=(\lambda-2)^2+16$. The augmented matrix of
-$\left(A-\left(2+4i\right)I\right){\bf x}={\bf 0}$ is
+$\left(A-\left(2+4i\right)I\right){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}32-4i&52&\vdots&0\\-20&-32-4i&\vdots&0
 \end{array}\right]$, which is row equivalent to
 $\left[\begin{array}{cccr} 1&{8+i\over5}&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$. Therefore,$x_1=-\dst{(8+i)\over5}x_2$. Taking
-$x_2=5$ yields the eigenvector ${\bf
+$x_2=5$ yields the eigenvector ${\bfseries
 x}=\left[\begin{array}{c}-8-i\\5\end{array}\right]$.
 Taking real and imaginary parts of $e^{2t}(\cos4t+i\sin
-4t)\left[\begin{array}{c}-8-i\\5\end{array}\right]$ yields $\dst{{\bf
+4t)\left[\begin{array}{c}-8-i\\5\end{array}\right]$ yields $\dst{{\bfseries
 y}=c_1e^{2t}\left[\begin{array}{c}\sin4t-8\cos4t\\
 5\cos4t\end{array}\right]+c_2e^{2t}\left[\begin{array}{c}
 -\cos4t-8\sin4t\\ 5\sin4t\end{array}\right]}$.
@@ -18887,16 +18373,16 @@ y}=c_1e^{2t}\left[\begin{array}{c}\sin4t-8\cos4t\\
 \exer{10.6.14}
 $\left|\begin{array}{ccc}3-\lambda&-4&-2\\-5&7-\lambda&-8\\-10
 &13&-8-\lambda\end{array}\right|=-(\lambda+2)\left((\lambda-2)^2+9\right)$.
- The augmented matrix of $(A+2I){\bf x=0}$ is
+ The augmented matrix of $(A+2I){\bfseries x=0}$ is
 $\left[\begin{array}{rrrcr}5&-4&-2&\vdots&0\\-5&9&-8&\vdots&0\\
 -10&13&-6&\vdots&0\end{array}\right]$,
 which is row equivalent to
 $\left[\begin{array}{rrrcr} 1&0&-2&\vdots&0\\ 0&1&-2&
 \vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=x_2=2x_3$.  Taking $x_3=1$ yields
-${\bf y}_1=\threecol221e^{-2t}$.
+${\bfseries y}_1=\threecol221e^{-2t}$.
 The augmented matrix of
-$\left(A-(2+3i)I\right){\bf x=0}$ is
+$\left(A-(2+3i)I\right){\bfseries x=0}$ is
 $\left[\begin{array}{ccccr}1-3i&-4&-2&\vdots&0\\-5&5-3i&-8&\vdots&0\\
 -10&13&-10-3i&\vdots&0\end{array}\right]$,
 which is row equivalent to
@@ -18904,15 +18390,15 @@ $\left[\begin{array}{ccccc} 1&0&1-i&\vdots&0\\
 0&1&-i&\vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=-(1-i)x_3$ and $x_2=ix_3$.
 Taking $x_3=1$ yields the eigenvector
-${\bf x}_2=\left[\begin{array}{c}-1+i\\i\\1\end{array}\right]$.
+${\bfseries x}_2=\left[\begin{array}{c}-1+i\\i\\1\end{array}\right]$.
 The real and imaginary parts of $e^{2t}(\cos3t+i\sin3t)
 \left[\begin{array}{c}-1+i\\i\\1\end{array}\right]$ are
-${\bf y}_2=e^{2t}\left[\begin{array}{c}-\cos3t-\sin3t\\-\sin3t\\
-\cos3t\end{array}\right]$ and ${\bf y}_3=
+${\bfseries y}_2=e^{2t}\left[\begin{array}{c}-\cos3t-\sin3t\\-\sin3t\\
+\cos3t\end{array}\right]$ and ${\bfseries y}_3=
 c_3e^{2t}\left[\begin{array}{c}-\sin3t+\cos3t\\\cos3t\\
 \sin3t\end{array}\right]$. Therefore,
 $$
-\dst{{\bf
+\dst{{\bfseries
 y}=c_1\left[\begin{array}{c} 2\\ 2\\1 \end{array}\right]e^{-2t}+
 c_2e^{2t}\left[\begin{array}{c}-\cos3t-\sin3t\\-\sin3t\\
 \cos3t\end{array}\right]+c_3e^{2t}\left[\begin{array}{c}
@@ -18923,7 +18409,7 @@ $$
 \exer{10.6.16}
 $\left|\begin{array}{ccc}1-\lambda&2&-2\\0&2-\lambda&-1\\1
 &0&-\lambda\end{array}\right|=-(\lambda-2)\left((\lambda-1)^2+1\right)$.
-The augmented matrix of $(A-I){\bf x=0}$ is
+The augmented matrix of $(A-I){\bfseries x=0}$ is
 $\left[\begin{array}{rrrcr}0&2&-2&\vdots&0\\0&
 1&-1&\vdots&0\\ 1&0&-1&\vdots&0
 \end{array}\right]$,
@@ -18931,9 +18417,9 @@ which is row equivalent to
 $\left[\begin{array}{rrrcr} 1&0&-1&\vdots&0\\ 0&1&-1&
 \vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=x_2=1$.  Taking $x_3=1$ yields
- ${\bf y}_1=\threecol111e^t$.
+ ${\bfseries y}_1=\threecol111e^t$.
 The augmented matrix of
-$\left(A-(1+i)I\right){\bf x=0}$ is
+$\left(A-(1+i)I\right){\bfseries x=0}$ is
 $\left[\begin{array}{ccccc}-i&2&-2&\vdots&0\\0&
 1-i&-1&\vdots&0\\ 1&0&-1-i&\vdots&0
 \end{array}\right]$,
@@ -18942,17 +18428,17 @@ $\left[\begin{array}{ccccc} 1&0&-1-i&\vdots&0\\ 0&1&-{1+i\over2}&
 \vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=(1+i)x_3$ and $x_2=\dst{(1+i)\over2}x_3$.
 Taking $x_3=2$ yields the eigenvector
-${\bf x}_2=\left[\begin{array}{c}2+2i\\1+i\\2\end{array}\right]$.
+${\bfseries x}_2=\left[\begin{array}{c}2+2i\\1+i\\2\end{array}\right]$.
 The real and imaginary parts of
 $e^{4t}(\cos t+i\sin t)\left[\begin{array}{c}2+2i
 \\1+i\\2\end{array}\right]$  are
-${\bf y}_2=e^t\left[\begin{array}{c} 2\cos t-2\sin t\\\cos t-\sin
+${\bfseries y}_2=e^t\left[\begin{array}{c} 2\cos t-2\sin t\\\cos t-\sin
 t\\ 2\cos t\end{array}\right]$ and
-${\bf y}_3=
+${\bfseries y}_3=
 c_3e^t\left[\begin{array}{ccc} 2\sin t+2\cos t\\\cos t+\sin t\\
 2\sin t\end{array}\right]$. Therefore,
 $$
-\dst{{\bf y}=c_1\left[\begin{array}{c} 1\\1\\1
+\dst{{\bfseries y}=c_1\left[\begin{array}{c} 1\\1\\1
 \end{array}\right]e^t+
 c_2e^t\left[\begin{array}{c} 2\cos t-2\sin t
 \\\cos t-\sin t\\ 2\cos t\end{array}\right]+
@@ -18964,20 +18450,20 @@ $$
 \exer{10.6.18}
 $\left|\begin{array}{cc}7-\lambda&15\\-3&1-\lambda
 \end{array}\right|=(\lambda-4)^2+36$. The augmented matrix of
-$\left(A-\left(4+6i\right)I\right){\bf x}={\bf 0}$ is
+$\left(A-\left(4+6i\right)I\right){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}3-6i&15&\vdots&0\\-3&-3-6i&\vdots&0
 \end{array}\right]$, which is row equivalent to
 $\left[\begin{array}{cccr} 1&1+2i&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$. Therefore,$x_1=-(1+2i)x_2$. Taking $x_2=1$ yields
-the eigenvector ${\bf
+the eigenvector ${\bfseries
 x}=\left[\begin{array}{c}-1-2i\\1\end{array}\right]$.
 Taking real and imaginary parts of
 $e^{4t}(\cos6t+i\sin6t)\left[\begin{array}{c}-1-2i\\1\end{array}\right]$
-yields ${\bf y}=\dst{c_1e^{4t}\ctwocol{2\sin6t-\cos6t}{\cos6t}
-+c_2e^{4t}\ctwocol{-2\cos6t-\sin6t}{\sin6t}}$. Now ${\bf
+yields ${\bfseries y}=\dst{c_1e^{4t}\ctwocol{2\sin6t-\cos6t}{\cos6t}
++c_2e^{4t}\ctwocol{-2\cos6t-\sin6t}{\sin6t}}$. Now ${\bfseries
 y}(0)=\twocol51\Rightarrow
 \twobytwo{-1}{-2}10\twocol{c_1}{c_2}=\twocol51$, so $c_1=1$, $c_2=-3$,
-and $\dst{{\bf
+and $\dst{{\bfseries
 y}=e^{4t}\left[\begin{array}{c}5\cos6t+5\sin6t\\\cos6t-3\sin6t
 \end{array}\right]}$.
 
@@ -18986,23 +18472,23 @@ y}=e^{4t}\left[\begin{array}{c}5\cos6t+5\sin6t\\\cos6t-3\sin6t
 $\dst{1\over6}\left|\begin{array}{cc}4-6\lambda&-2\\5&2-6\lambda
 \end{array}\right|=\dst{\left(\lambda-{1\over2}\right)^2+{1\over4}}$.
 The augmented matrix of
-$\dst{\left(A-{1+i\over2}I\right)}{\bf x}={\bf 0}$ is
+$\dst{\left(A-{1+i\over2}I\right)}{\bfseries x}={\bfseries 0}$ is
 $\dst{1\over6}\left[\begin{array}{cccr}1-3i&-2&\vdots&0\\5&-1-3i&\vdots&0
 \end{array}\right]$, which is row equivalent to
 $\left[\begin{array}{cccr} 1&-{1+3i\over5}&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$. Therefore,$x_1=\dst{1+3i\over5}x_2$. Taking
 $x_2=5$ yields the eigenvector
-${\bf x}=\left[\begin{array}{c}1+3i\\5\end{array}\right]$.
+${\bfseries x}=\left[\begin{array}{c}1+3i\\5\end{array}\right]$.
  Taking real and imaginary parts of
 $e^{t/2}(\cos t/2+i\sin
 t/2)\left[\begin{array}{c}1+3i\\5\end{array}\right]$
-yields ${\bf y}=\dst{c_1e^{t/2}\ctwocol{\cos t/2-3\sin t/2}{5\cos t/2}
-+c_2e^{t/2}\ctwocol{\sin t/2+3\cos t/2}{5\sin t/2}}$. Now ${\bf
+yields ${\bfseries y}=\dst{c_1e^{t/2}\ctwocol{\cos t/2-3\sin t/2}{5\cos t/2}
++c_2e^{t/2}\ctwocol{\sin t/2+3\cos t/2}{5\sin t/2}}$. Now ${\bfseries
 y}(0)=\twocol1{-1}\Rightarrow
 \twobytwo1350\twocol{c_1}{c_2}=\twocol1{-1}$, so
 $c_1=-\dst{1\over5}$,
 $c_2=\dst{2\over5}$, and
-${\bf y}=\dst{e^{t/2}\left[\begin{array}{c}\cos(t/2)+
+${\bfseries y}=\dst{e^{t/2}\left[\begin{array}{c}\cos(t/2)+
 \sin(t/2)\\-\cos(t/2)+2\sin(t/2)
 \end{array}\right]}$.
 
@@ -19010,16 +18496,16 @@ ${\bf y}=\dst{e^{t/2}\left[\begin{array}{c}\cos(t/2)+
 \exer{10.6.22}
 $\left|\begin{array}{ccc}4-\lambda&4&0\\8&10-\lambda&-20\\2
 &3&-2-\lambda\end{array}\right|=-(\lambda-8)\left((\lambda-2)^2+4\right)$.
- The augmented matrix of $(A-8I){\bf x=0}$ is
+ The augmented matrix of $(A-8I){\bfseries x=0}$ is
 $\left[\begin{array}{rrrcr}0&4&0&\vdots&0\\8&6&-20&\vdots&0\\
 2&3&-6&\vdots&0\end{array}\right]$,
 which is row equivalent to
 $\left[\begin{array}{rrrcr} 1&0&-2&\vdots&0\\ 0&1&-2&
 \vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=x_2=2x_3$. Taking $x_3=2$ yields
-${\bf y}_1=\threecol221e^{8t}$.
+${\bfseries y}_1=\threecol221e^{8t}$.
 The augmented matrix of
-$\left(A-(2+2i)I\right){\bf x=0}$ is
+$\left(A-(2+2i)I\right){\bfseries x=0}$ is
 $\left[\begin{array}{ccccc}2-2i&4&0&\vdots&0\\8&
 8-2i&-20&\vdots&0\\2&3&-4-2i&\vdots&0\end{array}\right]$,
 which is row equivalent to
@@ -19027,22 +18513,22 @@ $\left[\begin{array}{ccccc} 1&0&-2+2i&\vdots&0\\
 0&1&-2i&\vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=(2-2i)x_3$ and $x_2=2ix_3$.
 Taking $x_3=1$ yields the eigenvector
-${\bf x}_2=\left[\begin{array}{c}2-2i\\2i\\1\end{array}\right]$.
+${\bfseries x}_2=\left[\begin{array}{c}2-2i\\2i\\1\end{array}\right]$.
 The real and imaginary parts of
 $e^{2t}(\cos2t+i\sin
 2t)\left[\begin{array}{c}2-2i\\2i\\1\end{array}\right]$
-are ${\bf y}_2=e^{2t}\left[\begin{array}{c}2\cos2t+2\sin2t
+are ${\bfseries y}_2=e^{2t}\left[\begin{array}{c}2\cos2t+2\sin2t
 \\-2\sin2t\\2\cos2t\end{array}\right]$ and
-${\bf y}_3=e^{2t}\left[\begin{array}{c}2\sin2t+2\cos2t
+${\bfseries y}_3=e^{2t}\left[\begin{array}{c}2\sin2t+2\cos2t
 \\2\cos2t\\\sin2t\end{array}\right]$, so the general solution
-is ${\bf y}=c_1\threecol221e^{8t}+c_2
+is ${\bfseries y}=c_1\threecol221e^{8t}+c_2
 e^{2t}\left[\begin{array}{c}2\cos2t+2\sin2t
 \\-2\sin2t\\2\cos2t\end{array}\right]+
 c_3e^{2t}\left[\begin{array}{c}2\sin2t+2\cos2t
 \\2\cos2t\\\sin2t\end{array}\right]$.
-Now ${\bf y}(0)=\threecol865\Rightarrow\threebythree22{-2}202110
+Now ${\bfseries y}(0)=\threecol865\Rightarrow\threebythree22{-2}202110
 \threecol{c_1}{c_2}{c_3}=\threecol865$, so $c_1=2$, $c_2=3$,
-$c_3=1$, and $\dst{{\bf y}=\threecol442e^{8t}
+$c_3=1$, and $\dst{{\bfseries y}=\threecol442e^{8t}
 +e^{2t}\left[\begin{array}{c}4\cos2t+8\sin2t\\
 -6\sin2t+2\cos2t\\3\cos2t+\sin2t
 \end{array}\right]}$.
@@ -19051,16 +18537,16 @@ $c_3=1$, and $\dst{{\bf y}=\threecol442e^{8t}
 \exer{10.6.24}
 $\left|\begin{array}{ccc}4-\lambda&-4&4\\-10&3-\lambda&15\\2
 &-3&1-\lambda\end{array}\right|=-(\lambda-8)(\lambda^2+16)$.
- The augmented matrix of $(A-8I){\bf x=0}$ is
+ The augmented matrix of $(A-8I){\bfseries x=0}$ is
 $\left[\begin{array}{rrrcr}-4&-4&4&\vdots&0\\-10&-5&15&\vdots&0\\
 2&-3&-7&\vdots&0\end{array}\right]$,
 which is row equivalent to
 $\left[\begin{array}{rrrcr} 1&0&-2&\vdots&0\\ 0&1&1&
 \vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=2x_3$ and $x_2=-x_3$. Taking $x_3=1$ yields
-${\bf y}_1=\threecol2{-1}1e^{8t}$.
+${\bfseries y}_1=\threecol2{-1}1e^{8t}$.
 The augmented matrix of
-$\left(A-4iI\right){\bf x=0}$ is
+$\left(A-4iI\right){\bfseries x=0}$ is
 $\left[\begin{array}{ccccr}4-4i&-4&4&\vdots&0\\-10&3-4i&15&\vdots&0\\
 2&-3&1-4i&\vdots&0\end{array}\right]$,
 which is row equivalent to
@@ -19068,54 +18554,54 @@ $\left[\begin{array}{ccccc} 1&0&-1+i&\vdots&0\\
 0&1&-1+2i&\vdots&0\\ 0&0&0&\vdots&0\end{array}\right]$.
 Therefore,$x_1=(1-i)x_3$ and $x_2=(1-2i)x_3$.
 Taking $x_3=1$ yields the eigenvector
-${\bf x}_2=\left[\begin{array}{c}1-i\\1-2i\\1\end{array}\right]$.
+${\bfseries x}_2=\left[\begin{array}{c}1-i\\1-2i\\1\end{array}\right]$.
 The real and imaginary parts of
 $(\cos4t+i\sin
 4t)\left[\begin{array}{c}1-i\\1-2i\\1\end{array}\right]$
-are ${\bf y}_2=\left[\begin{array}{c}\cos4t+\sin4t
+are ${\bfseries y}_2=\left[\begin{array}{c}\cos4t+\sin4t
 \\\cos4t+2\sin4t\\\cos4t\end{array}\right]$ and
-${\bf y}_3=\left[\begin{array}{c}\sin4t-\cos4t
+${\bfseries y}_3=\left[\begin{array}{c}\sin4t-\cos4t
 \\\sin4t-2\cos4t\\\sin4t\end{array}\right]$, so the general solution
-is ${\bf y}=c_1 \threecol2{-1}1e^{8t}+
+is ${\bfseries y}=c_1 \threecol2{-1}1e^{8t}+
 c_2\left[\begin{array}{c}\cos4t+\sin4t
 \\\cos4t+2\sin4t\\\cos4t\end{array}\right]
 +c_3\left[\begin{array}{c}\sin4t-\cos4t
 \\\sin4t-2\cos4t\\\sin4t\end{array}\right]$.
-Now ${\bf
+Now ${\bfseries
 y}(0)=\threecol{16}{14}6\Rightarrow\threebythree21{-1}{-1}1{-2}110
 \threecol{c_1}{c_2}{c_3}=\threecol{16}{14}6$, so $c_1=3$, $c_2=3$,
-$c_3=-7$, and $\dst{{\bf y}=\threecol6{-3}3e^{8t}
+$c_3=-7$, and $\dst{{\bfseries y}=\threecol6{-3}3e^{8t}
 +\left[\begin{array}{c}10\cos4t-4\sin4t\\17\cos4t-\sin4t\\3\cos4t-7\sin4t
 \end{array}\right]}$.
 
 \exer{10.6.28}
-{\bf (a)}
+{\bfseries (a)}
 From the quadratic formula the roots are
 \begin{eqnarray*}
-k_1&=&{\|{\bf u}\|^2-\|{\bf v}^2\|+\sqrt{(\|{\bf u}\|^2-\|{\bf
-v}^2\|)^2+4({\bf u},{\bf v})^2}\over2({\bf u},{\bf v})}\\
-k_2&=&{\|{\bf u}\|^2-\|{\bf v}^2\|-\sqrt{(\|{\bf u}\|^2-\|{\bf
-v}^2\|)^2+4({\bf u},{\bf v})^2}\over2({\bf u},{\bf v})}.
+k_1&=&{\|{\bfseries u}\|^2-\|{\bfseries v}^2\|+\sqrt{(\|{\bfseries u}\|^2-\|{\bfseries
+v}^2\|)^2+4({\bfseries u},{\bfseries v})^2}\over2({\bfseries u},{\bfseries v})}\\
+k_2&=&{\|{\bfseries u}\|^2-\|{\bfseries v}^2\|-\sqrt{(\|{\bfseries u}\|^2-\|{\bfseries
+v}^2\|)^2+4({\bfseries u},{\bfseries v})^2}\over2({\bfseries u},{\bfseries v})}.
 \end{eqnarray*}
 Clearly $k_1>0$ and $k_2<0$. Moreover,
 $$
-k_1k_2={(\|{\bf u}\|^2-\|{\bf v}^2\|)^2-\left[(\|{\bf u}\|^2-\|{\bf
-v}^2\|)^2+4({\bf u},{\bf v})^2\right]\over4({\bf u},{\bf v})^2}=-1.
+k_1k_2={(\|{\bfseries u}\|^2-\|{\bfseries v}^2\|)^2-\left[(\|{\bfseries u}\|^2-\|{\bfseries
+v}^2\|)^2+4({\bfseries u},{\bfseries v})^2\right]\over4({\bfseries u},{\bfseries v})^2}=-1.
 $$
 
-{\bf (b)} Since $k_2=-1/k_1$,
+{\bfseries (b)} Since $k_2=-1/k_1$,
 \begin{eqnarray*}
-{\bf u}_1^{(2)}&=&{\bf u}-k_2{\bf v}={\bf u}+{1\over k_1}{\bf
-v}={1\over k_1}({\bf v}+k_1{\bf u})={1\over k_1}{\bf v}_1^{(1)}\\
-{\bf v}_1^{(2)}&=&{\bf v}+k_2{\bf u}={\bf v}-{1\over k_1}{\bf
-u}=-{1\over k_1}({\bf u}-k_1{\bf v})=-{1\over k_1}{\bf u}_1^{(1)}.
+{\bfseries u}_1^{(2)}&=&{\bfseries u}-k_2{\bfseries v}={\bfseries u}+{1\over k_1}{\bfseries
+v}={1\over k_1}({\bfseries v}+k_1{\bfseries u})={1\over k_1}{\bfseries v}_1^{(1)}\\
+{\bfseries v}_1^{(2)}&=&{\bfseries v}+k_2{\bfseries u}={\bfseries v}-{1\over k_1}{\bfseries
+u}=-{1\over k_1}({\bfseries u}-k_1{\bfseries v})=-{1\over k_1}{\bfseries u}_1^{(1)}.
 \end{eqnarray*}
 
 
 \exer{10.6.30}
 $\left|\begin{array}{cc}-15-\lambda&10\\-25&15-\lambda
 \end{array}\right|=\lambda^2+25$.
-The augmented matrix of $(A-5iI){\bf x}={\bf 0}$ is
+The augmented matrix of $(A-5iI){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}-15-5i&10&\vdots&0\\
 -25&15-5i&\vdots&0 \end{array}\right]$,
 which is row equivalent to
@@ -19123,19 +18609,19 @@ $\left[\begin{array}{cccr} 1&{-3+i\over5}&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$.
 Therefore,$x_1=\dst{(3-i)\over5}x_2$. Taking $x_2=5$
 yields the eigenvector
- ${\bf x}=\left[\begin{array}{c}3-i\\5\end{array}\right]$,
-so ${\bf u}=\dst{\twocol35}$ and ${\bf v}=\dst{\twocol{-1}0}$.
+ ${\bfseries x}=\left[\begin{array}{c}3-i\\5\end{array}\right]$,
+so ${\bfseries u}=\dst{\twocol35}$ and ${\bfseries v}=\dst{\twocol{-1}0}$.
 The quadratic equation is $-3k^2-33k+3=0$, with positive root
 $k\approx.0902$.
  Routine calculations yield
- ${\bf U}\approx\dst{\twocol{.5257}{.8507}}$,
-${\bf V}\approx\dst{\twocol{-.8507}{.5257}}$.
+ ${\bfseries U}\approx\dst{\twocol{.5257}{.8507}}$,
+${\bfseries V}\approx\dst{\twocol{-.8507}{.5257}}$.
 
 
 \exer{10.6.32}
 $\left|\begin{array}{cc}-3-\lambda&-15\\3&3-\lambda
 \end{array}\right|=\lambda^2+36$.
-The augmented matrix of $(A-6iI){\bf x}={\bf 0}$ is
+The augmented matrix of $(A-6iI){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}-3-6i&-15&\vdots&0\\
 3&3-6i&\vdots&0 \end{array}\right]$,
 which is row equivalent to
@@ -19143,20 +18629,20 @@ $\left[\begin{array}{cccr} 1&1-2i&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$.
 Therefore,$x_1=-(1-2i)x_2$. Taking $x_2=1$
 yields the eigenvector
- ${\bf x}=\left[\begin{array}{c}-1+2i\\1\end{array}\right]$,
-so ${\bf u}=\dst{\twocol{-1}1}$ and ${\bf v}=\dst{\twocol20}$.
+ ${\bfseries x}=\left[\begin{array}{c}-1+2i\\1\end{array}\right]$,
+so ${\bfseries u}=\dst{\twocol{-1}1}$ and ${\bfseries v}=\dst{\twocol20}$.
 The quadratic equation is $-2k^2+2k+2=0$, with positive root
 $k\approx1.6180$.
  Routine calculations yield
- ${\bf U}\approx\dst{\twocol{-.9732}{.2298}}$,
-${\bf V}\approx\dst{\twocol{.2298}{.9732}}$.
+ ${\bfseries U}\approx\dst{\twocol{-.9732}{.2298}}$,
+${\bfseries V}\approx\dst{\twocol{.2298}{.9732}}$.
 
 
 
 \exer{10.6.34}
 $\left|\begin{array}{cc}5-\lambda&-12\\6&-7-\lambda
 \end{array}\right|=(\lambda+1)^2+36$.
-The augmented matrix of $(A-(-1+6i)I){\bf x}={\bf 0}$ is
+The augmented matrix of $(A-(-1+6i)I){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}6-6i&-12&\vdots&0\\
 6&-6-6i&\vdots&0 \end{array}\right]$,
 which is row equivalent to
@@ -19164,19 +18650,19 @@ $\left[\begin{array}{cccr} 1&-(1+i)&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$.
 Therefore,$x_1=(1+i)x_2$. Taking $x_2=1$
 yields the eigenvector
- ${\bf x}=\left[\begin{array}{c}1+i\\1\end{array}\right]$,
-so ${\bf u}=\dst{\twocol11}$ and ${\bf v}=\dst{\twocol10}$.
+ ${\bfseries x}=\left[\begin{array}{c}1+i\\1\end{array}\right]$,
+so ${\bfseries u}=\dst{\twocol11}$ and ${\bfseries v}=\dst{\twocol10}$.
 The quadratic equation is $k^2-k-1=0$, with positive root
 $k\approx1.6180$.
  Routine calculations yield
- ${\bf U}\approx\dst{\twocol{-.5257}{.8507}}$,
-${\bf V}\approx\dst{\twocol{.8507}{.5257}}$.
+ ${\bfseries U}\approx\dst{\twocol{-.5257}{.8507}}$,
+${\bfseries V}\approx\dst{\twocol{.8507}{.5257}}$.
 
 
 \exer{10.6.36}
 $\left|\begin{array}{cc}-4-\lambda&9\\-5&2-\lambda
 \end{array}\right|=(\lambda+1)^2+36$.
-The augmented matrix of $(A-(-1+6i)I){\bf x}={\bf 0}$ is
+The augmented matrix of $(A-(-1+6i)I){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}-3-6i&9&\vdots&0\\
 -5&3-6i&\vdots&0 \end{array}\right]$,
 which is row equivalent to
@@ -19184,19 +18670,19 @@ $\left[\begin{array}{cccr} 1&-{3-6i\over5}&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$.
 Therefore,$x_1=\dst{3-6i\over5}x_2$. Taking $x_2=5$
 yields the eigenvector
- ${\bf x}=\left[\begin{array}{c}3-6i\\5\end{array}\right]$,
-so ${\bf u}=\dst{\twocol35}$ and ${\bf v}=\dst{\twocol{-6}0}$.
+ ${\bfseries x}=\left[\begin{array}{c}3-6i\\5\end{array}\right]$,
+so ${\bfseries u}=\dst{\twocol35}$ and ${\bfseries v}=\dst{\twocol{-6}0}$.
 The quadratic equation is $-18k^2+2k+18=0$, with positive root
 $k\approx1.0571$.
  Routine calculations yield
- ${\bf U}\approx\dst{\twocol{.8817}{.4719}}$,
-${\bf V}\approx\dst{\twocol{-.4719}{.8817}}$.
+ ${\bfseries U}\approx\dst{\twocol{.8817}{.4719}}$,
+${\bfseries V}\approx\dst{\twocol{-.4719}{.8817}}$.
 
 
 \exer{10.6.38}
 $\left|\begin{array}{cc}-1-\lambda&-5\\20&-1-\lambda
 \end{array}\right|=(\lambda+1)^2+100$.
-The augmented matrix of $(A-(-1+10i)I){\bf x}={\bf 0}$ is
+The augmented matrix of $(A-(-1+10i)I){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}-10i&-5&\vdots&0\\
 20&-10i&\vdots&0 \end{array}\right]$,
 which is row equivalent to
@@ -19204,17 +18690,17 @@ $\left[\begin{array}{cccr} 1&-{i\over2}&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$.
 Therefore,$x_1=\dst{i\over2}x_2$. Taking $x_2=2$
 yields the eigenvector
- ${\bf x}=\left[\begin{array}{c}i\\2\end{array}\right]$,
-so ${\bf u}=\dst{\twocol02}$ and ${\bf v}=\dst{\twocol10}$.
-Since $({\bf u},{\bf v})=0$ we just normalize ${\bf u}$ and ${\bf v}$
+ ${\bfseries x}=\left[\begin{array}{c}i\\2\end{array}\right]$,
+so ${\bfseries u}=\dst{\twocol02}$ and ${\bfseries v}=\dst{\twocol10}$.
+Since $({\bfseries u},{\bfseries v})=0$ we just normalize ${\bfseries u}$ and ${\bfseries v}$
 to obtain
-${\bf U}=\dst{\twocol01}$, ${\bf V}=\dst{\twocol10}$.
+${\bfseries U}=\dst{\twocol01}$, ${\bfseries V}=\dst{\twocol10}$.
 
 
 \exer{10.6.40}
 $\left|\begin{array}{cc}-7-\lambda&6\\-12&5-\lambda
 \end{array}\right|=(\lambda+1)^2+36$.
-The augmented matrix of $(A-(-1+6i)I){\bf x}={\bf 0}$ is
+The augmented matrix of $(A-(-1+6i)I){\bfseries x}={\bfseries 0}$ is
 $\left[\begin{array}{cccr}-6-6i&6&\vdots&0\\
 -12&6-6i&\vdots&0 \end{array}\right]$,
 which is row equivalent to
@@ -19222,33 +18708,22 @@ $\left[\begin{array}{cccr} 1&-{1-i\over2}&\vdots&0\\ 0&0&\vdots&0
 \end{array}\right]$.
 Therefore,$x_1=\dst{1-i\over2}x_2$. Taking $x_2=2$
 yields the eigenvector
- ${\bf x}=\left[\begin{array}{c}1-i\\2\end{array}\right]$,
-so ${\bf u}=\dst{\twocol12}$ and ${\bf v}=\dst{\twocol{-1}0}$.
+ ${\bfseries x}=\left[\begin{array}{c}1-i\\2\end{array}\right]$,
+so ${\bfseries u}=\dst{\twocol12}$ and ${\bfseries v}=\dst{\twocol{-1}0}$.
 The quadratic equation is $-k^2-4k+1=0$, with positive root
 $k\approx.2361$.
  Routine calculations yield
- ${\bf U}\approx\dst{\twocol{.5257}{.8507}}$,
-${\bf V}\approx\dst{\twocol{-.8507}{.5257}}$.
+ ${\bfseries U}\approx\dst{\twocol{.5257}{.8507}}$,
+${\bfseries V}\approx\dst{\twocol{-.8507}{.5257}}$.
 
 
 
-\newsection{7} {Linear Systems of Differential  Equations}
-{Variation of Parameters for Nonhomogeneous Linear Systems}
-\currentpdfbookmark{Section 10.7}{section:10.7}
-
-
-\medskip
-\renewcommand{\thissection}{\sectiontitle
-{\,\quad VARIATION OF PARAMETERS FOR NONHOMOGENEOUS LINEAR  SYSTEMS}}
-\thissection
-
-\vspace*{-17.5pt}
-
+\section{Variation of Parameters for Nonhomogeneous Linear Systems}
 
 \exer{10.7.2}
 $Y=\left[\begin{array}{cccc}
 -3e^{-t}&-e^{-2t}\\e^{-t}&2e^{-2t}\end{array}\right]$;
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \dst{1\over5}\left[\begin{array}{cccc}-2e^t&-e^t
 \\e^{2t}&3e^{2t}\end{array}\right]
 \left[\begin{array}{c}
@@ -19256,10 +18731,10 @@ ${\bf u}'=Y^{-1}{\bf f}=
 \end{array}\right]=
 \left[\begin{array}{cccc}-20e^{4t}-2e^{-2t}\\
 10e^{5t}+6e^{-t}\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \left[\begin{array}{cccc}e^{-2t}-5e^{4t}\\
 2e^{5t}-6e^{-t}\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 \left[\begin{array}{cccc}13e^{3t}+3e^{-3t}\\
 -e^{3t}-11e^{-3t}\end{array}\right]$.
 
@@ -19269,29 +18744,29 @@ ${\bf y}_p=Y{\bf u}=
 \exer{10.7.4}
 $Y=\left[\begin{array}{cccc}
 -e^{2t}&-e^{-t}\\2e^{2t}&e^{-t}\end{array}\right]$;
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \left[\begin{array}{cccc}e^{-2t}&e^{-2t}\\
 -2e^t&-e^t\end{array}\right]
 \left[\begin{array}{cccc}2\\-2e^t\end{array}\right]=
 \left[\begin{array}{cccc}2e^{-2t}-2e^{-t}\\2e^{2t}-4e^t\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \left[\begin{array}{cccc}2e^{-t}-e^{-2t}\\
 e^{2t}-4e^t\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 \left[\begin{array}{cccc}5-3e^t\\5e^t-6\end{array}\right]$.
 
 
 \exer{10.7.6}
 $Y=\left[\begin{array}{cr}\sin t&-\cos t\\
 \cos t&\sin t\end{array}\right]$;
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \left[\begin{array}{rc}\sin t&\cos t\\-\cos t&\sin t\end{array}\right]
 \left[\begin{array}{cccc}1\\t\end{array}\right]=
 \left[\begin{array}{cccc}t\cos t+\sin t\\t\sin t-\cos
 t\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \left[\begin{array}{r}t\sin t\\-t\cos t\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 \left[\begin{array}{cccc}t\\0\end{array}\right]$.
 
 
@@ -19299,17 +18774,17 @@ ${\bf y}_p=Y{\bf u}=
 $Y=\left[\begin{array}{rccc}
 e^{3t}&e^{2t}&e^{-t}\\-e^{3t}&0&-3e^{-t}\\e^{3t}&e^{2t}&7
 e^{-t}\end{array}\right]$;
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \dst{1\over6}\left[\begin{array}{crcc}
 3e^{-3t}&-6e^{-3t}&-3e^{-3t}\\4e^{-2t}&6e^{-2t}&2e^{-2t}\\
 -e^t&0&e^t\end{array}\right]
 \left[\begin{array}{cccc}1\\e^t\\e^t\end{array}\right]=
 \dst{1\over6}\left[\begin{array}{cccc}
 3e^{-3t}-9e^{-2t}\\8e^{-t}+4e^{-2t}\\e^{2t}-e^t\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \dst{1\over12}\left[\begin{array}{cccc}9e^{-2t}-2e^{-3t}\\
 -16e^{-t}-4e^{-2t}\\e^{2t}-2e^t\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 -\dst{1\over6}\left[\begin{array}{c}3e^t+4\\6e^t-4\\10
 \end{array}\right]$.
 
@@ -19318,32 +18793,32 @@ ${\bf y}_p=Y{\bf u}=
 $Y=\left[\begin{array}{cccc}
 -e^t&e^{-t}&te^{-t}\\e^t&-e^{-t}&3e^{-t}-te^{-t}\\
 e^t&e^{-t}&te^{-t}\end{array}\right]$;
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \dst{1\over18}\left[\begin{array}{cccc}
 -9e^{-t}&0&9e^{-t}\\3e^t(3-2t)&-6te^t&9e^t\\
 6e^t&6e^t&0\end{array}\right]
 \left[\begin{array}{cccc}e^t\\e^t\\e^t\end{array}\right]=
 \dst{1\over3}\left[\begin{array}{cccc}0\\
 e^{2t}(3-2t)\\2e^{2t}\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \dst{1\over3}\left[\begin{array}{cccc}0\\
 e^{2t}(2-t)\\e^{2t}\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 \dst{1\over3}\left[\begin{array}{cccc}
 2e^t\\e^t\\2e^t\end{array}\right]$.
 
 
 \exer{10.7.12}
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \dst{1\over2t}\left[\begin{array}{cccc}
 e^{-t}&e^{-t}\\e^t&-e^t\end{array}\right]
 \left[\begin{array}{cccc}t\\t^2\end{array}\right]=
 {1\over2}\left[\begin{array}{cccc}
 e^{-t}(t+1)\\e^t(1-t)\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \dst{1\over2}\left[\begin{array}{cccc}
 -e^{-t}(t+2)\\e^t(2-t)\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 \dst{t\over2}\left[\begin{array}{cccc}
 e^t&e^{-t}\\e^t&-e^{-t}\end{array}\right]
 \left[\begin{array}{cccc}-e^{-t}(t+2)\\
@@ -19353,15 +18828,15 @@ e^t(2-t)\end{array}\right]=
 
 
 \exer{10.7.14}
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \dst{1\over3}\left[\begin{array}{cccc}2&-e^{-t}\\-e^t&2\end{array}\right]
 \left[\begin{array}{cccc}e^{2t}\\e^{-2t}\end{array}\right]=
 \dst{1\over3}\left[\begin{array}{cccc}
 2e^{2t}-e^{-3t}\\2e^{-2t}-e^{3t}\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \dst{1\over9}\left[\begin{array}{cccc}
 3e^{2t}+e^{-3t}\\-e^{3t}-3e^{-2t}\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 \dst{1\over9}\left[\begin{array}{cccc}
 2&e^{-t}\\e^t&2\end{array}\right]
 \left[\begin{array}{cccc}
@@ -19371,15 +18846,15 @@ ${\bf y}_p=Y{\bf u}=
 
 
 \exer{10.7.16}
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \dst{1\over t^2-1}\left[\begin{array}
 {cccc}t&-e^{-t}\\-e^t&t\end{array}\right]
 \left[\begin{array}{cccc}t^2-1\\t^2-1\end{array}\right]=
 \left[\begin{array}{cccc}t-e^{-t}\\t-e^t\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \dst{1\over2}\left[\begin{array}{cccc}
 2e^{-t}+t^2\\t^2-2e^t\end{array}\right]$;
-${\bf y}_p=Y{\bf u}
+${\bfseries y}_p=Y{\bfseries u}
 =\dst{1\over2}\left[\begin{array}{cccc}t&e^{-t}\\e^t&t\end{array}\right]
 \left[\begin{array}{cccc}
 2e^{-t}+t^2\\t^2-2e^t\end{array}\right]=
@@ -19388,16 +18863,16 @@ te^{-t}(t+2)+t^3-2\\te^t(t-2)+t^3+2\end{array}\right]$.
 
 
 \exer{10.7.18}
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \dst{1\over3}\left[\begin{array}{cccc}e^{-5t}&e^{-4t}&e^{-3t}\\
 2e^{-2t}&-e^{-t}&-1\\-e^{-2t}&2e^{-t}&-1\end{array}\right]
 \left[\begin{array}{cccc}e^t\\0\\0\end{array}\right]=
 \dst{1\over3}\left[\begin{array}{cccc}
 e^{-4t}\\2e^{-t}\\-e^{-t}\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \dst{1\over12}\left[\begin{array}{cccc}
 -e^{-4t}\\-8e^{-t}\\4e^{-t}\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 \dst{1\over12}\left[\begin{array}{cccc}e^{5t}&e^{2t}&0\\
 e^{4t}&0&e^t\\e^{3t}&-1&-1\end{array}\right]
 \left[\begin{array}{cccc}
@@ -19407,16 +18882,16 @@ e^{4t}&0&e^t\\e^{3t}&-1&-1\end{array}\right]
 
 
 \exer{10.7.20}
-${\bf u}'=Y^{-1}{\bf f}=
+${\bfseries u}'=Y^{-1}{\bfseries f}=
 \dst{1\over2t}\left[\begin{array}{cccc}
 -e^{-2t}&te^{-t}&te^{-t}+e^{-2t}\\1&-te^t&te^t-1\\
 2&0&-2\end{array}\right]
 \left[\begin{array}{cccc}e^t\\0\\e^t\end{array}\right]=
 \left[\begin{array}{cccc}1\\e^{2t}\\0\end{array}\right]$;
-${\bf u}=
+${\bfseries u}=
 \dst{1\over4}\left[\begin{array}{cccc}
 2t\\e^{2t}\\0\end{array}\right]$;
-${\bf y}_p=Y{\bf u}=
+${\bfseries y}_p=Y{\bfseries u}=
 Y=\dst{1\over4t}\left[\begin{array}{cccc}e^t&e^{-t}&t\\
 e^t&-e^{-t}&e^{-t}\\e^t&e^{-t}&0\end{array}\right]
 \left[\begin{array}{cccc}2t\\e^{2t}\\0\end{array}\right]=
@@ -19426,39 +18901,22 @@ e^t&-e^{-t}&e^{-t}\\e^t&e^{-t}&0\end{array}\right]
 
 \exer{10.7.22}
 \part{c}
-If ${\bf y}_p=Y{\bf u}$, then ${\bf y}_p'=Y'{\bf u}+Y{\bf u}'=AY{\bf
-u}+Y{\bf u}'$, so (E) ${\bf y}_p'=A{\bf y_p}+Y{\bf u}'$. However, from
+If ${\bfseries y}_p=Y{\bfseries u}$, then ${\bfseries y}_p'=Y'{\bfseries u}+Y{\bfseries u}'=AY{\bfseries
+u}+Y{\bfseries u}'$, so (E) ${\bfseries y}_p'=A{\bfseries y_p}+Y{\bfseries u}'$. However, from
 the derivation of the method of variation of parameters in
-Section~9.4, $Y{\bf u}'={\bf f}$ as defined in the solution
+Section~9.4, $Y{\bfseries u}'={\bfseries f}$ as defined in the solution
 of \part{a}. This and (E) imply the conclusion.
 
-\part{d} Since $Y{\bf u}'={\bf f}$ with ${\bf f}$ as defined in the
+\part{d} Since $Y{\bfseries u}'={\bfseries f}$ with ${\bfseries f}$ as defined in the
 solution of \part{a}, $u_1,u_2,\dots,u_n$ satisfy
 the conditions required in the derivation of the method of
 variation of parameters in Section~9.4; hence,
 $y_p=c_1y_1+c_2y_2+\cdots+c_ny_n$ is a particular solution of (A).
 
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-\thispagestyle{empty}
-\setcounter{chapter}{11}
-\pdfbookmark[0]{Chapter 11}{chapter:11}
-\chaptertitle{Boundary Value Problems and Fourier Expansions}
+\chapter{Boundary Value Problems and Fourier Expansions}
 
-\vspace*{-17.5pt}
-
-\newsection{1}{Boundary Value Problems and Fourier Expansions}
-{Eigenvalue Problems for $y''+\lambda y=0$}
-\subpdfbookmark{Section 11.1} {section:11.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,\quad EIGENVALUE PROBLEMS FOR $y''+\lambda y=0$}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Eigenvalue Problems for \texorpdfstring{$y''+\lambda y=0$}{y''+𝜆y=0}}
 
 \exer{11.1.2}
 From Theorem~11.1.2 with $L=\pi$,
@@ -19596,21 +19054,7 @@ $\lambda_n=\dst{n^2\pi^2\over L^2}$ and $y_n=\dst\cos{n\pi (x-L)\over
 L}$, or, equivalently, $y_n=\dst\cos{n\pi x\over L}$, $n=1,2,3,\dots$.
 
 
-\newpage
-
-\newsection{2} {Boundary Value Problems and Fourier Expansions}
-{Fourier Expansions I}
-\currentpdfbookmark{Section 11.2}{section:11.2}
-
-
-
-\renewcommand{\thissection}{\sectiontitle
-{\,FOURIER EXPANSIONS I}}
-\thissection
-
-
-\vspace*{-17.5pt}
-
+\section{Fourier Expansions I}
 
 \exer{11.2.2}
 \begin{eqnarray*}
@@ -20048,15 +19492,7 @@ Exercise~12.2.29\part{d} implies the conclusion.
 
 
 
-\newsection{3} {Boundary Value Problems and Fourier Expansions}
-{Fourier Expansions II}
-\currentpdfbookmark{Section 11.3}{section:11.3}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,FOURIER EXPANSIONS II}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Fourier Expansions II}
 
 \exer{11.3.2}
   $a_0=\dst\int_0^1(1-x)\,dx=-{(1-x)^2\over2}\lims01={1\over2}$;
@@ -20681,23 +20117,9 @@ is $A_0+\dst\sum_{n=0}^\infty A_{2n}cos{n\pi x\over L}$=
 $a_0+\dst\sum_{n=0}^\infty a_n\cos{n\pi x\over L}$.
 
 
-\newpage
-\thispagestyle{empty}
-\setcounter{chapter}{12}
-\pdfbookmark[0]{Chapter 12}{chapter:12}
-\chaptertitle{Fourier Solutions of Partial Differential}
+\chapter{Fourier Solutions of Partial Differential}
 
-
-\newsection{1}{Fourier Solutions of Partial Differential}
-{The Heat Equation}
-\subpdfbookmark{Section 12.1} {section:12.1}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,\quad THE HEAT EQUATION}}
-\thissection
-
-
-\vspace*{-17.5pt}
+\section{The Heat Equation}
 
 \exer{12.1.2}
  $X(x)T(t)$  satisfies
@@ -21360,16 +20782,7 @@ for $t>0$.
 
 
 
-\newsection{2} {Fourier Solutions of Partial Differential Equations}
-{The Wave Equation}
-\currentpdfbookmark{Section 12.2}{section:12.2}
-
-\renewcommand{\thissection}{\sectiontitle
-{\, THE WAVE EQUATION}}
-\thissection
-
-\vspace*{-17.5pt}
-
+\section{The Wave Equation}
 
 \exer{12.2.1}
 $\beta_n=2\left[\int_0^{1/2}x\sin n\pi x
@@ -22327,17 +21740,7 @@ u(x,t)&=&{(x+at)\sin(x+at)+(x-at)\sin(x-at)\over2}
 \end{eqnarray*}
 
 
-\newsection{3} {Fourier Solutions of Partial Differential Equations}
-{Laplace's Equation in Rectangular Coordinates}
-\currentpdfbookmark{Section 12.3}{section:12.3}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,LAPLACE'S EQUATION IN RECTANGULAR COORDINATES}}
-\thissection
-
-
-\vspace*{-17.5pt}
-
+\section{Laplace's Equation in Rectangular Coordinates}
 
 \exer{12.3.2}
 Since $f(0)=f(1)=0$ and $f''(x)=2-6x$, Theorem~11.3.5\part{b}
@@ -23147,15 +22550,7 @@ x/b-C_n\cosh n\pi(x-a)/b\over n\sinh n\pi a/b}\cos{n\pi y\over b},
 where $C$  is an arbitrary constant.
 
 
-\newsection{4} {Fourier Solutions of Partial Differential Equations}
-{Laplace's Equation in Polar Coordinates}
-\currentpdfbookmark{Section 12.4}{section:12.4}
-
-\renewcommand{\thissection}{\sectiontitle
-{\,LAPLACE'S EQUATION IN POLAR COORDINATES}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Laplace's Equation in Polar Coordinates}
 
 \exer{12.4.2}
  $v(r,\theta)=R(r)\Theta(\theta)$ where
@@ -23281,30 +22676,10 @@ f(\theta)\cos\frac{n\pi\theta}{\gamma}\,d\theta$, $n=1$, $2$,
 $3$,\dots.
 
 
-
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-\thispagestyle{empty}
-\setcounter{chapter}{13}
-\pdfbookmark[0]{Chapter 13}{chapter:13}
-\chaptertitle{Boundary Value Problems for Second Order Ordinary
+\chapter{Boundary Value Problems for Second Order Ordinary
 Differential Equations}
 
-\newsection{1}
-{Boundary Value Problems for Second Order Ordinary
-Differential Equations}
-{Boundary Value Problems}
-\subpdfbookmark{Section 13.1} {section:13.1}
-
-\renewcommand{\thissection}
-{\sectiontitle{BOUNDARY VALUE PROBLEMS}}
-\thissection
-
-
-
-\vspace*{-17.5pt}
+\section{Boundary Value Problems}
 
 \exer{13.1.2} By  inspection, $y_{p}=-x$;
 $y=-x+c_{1}e^{x}+c_{2}e^{-x}$;
@@ -23878,22 +23253,8 @@ Since $B_{2}(y_{p})=0$ and $B_{2}(y_{2})=0$,
 $B_{2}(y)=k_{2}\implies k_{2}=c_{1}B_{2}(y_{1})\implies
 c_{1}=\dst{\frac{k_{2}}{B_{2}(y_{1})}}$.
 
-\bigskip
 
-
-\newsection{2}
-{Boundary Value Problems for Second Order Ordinary
-Differential Equations}
-{Sturm-Liouville Problems}
-\currentpdfbookmark{Section 13.2} {section:13.2}
-
-
-
-\renewcommand{\thissection}
-{\sectiontitle{STURM-LIOUVILLE PROBLEMS}}
-\thissection
-
-\vspace*{-17.5pt}
+\section{Sturm-Liouville Problems}
 
 \exer{13.2.2}
 $y''+\dst{\frac{1}{x}}y'+\left(1-\dst{\frac{\nu^{2}}{x^{2}}}\right)y=0$;
