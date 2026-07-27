@@ -52,6 +52,6 @@ Section, Chapter, Figure, Table, Exercise, Example, Equation, Eqn, Theorem
 TODO
 units
 tabular, array, enlargethispage, $,$, $.$
-\proof
+backslash proof
 $($
 '''
