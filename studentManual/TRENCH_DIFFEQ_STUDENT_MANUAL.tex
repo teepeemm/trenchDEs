@@ -223,21 +223,21 @@ $y'=\dst\frac{2x}{3}-\frac{c}{ x^2}$, so $xy'+y=\dst\frac{2x^2}{3}-\frac{c}{ x
 }+\frac{x^2}{3}+\frac{c}{ x}=x^2$.
 
 \part{c} If
-$$
+\[
 y=\dst\frac{1}{2}+ce^{-x^2}, \mbox{\quad then \quad}
 y'=-2xce^{-x^2}
-$$
+\]
 and
-$$
+\[
 y'+2xy=-2xce^{-x^2}+2x\dst\left(\frac{1}{2}+ce^{-x^2}\right)
 =-2xce^{-x^2}+x+2cxe^{-x^2}=x.
-$$
+\]
 
 \part{d}
 If
-$$
+\[
 y=\dfrac{1+ce^{-x^2/2}}{1-ce^{-x^2/2}}
-$$
+\]
 then
 \begin{eqnarray*}
 y'&=&\frac{(1-ce^{-x^2/2})(-cxe^{-x^2/2})-(1+ce^{-x^2/2})cxe^{-x^2/2}}{
@@ -250,11 +250,10 @@ y^2-1&=&\left(\frac{1+ce^{-x^2/2}}{1-ce^{-x^2/2}}\right)^2-1\\[2\jot]
 &=&\frac{(1+ce^{-x^2/2})^2-(1-ce^{-x^2/2})^2}{(1-ce^{-x^2/2})^2}\\[2\jot]
 &=&\frac{4ce^{-x^2/2}}{(1-ce^{-x^2/2})^2},
 \end{eqnarray*}
-
 so
-$$
+\[
 2y'+x(y^2-1)=\frac{-4cx+4cx}{(1-ce^{-x^2/2})^2}=0.
-$$
+\]
 
 
 \part{e}
@@ -706,15 +705,15 @@ satisfies (A) for $x\ne0$. To complete the proof we
 must show that any function of the form (C) is
 differentiable and satisfies (A) at $x=0$. By
 definition,
-$$
+\[
 y'(0)=\lim_{x\to0}\frac{y(x)-y(0)}{ x-0}=\lim_{x\to0}\frac{y(x)-1/2}{
 x}
-$$
+\]
 if the limit exists. But
-$$
+\[
 \frac{y(x)-1/2}{ x}=\left\{\begin{array}{cl} c_1x,&x>0\\
 c_2x,&x<0,\end{array}\right.
-$$
+\]
 so $y'(0)=0$. Since $0y'(0)-2y(0)=0\cdot0-2(1/2)=-1$, any function of
 the form (C) satisfies (A) at
 $x=0$.
@@ -921,10 +920,10 @@ x$. To obtain $y$ explicity we  note that $-\sin x=\cos(x+\pi/2)$, so
 (A) can be rewritten as  $\cos y=\cos(x+\pi/2)$. This equation
 holds if an only if one of the following conditions holds for some
 integer $k$:
-$$
-\mbox{(B)}\ y=x+\frac{\pi}{2}+2k\pi;\\mbox{(C)}\
-y=-x-\frac{\pi}{2}+2k\pi.
-$$
+\[
+y=x+\frac{\pi}{2}+2k\pi;\\mbox{(C)}\
+y=-x-\frac{\pi}{2}+2k\pi.\tag{B}
+\]
 Among these choices the only way to satisfy the initial condition
 is to let $k=1$ in (C), so $y=-x+\dst\frac{3\pi}{2}.$
 
@@ -1100,20 +1099,20 @@ are both continuous  at all $(x,y)$ such that $y\ne0$,
 this is the only
 solution on $(-5/3,\infty)$, by an argument similar to that given in
 Example~2.3.7, the function
-$$
+\[
 y =
 \dst{\left\{
 \begin{array}{cl}
 0, &  -\infty< x \le -\frac{5}{ 3} \\[3pt]
 \left(\frac{3}{ 5}x + 1\right)^{5/3}, & -\frac{5}{3} < x < \infty
 \end{array}\right.}
-$$
+\]
 (To see that $y$ satisfies $y'=y^{2/5}$  at $x=-\dst\frac{5}{3}$
 use an argument similar to that of
 Discussion~2.3.15-2)
 For every $\dst{a \ge \frac{5}{ 3}}$, the following function is also a
 solution:
-$$
+\[
 y =
 \left\{
 \begin{array}{cl}
@@ -1121,7 +1120,7 @@ y =
 0, &  -a \le x \le -\frac{5}{ 3} \\[3pt]
 \left(\frac{3}{ 5}x + 1\right)^{5/3}, & -\frac{5}{3} < x < \infty.
 \end{array}\right.
-$$
+\]
 
 
 \exer{2.3.18}
@@ -1130,18 +1129,17 @@ From Discussion~2.3.18 (taking $c=0$
 in the two families of solutions) yields
 $y_2=1+|x|^3$ and $y_3=1-|x|^3$. Other solutions are
 $y_4=1+x^3$, $y_5=1-x^3$,
-$$
+\begin{gather*}
 y_6=\dst{\left\{\begin{array}{ccl}1+x^3,&x\ge 0,\\
 1,&x<0\end{array}\right.};\quad
 y_7=\dst{\left\{\begin{array}{ccl}1-x^3,&x\ge 0,\\
 1,&x<0\end{array}\right.};
-$$
-$$
+\\
 y_8=\dst{\left\{\begin{array}{ccl}1,&x\ge 0,\\
 1+x^3,&x<0\end{array}\right.};\quad
 y_9=\dst{\left\{\begin{array}{ccl}1,&x\ge 0,\\
 1-x^3,&x<0\end{array}\right.}
-$$
+\end{gather*}
 
 
 It is straightforward to verify that all these functions satisfy
@@ -1165,41 +1163,43 @@ and is given by (B) on $(\sqrt5,\infty)$; that is,
 $(\sqrt5,\infty)$.
  This solution can be extended uniquely to
 $(0,\infty)$ as
-$$
+\[
 y=
 \left\{
 \begin{array}{cl}
 1, & 0< x\le\sqrt5,\\
 1-(x^2-5)^{3/2}, & \sqrt5<x<\infty
 \end{array}\right.
-$$
+\]
 It can be extended to $(-\infty,\infty)$ in infinitely many ways.
 Thus,
-$$
+\[
 \dst y= \left\{
 \begin{array}{cl}
  1, &-\infty< x\le\sqrt5,\\
 1-(x^2-5)^{3/2},& \sqrt5<x<\infty
-\end{array} \right.$$
+\end{array} \right.
+\]
 is a solution of the initial value problem on $(-\infty,\infty)$.
-Moroever, if
+Moreover, if
 $\alpha\ge0$, then
-$$
+\[
 y= \left\{
 \begin{array}{cl}
  1+(x^2-\alpha^2)^{3/2},& -\infty<x<-\alpha, \\
 1, & -\alpha\le x\le\sqrt5,\\
 1-(x^2-5)^{3/2},& \sqrt5<x<\infty,
-\end{array}\right. $$
+\end{array}\right.
+\]
 and
-$$
+\[
 y= \left\{
 \begin{array}{cl}
  1-(x^2-\alpha^2)^{3/2},& -\infty<x<-\alpha, \\
 1, & -\alpha\le x\le\sqrt5,\\
 1-(x^2-5)^{3/2},& \sqrt5<x<\infty,
 \end{array} \right.
-$$
+\]
 are also solutions of the initial value problem  on
 $(-\infty,\infty)$.
 
@@ -1453,14 +1453,14 @@ $y-x\ln|y-x|=cy$.
 If $x=X-X_0$ and $y=Y-Y_0$, then $\dst\frac{dy}{ dx}=\dst\frac{dY}{
 dx}=\dst\frac{dY}{ dX}\dst\frac{dX}{ dx}=\dst\frac{dY}{ dX}$, so $y=y(x)$
 satisfies the given equation if and only if $Y=Y(X)$ satisfies
- $$
+\[
 \frac{dY}{ dX}=\dfrac{a(X-X_0)+b(Y-Y_0)+\alpha}{
 c(X-X_0)+d(Y-Y_0)+\beta},
-$$
+\]
  which reduces to the nonlinear homogeneous equation
-$$
+\[
 \frac{dY}{ dX}=\dst\frac{aX+bY}{ cX+dY}
-$$
+\]
  if and only if
 \[
 \begin{array}{rcl}
@@ -1580,11 +1580,11 @@ $y=x^{1/2}(-2\pm\sqrt{\ln|x|+c})$.
 \exer{2.4.52}
 $y_1=\dst\frac{1}{ x^2}$ is a solution of $y'+\dst\frac{2}{ x}y=0$.
 Let $y=\dst\frac{u}{ x^2}$; then
-$$
+\[
 \dst\frac{u'}{ x^2}=\dfrac{3x^2(u^2/x^4)+6x(u/x^2)+2}{
 x^2\left(2x(u/x^2)+3\right)}=
 \dfrac{3(u/x)^2+6(u/x)+2}{ x^2\left(2(u/x)+3\right)},
-$$
+\]
 so (A) $u'=\dfrac{3(u/x)^2+6(u/x)+2}{2(u/x)+3}$. Since (A)
 is a homogeneous nonlinear equation, we now substitute $u=vx$
 into (A). This yields
@@ -1917,11 +1917,11 @@ $F_y(x,y)=N(x_0,y)+\dst{\int^x_{x_0}\frac{\partial M
 \exer{2.5.38}
 $y_1=\dst\frac{1}{ x^2}$ is a solution of $y'+\dst\frac{2}{ x}y=0$.
 Let $y=\dst\frac{u}{ x^2}$; then
-$$
+\[
 \dst\frac{u'}{ x^2}=-\dfrac{2x(u/x^2)}{
 \left(x^2+2x^2(u/x^2)+1\right)}=
 -\dst\frac{2xu}{ x^2(x^2+2u+1)},
-$$
+\]
 so  $u'=-\dst\frac{2xu}{ x^2+2u+1}$, which can be rewritten as (A)
 $2xu\,dx+(x^2+2u+1)\,du=0$. Since $\dst{\dst\frac{\partial }{\partial
 u}}(2xu)=\dst{\dst\frac{\partial }{\partial x}}(x^2+2u+1)=2x$, (A)
@@ -3314,10 +3314,10 @@ $y_{i+1}=y_i+.5h\left(f(a+ih)+f(a+(i+1)h)\right)$,
 $i=0,1,\dots,n-1$,
 where $y_0=a$ and $y_n$ is an approximation to $\dst\int_a^bf(x)\,dx$.
 But
-$$
+\[
 y_n=\dst\sum_{i=0}^{n-1}(y_{i+1}-y_i) =.5h\left(f(a)+f(b)\right)
 +h\sum_{i=1}^{n-1}f(a+ih).
-$$
+\]
 
 
 \part{c} The local truncation error is a multiple of
@@ -3749,12 +3749,12 @@ y_i+\frac{h}{6}\left(f(a+ih)+4f(a+(2i+1)h/2)+f(a+(i+1)h)\right)$,
 $i=0,1,\dots,n-1$,
 where $y_0=a$ and $y_n$ is an approximation to $\dst\int_a^bf(x)\,dx$.
 But
-$$
+\[
 y_n=\dst\sum_{i=0}^{n-1}(y_{i+1}-y_i) =
 \frac{h}{6}(f(a)+f(b))+
 \frac{h}{3}\sum_{i=1}^{n-1}f(a+ih)+\frac{2h}{3}\sum_{i=1}^n
 f\left(a+(2i-1)h/2\right).
-$$
+\]
 
 
 
@@ -4063,25 +4063,25 @@ $c_n=c\dst{\left(1-e^{-rt/W}\sum_{j=0}^{n-1}\frac{1}{
 j!}\left(\frac{rt}{ W}\right)^j\right)}$.
  This is true for $n=1$; if it is
 true for a given $n$, then, from (A),
-$$
+\[
 u_{n+1}'=cre^{rt/W}
 \left(1-e^{-rt/W}\sum_{j=0}^{n-1}\frac{1}{
 j!}\left(\frac{rt}{ W}\right)^j\right)
 =cre^{rt/W}-cr
 \sum_{j=0}^{n-1}\frac{1}{
 j!}\left(\frac{rt}{ W}\right)^j,
-$$
+\]
 so (since $Q_{n+1}(0)=0$),
-$$
+\[
 u_{n+1}=cW(e^{rt/W}-1)-c\sum_{j=0}^{n-1}\frac{1}{(j+1)!}
 \frac{r^{j+1}}{ W^j}t^{j+1}.
-$$
+\]
 Therefore,
-$$
+\[
 c_{n+1}=\frac{1}{ W}u_{n+1}e^{-rt/W}=
 c\dst{\left(1-e^{-rt/W}\sum_{j=0}^n\frac{1}{
 j!}\left(\frac{rt}{ W}\right)^j\right)},
-$$
+\]
 which completes the induction. From this, $\lim_{t\to\infty}c_n(t)=c$.
 
 
@@ -4305,12 +4305,12 @@ The phase plane equivalent is $\dst{v\frac{dv}{ dy}}+ye^{-y}=0$, so the
 $p(y)=y^3-4y=(y+2)y(y-2)$, so the
  equilibria are $-2,0,2$.
 Since
-$$
+\[
 \begin{array}{rcl}
 y(y-2)(y+2)&<0& \mbox{ if } y<-2\mbox{ or }0<y<2,\\
 &>0&\mbox{ if }-2<y<0\mbox{ or }y>2,
 \end{array}
-$$
+\]
 $0$ is unstable and $-2,2$ are stable. The phase plane equivalent is
 $\dst{v\frac{dv}{ dy}}+y^3-4y=0$, so the trajectories are
 $2v^2+y^4-8y^2=c$. Setting $(y,v)=(0,0)$ yields $c=0$, so the equation
@@ -4321,13 +4321,13 @@ of the separatrix is $2v^2-y^4+8y^2=0$.
 $p(y)=y(y-2)(y-1)(y+2)$, so the
  equilibria are $-2,0,1,2$.
 Since
-$$
+\[
 \begin{array}{rcl}
 y(y-2)(y-1)(y+2)&>0& \mbox{ if } y<-2\mbox{ or }0<y<1\mbox{ or }
 y>2,\\
 &<0&\mbox{ if }-2<y<0\mbox{ or }1<y<2,
 \end{array}
-$$
+\]
 $0,2$ are stable and $-2,1$ are unstable. The phase plane
 equivalent is
 $\dst{v\frac{dv}{ dy}}+y(y-2)(y-1)(y+2)=0$, so the trajectories are
@@ -4835,7 +4835,7 @@ fundamental set of solutions of (A) on $(a,b)$.
 
 \exer{5.1.28}
 The Wronskian of  $\{y_1,y_2\}$ is
-$$
+\[
 W=\left| \begin{array}{cc}
 y_1 & y_2 \\[2\jot]
 y'_1 & y'_2
@@ -4844,7 +4844,7 @@ y'_1 & y'_2
 y_1 & ky_1 \\[2\jot]
 y'_1 & ky'_1
 \end{array} \right|=k(y_1y_1'-y_1'y_1)=0.
-$$
+\]
 
 nor $y_2$ can be a solution of $y''+p(x)y'+q(x)y=0$ on  $(a,b)$.
 
@@ -4868,7 +4868,7 @@ c_1y_1(x_0)+c_2y_2(x_0)&=&y_1(x_0)\\
 c_1y_1'(x_0)+c_2y_2'(x_0)&=&y_1'(x_0).
 \end{eqnarray*}
 Solving this system by Cramers' rule yields
-$$
+\[
 c_1=\frac{1}{ W(x_0)}
 \left| \begin{array}{cc}
 y_1(x_0) & y_2(x_0) \\[2\jot]
@@ -4880,7 +4880,7 @@ c_2=\frac{1}{ W(x_0)}
 y_1(x_0) & y_1(x_0)\\[2\jot]
 y'_1(x_0) &y_1(x_0)
 \end{array} \right|=0.
-$$
+\]
 Therefore,$y=y_1$, which
 shows that $y_1$ is a solution of (A). A similar argument shows that
 $y_2$ is a solution of (A).
@@ -4889,7 +4889,7 @@ $y_2$ is a solution of (A).
 \exer{5.1.34}
 Expanding  the determinant by cofactors of its first column shows that
 the first equation in the exercise can be written as
-$$
+\[
 \frac{y}{ W}\left| \begin{array}{cc}
 y_1' & y_2' \\[2\jot]
 y_1'' & y_2''
@@ -4902,9 +4902,9 @@ y_1'' & y_2''
 y_1 & y_2 \\[2\jot]
 y'_1 & y'_2
 \end{array} \right|=0,
-$$
+\]
 which is of the form (A) with
-$$
+\[
 p=-\frac{1}{ W}\left| \begin{array}{cc}
 y_1 & y_2 \\[2\jot]
 y_1'' & y_2''
@@ -4914,7 +4914,7 @@ q=\frac{1}{ W}\left| \begin{array}{cc}
 y_1' & y_2' \\[2\jot]
 y_1'' & y_2''
 \end{array} \right|.
-$$
+\]
 
 
 \exer{5.1.36}  Theorem~5.1.6 implies that
@@ -4923,22 +4923,22 @@ that there are constants $c_1$ and $c_2$ such that
 on $(a,b)$. To see that $c_1$ and $c_2$ are unique, assume that (B)
 holds, and let $x_0$ be a point in  $(a,b)$. Then (C)
 $y'=c_1y_1'+c_2y_2'$. Setting $x=x_0$ in (B) and (C) yields
-$$
+\[
 \begin{array}{rcc}
 c_1y_1(x_0)+c_2y_2(x_0)&=&y(x_0)\\
 c_1y_1'(x_0)+c_2y_2'(x_0)&=&y'(x_0).
 \end{array}
-$$
+\]
 Since  Theorem~5.1.6  implies that
 $y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)\ne0$, the argument preceding
  Theorem~5.1.4 implies that $c_1$ and $c_2$ are given
 uniquely by
-$$
+\[
 c_1=\frac{y_2'(x_0)y(x_0)-y_2(x_0)y'(x_0)}{
 y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)}\,\
 c_2=\frac{y_1(x_0)y'(x_0)-y_1'(x_0)y(x_0)}{
 y_1(x_0)y_2'(x_0)-y_1'(x_0)y_2(x_0)}\,.
-$$
+\]
 
 
 \exer{5.1.38}
@@ -4997,11 +4997,11 @@ b_1x^2+b_2x^3,&x<0.
 a solution of
 (A) on $(-\infty,\infty)$ by showing
 that $y'(0)$ and $y''(0)$ both exist if and only if $a_1=b_1$. Since
-$$
+\[
 \dst{\frac{y(x)-y(0)}{
 x-0}=\left\{\begin{array}{cl}a_1x+a_2x^2,&\mbox{
 if }x>0,\\ b_1x+b_2x^2,&\mbox{ if }x<0,\end{array}\right.}
-$$
+\]
  it follows
 that $y'(0)=\dst{\lim_{x\to0}\frac{y(x)-y(0)}{ x-0}}=0$. Therefore,
 $y'=\dst{\left\{\begin{array}{rr}
@@ -5191,23 +5191,23 @@ Then:
 \item
 If $p(r)=0$  has distinct real roots $r_1$ and $r_2$, then the general
 solution of {\rm(A)} is
-$$
+\[
 y=c_1e^{r_1(x-x_0)}+c_2e^{r_2(x-x_0)}.
-$$
+\]
 \item
 If $p(r)=0$  has a repeated root  $r_1$, then
 the general solution of {\rm(A)} is
-$$
+\[
 y=e^{r_1(x-x_0)}(c_1+c_2(x-x_0)).
-$$
+\]
 \item % (c)
 If $p(r)=0$  has complex conjugate roots $r_1=\lambda+i\omega$
 and
 $r_2=\lambda-i\omega$ $($where $\omega>0)$, then the general solution
 of {\rm(A)} is
-$$
+\[
 y=e^{\lambda (x-x_0)}(c_1\cos\omega(x-x_0)+c_2\sin\omega(x-x_0)).
-$$
+\]
 \end{itemize} \rm
 
 \exer{5.2.24}
@@ -5244,10 +5244,10 @@ y'&=&-\sqrt3c_1\dst{\sin
 \end{eqnarray*}
 $y(\pi/3)=2\Rightarrow c_1=2,\ y'(\pi/3)=-1\Rightarrow
 c_2=-\dst\frac{1}{\sqrt3}$;\;
-$$
+\[
 y=2\cos \sqrt3\left(x-\frac{\pi}{3}\right)-\frac{1}{\sqrt3}\sin
 \sqrt3\left(x-\frac{\pi}{3}\right).
-$$
+\]
 
 
 \exer{5.2.30}
@@ -5291,10 +5291,10 @@ k_0}{\omega}$.
  Substituting $c_1$ and $c_2$
 into
 (A) yields
-$$
+\[
 y=e^{\lambda(x-x_0)}\left[k_0\cos\omega(x-x_0)+\left(\frac{k_1-\lambda k_0
 }{\omega}\right)\sin\omega(x-x_0)\right].
-$$
+\]
 
 \exer{5.2.34}
 \part{b}
@@ -5507,15 +5507,15 @@ x+B\sin\omega x)=(\omega_0^2-\omega^2)(A\cos\omega x+B\sin\omega x)
 =M\cos\omega x+N\sin\omega x$ if
 $A=\dst\frac{M}{\omega_0^2-\omega^2}$ and
 $B=\dst\frac{N}{\omega_0^2-\omega^2}$. Therefore,
-$$
+\[
 y_p= \dst\frac{1}{\omega_0^2-\omega^2}(M\cos\omega
 x+N\sin\omega x)
-$$
+\]
 is a particular solution of the given equation and
-$$
+\[
 y=\dst\frac{1}{\omega_0^2-\omega^2}(M\cos\omega x+N\sin\omega
 x)+c_1\cos\omega_0x+c_2\sin\omega_0x
-$$
+\]
  is the general solution.
 
 
@@ -5794,14 +5794,14 @@ Substituting $u_p=Ax+Bx^2+Cx^3+Dx^4$ into (D) yields
 g_0+g_1x+g_2x^2+g_3x^3
 \end{eqnarray*}
  if
-$$
+\[
 \begin{array}{rcr}
 4p'(\alpha)D&=&g_3\\
 3p'(\alpha)C+12aD&=&g_2\\
 2p'(\alpha)B+6aC\phantom{+12aD}&=&g_1\\
 p'(\alpha)A+2aB\phantom{+6aC+12aD}&=&g_0.
 \end{array}
-$$
+\]
 Since $p'(\alpha)\ne0$ this triangular system can be solved
 successively for $D$, $C$, $B$ and $A$.
 
@@ -5916,10 +5916,10 @@ u_p''+7u_p'+8u_p&=&-4(A\cos2x+B\sin2x)+14(-A\sin2x+B\cos2x)\\&&
 \end{eqnarray*}
 if $4A+14B=-5$, $-14A+4B=-9$. Therefore,$A=\dst\frac{1}{2}$,
 $B=-\dst\frac{1}{2}$,
-$$
+\[
  u_p=\dst{\frac{1}{2}(\cos2x-\sin2x)}, \mbox{ and }
 y_p=\dst{\frac{e^{2x}}{2}(\cos2x-\sin2x)}.
-$$
+\]
 
 
 \exer{5.5.6}
@@ -5941,7 +5941,7 @@ u_p''-u_p'-4u_p&=&-\left[13A_0+A_1+3B_0-6B_1+(13A_1+3B_1)x\right]\cos3x
 \\ &&-\left[13B_0+B_1-3A_0+6A_1+(13B_1-3A_1)x\right]\sin3x\\
 &=&(4+20x)\cos 3x+(26-32x)\sin 3x \mbox{\ if}
 \end{eqnarray*}
-$$
+\[
 \begin{array}{rcr}
 -13A_1-\phantom{1}3B_1&=&20\\ \phantom{-1}3A_1-13B_1&=&-32
 \end{array}
@@ -5950,14 +5950,14 @@ $$
 -13A_0-\phantom{1}3B_0-\phantom{6}A_1+6B_1&=&4\phantom{.}\\
 \phantom{-1}3A_0-13B_0-6A_1-\phantom{6}B_1&=&26.
 \end{array}
-$$
+\]
 From the first two equations, $A_1=-2$, $B_1=2$. Substituting these in
 the last two equations yields $-13A_0-3B_0=-10$, $3A_0-13B_0=16$.
 Solving this pair yields $A_0=1$, $B_0=-1$. Therefore,
-$$
+\[
  u_p=(1-2x)(\cos 3x-\sin 3x) \mbox{ and }
 y_p=e^{-2x}(1-2x)(\cos 3x-\sin 3x).
-$$
+\]
 
 
 \exer{5.5.8}
@@ -5993,9 +5993,9 @@ u_p&=&Ax\cos x+Bx\sin x; \mbox{ then}\\
 u_p'&=&(A+Bx)\cos x+(B-Ax)\sin x\\
 u_p''&=&(2B-Ax)\cos x-(2A+Bx)\sin x, \mbox{ so}
 \end{eqnarray*}
-$$
+\[
 u_p''+u_p=2B\cos x-2A\sin x=8\cos x-6\sin x
-$$
+\]
 if $2B=8$, $-2A=-6$. Therefore,$A=3$, $B=4$, $u_p=x(3\cos x+4\sin x)$,
 and $y_p=xe^{-x}(3\cos x+4\sin x)$.
 
@@ -6015,15 +6015,14 @@ B_2x^2\right]\cos x\\ && +
 2\left[B_1+B_2-A_0-A_1+(2B_2-A_1-2A_2)x-A_2x^2\right]\sin x\\
 &=&8x^2\cos x-4x\sin x \mbox{ if}
 \end{eqnarray*}
-$$
+\begin{gather*}
 \mbox{(i) } \begin{array}{rcl} 2B_2&=&8\\-2A_2&=&0\end{array},
 \mbox{ (ii) } \begin{array}{rcr} 2B_1+4A_2+4B_2&=&0
 \\-2A_1-4A_2+4B_2&=&-4\end{array},
-$$
-$$
+\\
 \mbox{ (iii) } \begin{array}{rcl}2B_0+2A_1+2B_1+2A_2&=&0
 \\-2A_0-2A_1+2B_1+2B_2&=&0\end{array}.
-$$
+\end{gather*}
 From (i), $A_2=0$, $B_2=4$. Substituting these into (ii) and solving
 for $A_1$ and $B_1$ yields $A_1=10$, $B_1=-8$. Substituting the known
 coefficients into (iii) and solving for $A_0$ and $B_0$ yields
@@ -6049,17 +6048,16 @@ y_p''+3y_p'+2y_p&=&\left[-2A_0+3A_1+4A_2+6B_0+4B_1\right.\\ &&\left.
 -(2B_1-6B_2+6A_1+8A_2)x-(2B_2+6A_2)x^2\right]\sin2x\\
 &=&(1-x-4x^2)\cos2x-(1+7x+2x^2)\sin2x \mbox{ if}
 \end{eqnarray*}
-$$
+\begin{gather*}
 \mbox{(i) } \begin{array}{rcl}-2A_2+6B_2&=&-4
 \\-6A_2-2B_2&=&-2\end{array},
 \mbox{ (ii) } \begin{array}{rcr} -2A_1+6B_1+6A_2+8B_2&=&-1
 \\-6A_1-2B_1-8A_2+6B_2&=&-7\end{array},
-$$
-$$
+\\
 \mbox{ (iii) }
 \begin{array}{rcr}-2A_0+6B_0+3A_1+4B_1+2A_2&=&1
 \\-6A_0-2B_0-4A_0+3B_1+2B_2&=&-1\end{array}.
-$$
+\end{gather*}
 From (i), $A_2=\dst\frac{1}{2}$, $B_2=-\dst\frac{1}{2}$. Substituting
 these into (ii) and solving for $A_1$ and $B_1$ yields $A_1=0$,
 $B_1=0$. Substituting the known coefficients into (iii) and solving
@@ -6082,16 +6080,15 @@ u_p ''&=&\left[-A_0+2A_2+2B_1-(A_1-4B_2)x-A_2x^2\right]\cos x\\ &&+
 \left[-B_0+2B_2-2A_1-(B_1+4A_2)x-B_2x^2\right]\sin x\\
 &=&-(3+4x-x^2)\cos x-(3-4x-x^2)\sin x\mbox{ if }
 \end{eqnarray*}
-$$
+\begin{gather*}
 \mbox{(i) } \begin{array}{rcl}-A_2&=&1\\ -B_2&=&1 \end{array},
 \mbox{ (ii) } \begin{array}{rcr} -A_1+4B_2&=&-4
 \\ -B_1-4A_2&=&4\end{array},
-$$
-$$
+\\
 \mbox{ (iii) }
 \begin{array}{rcr}-A_0+2B_1+2A_2&=&-3
 \\ -B_0-2A_1+2B_2&=&-3\end{array}.
-$$
+\end{gather*}
 From (i), $A_2=-1$, $B_2=-1$. Substituting these into (ii) and solving
 for $A_1$ and $B_1$ yields $A_1=0$, $B_1=0$. Substituting the known
 coefficients into (iii) and solving for $A_0$ and $B_0$ yields
@@ -6133,13 +6130,13 @@ y_p''+y_p&=&\left[2A_1+2B_0+(6A_2+4B_1)x+6B_2x^2\right]\cos x\\ && +
 \left[2B_1-2A_0+(6B_2-4A_1)x-6A_2x^2\right]\sin x\\
 &=&(2+2x)\cos x+(4+6x^2)\sin x \mbox{ if}
 \end{eqnarray*}
-$$
+\[
 \mbox{(i) } \begin{array}{rcl} 6B_2&=&0\\-6A_2&=&6\end{array},
 \mbox{ (ii) } \begin{array}{rcr}\phantom{-}4B_1+6A_2&=&2
 \\-4A_1+6B_2&=&0\end{array},
 \mbox{ (iii) } \begin{array}{rcl}\phantom{-}2B_0+2A_1&=&2
 \\-2A_0+2B_1&=&4\end{array}.
-$$
+\]
 From (i), $A_2=-1$, $B_2=0$. Substituting these into (ii) and solving
 for $A_1$ and $B_1$ yields $A_1=0$, $B_1=2$. Substituting the known
 coefficients into (iii) and solving for $A_0$ and $B_0$ yields
@@ -6221,7 +6218,7 @@ u''+3u'+2u&=&\left[A_0+3A_1+3B_0+2B_1+(A_1+3B_1)x\right]\cos x\\
 &&+\left[B_0+3 B_1-3A_0-2A_1+(B_1-3A_1)x\right]\sin x \\
 &=&21\cos x-(11+10x)\sin x \mbox{ if}
 \end{eqnarray*}
-$$
+\[
 \begin{array}{rcr}
 \phantom{-3}A_1+3B_1&=&0\\ -3A_1+\phantom{3}B_1&=&-10
 \end{array}
@@ -6230,7 +6227,7 @@ $$
 \phantom{-3} A_0+3B_0+3A_1+2B_1&=&21\\
 -3A_0+\phantom{3}B_0-2A_1+3B_1&=&-11
 \end{array}.
-$$
+\]
 From the first two equations $A_1=3$, $B_1=-1$. Substituting these in
 last two equations yields and solving for $A_0$ and $B_0$ yields
 $A_0=2$, $B_0=4$. Therefore,
@@ -6417,10 +6414,10 @@ x}\sin\omega x$ are not solutions of (B), then
 $\cos\omega x$ and $\sin\omega x$ are not solutions of the
 complementary equation for (A).  Then  Theorem~5.5.1
 implies that  (A) has a particular solution
-$$
+\[
 u_p=(A_0+A_1x+\cdots+A_kx^k)\cos\omega x+
 (B_0+B_1x+\cdots+B_kx^k)\sin\omega x,
-$$
+\]
  and $y_p=u_pe^{\lambda x}$
 is a particular solution of the stated form for the given equation.
 If $e^{\lambda x}\cos\omega x$ and $e^{\lambda
@@ -6428,10 +6425,10 @@ x}\sin\omega x$ are  solutions of (B), then
 $\cos\omega x$ and $\sin\omega x$ are solutions of the
 complementary equation for (A).  Then  Theorem~5.5.1
 implies that  (A) has a particular solution
-$$
+\[
 u_p=(A_0x+A_1x^2+\cdots+A_kx^{k+1})\cos\omega x+
 (B_0x+B_1x^2+\cdots+B_kx^{k+1})\sin\omega x,
-$$
+\]
 and $y_p=u_pe^{\lambda x}$ is a particular solution of the stated form
 for the given equation.
 
@@ -6444,7 +6441,7 @@ y_p'&=&\left[A_1+B_0+(2A_2+B_1)x+B_2x^2\right]\cos x\\  &&
 +\left[B_1-A_0+(2B_2-A_1)x-A_2x^2\right]\sin x
 =x^2\cos x \mbox{ if}
 \end{eqnarray*}
-$$
+\[
 \mbox{(i)}
 \begin{array}{rcl} \phantom{-}B_2&=&1\\ -A_2&=&0 \end{array},
 \mbox{ (ii) }
@@ -6453,7 +6450,7 @@ $$
 \mbox{ (iii) }
 \begin{array}{rcl} \phantom{-}B_0+A_1&=&0\\ -A_0+B_1&=&0
 \end{array}.
-$$
+\]
 Solving these equations yields $A_2=0$, $B_2=1$, $A_1=2$, $B_1=0$,
 $A_0=0$, $B_0=-2$. Therefore,$y_p=2x\cos x-(2-x^2)\sin x$ and
 $y=2x\cos x-(2-x^2)\sin x+c$.
@@ -6470,18 +6467,17 @@ u_p''+u_p&=&\left[A_0+A_1+B_0+(A_1+2A_2+B_1)x+(A_2+B_2)x^2\right]\cos
 x\\ && +\left[B_0+B_1-A_0+(B_1+2B_2-A_1)x+(B_2-A_2)x^2\right]\sin x\\
 &=&x^2\cos x \mbox{ if}
 \end{eqnarray*}
-$$
+\begin{gather*}
 \mbox{(i)}
 \begin{array}{rcl} \phantom{-}A_2+B_2&=&1\\ -A_2+B_2&=&0 \end{array},
 \mbox{ (ii) }
 \begin{array}{rcl}
 \phantom{-}A_1+B_1+2A_2&=&0\\ -A_1+B_1+2B_2&=&0\end{array},
-$$
-$$
+\\
 \mbox{ (iii) }
 \begin{array}{rcl} \phantom{-}A_0+B_0+A_1&=&0\\ -A_0+B_0+B_1&=&0
 \end{array}.
-$$
+\end{gather*}
 From (i), $A_2=\dst\frac{1}{2}$, $B_2=\dst\frac{1}{2}$. Substituting these
 into (ii) and solving for $A_1$ and $B_1$ yields $A_1=0$, $B_1=-1$.
 Substituting these into (iii) and solving for $A_0$ and $B_0$ yields
@@ -6497,15 +6493,22 @@ then}\\ u_p'&=&\left[(A_1+2B_0)+2B_1x\right]\cos2x
 \begin{eqnarray*}
 u_p''-u_p&=&\left[-A_0+A_1+2B_0-(A_1-2B_1)x\right]\cos2x\\ &&
 +\left[-B_0+B_1-2A_0-(B_1+2A_1)x\right]\sin2x=x\sin2x\mbox{ if}
-\end{eqnarray*} $$ \mbox{(i)} \begin{array}{rcl} -A_1+2B_1&=&0\\
+\end{eqnarray*}
+\[
+\mbox{(i)} \begin{array}{rcl} -A_1+2B_1&=&0\\
 -2A_1-\phantom{2}B_1&=&1 \end{array}, \mbox{ (ii) } \begin{array}{rcl}
 -\phantom{2}A_0+2B_0+A_1&=&0\\ -2A_0-\phantom{2}B_0+B_1&=&0
-\end{array}. $$ From (i), $A_1=-\dst\frac{2}{5}$, $B_1=-\dst\frac{1}{5}$.
+\end{array}. 
+\]
+ From (i), $A_1=-\dst\frac{2}{5}$, $B_1=-\dst\frac{1}{5}$.
 Substituting these into (ii) and solving for $A_0$ and $B_0$ yields
-$A_0=-\dst\frac{4}{25}$, $B_0=\dst\frac{3}{25}$. Therefore,$$
+$A_0=-\dst\frac{4}{25}$, $B_0=\dst\frac{3}{25}$. Therefore,
+\begin{gather*}
 u_p=-\dst\frac{1}{25}\left[(4+10x)\cos 2x-(3-5x)\sin2x\right]+c \mbox{
-and } $$ $$ y_p=-\dfrac{e^{-x}}{25}\left[(4+10x)\cos
-2x-(3-5x)\sin2x\right]+c. $$
+and } \\
+  y_p=-\dfrac{e^{-x}}{25}\left[(4+10x)\cos
+2x-(3-5x)\sin2x\right]+c. 
+\end{gather*}
 
 \part{d} Let $y=\int x^2e^{-x}\sin x\,dx=ue^{-x}$; then
 $y'=(u'-u)e^{-x}=x^2e^{-x}\sin x$ if $u'-u=x^2\sin x$.
@@ -6520,30 +6523,28 @@ u_p''-u_p&=&\left[-A_0+A_1+B_0-(A_1-2A_2-B_1)x-(A_2-B_2)x^2\right]\cos
  x\\ && +\left[-B_0+B_1-A_0-(B_1-2B_2+A_1)x-(B_2+A_2)x^2\right]\sin
 x\\ &=&x^2\sin x \mbox{ if}
 \end{eqnarray*}
-$$
+\begin{gather*}
 \mbox{(i)}
 \begin{array}{rcl} -A_2+B_2&=&0\\ -A_2-B_2&=&1 \end{array},
 \mbox{ (ii) }
 \begin{array}{rcl}
 -A_1+B_1+2A_2&=&0\\ -A_1-B_1+2B_2&=&0\end{array},
-$$
-$$
+\\
 \mbox{ (iii) }
 \begin{array}{rcl} -A_0+B_0+A_1&=&0\\ -A_0-B_0+B_1&=&0
 \end{array}.
-$$
+\end{gather*}
 From (i), $A_2=-\dst\frac{1}{2}$, $B_2=-\dst\frac{1}{2}$. Substituting
 these into (ii) and solving for $A_1$ and $B_1$ yields $A_1=-1$,
 $B_1=0$. Substituting these into (iii) and solving for $A_0$ and $B_0$
 yields $A_0=-\dst\frac{1}{2}$, $B_0=\dst\frac{1}{2}$. Therefore,
-$$
+\begin{gather*}
  u_p=-\frac{e^{-x}}{2}\left[(1+x)^2\cos x-(1-x^2)\sin
 x \right] \mbox{ and }
-$$
-$$
+\\
 y=-\frac{e^{-x}}{2}\left[(1+x)^2\cos x-(1-x^2)\sin
 x \right]+c.
-$$
+\end{gather*}
 
 \part{e} Let $y=\int x^3e^x\sin x\,dx=ue^x$; then
 $y'=(u'+u)e^x=x^3e^x\sin x$ if $u'+u=x^3\sin x$. Now let
@@ -6563,34 +6564,32 @@ u_p''+u_p&=&\left[A_0+A_1+B_0+(A_1+2A_2+B_1)x\right.\\
 +(B_3-A_3)x^3\right]\sin x
 =x^3\sin x \mbox{ if}
 \end{eqnarray*}
-$$
+\begin{gather*}
 \mbox{(i) }
 \begin{array}{rcl} \phantom{-}A_3+B_3&=&0\\ -A_3+B_3&=&1 \end{array},
 \mbox{ (ii) }
 \begin{array}{rcl} \phantom{-}A_2+B_2+3A_3&=&0\\ -A_2+B_2+3B_3&=&0
 \end{array},
-$$
-$$
+\\
 \mbox{(iii) }
 \begin{array}{rcl}
 \phantom{-}A_1+B_1+2A_2&=&0\\ -A_1+B_1+2B_2&=&0\end{array},
 \mbox{ (iv) }
 \begin{array}{rcl} \phantom{-}A_0+B_0+A_1&=&0\\ -A_0+B_0+B_1&=&0
 \end{array}.
-$$
+\end{gather*}
 From (i), $A_3=-\dst\frac{1}{2}$, $B_3=\dst\frac{1}{2}$. Substituting
 these into (ii) and solving for $A_2$ and $B_2$ yields
 $A_2=\dst\frac{3}{2}$, $B_2=0$. Substituting these into (iii) and
 solving for $A_1$ and $B_1$ yields $A_1=-\dst\frac{3}{2}$,
 $B_1=-\dst\frac{3}{2}$. Substituting these into (iv) and solving for
 $A_0$ and $B_0$ yields $A_0=0$, $B_0=\dst\frac{3}{2}$. Therefore,
-$$
+\begin{gather*}
 u_p=-\dst\frac{1}{2}\left[x(3-3x+x^2)\cos
 x-(3-3x+x^3)\sin x\right] \mbox{ and}
-$$
-$$
+\\
 y=-\dst\frac{e^x}{2}\left[x(3-3x+x^2)\cos x-(3-3x+x^3)\sin x\right]+c.
-$$
+\end{gather*}
 
 \part{f} Let $y=\int e^x\left[x\cos x-(1+3x)\sin x\right]\,dx=ue^x$;
 then $y'=(u'+u)e^x=e^x\left[x\cos x-(1+3x)\sin x\right]$ if
@@ -6605,14 +6604,14 @@ u_p''+u_p&=&\left[A_0+A_1+B_0+(A_1+B_1)x\right]\cos x\\ &&
 +\left[B_0+B_1-A_0+(B_1-A_1)x\right]\sin x\\ &=&x\cos x-(1+3x)\sin x
 \mbox{ if}
 \end{eqnarray*}
-$$
+\[
 \mbox{(i)}
 \begin{array}{rcr}\phantom{-}A_1+B_1&=&1\\ -A_1+B_1&=&-3
 \end{array},
 \mbox{ (ii) }
 \begin{array}{rcr} \phantom{-}A_0+B_0+A_1&=&0\\ -A_0+B_0+B_1&=&-1
 \end{array}.
-$$
+\]
 From (i), $A_1=2$, $B_1=-1$. Substituting
 these into (ii) and solving for $A_0$ and $B_0$ yields $A_0=-1$,
 $B_0=-1$. Therefore,
@@ -6620,8 +6619,11 @@ $B_0=-1$. Therefore,
 $y=-e^x\left[(1-2x)\cos x+(1+x)\sin x\right]+c$.
 
 \part{g} Let $y=\int e^{-x}\left[(1+x^2)\cos x+(1-x^2)\sin
-x\right]\,dx =ue^{-x}$; then $$
-y'=(u'-u)e^{-x}=e^{-x}\left[(1+x^2)\cos x+(1-x^2)\sin x\right] $$ if
+x\right]\,dx =ue^{-x}$; then 
+\[
+y'=(u'-u)e^{-x}=e^{-x}\left[(1+x^2)\cos x+(1-x^2)\sin x\right] 
+\]
+ if
 $u'-u=(1+x^2)\cos x+(1-x^2)\sin x$. Now let \begin{eqnarray*}
 u_p&=&(A_0+A_1x+A_2x^2)\cos x +(B_0+B_1x+B_2x^2)\sin x;\mbox{ then}\\
 u_p'&=&\left[A_1+B_0+(2A_2+B_1)x+B_2x^2\right]\cos x\\ &&
@@ -6629,11 +6631,15 @@ u_p'&=&\left[A_1+B_0+(2A_2+B_1)x+B_2x^2\right]\cos x\\ &&
 \end{eqnarray*} \begin{eqnarray*}
 u_p''-u_p&=&\left[-A_0+A_1+B_0-(A_1-2A_2-B_1)x-(A_2-B_2)x^2\right]\cos
 x\\ && +\left[-B_0+B_1-A_0-(B_1-2B_2+A_1)x-(B_2+A_2)x^2\right]\sin x\\
-&=& (1+x^2)\cos x+(1-x^2)\sin x \mbox{ if} \end{eqnarray*} $$
+&=& (1+x^2)\cos x+(1-x^2)\sin x \mbox{ if} \end{eqnarray*} 
+\begin{gather*}
 \mbox{(i)} \begin{array}{rcr} -A_2+B_2&=&1\\ -A_2-B_2&=&-1
 \end{array}, \mbox{ (ii) } \begin{array}{rcr} -A_1+B_1+2A_2&=&0\\
--A_1-B_1+2B_2&=&0\end{array}, $$ $$ \mbox{ (iii) } \begin{array}{rcl}
--A_0+B_0+A_1&=&1\\ -A_0-B_0+B_1&=&1 \end{array}. $$ From (i), $A_2=0$,
+-A_1-B_1+2B_2&=&0\end{array}, \\
+  \mbox{ (iii) } \begin{array}{rcl}
+-A_0+B_0+A_1&=&1\\ -A_0-B_0+B_1&=&1 \end{array}. 
+\end{gather*}
+ From (i), $A_2=0$,
 $B_2=1$. Substituting these into (ii) and solving for $A_1$ and $B_1$
 yields $A_1=1$, $B_1=1$. Substituting these into (iii) and solving for
 $A_0$ and $B_0$ yields $A_0=0$, $B_0=0$. Therefore,$u_p=x\cos
@@ -7444,10 +7450,10 @@ y_p'&=&(A+4\sqrt6Bt)\cos4\sqrt6t+(B-4\sqrt6At)\sin4\sqrt6t\\
 y_p''&=&(8\sqrt6B-96At)\cos4\sqrt6t-(8\sqrt6A+96Bt)\sin4\sqrt6t,
 \mbox{ so}
 \end{eqnarray*}
-$$
+\[
  y_p''+96y_p=8\sqrt6B\cos4\sqrt6t-8\sqrt6A\sin4\sqrt6t=
 \frac{64}{3}\sin4\sqrt6t-32\cos4\sqrt6t
-$$
+\]
 if $8\sqrt6B=-32$, $-8\sqrt6A=\dst\frac{64}{3}$. Therefore,
 $A=-\dst\frac{8}{3\sqrt6}$, $B=-\dst\frac{4}{\sqrt6}$, and
 $y_p=-\dst\frac{t}{\sqrt6}\dst\left(\frac{8}{3}\cos4\sqrt6t+
@@ -7469,11 +7475,11 @@ y'&=&-\dst\left(\frac{8}{3\sqrt6}\cos4\sqrt6t+
 \end{eqnarray*}
 so $y'(0)=0\Rightarrow 0=-\dst\frac{8}{3\sqrt6}+4\sqrt6c_2$, and
 $c_2=\dst\frac{1}{9}$. Therefore,
-$$
+\[
 y=-\dst{\frac{t}{
 \sqrt6}\left(\frac{8}{3}\cos4\sqrt6t+4\sin
 4\sqrt6t\right)+\frac{1}{9}\sin 4\sqrt6t}\mbox{ ft}.
-$$
+\]
 
 
 \exer{6.1.18}
@@ -7483,12 +7489,12 @@ Now $y(0)=y_0\Rightarrow c_1=y_0$. Since
  $y'=\omega_0(-c_1\sin\omega_0t+c_2\cos\omega_0t)$,
 $y'(0)=v_0\Rightarrow c_2=\dst\frac{v_0}{\omega_0}$. Therefore,
 $y=y_0\cos\omega_0 t+\dst\frac{v_0}{\omega_0}\sin\omega_0t$;
-$$
+\[
 R=\frac{1}{\omega_0} \sqrt{(\omega_0y_0)^2+(v_0)^2};\;
 \cos\phi=\dst\frac{y_0\omega_0}{
 \sqrt{(\omega_0y_0)^2+(v_0)^2}}\,;\ \sin\phi=\dst\frac{v_0}{
 \sqrt{(\omega_0y_0)^2+(v_0)^2}}\,.
-$$
+\]
 
 {\bfseries Discussion~6.1.1}
 In Exercises~19, 20, and 21 we use
@@ -10890,23 +10896,22 @@ s-1}-\frac{1}{ s+1}\right]}
 
 \exer{8.2.4}
 \part{a}
-$$
+\[
 \frac{2+3s}{(s^2+1)(s+2)(s+1)}=
 \frac{A}{ s+2}+\frac{B}{ s+1}+\frac{Cs+D}{ s^2+1},
-$$
+\]
 where
-$$
+\begin{gather*}
 A(s^2+1)(s+1)+
 B(s^2+1)(s+2)+(Cs+D)(s+2)(s+1)=2+3s.
-$$
-$$
+\\
 \begin{array}{rcrl}
 -5A&=&-4&(\mbox{set }s=-2);\\
 2B&=&-1& (\mbox{set }s=-1);\\
 A+2B+2D&=&2&(\mbox{set }s=0);\\
 A+B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=\dst\frac{4}{5}$, $B=-\dst\frac{1}{2}$,
 $C=-\dst\frac{3}{10}$, $D=\dst\frac{11}{10}$. Therefore,
 \begin{eqnarray*}
@@ -10919,22 +10924,21 @@ s^2+1}\\
 \end{eqnarray*}
 
 \part{b}
-$$
+\[
 \frac{3s^2+2s+1}{(s^2+1)(s^2+2s+2)}=
 \frac{As+B}{ s^2+1}+\frac{C(s+1)+D}{(s+1)^2+1},
-$$
+\]
 where
-$$
+\begin{gather*}
 (As+B)((s+1)^2+1)+(C(s+1)+D)(s^2+1)=3s^2+2s+1.
-$$
-$$
+\\
 \begin{array}{rcrl}
 2B+C+D&=&1&(\mbox{set }s=0);\\
 -A+B+2D&=&2& (\mbox{set }s=-1);\\
 2B+C+D&=&1&(\mbox{set }s=0);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields
 $A=6/5$, $B=2/5$, $C=-6/5$, $D=7/5$.
 Therefore,
@@ -10948,22 +10952,21 @@ Therefore,
 
 \part{c}
 $s^2+2s+5=(s+1)^2+4$;
-$$
+\[
 \frac{3s+2}{(s-2)((s+1)^2+4)}=\frac{A}{ s-2}+
 \frac{B(s+1)+C}{(s+1)^2+4},
-$$
+\]
 where
-$$
+\begin{gather*}
 A\left((s+1)^2)+4\right)+
 \left(B(s+1)+C\right)(s-2)=3s+2.
-$$
-$$
+\\
 \begin{array}{rcrl}
 13A&=&8&(\mbox{set }s=2);\\
 4A-3C&=&-1&(\mbox{set }s=-1);\\
 A+B&=&0&(\mbox{equate coefficients of }s^2).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=\dst\frac{8}{13}$, $B=-\dst\frac{8}{13}$,
 $C=\dst\frac{15}{13}$. Therefore,
 \begin{eqnarray*}
@@ -10976,22 +10979,21 @@ e^{-t}\sin 2t.
 \end{eqnarray*}
 
 \part{d}
-$$
+\[
 \frac{3s^2+2s+1}{(s-1)^2(s+2)(s+3)}=
 \frac{A}{ s-1}+\frac{B}{(s-1)^2}+\frac{C}{ s+2}+\frac{D}{ s+3},
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-1)+B)(s+2)(s+3)+(C(s+3)+D(s+2))(s-1)^2=3s^2+2s+1.
-$$
-$$
+\\
 \begin{array}{rcrl}
 12B&=&6&(\mbox{set }s=1);\\
 9C&=&9& (\mbox{set }s=-2);\\
 -16D&=&22&(\mbox{set }s=-3);\\
 A+C+D&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields
 $A=3/8$, $B=1/2$, $C=1$, $D=-11/8$.
 Therefore,
@@ -11004,22 +11006,21 @@ s+2}-\frac{11}{8}\frac{1}{ s+3}\\
 \end{eqnarray*}
 
 \part{e}
-$$
+\[
 \frac{2s^2+s+3}{(s-1)^2(s+2)^2}=
 \frac{A}{ s-1}+\frac{B}{(s-1)^2}+\frac{C}{ s+2}+\frac{D}{(s+2)^2},
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-1)+B)(s+2)^2+(C(s+2)+D)(s-1)^2=2s^2+s+3.
-$$
-$$
+\\
 \begin{array}{rcrl}
 9B&=&6&(\mbox{set }s=1);\\
 9D&=&9& (\mbox{set }s=-2);\\
 -4A+4B+2C+D&=&3&(\mbox{set }s=0);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields
 $A=1/9$, $B=2/3$, $C=-1/9$, $D=1$.
 Therefore,
@@ -11032,10 +11033,10 @@ s+2}+\frac{1}{(s+2)^2}\\
 \end{eqnarray*}
 
 \part{f}
-$$
+\[
 \frac{3s+2}{(s^2+1)(s-1)^2}=\frac{A}{ s-1}+\frac{B}{(s-1)^2}+
 \frac{Cs+D}{ s^2+1},
-$$
+\]
 where
 \[
 A(s-1)(s^2+1)+B(s^2+1)+(Cs+D)(s-1)^2=3s+2.
@@ -11048,16 +11049,15 @@ A(s-1)(s^2+1)+(Cs+D)(s-1)^2&=&3s+2-\frac{5}{2}(s^2+1)\\
 &=&-\frac{5s^2-6s+1}{2}=-\frac{(s-1)(5s-1)}{2}.
 \end{eqnarray*}
 Therefore,
-$$
+\begin{gather*}
 A(s^2+1)+(Cs+D)(s-1)=\frac{1-5s}{2}.
-$$
-$$
+\\
 \begin{array}{rcrl}
 2A&=&-2&(\mbox{set }s=1);\\
 A-D&=&1/2&(\mbox{set }s=0);\\
 A+C&=&0&(\mbox{equate coefficients of }s^2).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=-1$, $C=1$,
 $D=-\dst\frac{3}{2}$. Therefore,
 \begin{eqnarray*}
@@ -11070,22 +11070,21 @@ $D=-\dst\frac{3}{2}$. Therefore,
 
 \exer{8.2.6}
 \part{a}
-$$
+\[
 \frac{17 s-15}{(s^2-2s+5)(s^2+2s+10)}
 =\frac{A(s-1)+B}{(s-1)^2+4}+\frac{C(s+1)+D}{(s+1)^2+9}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-1)+B)((s+1)^2+9)+(C(s+1)+D)((s-1)^2+4)=17 s-15.
-$$
-$$
+\\
 \begin{array}{rcrl}
 13B+8C+4D&=&2&(\mbox{set }s=1);\\
 -18A+9B+8D&=&-32& (\mbox{set }s=-1);\\
 -10A+10B+5C+5D&=&-15&(\mbox{set }s=0);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=1$, $B=2$,
 $C=-1$, $D=-4$. Therefore,
 \begin{eqnarray*}
@@ -11098,21 +11097,20 @@ $C=-1$, $D=-4$. Therefore,
 \end{eqnarray*}
 
 \part{b}
-$$\frac{8s+56}{(s^2-6s+13)(s^2+2s+5)}
+\[\frac{8s+56}{(s^2-6s+13)(s^2+2s+5)}
 =\frac{A(s-3)+B}{(s-3)^2+4}+\frac{C(s+1)+D}{(s+1)^2+4}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-3)+B)((s+1)^2+4)+(C(s+1)+D)((s-3)^2+4)=8s+56.
-$$
-$$
+\\
 \begin{array}{rcrl}
 20B+16C+4D&=&80&(\mbox{set }s=3);\\
 -16A+4B+20D&=&48& (\mbox{set }s=-1);\\
 -15A+5B+13C+13D&=&56&(\mbox{set }s=0);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=-1$, $B=3$,
 $C=1$, $D=1$. Therefore,
 \begin{eqnarray*}
@@ -11124,21 +11122,20 @@ $C=1$, $D=1$. Therefore,
 \end{eqnarray*}
 
 \part{c}
-$$\frac{s+9}{(s^2+4s+5)(s^2-4s+13)}
+\[\frac{s+9}{(s^2+4s+5)(s^2-4s+13)}
 =\frac{A(s+2)+B}{(s+2)^2+1}+\frac{C(s-2)+D}{(s-2)^2+9}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s+2)+B)((s-2)^2+9)+(C(s-2)+D)((s+2)^2+1)=s+9.
-$$
-$$
+\\
 \begin{array}{rcrl}
 25B-4C+D&=&7&(\mbox{set }s=-2);\\
 36A+9B+17D&=&11& (\mbox{set }s=2);\\
 26A+13B-10C+5D&=&9&(\mbox{set }s=0);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=1/8$, $B=1/4$,
 $C=-1/8$, $D=1/4$. Therefore,
 \begin{eqnarray*}
@@ -11152,21 +11149,20 @@ $C=-1/8$, $D=1/4$. Therefore,
 \end{eqnarray*}
 
 \part{d}
-$$\frac{3s-2}{(s^2-4s+5)(s^2-6s+13)}
+\[\frac{3s-2}{(s^2-4s+5)(s^2-6s+13)}
 =\frac{A(s-2)+B}{(s-2)^2+1}+\frac{C(s-3)+D}{(s-3)^2+4}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-2)+B)((s-3)^2+4)+(C(s-3)+D)((s-2)^2+1)=3s-2.
-$$
-$$
+\\
 \begin{array}{rcrl}
 5B-C+D&=&4&(\mbox{set }s=2);\\
 4A+4B+2D&=&7& (\mbox{set }s=3);\\
 -26A+13B-15C+5D&=&-2&(\mbox{set }s=0);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=1$, $B=1/2$,
 $C=-1$, $D=1/2$. Therefore,
 \begin{eqnarray*}
@@ -11180,22 +11176,21 @@ t\right)-e^{3t}\left(\cos 2t-\frac{1}{4}\sin 2t\right).
 
 
 \part{e}
-$$
+\[
 \frac{3s-1}{(s^2-2s+2)(s^2+2s+5)}
 =\frac{A(s-1)+B}{(s-1)^2+1}+\frac{C(s+1)+D}{(s+1)^2+4}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-1)+B)((s+1)^2+4)+(C(s+1)+D)((s-1)^2+1)=3s-1.
-$$
-$$
+\\
 \begin{array}{rcrl}
 8B+2C+D&=&2&(\mbox{set }s=1);\\
 -8A+4B+5D&=&-4& (\mbox{set }s=-1);\\
 -5A+5B+2C+2D&=&-1&(\mbox{set }s=0);\\
 A+5B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=1/5$, $B=2/5$,
 $C=-1/5$, $D=-4/5$. Therefore,
 \begin{eqnarray*}
@@ -11208,23 +11203,22 @@ e^t\left(\frac{1}{5}\cos t+\frac{2}{5} \sin t\right)
 \end{eqnarray*}
 
 \part{f}
-$$
+\[
 \frac{20s+40}{(4s^2-4s+5)(4s^2+4s+5)}
 =[\frac{A(s-1/2)+B}{(s-1/2)^2+1}+
 \frac{C(s+1/2)+D}{(s+1/2)^2+1}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-1/2)+B)((s+1/2)^2+1)+(C(s+1/2)+D)((s-1/2)^2+1)=\frac{5s+10}{4}.
-$$
-$$
+\\
 \begin{array}{rcrl}
 2B+C+D&=&25/8&(\mbox{set }s=1/2);\\
 -A+B+2D&=&15/8& (\mbox{set }s=-1/2);\\
 -5A+10B+5C+10D&=&20&(\mbox{set }s=0);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=-1$, $B=9/8$,
 $C=1$, $D=-1/8$. Therefore,
 \begin{eqnarray*}
@@ -11241,22 +11235,21 @@ t\right)+e^{-t/2}\left(\cos t-\frac{1}{8}\sin t\right).
 
 \exer{8.2.8}
 \part{a}
-$$
+\[
 \frac{2s+1}{(s^2+1)(s-1)(s-3)}
 =\frac{A}{ s-1}+\frac{B}{ s-3}+\frac{Cs+D}{ s^2+1}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-3)+B(s-1))(s^2+1)+(Cs+D)(s-1)(s-3)=2s+1.
-$$
-$$
+\\
 \begin{array}{rcrl}
 -4A&=&3&(\mbox{set }s=1);\\
 20B&=&7& (\mbox{set }s=3);\\
 -3A-B+3D&=&1& (\mbox{set }s=0);\\
 A+B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=-3/4$, $B=7/20$,
 $C=2/5$, $D=-3/10$. Therefore,
 \begin{eqnarray*}
@@ -11270,22 +11263,21 @@ s^2+1}-\frac{3}{10}\frac{1}{ s^2+1}
 
 
 \part{b}
-$$
+\[
 \frac{s+2}{(s^2+2s+2)(s^2-1)}
 =\frac{A}{ s-1}+\frac{B}{ s+1}+\frac{C(s+1)+D}{(s+1)^2+1}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s+1)+B(s-1))((s+1)^2+1)+(C(s+1)+D)(s^2-1)=s+2.
-$$
-$$
+\\
 \begin{array}{rcrl}
 10A&=&3&(\mbox{set }s=1);\\
 -2B&=&1& (\mbox{set }s=-1);\\
 2A-2B-C-D&=&2& (\mbox{set }s=0);\\
 A+B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=3/10$, $B=-1/2$,
 $C=1/5$, $D=-3/5$. Therefore,
 \begin{eqnarray*}
@@ -11299,22 +11291,21 @@ $C=1/5$, $D=-3/5$. Therefore,
 \end{eqnarray*}
 
 \part{c}
-$$
+\[
 \frac{2s-1}{(s^2-2s+2)(s+1)(s-2)}
 =\frac{A}{ s-2}+\frac{B}{ s+1}+\frac{C(s-1)+D}{(s-1)^2+1}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s+1)+B(s-2))((s-1)^2+1)+(C(s-1)+D)(s-2)(s+1)=2s-1.
-$$
-$$
+\\
 \begin{array}{rcrl}
 6A&=&3&(\mbox{set }s=2);\\
 -15B&=&-3& (\mbox{set }s=-1);\\
 2A-4B+2C-2D&=&-1& (\mbox{set }s=0);\\
 A+B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=1/2$, $B=1/5$,
 $C=-7/10$, $D=-1/10$. Therefore,
 \begin{eqnarray*}
@@ -11328,22 +11319,21 @@ $C=-7/10$, $D=-1/10$. Therefore,
 \end{eqnarray*}
 
 \part{d}
-$$
+\[
 \frac{s-6}{(s^2-1)(s^2+4)}
 =\frac{A}{ s-1}+\frac{B}{ s+1}+\frac{Cs+D}{ s^2+4}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s+1)+B(s-1))(s^2+4)+(Cs+D)(s^2-1)=s-6.
-$$
-$$
+\\
 \begin{array}{rcrl}
 10A&=&-5&(\mbox{set }s=1);\\
 -10B&=&-7& (\mbox{set }s=-1);\\
 4A-4B-D&=&-6& (\mbox{set }s=0);\\
 A+B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=-1/2$, $B=7/10$,
 $C=-1/5$, $D=6/5$. Therefore,
 \begin{eqnarray*}
@@ -11356,22 +11346,21 @@ $C=-1/5$, $D=6/5$. Therefore,
 \end{eqnarray*}
 
 \part{e}
-$$
+\[
 \frac{2s-3}{ s(s-2)(s^2-2s+5)}
 =\frac{A}{ s}+\frac{B}{ s-2}+\frac{C(s-1)+D}{(s-1)^2+4}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-2)+Bs)((s-1)^2+4)+(C(s-1)+D)s(s-2)=2s-3.
-$$
-$$
+\\
 \begin{array}{rcrl}
 -10A&=&-3&(\mbox{set }s=0);\\
 10B&=&1& (\mbox{set }s=2);\\
 -4A+4B-D&=&-1& (\mbox{set }s=1);\\
 A+B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=3/10$, $B=1/10$,
 $C=-2/5$, $D=1/5$. Therefore,
 \begin{eqnarray*}
@@ -11385,22 +11374,21 @@ $C=-2/5$, $D=1/5$. Therefore,
 \end{eqnarray*}
 
 \part{f}
-$$
+\[
 \frac{5s-15}{(s^2-4s+13)(s-2)(s-1)}
 =\frac{A}{ s-1}+\frac{B}{ s-2}+\frac{C(s-2)+D}{(s-2)^2+9}
-$$
+\]
 where
-$$
+\begin{gather*}
 (A(s-2)+B(s-1))((s-2)^2+9)+(C(s-2)+D)(s-1)(s-2)=5s-15.
-$$
-$$
+\\
 \begin{array}{rcrl}
 -10A&=&-10&(\mbox{set }s=1);\\
 9B&=&-5& (\mbox{set }s=2);\\
 -26A-13B-4C+2D&=&-15& (\mbox{set }s=0);\\
 A+B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=1$, $B=-5/9$,
 $C=-4/9$, $D=1$. Therefore,
 \begin{eqnarray*}
@@ -11416,10 +11404,10 @@ e^t-\frac{5}{9}e^{2t}-\frac{4}{9}e^{2t}\cos 3t+\frac{1}{3}e^{2t}\sin 3t.
 \exer{8.2.10}
 \part{a} Let $i=1$. (The proof for $i=2,\dots,n$) is similar.
 Multiplying the given equation through by $s-s_1$ yields
-$$
+\[
 \frac{P(s)}{(s-s_2)\cdots(s-s_n)}=
 A_1+(s-s_1)\left[\frac{A_2}{ s-s_2}+\cdots+\frac{A_n}{ s-s_n}\right],
-$$
+\]
 and setting $s=s_1$ yields
 $A_1=\dst\frac{P(s_1)}{(s_1-s_2)\cdots(s_2-s_n)}$.
 
@@ -11440,67 +11428,67 @@ of the denominator are repeated or complex.
 \section{Solution of Initial Value Problems}
 
 \exer{8.3.2}
-$$
+\[
 (s^2-s-6)Y(s)=\frac{2}{ s}+s-1=\frac{2+s(s-1)}{ s}.
-$$
+\]
 Since $(s^2-s-6)=(s-3)(s+2)$,
-$$
+\[
 Y(s)=\frac{2+s(s-1)}{ s(s-3)(s+2)}
 =-\frac{1}{3s}+\frac{8}{15}\frac{1}{ s-3}+\frac{4}{5}\frac{1}{
 s+2}
-$$
+\]
 and $y=-\dst\frac{1}{3}+\dst\frac{8}{15}e^{3t}+\dst\frac{4}{5}e^{-2t}$.
 
 
 \exer{8.3.4}
-$$
+\[
 (s^2-4)Y(s)=\frac{2}{ s-3}+(-1+s)=\frac{2+(s-1)(s-3)}{ s-3}.
-$$
+\]
 Since $s^2-4=(s-2)(s+2)$,
-$$
+\[
 Y(s)=\frac{2+(s-1)(s-3)}{(s-2)(s+2)(s-3)}=
 -\frac{1}{4}\frac{1}{ s-2}+\frac{17}{20}\frac{1}{ s+2}+\frac{2}{5}\frac{1}{ s-3}
-$$
+\]
 and   $y=\dst-\frac{1}{4}e^{2t}+\frac{17}{
 20}e^{-2t}+\frac{2}{5}e^{3t}$.
 
 
 \exer{8.3.6}
-$$
+\[
 (s^2+3s+2)Y(s)=\frac{6}{ s-1}+(-1+s)+3=\frac{6+(s-1)(s+2)}{ s-1}.
-$$
+\]
 Since $s^2+3s+2=(s+2)(s+1)$,
-$$
+\[
 Y(s)=\frac{6+(s-1)(s+2)}{(s-1)(s+2)(s+1)}=
 \frac{1}{ s-1}+\frac{2}{ s+2}-\frac{2}{ s+1}
-$$
+\]
 and
  $y=e^t+2e^{-2t}-2e^{-t}$.
 
 
 \exer{8.3.8}
-$$
+\[
  (s^2-3s+2)Y(s)=\frac{2}{ s-3}+(-1+s)-3=\frac{2+(s-3)(s-4)}{ s-3}.
-$$
+\]
 Since $s^2-3s+2=(s-1)(s-2)$,
-$$
+\[
 Y(s)=\frac{2+(s-3)(s-4)}{(s-1)(s-2)(s-3)}=
 \frac{4}{ s-1}-\frac{4}{ s-2}+\frac{1}{ s-3}
-$$
+\]
 and
   $y=4e^t-4e^{2t}+e^{3t}$.
 
 
 
 \exer{8.3.10}
-$$
+\[
 (s^2-3s+2)Y(s)=\frac{1}{ s-3}+(-4-s)+3=\frac{1-(s-3)(s+1)}{ s-3}.
-$$
+\]
 Since $s^2-3s+2=(s-1)(s-2)$,
-$$
+\[
 Y(s)=\frac{1-(s-3)(s+1)}{(s-1)(s-2)(s-3)}=
 \frac{5}{2}\frac{1}{ s-1}-\frac{4}{ s-2}+\frac{1}{2}\frac{1}{ s-3}
-$$
+\]
 and
   $y=\dst{\frac{5}{2}e^t-4e^{2t}+\frac{1}{
 2}e^{3t}}$.
@@ -11508,86 +11496,86 @@ and
 
 
 \exer{8.3.12}
-$$
+\[
 (s^2+s-2)Y(s)=-\frac{4}{ s}+(3+2s)+2=\frac{-4+s(5+2s)}{ s}.
-$$
+\]
 Since $(s^2+s-2)=(s+2)(s-1)$,
-$$
+\[
 Y(s)=\frac{-4+s(5+2s)}{ s(s+2)(s-1)}
 =\frac{2}{ s}-\frac{1}{ s+2}+\frac{1}{ s-1},
-$$
+\]
 and  $y=2-e^{-2t}+e^t$.
 
 
 
 \exer{8.3.14}
-$$
+\[
  (s^2-s-6)Y(s)=\frac{2}{ s}+s-1=\frac{2+s(s-1)}{ s}.
-$$
+\]
 Since $s^2-s-6=(s-3)(s+2)$,
-$$
+\[
 Y(s)=\frac{2+s(s-1)}{ s(s-3)(s+2)}=
 -\frac{1}{3s}+\frac{8}{15}\frac{1}{ s-3}+\frac{4}{5}\frac{1}{ s+2}
-$$
+\]
 and
  $y=\dst{-\frac{1}{3}+\frac{8}{15}e^{3t}
 +\frac{4}{5}e^{-2t}}$.
 
 
 \exer{8.3.16}
-$$
+\[
 (s^2-1)Y(s)=\frac{1}{ s}+s=\frac{1+s^2}{ s}.
-$$
+\]
 Since $s^2-1=(s-1)(s+1)$,
-$$
+\[
 Y(s)=\frac{1+s^2}{ s(s-1)(s+1)}=
 -\frac{1}{ s}+\frac{1}{ s-1}+\frac{1}{ s+1}
-$$
+\]
 and
  $y=-1+e^t+e^{-t}$.
 
 
 \exer{8.3.18}
-$$
+\[
 (s^2+s)Y(s)=\frac{2}{ s-3}+(4-s)-1=\frac{2-(s-3)^2}{ s-3}.
-$$
+\]
 Since $s^2+s=s(s+1)$,
-$$
+\[
 Y(s)=\frac{2-(s-3)^2}{ s(s+1)(s-3)}=\frac{7}{3s}-\frac{7}{2}\frac{1}{ s+1}
 +\frac{1}{6}\frac{1}{ s-3}
-$$
+\]
 and $y=\dst{\frac{7}{3}-\frac{7}{2}e^{-t} +\frac{1}{6}e^{3t}}$.
 
 \exer{8.3.20}
-$$
+\[
 (s^2+1)Y(s)=\frac{1}{ s^2}+2,\mbox{\quad so\quad}
 Y(s)=\frac{1}{(s^2+1)s^2}+\frac{2}{ s^2+1}.
-$$
+\]
 Substituting $x=s^2$ into
-$$
+\[
 \frac{1}{(x+1)x}=\frac{1}{ x+1}-\frac{1}{ x}
 \mbox{\quad yields \quad}
 \frac{1}{(s^2+1)s^2}=\frac{1}{ s^2}-\frac{1}{ s^2+1},
-$$
+\]
 so $Y(s)=\dst\frac{1}{ s^2}+\dst\frac{1}{ s^2+1}$ and $y=t+\sin t$.
 
 \exer{8.3.22}
-$$
+\[
  (s^2+5s+6)Y(s)=\frac{2}{ s+1}+(3+s)+5=\frac{2+(s+1)(s+8)}{ s+1}.
-$$
+\]
 Since $s^2+5s+6=(s+2)(s+3)$,
-$$
+\[
 Y(s)=\frac{2+(s+1)(s+8)}{(s+1)(s+2)(s+3)}=
 \frac{1}{ s+1}+\frac{4}{ s+2}-\frac{4}{ s+3}
-$$
+\]
 and
  $y=e^{-t}+4e^{-2t}-4e^{-3t}$.
 
 \exer{8.3.24}
-$$
+\[
 (s^2-2s-3)Y(s)=\frac{10s}{ s^2+1}+(7+2s)-4=
 \frac{10s}{ s^2+1}+(2s+3).
-$$
+\]
 Since $s^2-2s-3=(s-3)(s+1)$,
 \begin{gather*}
 Y(s)=
@@ -11599,17 +11587,16 @@ Y(s)=
 \frac{10s}{(s-3)(s+1)(s^2+1)}=\frac{A}{ s-3}+\frac{B}{ s+1}+\frac{Cs+D}{ s^2+1}
 \end{gather*}
  where
-$$
+\begin{gather*}
 (A(s+1)+B(s-3))(s^2+1)+(Cs+D)(s-3)(s+1)=10s.
-$$
-$$
+\\
 \begin{array}{rcrl}
 40A&=&30&(\mbox{set }s=3);\\
 -8B&=&-10& (\mbox{set }s=-1);\\
 A-3B-3D&=&0& (\mbox{set }s=0);\\
 A+B+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=3/4$, $B=5/4$,
 $C=-2$, $D=-1$. Therefore,
 \begin{eqnarray*}
@@ -11624,13 +11611,12 @@ From this, (A), and (B),
 
 
 \exer{8.3.26}
-$$
+\begin{gather*}
 (s^2+4)Y(s)=\frac{16}{ s^2+4}+\frac{9s}{ s^2+1}+s,\mbox{\quad so}
-$$
-$$
+\\
 Y(s)=\frac{16}{ (s^2+4)^2}+\frac{9s}{(s^2+4)(s^2+1)}+\frac{s}{
 s^2+4}.
-$$
+\end{gather*}
 From the table of Laplace transforms,
 \begin{eqnarray*}
 t\cos2t&\leftrightarrow&\frac{s^2-4}{(s^2+4)^2}=\frac{s^2+4}{(s^2+4)^2}
@@ -11645,9 +11631,9 @@ Therefore,
 \tag{A}
 \]
 Substituting $x=s^2$ into
-$$
+\[
 \frac{9}{(x+4)(x+1)}=\frac{3}{ x+1}-\frac{3}{ x+4}
-$$
+\]
 and multiplying  by $s$ yields
 \[
 \frac{9s}{(s^2+4)(s^2+1)}=\frac{3s}{ s^2+1}-\frac{3s}{ s^2+4}
@@ -11664,9 +11650,9 @@ $y=-(2t+2)\cos2t+\sin2t+3\cos t$.
 
 
 \exer{28}
-$$
+\[
 (s^2+2s+2)Y(s)=\frac{2}{ s^2}+(-7+2s)+4.
-$$
+\]
 Since $(s^2+2s+2)=(s+1)^2+1$,
 \begin{gather*}
 Y(s)=\frac{2}{ s^2((s+1)^2+1)}+\frac{2s-3}{ (s+1)^2+1}.
@@ -11679,19 +11665,19 @@ s^2}+\frac{C(s+1)+D}{(s+1)^2+1},
 \end{gather*}
 where
 $(As+B)\left((s+1)^2+1\right)+s^2\left(C(s+1)+D\right)=2$.
-$$
+\[
 \begin{array}{rcll}
 2B&=&2&(\mbox{set }s=0);\\
 -A+B+D&=&2&(\mbox{set }s=-1);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3);\\
 2A+B+C+D&=&0&(\mbox{equate coefficients of }s^2).
 \end{array}
-$$
+\]
 Solving this system yields $A=-1$, $B=1$, $C=1$, $D=0$. Therefore,
-$$
+\[
 \frac{2}{ s^2((s+1)^2+1)}=-\frac{1}{ s}+\frac{1}{
 s^2}+\frac{(s+1)}{(s+1)^2+1}\leftrightarrow-1+t+e^{-t}\cos t.
-$$
+\]
 From this, (A), and (B),
 $y=-1+t+e^{-t}(\cos t-5\sin t)$.
 
@@ -11711,44 +11697,44 @@ Y(s)=\frac{s+4}{ ((s+1)^2+1)((s+2)^2+1)}+\frac{4}{ (s+2)^2+1}.
 where
 $\left(A(s+1)+B\right)\left((s+2)^2+1\right)+
 \left(C(s+2)+D\right)\left((s+1)^2+1\right)=4+s$.
-$$
+\[
 \begin{array}{rcll}
 5A+5B+4C+2D&=&4&(\mbox{set }s=0);\\
 2B+C+D&=&3&(\mbox{set }s=-1);\\
 -A+B+2D&=&2&(\mbox{set }s=-2);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).\\
 \end{array}
-$$
+\]
 Solving this system yields $A=-1$, $B=1$, $C=1$, $D=0$. Therefore,
-$$
+\[
 \frac{s+4}{ ((s+1)^2+1)((s+2)^2+1)}=\frac{-(s+1)+1}{
 (s+1)^2+1}+\frac{s+2}{ (s+2)^2+1},
 \leftrightarrow e^{-t}(-\cos t+\sin t)+e^{-2t}\cos t.
-$$
+\]
 From this, (A), and (B),
 $y=e^t(-\cos t+\sin t)+e^{-2t}(\cos t+4\sin t)$.
 
 
 
 \exer{8.3.32}
-$$
+\[
 (2s^2-3s-2)Y(s)=\frac{4}{ s-1}+2(-2+s)-3=\frac{4+(2s-7)(s-1)}{ s-1}
-$$
+\]
 
 Since $2s^2-3s-2=(s-2)(2s+1)$,
-$$
+\[
 Y(s)=\frac{4+(2s-7)(s-1)}{2(s-2)(s-1)(s+1/2)}=
 \frac{1}{5}\frac{1}{ s-2}-\frac{4}{3}\frac{1}{ s-1}+\frac{32}{15}\frac{1}{ s+1/2}
-$$
+\]
 and
  $y=\dst{\frac{1}{5}e^{2t}-\frac{4}{3}e^t
 +\frac{32}{15}e^{-t/2}}$.
 
 
 \exer{8.3.34}
-$$
+\[
 (2s^2+2s+1)Y(s)=\frac{2}{ s^2}+2(-1+s)+2=\frac{2}{ s^2}+2s.
-$$
+\]
 Since $2s^2+2s+1=2((s+1/2)^2+1/4)$,
 \begin{gather*}
 Y(s)=\frac{1}{ s^2((s+1/2)^2+1/4)}+\frac{s}{((s+1/2)^2+1/4)}.
@@ -11760,17 +11746,16 @@ e^{-t/2}(\cos(t/2)-\sin(t/2)).
 +\frac{C(s+1/2)+D}{((s+1/2)^2+1/4)}
 \end{gather*}
 where
-$$
+\begin{gather*}
 (As+B)((s+1/2)^2+1/4)+(C(s+1/2)+D)s^2=1.
-$$
-$$
+\\
 \begin{array}{rcrl}
 B&=&2&(\mbox{set }s=0);\\
 -A+2B+2D&=&8& (\mbox{set }s=-1/2);\\
 5A+10B+2C+2D&=&8& (\mbox{set }s=1/2);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=-4$, $B=2$,
 $C=4$, $D=0$. Therefore,
 \begin{eqnarray*}
@@ -11786,10 +11771,10 @@ $y=\dst e^{-t/2}(5\cos(t/2)-\sin(t/2))+2t-4$.
 
 
 \exer{8.3.36}
-$$
+\[
 (4s^2+4s+1)Y(s)=\frac{3+s}{ s^2+1}+4(-1+2s)+8=
 \frac{3+s}{ s^2+1}+4(-1+2s)+8s+4.
-$$
+\]
 Since $4s^2+4s+1=4(s+1/2)^2$,
 \begin{gather*}
 Y(s)=
@@ -11799,17 +11784,16 @@ Y(s)=
 +\frac{Cs+D}{ s^2+1}
 \end{gather*}
 where
-$$
+\begin{gather*}
 (A(s+1/2)+B)(s^2+1)+(Cs+D)(s+1/2)^2=\frac{3+s}{4}.
-$$
-$$
+\\
 \begin{array}{rcrl}
 10B&=&5&(\mbox{set }s=-1/2);\\
 2A+4B+D&=&3& (\mbox{set }s=0);\\
 12A+8B+9C+9D&=&4& (\mbox{set }s=1);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=3/5$, $B=1/2$,
 $C=-3/5$, $D=-1/5$. Therefore,
 \begin{eqnarray*}
@@ -11828,9 +11812,9 @@ t+\sin t)$.
 
 \exer{8.3.38}
 Transforming the initial value problem
-$$
+\[
 ay''+by'+cy=0,\  y(0)=1,\ y'(0)=0
-$$
+\]
 yields
 $(as^2+bs+c)Y(s)=as+b$,
 so $Y(s)=\dst\frac{as+b}{ as^2+bs+c}$. Therefore,
@@ -11838,9 +11822,9 @@ $\dst y_1={\cal L}^{-1}\left(\frac{as+b}{ as^2+bs+c}\right)$
 satisfies the initial conditions $y_1(0)=1$, $y_1'(0)=0$.
 
 Transforming the initial value problem
-$$
+\[
 ay''+by'+cy=0,\  y(0)=0,\ y'(0)=1
-$$
+\]
 yields
 $(as^2+bs+c)Y(s)=a$,
 so $Y(s)=\dst\frac{a}{ as^2+bs+c}$. Therefore,
@@ -11866,10 +11850,10 @@ $\int_1^\infty e^{-st}t\, dt$
 \tag{B}
 \]
 Letting $t=x+1$  in the last integral yields
-$$
+\[
 \int_1^\infty e^{-st}(t-1)\,dt=-\int_0^\infty e^{-s(x+1)}x\,dx
  =e^{-s}{\cal L}(t).
-$$
+\]
 This and (B) imply that
 $\dst{\cal L}(f)=(1-e^{-s}){\cal L}(t)
 = \frac{1-e^{-s}}{ s^2}$.
@@ -11896,10 +11880,10 @@ $\int_1^\infty e^{-st}\, dt$
 \tag{B}
 \]
 Letting $t=x+1$  in the last integral yields
-$$
+\[
 \int_1^\infty e^{-st}(t+1)\,dt=\int_0^\infty e^{-s(x+1)}(x+2)\,dx
  =e^{-s}{\cal L}(t+2).
-$$
+\]
 This and (B) imply that
 $\dst{\cal L}(f)={\cal L}(1)+e^{-s}{\cal L}(t+2)
 = \frac{1}{ s}+e^{-s}\left(\frac{1}{ s^2}+\frac{2}{ s}\right)$.
@@ -11918,23 +11902,23 @@ L}(t+2)=
 \tag{A}
 \]
 Letting $t=x+1$  in the last integral yields
-$$
+\[
 \int_1^\infty e^{-st}t^2\,dt=\int_0^\infty e^{-s(x+1)}(t^2+2t+1)\,dx
  =e^{-s}{\cal L}(t^2+2t+1).
-$$
+\]
 This and (A) imply that
-$$
+\[
 {\cal L}(f)={\cal L}(t^2)+e^{-s}{\cal L} (t^2+2t+1)
 =\frac{2}{ s^3}-e^{-s}\left(\frac{2}{ s^3}+\frac{2}{ s^2}+\frac{1}{
 s}\right).
-$$
+\]
 
 Alternatively,
-$$
+\[
 f(t)=t^2\left(1-u(t-1)\right)\leftrightarrow
 {\cal L}(t^2)+e^{-s}{\cal L} (t^2+2t+1)=
 \frac{2}{ s^3}-e^{-s}\left(\frac{2}{ s^3}+\frac{2}{ s^2}+\frac{1}{ s}\right)
-$$
+\]
 
 
 \exer{8.4.8}
@@ -12006,30 +11990,29 @@ u(t-1)\left(1-e^{-(t-1)}\right)=
 
 
 \exer{8.4.22}
-$$
+\begin{gather*}
 \frac{3}{ s}-\frac{1}{ s^2}\leftrightarrow 3-t\Rightarrow
 e^{-s}\left(\frac{3}{ s}-\frac{1}{ s^2}\right)\leftrightarrow
 u(t-1)\left(3-(t-1)\right)=u(t-1)(4-t);
-$$
-$$
+\\
 \frac{1}{ s}+\frac{1}{ s^2}\leftrightarrow 1+t\Rightarrow
 e^{-3s}\left(\frac{1}{ s}+\frac{1}{ s^2}\right)\leftrightarrow
 u(t-3)\left(1+(t-3)\right)=u(t-3)(t-2);
-$$
+\end{gather*}
 therefore
-$$
+\[
 h(t)=2+t+u(t-1)(4-t)+u(t-3)(t-2)=\dst{\left\{\begin{array}{cl} 2+t,&
 0\le t<1,\\[2\jot] 6,&1\le t<3,\\[2\jot] t+4,&t\ge
 3.\end{array}\right.}
-$$
+\]
 
 
 
 \exer{8.4.24}
-$$
+\[
 \frac{1-2s}{ s^2+4s+5}=\frac{5-2(s+2)}{(s+2)^2+1}\leftrightarrow
 e^{-2t}(5\sin t-2\cos t);
-$$
+\]
 therefore,
 \begin{eqnarray*}
 h(t)&=&u(t-\pi)e^{-2(t-\pi)} \left(5\sin(t-\pi)-2\cos(t-\pi)\right)\\
@@ -12055,16 +12038,15 @@ t<2,\\[2\jot]4e^{-(t-2)}-4e^{2(t-2)}+2e^{(t-2)},&t\ge
 
 
 \exer{8.4.28}
-$$
+\begin{gather*}
 \frac{3}{ s}-\frac{1}{ s^3}\leftrightarrow 3-\frac{t^2}{2}\Rightarrow
 e^{-2s}\left(\frac{3}{ s}-\frac{1}{ s^3}\right)\leftrightarrow
 u(t-2)\dst{\left(3-\frac{(t-2)^2}{2}\right)}=u(t-2)
 \dst{\left(-\frac{t^2}{2}+2t+1\right)};
-$$
-$$
+\\
 \frac{1}{ s^2}\leftrightarrow t\Rightarrow
 \frac{e^{-4s}}{ s^2}\leftrightarrow u(t-4)(t-4);
-$$
+\end{gather*}
 therefore
 \begin{eqnarray*}
 h(t)&=&\dst{1-t^2+u(t-2)\left(-\frac{t^2}{2}+2t+1\right) +u(t-4)(t-4)}
@@ -12126,13 +12108,12 @@ Functions}
 \exer{8.5.2}
  $y''+y=3+u(t-4)(2t-8),\ y(0)=1,\ y'(0)=0$.
 Since
-$$
+\begin{gather*}
 {\cal L}\left(u(t-4)(2t-8)\right)=e^{-4s}{\cal L}\left(2(t+4)-8\right)
 =e^{-4s}{\cal L}(2t)=\frac{2e^{-4s}}{ s^2},
-$$
-$$
+\\
 (s^2+1)Y(s)=\frac{3}{ s}+\frac{2e^{-4s}}{ s^2}+s.
-$$
+\end{gather*}
 \begin{eqnarray*}
 Y(s)&=&\frac{3}{ s(s^2+1)}+\frac{2e^{-4s}}{ s^2(s^2+1)}+\frac{s}{ s^2+1}\\
 &=&3\left(\frac{1}{ s}-\frac{s}{ s^2+1}\right)+2e^{-4s}
@@ -12141,66 +12122,60 @@ Y(s)&=&\frac{3}{ s(s^2+1)}+\frac{2e^{-4s}}{ s^2(s^2+1)}+\frac{s}{ s^2+1}\\
 s^2+1}\right).
 \end{eqnarray*}
 Since
-$$
+\[
 \frac{1}{ s^2}-\frac{1}{ s^2+1}\leftrightarrow t-\sin t\Rightarrow
 e^{-4s}\left(\frac{1}{ s^2}-\frac{1}{ s^2+1}\right)\leftrightarrow
 u(t-4)\left(t-4-\sin(t-4)\right),
-$$
+\]
 $y=3-2\cos t+2u(t-4)\left(t-4-\sin(t-4)\right)$.
 
 
 \exer{8.5.4}
  $y''-y=e^{2t}+u(t-2)(1-e^{2t}),\ y(0)=3,\ y'(0)=-1$.
 Since
-$$
+\begin{gather*}
 {\cal L}(u(t-2)(1-e^{2t}))=e^{-2s}{\cal L}(1-e^{2(t+2)})=e^{-2s}
 \left(\frac{1}{ s}-\frac{e^4}{ s-2}\right),
-$$
-$$
+\\
 (s^2-1)Y(s)=\frac{1}{ s-2}+e^{-2s}\left(\frac{1}{ s}-\frac{e^4}{ s-2}\right)
 +(-1+3s).
-$$
+\end{gather*}
 Therefore,
-$$
+\begin{gather*}
 \begin{array}{rcl}
 Y(s)&=&\dst\frac{1}{(s-1)(s+1)(s-2)}+\frac{3s-1}{(s-1)(s+1)}\\
 &&\dst+e^{-2s}\left(\frac{1}{
 s(s-1)(s+1)}-\frac{e^4}{(s-1)(s+1)(s-2)}\right).
 \end{array}
-$$
-$$
+\\
 \begin{array}{rcl}
 \dst\frac{1}{(s-1)(s+1)(s-2)}&=&\dst-\frac{1}{2}\frac{1}{
 s-1}+\frac{1}{6}\frac{1}{ s+1}
 +\frac{1}{3}\frac{1}{ s-2}\\[2\jot]
 &\leftrightarrow&\dst -\frac{1}{2}e^t+\frac{1}{6}e^{-t}+\frac{1}{3}e^{2t};
 \end{array}
-$$
-$$
+\\
 \frac{e^{-2s}e^4}{(s-1)(s+1)(s-2)}
 \leftrightarrow u(t-2)\left(
 -\frac{1}{2}e^{t+2}+\frac{1}{6}e^{-(t-6)}+\frac{1}{3}e^{2t}\right);
-$$
-$$
+\\
 \frac{1}{ s(s-1)(s+1)}=-\frac{1}{ s}+\frac{1}{2}\frac{1}{ s-1}
 +\frac{1}{2}\frac{1}{ s+1}
 \leftrightarrow -1+\frac{1}{2}e^t+\frac{1}{2}e^{-t};
-$$
-$$
+\\
 \frac{e^{-2s}}{ s(s-1)(s+1)}
 \leftrightarrow
 u(t-2)\left(-1+\frac{1}{2}e^{t-2}+\frac{1}{2}e^{-(t-2)}\right);
-$$
-$$
+\\
 \frac{3s-1}{(s-1)(s+1)}=\frac{1}{ s-1}+\frac{2}{ s+1}\leftrightarrow
 e^t+2e^{-t}.
-$$
+\end{gather*}
 Therefore,
-$$
+\[
 y=\frac{1}{2}e^t+\frac{13}{6}e^{-t}+ \frac{1}{ 3}e^{2t}
 +u(t-2)\left(-1+\frac{1}{ 2}e^{t-2}+\frac{1}{2}e^{-(t-2)}+
 \frac{1}{2}e^{t+2}-\frac{1}{6} e^{-(t-6)}-\frac{1}{3}e^{2t}\right).
-$$
+\]
 
 
 
@@ -12208,28 +12183,26 @@ $$
 Note that $|\sin t|=\sin t$ if $0\le t<\pi$, while
  $|\sin t|=-\sin t$ if $\pi\le t<2\pi$. Rewrite the initial value
 problem as
-$$
+\[
 y''+4y=\sin t-2u(t-\pi)\sin t+u(t-2\pi)\sin t,\ y(0)=-3,\ y'(0)=1.
-$$
+\]
 Since
-$$
+\[
 {\cal L}\left(u(t-\pi)\sin t\right)=e^{-\pi s}{\cal
 L}(\sin(t+\pi))=-e^{-\pi s}{\cal L}(\sin t)
-$$
+\]
  and
-$$
+\begin{gather*}
 {\cal L}\left(u(t-2\pi)\sin t\right)=e^{-2\pi s}{\cal
 L}(\sin(t+2\pi))=e^{-2\pi s}{\cal L}(\sin t),
-$$
-$$
+\\
 (s^2+4)Y(s)=\frac{1+2e^{-\pi s}+e^{-2\pi s}}{(s^2+1)}+1-3s,\mbox{ so }
 Y(s)=\frac{1+2e^{-\pi s}+e^{-2\pi
 s}}{(s^2+1)(s^2+4)}+\frac{1-3s}{ s^2+4}.
-$$
-$$
+\\
 \frac{1}{(s^2+1)(s^2+4)}=\left(\frac{1}{ s^2+1}-\frac{1}{ s^2+4}\right)
 \leftrightarrow \frac{1}{3}\sin t-\frac{1}{6}\sin2t;
-$$
+\end{gather*}
 therefore
 \begin{eqnarray*}
 \frac{e^{-\pi s}}{(s^2+1)(s^2+4)}
@@ -12245,12 +12218,12 @@ u(t-2\pi)\left(\frac{1}{3}\sin(t-2\pi)-\frac{1}{6}\sin2(t-2\pi)\right)\\
 &=&u(t-2\pi)\left(\frac{1}{3}\sin t-\frac{1}{6}\sin2t\right);
 \end{eqnarray*}
 therefore
-$$
+\[
 y=\frac{1}{3}\sin2t-3\cos2t+\frac{1}{3}\sin t
 - 2 u(t-\pi)\left(\frac{1}{3}\sin t+\frac{1}{6}\sin2t\right)
 +u(t-2\pi)\left(\frac{1}{3}\sin
 t-\frac{1}{6}\sin2t\right).
-$$
+\]
 
 
 \exer{8.5.8}
@@ -12262,22 +12235,20 @@ e^{-3\pi s/2}{\cal
 L}\left(\sin(t+3\pi/2)-\cos(t+3\pi/2)\right)\\
 &&-e^{-3\pi s/2}{\cal L}(\cos t+\sin t),
 \end{eqnarray*}
-$$
+\begin{gather*}
 (s^2+9)Y(s)=\frac{1}{ s^2+1}-e^{-3\pi s/2}\frac{s+1}{
 s^2+1},\mbox{\quad so \quad}
 Y(s)=\frac{1}{(s^2+1)(s^2+9)}-e^{-3\pi s/2}\frac{s+1}{
 (s^2+1)(s^2+9)}.
-$$
-$$
+\\
 \frac{1}{(s^2+1)(s^2+9)}=\frac{1}{8}\left(\frac{1}{ s^2+1}-\frac{1}{
 s^2+9}\right)\leftrightarrow\frac{1}{8}\left(\sin
 t-\frac{1}{3}\sin3t\right)\mbox{\quad and }
-$$
-$$
+\\
 \frac{s}{(s^2+1)(s^2+9)}=\frac{1}{8}\left(\frac{s}{ s^2+1}-\frac{s}{
 s^2+9}\right)\leftrightarrow\frac{1}{8}\left(\cos
 t-\cos3t\right).
-$$
+\end{gather*}
 \begin{eqnarray*}
 \frac{s+1}{(s^2+1)(s^2+9)}&=&\frac{s+1}{(s^2+1)(s^2+9)}=
 \frac{s+1}{8}\left(\frac{s+1}{ s^2+1}-\frac{s+1}{
@@ -12300,14 +12271,13 @@ $y=\dst{\frac{1}{ 8}\left(\cos t-\cos3t\right)
 \exer{8.5.10}
  $y''+y=t-2u(t-\pi)t,\ y(0)=0,\ y'(0)=0$.
 Since
-$$
+\begin{gather*}
 {\cal L}\left(u(t-\pi)t\right)=e^{-\pi s}{\cal L}\left(t+\pi\right)
 =e^{-\pi s}\left(\frac{1}{ s^2}+\frac{\pi}{ s}\right),
-$$
-$$
+\\
 (s^2+1)Y(s)=\frac{1}{ s^2}-2e^{-\pi s}\left(\frac{1}{ s^2}+\frac{\pi}{
 s}\right);
-$$
+\end{gather*}
 \begin{eqnarray*}
 Y(s)&=& \frac{1}{ s^2(s^2+1)}-2e^{-\pi s}\left(\frac{1}{
 s^2(s^2+1)}+\frac{\pi}{ s(s^2+1)}\right)\\ &=&\left(\frac{1}{ s^2}-\frac{1}{
@@ -12332,36 +12302,29 @@ u(t-\pi)\left(1-\cos(t-\pi)\right)=u(t-\pi)(1+\cos t),
 
 \exer{8.5.12}
 $y''+y=t-3u(t-2\pi)t,\ y(0)=1,\ y'(0)=2;$
-$$
+\begin{gather*}
 {\cal L}(u(t-2\pi)t)=e^{-2\pi s}{\cal L}(t+2\pi)=e^{-2\pi s}
 \left(\frac{1}{ s^2}+\frac{2\pi}{ s}\right);
-$$
-$$
+\\
 (s^2+1)Y(s)=\frac{1-3e^{-2\pi s}}{ s^2}-\frac{6\pi e^{-2\pi s}}{ s}+2+s;
-$$
-$$
+\\
 Y(s)=\frac{1-3e^{-2\pi s}}{ s^2(s^2+1)}-\frac{6\pi e^{-2\pi s}}{ s(s^2+1)}
 +\frac{2+s}{ s^2+1};
-$$
-$$
+\\
 \frac{1}{ s^2(s^2+1)}=\frac{1}{ s^2}-\frac{1}{ s^2+1}\leftrightarrow
 t-\sin t;
-$$
-$$
+\\
 \frac{e^{-2\pi s}}{ s^2(s^2+1)}\leftrightarrow
 u(t-2\pi)((t-2\pi-\sin(t-2\pi))=u(t-2\pi)(t-2\pi-\sin t);
-$$
-$$
+\\
 \frac{1}{ s(s^2+1)}=\frac{1}{ s}-\frac{s}{ s^2+1}\leftrightarrow
 1-\cos t;
-$$
-$$
+\\
 \frac{e^{-2\pi s}}{ s(s^2+1)}\leftrightarrow u(t-2\pi)
 (1-\cos(t-2\pi))=u(t-2\pi)(1-\cos t);
-$$
-$$
+\\
 \frac{2+s}{ s^2+1}\leftrightarrow 2\sin t+\cos t;
-$$
+\end{gather*}
 $y=\dst t+\sin t+\cos t-u(t-2\pi)(3t-3\sin t-6\pi\cos t)$.
 
 
@@ -12387,36 +12350,32 @@ $y=\dst-\frac{1}{3}-\frac{1}{6}e^{3t}
 
 \exer{8.5.16}
  $y''+2y'+y=4e^t-4u(t-1)e^t,\ y(0)=0,\ y'(0)=0$. Since
-$$
+\begin{gather*}
 {\cal L}\left(4u(t-1)e^t\right)=e^{-s}{\cal
 L}\left(4e^{(t+1)}\right)=\frac{4e^{-s+1}}{ s-1},
-$$
-$$
+\\
 (s^2+2s+1)Y(s)=\frac{4}{ s-1}-\frac{4e^{-s+1}}{ s-1},\mbox{\quad so}
-$$
-$$
+\\
 Y(s)=\frac{4}{(s-1)(s+1)^2}-\frac{4e^{-s+1}}{(s-1)(s+1)^2}.
-$$
-$$
+\\
 \frac{1}{(s-1)(s+1)^2}=\frac{A}{ s-1}+\frac{B}{ s+1}+
 \frac{C}{(s+1)^2},
-$$
+\end{gather*}
 where
-$$
+\begin{gather*}
 A(s+1)^2+B(s-1)(s+1)+C(s-1)=4.
-$$
-$$
+\\
 \begin{array}{rcll}
 A&=&1&(\mbox{set }s=1);\\
 C&=&-2&(\mbox{set }s=-1);\\
 A+B&=&0&(\mbox{equate coefficients of }s^2).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=1$, $B=-1$, $C=-2$. Therefore,
-$$
+\[
 \frac{1}{(s-1)(s+1)^2}=\frac{1}{ s-1}-\frac{1}{ s+1}-
 \frac{2}{(s+1)^2}\mbox{\quad and}
-$$
+\]
 \begin{eqnarray*}
 y&=&e^t-e^{-t}-2te^{-t}-eu(t-1)\left(e^{t-1}-e^{-(t-1)}-
 2(t-1)e^{-(t-1)}\right)\\
@@ -12428,40 +12387,35 @@ e^t-e^{-t}-2te^{-t}-u(t-1)\left(e^t-e^{-(t-2)}-2(t-1)e^{-(t-2)}\right).
 \exer{8.5.18}
  $y''-4y'+4y=e^{2t}-2u(t-2)e^{2t},\ y(0)=0,\ y'(0)=-1$.
 Since
-$$
+\begin{gather*}
 {\cal L}\left(u(t-2)e^{2t}\right)=e^{-2s}{\cal
 L}\left(e^{2t+4}\right)=\frac{e^{-2s+4}}{ s-2},
-$$
-$$
+\\
 (s^2-4s+4)Y(s)=\frac{1}{ s-2}-\frac{2e^{-2s+4}}{ s-2}-1,\mbox{\quad so}
-$$
-$$
+\\
 Y(s)=\frac{1}{(s-2)^3}-\frac{2e^{-2s+4}}{(s-2)^3}-\frac{1}{(s-2)^2}.
-$$
-$$
+\\
 \frac{1}{(s-2)^3}\leftrightarrow \frac{t^2e^{2t}}{2}\Rightarrow
 \frac{e^{-2s+4}}{(s-2)^3}\leftrightarrow\frac{e^4}{2}u(t-2)e^{2(t-2)}(t-2)^2
 =u(t-2)\frac{(t-2)^2e^{2t}}{2};
-$$
+\end{gather*}
 therefore
 $y=\dst\frac{t^2e^{2t}}{2}-te^{2t}-u(t-2)(t-2)^2e^{2t}$.
 
 
 \exer{8.5.20}
 $y''+2y'+2y=1+u(t-2\pi)(t-1)-u(t-3\pi)(t+1),\ y(0)=2,\ y'(0)=-1$;
-$$
+\begin{gather*}
 {\cal L}(u(t-2\pi)(t-1))=e^{-2\pi s}{\cal L}((t+2\pi-1))
 =e^{-2\pi s}\left(\frac{1}{ s^2}+\frac{2\pi-1}{ s}\right);
-$$
-$$
+\\
 {\cal L}(u(t-3\pi)(t+1))=e^{-3\pi s}{\cal L}((t+3\pi+1))
 =e^{-3\pi s}\left(\frac{1}{ s^2}+\frac{3\pi+1}{ s}\right);
-$$
-$$
+\\
 (s^2+2s+2)Y(s)=\frac{1}{ s}+
 e^{-2\pi s}\left(\frac{1}{ s^2}+\frac{2\pi-1}{ s}\right)
 -e^{-3\pi s}\left(\frac{1}{ s^2}+\frac{3\pi+1}{ s}\right)+(-1+2s)+4.
-$$
+\end{gather*}
 Let $G(s)=\dst\frac{1}{ s(s^2+2s+2)}$,
  $H(s)=\dst\frac{1}{ s(s^2+2s+2)}$; then
 \[
@@ -12479,9 +12433,9 @@ y(t)=y_1(t)+u(t-2\pi)y_2(t-2\pi)-u(t-3\pi)y_3(t-3\pi).\tag{E}
 \]
 
 Find ${\cal L}^{-1}(G(s))$:
-$$
+\[
 G(s)=\frac{A}{ s}+\frac{B(s+1)+C}{(s+1)^2+1}
-$$
+\]
 where
 $A((s+1)^2+1)+(B(s+1)+C)s=1$. Setting $s=0$ yields $A=1/2$;
 setting $s=-1$ yields $A-C=1$, so $C=-1/2$; since $A+B=0$
@@ -12494,19 +12448,19 @@ G(s)=\frac{1}{2}\left(\frac{1}{ s}-\frac{(s+1)+1}{(s+1)^2+1)}\right)
 
 
 Find ${\cal L}^{-1}(H(s))$:
-$$
+\[
 H(s)=\frac{A}{ s}+\frac{B}{ s+2}+\frac{C(s+1)+D}{(s+1)^2+1}
-$$
+\]
 where
 $(As+B)((s+1)^2+1)+(C(s+1)+D)s^2=1$.
-$$
+\[
 \begin{array}{rcrl}
 2B&=&1&(\mbox{set }s=0);\\
 -A+B+D&=&1& (\mbox{set }s=-1);\\
 5A+5B+2C+D&=&1& (\mbox{set }s=1);\\
 A+B=0&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\]
 Solving this system yields  $A=-1/2$, $B=1/2$, $C=1/2$, $D=0$;
 therefore
 \[
@@ -12515,20 +12469,20 @@ s}-\frac{1}{ s^2}-\frac{s+1}{(s+1)^2+1)}\right)
 \leftrightarrow -\frac{1}{2}(1-t-e^{-t}\cos t). \tag{G}
 \]
 Since
-$$
+\[
 \frac{2s+3}{ s^2+2s+2}=\frac{2(s+1)+1}{(s+1)^2+1}
 \leftrightarrow e^{-t}(2\cos t+\sin t),
-$$
+\]
 (B) and (F)) imply that
 \[
 y_1(t)=\frac{1}{2}e^{-t}(3\cos t+\sin t)+\frac{1}{2}.
 \tag{H}
 \]
 From (C), (F), and (G),
-$$
+\[
 y_2(t)=\pi-1+\frac{t}{2}+(\pi-1) e^{-t}\cos t-\frac{2\pi-1}{2}e^{-t}\sin
 t,
-$$
+\]
 so
 \[
 y_2(t-2\pi)=-\left(
@@ -12536,10 +12490,10 @@ e^{-(t-2\pi)}\left((\pi-1)\cos t+\frac{2\pi-1}{2}\sin t\right)+
 1-\frac{t}{2}\right). \tag{I}
 \]
 From (D), (F)), and (G),
-$$
+\[
 y_3(t)=\frac{1}{2}\left(-e^{-t}(3\pi\cos t+(3\pi+1)\sin
 t+t+3\pi)\right),
-$$
+\]
 so
 \[
 y_3(t-3\pi)=\frac{1}{2}\left(e^{-(t-3\pi)}(3\pi\cos t+(3\pi+1)\sin
@@ -12593,10 +12547,10 @@ $\dst e^{-2n\pi s}Y_n(s)\leftrightarrow
 u(t-2n\pi)y_n(t)=u(t-2n\pi)(t-\sin t-2n\pi\cos t)$; therefore
 $y(t)=\dst\sum_{n=0}^\infty u(t-2n\pi)(t-\sin t-2n\pi\cos t)$.
 If $2m\pi\le t<2(m+1)\pi$, then
-$$
+\[
 y(t)=\sum_{n=0}^m (t-\sin t-2n\pi\cos t)=
 (m+1)(t-\sin t-m\pi\cos t).
-$$
+\]
 
 \part{c}
 $f(t)=\dst1+2\sum_{n=1}^\infty(-1)^n u(t-n\pi)$; $F(s)=\dst\frac{1}{
@@ -12610,11 +12564,11 @@ u(t-n\pi)(1-\cos(t-n\pi))=u(t-n\pi)(1-(-1)^n\cos t)$;
 $y(t)=\dst1-\cos t+
 2\sum_{n=1}^\infty(-1)^n u(t-n\pi)(1-(-1)^n\cos t)$. If
 $m\pi\le t<(m+1)\pi$,
-$$
+\[
 y(t)=1-\cos t+
 2\sum_{n=1}^m (-1)^n(1-(-1)^n\cos t)
 =(-1)^m-(2m+1)\cos t.
-$$
+\]
 
 \part{d}
 $f(t)=\dst\sum_{n=0}^\infty u(t-n)$; $F(s)=\dst\frac{1}{
@@ -12639,22 +12593,21 @@ y(t)&=&\frac{1}{2}
 $f(t)=\dst(\sin t+2\cos t)\sum_{n=0}^\infty u(t-2n\pi)$;
 $F(s)=\dst\frac{1+2s}{ s^2+1}\sum_{n=0}^\infty e^{-2n\pi s}$;
 $Y(s)=\dst\frac{1+2s}{(s^2+1)(s^2+2s+2)}\sum_{n=0}^\infty e^{-2n\pi s}$;
-$$
+\[
 \frac{1+2s}{(s^2+1)(s^2+2s+2)}=\frac{As+B}{
 s^2+1}+\frac{C(s+1)+D}{(s+1)^2+1}
-$$
+\]
 where
-$$
+\begin{gather*}
 (As+B)((s+1)^2+1)+(C(s+1)+D)(s^2+1)=1+2s.
-$$
-$$
+\\
 \begin{array}{rcrl}
 2B+C+D&=&1&(\mbox{set }s=0);\\
 -A+B+2D&=&-1& (\mbox{set }s=-1);\\
 5A+5B+4C+2D&=&3&(\mbox{set }s=1);\\
 A+C&=&0&(\mbox{equate coefficients of }s^3).
 \end{array}
-$$
+\end{gather*}
 Solving this system yields $A=0$, $B=1$,
 $C=0$, $D=-1$. Therefore,
 \begin{eqnarray*}
@@ -12663,36 +12616,34 @@ $C=0$, $D=-1$. Therefore,
 \\&\leftrightarrow&\left(1-e^{-t}\right)\sin t.
 \end{eqnarray*}
 Since $\sin(t-2n\pi)=\sin t$,
-$$
+\[
 e^{-2n\pi s}\frac{1+2s}{(s^2+1)(s^2+2s+2)}\leftrightarrow
 u(t-2n\pi)\left(1-e^{-(t-2n\pi)}\right)\sin t,
-$$
+\]
 so
-$$
+\[
 y(t)=\sin t\sum_{n=0}^\infty u(t-2n\pi)\left(1-e^{-(t-2n\pi)}\right).
-$$
+\]
 If $2m\pi\le t<2(m+1)\pi$,
-$$
+\[
 y(t)=\sin t\sum_{n=0}^m\left(1-e^{-(t-2n\pi)}\right)=
 \left(m+1-\left(\frac{1-e^{2(m+1)\pi}}{
 1-e^{2\pi}}\right)e^{-t}\right)\sin t.
-$$
+\]
 
 \part{f}
 $f(t)=\dst\sum_{n=0}^\infty u(t-n)$; $F(s)=\dst\frac{1}{
 s}\sum_{n=0}^\infty e^{-ns}$; $Y(s)=\dst\frac{1}{ s(s-1)(s-2)}$;
-$$
+\begin{gather*}
 \frac{1}{ s(s-1)(s-2)}=\frac{1}{2s}-\frac{1}{ s-1}+\frac{1}{2}\frac{1}{ s-2}
 \leftrightarrow \frac{1}{2}\left(1-2e^t+e^{2t}\right);
-$$
-$$
+\\
 \frac{e^{-ns}}{ s(s-1)(s-2)}
 \leftrightarrow \frac{1}{2}u(t-n)\left(1-2e^{t-n}+e^{2(t-n)}\right);
-$$
-$$
+\\
 y(t)=\frac{1}{2}\sum_{n=0}^\infty
 u(t-n)\left(1-2e^{t-n}+e^{2(t-n)}\right).
-$$
+\end{gather*}
 If $m\le t< m+1$,
 \begin{eqnarray*}
 y(t)&=&\sum_{n=0}^m\left(1-2e^{t-n}+e^{2(t-n)}\right)
@@ -12723,17 +12674,17 @@ $t_0$ in $(\alpha,\beta)$.
 \exer{8.5.26}
 If $0\le t<t_0$, then $y(t)=z_0(t)$. Therefore,
 $y(0)=z_0(0)=k_0$ and $y'(0)=z'(0)=k_1$, and
-$$
+\[
 ay''+by'+cy=az_0''+bz_0'+cz_0=f_0(t)=f(t),\quad 0<t<t_0.
-$$
+\]
 
 Now suppose that $1\le m\le n$.
 For convenience, define $t_{n+1}=\infty$.
 If $t_m\le t<t_{m+1}$, then $y(t)=\sum_{k=0}^m z_m(t)$, so
-$$
+\[
 ay''+by+cy=\sum_{k=0}^m(az_k''+bz_k'+cz_k)
 =f_0+\sum_{k=1}^m(f_k-f_{k-1})=f_m=f,\quad t_m<t<t_{m+1}.
-$$
+\]
 Thus, $y$ satisfies $ay''+by'+cy=f$ on any open interval that does not
 contain any of the points $t_1$, $t_2$,\dots, $t_n$.
 
@@ -12892,33 +12843,31 @@ $p(s)Y(s)=F(s)+a(k_1+k_0s)+bk_0$, so
 (A) $Y(s)=\dst\frac{F(s)}{ p(s)}+\frac{k_0(as+b)+k_1a}{ p(s)}$.
 Since $p(s)=a(s-r_1)(s-r_2)$ and therefore $b=-a(r_1+r_2)$,
 (A) can be rewritten as
-$$
+\begin{gather*}
 Y(s)=\frac{F(s)}{ a(s-r_1)(s-r_2)}+\frac{k_0(s-r_1-r_2)}{(s-r_1)(s-r_2)}
 +\frac{k_1}{(s-r_1)(s-r_2)}.
-$$
-$$
+\\
 \frac{1}{(s-r_1)(s-r_2)}=\frac{1}{ r_2-r_1}\left(\frac{1}{ s-r_2}
 -\frac{1}{ s-r_1}\right)\leftrightarrow\frac{e^{r_2t}-e^{r_1t}}{
 r_2-r_1},
-$$
+\end{gather*}
 so the convolution theorem implies that
-$$
+\begin{gather*}
 \frac{F(s)}{ a(s-r_1)(s-r_2)}\leftrightarrow
 \frac{1}{
 a}\int_0^t\frac{e^{r_2\tau}-e^{r_1\tau}}{ r_2-r_1}f(t-\tau)\,d\tau.
-$$
-$$
+\\
 \frac{s-r_1-r_2}{(s-r_1)(s-r_2)}=\frac{r_2}{ r_2-r_1}\frac{1}{ s-r_1}
 -\frac{r_1}{ r_2-r_1}\frac{1}{ s-r_2}\leftrightarrow
 \frac{r_2e^{r_1t}-r_1e^{r_2}t}{ r_2-r_1}.
-$$
+\end{gather*}
 Therefore,
-$$
+\[
 y(t)=\ k_0\frac{r_2e^{r_1t}-r_1e^{r_2t}}{ r_2-r_1}+k_1\frac{e^{r_2t}-e^{r_1t}
 }{ r_2-r_1}
 +\frac{1}{ a}
 a\int_0^t\frac{e^{r_2\tau}-e^{r_1\tau}}{ r_2-r_1}f(t-\tau)\,d\tau.
-$$
+\]
 
 
 \exer{8.6.10}
@@ -12926,33 +12875,32 @@ $p(s)Y(s)=F(s)+a(k_1+k_0s)+bk_0$, so
 (A) $Y(s)=\dst\frac{F(s)}{ p(s)}+\frac{k_0(as+b)+k_1a}{ p(s)}$.
 Since $p(s)=a(s-\lambda)^2+\omega^2$ and therefore $b=-2a\lambda$,
 (A) can be rewritten as
-$$
+\[
 Y(s)=\frac{F(s)}{
 a[(s-\lambda)^2+\omega^2}]+\frac{k_0(s-2\lambda)}{(s-\lambda)^2+\omega^2}
 +\frac{k_1}{(s-\lambda)^2+\omega^2}.
-$$
+\]
 $\dst\frac{1}{(s-\lambda)^2+\omega^2}\leftrightarrow
 \frac{1}{\omega}e^{\lambda t}\sin\omega t$, so the convolution theorem
 implies that
-$$
+\begin{gather*}
 \frac{F(s)}{ a[(s-\lambda)^2+\omega^2]}\leftrightarrow
 \frac{1}{ a\omega}\int_0^te^{\lambda t}f(t-\tau)\sin\omega\tau\,
 d\tau.
-$$
-$$
+\\
 \frac{s-2\lambda}{(s-\lambda)^2+\omega^2}=
 \frac{(s-\lambda)-\lambda}{(s-\lambda)^2+\omega^2}\leftrightarrow
 e^{\lambda t}\left(\cos\omega
 t-\frac{\lambda}{\omega}\sin\omega t\right).
-$$
+\end{gather*}
 Therefore,
-$$
+\[
 y(t)=e^{\lambda t}\left[k_0\left(\cos\omega
 t-\frac{\lambda}{\omega}\sin\omega
 t\right)+\frac{k_1}{\omega}\sin\omega t\right]
 +\frac{1}{ a\omega}\int_0^te^{\lambda t}f(t-\tau)\sin\omega\tau\,
 d\tau.
-$$
+\]
 
 
 \exer{8.6.12}
@@ -12968,40 +12916,39 @@ Y(s)=\frac{F_0(s)+e^{-st_1}G(s)}{ p(s)}.
 \part{b}  Since $F_0(s)\leftrightarrow f_0(t)$, $G(s)\leftrightarrow
 g(t)$, and $\dst\frac{1}{ p(s)}\leftrightarrow w(t)$, the convolution
 theorem implies that
-$$
+\[
 \frac{F_0(s)}{ p(s)}\leftrightarrow
 \int_0^tw(t-\tau)f_0(\tau)\,d\tau\mbox{\quad and \quad}
 \frac {G(s)}{ p(s)}\leftrightarrow
 \int_0^tw(t-\tau)g(\tau)\,d\tau.
-$$
+\]
  Now Theorem~8.4.2 implies that
  $\dst\frac{e^{-st_1}G(s)}{ p(s)}\leftrightarrow
 u(t-t_1)\int_0^tw(t-t_1-\tau)g(\tau)\,d\tau$, and (B) implies
 that
-$$
+\[
 y(t)=\int_0^t
 w(t-\tau)f_0(\tau)\,d\tau+u(t-t_1)\int_0^{t-t_1}
 w(t-t_1-\tau)g(\tau)\,d\tau.
-$$
+\]
 
 \part{c} Let $z_0(t)=\int_0^tw(t-\tau)f_0(\tau)\,d\tau$
 and $z_1(t)=\int_0^tw(t-\tau)g(\tau)\,d\tau$.
 Then $y(t)=z_0(t)+u(t-t_1)z_1(t-t_1)$. Using Leibniz's rule as in the
 solution of Exercise~8.6.11\part{b} shows that
-$$
+\begin{gather*}
 z_0'(t)=\int_0^tw'(t-\tau)f_0(\tau)\,d\tau,\quad
 z_1'(t)=\dst\int_0^tw'(t-\tau)g(\tau)\,d\tau,\quad t>0,
-$$
-$$
+\\
 z_0''(t)=\frac{f_0(t)}{ a}+\int_0^tw''(t-\tau)f_0(\tau)\,d\tau,
 z_1''(t)=\dst\frac{g(t)}{ a}+\int_0^tw''(t-\tau)g(\tau)\,d\tau,\quad
 t>0,
-$$
+\end{gather*}
  if $t>0$, and that
-$$
+\[
 az_0''+bz_0'+cz_0=f_0(t)\mbox{\quad and \quad}
 az_1''+bz_1'+cz_1=f_1(t+t_1)-f_0(t+t_1),\quad  t>0.
-$$
+\]
 This implies the stated conclusion for $y'$ and $y''$  on $(0,t)$ and
 $(t,\infty)$, and that $ay''+by'+cy=f(t)$ on these intervals.
 
@@ -13032,10 +12979,10 @@ Now suppose $\epsilon>0$. Since $w(0)=0$, we can choose $T_1$
 such that $0<T_1<T$ and $|w(x)|<\epsilon/M$ if $0\le x<T_1$.
 If $t_1<t<t_1+T_1$ and $0\le\tau\le t-t_1$, then $0\le t-t_1-\tau<T_1$,
 so (C) implies that
-$$
+\[
 \left|\frac{h(t)-h(t_1)}{ t-t_1}\right|< \epsilon,\quad
 t_1<t<t_1+T.
-$$
+\]
 Therefore,
  $\dst\lim_{t\to t_1+}\frac{h(t)-h(t_1)}{ t-t_1}=0$. This and
 (B) imply that $h'(t_1)=0$.
@@ -13144,31 +13091,31 @@ $\hat y=\dst\frac{1}{3}(\cos t-\cos2t-3\sin t)$;
 $\dst\frac{1}{ p(s)}=\frac{1}{ s^2+1}$;
 $w=\dst{\cal L}^{-1}\left(\frac{1}{ p(s)}\right)=\sin t$.
 Since $\sin(t-\pi/2)=-\cos t$ and $\sin(t-\pi)=-\sin t$,
-$$
+\[
 y=\frac{1}{3}(\cos t-\cos2t-3\sin t)-2u(t-\pi/2)\cos t+3u(t-\pi)\sin
 t.
-$$
+\]
 
 
 \exer{8.7.18}
 $(s^2+2s+1)\hat Y(s)=\dst\frac{1}{ s-1}-1$;
 (A) $\hat Y(s)=\dst\frac{1}{(s-1)(s+1)^2}-\frac{1}{(s+1)^2}$;
-$$
+\[
 \frac{1}{(s-1)(s+1)^2}=\frac{A}{ s-1}+\frac{B}{ s+1}+\frac{C}{(s+1)^2}
-$$
+\]
 where
 $A(s+1)^2+(B(s+1)+C)(s-1)=1$. Setting $s=1$ yields $A=1/4$;
 setting $s=-1$ yields $C=-1/2$; since $A+B=0$ (coefficient of $s^2$),
 $B=-A=-1/4$. Therefore,
-$$
+\[
 \frac{1}{(s-1)(s+1)^2}=\frac{1}{4}\frac{1}{ s-1}-\frac{1}{4}\frac{1}{
 s+1}-\frac{1}{2}\frac{1}{(s+1)^2}.
-$$
+\]
 This and (A) imply that
-$$
+\[
 \hat Y(s)=\frac{1}{4}\frac{1}{ s-1}-\frac{1}{4}\frac{1}{
 s+1}-\frac{3}{2}\frac{1}{(s+1)^2};
-$$
+\]
 $\hat y=\dst\frac{1}{4}\left(e^t-e^{-t}(1+6t)\right)$;
 $\dst\frac{1}{ p(s)}=\frac{1}{(s+1)^2}$;
 $w=\dst{\cal L}^{-1}\left(\frac{1}{ p(s)}\right)=te^{-t}$;
@@ -13207,14 +13154,14 @@ $Y_h(s)=\dst\frac{1}{ h}\dst\frac{e^{-st_0}-e^{-s(t_0+h)}}{ s(s^2+2s+2)}$;
 $\dst\frac{1}{ s(s^2+2s+2)}=-\dst\frac{(s+1)+1}{2\left((s+1)^2+1\right)}
 +\dst\frac{1}{2s}\leftrightarrow
 \dst\frac{1}{2}\left(1-e^{-t}(\cos t+\sin t)\right)$;
-$$
+\[
 y_h(t)=
 \left\{\begin{array}{cl} 0,&0\le t<t_0,\\[2\jot]
 \dst\frac{1}{2h}\left[1-e^{-(t-t_0)}(\cos(t-t_0)+\sin(t-t_0))\right],
 &t_0\le t< t_0+h,\\[2\jot]
 \dst\frac{e^{-(t-t_0)}}{2h}\left[e^h\left(\cos(t-t_0-h)+\sin(t-t_0-h)\right)
 -\cos(t-t_0)-\sin(t-t_0)\right] ,&t\ge t_0+h.\end{array}\right.
-$$
+\]
 
 \exer{8.7.28}
 $w(t)=e^{-t}-e^{-2t}$;
@@ -13224,12 +13171,12 @@ $Y_h(s)=\dst\frac{1}{ h}\dst\frac{e^{-st_0}-e^{-s(t_0+h)}}{ s(s+1)(s+2)}$;
 $\dst\frac{1}{ s(s+1)(s+2)}=\dst\frac{1}{2(s+2)}-\dst\frac{1}{
 s+1}+\dst\frac{1}{2s}\leftrightarrow
 \dst\frac{e^{-2t}}{2}-e^{-t}+\dst\frac{1}{2}=\dst\frac{(e^{-t}-1)^2}{2}$;
-$$
+\[
 y_h(t)=
 \left\{\begin{array}{cl} 0,&0\le t<t_0,\\[2\jot]
 \dst\frac{(e^{-(t-t_0)}-1)^2}{2h}, &t_0\le t< t_0+h,\\[2\jot]
 \dst\frac{(e^{-(t-t_0)}-1)^2-(e^{-(t-t_0-h)}-1)^2}{
-2h}, &t\ge t_0+h.\end{array}\right. $$
+2h}, &t\ge t_0+h.\end{array}\right. \]
 
 \exer{8.7.30}
 \part{a}
@@ -13280,13 +13227,13 @@ $y=\dst\sum_{k=1}^\infty u(t-k\pi)w(t-k\pi)=
 $y=\dst c_1x^2+c_2x^3+\dst\frac{c_3}{ x}$
 $y'=\dst2c_1x+3c_2x^2-\dst\frac{c_3}{ x^2}$, and
 $y''=\dst2c_1+6c_2x+\dst\frac{2c_3}{ x^3}$, where
-$$
+\[
 \begin{array}{rcr}
 c_1-c_2-c_3&=&4\phantom{,}\\
 -2c_1+3c_2-c_3&=&-14\phantom{,}\\
 2c_1-6c_2-2c_3&=&20,
 \end{array}
-$$
+\]
 so $c_1=2$, $c_2=-3$, $c_3=1$, and
 $y=\dst2x^2-3x^3+\frac{1}{ x}$.
 
@@ -13617,7 +13564,7 @@ F'&=&\sum\pm f'_{1i_1}f_{2i_2},\dots,f_{ni_n}
 \exer{9.1.20}
 Since $y_j^{(n)}=-\dst\sum_{k=1}^n(P_k/P_0)y_j^{(n-k)}$,
 Exercise~9.1.19 implies that
-$$
+\[
 W'=-
 \left|\begin{array}{cccc}
 y_1&y_2&\cdots&y_n\\[2\jot]
@@ -13628,9 +13575,9 @@ y_1^{(n-2)}&y_2^{(n-2)}&\cdots&y_n^{(n-2)}\\[2\jot]
 \sum_{k=1}^n(P_k/P_0)y_2^{(n-k)}&\cdots&
 \sum_{k=1}^n(P_k/P_0)y_n^{(n-k)}
 \end{array}\right|,
-$$
+\]
 so Exercise~9.1.17 implies that
-$$
+\[
 W'=-\sum_{k=1}^n\frac{P_k}{ P_0}
 \left|\begin{array}{cccc}
 y_1&y_2&\cdots&y_n\\[2\jot]
@@ -13641,7 +13588,7 @@ y_1^{(n-k)}&
 y_2^{(n-k)}&\cdots&
 y_n^{(n-k)}
 \end{array}\right|.
-$$
+\]
 However, the determinants on the right each have two identical rows
 if $k=2,\dots,n$. Therefore,$W'=-\dst\frac{P_1W}{ P_0}$.  Separating
 variables yields $\dst\frac{W'}{ W}=-\frac{P_1}{ P_0}$; hence
@@ -13656,7 +13603,7 @@ See the proof of Theorem~5.3.3.
 
 \exer{9.1.24}
 \part{a}
-$$
+\[
 P_0(x)=
 -\left|\begin{array}{ccc}
 x&x^2-1&x^2+1\\
@@ -13669,7 +13616,7 @@ x&x^2-1&x^2+1\\
 \left|\begin{array}{cc}
 x^2-1&x^2+1\\2&2
 \end{array}\right|=-4;
-$$
+\]
 $P_1(x)=
 \left|\begin{array}{ccc}x&x^2-1&x^2+1\\1&2x&2x\\0&0&0\end{array}\right|=0$;
 $P_2(x)=-
@@ -13680,7 +13627,7 @@ Therefore, $-4y'''=0$, which is equivalent
 to $y'''=0$.
 
 \part{b}
-$$
+\begin{gather*}
 P_0=-
 \left|\begin{array}{crc}
 e^x&e^{-x}&x\\
@@ -13693,8 +13640,7 @@ e^x&e^{-x}&0
 -\left|\begin{array}{crc}
 0&0&x\\0&-2&1\\1&1&0
 \end{array}\right|=-2x;
-$$
-$$
+\\
 P_1=
 \left|\begin{array}{crc}
 e^x&e^{-x}&x\\e^x&-e^{-x}&1\\e^x&-e^{-x}&0
@@ -13705,8 +13651,7 @@ e^x&e^{-x}&x\\e^x&-e^{-x}&1\\e^x&-e^{-x}&0
 \left|\begin{array}{crc}
 0&2&x\\0&0&1\\1&-1&0
 \end{array}\right|=2;
-$$
-$$
+\\
 P_2=
 -\left|\begin{array}{crc}
 e^x&e^{-x}&x\\e^x&e^{-x}&0\\e^x&-e^{-x}&0
@@ -13717,8 +13662,7 @@ e^x&e^{-x}&x\\e^x&e^{-x}&0\\e^x&-e^{-x}&0
 -\left|\begin{array}{crc}
 0&0&x\\1&1&0\\0&-2&0
 \end{array}\right|=2x;
-$$
-$$
+\\
 P_3=
 \left|\begin{array}{crc}
 e^x&-e^{-x}&1\\e^x&e^{-x}&0\\e^x&-e^{-x}&0
@@ -13729,14 +13673,14 @@ e^x&-e^{-x}&1\\e^x&e^{-x}&0\\e^x&-e^{-x}&0
 \left|\begin{array}{crc}
 0&0&1\\1&2&0\\1&-1&0
 \end{array}\right|=-2.
-$$
+\end{gather*}
 Therefore,
 $-2xy'''+2y''+2xy'-2y=0$,
 which is equivalent to
 $xy'''-y''-xy'+y=0$.
 
 \part{c}
-$$
+\begin{gather*}
 P_0(x)=
 -\left|\begin{array}
 {ccc}e^x&xe^{-x}&1\\
@@ -13749,8 +13693,7 @@ e^x&e^{-x}(x-2)&0
 -\left|\begin{array}{ccc}
 1&1-x\\1&x-2
 \end{array}\right|=3-2x;
-$$
-$$
+\\
 P_1(x)=
 \left|\begin{array}{ccc}
 e^x&xe^{-x}&1\\
@@ -13766,8 +13709,7 @@ e^x&e^{-x}(3-x)&0
 1&1-x\\
 1&3-x
 \end{array}\right|=2;
-$$
-$$
+\\
 P_2(x)=
 -\left|\begin{array}{ccc}
 e^x&xe^{-x}&1\\
@@ -13783,15 +13725,14 @@ e^x&e^{-x}(3-x)&0
 1&x-2\\
 1&3-x
 \end{array}\right|=2x-5;
-$$
-$$
+\\
 P_3(x)=
 \left|\begin{array}{ccc}
 e^x&e^{-x}(1-x)&0\\
 e^x&e^{-x}(x-2)&0\\
 e^x&e^{-x}(3-x)&0
 \end{array}\right|=0.
-$$
+\end{gather*}
 Therefore,
 $(3-2x)y'''+2y''+(2x-5)y'=0$.
 
@@ -13818,7 +13759,7 @@ x&x^2-2\\
 1&2x-2
 \end{array}\right|=-e^x(x^2-2x+2);
 \end{eqnarray*}
-$$
+\begin{gather*}
 P_1(x)=
 \left|\begin{array}{ccc}
 x&x^2&e^x\\
@@ -13829,8 +13770,7 @@ e^x\left|\begin{array}{ccc}
 x&x^2\\
 1&2x
 \end{array}\right|=x^2e^x;
-$$
-$$
+\\
 P_2(x)=
 -\left|\begin{array}{ccc}
 x&x^2&e^x\\
@@ -13841,8 +13781,7 @@ x&x^2&e^x\\
 x&x^2\\
 0&2&
 \end{array}\right|=-2xe^x;
-$$
-$$
+\\
 P_3(x)=
 \left|\begin{array}{ccc}
 1&2x&e^x\\
@@ -13853,7 +13792,7 @@ e^x\left|\begin{array}{ccc}
 1&2x\\
 0&2\\
 \end{array}\right|=2e^x.
-$$
+\end{gather*}
 Therefore,
 $-e^x(x^2-2x+2)y'''+x^2e^xy''-2xe^xy'+2e^xy=0$;
 which is equivalent to
@@ -13882,7 +13821,7 @@ x&-2/x^2\\
 2&2/x^3
 \end{array}\right|=-\frac{6}{ x};
 \end{eqnarray*}
-$$
+\begin{gather*}
 P_1(x)=
 \left|\begin{array}{ccc}
 x&x^2&1/x\\
@@ -13893,8 +13832,7 @@ x&x^2&1/x\\
 x&x^2\\
 1&2x
 \end{array}\right|=-\frac{6}{ x^2};
-$$
-$$
+\\
 P_2(x)=
 -\left|\begin{array}{ccc}
 x&x^2&1/x\\
@@ -13905,8 +13843,7 @@ x&x^2&1/x\\
 x&x^2\\
 0&2\\
 \end{array}\right|=\frac{12}{ x^3};
-$$
-$$
+\\
 P_3(x)=
 \left|\begin{array}{ccc}
 1&2x&-1/x^2\\
@@ -13917,7 +13854,7 @@ P_3(x)=
 1&2x\\
 0&2\\
 \end{array}\right|=-\frac{12}{ x^4}.
-$$
+\end{gather*}
 Therefore,
 $\dst-\frac{6}{ x}y'''-\frac{6}{ x^2}y''+\frac{12}{ x^3}y'-\frac{12}{
 x^4}y=0$,
@@ -13987,7 +13924,7 @@ x+1&1&1\\
 0&0&18
 \end{array}\right|=-18e^{4x}(x+1);
 \end{eqnarray*}
-$$
+\[
 P_3(x)=
 \left|\begin{array}{ccc}
 1&e^x&3e^{3x}\\
@@ -14004,15 +13941,15 @@ e^{4x}\left|\begin{array}{ccc}
 0&1&9\\
 0&0&18
 \end{array}\right|=18e^{4x}.
-$$
+\]
 Therefore,
-$$
+\[
 2e^{4x}(1-3x)y'''+2e^{4x}(12x-1)y''-18e^{4x}(x+1)y'+18e^{4x}y=0,
-$$
+\]
 which is equivalent to
-$$
+\[
 (3x-1)y'''-(12x-1)y''+9(x+1)y'-9y=0.
-$$
+\]
 
 \part{g}
 \begin{eqnarray*}
@@ -14163,10 +14100,10 @@ x\left|\begin{array}{cccc}
 \end{array}\right|=-\frac{1440}{ x^9}.
 \end{eqnarray*}
 Therefore,
-$$
+\[
 -\frac{240}{ x^5}y^{(4)}-\frac{1200}{ x^6}y'''+\frac{720}{
 x^7}y''+\frac{1440}{ x^8}y'-\frac{1440}{ x^9}y=0,
-$$
+\]
 which is equivalent to
 $x^4y^{(4)}+5x^3y'''-3x^2y''-6xy'+6y=0$.
 
@@ -14324,10 +14261,10 @@ P_4(x)&=&
 \end{array}\right|=-\frac{24}{ x^7}.
 \end{eqnarray*}
 Therefore,
-$$
+\[
 \frac{12}{ x^3}y^{(4)}+\frac{36}{ x^4}y'''-\frac{12}{ x^5}y''+\frac{24}{
 x^6}y'-\frac{24}{ x^7}y=0,
-$$
+\]
 which is equivalent to
  $x^4y^{(4)}+3x^2y'''-x^2y''+2xy'-2y=0$.
 
@@ -14517,10 +14454,10 @@ e^{2x}\left|\begin{array}{crcc}
 \end{array}\right|=-24e^{2x}.
 \end{eqnarray*}
 Therefore,
-$$
+\[
 6e^{2x}(2x-1)y^{(4)}-24xe^{2x}y'''
 +6e^{2x}(5-2x)y''+24xe^{2x}y'-24e^{2x}y=0,
-$$
+\]
 which is equivalent to
  $(2x-1)y^{(4)}-4xy'''+(5-2x)y''+4xy'-4y=0$.
 
@@ -14624,7 +14561,7 @@ e^{2x}&e^{-2x}&1&x^2\\
 16&16
 \end{array}\right|=-512;
 \end{eqnarray*}
-$$
+\[
 P_4(x)=
 \left|\begin{array}{crcc}
 2e^{2x}&-2e^{-2x}&0&2x\\
@@ -14632,7 +14569,7 @@ P_4(x)=
 8e^{2x}&-8e^{-2x}&0&0\\
 16e^{2x}&16e^{-2x}&0&0
 \end{array}\right|=0.
-$$
+\]
 Therefore,
 $-128xy^{(4)}+128y'''+512xy''-512y=0$,
 which is equivalent to
@@ -14682,7 +14619,7 @@ $y=e^x(c_1+c_2x+c_3\cos x+c_4\sin x)$.
 
 \exer{9.2.16}
 $p(r)=r^3+3r^2-r-3=(r-1)(r+1)(r+3)$;
-$$
+\[
 \begin{array}{lcl}
 y&=&c_1e^x+c_2e^{-x}+c_3e^{-3x}\\
 y'&=&c_1e^x-c_2e^{-x}-3c_3e^{-3x}\\
@@ -14693,14 +14630,14 @@ c_1+c_2+c_3&=&0\\
 c_1-c_2-3c_3&=&14\\
 c_1+c_2+9c_3&=&-40
 \end{array};
-$$
+\]
 $c_1=2$, $c_2=3$, $c_3=-5$;
  $y=2e^x+3e^{-x}-5e^{-3x}$.
 
 
 \exer{9.2.18}
 $p(r)=r^3-2r-4=(r-2)(r^2+2r+2)$;
-$$
+\[
 \begin{array}{lcl}
 y&=&e^{-x}(c_1\cos x+c_2\sin x)+c_3e^{2x}\\
 y'&=&-e^{-x}((c_1-c_2)\cos x+(c_1+c_2)\sin x)+2c_3e^{2x}\\
@@ -14711,14 +14648,14 @@ c_1+c_3&=&6\\
 -c_1+c_2+2c_3&=&3\\
 -2c_2+4c_3&=&22
 \end{array};
-$$
+\]
 $c_1=2$, $c_2=-3$, $c_3=4$;
  $y=2e^{-x}\cos x-3e^{-x}\sin x+4e^{2x}$.
 
 
 \exer{9.2.20}
 $p(r)=r^3-6r^2+12r-8=(r-2)^3$;
-$$
+\[
 \begin{array}{lcl}
 y&=&e^{2x}(c_1+c_2x+c_3x^2)\\
 y'&=&e^{2x}(2c_1+c_2+(2c_2+2c_3)x+2c_3x^2)\\
@@ -14729,14 +14666,14 @@ c_1&=&1\\
 2c_1+c_2&=&-1\\
 4c_1+4c_2+2c_3&=&-4
 \end{array}
-$$
+\]
 $c_1=1$, $c_2=-3$, $c_3=2$;
  $y=e^{2x}(1-3x+2x^2)$.
 
 
 \exer{9.2.22}
 $p(r)=8r^3-4r^2-2r+1=(2r+1)(2r-1)^2$;
-$$
+\[
 \begin{array}{lcl}
 y&=&e^{x/2}(c_1+c_2x)+c_3e^{-x/2}\\
 y'&=&\frac{1}{2}e^{x/2}(c_1+2c_2+c_2x)-\frac{1}{2}c_3e^{-x/2}\\
@@ -14747,14 +14684,14 @@ c_1+c_3&=&4\\
 \frac{1}{2}c_1+c_2-\frac{1}{2}c_3&=&-3\\
 \frac{1}{4}c_1+c_2+\frac{1}{4}c_3&=&-1
 \end{array};
-$$
+\]
 $c_1=1$, $c_2=-2$, $c_3=3$;
  $y=e^{x/2}(1-2x)+3e^{-x/2}$.
 
 
 \exer{9.2.24}
 $p(r)=r^4-6r^3+7r^2+6r-8=(r-1)(r-2)(r-4)(r+1)$;
-$$
+\[
 \begin{array}{lcl}
 y&=&c_1e^x+c_2e^{2x}+c_3e^{4x}+c_4e^{-x}\\
 y'&=&c_1e^x+2c_2e^{2x}+4c_3e^{4x}-c_4e^{-x}\\
@@ -14767,14 +14704,14 @@ c_1+2c_2+4c_3-c_4&=&-8\\
 c_1+4c_2+16c_3+c_4&=&-14\\
 c_1+8c_2+64c_3-c_4&=&-62
 \end{array};
-$$
+\]
 $c_1=-4$, $c_2=1$, $c_3=-1$, $c_4=2$;
  $y=-4e^x+e^{2x}-e^{4x}+2e^{-x}$.
 
 
 \exer{9.2.26}
 $p(r)=r^4+2r^3-2r^2-8r-8=(r-2)(r+2)(r^2+2r+2)$;
-$$
+\begin{gather*}
 \begin{array}{lcl}
 y&=&c_1e^{2x}+c_2e^{-2x}+e^{-x}(c_3\cos x+c_4\sin x)\\
 y'&=&2c_1e^{2x}-2c_2e^{-2x}-e^{-x}((c_3-c_4)\cos x+(c_3+c_4)\sin x)\\
@@ -14782,15 +14719,14 @@ y''&=&4c_1e^{2x}+4c_2e^{-2x}+e^{-x}(2c_3\sin x-2c_4\cos x)\\
 y'''&=&8c_1e^{2x}-8c_2e^{-2x}+e^{-x}((2c_3+2c_4)\cos x+2(c_4-c_3)\sin
 x)
 \end{array};
-$$
-$$
+\\
 \begin{array}{rcr}
 c_1+c_2+c_3&=&5\\
 2c_1-2c_2-c_3+c_4&=&-2\\
 4c_1+4c_2-2c_4&=&6\\
 8c_1-8c_2+2c_3+2c_4&=&8
 \end{array};
-$$
+\end{gather*}
 $c_1=1$, $c_2=1$, $c_3=3$, $c_4=1$;
 $y=e^{2x}+e^{-2x}+e^{-x}(3\cos x+\sin x)$.
 
@@ -15227,14 +15163,14 @@ $y'''+y''-4y'-4y=e^{-x}[
 (u'''-3u''+3u'-u) +(u''-2u'+u) -4(u'-u) -4u]
 =e^{-x}(u'''-2u''-3u')$.
 Let $u_p=(A_0+A_1x)\cos2x+(B_0+B_1x)\sin2x$, where
-$$
+\[
 \begin{array}{rcr}
 8A_1-14B_1&=&-22\phantom{.}\\
 14A_1+8B_1&=&-6\phantom{.}\\
 8A_0-14B_0-15A_1-8B_1&=&1\phantom{.}\\
 14A_0+8B_0+8A_1-15B_1&=&-1.
 \end{array}
-$$
+\]
 Then
 $A_1=-1$, $B_1=1$, $A_0=1$, $B_0=1$, and
 $y_p=e^{-x}\left[(1-x)\cos2x+(1+x)\sin2x\right]$.
@@ -15247,7 +15183,7 @@ $y'''-2y''+y'-2y=e^x[
 (u'''+3u''+3u'+u) -2(u''+2u'+u) +(u'+u) -2u]
 =e^x(u'''+u''-2u)$.
 Let $u_p=(A_0+A_1x+A_2x^2)\cos2x+(B_0+B_1x+B_2x^2)\sin2x$ where
-$$
+\[
 \begin{array}{rcr}
 -6A_2-8B_2&=&-4\phantom{.}\\
 8A_2-6B_2&=&-3\phantom{.}\\
@@ -15256,7 +15192,7 @@ $$
 -6A_0-8B_0-12A_1+4B_1+2A_2+12B_2&=&-9\phantom{.}\\
 8A_0-6B_0-4A_1-12B_1-12A_2+2B_2&=&6.
 \end{array}
-$$
+\]
 Then $A_2=0$, $B_2=1/2$; $A_1=1/2$, $B_1=-1/2$; $A_0=1/1$, $B_0=1/2$;
 and $y_p=\dst\frac{e^x}{2}[(1+x)\cos2x+(1-x+x^2)\sin2x]$.
 
@@ -15269,14 +15205,14 @@ $y'''-y''+2y=e^x[
 =e^x(u'''+2u''+u'+2u)$.
 Since $\cos x$ and $\sin x$ satisfy  $u'''+2u''+u'+2u=0$,
 let  $u_p=x[(A_0+A_1x)\cos x+(B_0+B_1x)\sin x]$ where
-$$
+\[
 \begin{array}{rcl}
 -4A_1+8B_1&=&4\phantom{.}\\
 -8A_1-4B_1&=&-12\phantom{.}\\
 -2A_0+4B_0+4A_1+6B_1&=&20\phantom{.}\\
 -4A_0-2B_0-6A_1+4B_1&=&-12.
 \end{array}
-$$
+\]
 Then $A_1=1$, $B_1=1$; $A_0=1$, $B_0=3$; and
  $y_p=xe^x[(1+x)\cos x+(3+x)\sin x]$.
 
@@ -15288,14 +15224,14 @@ $=e^{3x}[
 =e^{3x}(u'''+3u''+9u'+27u)$.
 Since $\cos3x$ and $\sin3x$ satisfy  $u'''+3u''+9u'+27u=0$,
 let  $u_p=x[(A_0+A_1x)\cos3x+(B_0+B_1x)\sin3x]$ where
-$$
+\[
 \begin{array}{rcr}
 -36A_1+36B_1&=&3\phantom{.}\\
 -36A_1-36B_1&=&3\phantom{.}\\
 -18A_0+18B_0+6A_1+18B_1&=&-2\phantom{.}\\
 -18A_0-18B_0-18A_1+6B_1&=&3.
 \end{array}
-$$
+\]
 Then  $A_1=-1/12$, $B_1=0$; $A_0=$, $B_0=-1/12$; and
  $y_p=-\dst\frac{xe^{3x}}{12}(x\cos3x+\sin3x)$.
 
@@ -15316,14 +15252,14 @@ $y^{(4)}+6y'''+13y''+12y'+4y=e^{-x}[
 (u^{(4)}-4u'''+6u''-4u'+u) +6(u'''-3u''+3u'-u) +13(u''-2u'+u) +12u'-u)
 +4u]=e^{-x}(u^{(4)}+2u'''+u'')$.
 Let $u_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x$ where
-$$
+\[
 \begin{array}{rcr}
 -2B_1&=&-1\phantom{.}\\
 2A_1&=&-1\phantom{.}\\
 -2B_0-6A_1-2B_1&=&4\phantom{.}\\
 2A_0+2A_1-6B_1&=&-5.
 \end{array}
-$$
+\]
 Then $A_1=-1/2$, $B_1=1/2$, $A_0=-1/2$, $B_0=-1$, and
  $y_p=-\dst\frac{e^{-x}}{2}[(1+x)\cos x+(2-x)\sin x]$.
 
@@ -15346,14 +15282,14 @@ $y^{(4)}-5y'''+13y''-19y'+10y=e^x[
 -19(u'+u) +10u]=e^x(u^{(4)}-u'''+4u''-4u')$.
 Since $\cos2x$ and $\sin2x$ satisfy $u^{(4)}-u'''+4u''-4u'=0$,
 let $u_p=x[(A_0+A_1x)\cos2x+(B_0+B_1x)\sin2x)]$ where
-$$
+\[
 \begin{array}{rcr}
 16A_1-32B_1&=&8\phantom{.}\\
 32A_1+16B_1&=&-4\phantom{.}\\
 8A_0-16B_0-40A_1-12B_1&=&7\phantom{.}\\
 16A_0+8B_0+12A_1-40B_1&=&8.
 \end{array}
-$$
+\]
 Then $A_1=0$, $B_1=-1/4$; $A_0=0$, $B_0=-1/4$, and
  $y_p=-\dst\frac{xe^x}{4}(1+x)\sin2x$.
 
@@ -15551,14 +15487,14 @@ $y'''+2y''-y'-2y=e^{-2x}[
 (u'''-6u''+12u'-8u) +2(u''-4u'+4u) -(u'-2u) -2u]=
 e^{-2x}(u'''-4u''+3u')$.
 Let $u_p=(A_0+A_1x)\cos x+(B_0+B_1x)\sin x$ where
-$$
+\[
 \begin{array}{rcr}
 4A_1+2B_1&=&-2\phantom{.}\\
 -2A_1+4B_1&=&-9\phantom{.}\\
 4A_0+2B_0-8B_1 &=&23\phantom{.}\\
 -2A_0+4B_0+8A_1&=&8.
 \end{array}
-$$
+\]
 Then $A_1=1/2$, $B_1=-2$; $A_0=1$, $B_0=3/2$, and
  $y_p=e^{-2x}\dst\left[\left(1+\frac{x}{2}\right)\cos
 x+\left(\frac{3}{2}-2x\right)\sin x\right]$.
@@ -15577,14 +15513,14 @@ $y^{(4)}-4y'''+14y''-20y'+25y=e^x[
 Since $\cos2x$, $\sin2x$, $x\cos2x$, and $x\sin2x$
 satisfy $u^{(4)}+8u''+16u=0$,
 let $u_p=x^2[(A_0+A_1x)\cos2x+(B_0+B_1x)\sin2x]$ where
-$$
+\[
 \begin{array}{rcr}
 -96A_1&=&6\phantom{.}\\
 -96B_1&=&0\phantom{.}\\
 -32A_0+48B_1&=&2\phantom{.}\\
 -48A_1-32B_0&=&3.
 \end{array}
-$$
+\]
 Then $A_1=-1/16$, $B_1=0$; $A_0=-1/16$, $B_0=0$, and
  $y_[=-\dst\frac{x^2e^x}{16}(1+x)\cos2x$. Since
 $p(r)=[(r-1)^2+1]^2$,
@@ -15602,7 +15538,7 @@ $(4A-8B)+8Bx=-4+8x$. Then $B=1$,
 the general solution is
  $y=x(1+x)e^{-x}+c_1e^{-x}+c_2e^x+c_3xe^x$.
  Therefore,
-$$
+\[
 \left[\begin{array}{l}y\\y'\\y''\end{array}\right]=
 \left[\begin{array}{c}
 x(1+x)e^{-x}\\
@@ -15612,13 +15548,13 @@ e^{-x}(x^2-3x)\\
 \left[\begin{array}{rcc}e^{-x}&e^x&xe^x\\
 -e^{-x}&e^x&e^x(x+1)\\e^{-x}&e^x&e^x(x+2)\end{array}\right]
 \threecol{c_1}{c_2}{c_3}.
-$$
+\]
 Setting $x=0$ and imposing the initial conditions yields
-$$
+\[
 \threecol200=\threecol010+
 \left[\begin{array}{rcc}1&1&0\\-1&1&1\\1&1&2\end{array}\right]
 \threecol{c_1}{c_2}{c_3},
-$$
+\]
 so $c_1=1$, $c_2=1$, $c_3=-1$, and
  $y=e^{-x}(1+x+x^2) +(1-x)e^x$.
 
@@ -15632,7 +15568,7 @@ $(4A-12B)+12Bx=20-12x$. Then $B=-1$,
 the general solution is
 $y=x^2(2-x)e^{-x}+e^{-x}(c_1+c_2x)+c_3\cos x+c_4\sin x$.
  Therefore,
-$$
+\[
 \left[\begin{array}{l}y\\y'\\y''\\y'''\end{array}\right]=
 \left[\begin{array}{c}
 x^2(2-x)e^{-x}\\
@@ -15647,9 +15583,9 @@ e^{-x}&(x-2)e^{-x}&-\cos x&-\sin x\\
 \left[\begin{array}{c}
 c_1\\c_2\\c_3\\c_4
 \end{array}\right]
-$$
+\]
 Setting $x=0$ and imposing the initial conditions yields
-$$
+\[
 \left[\begin{array}{r}
 3\\-4\\7\\-22
 \end{array}\right]=
@@ -15661,7 +15597,7 @@ $$
 \left[\begin{array}{c}
 c_1\\c_2\\c_3\\c_4
 \end{array}\right],
-$$
+\]
 so $c_1=2$, $c_2=-1$, $c_3=1$, $c_4=-1$, and
 $y=(2-x)(x^2+1)e^{-x}+\cos x-\sin x$.
 
@@ -15675,7 +15611,7 @@ where $-2A-2B=-2$ and $2A-2B=2$. Then $A=1$, $B=0$, and $y_p=e^x\cos
 x$. Since $p(r)=r(r-1)[(r-1)^2+1]$ the general solution is
 $y=e^x\cos x+c_1+e^x(c_2+c_3\cos x+c_4\sin x)$.
  Therefore,
-$$
+\[
 \left[\begin{array}{l}y\\y'\\y''\\y'''\end{array}\right]=
 \left[\begin{array}{c}
 xe^x\cos x\\
@@ -15690,9 +15626,9 @@ e^x(2\cos x-2(x+1)\sin x)\\
 \left[\begin{array}{c}
 c_1\\c_2\\c_3\\c_4
 \end{array}\right]
-$$
+\]
 Setting $x=0$ and imposing the initial conditions yields
-$$
+\[
 \left[\begin{array}{r}
 2\\0\\-1\\-5
 \end{array}\right]=
@@ -15704,7 +15640,7 @@ $$
 \left[\begin{array}{c}
 c_1\\c_2\\c_3\\c_4
 \end{array}\right],
-$$
+\]
 so $c_1=2$, $c_2=-1$, $c_3=1$, $c_4=-1$, and
 $2 +e^x\left[(1+x)\cos x-\sin x-1\right]$.
 
@@ -16055,7 +15991,7 @@ we take $y_p=-x(\ln x)^2$
 
 The general solution is $y=-x(\ln x)^2+c_1x+c_2x^3+c_3x\ln x$,
 so
-$$
+\[
 \left[\begin{array}{l}y\\y'\\y''
 \end{array}\right]=
 \left[\begin{array}{c}
@@ -16067,12 +16003,12 @@ x&x^3&x\ln x\\1&3x^2&1+\ln x\\0&6x&\dst\frac{1}{ x}
 \left[\begin{array}{ccccccc}
 c_{1}\\ c_{2}\\ c_{3}
 \end{array}\right]
-$$
+\]
 Setting $x=1$ and imposing the initial conditions yields
-$$
+\[
 \threecol44{-2}=
 \threecol00{-2}+\threebythree110131061\threecol{c_1}{c_2}{c_3}.
-$$
+\]
 Solving this system yields $c_1=3$, $c_2=1$, $c_3=-2$.
 Therefore,$y=-x(\ln x)^2+3x+x^3-2x\ln x$.
 
@@ -16099,7 +16035,7 @@ we take $y_p=-\dst\frac{e^x(3x+1)x}{2}$.
 
 The general solution is
 $y=-\dst\frac{e^x(3x+1)x}{2}+c_1e^x+c_2e^{2x}+c_3xe^{-x}$, so
-$$
+\[
 \left[\begin{array}{l}
 y\\y'\\y''
 \end{array}\right]=
@@ -16112,9 +16048,9 @@ y\\y'\\y''
 e^x&e^{2x}&xe^{-x}\\e^x&2e^{2x}&e^{-x}(1-x)\\e^x&4e^{2x}&e
 ^{-x}(x-2)\end{array}\right|
 \threecol{c_1}{c_2}{c_3}.
-$$
+\]
 Setting $x=0$  and imposing the initial conditions yields
-$$
+\[
 \left[\begin{array}{c}
 -4\\-\frac{3}{2}\\-19
 \end{array}\right]=
@@ -16123,7 +16059,7 @@ $$
 \end{array}\right]+
 \threebythree11012114{-2}
 \threecol{c_1}{c_2}{c_3}.
-$$
+\]
 Solving this system yields $c_1=-3$, $c_2=-1$, $c_3=4$.
 Therefore,
 $y=-\dst\frac{e^x(3x+1)x}{2}-3e^x-e^{2x}+4xe^{-x}$.
@@ -16148,7 +16084,7 @@ we take $y_p=-\dst\frac{x^4+12}{6}$.
 
 The general solution is
 $y=-\dst\frac{x^4+12}{6}+c_1x+c_2x^2+c_3e^x$, so
-$$
+\[
 \left[\begin{array}{l}y\\y'\\y''
 \end{array}\right]=-
 \left[\begin{array}{c}
@@ -16157,12 +16093,12 @@ $$
 \left|\begin{array}{cccc}
 x&x^2&e^x\\1&2x&e^x\\0&2&e^x\end{array}\right|
 \threecol{c_1}{c_2}{c_3}.
-$$
+\]
 Setting $x=0$ and imposing the initial conditions yields
-$$
+\[
 \threecol050=
 -\threecol200+\threebythree001101021\threecol{c_1}{c_2}{c_3}.
-$$
+\]
 Solving this system yields $c_1=3$, $c_2=-1$, $c_3=2$.
 Therefore,
 $y=-\dst\frac{x^4+12}{6}+3x-x^2+2e^x$.
@@ -16192,7 +16128,7 @@ $y_p=-\dst\frac{xe^x(3x+1)}{2}$
 
 The general solution is
 $y=-\dst\frac{xe^x(3x+1)}{2}+c_1(x+1)+c_2e^x+c_3e^{2x}$, so
-$$
+\[
 \left[\begin{array}{l}y\\y'\\y''
 \end{array}\right]=
 \left[\begin{array}{c}
@@ -16203,9 +16139,9 @@ $$
 \left|\begin{array}{cccc}
 x+1&e^x&e^{3x}\\1&e^x&3e^{3x}\\0&e^x&9e^{3x}
 \end{array}\right|.
-$$
+\]
 Setting $x=0$ and imposing the initial conditions yields
-$$
+\[
 \left[\begin{array}{c}
 \frac{3}{4}\\\frac{5}{4}\\\frac{1}{4}
 \end{array}\right]=
@@ -16213,7 +16149,7 @@ $$
 0\\-\frac{1}{2}\\-4
 \end{array}\right]
 +\threebythree111113019\threecol{c_1}{c_2}{c_3}.
-$$
+\]
 Solving this system yields $c_1=\dst\frac{1}{2}$, $c_2=-\dst\frac{1}{4}$,
 $c_3=\dst\frac{1}{2}$. Therefore,
 $y=-\dst\frac{xe^x(3x+1)}{2}+\frac{x+1}{2}-\frac{e^x}{4}+\frac{e^{2x}}{2}$.
@@ -16253,7 +16189,7 @@ $y_p=3x^2\ln x$.
 
 The general solution is $y=3x^2\ln x+c_1x+c_2x^2+\dst\frac{c_3}{ x}
 +c_4x\ln x$, so
-$$
+\[
 \left[\begin{array}{l}y\\y'\\y''\\y'''
 \end{array}\right]=
 \left[\begin{array}{c}
@@ -16267,9 +16203,9 @@ x^2}&-\dst\frac{1}{ x^2}
 \left[\begin{array}{c}
 c_1\\c_2\\c_3\\c_4
 \end{array}\right].
-$$
+\]
 Setting $x=1$ and imposing the initial conditions yields
-$$
+\[
 \left[\begin{array}{c}
 -7\\-11\\-5\\6
 \end{array}\right]=
@@ -16281,7 +16217,7 @@ $$
 \left[\begin{array}{c}
 c_1\\c_2\\c_3\\c_4
 \end{array}\right].
-$$
+\]
 Solving this system yields $c_1=0$, $c_2=-7$, $c_3=0$, $c_4=0$.
 Therefore,
  $y=3x^2\ln x-7x^2$.
@@ -16323,7 +16259,7 @@ $y_p=x\ln x$.
 
 The general solution is $y=x\ln x+c_1x+c_2\sqrt x+c_3/x+c_4/\sqrt x$,
 so
-$$
+\[
 \left[\begin{array}{l}y\\y'\\y''\\y'''
 \end{array}\right]=
 \left[\begin{array}{c}
@@ -16338,9 +16274,9 @@ x&\sqrt{x}&1/x&1/\sqrt{x}\\
 \left[\begin{array}{c}
 c_1\\c_2\\c_3\\c_4
 \end{array}\right].
-$$
+\]
 Setting $x=1$ and imposing the initial conditions yields
-$$
+\[
 \left[\begin{array}{c}
 2\\0\\4\\\-\frac{37}{4}
 \end{array}\right]=
@@ -16352,7 +16288,7 @@ $$
 \left[\begin{array}{c}
 c_1\\c_2\\c_3\\c_4
 \end{array}\right].
-$$
+\]
 Solving this system yields $c_1=1$, $c_2=-1$, $c_3=1$, $c_4=1$.
 Therefore,  $y=x\ln x+x-\sqrt x+\dst\frac{1}{ x}+\frac{1}{\sqrt x}$.
 
@@ -16592,7 +16528,7 @@ y_{2,i+1}&=&y_{2i}+\frac{h}{2}(J_{1i}+J_{2i}).
 \exer{10.2.6}
 Let  $y_i=y^{(i-1)}$, $i=1,2,\dots,n$; then $y_i'=y_{i+1}$,
 $i=1,2,\dots,n-1$ and $P_0(t)y_n'+P_1(t)y_n+\cdots+P_n(t)y_1=F(t)$, so
-$$A=-\frac{1}{ P_0}
+\[A=-\frac{1}{ P_0}
 \left[\begin{array}{ccccc}
 0&1&0&\cdots&0\\
 0&0&1&\cdots&0\\
@@ -16605,7 +16541,7 @@ P_n&P_{n-1}&P_{n-2}&\cdots&P_1
 \left[\begin{array}{c}
 0\\ 0\\\vdots\\0\\F
 \end{array}\right].
-$$
+\]
 If $P_0,P_1,\dots,P_n$ and $F$ are continuous and $P_0$
 has no zeros on $(a,b)$, then $P_1/P_0,\dots,P_n/P_0$  and
 $F/P_0$ are contnuous on $(a,b)$.
@@ -16649,7 +16585,7 @@ From Exercise~10.2.6, the initial value problem
 $y(x_0)=k_0,\ y'(x_0)=k_1,\dots,\ y^{(n-1)}(x_0)=k_{n-1}$ is
 equivalent to the initial value problem (B) ${\vect{ y'}}=A(t){\vect y}+{\vect
 f}(t)$, with
-$$A=-\frac{1}{ P_0}
+\[A=-\frac{1}{ P_0}
 \left[\begin{array}{ccccc}
 0&1&0&\cdots&0\\
 0&0&1&\cdots&0\\
@@ -16666,7 +16602,7 @@ P_n&P_{n-1}&P_{n-2}&\cdots&P_1
 \left[\begin{array}{c}
 k_0\\k_1\\\vdots\\k_{n-1}
 \end{array}\right].
-$$
+\]
 Since Theorem~10.2.1 implies that (B) has a unique solution on
 $(a,b)$, it follows that (A) does also.
 
@@ -17463,11 +17399,11 @@ Let  $u_3=0$, $u_1=0$, and $u_2=\dst\frac{1}{2}$. Then
 ${\vect
 y}_3=\dst{\threecol010}\dst\frac{e^{4t}}{2}+\dst{\threecol112}te^{4t}$.
 The general solution is
-$$
+\[
 {\vect y}=\dst{
 c_1\threecol{-1}{-1}2+c_2\threecol112e^{4t}+
 c_3\left(\threecol010\frac{e^{4t}}{2}+\threecol112te^{4t}\right)}.
-$$
+\]
 
 
 \exer{10.5.10}
@@ -17502,11 +17438,11 @@ $\dst{\left[\begin{array}{rrrcr}1&0&-1&\vdots&\frac{1}{2}\\0&1&0&
 Let $u_3=0$, $u_1=\dst\frac{1}{2}$, and $u_2=\dst\frac{1}{2}$. Then ${\vect
 y}_3=\dst{\threecol110}\dst\frac{e^{-2t}}{2}+\dst{\threecol101}te^{-2t}$.
 The general solution is
-$$
+\[
 {\vect y}=\dst{
 c_1\threecol011e^{2t}+c_2\threecol101e^{-2t}+c_3\left
 (\threecol110\frac{e^{-2t}}{2}+\threecol101te^{-2t}\right)}.
-$$
+\]
 
 
 \exer{10.5.12}
@@ -17755,8 +17691,8 @@ ${\vect y}_3= \dst{\threecol110}\frac{e^{6t}}{8}+
 The general solution is
 ${\vect y}=\dst{c_1\threecol011e^{6t}+
 c_2\left(\threecol{-1}10\frac{e^{6t}}{4}+\threecol011te^{6t}\right)}$
-$$+c_3\left(\threecol110\frac{e^{6t}}{8}+\threecol{-1}10\frac{t
-e^{6t}}{4}+\threecol011\frac{t^2e^{6t}}{2}\right).$$
+\[+c_3\left(\threecol110\frac{e^{6t}}{8}+\threecol{-1}10\frac{t
+e^{6t}}{4}+\threecol011\frac{t^2e^{6t}}{2}\right).\]
 
 
 \exer{10.5.26}
@@ -17793,8 +17729,8 @@ e^{-2t}+\threecol0{-1}1\dst\frac{t^2e^{-2t}}{2}$.
 The general solution is
 ${\vect y}=\dst{c_1\threecol0{-1}1e^{-2t}+
 c_2\left(\threecol{{-1}}10e^{-2t}+\threecol0{-1}1te^{-2t}\right)}$
-$$+c_3\left(\threecol3{-2}0\frac{e^{-2t}}{4}+\threecol{-1}10t
-e^{-2t}+\threecol0{-1}1\frac{t^2e^{-2t}}{2}\right)$$
+\[+c_3\left(\threecol3{-2}0\frac{e^{-2t}}{4}+\threecol{-1}10t
+e^{-2t}+\threecol0{-1}1\frac{t^2e^{-2t}}{2}\right)\]
 
 
 \exer{10.5.28}
@@ -17831,8 +17767,8 @@ e^{-6t}}{6}+\threecol{-2}12\frac{t^2e^{-6t}}{2}$.
 The general solution is
  ${\vect y}=\dst{c_1\threecol{-2}12e^{-6t}+
 c_2\left(-\threecol610\frac{e^{-6t}}{6}+\threecol{-2}12te^{-6t}\right)}$
-$$+c_3\left(-\threecol{12}10\frac{e^{-6t}}{36}-\threecol610\frac{t
-e^{-6t}}{6}+\threecol{-2}12\frac{t^2e^{-6t}}{2}\right).$$
+\[+c_3\left(-\threecol{12}10\frac{e^{-6t}}{36}-\threecol610\frac{t
+e^{-6t}}{6}+\threecol{-2}12\frac{t^2e^{-6t}}{2}\right).\]
 
 
 \exer{10.5.30}
@@ -17948,10 +17884,10 @@ ${\vect x}=\left[\begin{array}{c}5-i\\13\end{array}\right]$.
 Taking  real and imaginary parts of
 $e^{-t}(\cos2t+i\sin2t)
 )\left[\begin{array}{c}5-i\\13\end{array}\right]$ yields
-$$
+\[
  {\vect y}=\dst{c_1e^{-t}\ctwocol{5\cos2t+\sin2t}{13\cos2t}
 +c_2e^{-t}\ctwocol{5\sin2t-\cos2t}{13\sin2t}}.
-$$
+\]
 
 
 \exer{10.6.4}
@@ -18005,11 +17941,11 @@ ${\vect y}_2=e^{-2t}\cthreecol{\cos2t-\sin2t}{-\cos2t-\sin2t}{2\cos2t}$
  and
 ${\vect y}_3=e^{-2t}\cthreecol{\sin2t+\cos2t}{-\sin2t+\cos2t}{2\sin2t}$.
  Therefore,
-$$
+\[
 \dst{{\vect y}=c_1\threecol{-1}{-1}1e^{-t}+c_2e^{-2t}\cthreecol{\cos2t-\sin
 2t}{-\cos2t-\sin  2t}{2\cos2t}+c_3e^{-2t}\cthreecol
 {\sin2t+\cos2t}{-\sin2t+\cos2t}{2\sin2t}}.
-$$
+\]
 
 
 \exer{10.6.8}
@@ -18037,12 +17973,12 @@ $e^{-t}(\cos2t+i\sin2t)\left[\begin{array}{c}-1+i\\2\\2\end{array}\right]$
 are ${\vect y}_2=e^{-t}\cthreecol{-\sin2t-\cos2t}{2\cos2t}{2\cos2t}$
 and ${\vect y}_3=e^{-t}\cthreecol {\cos2t-\sin2t}{2\sin2t}{2\sin2t}$.
 Therefore,
-$$
+\[
 \dst{{\vect
 y}=c_1\threecol{-1}11e^{-t}+c_2e^{-t}\cthreecol{-\sin
 2t-\cos2t}{2\cos2t}{2\cos2t}+c_3e^{-t}\cthreecol
 {\cos2t-\sin2t}{2\sin2t}{2\sin2t}}.
-$$
+\]
 
 
 \exer{10.6.10}
@@ -18060,12 +17996,12 @@ ${\vect x}=\left[\begin{array}{c}1+3i\\2\end{array}\right]$.
 $e^{2t}(\cos t+i\sin t)
 \left[\begin{array}{c}1+3i\\2\end{array}\right]$
 yields
-$$
+\[
 \dst{{\vect y}=c_1e^{2t}\left[\begin{array}{c}\cos t-3\sin t
 \\2\cos t\end{array}\right]+
 c_2e^{2t}\left[\begin{array}{c}
 \sin t+3\cos t\\ 2\sin t\end{array}\right]}.
-$$
+\]
 
 
 \exer{10.6.12}
@@ -18112,13 +18048,13 @@ ${\vect y}_2=e^{2t}\left[\begin{array}{c}-\cos3t-\sin3t\\-\sin3t\\
 \cos3t\end{array}\right]$ and ${\vect y}_3=
 c_3e^{2t}\left[\begin{array}{c}-\sin3t+\cos3t\\\cos3t\\
 \sin3t\end{array}\right]$. Therefore,
-$$
+\[
 \dst{{\vect
 y}=c_1\left[\begin{array}{c} 2\\ 2\\1 \end{array}\right]e^{-2t}+
 c_2e^{2t}\left[\begin{array}{c}-\cos3t-\sin3t\\-\sin3t\\
 \cos3t\end{array}\right]+c_3e^{2t}\left[\begin{array}{c}
 -\sin3t+\cos3t\\\cos3t\\\sin3t\end{array}\right]}.
-$$
+\]
 
 
 \exer{10.6.16}
@@ -18152,14 +18088,14 @@ t\\ 2\cos t\end{array}\right]$ and
 ${\vect y}_3=
 c_3e^t\left[\begin{array}{ccc} 2\sin t+2\cos t\\\cos t+\sin t\\
 2\sin t\end{array}\right]$. Therefore,
-$$
+\[
 \dst{{\vect y}=c_1\left[\begin{array}{c} 1\\1\\1
 \end{array}\right]e^t+
 c_2e^t\left[\begin{array}{c} 2\cos t-2\sin t
 \\\cos t-\sin t\\ 2\cos t\end{array}\right]+
 c_3e^t\left[\begin{array}{ccc} 2\sin t+2\cos t\\\cos t+\sin t\\
 2\sin t\end{array}\right]}.
-$$
+\]
 
 
 \exer{10.6.18}
@@ -18299,10 +18235,10 @@ k_2&=&\frac{\|{\vect u}\|^2-\|{\vect v}^2\|-\sqrt{(\|{\vect u}\|^2-\|{\vect
 v}^2\|)^2+4({\vect u},{\vect v})^2}}{2({\vect u},{\vect v})}.
 \end{eqnarray*}
 Clearly $k_1>0$ and $k_2<0$. Moreover,
-$$
+\[
 k_1k_2=\frac{(\|{\vect u}\|^2-\|{\vect v}^2\|)^2-\left[(\|{\vect u}\|^2-\|{\vect
 v}^2\|)^2+4({\vect u},{\vect v})^2\right]}{4({\vect u},{\vect v})^2}=-1.
-$$
+\]
 
 {\bfseries (b)} Since $k_2=-1/k_1$,
 \begin{eqnarray*}
@@ -18724,11 +18660,11 @@ from Example~11.1.4.
 Let $m$ and $n$ be distinct positive integers. From the identity
 $\cos A\cos B=\dst\frac{1}{2}[\cos(A-B)+\cos(A+B)]$
  with $A=(2m-1)\pi x/2L$ and $B=(2n-1)\pi x/2L$,
-$$
+\[
 \int_0^L\cos\frac{(2m-1)\pi x}{2L}\cos\frac{(2n-1)\pi x}{2L}\,dx
 =\frac{1}{2}\int_0^L\left[\cos\frac{(m-n)\pi x}{ L}+\cos\frac{(m+n-1)\pi x}{
 L}\right]\,dx=0.
-$$
+\]
 
 
 \exer{11.1.24}
@@ -18785,12 +18721,12 @@ x\lims01\right]=(-1)^n\frac{2}{ n\pi};
 \end{eqnarray*}
 $F(x)=\dst2+\frac{2}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{
 n}\sin n\pi x$. From Theorem~11.2.4,
-$$
+\[
 F(x)=
 \left\{\begin{array}{cl}
 2,&\phantom{-}x=-1,\\2-x,&-1<x<1,\\2,&\phantom{-}x=1.
 \end{array}\right.
-$$
+\]
 
 
 \exer{11.2.4}
@@ -18928,7 +18864,7 @@ b_n&=&2\int_0^{1/2}\sin\pi x\sin n\pi x\,dx=
 $F(x)=\dst\frac{1}{2}\sin\pi x-\frac{4}{\pi}\sum_{n=1}^\infty
 (-1)^n\frac{n}{4n^2-1}\sin2n\pi x$.
  From Theorem~11.2.4,
-$$
+\[
 F(x)=
 \left\{\begin{array}{cl}
 \phantom{-}0,&-1\le x<\frac{1}{2},\\
@@ -18937,19 +18873,19 @@ F(x)=
 \phantom{-}\frac{1}{2},&\phantom{-}x=\frac{1}{2},\\
 \phantom{-}0,&\phantom{-}\frac{1}{2}<x\le1.
 \end{array}\right.
-$$
+\]
 
 
 
 \exer{11.2.14}
 Since $f$ is even,
 $b_n=0$ if $n\ge1$;
-$$
+\[
 a_0=\dst\int_0^{1/2}x\sin\pi x\,dx=
 -\frac{1}{\pi}\left[x\cos\pi x\lims0{1/2}-\int_0^{1/2}\cos\pi
 x\,dx\right]=\frac{\sin\pi x}{\pi^2}\lims0{1/2}=
 \frac{1}{\pi^2};
-$$
+\]
 \begin{eqnarray*}
 a_1&=&\dst2\int_0^{1/2}x\sin\pi x\cos\pi x\,dx=
 \int_0^{1/2}x\sin2x\,dx\\&=&-\frac{1}{2\pi}\left[x\cos2\pi
@@ -18976,16 +18912,16 @@ a_n&=&2\int_0^{1/2}x\sin\pi x\cos n\pi x\,dx=
 (-1)^m\dst\frac{1}{4\pi}\frac{2m+1}{ m(m+1)}\mbox{ if }n=2m+1;
 \end{array}\right.
 \end{eqnarray*}
-$$
+\[
 F(x)=\dst\frac{1}{\pi^2}+\frac{1}{4\pi}\cos\pi
 x+\frac{2}{\pi^2}\sum_{n=1}^\infty
 (-1)^n\frac{4n^2+1}{(4n^2-1)^2}\cos2n\pi
 x+\frac{1}{4\pi}\sum_{n=1}^\infty
 (-1)^n\frac{2n+1}{ n(n+1)}\cos(2n+1)\pi x.
-$$
+\]
  From
 Theorem~11.2.4,
-$$
+\[
 F(x)=
 \left\{\begin{array}{cl}
 0,&-1\le x<\frac{1}{2},\\
@@ -18994,7 +18930,7 @@ x\sin\pi x,&-\frac{1}{2}<x<\frac{1}{2},\\
 \frac{1}{4},&\phantom{-}x=\frac{1}{2},\\
 0,&\phantom{-}\frac{1}{2}<x\le1.\\
 \end{array}\right.
-$$
+\]
 
 
 \exer{11.2.16}
@@ -19004,11 +18940,11 @@ $a_0=\dst\frac{1}{2}\left[\int_{-1}^0x^2\,dx
 +\int_0^1(1-x^2)\,dx\right]=\frac{1}{2}\int_0^1\,dx=
 \frac{1}{2}$, and
 if $n\ge1$, then
-$$
+\[
 a_n=\int_{-1}^0x^2\cos n\pi x\,dx
 +\int_0^1(1-x^2)\cos n\pi x\,dx=\int_0^1\cos n\pi x\,dx=\frac{\sin n\pi x
 }{ n\pi}\lims01=0
-$$
+\]
 and
 \begin{eqnarray*}
  b_n&=&\int_{-1}^0x^2\sin n\pi x\,dx
@@ -19024,12 +18960,12 @@ and
 \dst\frac{8}{(2m+1)^3\pi^3}&\mbox{ if }n=2m+1;
 \end{array}\right.
 \end{eqnarray*}
-$$
+\[
 F(x)=\dst\frac{1}{2}+\frac{1}{\pi}\sum_{n=1}^\infty\frac{1}{ n}\sin2n\pi x
 +\frac{8}{\pi^3}\sum_{n=0}^\infty\frac{1}{(2n+1)^3}\sin(2n+1)\pi x.
-$$
+\]
 From Theorem~11.2.4,
-$$
+\[
  F(x)=
 \left\{\begin{array}{cl}
 \frac{1}{2},&\phantom{-}x=-1,\\
@@ -19038,7 +18974,7 @@ x^2,&-1< x<0,\\
 1-x^2,&\phantom{-}0<x<1,\\
 \frac{1}{2},&\phantom{-}x=1.
 \end{array}\right.
-$$
+\]
 
 
 
@@ -19057,12 +18993,12 @@ b_n&=&\frac{1}{3}\left[\int_{-3}^{-2}2\sin\frac{n\pi x}{3}\,dx+
 x}{3}\,dx\right]=
 \frac{1}{ n\pi}\left(\cos n\pi-\cos\frac{2n\pi}{3}\right);
 \end{eqnarray*}
-$$
+\[
 F(x)=\dst\frac{5}{2}+\frac{3}{\pi}\sum_{n=1}^\infty
 \frac{1}{ n}\sin\frac{2n\pi}{3}\cos\frac{n\pi x}{3}+\frac{1}{\pi}
 \sum_{n=1}^\infty \frac{1}{ n}\left(\cos
 n\pi-\cos\frac{2n\pi}{3}\right)\sin\frac{n\pi x}{3}.
-$$
+\]
 
 
 \exer{11.2.20}
@@ -19077,20 +19013,20 @@ b_n=\dst\frac{1}{\pi}\left[e^x\sin nx\lims{-\pi}\pi-n
 \tag{C}
 \]
 Integrating (A) by parts yields
-$$
+\[
 a_n=\dst\frac{1}{\pi}\left[e^x\cos nx\lims{-\pi}\pi+n
 \int_{-\pi}^\pi e^x\sin nx\,dx\right]=(-1)^n\frac{2\sinh\pi}{\pi}+nb_n
 =(-1)^n\frac{2\sinh\pi}{\pi}-n^2a_n,
-$$
+\]
  from (C). Therefore,
 $a_n=\dst\frac{2\sinh\pi}{\pi}\frac{(-1)^n}{ n^2+1}$. Now (C) implies that
 $b_n=\dst\frac{2\sinh\pi}{\pi}\frac{(-1)^{n+1}n}{ n^2+1}$.
 Therefore,
-$$
+\[
 F(x)=\dst\frac{\sinh\pi}{\pi}\left(
 1+2\sum_{n=1}^\infty\frac{(-1)^n}{ n^2+1}\cos
 nx-2\sum_{n=1}^\infty\frac{(-1)^nn}{ n^2+1}\sin nx\right).
-$$
+\]
 
 \part{b}  From Theorem~11.2.4, $F(\pi)=\cosh\pi$,
 so $\dst\frac{\sinh\pi}{\pi}
@@ -19123,10 +19059,10 @@ n^2-k^2}\cos nx\right]$.
 \exer{11.2.26}
 Since $f$ is continuous on $[-L,L]$ and $f(-L)=f(L)$,
 Theorem~11.2.4 implies that
-$$
+\[
 f(x)=a_0+\sum_{n=1}^\infty\left(a_n\cos\frac{n\pi x}{
 L}+b_n\sin\frac{n\pi x}{ L}\right),\quad-L\le x\le L,
-$$
+\]
 if
 $\dst a_0=\frac{1}{ 2L}\int_{-L}^L f(x)\,dx$,  and, for $n\ge1$,
 \begin{eqnarray*}
@@ -19223,10 +19159,10 @@ a_n&=&2\int_0^1(1-x)\cos n\pi x\,dx=
 0 &\mbox{ if }n=2m;
 \end{array}\right.
 \end{eqnarray*}
-$$
+\[
 C(x)=\dst\frac{1}{2}+\frac{4}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos(2n-1)\pi x.
-$$
+\]
 
 
 \exer{11.3.4}
@@ -19242,11 +19178,11 @@ a_n&=&\frac{2}{\pi}\int_0^\pi\sin kx\cos nx\,dx
 \frac{\cos(n+k)\pi-1}{ n+k}\right]\\
 &=&-\frac{2k[1-(-1)^n\cos k\pi]}{(n^2-k^2)\pi};
 \end{eqnarray*}
-$$
+\[
 C(x)=\dst\frac{1-\cos k\pi}{
 k\pi}-\frac{2k}{\pi}\sum_{n=1}^\infty
 \frac{[1-(-1)^n\cos k\pi]}{ n^2-k^2}\cos nx.
-$$
+\]
 
 
 
@@ -19264,10 +19200,10 @@ a_n&=&\frac{2}{ L}\int_0^L(x^2-L^2)\cos\frac{n\pi x}{ L}\,dx=
 L}\lims0L=
 (-1)^n\frac{4L^2}{ n^2\pi^2};
 \end{eqnarray*}
-$$
+\[
 C(x)=\dst-\frac{2L^2}{3}+\frac{4L^2}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^n}{
 n^2}\cos\frac{n\pi x}{ L}.
-$$
+\]
 
 
 
@@ -19285,10 +19221,10 @@ n^2\int_0^\pi e^x\cos nx\,dx\right]
 \end{eqnarray*}
 $(1+n^2)a_n=\dst\frac{2}{\pi}[(-1)^ne^\pi-1]$;
 $a_n=\dst\frac{2}{(n^2+1)\pi}[(-1)^ne^\pi-1]$;
-$$
+\[
 C(x)=\dst\frac{e^\pi-1}{\pi}+\frac{2}{\pi}\sum_{n=1}^\infty
 \frac{[(-1)^ne^\pi-1]}{(n^2+1)}\cos nx.
-$$
+\]
 
 \exer{11.3.10}
 $a_0=\dst\frac{1}{ L}\int_0^L(x^2-2Lx)\,dx=\frac{1}{
@@ -19304,10 +19240,10 @@ a_n&=&\frac{2}{ L}\int_0^L(x^2-2Lx)\cos\frac{n\pi x}{ L}\,dx
 \frac{4L^2}{ n^2\pi^2}-\frac{4L^3}{ n^3\pi^3}\sin\frac{n\pi x}{ L}\lims0L
 =\frac{4L^2}{ n^2\pi^2};
 \end{eqnarray*}
-$$
+\[
 C(x)=-\frac{2L^2}{3}+\frac{4L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{
 n^2}\cos\frac{n\pi x}{ L}.
-$$
+\]
 
 
 \exer{11.3.12}
@@ -19322,10 +19258,10 @@ $S(x)=\dst\frac{2}{\pi}\sum_{n=1}^\infty\frac{1}{ n}
 $b_n=\dst\frac{2}{ L}\int_0^{L/2}\sin\frac{n\pi x}{ L}\,dx=
 -\frac{2}{ n\pi}\cos\frac{n\pi x}{ L}\lims0{L/2}=
 \frac{2}{ n\pi}\left[1-\cos\frac{n\pi}{2}\right]$;
-$$
+\[
 S(x)=\dst\frac{2}{\pi}\sum_{n=1}^\infty\frac{1}{ n}
 \left[1-\cos\frac{n\pi}{2}\right]\sin\frac{n\pi x}{ L}.
-$$
+\]
 
 
 \exer{11.3.16}
@@ -19356,20 +19292,20 @@ b_n&=&
 -\dst\frac{16m}{(4m^2-1)\pi}&\mbox{ if }n=2m;
 \end{array}\right.
 \end{eqnarray*}
-$$
+\[
 S(x)=\dst\frac{\pi}{2}\sin
 x-\frac{16}{\pi}\sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}\sin2nx.
-$$
+\]
 
 
 \exer{11.3.18}
 $c_n=\dst\frac{2}{ L}\int_0^L\cos\frac{(2n-1)\pi x}{2L}\,dx=
 \frac{4}{(2n-1)\pi}\sin\frac{(2n-1)\pi x}{ 2L}\lims0L=
 (-1)^{n+1}\frac{4}{(2n-1)\pi}$;
-$$
+\[
 C_M(x)=\dst-\frac{4}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{2n-1}
 \cos\frac{(2n-1)\pi x}{2L}.
-$$
+\]
 
 
 
@@ -19382,11 +19318,11 @@ d_n&=&2\int_0^1x\cos\frac{(2n-1)\pi x}{2}\,dx\\
 +\frac{2}{(2n-1)\pi}\cos\frac{(2n-1)\pi x}{2}\lims01\right]\\
 &=&-\frac{4}{(2n-1)\pi}\left[(-1)^n+\frac{2}{(2n-1)\pi}\right];
 \end{eqnarray*}
-$$
+\[
 C_M(x)=
 -\dst\frac{4}{\pi}\sum_{n=1}^\infty\left[(-1)^n+\frac{2}{(2n-1)\pi}\right]
 \cos\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 
@@ -19398,11 +19334,11 @@ $$
 &=&(-1)^n\frac{2}{\pi}\left[\frac{1}{2n+1}+\frac{1}{2n-3}\right]
 =(-1)^n\frac{4(2n-1)}{(2n-3)(2n+1)\pi};
 \end{eqnarray*}
-$$
+\[
 C_M(x)=
 \dst\frac{4}{\pi}\sum_{n=1}^\infty(-1)^n\frac{2n-1}{(2n-3)(2n+1)}
 \cos\frac{(2n-1) x}{2}.
-$$
+\]
 
 
 \exer{11.3.24}
@@ -19421,11 +19357,11 @@ x}{2L}\lims0L+2
 &=&-\frac{8L^2}{(2n-1)^2\pi^2}
 +(-1)^{n-1}\frac{32L^2}{(2n-1)^3\pi^3};
 \end{eqnarray*}
-$$
+\[
 C_M(x)=-\dst\frac{8L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
 1+\frac{4(-1)^n}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2L}.
-$$
+\]
 
 \exer{11.3.26}
 \begin{eqnarray*}
@@ -19438,10 +19374,10 @@ $$
 \cos\frac{(2n-1)\pi x}{ 2L}\lims0L\\
 &=&(-1)^{n+1}\frac{16L^2}{(2n-1)^2\pi^2}-\frac{32L^2}{(2n-1)^3\pi^3};
 \end{eqnarray*}
-$$
+\[
 S_M(x)=\dst-\frac{16L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
 (-1)^n+\frac{2}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2L}.
-$$
+\]
 
 
 \exer{11.3.28}
@@ -19453,10 +19389,10 @@ d_n&=&\frac{2}{\pi}\int_0^\pi\cos x\sin\frac{(2n-1)x}{2}\,dx
 &=&\frac{2}{\pi}\left[\frac{1}{2n+1}+\frac{1}{2n-3}\right]
 =\frac{4(2n-1)}{(2n-3)(2n+1)\pi};
 \end{eqnarray*}
-$$
+\[
 S_M(x)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{2n-1}{(2n-3)(2n+1)}\sin\frac{(2n-1)
 x}{2}.
-$$
+\]
 
 
 \exer{11.3.30}
@@ -19474,11 +19410,11 @@ x}{2L}\lims0L+2
 &=&(-1)^n\frac{8L^2}{(2n-1)^2\pi^2}
 +\frac{32L^2}{(2n-1)^3\pi^3};
 \end{eqnarray*}
-$$
+\[
 S_M(x)=\dst\frac{8L^2}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
 (-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
 x}{2L}.
-$$
+\]
 
 
 
@@ -19496,10 +19432,10 @@ a_n&=&
 +\frac{144L^4}{ n^5\pi^5}\sin\frac{n\pi x}{ L}\lims0L=
 -\frac{48L^4}{ n^4\pi^4}\left[1+(-1)^n2\right],\quad n\ge1;
 \end{eqnarray*}
-$$
+\[
 C(x)=-\frac{2L^4}{5}-\frac{48L^4}{\pi^4}\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^4}\cos\frac{n\pi x}{ L}.
-$$
+\]
 
 
 \exer{11.3.34}
@@ -19522,10 +19458,10 @@ a_n&=&
 \end{array}\right.
 n\ge1.
 \end{eqnarray*}
-$$
+\[
 C(x)=\frac{L^4}{30}-\frac{3L^4}{\pi^4}\sum_{n=1}^\infty\frac{1}{
 n^4}\cos\frac{2n\pi x}{ L}.
-$$
+\]
 
 
 
@@ -19542,26 +19478,25 @@ b_n&=&
 0,&\mbox{if  $n=2m$};\\
 \end{array}\right.
 \end{eqnarray*}
-$$
+\[
 S(x)=\frac{8L^2}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}
 \sin\frac{(2n-1)\pi x}{ L}.
-$$
+\]
 
 
 
 \exer{11.3.38}
 Since $f(0)=f(L)=0$ and $f''(x)=-6x$,
-$$
+\begin{gather*}
 b_n=
 \frac{12L}{ n^2\pi^2}\int_0^Lx\sin\frac{n\pi x}{ L}\,dx
 =-\frac{12L^2}{ n^3\pi^3}\left[x\cos\frac{n\pi x}{ L}\lims0L
 -\int_0^L\cos\frac{n\pi x}{ L}\,dx\right]
 =(-1)^{n+1}\frac{12L^3}{ n^3\pi^3};
-$$
-$$
+\\
 S(x)=\dst-\frac{12L^3}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{ n^3}
 \sin\frac{n\pi x}{ L}.
-$$
+\end{gather*}
 
 
 
@@ -19578,10 +19513,10 @@ L}\,dx\right]\\
 x}{ L}\lims0L=
 (-1)^{n+1}\frac{720L^5}{ n^5\pi^5};
 \end{eqnarray*}
-$$
+\[
 S(x)=-\frac{720L^5}{\pi^5}\sum_{n=1}^\infty\frac{(-1)^n}{ n^5}\sin\frac{n\pi
 x}{ L}.
-$$
+\]
 
 
 
@@ -19626,11 +19561,11 @@ c_n&=&
 &=&\frac{32L^2}{(2n-1)^3\pi^3}\sin\frac{(2n-1)\pi x}{2L}\lims0L
 =(-1)^{n+1}\frac{32L^2}{(2n-1)^3\pi^3};
 \end{eqnarray*}
-$$
+\[
 C_M(x)=-
 \frac{32L^2}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^3}\cos\frac{(2n-1)\pi x}{2L}.
-$$
+\]
 
 
 \exer{11.3.46}
@@ -19647,11 +19582,11 @@ c_n&=&
 &=&\frac{96L^3}{(2n-1)^3\pi^3}
 \left[(-1)^n3+\frac{4}{(2n-1)\pi}\right];
 \end{eqnarray*}
-$$
+\[
 C_M(x)=\dst\frac{96L^3}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2L}.
-$$
+\]
 
 
 \exer{11.3.48}
@@ -19668,11 +19603,11 @@ c_n&=&
 &=&-\frac{384L^4}{(2n-1)^4\pi^4}
 \left[1+\frac{(-1)^n4}{(2n-1)\pi}\right];
 \end{eqnarray*}
-$$
+\[
 C_M(x)=-\dst\frac{384L^4}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 1+\frac{(-1)^n4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2L}.
-$$
+\]
 
 
 \exer{11.3.50}
@@ -19713,12 +19648,12 @@ x}{2L}\lims0L+2\int_0^L\cos\frac{(2n-1)\pi x}{2L}\,dx\right]\\
 \sin\frac{(2n-1)\pi x}{2L}\lims0L\right]\\
 &=&\dst-\frac{96L^3}{(2n-1)^3\pi^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right];
 \end{eqnarray*}
-$$
+\[
 S_M(x)
 =\dst-\frac{96L^3}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x
 }{2L}.
-$$
+\]
 
 
 
@@ -19731,10 +19666,10 @@ d_n&=&-\frac{96L^2}{(2n-1)^3\pi^3}\int_0^L
 \sin\frac{(2n-1)\pi x}{2L}\lims0L=
 (-1)^n\frac{192L^3}{(2n-1)^4\pi^4};
 \end{eqnarray*}
-$$
+\[
 S_M(x)=\frac{192L^3}{\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 \sin\frac{(2n-1)\pi x}{2L}.
-$$
+\]
 
 
 \exer{11.3.56}
@@ -19753,44 +19688,44 @@ d_n&=&-\frac{192L^2}{(2n-1)^3\pi^3}\int_0^L(2x-L)
 &=&\frac{384L^4}{(2n-1)^4\pi^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right];
 \end{eqnarray*}
-$$
+\[
 S_M(x)=\frac{384L^4}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2L}.
-$$
+\]
 
 
 
 \exer{11.3.58}
 The Fourier sine series of $f_4$ on $[0,2L]$ is $\dst
 \sum_{n=1}^\infty B_n\sin\frac{n\pi x}{2L}$, where
-$$
+\[
 B_n=\dst\frac{1}{ L}\int_0^{2L}f_4(x)\sin\frac{n\pi x}{2L}\,dx
 =\frac{1}{
 L}\left[\int_0^Lf(x)\sin\frac{n\pi x}{2L}\,dx+\int_L^{2L}f(2L-x)
 \sin\frac{n\pi x}{2L}\,dx\right].
-$$
+\]
 Replacing $x$ by $2L-x$ yields $\dst\int_L^{2L}f(2L-x)\sin\frac{n\pi
 x}{2L}\,dx= \int_0^Lf(x)\sin\frac{n\pi(2L-x)}{2L}\,dx$. Since
 $\dst\sin\frac{n\pi(2L-x)}{2L}=(-1)^{n+1} \sin\frac{n\pi x}{2L}$,
-$$
+\[
 \int_L^{2L}f(2L-x)\sin\frac{n\pi
 x}{2L}\,dx=(-1)^{n+1}\int_0^Lf(x)\sin\frac{n\pi x}{2L}\,dx,
-$$
+\]
 so
-$$
+\[
 B_n=\frac{1+(-1)^{n+1}}{ L}\int_0^Lf(x)\sin\frac{n\pi x}{2L}\,dx=
 \left\{\begin{array}{cl}
 \dst\frac{2}{ L}\int_0^Lf(x)\sin\frac{(2m-1)\pi x}{2L}\,dx&\mbox{if
 $n=2m-1$},\\
 0&\mbox{if $n=2m$}.
 \end{array}\right.
-$$
+\]
 Therefore,the Fourier sine series of $f_4$ on $[0,2L]$ is
 $\dst\sum_{n=1}^\infty d_n\sin\frac{(2n-1)\pi x}{2L}$ with
-$$
+\[
 \dst d_n=\frac{2}{ L}\int_0^Lf(x)\sin\frac{(2n-1)\pi
 x}{2L}\,dx.
-$$
+\]
 
 
 
@@ -19798,35 +19733,35 @@ $$
 \exer{11.3.60}
 The Fourier cosine series of $f_4$ on $[0,2L]$ is $\dst
 A_0+\sum_{n=1}^\infty A_n\cos\frac{n\pi x}{2L}$, where
-$$
+\[
 A_0=\dst\frac{1}{2L}\int_0^{2L}f_4(x)\,dx
 =\frac{1}{2L}\left[\int_0^Lf(x)\,dx+\int_L^{2L}f(2L-x)\,dx\right]
 =\frac{1}{ L}\int_0^L f(x)\,dx
-$$
+\]
  and
-$$
+\[
 A_n=\dst\frac{1}{ L}\int_0^{2L}f_4(x)\cos\frac{n\pi x}{2L}\,dx
 =\frac{1}{
 L}\left[\int_0^Lf(x)\cos\frac{n\pi x}{2L}\,dx+\int_L^{2L}f(2L-x)
 \cos\frac{n\pi x}{2L}\,dx\right].
-$$
+\]
 Replacing $x$ by $2L-x$   yields
-$$
+\[
 \int_L^{2L}f(2L-x)\cos\frac{n\pi x}{2L}\,dx=-\int_L^0f(x)
 \cos\frac{n\pi(2L-x)}{2L}\,dx
 =\int_0^Lf(x)\cos\frac{n\pi(2L-x)}{2L}\,dx.
-$$
+\]
 Since
 $\dst\cos\frac{n\pi(2L-x)}{2L}=\cos n\pi\cos\frac{n\pi x}{2L}=(-1)^n
 \cos\frac{n\pi x}{2L}$,
-$$
+\[
 A_n=\frac{1+(-1)^n}{ L}\int_0^Lf(x)\cos\frac{n\pi x}{2L}\,dx
 =\left\{\begin{array}{cl}
 0&\mbox{if $n=2m-1$}\\
 \dst\frac{2}{ L}\int_0^Lf(x)\cos\frac{m\pi x}{ L}\,dx&\mbox{if
 $n=2m$}.
 \end{array}\right.
-$$
+\]
 Therefore,the Fourier cosine series of $f_4$ on $[0,2L]$
 is $A_0+\dst\sum_{n=0}^\infty A_{2n}cos\frac{n\pi x}{ L}$=
 $a_0+\dst\sum_{n=0}^\infty a_n\cos\frac{n\pi x}{ L}$.
@@ -19897,11 +19832,11 @@ Since $f(0)=f(1)=0$ and $f''(x)=-2$, Theorem~11.3.5\part{b}
 $S(x)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}
 \sin\frac{(2n-1)\pi x}{ L}$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}
 e^{-(2n-1)^2\pi^2t}\sin(2n-1)\pi x.
-$$
+\]
 \enlargethispage{1in}
 \smallskip
 \centerline{239}
@@ -19941,10 +19876,10 @@ if $n\ge2$, then
 $S(x)=\dst\frac{\pi}{2}\sin
 x-\frac{16}{\pi}\sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}\sin2nx$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{\pi}{2}e^{-3t}\sin
 x-\frac{16}{\pi}\sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}e^{-12n^2t}\sin2nx.
-$$
+\]
 
 
 
@@ -20005,10 +19940,10 @@ Section~11.3 imply that
 $S(x)=\dst-\frac{240}{\pi^5}\sum_{n=1}^\infty\frac{1+(-1)^n2}{ n^5}\sin
 n\pi x$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst-\frac{240}{\pi^5}\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^5}e^{-2n^2\pi^2t}\sin n\pi x.
-$$
+\]
 
 
 
@@ -20061,10 +19996,10 @@ implies that
 $C(x)=\dst-\frac{2}{5}-\frac{48}{\pi^4}\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^4}\cos n\pi x$.
 From Definition~12.1.3,
-$$
+\[
 u(x,t)=\dst-\frac{2}{5}-\frac{48}{\pi^4}\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^4}e^{-3n^2\pi^2t}\cos n\pi x.
-$$
+\]
 
 
 \exer{12.1.24}
@@ -20107,9 +20042,9 @@ n^4}e^{-4n^2t}\cos2nx$.
 &=&(-1)^n\frac{8}{(2n-1)^2} +\frac{32}{(2n-1)^3\pi}; \end{eqnarray*}
 $S_M(x)=\dst8\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
 (-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1) x}{2}$. From
-Definition~12.1.4, $$
+Definition~12.1.4, \[
 u(x,t)=\dst8\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
-(-1)^n+\frac{4}{(2n-1)\pi}\right]e^{-3(2n-1)^2t/4}\sin\frac{(2n-1) x}{ 2}. $$
+(-1)^n+\frac{4}{(2n-1)\pi}\right]e^{-3(2n-1)^2t/4}\sin\frac{(2n-1) x}{ 2}. \]
 
 
 
@@ -20132,12 +20067,12 @@ $S_M(x)
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x
 }{2}$.
 From Definition~12.1.4,
-$$
+\[
 u(x,t)
 =\dst-\frac{96}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
 e^{-(2n-1)^2\pi^2t}\sin\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 
@@ -20155,10 +20090,10 @@ imply that
 $S_M(x)=\dst\frac{192}{\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 \sin\frac{(2n-1)\pi x}{2}$.
 From Definition~12.1.4,
-$$
+\[
 u(x,t)=\dst\frac{192}{\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 e^{-(2n-1)^2\pi^2t}\sin\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 
@@ -20184,11 +20119,11 @@ imply that
 $S_M(x)=\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2}$.
 From Definition~12.1.4,
-$$
+\[
 u(x,t)=\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]
 e^{-(2n-1)^2\pi^2t}\sin\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 
@@ -20198,12 +20133,12 @@ $C_M(x)=
 \dst\frac{8}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos\frac{(2n-1)\pi x}{2}$.
 From Definition~12.1.5,
-$$
+\[
 u(x,t)=
 \dst\frac{8}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 e^{-3(2n-1)^2\pi^2t/4}
 \cos\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 
@@ -20211,22 +20146,22 @@ $$
 \exer{12.1.38}
 Since $f'(0)=f(\pi)=0$ and $f''(x)=-2$,
 Theorem~11.3.5\part{c}  implies that
-$$
+\[
 \alpha_n=
 \frac{16}{(2n-1)^2\pi}
 \int_0^\pi\cos\frac{(2n-1) x}{2}\,dx
 =\frac{32}{(2n-1)^3\pi}\sin\frac{(2n-1) x}{2}\lims0\pi
 =(-1)^{n+1}\frac{32}{(2n-1)^3\pi};
-$$
+\]
 $C_M(x)=-\dst
 \frac{32}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^3}\cos\frac{(2n-1) x}{2}$.
 From Definition~12.1.5,
-$$
+\[
 u(x,t)=-\dst
 \frac{32}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^3}e^{-7(2n-1)^2t/4}\cos\frac{(2n-1) x}{2}.
-$$
+\]
 
 
 
@@ -20249,11 +20184,11 @@ $C_M(x)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2}$.
 From Definition~12.1.5,
-$$
+\[
 u(x,t)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n3+\frac{4}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos\frac{(2n-1)\pi
 x}{2}.
-$$
+\]
 
 
 \exer{12.1.42}
@@ -20276,11 +20211,11 @@ $C_M(x)=-\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 1+\frac{(-1)^n4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2}$.
 From Definition~12.1.5,
-$$
+\[
 u(x,t)=-\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 1+\frac{(-1)^n4}{(2n-1)\pi}\right]e^{-(2n-1)^2\pi^2t/4}\cos\frac{(2n-1)\pi
 x}{2}.
-$$
+\]
 
 
 \exer{12.1.44}
@@ -20291,11 +20226,11 @@ $S(x)=\dst\frac{2}{\pi}\sum_{n=1}^\infty\frac{1}{ n}
 \left[1-\cos\frac{n\pi}{2}\right]\sin\frac{n\pi x}{
 L}$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{2}{\pi}\sum_{n=1}^\infty\frac{1}{ n}
 \left[1-\cos\frac{n\pi}{2}\right]e^{-n^2\pi^2t^2/L^2}\sin\frac{n\pi x}{
 L}.
-$$
+\]
 
 \exer{12.1.46}
 \begin{eqnarray*}
@@ -20308,11 +20243,11 @@ $S_M(x)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{2n-1}
 \left[1-\cos\frac{(2n-1)\pi)}{4}\right]
 \sin\frac{(2n-1)\pi x}{ 2L}$.
 From Definition~12.1.4,
-$$
+\[
 u(x,t)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{2n-1}
 \left[1-\cos\frac{(2n-1)\pi)}{4}\right]
 e^{-(2n-1)^2\pi^2a^2t/4L^2}\sin\frac{(2n-1)\pi x}{ 2L}.
-$$
+\]
 
 
 \exer{12.1.48}
@@ -20329,13 +20264,13 @@ v(x,0)=2-x+x^3-q(x),\quad 0\le x\le4.
 We want $q''(x)=6x,\ q(0)=1,\ q(4)=61$; $q(x)=x^3+a_1+a_2x$;
 $q(0)=1\Rightarrow a_1=1$; $q(x)=x^3+1+a_2x$; $q(4)=61\Rightarrow
 a_2=-1$; $q(x)=x^3+1-x$.  Now (A) reduces to
-$$
+\[
 \begin{array}{c}
 v_t=9v_{xx},\quad 0<x<4,\quad t>0,\\
 v(0,t)=0,\quad v(4,t)=0,\quad t>0,\\
 v(x,0)=1,\quad 0\le x\le4,
 \end{array}
-$$
+\]
 which we solve by separation of variables.
 \begin{eqnarray*}
  \alpha_n&=&\frac{1}{ 2}\int_0^L\sin\frac{n\pi x}{ 4}\,dx=
@@ -20350,15 +20285,15 @@ which we solve by separation of variables.
 $S(x)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)}
 \sin\frac{(2n-1)\pi x}{ 4}$.
 From Definition~12.1.1,
-$$
+\[
 v(x,t)=\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)}
 e^{-9\pi^2n^2t/16}\sin\frac{(2n-1)\pi x}{ 4}.
-$$
+\]
 Therefore,
-$$
+\[
 u(x,t)=1-x+x^3+\dst\frac{4}{\pi}\sum_{n=1}^\infty\frac{e^{-9\pi^2n^2t/16}}{(2n-1)}
 \sin\frac{(2n-1)\pi x}{ 4}.
-$$
+\]
 
 
 
@@ -20377,13 +20312,13 @@ We want $q''(x)=6x,\ q'(0)=-1,\ q(1)=-1$; $q'(x)=3x^2+a_2$;
 $q'(0)=-1\Rightarrow a_2=-1$; $q'(x)=3x^2-1$;
  $q(x)=x^3-x+a_1x$; $q(1)=-1\Rightarrow
 a_1=-1$; $q(x)=x^3-x-1$.  Now (A) reduces to
-$$
+\[
 \begin{array}{c}
 v_t=3u_{xx},\quad 0<x<1,\quad t>0,\\
 v_x(0,t)=0,\quad v(1,t)=0,\quad t>0,\\
 v(x,0)=1-x,\quad 0\le x\le1.
 \end{array}
-$$
+\]
 From Example~11.3.3,
 $C_M(x)=
 \dst\frac{8}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
@@ -20394,12 +20329,12 @@ $v(x,t)=
 e^{-3(2n-1)^2\pi^2t/4}
 \cos\frac{(2n-1)\pi x}{2}$.
 Therefore,
-$$
+\[
 u(x,t)=-1-x+x^3+
 \dst\frac{8}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 e^{-3(2n-1)^2\pi^2t/4}
 \cos\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 
@@ -20419,13 +20354,13 @@ $q'(x)=\pi\cos\pi x+a_2$;
 $q'(1)=-\pi\Rightarrow a_2=0$; $q'(x)=\pi\cos\pi x$;
  $q(x)=\sin\pi x+a_1$; $q(0)=0\Rightarrow
 a_1=0$; $q(x)=\sin\pi x$.  Now (A) reduces to
-$$
+\[
 \begin{array}{c}
 v_t=v_{xx},\quad 0<x<1,\quad t>0,\\
 v(0,t)=0,\quad v_x(1,t)=0,\quad t>0,\\
 v(x,0)=\sin\pi x,\quad 0\le x\le1.
 \end{array}
-$$
+\]
 \begin{eqnarray*}
 \alpha_n&=&2\dst\int_0^1\sin\pi x\sin\frac{(2n-1)\pi x}{2}\,dx=
 \int_0^1\left[\frac{\cos(2n-3)\pi x}{ 2}-
@@ -20438,11 +20373,11 @@ $S_M(x)=\dst{\frac{8}{\pi} \sum^\infty_{n=1}
 \frac{(-1)^n}{(2n+1)(2n-3)} \sin\frac{(2n-1)\pi x}{
 2}}$.
 From Definition~12.1.4,
-$$
+\[
 v(x,t)=\dst{\frac{8}{\pi} \sum^\infty_{n=1}
 \frac{(-1)^n}{(2n+1)(2n-3)} e^{-(2n-1)^2\pi^2 t/4}\sin\frac{(2n-1)\pi x}{
 2}}.
-$$
+\]
 Therefore,
 $\dst u(x,t)=\sin\pi x+\dst{\frac{8}{\pi} \sum^\infty_{n=1}
 \frac{(-1)^n}{(2n+1)(2n-3)} e^{-(2n-1)^2\pi^2 t/4}\sin\frac{(2n-1)\pi x}{
@@ -20520,20 +20455,20 @@ n\pi}\left[(1-x)\cos n\pi x\lims{1/2}1+
 =\frac{1}{
 2n\pi}\cos\frac{n\pi}{2}+\frac{1}{ n^2\pi^2}\sin\frac{n\pi}{2};
 \end{eqnarray*}
-$$
+\[
 b_n=\dst\frac{4}{ n^2\pi^2}\sin\frac{n\pi}{2}=
 \left\{\begin{array}{cl}
 (-1)^{m+1}\dst\frac{4}{(2m-1)^2\pi^2}&\mbox{if }n=2m-1\\
 0&\mbox{if }n=2m;
 \end{array}\right.
-$$
+\]
 $S_g(x)=\dst\frac{4}{\pi^2}\sum_{n=1}^\infty
 \frac{(-1)^{n+1}}{(2n-1)^2}\sin(2n-1)\pi x$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{4}{3\pi^3}\sum_{n=1}^\infty
 \frac{(-1)^{n+1}}{(2n-1)^3}\sin3(2n-1)\pi t\sin(2n-1)\pi x.
-$$
+\]
 
 
 
@@ -20554,10 +20489,10 @@ Theorem~11.3.5\part{b} implies that
 $S_f(x)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}
 \sin(2n-1)\pi x$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}
 \cos3(2n-1)\pi t\sin(2n-1)\pi x.
-$$
+\]
 
 
 
@@ -20579,10 +20514,10 @@ Theorem~11.3.5\part{b} implies that
 $S_g(x)=\dst\frac{8}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}
 \sin(2n-1)\pi x$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{8}{3\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \sin3(2n-1)\pi t\sin(2n-1)\pi x.
-$$
+\]
 
 
 \exer{12.2.6}
@@ -20590,10 +20525,10 @@ From Example~11.2.6,
 $S_f(x)=\dst\frac{324}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 n^3}\sin\frac{n\pi x}{3}$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{324}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 n^3}\cos\frac{8\pi nt}{3}\sin\frac{n\pi x}{3}.
-$$
+\]
 
 
 
@@ -20603,10 +20538,10 @@ From Example~11.2.6
 $S_g(x)=\dst\frac{324}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 n^3}\sin\frac{n\pi x}{3}$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{81}{2\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{
 n^4}\sin\frac{8\pi nt}{3}\sin\frac{n\pi x}{3}.
-$$
+\]
 
 
 
@@ -20641,10 +20576,10 @@ if $n\ge2$, then
 $S_f(x)=\dst\frac{\pi}{2}\sin x-\frac{16}{\pi}
 \sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}\sin 2nx$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{\pi}{2}\cos\sqrt{5}\,t\sin x-\frac{16}{\pi}
 \sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}\cos2n\sqrt5\,t\sin 2nx.
-$$
+\]
 
 
 \exer{12.2.12}
@@ -20678,10 +20613,10 @@ if $n\ge2$ then
 $S_g(x)=\dst\frac{\pi}{2}\sin x-\frac{16}{\pi}
 \sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}\sin 2nx$.
 From Definition~12.1.1,
-$$
+\[
 u(x,t)=\dst\frac{\pi}{2\sqrt5}\sin\sqrt{5}\,t\sin x-\frac{8}{\pi\sqrt5}
 \sum_{n=1}^\infty\frac{1}{(4n^2-1)^2}\sin2n\sqrt5\,t\sin 2nx.
-$$
+\]
 
 
 \exer{12.2.14}
@@ -20715,11 +20650,11 @@ t\le\frac{(m+1)L}{ a}$, then \part{ii} holds with $0\le\tau\le L/2a$.
 
 
 \part{b} Suppose that \part{i} holds. Since
-$$
+\[
 \cos\frac{(2n-1)\pi a}{ L}\left(\tau+\frac{mL}{ a}\right)
 =\cos\frac{(2n-1)\pi a\tau}{ L}\cos(2n-1)m\pi=
 (-1)^m\cos\frac{(2n-1)\pi a\tau}{ L},
-$$
+\]
 (A) implies that $u(x,t)=(-1)^mu(x,\tau)$.
 
  Suppose that \part{ii} holds. Since
@@ -20745,11 +20680,11 @@ $C_{M\!f}(x)=-\dst
 \frac{128}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^3}\cos\frac{(2n-1)\pi x}{4}$.
 From Exercise~12.2.17,
-$$
+\[
 u(x,t)=-\dst
 \frac{128}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^3}\cos\frac{3(2n-1)\pi t}{ 4}\,\cos\frac{(2n-1)\pi x}{4}.
-$$
+\]
 
 
 \exer{12.2.20}
@@ -20766,11 +20701,11 @@ $C_{M\!f}(x)=-\dst
 \frac{128}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^3}\cos\frac{(2n-1)\pi x}{4}$.
 From Exercise~12.2.17,
-$$
+\[
 u(x,t)=-\dst
 \frac{512}{3\pi^4}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^4}\sin\frac{3(2n-1)\pi t}{ 4}\,\cos\frac{(2n-1)\pi x}{4}.
-$$
+\]
 
 \exer{12.2.22}
 Since $f'(0)=f(1)=0$ and $f''(x)=6(2x+1)$,
@@ -20787,17 +20722,17 @@ Theorem~11.3.5\part{c}  implies that
 &=&\frac{96}{(2n-1)^3\pi^3}
 \left[(-1)^n3+\frac{4}{(2n-1)\pi}\right];
 \end{eqnarray*}
-$$
+\[
 C_{M\!f}(x)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2}.
-$$
+\]
 From Exercise~12.2.17,
-$$
+\[
 u(x,t)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\sqrt5\,\pi
 t}{2}\cos\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 \exer{12.2.24}
@@ -20820,11 +20755,11 @@ C_{M\!g}(x)=\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n3+\frac{4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2}$.
 From Exercise~12.2.17,
-$$
+\[
 u(x,t)=\dst\frac{192}{\pi^4\sqrt5}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 (-1)^n3+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\sqrt5\,\pi
 t}{2}\cos\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 \exer{12.2.26}
@@ -20848,11 +20783,11 @@ C_{M\!f}(x)=-\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 1+\frac{(-1)^n4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2}$.
 From Exercise~12.2.17,
-$$
+\[
 u(x,t)=-\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 1+\frac{(-1)^n4}{(2n-1)\pi}\right]\cos\frac{3(2n-1)\pi t}{2}\cos\frac{(2n-1)\pi
 x}{2}.
-$$
+\]
 
 
 \exer{12.2.28}
@@ -20871,17 +20806,17 @@ Theorem~11.3.5\part{c}  and Exercise~11.2.42\part{b}
 &=&-\frac{768}{(2n-1)^4\pi^4}
 \left[1+\frac{(-1)^n2}{(2n-1)\pi}\right];
 \end{eqnarray*}
-$$
+\[
 C_{M\!g}(x)=-\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 1+\frac{(-1)^n4}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2}.
-$$
+\]
 From Exercise~12.2.17,
-$$
+\[
 u(x,t)=-\dst\frac{768}{3\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}\left[
 1+\frac{(-1)^n4}{(2n-1)\pi}\right]\sin\frac{3(2n-1)\pi t}{2}\cos\frac{(2n-1)\pi
 x}{2}.
-$$
+\]
 
 
 \exer{12.2.30}
@@ -20905,11 +20840,11 @@ C_{M\!f}(x)=-\dst\frac{768}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 1+\frac{(-1)^n2}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 x}{2}$.
 From Exercise~12.2.17,
-$$
+\[
 u(x,t)=-\dst\frac{768}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}\left[
 1+\frac{(-1)^n2}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi t}{2}\cos\frac{(2n-1)\pi
 x}{2}.
-$$
+\]
 
 
 \exer{12.2.32}
@@ -20948,7 +20883,7 @@ x}{ 2L}=
 Since it can be shown that a mixed Fourier cosine series can be
 integrated term by term between any two limits,
 (B) implies that
-$$
+\[
 \begin{array}{rcl}
 \dst\sum_{n=1}^\infty\frac{2L\beta_n}{(2n-1)\pi a}
 \sin\frac{(2n-1)\pi at}{ 2L}\cos\frac{(2n-1)\pi x}{
@@ -20960,12 +20895,12 @@ $$
 &=&
 \dst\frac{1}{2a}\int_{x-at}^{x+at}C_{M\!g}(\tau)\,d\tau.
 \end{array}
-$$
+\]
 This and  (C) imply that
-$$
+\[
 u(x,t)=\frac{1}{2}[C_{M\!f}(x+at)+C_{M\!f}(x-at)]+
 \frac{1}{2a}\int_{x-at}^{x+at}C_{M\!g}(\tau)\,d\tau.
-$$
+\]
 
 
 
@@ -20995,46 +20930,46 @@ Substituting $\lambda=\dst\frac{(2n-1)^2\pi^2}{ 4L^2}$  into
 (B) yields
 $T''+((2n-1)^2\pi^2a^2/4L^2)T=0$,
 which has the general solution
-$$
+\[
 T_n=\alpha_n\cos\frac{(2n-1)\pi at}{2L}+\frac{2\beta_nL}{(2n-1)\pi a}\sin\frac{
 (2n-1)\pi at}{ 2L},
-$$
+\]
 where $\alpha_n$  and $\beta_n$ are constants. Now let
-$$
+\[
 v_n(x,t)=X_n(x)T_n(t)=\left(\alpha_n\cos\frac{(2n-1)\pi at}{2L}+
 \frac{2\beta_nL}{ (2n-1)\pi a}\sin\frac{(2n-1)\pi at}{2L}\right)
 \sin\frac{(2n-1)\pi x}{2L}.
-$$
+\]
 Then
-$$
+\[
 \frac{\partial v_n}{\partial t}(x,t)=
 \left(-\frac{(2n-1)\pi a }{2L}\alpha_n\sin\frac{(2n-1)\pi at}{2L}
 +\beta_n\cos\frac{(2n-1)\pi at}{2L}\right)\sin\frac{(2n-1)\pi x}{2L},
-$$
+\]
 so
-$$
+\[
 v_n(x,0)=\alpha_n\sin\frac{(2n-1)\pi x}{2L}
 \mbox{\quad and \quad}
 \frac{\partial v_n}{\partial t}(x,0)=\beta_n
 \sin\frac{(2n-1)\pi x}{2L}.
-$$
+\]
 Therefore,$v_n$ satisfies (A) with
 $f(x)=\dst\alpha_n \sin\frac{(2n-1)\pi x}{ 2L}$ and
 $g(x)=\dst\beta_n\sin
 \frac{(2n-1)\pi x}{ 2L}$. More generally, if
 $\alpha_1,\alpha_2,\dots,\alpha_m$
 and $\beta_1,\beta_2,\dots,\beta_m$ are constants and
-$$
+\[
 u_m(x,t)=\sum_{n=1}^m\left(\alpha_n\cos\frac{(2n-1)\pi at}{
 2L}+\frac{2\beta_nL}{ (2n-1)\pi a}\sin\frac{(2n-1)\pi at}{2L}\right)
 \sin\frac{(2n-1)\pi x}{2L},
-$$
+\]
 then $u_m$ satisfies (A) with
-$$
+\[
 f(x)=\sum_{n=1}^m \alpha_n\sin\frac{(2n-1)\pi x}{2L}
 \mbox{\quad and \quad}
 g(x)=\sum_{n=1}^m \beta_n\sin\frac{(2n-1)\pi x}{2L}.
-$$
+\]
  This motivates the definition.
 
 \exer{12.2.36}
@@ -21054,12 +20989,12 @@ $S_{M\!f}(x)
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x
 }{2}$.
 From Exercise~12.2.34,
-$$
+\[
 u(x,t)
 =\dst-\frac{96}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
 \cos\frac{3(2n-1)\pi t}{2}\sin\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 \exer{12.2.38}
@@ -21079,12 +21014,12 @@ $S_{M\!g}(x)
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x
 }{2}$.
 From Exercise~12.2.34,
-$$
+\[
 u(x,t)
 =\dst-\frac{64}{\pi^4}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^4}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
 \sin\frac{3(2n-1)\pi t}{2}\sin\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 \exer{12.2.40}
 Since $f(0)=f'(\pi)=f''(0)=0$ and $f'''(x)=6$,
@@ -21100,10 +21035,10 @@ $\dst
 S_{M\!f}(x)=\dst\frac{192}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 \sin\frac{(2n-1) x}{2}$.
 From Exercise~12.2.34,
-$$
+\[
 u(x,t)=\dst\frac{192}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 \cos\frac{(2n-1)\sqrt3\,t}{2}\sin\frac{(2n-1) x}{2}.
-$$
+\]
 
 
 
@@ -21121,10 +21056,10 @@ $\dst
 S_{M\!g}(x)=\dst\frac{192}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 \sin\frac{(2n-1) x}{2}$.
 From Exercise~12.2.34,
-$$
+\[
 u(x,t)=\dst\frac{384}{\sqrt3\,\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^5}
 \sin\frac{(2n-1)\sqrt3\,t}{2}\sin\frac{(2n-1) x}{2}.
-$$
+\]
 
 \exer{12.2.44}
 Since $f(0)=f'(1)=f''(0)=0$ and $f'''(x)=12(2x-1)$,
@@ -21147,11 +21082,11 @@ imply that
 $\dst S_{M\!f}(x)=\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2}$.
 From Exercise~12.2.34,
-$$
+\[
 u(x,t)=\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\cos(2n-1)\pi
 t\sin\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 
 \exer{12.2.46}
@@ -21175,11 +21110,11 @@ imply that
 $\dst S_{M\!g}(x)=\dst\frac{384}{\pi^4}\sum_{n=1}^\infty\frac{1}{(2n-1)^4}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi x}{2}$.
 From Exercise~12.2.34,
-$$
+\[
 u(x,t)=\dst\frac{384}{\pi^5}\sum_{n=1}^\infty\frac{1}{(2n-1)^5}
 \left[(-1)^n+\frac{4}{(2n-1)\pi}\right]\sin(2n-1)\pi
 t\sin\frac{(2n-1)\pi x}{2}.
-$$
+\]
 
 \exer{12.2.48}
 Since $f$ is continuous on $[0,L]$ and $f'(L)=0$,
@@ -21226,10 +21161,10 @@ From Example~11.3.5,
 $C_f(x)=\dst4-\frac{768}{\pi^4}\sum_{n=1}^\infty\frac{1}{
 (2n-1)^4}\cos\frac{(2n-1)\pi x}{ 2}$.
 From Exercise~12.2.49,
-$$
+\[
 u(x,t)=\dst4-\frac{768}{\pi^4}\sum_{n=1}^\infty\frac{1}{
 (2n-1)^4}\cos\frac{\sqrt5(2n-1)\pi t}{2}\,\cos\frac{(2n-1)\pi x}{ 2}.
-$$
+\]
 
 
 
@@ -21253,10 +21188,10 @@ Theorem~11.3.5\part{a} implies that
 $C_f(x)=\dst-\frac{2\pi^4}{5}-48\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^4}\cos n x$.
 From Exercise~12.2.49,
-$$
+\[
 u(x,t)=\dst-\frac{2\pi^4}{5}-48\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^4}\cos2nt\cos nx.
-$$
+\]
 
 
 
@@ -21278,10 +21213,10 @@ Theorem~11.3.5\part{a} implies that
 $\dst C_g(x)=\dst-\frac{2\pi^4}{5}-48\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^4}\cos nx$.
 From Exercise~12.2.49,
-$$
+\[
 u(x,t)=\dst-\frac{2\pi^4t}{5}-24\sum_{n=1}^\infty\frac{1+(-1)^n2}{
 n^5}\sin2nt\cos nx.
-$$
+\]
 
 
 \exer{12.2.56}
@@ -21376,7 +21311,7 @@ x}{ L}
 Since it can be shown that a Fourier sine series can be integrated
 term by term between any two limits,
 (B) implies that
-$$
+\[
 \begin{array}{rcl}
 \beta_0t+\dst\sum_{n=1}^\infty\frac{\beta_nL}{ n\pi a}
 \sin\frac{n\pi at}{ L}\cos\frac{n\pi x}{ L}&=&
@@ -21388,12 +21323,12 @@ $$
 &=&
 \dst\frac{1}{2a}\int_{x-at}^{x+at}C_g(\tau)\,d\tau.
 \end{array}
-$$
+\]
 This and  (C) imply that
-$$
+\[
 u(x,t)=\frac{1}{2}[C_f(x+at)+C_f(x-at)]+
 \frac{1}{2a}\int_{x-at}^{x+at}C_g(\tau)\,d\tau.
-$$
+\]
 
 \exer{12.2.62}\part{a}.
 Since $|p_n(x)|\le1$ and $|q_n(t)|\le1$
@@ -21472,11 +21407,11 @@ n^4\pi^4}\sin\frac{n\pi x}{ 2}\lims02
 $S(x)=\dst-\frac{32}{\pi^3}\sum_{n=1}^\infty\frac{[1+(-1)^n2]}{ n^3}
 \sin\frac{n\pi x}{ 2}$.
 From Example~12.3.1,
-$$
+\[
 u(x,y)=\dst-\frac{32}{\pi^3}\sum_{n=1}^\infty\frac{[1+(-1)^n2]\sinh
 n\pi(3-y)/2}{ n^3\sinh3n\pi/2}
 \sin\frac{n\pi x}{ 2}.
-$$
+\]
 
 
 
@@ -21511,10 +21446,10 @@ if $n\ge2$, then
 $S(x)=\dst\frac{\pi}{2}\sin
 x-\frac{16}{\pi}\sum_{n=1}^\infty\frac{n}{(4n^2-1)^2}\sin2nx$.
 From Example~12.3.1,
-$$
+\[
 u(x,y)=\dst\frac{\pi}{2}\frac{\sinh(1-y)}{\sinh1}\sin
 x-\frac{16}{\pi}\sum_{n=1}^\infty\frac{n\sinh2n(1-y)}{(4n^2-1)^2\sinh2n}\sin2nx.
-$$
+\]
 
 
 
@@ -21535,11 +21470,11 @@ if $n\ge1$,
 $C(x)=\dst\frac{1}{2}+\frac{4}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos(2n-1)\pi x$.
 From Example~12.3.3,
-$$
+\[
 u(x,y)=\dst\frac{y}{2}+\frac{4}{\pi^3}\sum_{n=1}^\infty\frac{
 \sinh(2n-1)\pi y}{(2n-1)^3\cosh2(2n-1)\pi}
 \cos(2n-1)\pi x.
-$$
+\]
 
 
 \exer{12.3.8}
@@ -21580,32 +21515,32 @@ $S_M(y)
 \frac{1}{(2n-1)^3}\left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
 y}{2}$.
 From Example~12.3.5,
-$$
+\[
 u(x,y)
 =\dst-\frac{96}{\pi^3}\sum_{n=1}^\infty
 \left[1+(-1)^n\frac{4}{(2n-1)\pi}\right]
 \frac{\cosh(2n-1)\pi(x-2)/2}{(2n-1)^3\cosh2(2n-1)\pi/2}
 \sin\frac{(2n-1)\pi y}{2}.
-$$
+\]
 
 
 
 \exer{12.3.12}
 From Example~11.3.8.3,
-$$
+\[
 S_M(y)
 =\dst\frac{96}{\pi^3}\sum_{n=1}^\infty
 \frac{1}{(2n-1)^3}\left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]
 \sin\frac{(2n-1)\pi y}{2}.
-$$
+\]
 From Example~12.3.5,
-$$
+\[
 u(x,y)
 =\dst\frac{96}{\pi^3}\sum_{n=1}^\infty
 \left[3+(-1)^n\frac{4}{(2n-1)\pi}\right]
 \frac{\cosh(2n-1)\pi(x-3)/2}{(2n-1)^3\cosh3(2n-1)\pi/2}
 \sin\frac{(2n-1)\pi y}{2}.
-$$
+\]
 
 
 
@@ -21629,13 +21564,13 @@ $C_M(y)=-\dst\frac{72}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
 1+\frac{4(-1)^n}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 y}{6}$.
 From Example~12.3.7,
-$$
+\[
 u(x,y)=-\dst\frac{432}{\pi^3}\sum_{n=1}^\infty
 \left[1+\frac{4(-1)^n}{(2n-1)\pi}\right]
 \frac{\cosh(2n-1)\pi x/6}{(2n-1)^3\sinh(2n-1)\pi/3}
 \cos\frac{(2n-1)\pi
 y}{6}.
-$$
+\]
 
 
 \exer{12.3.16}
@@ -21656,12 +21591,12 @@ $C_M(y)=-\dst\frac{96}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n+\frac{2}{(2n-1)\pi}\right]\cos\frac{(2n-1)\pi
 y}{2}$.
 From Example~12.3.7,
-$$
+\[
 u(x,y)=-\dst\frac{192}{\pi^4}\sum_{n=1}^\infty
 \frac{\cosh(2n-1)\pi x/2}{(2n-1)^4\sinh(2n-1)\pi/2}
 \left[(-1)^n+\frac{2}{(2n-1)\pi}\right]
 \cos\frac{(2n-1)\pi y}{2}.
-$$
+\]
 
 
 
@@ -21775,22 +21710,20 @@ $\alpha_n=\dst\frac{2}{ a}\int_0^a f(x)\sin\frac{(2n-1)\pi x}{2a}$.
 Now consider the special case.
 Since $f(0)=f'(L)=0$ and $f''(x)=-2$,
 Theorem~11.3.5\part{d} implies that
-$$
+\begin{gather*}
 \alpha_n=
 \frac{48}{(2n-1)^2\pi^2}\int_0^3\sin\frac{(2n-1)\pi x}{6}\,dx=
 -\frac{288}{(2n-1)^3\pi^3}\cos\frac{(2n-1)\pi x}{6}\lims03
 =\frac{288}{(2n-1)^3\pi^3};
-$$
-$$
+\\
 S_M(x)=\dst
 \frac{288}{\pi^3}\sum_{n=1}^\infty\frac{1}{
 (2n-1)^3}\sin\frac{(2n-1)\pi x}{6};
-$$
-$$
+\\
 u(x,y)=\dst
 \frac{288}{\pi^3}\sum_{n=1}^\infty\frac{\sinh(2n-1)\pi(2-y)/6}{
 (2n-1)^3\sinh(2n-1)\pi/3}\sin\frac{(2n-1)\pi x}{6}.
-$$
+\end{gather*}
 
 \exer{12.3.22}
 The boundary conditions require products $v(x,y)=X(x)Y(y)$
@@ -21833,11 +21766,11 @@ $\alpha_n=\dst\frac{2}{ a}\int_0^a f(x)\cos
 \frac{n\pi x}{ a}\,dx$, $n\ge1$.
 
 Now consider the special case.
-$$
+\[
 \dst \alpha_0=\frac{1}{ \pi}\int_0^\pi(x^4-2\pi x^3+\pi^2x^2)\,dx=\frac{1}{
 \pi}\left(\frac{x^5}{5}-\frac{\pi x^4}{2}+\frac{\pi^2x^3}{3}
 \right)\lims0\pi=\frac{\pi^4}{30}.
-$$
+\]
 Since  $f'(0)=f'(\pi)=0$ and  $f'''(x)=12(2x-\pi)$,
 Theorem~11.3.5\part{a} implies that
 \begin{eqnarray*}
@@ -21971,22 +21904,20 @@ n\pi}\left[(4-y)\cos\frac{n\pi y}{ 4}\lims24+
 =\frac{2}{
 n\pi}\cos\frac{n\pi}{2}+\frac{4}{ n^2\pi^2}\sin\frac{n\pi}{2};
 \end{eqnarray*}
-$$
+\begin{gather*}
 \alpha_n=\dst\frac{16}{ n^2\pi^2}\sin\frac{n\pi}{2}=
 \left\{\begin{array}{cl}
 (-1)^{m+1}\dst\frac{16}{(2m-1)^2\pi^2}&\mbox{if }n=2m-1\\
 0&\mbox{if }n=2m;
 \end{array}\right.
-$$
-$$
+\\
 S(y)=\dst\frac{16}{\pi^2}\sum_{n=1}^\infty\frac{(-1)^{n+1}}{(2n-1)^2}
 \sin\frac{(2n-1)\pi y}{ 4};
-$$
-$$
+\\
 u(x,y)=\dst\frac{64}{\pi^3}\sum_{n=1}^\infty(-1)^{n+1}
 \frac{\cosh(2n-1)\pi x/4}{(2n-1)^3\sinh(2n-1)\pi/4}
 \sin\frac{(2n-1)\pi y}{ 4}.
-$$
+\end{gather*}
 
 
 \exer{12.3.28}
@@ -22033,15 +21964,14 @@ $\dst\alpha_n=\frac{2}{ b}\int_0^b g(y)\cos
 
 Now consider the special case.
 From Example~11.3.1,
-$$
+\begin{gather*}
 C(y)=\dst\frac{\pi}{2}-\frac{4}{\pi}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}
 \cos(2n-1)y;
-$$
-$$
+\\
 u(x,y)=\dst\frac{\pi(x-2)}{2}-\frac{4}{\pi}\sum_{n=1}^\infty
 \frac{\sinh(2n-1)(x-2)}{(2n-1)^3\cosh2(2n-1)}
 \cos(2n-1)y.
-$$
+\end{gather*}
 
 
 \exer{12.3.30}
@@ -22088,16 +22018,15 @@ Theorem~11.3.5\part{d} implies that
 &=&\frac{288}{(2n-1)^3\pi^3}\sin\frac{(2n-1)\pi x}{6}\lims03
 =(-1)^{n+1}\frac{288}{(2n-1)^3\pi^3};
 \end{eqnarray*}
-$$
+\begin{gather*}
 C_M(x)=-\dst
 \frac{288}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^3}\cos\frac{(2n-1)\pi x}{6};
-$$
-$$
+\\
 u(x,y)=-\dst
 \frac{288}{\pi^3}\sum_{n=1}^\infty\frac{(-1)^n}{
 (2n-1)^3}e^{-(2n-1)\pi y/6}\cos\frac{(2n-1)\pi x}{6}.
-$$
+\end{gather*}
 
 
 \exer{12.3.32}
@@ -22198,25 +22127,24 @@ x}{10}\lims05+2
 &=&(-1)^n\frac{200}{(2n-1)^2\pi^2}
 +\frac{800}{(2n-1)^3\pi^3};
 \end{eqnarray*}
-$$
+\begin{gather*}
 S_M(x)=\dst\frac{200}{\pi^2}\sum_{n=1}^\infty\frac{1}{(2n-1)^2}\left[
 (-1)^n+\frac{4}{(2n-1)\pi}\right]\sin\frac{(2n-1)\pi
 x}{10};
-$$
-$$
+\\
 u(x,y)=-\dst\frac{2000}{\pi^3}\sum_{n=1}^\infty\frac{1}{(2n-1)^3}\left[
 (-1)^n+\frac{4}{(2n-1)\pi}\right]e^{-(2n-1)\pi y/10}\sin\frac{(2n-1)\pi
 x}{10}.
-$$
+\end{gather*}
 
 
 \exer{12.3.36}
 Solving  BVP$(1,1,1,1)(f_0,0,0,0)$ requires
 products $X(x)Y(y)$ such that
-$$
+\[
 X''+\lambda X=0,\quad X'(0)=0,\quad X'(a)=0;
 \quad Y''-\lambda Y=0,\quad  Y'(b)=0,\quad Y'(0)=1.
-$$
+\]
 Hence, $X_n=\dst\cos\frac{n\pi x}{ a}$,
 $Y_n=-\dst\frac{a\cosh n\pi(y-b)/a}{ n\pi\sinh n\pi b/a}$,
  and
@@ -22290,13 +22218,13 @@ by Theorem~7.4.3. We want $R_n(\rho)=1$ and $R_n(\rho_0)=0$, so
 $R_n(r)=\dst\frac{\rho_0^{-n\pi/\gamma}r^{n\pi/\gamma}-\rho_0^{n\pi/\gamma}
 r^{-n\pi/\gamma}}{\rho_0^{-n\pi/\gamma}\rho^{n\pi/\gamma}-\rho_0^{n\pi/\gamma}
 \rho^{-n\pi/\gamma}}$;
-$$
+\[
 \dst v_n(r,\theta)=
 \dst\frac{\rho_0^{-n\pi/\gamma}r^{n\pi/\gamma}-\rho_0^{n\pi/\gamma}
 r^{-n\pi/\gamma}}{\rho_0^{-n\pi/\gamma}\rho^{n\pi/\gamma}-\rho_0^{n\pi/\gamma}
 \rho^{-n\pi/\gamma}}
 \sin\frac{n\pi\theta}{\gamma};
-$$
+\]
 $\dst u(r,\theta)=\sum_{n=1}^\infty\alpha_n
 \dst\frac{\rho_0^{-n\pi/\gamma}r^{n\pi/\gamma}-\rho_0^{n\pi/\gamma}
 r^{-n\pi/\gamma}}{\rho_0^{-n\pi/\gamma}\rho^{n\pi/\gamma}-\rho_0^{n\pi/\gamma}
@@ -22460,11 +22388,11 @@ Let $y_{1}=\sin(x-a)$ and $y_{2}=\cos(x-b)$. Then $y_{1}(a)=y_{2}'(b)=0$
 and
 $\{y_{1},y_{2}\}$ is linearly independent if $b-a\ne(k+1/2)\pi$
 ($k=$ integer), since
- $$
+ \[
 \left|\begin{array}{crccccc}
 \sin(x-a)&\cos(x-b)\\\cos(x-a)&-\sin(x-b)
 \end{array}\right|=-\cos(b-a)\ne0.
-$$
+\]
 \enlargethispage{1in}
 \bigskip
 
@@ -22484,18 +22412,16 @@ u_{1}'\sin(x-a)+u_{2}'\cos(x-b)&=&0 \\
 u_{1}'\cos(x-a)-u_{2}'\sin(x-b)&=&F,
 \end{eqnarray*}
 then $y''+y=F$.
-$$
+\begin{gather*}
 u_{1}'=F(x)\frac{\cos(x-b)}{\cos(b-a)}, \quad
 u_{2}'= -F(x)\frac{\sin(x-a)}{\cos(b-a)},
-$$
-$$
+\\
 u_{1}=-\frac{1}{\cos(b-a)}\int_{x}^{b}F(t)\cos(t-b)\,dt,\quad
 u_{2}=-\frac{1}{\cos(b-a)}\int_{a}^{x}F(t)\sin(t-b)\,dt;
-$$
-$$
+\\
 y=-\frac{\sin(x-a)}{\cos(b-a)}\int_{x}^{b}F(t)\cos(t-b)\,dt
 -\frac{\cos(x-b)}{\cos(b-a)}\int_{a}^{x}F(t)\sin(t-a)\,dt.
-$$
+\end{gather*}
 
 \part{b} If $b-a=(k+1/2)\pi$  ($k=$ integer), then
 $y_{1}=\sin(x-a)$ satisfies both boundary conditions $y(a)=0$
@@ -22506,19 +22432,16 @@ u_{1}'\sin(x-a)+u_{2}'\cos(x-a)&=&0,\\
 u_{1}'\cos(x-a)-u_{2}'\sin(x-a)&=&F,
 \end{eqnarray*}
 then $y_{p}''+y_{p}=F$; $u_{1}'=F\cos(x-a)$; $u_{2}'=-F\sin(x-a)$;
-
-$$
+\begin{gather*}
 u_{1}=-\int_{x}^{b}F(t)\cos(t-a)\,dt, \quad
 u_{2}=-\int_{a}^{x}F(t)\sin(t-a)\,dt;
-$$
-$$
+\\
 y_{p}=-\sin(x-a)\int_{x}^{b}F(t)\cos(t-a)\,dt
 -\cos(x-a)\int_{a}^{x} F(t)\sin(t-a)\,dt;
-$$
-$$
+\\
 y_{p}'=-\cos(x-a)\int_{x}^{b}F(t)\cos(t-a)\,dt
 +\sin(x-a)\int_{a}^{x}F(t)\sin(t-a)\,dt.
-$$
+\end{gather*}
 The general solution of $y''+y=F$  is
 $y=y_{p}+c_{1}\sin(x-a)+c_{2}\cos(x-a)$.  Since $b-a=(k+1/2)\pi$,
 $y'(b)=0\implies y_{p}'(b)=(-1)^{k}\dst{\int_{a}^{b}}F(t)\sin(t-a)\,dt=0$;
@@ -22530,11 +22453,11 @@ $y=y_{p}+c_{1}\sin(x-a)$, with $c_{1}$ arbitrary.
 \exer{13.1.12}
 Let $y_{1}=\sinh(x-a)$  and $y_{2}=\sinh(x-b)$. Then
 $y_{1}(a)=0$, $y_{2}(b)=0$, and
-$$
+\[
 W(x)=\left|\begin{array}{ccccccc}
 \sinh(x-a)&\sinh(x-b)\\\cosh(x-a)&\cosh(x-b)
 \end{array}\right|=\sinh(b-a)\ne0.
-$$
+\]
 (Since $W$ is constant (Theorem~5.1.4), evaluate it by
 setting $x=b$.) From Theorem 13.1.2,  (A) has a unique solution
 for any continuous $F$  and constants $k_{1}$ and $k_{2}$.
@@ -22544,29 +22467,27 @@ u_{1}'\sinh(x-a)+u_{2}'\sinh(x-b)&=&0 \\
 u_{1}'\cosh(x-a)+u_{2}'\cosh(x-b)&=&F,
 \end{eqnarray*}
 then $y''-y=F$.
-$$
+\begin{gather*}
 u_{1}'=-F(x)\frac{\sinh(x-b)}{\sinh(b-a)}, \quad
 u_{2}'=F(x)\frac{\sinh(x-a)}{\sinh(b-a)},
-$$
-$$
+\\
 u_{1}=\frac{1}{\sinh(b-a)}\int_{x}^{b}F(t)\sinh(t-b)\,dt,\quad
 u_{2}=\frac{1}{\sinh(b-a)}\int_{a}^{x}F(t)\sinh(t-a)\,dt;
-$$
-$$
+\\
 y=\frac{\sinh(x-a)}{\sinh(b-a)}\int_{x}^{b}F(t)\sinh(t-b)\,dt+
 \frac{\sinh(x-b)}{\sinh(b-a)}\int_{a}^{x}F(t)\sinh(t-a)\,dt.
-$$
+\end{gather*}
 
 
 \exer{13.1.14}
 Let $y_{1}=\cosh(x-a)$  and $y_{2}=\cosh(x-b)$. Then
 $y_{1}'(a)=y_{2}'(b)=0$  and
-$$
+\[
 W(x)=
 \left|\begin{array}{rr}
 \cosh(x-a)&\cosh(x-b)\\\sinh(x-a)&\sinh(x-b)
 \end{array}\right|=-\sinh(b-a)\ne0.
-$$
+\]
 (Since $W$ is constant  (Theorem~5.1.40, evaluate it by
 setting $x=b$.)
 If \\$y=u_{1}\cosh(x-a)+u_{2}\cosh(x-b)$ where
@@ -22575,51 +22496,47 @@ u_{1}'\cosh(x-a)+u_{2}'\cosh(x-b)&=&0 \\
 u_{1}'\sinh(x-a)+u_{2}'\sinh(x-b)&=&F,
 \end{eqnarray*}
 then $y''-y=F$.
-$$
+\begin{gather*}
 u_{1}'=F(x)\frac{\cosh(x-b)}{\sinh(b-a)}, \quad
 u_{2}'=-F(x)\frac{\cosh(x-a)}{\sinh(b-a)},
-$$
-$$
+\\
 u_{1}=-\frac{1}{\sinh(b-a)}\int_{x}^{b}F(t)\cosh(t-b)\,dt,\quad
 u_{2}=-\frac{1}{\sinh(b-a)}\int_{a}^{x}F(t)\cosh(t-a)\,dt;
-$$
-$$
+\\
 y=-\frac{\cosh(x-a)}{\sinh(b-a)}\int_{x}^{b}F(t)\cosh(t-b)\,dt
 -\frac{\cosh(x-b)}{\sinh(b-a)}\int_{a}^{x}F(t)\cosh(t-a)\,dt.
-$$
+\end{gather*}
 
 
 \exer{13.1.16} Let $y_{1}=\sin\omega x$, $y_{2}\sin\omega(x-\pi)$; then
 $y_{1}(0)=0$, $y_{2}(\pi)=0$,
-$$
+\[
 W(x)=
 \left|\begin{array}{ccccccc}
 \sin\omega x&\sin\omega(x-\pi)\\
 \omega\cos\omega x &\omega\cos\omega(x-\pi)
 \end{array}\right|=\omega\sin\omega\pi\ne0
-$$
+\]
 if  and only if $\omega$ is not an integer. If this is so, then
 $y=u_{1}\sin\omega x+u_{2}\sin\omega(x-\pi)$ if
 \begin{eqnarray*}
 u_{1}'\sin\omega x+u_{2}'\sin\omega(x-\pi)&=&0\\
 \omega(u_{1}'\cos\omega x+u_{2}'\cos\omega(x-\pi))&=&F;
 \end{eqnarray*}
-$$
+\begin{gather*}
 u_{1}'=-F\frac{\sin\omega(x-\pi)}{\omega\sin\omega\pi}, \quad
 u_{2}'=F\frac{\sin\omega x}{\omega\sin\omega\pi};
-$$
-$$
+\\
 u_{1}=\frac{1}{\omega\sin \omega \pi}\int_{x}^{\pi}
 F(t)\sin\omega(t-\pi)\,dt;\quad
 u_{2}=\frac{1}{\omega\sin \omega \pi}\int_{0}^{x}
 F(t)\sin\omega t\,dt;
-$$
-$$
+\\
 y=\frac{1}{\omega\sin \omega \pi}\left(
 \sin\omega x\int_{x}^{\pi}F(t)\sin\omega(t-\pi)\,dt +
 \sin\omega(x-\pi) \int_{0}^{\pi}
 F(t)\sin\omega t\,dt\right).
-$$
+\end{gather*}
 
 If $\omega= n$ (positive integer), then $y_{1}=\sin nx$  is a nontrivial
 solution of $y''+y=0$, $y(0)=0$, $y(\pi)=0$. Let $y_{2}=\cos nx$; then
@@ -22636,10 +22553,10 @@ $u_{1}'=\dst{\frac{1}{n}}F\cos nx$,
 $u_{2}'=-\dst{\frac{1}{n}}F\sin nx$;
 $u_{1}=-\dst{\frac{1}{n}}\dst{\int_{x}^{\pi}}F(t)\cos nt\,dt$;
 $u_{2}=-\dst{\frac{1}{n}}\dst{\int_{0}^{x}}F(t)\sin nt\,dt$;
-$$
+\[
 y_{p}=-\frac{1}{n}\left(\sin nx\int_{x}^{\pi}F(t)\cos nt\,dt
 +\cos nx \int_{0}^{x}F(t)\sin nt\,dt\right);
-$$
+\]
 $y=y_{p}+c_{1}\sin nx+c_{2}\cos nx$. Since $y_{p}=0$, $y(0)=0$, so
 $c_{2}=0$; $y=y_{p}+c_{1}\sin nx$. Since $y(\pi)=0$,
 $\dst{\int_{0}^{\pi}}F(t)\sin nt\,dt=0$ is necessary for existence of a
@@ -22650,13 +22567,13 @@ with $c_{1}$ arbitrary.
 \exer{13.1.18}
 Let $y_{1}=\cos\omega x$; $y_{2}=\sin\omega(x-\pi)$; then
 $y_{1}'(0)=y_{2}(\pi)=0$, and
-$$
+\[
 W(x)=
 \left|\begin{array}{ccccccc}
 \cos\omega x& \sin\omega(x-\pi)\\
 -\omega\sin\omega x&\omega\cos\omega(x-\pi)
 \end{array}\right|=\omega\cos\omega\pi\ne0
-$$
+\]
 if and only if $\omega\ne n+1/2$ ($n=$ integer).
 If this is so, then $y=u_{1}\cos \omega x+u_{2}\sin\omega(x-\pi)$
 satisfies $y''+\omega^{2}y=F(x)$ if
@@ -22665,64 +22582,57 @@ u_{1}'\cos\omega x+u_{2}'\sin\omega(x-\pi)&=&0\\
 \omega(-u_{1}'\sin\omega x+u_{2}'\cos\omega(x-\pi))\omega&=&F;
 \end{eqnarray*}
 then
-$$
+\begin{gather*}
 u_{1}'=-\frac{F\sin\omega(x-\pi)}{\omega\cos\omega\pi},\quad
 u_{2}'=\frac{F\cos\omega x}{\omega\cos\omega\pi}, \quad
-$$
-$$
+\\
 u_{1}=\frac{1}{\omega\cos\omega\pi}
 \int_{x}^{\pi}F(t) \sin\omega(t-\pi),dt, \quad
 u_{2}=\frac{1}{\omega\cos\omega\pi}
 \int_{0}^{x} F(t)\cos\omega t\,dt,\quad
-$$
-$$
+\\
 y=\frac{1}{\omega\cos\omega\pi}
 \left(\sin\omega x \int_{x}^{\pi}F(t) \sin\omega(t-\pi),dt
 +\sin\omega(x-\pi)\int_{0}^{x}F(t)\cos\omega t\,dt\right).
-$$
+\end{gather*}
 
 If  $\omega=n+1/2$ ($n=$ integer), then $y_{1}=\cos(n+1/2)x$ is a
 nontrivial solution $y''+y=0$, $y'(0)=y(\pi)=0$. Let
 $y_{2}=\sin(n+1/2)x$; then
-$$
+\[
 W(x)=
 \left|\begin{array}{ccccccc}
 \cos(n+1/2)x&\sin(n+1/2)x\\
 -(n+1/2)\sin(n+1/2)x&(n+1/2)\cos(n+1/2)x\\
 \end{array}\right|=n+1/2,
-$$
+\]
 so $y_{p}=u_{1}\cos(n+1/2)x+u_{2}\sin(n+1/2)x$  satisfies
 $y_{p}''+(n+1/2)^{2}y_{p}=F$ if
 \begin{eqnarray*}
 u_{1}'\cos(n+1/2)x+u_{2}'\sin(n+1/2)x&=&0 \\
 -(n+1/2)u_{1}'\sin(n+1/2)x+(n+1/2)u_{2}'\cos(n+1/2)x&=&F.
 \end{eqnarray*}
-$$
+\begin{gather*}
 u_{1}'=-\frac{F\sin(n+1/2)x}{n+1/2};\quad
 u_{2}'=\frac{F\cos(n+1/2)x}{n+1/2};
-$$
-$$
+\\
 u_{1}=\int_{x}^{\pi} \frac{F(t)\sin(n+1/2)t}{n+1/2}\,dt; \quad
 u_{2}=\int_{0}^{x} \frac{F(t)\cos(n+1/2)t}{n+1/2}\,dt; \quad
-$$
-$$
+\\
 y_{p}=\frac{1}{n+1/2}\left(
 \cos(n+1/2)x\int_{x}^{\pi} F(t)\sin(n+1/2)t\,dt
 +\sin(n+1/2)x
 \int_{0}^{x} F(t)\cos(n+1/2)t\,dt\right);
-$$
-$$
+\\
 y_{p}'=-
 \sin(n+1/2)x\int_{x}^{\pi} F(t)\sin(n+1/2)t\,dt
 +\cos(n+1/2)x
 \int_{0}^{x} F(t)\cos(n+1/2)t\,dt;
-$$
-$$
+\\
 y=y_{p}+c_{1}\cos(n+1/2)x+c_{2}\sin(n+1/2)x;
-$$
-$$
+\\
 y'=y_{p}'+(n+1/2)(-c_{1}\sin(n+1/2)x+c_{2}\cos(n+1/2))x.
-$$
+\end{gather*}
 Since $y_{p}'(0)=0$, $y'(0)=0\implies c_{2}=0$;
 $y=y_{p}+c_{1}\cos(n+1/2)x$;  \\
 $y'=y_{p}'+(n+1/2)c_{1}(n+1/2)x$; $y(\pi)=0\implies y_{p}(\pi)=0$.
@@ -22840,7 +22750,7 @@ $W(x)=
 \end{array}\right]
 =\alpha(\rho+\delta)-\beta\rho$. From Theorem~13.1.2, (A) has a unique
 solution if and only if $\alpha(\rho+\delta)-\beta\rho\ne0$. Then
-$$
+\[
 G(x,t)=
 \begin{cases}
 \dst{\frac{(\beta-\alpha t)(\rho+\delta-\rho x)}
@@ -22848,7 +22758,7 @@ G(x,t)=
 \dst{\frac{(\beta-\alpha x)(\rho+\delta-\rho t)}
 {\alpha(\rho+\delta)-\beta\rho}}, \quad x\le t\le 1.
 \end{cases}
-$$
+\]
 
 
 \exer{13.1.28}
@@ -22874,7 +22784,7 @@ $W=
 \end{array}\right]=\alpha\rho+\beta\delta$.
 From Theorem~13.1.2, (A) has a unique
 solution if and only if $\alpha\rho+\beta\delta\ne0$. Then
-$$
+\[
 G(x,t)=
 \begin{cases}
 \dst{\frac{(\beta\cos t-\alpha\sin  t)(\rho\cos x+\delta\sin  x)}
@@ -22882,7 +22792,7 @@ G(x,t)=
 \dst{\frac{(\beta\cos x-\alpha\sin  x)(\rho\cos t+\delta\sin t))}
 {\alpha\rho+\beta\delta}}, \quad x\le t\le \pi.
 \end{cases}
-$$
+\]
 
 
 \exer{13.1.30}
@@ -22932,17 +22842,17 @@ v_{1}&v_{2}\\ v_{1}'&{x}v_{2}'
 Since $v_{i}''+v_{i}=0$, $i=1$, $2$,
 Theorem~5.1.4 implies that $W(x)=Ke^{2x}$, where
 is a constant that can be determined by setting $x=0$ in the determinant:
-$$
+\[
 W(x)e^{2x}
 \left|\begin{array}{cccccc}
 \beta&\rho+\delta\\-\alpha-\beta&\delta
 \end{array}\right|
 =[\beta\delta+(\alpha+\beta)(\rho+\delta)].
-$$
+\]
 From Theorem~13.1.2, the boundary value problem has a unique
 solution if and only if $\beta\delta+(\alpha+\beta)(\rho+\delta)\ne0$.
 In this case the Green's function is
-$$
+\[
 G(x,t)=
 \begin{cases}
 e^{x-t}\dst{\frac{[\beta\cos t-(\alpha+\beta)\sin t]
@@ -22952,7 +22862,7 @@ e^{x-t}\dst{\frac{[\beta\cos x-(\alpha+\beta)\sin x]
 [\rho+\delta)\cos t+\delta\sin t]}
 {\beta\delta+(\alpha+\beta)(\rho+\delta)}},&x\le t \le \pi/2.
 \end{cases}
-$$
+\]
 
 
 \exer{13.1.32} Let $y_{p}=\dst{\int_{a}^{b}}G(x,t)F(t)\,dt$. From
@@ -22998,15 +22908,14 @@ $xe^{-x}y''+(1-x)y'+\alpha e^{-x}y=0$; $(xe^{-x}y')'+\alpha e^{-x}y=0$.
 \exer{13.2.8} If $\lambda$ is an eigenvalues of (A) and $y$ is a $\lambda$-eigenfunction,
  multiplying the differential equation in (B) by $y$ yields
 $(xy')y+\dst{\frac{\lambda}{x}}y^{2}=0$;
-$$
+\begin{gather*}
 \lambda\int_{1}^{2}\frac{y^{2}(x)}{x^{2}}\,dx=
 -\int_{1}^{2}(xy'(x))'y(x)\,dx=
 -xy'(x)y(x)\bigg|_{1}^{2}+\int_{1}^{2}x(y'(x))^{2}\,dx;
-$$
-$$
+\\
 y(1)=y_(2)=0\implies xy'(x)y(x)\bigg|_{1}^{2}=0;\quad
 \lambda\int_{1}^{2}\frac{y^{2}(x)}{x}\,dx=\int_{1}^{2}x(y'(x))^{2}\,dx.
-$$
+\end{gather*}
 Therefore $\lambda\ge 0.$ We must still show that $\lambda=0$  is not an
 eigenvalue. To this end, suppose that $(xy')'=0$; then
 $xy'=c_{1}$;   $y'=\dst{\frac{c_{1}}{x}}$; $y=c_{1}\ln|x|+c_{2}$;
