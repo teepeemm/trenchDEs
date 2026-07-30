@@ -53,6 +53,7 @@
   cap
 }
 
+\newtoggle{solutionManual}
 \newtoggle{boundaryvalues}
 
 \EditInstance{heading}{section}{title-decls=\raggedright}
@@ -256,6 +257,11 @@ TECHNOLOGY}\par}
 %\subitem orthogonal with respect to, \pageref{eq:11.2.7}
 %\pageref{exer:7.2.30}
 
+\title{%
+\iftoggle{solutionManual}{Student Solutions Manual For }{}%
+Elementary Differential Equations%
+\iftoggle{boundaryvalues}{ With Boundary Value Problems}{}%
+}
 
-\title{Elementary Differential Equations}
 \author{William F. Trench}
+\date{Summer 2026}

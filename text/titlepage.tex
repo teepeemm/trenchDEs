@@ -2,32 +2,42 @@
 
 \begin{center}
 
-\thispagestyle{empty}
-{\sloppy\bfseries\huge
-ELEMENTARY \medskip DIFFERENTIAL EQUATIONS%
-\iftoggle{boundaryvalues}{ WITH \medskip BOUNDARY VALUE PROBLEMS}{}%
-}
 
+\thispagestyle{empty}
+{
+\makeatletter
+\sloppy
+\tagstructbegin{tag=Title}
+\tagmcbegin{tag=Title}
+\bfseries\huge\MakeUppercase\@title
+\tagmcend
+\tagstructend
+\par
+}
 
  \vspace*{.15in}
 
 \begin{center}
  \includegraphics[width=5.67in,height=3.3in,keepaspectratio,
   alt={Arrows moving through the plain up and left, but circling clockwise around the origin.  Lines follow the arrows, creating a denser line that starts and ends along y=-x, but also circles clockwise around the origin.}
- ]{cover}
+ ]{\iftoggle{solutionManual}{../EPS/cover}{cover}}
 \end{center}
 \vspace*{.15in}
 \bfseries\LARGE
+\makeatletter
 \href{http://ramanujan.math.trinity.edu/wtrench/index.shtml}
-{William F. Trench}
+{\@author}
+\makeatother
+%{William F. Trench}
 \medskip
 
 \large
 Andrew G. Cowles Distinguished Professor Emeritus\\
 Department of Mathematics\\
 Trinity University \\
-San Antonio, Texas, USA\\
-\href{mailto:wtrench@trinity.edu}{wtrench@trinity.edu}
+San Antonio, Texas, USA
+%\\\href{mailto:wtrench@trinity.edu}{wtrench@trinity.edu}
+% He passed in 2016
 \large
 
 \begin{quote}
@@ -44,9 +54,11 @@ built upon  subject to the  Creative Commons
 License}.
 \end{quote}
 
+\iftoggle{solutionManual}{}{
 \vspace{.25in}
 \href{http://ramanujan.math.trinity.edu/wtrench/texts/TRENCH_DE_STUDENT_MANUAL.PDF}
 {\bfseries FREE DOWNLOAD: STUDENT SOLUTIONS MANUAL}
+}
 
 \end{center}
 \newpage
@@ -58,7 +70,7 @@ License}.
 
 \noindent
 %Free Edition 1.01 (December 2013)
-Tagged Free Edition 1.1 (Summer 2026)
+Tagged Free Edition 1.1 (\makeatletter\@date\makeatother)%Summer 2026)
 
 \medskip
 \thispagestyle{empty}
