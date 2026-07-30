@@ -21,6 +21,10 @@ HELP_MESSAGE := $(HELP_MESSAGE)"pdf\\t\\t: compile with latexmk\\n"
 pdf:
 	$(EXTRA_MEM) $(LATEXMK) $(FLAGS) $(JOBNAME)
 
+HELP_MESSAGE := $(HELP_MESSAGE)"solutions\\t: compile solution manual with latexmk\\n"
+solutions:
+	cd studentManual && $(EXTRA_MEM) $(LATEXMK) $(FLAGS) $(JOBNAME)_STUDENT_MANUAL
+
 HELP_MESSAGE := $(HELP_MESSAGE)"timed\\t\\t: time one compilation with lualatex\\n"
 timed:
 	$(EXTRA_MEM) $(TIMER) $(LUALATEX) $(INTERACTION) $(JOBNAME)
@@ -34,6 +38,7 @@ bfopdf:
 	java -cp "$(BFOPDF):$(PDFVERIFY)" PDFverify $(JOBNAME).pdf
 
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="autoref p"
+TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="DocumentMetadata p"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="eqref p"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="iftoggle p"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="href p"
@@ -41,7 +46,9 @@ TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="hyperref o"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="label p"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="nameref p"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="personHref p"
+TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="phantom p"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="ref p"
+TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="toggletrue p"
 TEX_COMMANDS := $(TEX_COMMANDS) --add-tex-command="zcref op"
 
 # to add newword to the aspell dictionary:
@@ -54,5 +61,10 @@ misspellings:
 		echo "\\n$$filename misspellings:\\n" >> misspellings.txt ; \
 		cat $$filename | aspell --mode=tex --ignore=3 $(TEX_COMMANDS) list \
 		|  grep -vFf valid_words.txt \
-		>> misspellings.txt ; \
+		>> misspellings.txt || true ; \
 	done
+	echo "\\nstudentManual/TRENCH_DIFFEQ_STUDENT_MANUAL.tex misspellings:\\n" >> misspellings.txt
+	cat studentManual/TRENCH_DIFFEQ_STUDENT_MANUAL.tex \
+		| aspell --mode=tex --ignore=3 $(TEX_COMMANDS) list \
+		| grep -vFf valid_words.txt \
+		>> misspellings.txt || true
