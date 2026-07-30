@@ -1,11 +1,11 @@
 \DocumentMetadata{
-  tagging=off,
+  tagging=on,
   lang=en-US,
-%  pdfstandard=UA-2,
-%  tagging-setup={
-%%    math/alt/use,
-%    math/setup=mathml-SE
-%  }
+  pdfstandard=UA-2,
+  tagging-setup={
+%    math/alt/use,
+    math/setup=mathml-SE
+  }
 }
 \documentclass[openany]{book}
 
@@ -18,7 +18,6 @@
  \fi
 }
 \makeatother
-%\newcommand{\exer}[1]{\par\noindent{\bfseries #1}.}
 \newenvironment{sectionSolutions}{
  \begin{enumerate}[item-label={\thesection.\arabic{enumi}.}]
 }{
@@ -26,15 +25,16 @@
 }
 
 %\toggletrue{boundaryvalues}
+\toggletrue{solutionManual}
 
 % TODO see https://github.com/josephwright/siunitx/issues/877
 \setlength\hfuzz{8pt}
 
 \begin{document}
 
-%STUDENT SOLUTIONS MANUAL FOR
+\frontmatter
 
-%\input{../text/titlepage}
+\input{../text/titlepage}
 
 \mainmatter
 
@@ -589,7 +589,7 @@ $z=\dst\frac{1}{3}+ce^{3x}=\tan y$;\;
 $y=\tan^{-1}\dst{\left(\frac{1}{3}+ce^{3x}\right)}$.
 
 \item
-If $z=e^{y^2}$, then $z'=2yy'e^{y^2}$, so $z'+\dst\frac{2}{
+If $z=e^{y^2}$, then $z'=2yy' e^{y^2}$, so $z'+\dst\frac{2}{
 x}z=\dst\frac{1}{ x^2}$;\;
 $z_1=\dst\frac{1}{ x^2}$;\;
 $z=\dst\frac{u}{ x^2}$;\;
@@ -743,7 +743,7 @@ $y=\dst\frac{x+c}{1-cx}$, where $c=\tan k$.
 $(\sin y)y'=\cos x$;\ $-\cos
 y=\sin x+c$;\  $y(\pi)=\dst\frac{\pi}{2}\Rightarrow
 c=0$, so (A)  $\cos y=-\sin
-x$. To obtain $y$ explicity we  note that $-\sin x=\cos(x+\pi/2)$, so
+x$. To obtain $y$ explicitly we  note that $-\sin x=\cos(x+\pi/2)$, so
 (A) can be rewritten as  $\cos y=\cos(x+\pi/2)$. This equation
 holds if an only if one of the following conditions holds for some
 integer $k$:
@@ -3060,11 +3060,16 @@ $ y_1=2.961316248$; $y_2=2.920128958$.
 \item
 {\small
 \tagpdfsetup{table/header-rows={1,2},table/header-columns={1}}
-\begin{tabular}{S[table-format=1.2] *3{S[table-format=1.9]} *3{S[table-format=-1.9]} }\toprule
+\begin{tabular}{ @{}
+ S[table-format=1.2]
+ *3{S[table-format=1.9]}
+ S[table-format=-1.2e-1,exponent-mode=scientific]
+ S[table-format=-1.2e-2,exponent-mode=scientific]
+ S[table-format=-1.2e-2,exponent-mode=scientific] @{} }\toprule
 &\multicolumn{3}{c}{Approximate Solutions}&
 \multicolumn{3}{c}{Residuals}\\\cmidrule(r){2-4}\cmidrule(l){5-7}
 {$x$}&{$h=0.1$}&{$h=0.05$}&{$h=0.025$}&{$h=0.1$}&{$h=0.05$}&{$h=0.025$}\\ \midrule
-1.0 & 1.000000000 & 1.000000000 & 1.000000000 & 0.000000000 &  0.0000000000 &   0.00000000000\\
+1.0 & 1 & 1 & 1 & 0 &  0 &   0\\
 1.1 & 0.923730622 & 0.923730677 & 0.923730681 &-0.000000608 & -0.0000000389 &  -0.00000000245 \\
 1.2 & 0.854443253 & 0.854443324 & 0.854443328 &-0.000000819 & -0.0000000529 &  -0.00000000335 \\
 1.3 & 0.791581155 & 0.791581218 & 0.791581222 &-0.000000753 & -0.0000000495 &  -0.00000000316 \\
@@ -3572,7 +3577,7 @@ $Q'=10-\dst\frac{Q}{5}$, or
 of the complementary equation, the solutions of (A) are given by
 $Q=ue^{-t/5}$ where $u'e^{-t/5}=10$. Therefore,$u'=10e^{t/5}$,
 $u=50e^{t/10}+c$, and $Q=50+ce^{-t/5}$. Since
-$\lim_{t\to\infty}Q(t)=50$, the mininum capacity is 50 gallons.
+$\lim_{t\to\infty}Q(t)=50$, the minimum capacity is 50 gallons.
 
 
 
@@ -3682,7 +3687,7 @@ $Q(t)=\dst Q_0Q_1(t)+2Q_1(t)\int_0^t\frac{d\tau}{ Q_1(\tau)}$.
 From (B),
 $\dst\lim_{t\to\infty}Q(t)=2\lim_{t\to\infty}Q_1(t)
 \int_0^t\frac{d\tau}{ Q_1(\tau)}$, a $0\cdot\infty$ indeterminate
-form. By L'Hospital's rule,
+form. By L'Hôpital's rule,
 $\dst\lim_{t\to\infty}Q(t)=2\lim_{t\to\infty}
 \dst\frac{1}{ Q_1(t)}\bigg/\left(\frac{-Q_1'(t)}{ Q_1^2(t)}\right)
 =-2\lim_{t\to\infty}\frac{Q_1(t)}{ Q_1'(t)}=300$.
@@ -3827,7 +3832,7 @@ $\lim_{t\to\infty}s(t)=\overline s\le s_T$. If $\overline s<s_T$
 then (A) implies that $s'(t)>K=g-f(\overline s)/m$. Consequently,
 $s(t)>s(0)+Kt$, which contradicts (D) because $K>0$. Therefore,
 $s(0)<s_T\Rightarrow\lim_{t\to\infty}s(t)=s_T$. A similar proof with
-inequlities reversed shows that
+inequalities reversed shows that
 $s(0)>s_T\Rightarrow\lim_{t\to\infty}s(t)=s_T$.
 \end{alist}
 
@@ -3968,7 +3973,7 @@ Suppose that $y$ is the solution of the initial value problem
 (A) $y''+p(y)=0,\quad y(0)=y_0,\quad y'(0)=0$, where $\overline
 y<y_0<\overline y+\epsilon$. Now let $Y=y-\overline y$ and
 $P(Y)=p(Y+\overline y)$. Then $P(0)=0$ and $P(Y)<0$ if
-$0<Y\le\rho$ . Morover, $Y$ is the solution of
+$0<Y\le\rho$ . Moreover, $Y$ is the solution of
  $Y''+p(Y)=0,\quad Y(0)=Y_0,\quad Y''(0)=0$, where $Y_0=y_0-\overline
 y$, so $0<Y_0<\epsilon$. From \part{a}, $Y(t)\ge\epsilon$ for some
 $t>0$. Therefore,$y(t)>\overline y+\epsilon$ for some $t>0$,
@@ -4006,9 +4011,9 @@ $(1+x^2)y'-2xy=(1-x)^2e^x$.
 
 
 \item
-If (A) $y=f+cg$, then (B) $y'=f'+cg'$. Mutiplying (A) by $g'$
+If (A) $y=f+cg$, then (B) $y'=f'+cg'$. Multiplying (A) by $g'$
 and (B) by $g$ yields
-(C) $yg'=fg'+cgg'$ and  (D) $y'g=f'g+cg'g$, and subtracting (C)
+(C) $yg'=fg'+cgg'$ and  (D) $y'g=f'g+c g'g$, and subtracting (C)
 from (D) yields
 $y'g-yg'=f'g-fg'$.
 
@@ -4016,7 +4021,7 @@ $y'g-yg'=f'g-fg'$.
 \item Let $(x_0,y_0)$ be the center
 and $r$ be the radius of a circle in the family. Since $(-1,0)$ and
 $(1,0)$ are on the circle, $(x_0+1)^2+y_0^2=(x_0-1)^2+y_0^2$, which
-implies that $x_0=0$. Therefore,the equation of the circle is (A)
+implies that $x_0=0$. Therefore, the equation of the circle is (A)
 $x^2+(y-y_0)^2=r^2$. Since $(1,0)$ is on the circle, $r^2=1+y_0^2$.
 Substituting this into (A) shows that the equation of the circle is
 $x^2+y^2-2yy_0=1$, so $2y_0=\dst\frac{x^2+y^2-1}{ y}$. Differentiating
@@ -4211,9 +4216,9 @@ equation for the orthogonal trajectories. Separating variables yields
 $2(y-1)y'=-x$, so $(y-1)^2=-\dst\frac{x^2}{2}+k$. Now
 $y(-1)=3\leftrightarrow k=\dst\frac{9}{2}$, so
 $(y-1)^2=-\dst\frac{x^2}{2}+\dst\frac{9}{2}$. Therefore,(D)
-$y=\dst{1+\sqrt\frac{9-x^2}{2}}$. This curve interesects the parabola
+$y=\dst{1+\sqrt\frac{9-x^2}{2}}$. This curve intersects the parabola
 (A) if and only if the equation (C) $cx^2=\dst\sqrt\frac{9-x^2}{2}$ has
-a solution $x^2$ in $(0,9)$. Therefore,$c>0$ is a necessaary condition
+a solution $x^2$ in $(0,9)$. Therefore,$c>0$ is a necessary condition
 for intersection. We will show that it is also sufficient. Squaring
 both sides of (C) and simplifying yields $2c^2x^4+x^2-9=0$. Using the
 quadratic formula to solve this for $x^2$ yields
@@ -4466,7 +4471,7 @@ of
 c_1y_1(x_0)+c_2y_2(x_0)&=y_1(x_0)\\
 c_1y_1'(x_0)+c_2y_2'(x_0)&=y_1'(x_0).
 \end{align*}
-Solving this system by Cramers' rule yields
+Solving this system by Cramer's rule yields
 \[
 c_1=\frac{1}{ W(x_0)}
 \begin{vmatrix}
@@ -6272,7 +6277,7 @@ the complementary equation.
 
 \item
 If $y=ue^{-x^2}$, then $y'=u'e^{-x^2}-2xue^{-x^2}$ and
-$y''=u''e^{-x^2}-4xu'e^{-x^2}+\cdots$, so
+$y''=u''e^{-x^2}-4x u'e^{-x^2}+\cdots$, so
 $y''+4xy'+(4x^2+2)y=u''e^{-x^2}=8e^{-x(x+2)}=8e^{-x^2}e^{-2x}$ if
 $u''=8e^{-2x}$. Therefore,$u'=-4e^{-2x}+C_1$;\ $u=2e^{-2x}+C_1x+C_2$,
 and $y=ue^{-x^2}=e^{-x^2}(2e^{-2x}+C_1x+C_2)$, or
@@ -6282,7 +6287,7 @@ complementary equation.
 
 
 \item
-If $y=uxe^{-x}$, then $y'=u'xe^{-x}-ue^{-x}(x-1)$ and
+If $y=uxe^{-x}$, then $y'=u'x e^{-x}-ue^{-x}(x-1)$ and
 $y''=u''xe^{-x}-2u'e^{-x}(x-1)+\cdots$, so
 $x^2y''+2x(x-1)y'+(x^2-2x+2)y=x^3u''=x^3e^{2x}$ if $u''=e^{3x}$.
 Therefore,$u'=\dfrac{e^{3x}}{3}+C_1$;\;
@@ -6529,7 +6534,7 @@ $\dst\frac{z''}{ rz}=y'+ry^2+\dst\frac{r'}{ r}y$. Therefore,
 (D) implies that
 $y$
 satisfies (A). Now suppose that $y$ is a solution of (A) and let $z$
-be any function such that $z'=ryz$. Then $z''=r'yz+ry'z+ryz'=
+be any function such that $z'=ryz$. Then $z''=r' yz+r y'z+ryz'=
 \dst\frac{r'}{ r}z'+
 (y'+ry^2)rz
 =\dst\frac{r'}{ r}z'-(p(x)y+q(x))rz$, so
@@ -6992,8 +6997,8 @@ Therefore,$y=\dst{-\frac{1}{16}\sin8t+\frac{1}{3}\cos4\sqrt2t
 \item
 Since $T=\dst{\frac{2\pi}{\omega_0}=2\pi\sqrt\frac{m}{ k}}$
 the period is proportional to the square root of the mass.
-Therefore, doubling the mass mutiplies the period by $\sqrt2$;
-hence the period of the system with the 20 gm mass is
+Therefore, doubling the mass multiplies the period by $\sqrt2$;
+hence the period of the system with the \qty{20}{\gram} mass is
  $T=4\sqrt{2}$~s.
 
 
@@ -7310,7 +7315,7 @@ $I_p=Q'_p=\omega(-A\sin\omega t+B\cos\omega t)$, it follows that
 $\sigma^2(\omega)=\dst{\omega^2(A^2+B^2)}=\dst\frac{U^2+V^2}{\rho(\omega)}$,
 with
 $\rho(\omega)=\dst\frac{\Delta}{\omega^2}=(1/C\omega-L\omega)^2+R^2$,
-which attains it mininmum value $R^2$ when
+which attains it minimum value $R^2$ when
 $\omega=\omega_0=\dst\frac{1}{\sqrt{LC}}$. The maximum amplitude of
 $I_p$ is
 $\sigma(\omega)=\dfrac{\sqrt{U^2+V^2}}{ R}$.
@@ -7917,8 +7922,11 @@ $(1+t+t^2)y''+(3+4t)y'+2y=
 if
 $a_{n+2}=-\dst\frac{n+3}{ n+2}a_{n+1}-a_n$,
 $a_n\ge0$. Starting with $a_0=2$ and $a_1=-1$ yields
-$y=\dst{2-(x-1)-\frac{1}{2}(x-1)^2+\frac{5}{3}(x-1)^3-\frac{19}{12}(x-1)^4
-+\frac{7}{30}(x-1)^5+\frac{59}{45}(x-1)^6-\frac{1091}{630}(x-1)^7+\cdots}$
+$y=$
+\[
+2-(x-1)-\frac{1}{2}(x-1)^2+\frac{5}{3}(x-1)^3-\frac{19}{12}(x-1)^4
++\frac{7}{30}(x-1)^5+\frac{59}{45}(x-1)^6-\frac{1091}{630}(x-1)^7+\cdots
+\]
 
 
 
@@ -9909,16 +9917,16 @@ j+4}\right)x^n}$;
 $z=\dst x^{-2}\left(1+x+\frac{1}{4}x^2-\frac{1}{12}x^3\right)$;
 $C=-\dst\frac{p_1(1)}{ 4}a_3(-2)=-1/16$.
 By logarithmic differentiation,
-
 $a_n'(r)=-2\dst a_n(r)\sum_{j=1}^n
 \frac{j^2+j(2r-1)+r^2-r+4}{(j+r-2)(j+r+2)(2j+2r-1)}$;
 $a_n'(2)=-2\dst a_n(2)\sum_{j=1}^n\frac{(j^2+3j+6)}{
-j(j+4)(2j+3)}$;
-
-$\dst{y_2=x^{-2}\left(1+x+\frac{1}{4}x^2-\frac{1}{12}x^3\right)-\frac{1}{16}
+j(j+4)(2j+3)}$; $y_2=$
+\[
+x^{-2}\left(1+x+\frac{1}{4}x^2-\frac{1}{12}x^3\right)-\frac{1}{16}
 y_1\ln x+ \frac{x^2}{8}\sum_{n=1}^\infty\frac{1}{
 n!}\left(\prod_{j=1}^n\frac{2j+3}{ j+4}
-\right)\left(\sum_{j=1}^n\frac{(j^2+3j+6)}{ j(j+4)(2j+3)}\right)x^n}$.
+\right)\left(\sum_{j=1}^n\frac{(j^2+3j+6)}{ j(j+4)(2j+3)}\right)x^n.
+\]
 
 
 \item
@@ -10498,7 +10506,7 @@ where
 A(s^2+1)(s+1)+
 B(s^2+1)(s+2)+(Cs+D)(s+2)(s+1)=2+3s.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 -5A&=&-4&(\text{when }s=-2);\\
 2B&=&-1& (\text{when }s=-1);\\
 A+2B+2D&=&2&(\text{when }s=0);\\
@@ -10525,7 +10533,7 @@ where
 \begin{gather*}
 (As+B)((s+1)^2+1)+(C(s+1)+D)(s^2+1)=3s^2+2s+1.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 2B+C+D&=&1&(\text{when }s=0);\\
 -A+B+2D&=&2& (\text{when }s=-1);\\
 2B+C+D&=&1&(\text{when }s=0);\\
@@ -10554,7 +10562,7 @@ where
 A\left((s+1)^2)+4\right)+
 \left(B(s+1)+C\right)(s-2)=3s+2.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 13A&=&8&(\text{when }s=2);\\
 4A-3C&=&-1&(\text{when }s=-1);\\
 A+B&=&0&(\text{equate coefficients of }s^2).
@@ -10580,7 +10588,7 @@ where
 \begin{gather*}
 (A(s-1)+B)(s+2)(s+3)+(C(s+3)+D(s+2))(s-1)^2=3s^2+2s+1.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 12B&=&6&(\text{when }s=1);\\
 9C&=&9& (\text{when }s=-2);\\
 -16D&=&22&(\text{when }s=-3);\\
@@ -10607,7 +10615,7 @@ where
 \begin{gather*}
 (A(s-1)+B)(s+2)^2+(C(s+2)+D)(s-1)^2=2s^2+s+3.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 9B&=&6&(\text{when }s=1);\\
 9D&=&9& (\text{when }s=-2);\\
 -4A+4B+2C+D&=&3&(\text{when }s=0);\\
@@ -10645,7 +10653,7 @@ Therefore,
 \begin{gather*}
 A(s^2+1)+(Cs+D)(s-1)=\frac{1-5s}{2}.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 2A&=&-2&(\text{when }s=1);\\
 A-D&=&1/2&(\text{when }s=0);\\
 A+C&=&0&(\text{equate coefficients of }s^2).
@@ -10672,7 +10680,7 @@ where
 \begin{gather*}
 (A(s-1)+B)((s+1)^2+9)+(C(s+1)+D)((s-1)^2+4)=17 s-15.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 13B+8C+4D&=&2&(\text{when }s=1);\\
 -18A+9B+8D&=&-32& (\text{when }s=-1);\\
 -10A+10B+5C+5D&=&-15&(\text{when }s=0);\\
@@ -10698,7 +10706,7 @@ where
 \begin{gather*}
 (A(s-3)+B)((s+1)^2+4)+(C(s+1)+D)((s-3)^2+4)=8s+56.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 20B+16C+4D&=&80&(\text{when }s=3);\\
 -16A+4B+20D&=&48& (\text{when }s=-1);\\
 -15A+5B+13C+13D&=&56&(\text{when }s=0);\\
@@ -10723,7 +10731,7 @@ where
 \begin{gather*}
 (A(s+2)+B)((s-2)^2+9)+(C(s-2)+D)((s+2)^2+1)=s+9.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 25B-4C+D&=&7&(\text{when }s=-2);\\
 36A+9B+17D&=&11& (\text{when }s=2);\\
 26A+13B-10C+5D&=&9&(\text{when }s=0);\\
@@ -10750,7 +10758,7 @@ where
 \begin{gather*}
 (A(s-2)+B)((s-3)^2+4)+(C(s-3)+D)((s-2)^2+1)=3s-2.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 5B-C+D&=&4&(\text{when }s=2);\\
 4A+4B+2D&=&7& (\text{when }s=3);\\
 -26A+13B-15C+5D&=&-2&(\text{when }s=0);\\
@@ -10777,7 +10785,7 @@ where
 \begin{gather*}
 (A(s-1)+B)((s+1)^2+4)+(C(s+1)+D)((s-1)^2+1)=3s-1.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 8B+2C+D&=&2&(\text{when }s=1);\\
 -8A+4B+5D&=&-4& (\text{when }s=-1);\\
 -5A+5B+2C+2D&=&-1&(\text{when }s=0);\\
@@ -10805,7 +10813,7 @@ where
 \begin{gather*}
 (A(s-1/2)+B)((s+1/2)^2+1)+(C(s+1/2)+D)((s-1/2)^2+1)=\frac{5s+10}{4}.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 2B+C+D&=&25/8&(\text{when }s=1/2);\\
 -A+B+2D&=&15/8& (\text{when }s=-1/2);\\
 -5A+10B+5C+10D&=&20&(\text{when }s=0);\\
@@ -10836,7 +10844,7 @@ where
 \begin{gather*}
 (A(s-3)+B(s-1))(s^2+1)+(Cs+D)(s-1)(s-3)=2s+1.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 -4A&=&3&(\text{when }s=1);\\
 20B&=&7& (\text{when }s=3);\\
 -3A-B+3D&=&1& (\text{when }s=0);\\
@@ -10863,7 +10871,7 @@ where
 \begin{gather*}
 (A(s+1)+B(s-1))((s+1)^2+1)+(C(s+1)+D)(s^2-1)=s+2.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 10A&=&3&(\text{when }s=1);\\
 -2B&=&1& (\text{when }s=-1);\\
 2A-2B-C-D&=&2& (\text{when }s=0);\\
@@ -10891,7 +10899,7 @@ where
 \begin{gather*}
 (A(s+1)+B(s-2))((s-1)^2+1)+(C(s-1)+D)(s-2)(s+1)=2s-1.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 6A&=&3&(\text{when }s=2);\\
 -15B&=&-3& (\text{when }s=-1);\\
 2A-4B+2C-2D&=&-1& (\text{when }s=0);\\
@@ -10919,7 +10927,7 @@ where
 \begin{gather*}
 (A(s+1)+B(s-1))(s^2+4)+(Cs+D)(s^2-1)=s-6.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 10A&=&-5&(\text{when }s=1);\\
 -10B&=&-7& (\text{when }s=-1);\\
 4A-4B-D&=&-6& (\text{when }s=0);\\
@@ -10946,7 +10954,7 @@ where
 \begin{gather*}
 (A(s-2)+Bs)((s-1)^2+4)+(C(s-1)+D)s(s-2)=2s-3.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 -10A&=&-3&(\text{when }s=0);\\
 10B&=&1& (\text{when }s=2);\\
 -4A+4B-D&=&-1& (\text{when }s=1);\\
@@ -10974,7 +10982,7 @@ where
 \begin{gather*}
 (A(s-2)+B(s-1))((s-2)^2+9)+(C(s-2)+D)(s-1)(s-2)=5s-15.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 -10A&=&-10&(\text{when }s=1);\\
 9B&=&-5& (\text{when }s=2);\\
 -26A-13B-4C+2D&=&-15& (\text{when }s=0);\\
@@ -11185,7 +11193,7 @@ Y(s)=
 \begin{gather*}
 (A(s+1)+B(s-3))(s^2+1)+(Cs+D)(s-3)(s+1)=10s.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 40A&=&30&(\text{when }s=3);\\
 -8B&=&-10& (\text{when }s=-1);\\
 A-3B-3D&=&0& (\text{when }s=0);\\
@@ -11261,7 +11269,7 @@ s^2}+\frac{C(s+1)+D}{(s+1)^2+1},
 where
 $(As+B)\left((s+1)^2+1\right)+s^2\left(C(s+1)+D\right)=2$.
 \[
-\begin{array}{rcll}
+\begin{array}{rc ll}
 2B&=&2&(\text{when }s=0);\\
 -A+B+D&=&2&(\text{when }s=-1);\\
 A+C&=&0&(\text{equate coefficients of }s^3);\\
@@ -11293,7 +11301,7 @@ where
 $\left(A(s+1)+B\right)\left((s+2)^2+1\right)+
 \left(C(s+2)+D\right)\left((s+1)^2+1\right)=4+s$.
 \[
-\begin{array}{rcll}
+\begin{array}{rc ll}
 5A+5B+4C+2D&=&4&(\text{when }s=0);\\
 2B+C+D&=&3&(\text{when }s=-1);\\
 -A+B+2D&=&2&(\text{when }s=-2);\\
@@ -11344,7 +11352,7 @@ where
 \begin{gather*}
 (As+B)((s+1/2)^2+1/4)+(C(s+1/2)+D)s^2=1.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 B&=&2&(\text{when }s=0);\\
 -A+2B+2D&=&8& (\text{when }s=-1/2);\\
 5A+10B+2C+2D&=&8& (\text{when }s=1/2);\\
@@ -11382,7 +11390,7 @@ where
 \begin{gather*}
 (A(s+1/2)+B)(s^2+1)+(Cs+D)(s+1/2)^2=\frac{3+s}{4}.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 10B&=&5&(\text{when }s=-1/2);\\
 2A+4B+D&=&3& (\text{when }s=0);\\
 12A+8B+9C+9D&=&4& (\text{when }s=1);\\
@@ -11961,7 +11969,7 @@ where
 \begin{gather*}
 A(s+1)^2+B(s-1)(s+1)+C(s-1)=4.
 \\
-\begin{array}{rcll}
+\begin{array}{rc ll}
 A&=&1&(\text{when }s=1);\\
 C&=&-2&(\text{when }s=-1);\\
 A+B&=&0&(\text{equate coefficients of }s^2).
@@ -12049,7 +12057,7 @@ H(s)=\frac{A}{ s}+\frac{B}{ s+2}+\frac{C(s+1)+D}{(s+1)^2+1}
 where
 $(As+B)((s+1)^2+1)+(C(s+1)+D)s^2=1$.
 \[
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 2B&=&1&(\text{when }s=0);\\
 -A+B+D&=&1& (\text{when }s=-1);\\
 5A+5B+2C+D&=&1& (\text{when }s=1);\\
@@ -12198,7 +12206,7 @@ where
 \begin{gather*}
 (As+B)((s+1)^2+1)+(C(s+1)+D)(s^2+1)=1+2s.
 \\
-\begin{array}{rcrl}
+\begin{array}{rc rl}
 2B+C+D&=&1&(\text{when }s=0);\\
 -A+B+2D&=&-1& (\text{when }s=-1);\\
 5A+5B+4C+2D&=&3&(\text{when }s=1);\\
@@ -12262,7 +12270,7 @@ $y''(t_0-)=\dst\frac{f(t_0-)-by'(t_0)-cy(t_0)}{ a}$. This implies the
 conclusion.
 
 \item
-Since $y''$ has a junp discontinouity at $t_0$, applying
+Since $y''$ has a jump discontinuity at $t_0$, applying
 Exercise~8.4.23\part{c} to $y'$  shows that $y'$
 is not differentiable at $t_0$. Therefore,$y$ cannot satisfy
 (A) on $(\alpha,\beta)$ if $f$ has a jump discontinuity at some
@@ -12756,6 +12764,8 @@ $\dst\frac{1}{ s(s^2+2s+2)}=-\dst\frac{(s+1)+1}{2\left((s+1)^2+1\right)}
 +\dst\frac{1}{2s}\leftrightarrow
 \dst\frac{1}{2}\left(1-e^{-t}(\cos t+\sin t)\right)$;
 \[
+\hspace{-25pt}
+% TODO CHECK
 y_h(t)=\begin{cases} 0,&0\le t<t_0,\\
 \dst\frac{1}{2h}\left[1-e^{-(t-t_0)}(\cos(t-t_0)+\sin(t-t_0))\right],
 &\hspace{-10pt}t_0\le t< t_0+h,\\
@@ -14499,7 +14509,7 @@ $\zeta_k^n=\cos(2k+1)\pi+i\sin(2k+1)\pi=\cos(2k+1)\pi=\cos\pi=-1$.
 
 \item From \part{e}, $\rho^{1/n}z_0,\dots,\rho^{1/n}z_{n-1}$
 are all zeros of $z^n-\rho$. Since they are distinct numbers,
-$z^n-\rho$ has the stated factoriztion.
+$z^n-\rho$ has the stated factorization.
 
  From \part{e}, $\rho^{1/n}\zeta_0,\dots,\rho^{1/n}\zeta_{n-1}$
 are all zeros of $z^n+\rho$. Since they are distinct numbers,
@@ -15174,6 +15184,7 @@ x$. Since $p(r)=r(r-1)[(r-1)^2+1]$ the general solution is
 $y=xe^x\cos x+c_1+e^x(c_2+c_3\cos x+c_4\sin x)$.
  Therefore,
 \[
+\hspace{-25pt}
 \begin{bmatrix}y\\y'\\y''\\y'''\end{bmatrix}\!=\!
 \begin{bmatrix}
 xe^x\cos x\\
@@ -16135,8 +16146,8 @@ $(X^2)'=(XX)'=X'X+XX'$.
 if $P_1,P_2,\dots,P_n$ are square matrices of the same order, then
  $(P_1P_2\cdots P_n)'=P_1'P_2\cdots P_n+P_1P_2'\cdots P_n+\cdots+
 P_1P_2\cdots P_n'$. Taking $P_1=P_2=\cdots=P_n=X$  yields
-(A) $(Y^n)'=Y'Y^{n-1}+YY'Y^{n-2}+Y^2Y'Y^{n-3}+\cdots+Y^{n-1}Y'=\dst{
-\sum_{r=0}^{n-1}}Y^rY'Y^{n-r-1}$.
+(A) $(Y^n)'=Y'Y^{n-1}+Y Y'Y^{n-2}+Y^2Y'Y^{n-3}+\cdots+Y^{n-1}Y'=\dst{
+\sum_{r=0}^{n-1}}Y^r Y'Y^{n-r-1}$.
 
 \item
 If $Y$ is a scalar function, then (A) reduces to
@@ -18461,10 +18472,14 @@ if $n\ge2$, then
 \begin{align*}
 a_n&=2\int_0^{1/2}x\sin\pi x\cos n\pi x\,dx=
 \int_0^{1/2}x[\sin(n+1)\pi x-\sin(n-1)\pi x]\,dx\\
-&=\frac{1}{\pi}\left[x\left[\frac{\cos(n-1)\pi x}{ n-1}
+&=\frac{x}{\pi}\left[\frac{\cos(n-1)\pi x}{ n-1}
 -\frac{\cos(n+1)\pi x}{ n+1}\right]\lims0{1/2}-
-\int_0^{1/2}\left[\frac{\cos(n-1)\pi x}{ n-1}-
-\frac{\cos(n+1)\pi x}{ n+1}\right]\,dx\right]\\
+\frac1\pi\int_0^{1/2}\left[\frac{\cos(n-1)\pi x}{ n-1}-
+\frac{\cos(n+1)\pi x}{ n+1}\right]\,dx\\
+%&=\frac{1}{\pi}\left[x\left[\frac{\cos(n-1)\pi x}{ n-1}
+%-\frac{\cos(n+1)\pi x}{ n+1}\right]\lims0{1/2}-
+%\int_0^{1/2}\left[\frac{\cos(n-1)\pi x}{ n-1}-
+%\frac{\cos(n+1)\pi x}{ n+1}\right]\,dx\right]\\
 &=\frac{1}{2\pi}\left[\frac{\cos(n-1)\pi/2}{ n-1}-
 \frac{\cos(n+1)\pi/2}{ n+1}\right]-\frac{1}{\pi^2}
 \left[\frac{\sin(n-1)\pi/2}{(n-1)^2}-\frac{\sin(n+1)\pi/2
@@ -18477,9 +18492,9 @@ a_n&=2\int_0^{1/2}x\sin\pi x\cos n\pi x\,dx=
 \end{cases}\\
 F(x)&=\dst\frac{1}{\pi^2}+\frac{1}{4\pi}\cos\pi
 x+\frac{2}{\pi^2}\sum_{n=1}^\infty
-(-1)^n\frac{4n^2+1}{(4n^2-1)^2}\cos2n\pi
-x+\frac{1}{4\pi}\sum_{n=1}^\infty
-(-1)^n\frac{2n+1}{ n(n+1)}\cos(2n+1)\pi x.
+(-1)^n\frac{4n^2+1}{(4n^2-1)^2}\cos2n\pi x
+\\&\qquad\qquad{}
++\frac{1}{4\pi}\sum_{n=1}^\infty(-1)^n\frac{2n+1}{ n(n+1)}\cos(2n+1)\pi x.
 \end{align*}
  From
 Theorem~11.2.4,
@@ -18753,6 +18768,7 @@ a_n&=\frac{2}{ L}\int_0^L(x^2-L^2)\cos\frac{n\pi x}{ L}\,dx=
 -2\int_0^Lx\sin\frac{n\pi x}{ L}\,dx\right]\\
 &=\frac{4L}{ n^2\pi^2}\left[x\cos\frac{n\pi x}{ L}\lims0L
 -\int_0^L\cos\frac{n\pi x}{ L}\,dx\right]
+\\&
 =(-1)^n\frac{4L^2}{ n^2\pi^2}-\frac{4L^2}{ n^3\pi^3}\sin\frac{n\pi x}{
 L}\lims0L=
 (-1)^n\frac{4L^2}{ n^2\pi^2};\\
@@ -19919,7 +19935,7 @@ $-\infty<x<\infty$.
 Since $\dst\sum_{n=1}^\infty ne^{-n^2\pi^2a^2t/L^2}$  converges if
 $t>0$,   Theorem~12.1.1 (with
 $z_1=x_1$ and
-$z_2=x_2$  arbitrary) implies the concclusion.
+$z_2=x_2$  arbitrary) implies the conclusion.
 
 \item
 Since $\dst\sum_{n=1}^\infty n^2e^{-n^2\pi^2a^2t/L^2}$ also converges
@@ -19950,7 +19966,7 @@ for $t>0$.
 \section{The Wave Equation}
 
 \begin{sectionSolutions}
-\addtocoutner{enumi}{-1}
+\addtocounter{enumi}{-1}
 \item%12.2.1
 $\beta_n=2\left[\int_0^{1/2}x\sin n\pi x
 +\int_{1/2}^1(1-x)\sin n\pi x\,dx\right]$;
@@ -20530,11 +20546,11 @@ u(x,t)
 Since $f(0)=f'(\pi)=f''(0)=0$ and $f'''(x)=6$,
 Theorem~11.3.5\part{d} and Exercise~11.3.50\part{b} imply that
 \begin{align*}
-\alpha_n&=-\frac{96}{(2n-1)^3\pi}\int_0^\pi
-\cos\frac{(2n-1) x}{2}\,dx
-=-\frac{192}{(2n-1)^4\pi}
-\sin\frac{(2n-1)x}{2}\lims0\pi=
-(-1)^n\frac{192}{(2n-1)^4\pi};\\
+\alpha_n&
+=-\frac{96}{(2n-1)^3\pi}\int_0^\pi\cos\frac{(2n-1) x}{2}\,dx
+=-\frac{192}{(2n-1)^4\pi}\sin\frac{(2n-1)x}{2}\lims0\pi
+\\&
+=(-1)^n\frac{192}{(2n-1)^4\pi};\\
 S_{M\!f}(x)&=\dst\frac{192}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 \sin\frac{(2n-1) x}{2}.\qquad
 \text{From Exercise~12.2.34,}\\
@@ -20548,11 +20564,11 @@ u(x,t)&=\dst\frac{192}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 Since $g(0)=g'(\pi)=g''(0)=0$ and $g'''(x)=6$,
 Theorem~11.3.5\part{d} and Exercise~50\part{b} imply that
 \begin{align*}
-\beta_n&=-\frac{96}{(2n-1)^3\pi}\int_0^\pi
-\cos\frac{(2n-1) x}{2}\,dx
-=-\frac{192}{(2n-1)^4\pi}
-\sin\frac{(2n-1)x}{2}\lims0\pi=
-(-1)^n\frac{192}{(2n-1)^4\pi};\\
+\beta_n&
+=-\frac{96}{(2n-1)^3\pi}\int_0^\pi\cos\frac{(2n-1) x}{2}\,dx
+=-\frac{192}{(2n-1)^4\pi}\sin\frac{(2n-1)x}{2}\lims0\pi
+\\&
+=(-1)^n\frac{192}{(2n-1)^4\pi};\\
 S_{M\!g}(x)&=\dst\frac{192}{\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^4}
 \sin\frac{(2n-1) x}{2}.\qquad\text{From Exercise~12.2.34,}\\
 u(x,t)&=\dst\frac{384}{\sqrt3\,\pi}\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)^5}
@@ -22093,10 +22109,10 @@ u_{2}'=\frac{F\cos(n+1/2)x}{n+1/2};
 u_{1}&=\int_{x}^{\pi} \frac{F(t)\sin(n+1/2)t}{n+1/2}\,dt; \quad
 u_{2}=\int_{0}^{x} \frac{F(t)\cos(n+1/2)t}{n+1/2}\,dt; \quad
 \\
-y_{p}&=\frac{1}{n+1/2}\left(
-\cos(n+1/2)x\int_{x}^{\pi} F(t)\sin(n+1/2)t\,dt
-+\sin(n+1/2)x
-\int_{0}^{x} F(t)\cos(n+1/2)t\,dt\right);
+y_{p}&=\frac{1}{n+\frac12}\left(
+\cos(n+\frac12)x\int_{x}^{\pi} F(t)\sin(n+\frac12)t\,dt
++\sin(n+\frac12)x
+\int_{0}^{x} F(t)\cos(n+\frac12)t\,dt\right);
 \\
 y_{p}'&=-
 \sin(n+1/2)x\int_{x}^{\pi} F(t)\sin(n+1/2)t\,dt
@@ -22458,7 +22474,7 @@ with $c_{1}\ne0$ if and only if   $\tanh k=\dst{\frac{1}{2k}}$. Graphing
 both sides of this equation on the same axes show that it has one positive
 solution
 $k_{0}$;
-$y_{0}=\cosh k_{0}x$ is a $-k_{0}^{2}$-eigefunction.
+$y_{0}=\cosh k_{0}x$ is a $-k_{0}^{2}$-eigenfunction.
 
 
 
