@@ -1,6 +1,7 @@
 \DocumentMetadata{
-  tagging=off,
+  tagging=on,
   lang=en-US,
+%  pdfstandard=UA-1,pdfversion=1.7,
   pdfstandard=UA-2,
   tagging-setup={math/setup=mathml-SE}
 }
@@ -10,7 +11,7 @@
 \date{\today}
 \usepackage{geometry}
 \usepackage{lua-unicode-math}
-\usepackage{ulem}
+\usepackage{lua-ul}
 \usepackage[table-auto-round]{siunitx}
 \usepackage{booktabs}
 \usepackage{hyperref}
@@ -35,7 +36,7 @@ Most texts solve this using the integrating factor $\mu(x)=\exp\{\int p(x)dx\}$,
 y&=(\mu(x))^{-1}\int\mu(x)f(x)dx+C/\mu(x).
 \end{align*}
 
-Trench first observes that $y_1'+p(x)y_1=0$ can be separated to find a particular solution $y_1=c\exp\{-\int p(x)dx\}$.
+Trench first observes that the homogeneous $y_1'+p(x)y_1=0$ version of \eqref{first_order} can be separated to find a particular solution $y_1=c\exp\{-\int p(x)dx\}$.
 Take $c=1$.
 Using variation of parameters, we write $y=uy_1$ so that $y'=u'y_1+uy_1'$ and \eqref{first_order} implies
 \[
@@ -50,18 +51,18 @@ Note that $y_1=1/\mu(x)$.
 
 Given a differential equation $y'=f(x,y)$, $y(x_0)=y_0$, numerical methods use the steps $x_{i+1}=x_i+h$, $y_i'=g(x_i,y_i,f)$, and $y_{i+1}=y_i+hy_i'$ for various formulations of $g$.
 An equation is said to be \textit{semilinear} if we can write it as $y'+p(x)y=h(x,y)$.
-Let $y_1=c\exp\{-\int p(x)dx\}$ be a solution of the complementary equation $y'+p(x)y=0$, and define $y=uy_1$.
+Let $y_1=c\exp\{-\int p(x)dx\}$ be a solution of the homogeneous equation $y'+p(x)y=0$, and define $y=uy_1$.
 Applying the formulation $g$ to $u$ leads to the step $u_i'=g(x_i,u_i,f/y_1)$.
 
 To help explain, we reproduce Example 3.1.4(b): solving the initial value problem $y'-2xy=1$, $y(0)=3$, using the Euler semilinear method for $h=0.05$.
-The complementary equation $y'-2xy=0$ has a solution $y_1=e^{x^2}$.
+The homogeneous equation $y'-2xy=0$ has a solution $y_1=e^{x^2}$.
 To involve variation of parameters, we write $y=uy_1$ as a solution of the initial value problem, so that
 \begin{align*}
 y'&=1+2xy=1+2xuy_1 \\
 y'&=u'y_1+uy_1'=u'y_1+u2xy_1
 \end{align*}
 and $u'=1/y_1=e^{-x^2}$.
-Applying the Euler \sout{semilinear} method to $u$, we therefore have \autoref{tab:3.1.5}, where the $y_i$ column matches row 6 of Table 3.1.5.
+Applying the Euler \strikeThrough{semilinear} method to $u$, we therefore have \autoref{tab:3.1.5}, where the $y_i$ column matches row 6 of Table 3.1.5.
 \begin{table}\centering
 \caption{Reproducing a row of Table 3.1.5.}\label{tab:3.1.5}
 \begin{tabular}{S[table-format=2] S[table-format=1.2] S[table-format=1.9]
@@ -122,7 +123,7 @@ y'=1+y^2+3x^2y=1+u^2y_1^2+3x^2uy_1\\
 y'=u'y_1+uy_1'=u'y_1-u3x^2y_1
 \end{align*}
 and $u'=(1+u^2y_1^2)/y_1=\exp\{x^3\}+u^2\exp\{-x^3\}$ and $u(2)=2e^8$.
-Applying the Euler \sout{semilinear} method to $u$, we therefore have \autoref{tab:3.1.7}, where the $y_i$ column matches row 6 of Table 3.1.7.
+Applying the Euler \strikeThrough{semilinear} method to $u$, we therefore have \autoref{tab:3.1.7}, where the $y_i$ column matches row 6 of Table 3.1.7.
 \begin{table}\centering
 \caption{Reproducing a row of Table 3.1.7.}\label{tab:3.1.7}
 \begin{tabular}{S[table-format=2] S[table-format=1.3] S[table-format=11] S[table-format=12] S[table-format=11] S[table-format=1.9]}
@@ -172,8 +173,10 @@ Applying the Euler \sout{semilinear} method to $u$, we therefore have \autoref{t
 \bottomrule
 \end{tabular}
 \end{table}
-There are worse approximations than those obtained by Euler's method.
+These are worse approximations than those obtained by Euler's method.
 
 In general, it appears that a small $\lvert y''\rvert$ will lead to an accurate Euler's method, while a small $\lvert u''\rvert$ will lead to an accurate Euler's semilinear method.  If the other is large, then we have a clear winner.
+
+In Fall 2026, I taught the variation of parameters approach for first order linear equations, but did not teach the semilinear numerical methods.
 
 \end{document}
