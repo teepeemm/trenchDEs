@@ -8,7 +8,7 @@ MAKEFLAGS += --always-make
 
 LATEXMK = latexmk
 INTERACTION = -interaction=batchmode
-LUALATEX = lualatex
+LUALATEX = lualatex-dev
 FLAGS = -$(LUALATEX) $(INTERACTION)
 EXTRA_MEM = hash_extra=2000000 max_strings=2000000
 TIMER = /usr/bin/time -l
