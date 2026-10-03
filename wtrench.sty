@@ -22,11 +22,14 @@
  {\thmname{\color{blue}#1}\thmnumber{ \color{blue}#2}\thmnote{ \color{blue}[#3]}}
 \theoremstyle{theorem}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem*{theorem*}{Theorem}
 \AddToHook{env/theorem/begin}{\color{blue}}
 \AddToHook{env/theorem*/begin}{\color{blue}}
 \newtheorem{definition}[theorem]{Definition}[section]
+\newtheorem*{definition*}{Definition}
 \AddToHook{env/definition/begin}{\color{blue}}
-\newtheorem{remark}{Remark}
+%\newtheorem{remark}{Remark}
+\newtheorem*{remark*}{Remark}
 \AddToHook{env/remark/begin}{\UNDEFINED}
 \AddToHook{env/remark*/begin}{\color{blue}}
 
@@ -45,6 +48,7 @@
  {\thmname{#1}\thmnumber{ #2}\thmnote{ [#3]}}
 \theoremstyle{example}
 \newtheorem{example}{Example}[section]
+\newtheorem*{example*}{Example}
  
 
 \def\R{\mathbb R}
