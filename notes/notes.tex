@@ -17,8 +17,8 @@
 \usepackage{hyperref}
 \begin{document}
 \maketitle
-There are two main differences by Trench compared to other differential equations texts, relating to the use of variation of parameters.
-We explore these differences.
+A significant differences by Trench compared to other differential equations texts relates to its use of variation of parameters.
+We explore these implications.
 
 \setcounter{section}{2}
 \subsection{Linear First Order Equations}
@@ -45,6 +45,15 @@ f(x)=y'+p(x)y=u'y_1+uy_1'+p(x)uy_1=u'y_1+u(y_1'+p(x)y_1)=u'y_1.
 Therefore, $u=\int f(x)/y_1dx+C$, and $y=y_1\int f(x)/y_1dx+Cy_1$ solves \eqref{first_order}.
 
 Note that $y_1=1/\mu(x)$.
+
+\setcounter{subsection}{3}
+\subsection{Transformation of Nonlinear Equations into Separable Equations}
+
+\subsubsection{Bernoulli equations}
+
+A Bernoulli equation has the form $y'+p(x)y=f(x)y^r$ with $r\ne0,1$.  If $y_1$ is a solution to the homogeneous equation $y_1'+p(x)y_1=0$, then substituting $y=uy_1$ into the equation yields the separable equation $u^{-r}u'=f(x)(y_1)^{r-1}$.
+
+The homogeneous differential equation $y'=f(y/x)$ is traditionally solved by variation of parameters $y=ux$, although usually it is not phrased that way. 
 
 \stepcounter{section}
 \subsection{Semilinear Numerical Methods}
@@ -177,6 +186,19 @@ These are worse approximations than those obtained by Euler's method.
 
 In general, it appears that a small $\lvert y''\rvert$ will lead to an accurate Euler's method, while a small $\lvert u''\rvert$ will lead to an accurate Euler's semilinear method.  If the other is large, then we have a clear winner.
 
-In Fall 2026, I taught the variation of parameters approach for first order linear equations, but did not teach the semilinear numerical methods.
+\setcounter{section}{5}
+\setcounter{subsection}{3}
+
+\subsection{The Method of Undetermined Coefficients I}
+
+For the differential equation
+\[ay''+by'+cy=e^{\alpha x}P(x),\]
+where $P$ is a polynomial, we substitute $y=ue^{\alpha x}$, so that
+\[y'=u'e^{\alpha x}+u\alpha e^{\alpha x}\quad\text{and}\quad y''=u''e^{\alpha x}+2\alpha u'e^{\alpha x}+u\alpha^2e^{\alpha x}\]
+and the differential equation becomes
+\[P(x)=a(u''+2\alpha u'+u\alpha^2)+b(u'+u\alpha)+cu=au''+(2\alpha+b)u'+(a\alpha^2+b\alpha+c)u.\]
+If $P$ is non-constant and $\alpha$ is a (double) root of the characteristic equation $ar^2+br+c=0$, this is (much) less work than the usual method of undetermined coefficients.\bigskip
+
+In Fall 2026, I taught the variation of parameters approach for first order linear equations, but not the others.
 
 \end{document}
