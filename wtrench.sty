@@ -51,28 +51,28 @@
 \newtheorem*{example*}{Example}
  
 
-\def\R{\mathbb R}
-\def\E{\mathbb E}
+\newcommand\R{\mathbb R}
+\newcommand\E{\mathbb E}
 
 %\def\endproof{{\hfill \vbox{\hrule\hbox{
 %   \vrule height1.3ex\hskip0.8ex\vrule}\hrule
 %  }}\par}
 
-\newcommand{\markonleft}[1]{\hspace*{1em}{\rm Chapter \thechapter}{#1 }\hfill}
+%\newcommand{\markonleft}[1]{\hspace*{1em}{\rm Chapter \thechapter}{#1 }\hfill}
+%
+%\newcommand{\markonright}[1]
+%{\hfill{{\rm Section \thesection} #1
+%}\hspace*{1em}}
 
-\newcommand{\markonright}[1]
-{\hfill{{\rm Section \thesection} #1
-}\hspace*{1em}}
-
-\newcommand{\newsection}[3]{
-\setcounter{section}{#1}
-\label{sectionstart:\thesection}
-\setcounter{theorem}{0}
-\setcounter{example}{0}
-\setcounter{figure}{0}
-\setcounter{equation}{0}
-\markboth{\markonleft{#2}}{\markonright{#3}}
-\vskip7pt}
+%\newcommand{\newsection}[3]{
+%\setcounter{section}{#1}
+%\label{sectionstart:\thesection}
+%\setcounter{theorem}{0}
+%\setcounter{example}{0}
+%\setcounter{figure}{0}
+%\setcounter{equation}{0}
+%\markboth{\markonleft{#2}}{\markonright{#3}}
+%\vskip7pt}
 
 \newcommand{\hint}[1]{{\scshape Hint}:\ {\slshape #1}}
 \newcommand{\note}[1]{({\scshape Note}:\ #1)}
@@ -306,20 +306,20 @@
 }
 
 
-\newenvironment{tindex}{%
- \if@twocolumn
-  \@restonecolfalse
- \else
-  \@restonecoltrue
- \fi
- \columnseprule \z@
- \columnsep 35\p@
- \twocolumn[\@makeschapterhead{\vspace*{18pt}\centerline{\Huge\bf Index}\vspace*{26pt}}]%
- \thispagestyle{plain}\parindent\z@
- \parskip\z@ \@plus .3\p@\relax
- \let\item\@idxitem
- \raggedright
-}{%
- \if@restonecol\onecolumn\else\clearpage\fi
-}
+%\newenvironment{tindex}{%
+% \if@twocolumn
+%  \@restonecolfalse
+% \else
+%  \@restonecoltrue
+% \fi
+% \columnseprule \z@
+% \columnsep 35\p@
+% \twocolumn[\@makeschapterhead{\vspace*{18pt}\centerline{\Huge\bf Index}\vspace*{26pt}}]%
+% \thispagestyle{plain}\parindent\z@
+% \parskip\z@ \@plus .3\p@\relax
+% \let\item\@idxitem
+% \raggedright
+%}{%
+% \if@restonecol\onecolumn\else\clearpage\fi
+%}
 

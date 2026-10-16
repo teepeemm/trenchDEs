@@ -187,8 +187,8 @@ If $s\ne0$,  integrating by parts yields
 &=-\frac{te^{-st}}{s}\bigg|_0^\infty+\frac{1}{s}\int_0^\infty e^{-st}\,dt
 =-\left[\frac{t}{s}+\frac{1}{s^2}\right]e^{-st}\bigg|_0^\infty\\
 &=\begin{cases}
-\dfrac{1}{s^2},\quad s>0,\\
-\infty,\,s<0.
+\dfrac{1}{s^2},& s>0,\\
+\infty,&s<0.
 \end{cases}
 \end{align*}
 If $s=0$, the integral in  \eqref{eq:8.1.5} becomes
@@ -289,7 +289,7 @@ F(s)=\frac{\omega}{s^2+\omega^2},\quad s>0.\qedhere
 
 Extensive tables of Laplace transforms have been compiled and are
 commonly used in applications. The brief table of Laplace transforms
-in the Appendix will be adequate for our
+in \zcref{sec:laplace_table} will be adequate for our
 purposes.
 
 \begin{example}\label{example:8.1.5}
@@ -419,8 +419,8 @@ transforms of $1$, $t$, $\cos\omega t$, and $\sin\omega t$ to find
 In the following table the known
 transform pairs  are listed on the left and  the required  transform pairs
 listed on the right are obtained  by applying
-\zcref{thmtype:8.1.3}.\qedhere
-
+\zcref{thmtype:8.1.3}.%\qedhere
+%
 \begin{center}
 \tagpdfsetup{table/header-rows={1}}
 \renewcommand{\arraystretch}{1.8}
@@ -857,12 +857,12 @@ parts to show that
 \item % (b)
  Show that if $\laplace(f)$ exists for
 $s=s_0$ then it exists for $s>s_0$.
-Show that the function
-\[
-f(t)=te^{t^2}\cos(e^{t^2})
-\]
-has a Laplace transform defined for $s>0$, even though $f$ isn't  of
-exponential order.
+%Show that the function
+%\[
+%f(t)=te^{t^2}\cos(e^{t^2})
+%\]
+%has a Laplace transform defined for $s>0$, even though $f$ isn't  of
+%exponential order.
 \item % (c)
 Show that the function
 \[
@@ -4819,6 +4819,7 @@ f(t) & F(s) &  \\\midrule
   \displaystyle{\frac{1 }{t} \sin  \omega t }
 & \displaystyle{\arctan \left(\frac{\omega }{s}\right)} & (s>0) \\
   e^{at}f(t)  &  F(s-a)  & \\
+  % TODO f^{(k)}(t)
   t^kf(t)  & \displaystyle{{(-1)^kF^{(k)}(s)}}  &  \\
   f(\omega t)  &  \displaystyle{\frac{1}{\omega} F\left(\frac{s }{\omega}\right),  \quad \omega > 0} &  \\
   u(t-\tau)  & \displaystyle{\frac{e^{-\tau s}}{s}} & (s>0)  \\

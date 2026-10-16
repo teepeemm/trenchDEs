@@ -1,4 +1,6 @@
 
+# todo move table of integrals & table of laplace transforms to end
+
 HELP_MESSAGE := "Available targets:\\n"
 HELP_MESSAGE := $(HELP_MESSAGE)"help\\t\\t: this message (default)\\n"
 help:

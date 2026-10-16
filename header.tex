@@ -194,6 +194,7 @@ TECHNOLOGY}\par}
 %\newenvironment{newtable}[1]{ \begin{quote}
 %Table\space\refstepcounter{table}\thetable. #1}{\end{quote}}
 
+% TODO "Chapter #" at the section level; demote this to subsection
 \newcommand{\sectionanswers}[1]{%
  \ParseLaTeXeHeading{section}{\BooleanTrue}{
   heading-decls = \normalfont\normalsize\bfseries,
@@ -212,6 +213,7 @@ TECHNOLOGY}\par}
 
 \usepackage{makeidx}
 \makeindex
+\AddToHook{env/theindex/before}{\addcontentsline{toc}{chapter}{Index}}
 
 \index{$\lambda$|see{lambda}}
 \index{coefficients!undetermined|see{undetermined coefficients}}
