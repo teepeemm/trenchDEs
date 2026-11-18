@@ -375,7 +375,7 @@ not involve derivatives of any of the other unknowns.
  Rewrite the system
 \begin{align*}
 x''&=f(t,x,x',y,y',y'')\\
-y'''&=g(t,x,x',y,y'y'')
+y'''&=g(t,x,x',y,y',y'')
 \end{align*}
  as a first order system.
 \end{example}
@@ -488,9 +488,8 @@ where
 h=\frac{b-t_0}{n}.
 \]
 We'll denote the approximate values of $y_1$ and $y_2$ at these
-points
-by $y_{1,0},y_{1,1},\dots,y_{1,n}$ and
- $y_{2,0},y_{2,1},\dots,y_{2,n}$.
+points by $y_{1,0}$, $y_{1,1}$, \dots, $y_{1,n}$ and
+$y_{2,0}$, $y_{2,1}$, \dots, $y_{2,n}$.
 The Runge-Kutta method computes these approximate values as follows:
 given $y_{1,i}$ and $y_{2,i}$, compute
 \begin{align*}
@@ -1161,7 +1160,7 @@ are linearly independent on every interval  $(a,b)$.
 \begin{solution}
 Suppose
 \[
-c_1\begin{bmatrix}{c}e^t\\0\\e^{-t}\end{bmatrix}+
+c_1\begin{bmatrix}e^t\\0\\e^{-t}\end{bmatrix}+
 c_2\begin{bmatrix}0\\e^{3t}\\1\end{bmatrix}+
 c_3\begin{bmatrix}e^{2t}\\e^{3t}\\0\end{bmatrix}
 =\begin{bmatrix}0\\0\\0\end{bmatrix},\quad a<t<b.
@@ -2264,7 +2263,7 @@ $y_1$-$y_2$ plane as $t$ varies from $-\infty$ to $\infty$. We call
 $C$ the
 \emph{\color{blue}trajectory}\index{trajectory!vector function}\index{trajectory!$2\times2$ system}
 of $\vect{y}$. (We also say that $C$ is a
-trajectory of the system \eqref{eq:10.4.18}.) I's important to note that
+trajectory of the system \eqref{eq:10.4.18}.) It's important to note that
 $C$ is the trajectory of infinitely many solutions of \eqref{eq:10.4.18},
 since if $\tau$ is any real number, then $\vect{y}(t-\tau)$ is a
 solution of \eqref{eq:10.4.18} (\zcref{exer:10.4.28}(b)), and
@@ -2292,7 +2291,7 @@ question, assuming that the matrix
 A=\begin{bmatrix}a_{11}&a_{12}\\a_{21}&a_{22}\end{bmatrix}
 \]
 of \eqref{eq:10.4.18} has real eigenvalues $\lambda_1$ and $\lambda_2$ with
-associated linearly independent eigenvectors $\vect{X}_1$ and $\vect{x}_2$. Then  the general solution of \eqref{eq:10.4.18} is
+associated linearly independent eigenvectors $\vect{X}_1$ and $\vect{X}_2$. Then  the general solution of \eqref{eq:10.4.18} is
 \begin{equation} \label{eq:10.4.19}
 \vect{y}= c_1\vect{X}_1
  e^{\lambda_1 t}+c_2\vect{X}_2e^{\lambda_2 t}.
@@ -2310,7 +2309,7 @@ $\lambda_1=\lambda_2\ne0$, so  \eqref{eq:10.4.19} becomes
 Since $\vect{X}_1$ and
 $\vect{X}_2$ are linearly independent, an arbitrary vector $\vect{X}$
 can be written as $\vect{X}=c_1\vect{X}_1+c_2\vect{X}_2$. Therefore the
-general solution of \eqref{eq:10.4.18} can be written as $\vect{y}=\vect{x}e^{\lambda_1 t}$ where $\vect{X}$ is an arbitrary $2$-vector, and the
+general solution of \eqref{eq:10.4.18} can be written as $\vect{y}=\vect{X}e^{\lambda_1 t}$ where $\vect{X}$ is an arbitrary $2$-vector, and the
 trajectories of nontrivial solutions of \eqref{eq:10.4.18} are half-lines
 through (but not including) the origin. The direction of motion is
 away from the origin if $\lambda_1>0$ (\zcref{figure:10.4.1}),
@@ -2412,7 +2411,7 @@ origin}
 \tagstructend
 \end{minipage}
 
-
+% TODO check the reasoning in these cases
 \boxit{Case 1: $\lambda_2>\lambda_1>0$}
 \index{second order system!geometric properties!unequal positive eigenvalues}
 
@@ -2457,6 +2456,7 @@ width=\linewidth,height=2.44in,keepaspectratio]{fig100405}
 \tagstructend
 \end{minipage}%
 \hfill
+% TODO Do the arrows disagree with the analysis?
 \begin{minipage}[t]{0.49\linewidth}
 \tagstructbegin{tag=Sect}
 \includegraphics[alt={In the y1 y2 plane, the line L2 is where y1=y2, while Y1 is approximately given by 3y1+y2=0.  Vector field arrows point towards the origin along L2 and away from the origin along L1, smoothly curving between the two.},
